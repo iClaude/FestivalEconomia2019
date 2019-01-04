@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@id/eventsFragment">
+
+    <fragment android:id="@+id/eventsFragment" android:name="iclaude.festivaleconomia2019.EventsFragment"
+              android:label="fragment_events" tools:layout="@layout/fragment_events"/>
+    <fragment android:id="@+id/agendaFragment" android:name="iclaude.festivaleconomia2019.AgendaFragment"
+              android:label="fragment_agenda" tools:layout="@layout/fragment_agenda"/>
+    <fragment android:id="@+id/FAQFragment" android:name="iclaude.festivaleconomia2019.FAQFragment"
+              android:label="fragment_faq" tools:layout="@layout/fragment_faq"/>
+    <fragment android:id="@+id/aboutFragment" android:name="iclaude.festivaleconomia2019.AboutFragment"
+              android:label="fragment_about" tools:layout="@layout/fragment_about"/>
+    <fragment android:id="@+id/settingsFragment" android:name="iclaude.festivaleconomia2019.SettingsFragment"
+              android:label="fragment_settings" tools:layout="@layout/fragment_settings"/>
+    <fragment android:id="@+id/infoFragment" android:name="iclaude.festivaleconomia2019.InfoFragment"
+              android:label="fragment_info" tools:layout="@layout/fragment_info"/>
+    <fragment android:id="@+id/sessionFragment" android:name="iclaude.festivaleconomia2019.SessionFragment"
+              android:label="fragment_session" tools:layout="@layout/fragment_session"/>
+    <fragment android:id="@+id/organizerFragment" android:name="iclaude.festivaleconomia2019.OrganizerFragment"
+              android:label="fragment_organizer" tools:layout="@layout/fragment_organizer"/>
+    <fragment android:id="@+id/mapFragment" android:name="iclaude.festivaleconomia2019.MapFragment"
+              android:label="fragment_map" tools:layout="@layout/fragment_map"/>
+</navigation>
