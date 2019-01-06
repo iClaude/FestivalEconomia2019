@@ -5,22 +5,22 @@
             android:id="@+id/mobile_navigation"
             app:startDestination="@id/eventsFragment">
 
-    <fragment android:id="@+id/eventsFragment" android:name="iclaude.festivaleconomia2019.EventsFragment"
+    <fragment android:id="@+id/eventsFragment" android:name="iclaude.festivaleconomia2019.ui.EventsFragment"
               android:label="fragment_events" tools:layout="@layout/fragment_events"/>
-    <fragment android:id="@+id/agendaFragment" android:name="iclaude.festivaleconomia2019.AgendaFragment"
+    <fragment android:id="@+id/agendaFragment" android:name="iclaude.festivaleconomia2019.ui.AgendaFragment"
               android:label="fragment_agenda" tools:layout="@layout/fragment_agenda"/>
-    <fragment android:id="@+id/FAQFragment" android:name="iclaude.festivaleconomia2019.FAQFragment"
+    <fragment android:id="@+id/FAQFragment" android:name="iclaude.festivaleconomia2019.ui.FAQFragment"
               android:label="fragment_faq" tools:layout="@layout/fragment_faq"/>
-    <fragment android:id="@+id/aboutFragment" android:name="iclaude.festivaleconomia2019.AboutFragment"
+    <fragment android:id="@+id/aboutFragment" android:name="iclaude.festivaleconomia2019.ui.AboutFragment"
               android:label="fragment_about" tools:layout="@layout/fragment_about"/>
-    <fragment android:id="@+id/settingsFragment" android:name="iclaude.festivaleconomia2019.SettingsFragment"
+    <fragment android:id="@+id/settingsFragment" android:name="iclaude.festivaleconomia2019.ui.SettingsFragment"
               android:label="fragment_settings" tools:layout="@layout/fragment_settings"/>
-    <fragment android:id="@+id/infoFragment" android:name="iclaude.festivaleconomia2019.InfoFragment"
+    <fragment android:id="@+id/infoFragment" android:name="iclaude.festivaleconomia2019.ui.InfoFragment"
               android:label="fragment_info" tools:layout="@layout/fragment_info"/>
-    <fragment android:id="@+id/sessionFragment" android:name="iclaude.festivaleconomia2019.SessionFragment"
+    <fragment android:id="@+id/sessionFragment" android:name="iclaude.festivaleconomia2019.ui.SessionFragment"
               android:label="fragment_session" tools:layout="@layout/fragment_session"/>
-    <fragment android:id="@+id/organizerFragment" android:name="iclaude.festivaleconomia2019.OrganizerFragment"
+    <fragment android:id="@+id/organizerFragment" android:name="iclaude.festivaleconomia2019.ui.OrganizerFragment"
               android:label="fragment_organizer" tools:layout="@layout/fragment_organizer"/>
-    <fragment android:id="@+id/mapFragment" android:name="iclaude.festivaleconomia2019.MapFragment"
+    <fragment android:id="@+id/mapFragment" android:name="iclaude.festivaleconomia2019.ui.MapFragment"
               android:label="fragment_map" tools:layout="@layout/fragment_map"/>
 </navigation>

@@ -1,7 +1,8 @@
-package iclaude.festivaleconomia2019
+package iclaude.festivaleconomia2019.ui
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import iclaude.festivaleconomia2019.R
 
 class MainActivity : AppCompatActivity() {
 
