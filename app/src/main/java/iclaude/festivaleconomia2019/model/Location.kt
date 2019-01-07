@@ -7,7 +7,7 @@ import com.google.firebase.firestore.GeoPoint
  */
 
 data class Location(
-    val name: String,
-    val details: String,
-    val coordinates: GeoPoint
+    val name: String = "",
+    val details: String = "",
+    val coordinates: GeoPoint = GeoPoint(0.0, 0.0)
 )
