@@ -6,16 +6,17 @@ package iclaude.festivaleconomia2019.model
 
 data class Organizer(
     // required data
-    val id: String,
-    val name: String,
-    val bio: String,
+    val id: String = "",
+    val name: String = "",
+    val bio: String = "",
+    val sessions: List<String> = emptyList(), // list of ids of Session(s) belonging to this Organizer
     // optional data
-    val company: String?,
-    val imageUrl: String?,
-    val websiteUrl: String?,
-    val twitterUrl: String?,
-    val linkedInUrl: String?,
-    val facebookUrl: String?
+    val company: String? = null,
+    val imageUrl: String? = null,
+    val websiteUrl: String? = null,
+    val twitterUrl: String? = null,
+    val linkedInUrl: String? = null,
+    val facebookUrl: String? = null
 )
 
 fun Organizer.hasCompany(): Boolean = company?.isNotBlank() ?: false
