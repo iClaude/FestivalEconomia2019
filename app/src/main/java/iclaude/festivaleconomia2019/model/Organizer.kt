@@ -12,16 +12,16 @@ data class Organizer(
     val sessions: List<String> = emptyList(), // list of ids of Session(s) belonging to this Organizer
     // optional data
     val company: String? = null,
-    val imageUrl: String? = null,
+    val photoUrl: String? = null,
     val websiteUrl: String? = null,
     val twitterUrl: String? = null,
     val linkedInUrl: String? = null,
     val facebookUrl: String? = null
 )
 
-fun Organizer.hasCompany(): Boolean = company?.isNotBlank() ?: false
-fun Organizer.hasImageUrl(): Boolean = imageUrl?.isNotBlank() ?: false
-fun Organizer.hasWebsiteUrl(): Boolean = websiteUrl?.isNotBlank() ?: false
-fun Organizer.hastwitterUrl(): Boolean = twitterUrl?.isNotBlank() ?: false
-fun Organizer.haslinkedInUrl(): Boolean = linkedInUrl?.isNotBlank() ?: false
-fun Organizer.hasfacebookUrl(): Boolean = facebookUrl?.isNotBlank() ?: false
+fun Organizer.hasCompany() = company?.isNotBlank() ?: false
+fun Organizer.hasPhotoUrl() = photoUrl?.isNotBlank() ?: false
+fun Organizer.hasWebsiteUrl() = websiteUrl?.isNotBlank() ?: false
+fun Organizer.hastwitterUrl() = twitterUrl?.isNotBlank() ?: false
+fun Organizer.haslinkedInUrl() = linkedInUrl?.isNotBlank() ?: false
+fun Organizer.hasfacebookUrl() = facebookUrl?.isNotBlank() ?: false

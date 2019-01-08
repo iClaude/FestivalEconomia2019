@@ -22,7 +22,8 @@ data class Session(
     val relatedSessions: List<String>? = null,
     val photoUrl: String? = null,
     val sessionUrl: String? = null,
-    val youtubeUrl: String? = null
+    val youtubeUrl: String? = null,
+    val starringUsers: List<String>? = null // list of uids of users who starred this session
 )
 
 fun Session.isLive(): Boolean {
@@ -31,10 +32,11 @@ fun Session.isLive(): Boolean {
     //return startTime?.time <= now && endTime?.time >= now
 }
 
-fun Session.hasPhotoUrl(): Boolean = photoUrl?.isNotBlank() ?: false
-fun Session.hasSessionUrl(): Boolean = sessionUrl?.isNotBlank() ?: false
-fun Session.hasYoutubeUrl(): Boolean = youtubeUrl?.isNotBlank() ?: false
-fun Session.hasRelatedEvents(): Boolean = relatedSessions?.isNotEmpty() ?: false
+fun Session.hasPhotoUrl() = photoUrl?.isNotBlank() ?: false
+fun Session.hasSessionUrl() = sessionUrl?.isNotBlank() ?: false
+fun Session.hasYoutubeUrl() = youtubeUrl?.isNotBlank() ?: false
+fun Session.hasRelatedEvents() = relatedSessions?.isNotEmpty() ?: false
+fun Session.isStarredByUser(userUid: String) = starringUsers?.contains(userUid) ?: false
 
 val Session.duration: Long
     //get() = endTime.time - startTime.time
