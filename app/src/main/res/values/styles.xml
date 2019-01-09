@@ -8,15 +8,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="Widget.ADSSched.BottomNav" parent="@style/Widget.MaterialComponents.BottomNavigationView.Colored">
+    <!-- BottomNavigationView styling. -->
+    <style name="MyBottomNav" parent="@style/Widget.MaterialComponents.BottomNavigationView.Colored">
         <item name="itemIconTint">@color/bottom_nav_item</item>
-        <item name="itemTextAppearanceActive">@style/TextAppearance.ADSSched.BottomNavigationView</item>
-        <item name="itemTextAppearanceInactive">@style/TextAppearance.ADSSched.BottomNavigationView</item>
+        <item name="itemTextAppearanceActive">@style/MyBottomNav.TextAppearance</item>
+        <item name="itemTextAppearanceInactive">@style/MyBottomNav.TextAppearance</item>
         <item name="labelVisibilityMode">labeled</item>
         <item name="android:theme">@style/ThemeOverlay.MaterialComponents.Dark</item>
     </style>
 
-    <style name="TextAppearance.ADSSched.BottomNavigationView"
+    <style name="MyBottomNav.TextAppearance"
            parent="@style/TextAppearance.MaterialComponents.Caption">
         <item name="android:fontFamily">@font/google_sans</item>
         <item name="android:textColor">@color/bottom_nav_item</item>
