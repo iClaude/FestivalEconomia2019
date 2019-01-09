@@ -10,6 +10,7 @@ import com.google.firebase.firestore.QuerySnapshot
 
 /*
     Livedata connected to a Firestore collection reference to obtain realtime updates.
+    Full explanation in this blog post: https://goo.gl/wBWjhV
  */
 class FirestoreCollectionLiveData(private val collRef: CollectionReference) : LiveData<QuerySnapshot>() {
 

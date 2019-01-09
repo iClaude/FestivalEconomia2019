@@ -10,6 +10,7 @@ import com.google.firebase.firestore.ListenerRegistration
 
 /*
     Livedata connected to a Firestore document reference to obtain realtime updates.
+    Full explanation in this blog post: https://goo.gl/wBWjhV
  */
 class FirestoreDocumentLiveData(private val docRef: DocumentReference) : LiveData<DocumentSnapshot>() {
 
