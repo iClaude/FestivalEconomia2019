@@ -1,5 +1,6 @@
 package iclaude.festivaleconomia2019.model
 
+import android.os.Handler
 import android.util.Log
 import androidx.lifecycle.LiveData
 import com.google.firebase.firestore.DocumentReference
@@ -15,14 +16,24 @@ class FirestoreDocumentLiveData(private val docRef: DocumentReference) : LiveDat
     private val TAG = this.javaClass.simpleName
     private lateinit var registration: ListenerRegistration
 
+    private val handler = Handler()
+    private var listenerRemovePending = false
+
     override fun onActive() {
         super.onActive()
-        registration = docRef.addSnapshotListener(mListener)
+
+        if (listenerRemovePending)
+            handler.removeCallbacks(removeListenerRunnable)
+        else
+            registration = docRef.addSnapshotListener(mListener)
+
+        listenerRemovePending = false
     }
 
     override fun onInactive() {
         super.onInactive()
-        registration.remove()
+        handler.postDelayed(removeListenerRunnable, 2000)
+        listenerRemovePending = true
     }
 
 
@@ -33,5 +44,12 @@ class FirestoreDocumentLiveData(private val docRef: DocumentReference) : LiveDat
         }
 
         value = snapshot
+    }
+
+    private val removeListenerRunnable = object : Runnable {
+        override fun run() {
+            registration.remove()
+            listenerRemovePending = false
+        }
     }
 }
