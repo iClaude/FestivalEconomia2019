@@ -43,7 +43,7 @@ class SessionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_session, container, false)
+        return inflater.inflate(R.layout.fragment_sessions, container, false)
     }
 
     // TODO: Rename method, update argument and hook method into UI event
