@@ -1,16 +1,8 @@
 <resources>
     <string name="app_name">Festival Economia 2019</string>
-    <string name="title_schedule"
-            translation_description="The title for the schedule screen where user can see their schedule for the Android Dev Summit.">
-        Schedule
-    </string>
-    <string name="title_info"
-            translation_description="The title for the info screen where user can see various information, such as FAQ and travel info.">
-        Info
-    </string>
-    <string name="title_map"
-            translation_description="The title for the map screen where user can see the map of the venue.">Map
-    </string>
+    <string name="title_schedule">Schedule</string>
+    <string name="title_info">Info</string>
+    <string name="title_map">Map</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
