@@ -8,9 +8,8 @@
             translation_description="The title for the info screen where user can see various information, such as FAQ and travel info.">
         Info
     </string>
-    <string name="title_agenda"
-            translation_description="The title for the agenda screen where user can see all the sessions they plan to attend.">
-        Agenda
+    <string name="title_map"
+            translation_description="The title for the map screen where user can see the map of the venue.">Map
     </string>
 
     <!-- TODO: Remove or change this placeholder text -->

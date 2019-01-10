@@ -15,9 +15,9 @@
             app:contentDescription="@string/title_schedule"/>
 
     <item
-            android:id="@+id/navigation_agenda"
-            android:icon="@drawable/asld_nav_agenda"
-            android:title="@string/title_agenda"
-            app:contentDescription="@string/title_agenda"/>
+            android:id="@+id/navigation_map"
+            android:icon="@drawable/asld_nav_map"
+            android:title="@string/title_map"
+            app:contentDescription="@string/title_map"/>
 
 </menu>
