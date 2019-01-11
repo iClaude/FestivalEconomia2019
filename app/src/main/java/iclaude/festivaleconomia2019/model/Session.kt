@@ -31,7 +31,7 @@ fun Session.isLive(): Boolean {
 fun Session.hasPhotoUrl() = photoUrl?.isNotBlank() ?: false
 fun Session.hasSessionUrl() = sessionUrl?.isNotBlank() ?: false
 fun Session.hasYoutubeUrl() = youtubeUrl?.isNotBlank() ?: false
-fun Session.hasRelatedEvents() = relatedSessions?.isNotEmpty() ?: false
+fun Session.hasRelatedSessions() = relatedSessions?.isNotEmpty() ?: false
 
 val Session.duration: Long
     //get() = endTime.time - startTime.time
