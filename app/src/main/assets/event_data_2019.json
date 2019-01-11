@@ -1,14 +1,20 @@
 {
-  "rooms": [
+  "locations": [
     {
-      "filter": "true",
       "id": "31156ab0-45fa-54d9-a99e-1606ae89a213",
-      "name": "Theater 2"
+      "name": "MUSE",
+      "displayString": "MUSE - auditorium",
+      "description": "The Geological Museum of the Dolomites in Predazzo is a museum with a long tradition, opened to the public in 1899 on the initiative of the - Società magistrale di Fiemme e Fassa -. It is the result of the strong attention given to these areas by the international geological research since the early nineteenth century, when precisely in Predazzo took shape a new theory about the origin of the mountains.",
+      "lat": 46.062627,
+      "lng": 11.114355
     },
     {
-      "filter": "true",
       "id": "3ec7bc89-46a6-5480-8c16-98b4e639cf98",
-      "name": "Theater 1"
+      "name": "UNITN - Economia",
+      "displayString": "UNITN - Economia - aula 2A",
+      "description": "The Faculty of Economics here in Trento is recognized for the quality of its teaching activities and scientific research in the study of economics and business sciences, as well as for its global connections with top Business Schools and enterprises around the world. Consistently, we rank among the top Italian Schools of Business and Economics. We have worked hard  to create a modern and innovative structure with a network of services which are continually developing. Special attention is paid to meeting the needs of our students and providing a comfortable, serious and stimulating learning environment.",
+      "lat": 46.066433,
+      "lng": 11.117670
     }
   ],
   "sessions": [
