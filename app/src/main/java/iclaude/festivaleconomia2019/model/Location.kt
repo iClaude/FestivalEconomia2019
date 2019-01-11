@@ -7,7 +7,7 @@ package iclaude.festivaleconomia2019.model
 data class Location(
     val id: String,
     val name: String,
-    val displayString: String? = null,
+    val displayString: String?,
     val description: String,
     val lat: Double,
     val lng: Double
