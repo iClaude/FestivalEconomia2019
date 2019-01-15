@@ -63,8 +63,8 @@
       "youtubeUrl": "https://www.youtube.com/watch?v=4m2yYSTdvIg&index=9&list=PLWz5rJ2EKKc8WFYCR9esqGGY0vOZm2l6e"
     }
   ],
-  "speakers": {
-    "00b30d72-15b4-59e6-84c3-11688e038d84": {
+  "organizers": [
+    {
       "bio": "Izabela has been a Software Engineer on the Android Studio team for 2 years. She works on the Android Gradle Plugin and her main areas of expertise include resources and AAPT2 support. Beside being an engineer, Iza is also a diversity and inclusion activist.",
       "company": "Google",
       "id": "00b30d72-15b4-59e6-84c3-11688e038d84",
@@ -75,7 +75,7 @@
       "linkedInUrl": "https://www.linkedin.com/in/dineshsandeep",
       "facebookUrl": "https://it-it.facebook.com/romainpguy"
     },
-    "04bc8610-1941-5f0a-8eaf-9147926fb627": {
+    {
       "bio": "Chris works as a software engineer at Google, working on the Android Gradle Plugin, first in Mountain View and now in London.\n\nPrior to joining Google, Chris worked as a Research Assistant in the Security Group of the The Computer Laboratory, University of Cambridge. He previously studied computer science as undergraduate at the University of Cambridge.",
       "company": "Samsung",
       "id": "04bc8610-1941-5f0a-8eaf-9147926fb627",
@@ -86,7 +86,7 @@
       "linkedInUrl": "https://www.linkedin.com/in/rich-fulcher-a3648a/",
       "facebookUrl": ""
     }
-  },
+  ],
   "tags": [
     {
       "color": "#3D82EE",
