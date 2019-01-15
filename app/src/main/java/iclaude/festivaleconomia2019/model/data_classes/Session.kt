@@ -1,4 +1,4 @@
-package iclaude.festivaleconomia2019.model
+package iclaude.festivaleconomia2019.model.data_classes
 
 
 /*

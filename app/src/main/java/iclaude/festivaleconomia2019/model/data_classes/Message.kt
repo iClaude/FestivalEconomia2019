@@ -1,4 +1,4 @@
-package iclaude.festivaleconomia2019.model
+package iclaude.festivaleconomia2019.model.data_classes
 
 import com.google.firebase.firestore.ServerTimestamp
 import java.util.*

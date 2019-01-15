@@ -1,4 +1,4 @@
-package iclaude.festivaleconomia2019.model
+package iclaude.festivaleconomia2019.model.firestore
 
 object FirestoreReferences {
     const val LOCATIONS = "events/festival_economia_2019/locations"
