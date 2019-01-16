@@ -1,6 +1,5 @@
 package iclaude.festivaleconomia2019.model.JSONparser
 
-import android.graphics.Color.parseColor
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
@@ -86,8 +85,8 @@ class TagDeserializer : JsonDeserializer<Tag> {
 
         return Tag(
                 name = obj.get("name").asString,
-                fontColor = parseColor(obj.get("fontColor").asString),
-                color = parseColor(obj.get("color").asString)
+            fontColor = obj.get("fontColor").asString,
+            color = obj.get("color").asString
         )
     }
 }
