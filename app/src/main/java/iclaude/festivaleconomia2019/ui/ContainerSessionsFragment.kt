@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import iclaude.festivaleconomia2019.R
-import iclaude.festivaleconomia2019.model.JSONparser.JSONparser
 
 
 class ContainerSessionsFragment : Fragment() {
@@ -20,17 +19,8 @@ class ContainerSessionsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_container_sessions, container, false)
-        textView = root.findViewById<TextView>(R.id.textView2)
-        button = root.findViewById<Button>(R.id.button)
-        button.setOnClickListener {
-            val inputStream = context?.assets?.open("event_data_2019.json").let {
-                val eventData = JSONparser.parseEventData(it!!)
-                textView.text = eventData.toString()
-            }
-        }
+        return inflater.inflate(R.layout.fragment_container_sessions, container, false)
 
-        return root
     }
 
 
