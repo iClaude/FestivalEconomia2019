@@ -1,0 +1,111 @@
+{
+  "locations": [
+    {
+      "id": "01",
+      "name": "MUSE",
+      "displayString": "MUSE - auditorium",
+      "description": "The Geological Museum of the Dolomites in Predazzo is a museum with a long tradition, opened to the public in 1899 on the initiative of the - Società magistrale di Fiemme e Fassa -. It is the result of the strong attention given to these areas by the international geological research since the early nineteenth century, when precisely in Predazzo took shape a new theory about the origin of the mountains.",
+      "lat": 46.062627,
+      "lng": 11.114355
+    },
+    {
+      "id": "02",
+      "name": "UNITN - Economia",
+      "displayString": "UNITN - Economia - aula 2A",
+      "description": "The Faculty of Economics here in Trento is recognized for the quality of its teaching activities and scientific research in the study of economics and business sciences, as well as for its global connections with top Business Schools and enterprises around the world. Consistently, we rank among the top Italian Schools of Business and Economics. We have worked hard  to create a modern and innovative structure with a network of services which are continually developing. Special attention is paid to meeting the needs of our students and providing a comfortable, serious and stimulating learning environment.",
+      "lat": 46.066433,
+      "lng": 11.117670
+    }
+  ],
+  "sessions": [
+    {
+      "description": "[TESTO ITALIANO] The keynote kicks off on November 7 at 10AM PST, where you'll hear directly from Dave Burke and others on the present and future of Android development.",
+      "endTimestamp": 1541617200000,
+      "id": "01",
+      "relatedSessions": [],
+      "location": "01",
+      "organizers": [
+        "01",
+        "02"
+      ],
+      "startTimestamp": 1541613600000,
+      "tags1": [
+        "Keynote",
+        "Session"
+      ],
+      "tags2": [
+        "Others"
+      ],
+      "title": "Keynote",
+      "photoUrl": "https://tuttosesto.net/wp-content/uploads/2018/06/wwwonline.jpg",
+      "sessionUrl": "https://goo.gl/P1BAVR",
+      "youtubeUrl": "https://youtu.be/ei_5R0CvLm4"
+    },
+    {
+      "description": "The release of androidx.test v1.0 makes testing a first class citizen of Android developer tools. See how a new set of cross platform APIs enable you to write both unit and integration tests that run in any environment and learn of our upcoming plans for future releases.",
+      "endTimestamp": 1541620500000,
+      "id": "02",
+      "relatedSessions": [],
+      "location": "02",
+      "organizers": [
+        "02"
+      ],
+      "startTimestamp": 1541619300000,
+      "tags1": [
+        "Session"
+      ],
+      "tags2": [
+        "Android"
+      ],
+      "title": "Testing Rebooted (with AndroidX Test)",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Richie_Gray_2016.jpg/1200px-Richie_Gray_2016.jpg",
+      "sessionUrl": "https://goo.gl/Mddeq1"
+    }
+  ],
+  "organizers": [
+    {
+      "bio": "Izabela has been a Software Engineer on the Android Studio team for 2 years. She works on the Android Gradle Plugin and her main areas of expertise include resources and AAPT2 support. Beside being an engineer, Iza is also a diversity and inclusion activist.",
+      "company": "Google",
+      "id": "01",
+      "name": "Izabela Orlowska",
+      "thumbnailUrl": "https://developer.android.com/dev-summit/images/speakers/izabela_orlowska.jpg",
+      "websiteUrl": "https://gfx.developpez.com/",
+      "twitterUrl": "https://twitter.com/SandeepDinesh",
+      "linkedInUrl": "https://www.linkedin.com/in/dineshsandeep",
+      "facebookUrl": "https://it-it.facebook.com/romainpguy"
+    },
+    {
+      "bio": "Chris works as a software engineer at Google, working on the Android Gradle Plugin, first in Mountain View and now in London.\n\nPrior to joining Google, Chris worked as a Research Assistant in the Security Group of the The Computer Laboratory, University of Cambridge. He previously studied computer science as undergraduate at the University of Cambridge.",
+      "company": "Samsung",
+      "id": "02",
+      "name": "Chris Warrington",
+      "thumbnailUrl": "https://developer.android.com/dev-summit/images/speakers/chris_warrington.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/richfulcher",
+      "linkedInUrl": "https://www.linkedin.com/in/rich-fulcher-a3648a/",
+      "facebookUrl": ""
+    }
+  ],
+  "tags": [
+    {
+      "color": "#3D82EE",
+      "fontColor": "#FFFFFF",
+      "name": "Keynote"
+    },
+    {
+      "color": "#cce9c2",
+      "fontColor": "#202124",
+      "name": "Session"
+    },
+    {
+      "color": "#FDC93E",
+      "fontColor": "#202124",
+      "name": "Others"
+    },
+    {
+      "color": "#FFEAB3",
+      "fontColor": "#202124",
+      "name": "Android"
+    }
+  ]
+}
