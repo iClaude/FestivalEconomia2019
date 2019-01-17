@@ -35,6 +35,10 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
+    // Kotlin coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.0'
+
     // Navigation
     implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha09'
     implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0-alpha09'
