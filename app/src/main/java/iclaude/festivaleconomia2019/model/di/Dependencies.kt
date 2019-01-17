@@ -4,6 +4,7 @@ import android.content.Context
 import dagger.Component
 import dagger.Module
 import dagger.Provides
+import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.ContainerSessionsFragment
 import java.io.InputStream
@@ -11,7 +12,7 @@ import java.util.*
 import javax.inject.Singleton
 
 const val EVENT_DATA_FILE = "event_data_2019.json"
-const val EVENT_DATA_FILE_IT = "event_data_2019_it.json"
+const val EVENT_DATA_FILE_IT = "event_data_2019.json"
 
 
 @Module
@@ -36,7 +37,7 @@ class RepoModule {
     @Provides
     @Singleton
     fun provideInputStream(context: Context, fileName: String): InputStream =
-        context.assets.open(fileName)
+        context.resources.openRawResource(R.raw.event_data_2019)
 
     @Provides
     @Singleton
