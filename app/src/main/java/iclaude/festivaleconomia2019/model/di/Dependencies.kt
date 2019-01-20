@@ -6,7 +6,7 @@ import dagger.Module
 import dagger.Provides
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
-import iclaude.festivaleconomia2019.ui.ContainerSessionsFragment
+import iclaude.festivaleconomia2019.ui.MapViewModel
 import java.io.InputStream
 import javax.inject.Singleton
 
@@ -35,5 +35,5 @@ class RepoModule {
 @Component(modules = arrayOf(AppModule::class, RepoModule::class))
 @Singleton
 interface AppComponent {
-    fun inject(fragment: ContainerSessionsFragment)
+    fun inject(mapViewMode: MapViewModel)
 }

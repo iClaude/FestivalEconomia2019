@@ -11,15 +11,14 @@ import java.io.InputStream
 
 class EventDataRepository(private val inputStream: InputStream) {
 
-    private val TAG = "EventDataRepository"
-
-    private var _eventDataMutableLive: MutableLiveData<EventData> = MutableLiveData()
+    private var mEventDataMutableLive: MutableLiveData<EventData> = MutableLiveData()
     val eventDataLive: LiveData<EventData>
-        get() = _eventDataMutableLive
+        get() = mEventDataMutableLive
+
 
     init {
         GlobalScope.launch {
-            _eventDataMutableLive.postValue(JSONparser.parseEventData(inputStream))
+            mEventDataMutableLive.postValue(JSONparser.parseEventData(inputStream))
         }
     }
 
