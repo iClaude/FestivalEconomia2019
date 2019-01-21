@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   tools:context=".ui.MapFragment" android:id="@+id/constraintLayout">
 
-    <FrameLayout
-            android:id="@+id/appbar"
-            style="@style/MyAppBarStyle"
-            android:background="@color/mapFragmentAppbarColor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+>
 
-        <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:minHeight="?actionBarSize"
-                android:text="@string/title_map"
-                android:textAppearance="@style/ToolbarTitleStyle"/>
+    <data>
+        <variable
+                name="viewModel"
+                type="iclaude.festivaleconomia2019.ui.map.MapViewModel"/>
+    </data>
 
-    </FrameLayout>
-
-    <com.google.android.gms.maps.MapView
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/mapView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/appbar"/>
+            android:id="@+id/constraintLayout">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <FrameLayout
+                android:id="@+id/appbar"
+                style="@style/MyAppBarStyle"
+                android:background="@color/mapFragmentAppbarColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:minHeight="?actionBarSize"
+                    android:text="@string/title_map"
+                    android:textAppearance="@style/ToolbarTitleStyle"/>
+
+        </FrameLayout>
+
+        <com.google.android.gms.maps.MapView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mapView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appbar"
+                app:mapCenter="@{viewModel.mapCenterEvent}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

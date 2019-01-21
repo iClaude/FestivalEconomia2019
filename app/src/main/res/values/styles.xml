@@ -24,6 +24,7 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <!-- Appbar style. -->
     <style name="MyAppBarStyle" parent="@style/Widget.Design.AppBarLayout">
         <item name="android:background">@color/statusBarColor</item>
         <item name="android:elevation">8dp</item>

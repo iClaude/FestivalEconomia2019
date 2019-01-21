@@ -6,7 +6,7 @@ import dagger.Module
 import dagger.Provides
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
-import iclaude.festivaleconomia2019.ui.MapViewModel
+import iclaude.festivaleconomia2019.ui.map.MapViewModel
 import java.io.InputStream
 import javax.inject.Singleton
 
