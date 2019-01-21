@@ -14,6 +14,7 @@ class ContainerSessionsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val root = inflater.inflate(R.layout.fragment_container_sessions, container, false)
         return root
 

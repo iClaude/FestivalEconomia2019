@@ -3,4 +3,7 @@
     <color name="colorPrimary">#ff5722</color>
     <color name="colorPrimaryDark">#e64a19</color>
     <color name="colorAccent">#1de9b6</color>
+
+    <color name="statusBarColor">#ffffff</color>
+    <color name="mapFragmentAppbarColor">#e6ffffff</color>
 </resources>
