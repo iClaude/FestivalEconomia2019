@@ -1,6 +1,5 @@
 package iclaude.festivaleconomia2019.ui.map
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -29,12 +28,16 @@ class MapViewModel : ViewModel() {
     val mapCenterEvent: LiveData<Event<CameraUpdate>>
         get() = _mapCenterEvent
 
+    private val _mapMarkersEvent = MutableLiveData<Event<List<Location>>>()
+    val mapMarkersEvent: LiveData<Event<List<Location>>>
+        get() = _mapMarkersEvent
+
+
     fun onMapReady(locations: List<Location>) {
         calculateMapData(locations)
     }
 
     fun calculateMapData(locations: List<Location>) {
-        Log.d(TAG, "calculateMapData")
         val latLngBounds = LatLngBounds.builder().run {
             locations.forEach {
                 include(LatLng(it.lat, it.lng))
@@ -43,6 +46,7 @@ class MapViewModel : ViewModel() {
         }
         val cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLngBounds.center, 15f)
         _mapCenterEvent.value = Event(cameraUpdate)
+        _mapMarkersEvent.value = Event(locations)
 
     }
 
