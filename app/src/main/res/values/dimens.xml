@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="bottom_navigation_height">56dp</dimen>
+    <dimen name="camera_zoom">10</dimen>
+    <item name="map_camera_target_lat" type="dimen" format="float">46.067354</item>
+    <item name="map_camera_target_lng" type="dimen" format="float">11.121454</item>
 </resources>

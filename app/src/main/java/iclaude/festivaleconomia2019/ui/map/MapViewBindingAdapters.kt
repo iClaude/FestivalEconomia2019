@@ -38,8 +38,12 @@ fun mapMarkers(mapView: MapView, event: Event<List<Location>>?) {
                 MarkerOptions()
                     .position(LatLng(loc.lat, loc.lng))
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker))
-            )
-                .title = loc.name
+            ).apply {
+                title = loc.name
+                tag = loc
+            }
+
+
         }
     }
 }

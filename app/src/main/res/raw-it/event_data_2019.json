@@ -15,6 +15,22 @@
       "description": "The Faculty of Economics here in Trento is recognized for the quality of its teaching activities and scientific research in the study of economics and business sciences, as well as for its global connections with top Business Schools and enterprises around the world. Consistently, we rank among the top Italian Schools of Business and Economics. We have worked hard  to create a modern and innovative structure with a network of services which are continually developing. Special attention is paid to meeting the needs of our students and providing a comfortable, serious and stimulating learning environment.",
       "lat": 46.066433,
       "lng": 11.117670
+    },
+    {
+      "id": "03",
+      "name": "UNITN - Ingegneria",
+      "displayString": "UNITN - Ingegneria - aula 7C",
+      "description": "The Department of Information Engineering and Computer Science (DISI), founded in 2002, covers the main topics of information technology and engineering. It actively promotes education and research across interdisciplinary areas with members of the departments of Computer Science, Engineering, Economics, Sociology and Cognitive Sciences. We are particularly proud of our PhD students, young researchers, and alumni, many of whom are leaders in academia and industry.",
+      "lat": 46.067109,
+      "lng": 11.149833
+    },
+    {
+      "id": "04",
+      "name": "Comune di Trento",
+      "displayString": "Comune di Trento - auditorium",
+      "description": "Il Comune di Trento acquista il palazzo al 19 di via Belenzani nel 1873, e la parte del complesso su via Manci con Torre Mirana nel 1949 (attualmente sede dell’Ufficio Personale e della Direzione Generale).",
+      "lat": 46.069172,
+      "lng": 11.121426
     }
   ],
   "sessions": [

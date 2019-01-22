@@ -10,19 +10,13 @@ import androidx.lifecycle.ViewModelProviders
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
 import iclaude.festivaleconomia2019.databinding.FragmentMapBinding
-import iclaude.festivaleconomia2019.model.data_classes.Location
 
 
 class MapFragment : Fragment(), OnMapReadyCallback {
 
     private lateinit var mViewModel: MapViewModel
     private lateinit var mMapView: MapView
-    private var mGoogleMap: GoogleMap? = null
-    private lateinit var mLocations: List<Location>
     private lateinit var binding: FragmentMapBinding
 
 
@@ -67,21 +61,15 @@ class MapFragment : Fragment(), OnMapReadyCallback {
     }
 
     override fun onMapReady(gMap: GoogleMap?) {
-        mGoogleMap = gMap
-
         mViewModel.mRepository.eventDataLive.observe(this, Observer {
-            mViewModel.onMapReady(it.locations)
+            mViewModel.loadMap(it.locations)
         })
-    }
 
-
-    private fun addMarker(location: Location, mMap: GoogleMap) {
-        mMap.addMarker(
-            MarkerOptions()
-                .position(LatLng(location.lat, location.lng))
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
-        )
-            .title = location.name
+        gMap?.setOnMarkerClickListener {
+            mViewModel.zoomToMarker(it)
+            true
+        }
 
     }
+
 }
