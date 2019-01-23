@@ -65,9 +65,12 @@ class MapFragment : Fragment(), OnMapReadyCallback {
             mViewModel.loadMap(it.locations)
         })
 
-        gMap?.setOnMarkerClickListener {
-            mViewModel.zoomToMarker(it)
-            true
+        gMap?.apply {
+            setOnMarkerClickListener {
+                mViewModel.zoomToMarker(it)
+                true
+            }
+            setOnMapClickListener { mViewModel.onMapClick() }
         }
 
     }

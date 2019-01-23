@@ -1,11 +1,13 @@
 package iclaude.festivaleconomia2019.ui.map
 
+import android.view.View
 import androidx.databinding.BindingAdapter
 import com.google.android.gms.maps.CameraUpdate
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.data_classes.Location
 import iclaude.festivaleconomia2019.ui.utils.Event
@@ -46,4 +48,13 @@ fun mapMarkers(mapView: MapView, event: Event<List<Location>>?) {
 
         }
     }
+}
+
+/**
+ * Sets the current state of the BottomSheet.
+ */
+@BindingAdapter("app:bottomSheetState")
+fun bottomSheetState(view: View, event: Event<Int>?) {
+    val state = event?.getContentIfNotHandled() ?: return
+    BottomSheetBehavior.from(view).state = state
 }
