@@ -31,9 +31,15 @@
         <item name="android:orientation">vertical</item>
     </style>
 
-    <!-- Toolbar style. -->
+    <!-- Toolbar title style. -->
     <style name="ToolbarTitleStyle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:fontFamily">@font/google_sans</item>
+    </style>
+
+    <style name="BottomSheetTitleStyle" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textColor">@color/collapsing_section</item>
     </style>
 
 </resources>
