@@ -18,10 +18,9 @@
             android:layout_marginBottom="60dp"
             android:background="@drawable/filters_sheet_background"
             android:elevation="@dimen/bottom_sheet_elevation"
-            app:layout_behavior="com.google.samples.apps.iosched.widget.BottomSheetBehavior"
+            app:layout_behavior="@string/bottom_sheet_behavior"
             app:behavior_hideable="true"
-            app:behavior_peekHeight="@dimen/bottom_sheet_peek_height"
-            app:bottomSheetState="@{viewModel.bottomSheetStateEvent}">
+            app:behavior_peekHeight="@dimen/bottom_sheet_peek_height">
 
         <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guide_peek_height"

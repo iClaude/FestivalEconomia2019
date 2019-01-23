@@ -32,7 +32,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
             viewModel = this@MapFragment.mViewModel
         }
 
-        mMapView = binding.mapView.apply {
+        mMapView = binding.mainContent.mapView.apply {
             onCreate(savedInstanceState)
             getMapAsync(this@MapFragment)
         }

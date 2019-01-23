@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
->
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
@@ -10,46 +9,19 @@
                 type="iclaude.festivaleconomia2019.ui.map.MapViewModel"/>
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/map_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/constraintLayout">
+            android:layout_height="match_parent">
 
-        <FrameLayout
-                android:id="@+id/appbar"
-                style="@style/MyAppBarStyle"
-                android:background="@color/mapFragmentAppbarColor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+        <include layout="@layout/fragment_map_main"
+                 android:id="@+id/mainContent"
+                 bind:viewModel="@{viewModel}"/>
 
-            <TextView
-                    android:id="@+id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:minHeight="?actionBarSize"
-                    android:text="@string/title_map"
-                    android:textAppearance="@style/ToolbarTitleStyle"/>
+        <include layout="@layout/fragment_map_bottomsheet"
+                 android:id="@+id/bottomSheet"
+                 bind:viewModel="@{viewModel}"/>
 
-        </FrameLayout>
-
-        <com.google.android.gms.maps.MapView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/mapView"
-                app:cameraZoom="@dimen/camera_zoom"
-                app:cameraTargetLat="@dimen/map_camera_target_lat"
-                app:cameraTargetLng="@dimen/map_camera_target_lng"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/appbar"
-                app:mapCenter="@{viewModel.mapCenterEvent}"
-                app:mapMarkers="@{viewModel.mapMarkersEvent}"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </layout>
