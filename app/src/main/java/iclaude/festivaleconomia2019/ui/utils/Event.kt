@@ -23,6 +23,11 @@ open class Event<out T>(private val content: T) {
     }
 
     /**
+     * Returns the content and allows its use again.
+     */
+    fun getContent(): T? = content
+
+    /**
      * Returns the content, even if it's already been handled.
      */
     fun peekContent(): T = content

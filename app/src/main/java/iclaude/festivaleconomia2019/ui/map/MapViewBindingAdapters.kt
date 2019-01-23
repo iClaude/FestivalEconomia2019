@@ -1,6 +1,7 @@
 package iclaude.festivaleconomia2019.ui.map
 
 import android.view.View
+import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.google.android.gms.maps.CameraUpdate
 import com.google.android.gms.maps.MapView
@@ -57,4 +58,25 @@ fun mapMarkers(mapView: MapView, event: Event<List<Location>>?) {
 fun bottomSheetState(view: View, event: Event<Int>?) {
     val state = event?.getContentIfNotHandled() ?: return
     BottomSheetBehavior.from(view).state = state
+}
+
+/**
+ * Sets marker's data (title, description, lat/lng) in the bottom sheet.
+ */
+@BindingAdapter("app:markerTitle")
+fun markerTitle(textView: TextView, event: Event<Location>?) {
+    val location = event?.getContent() ?: return
+    textView.text = location.name
+}
+
+@BindingAdapter("app:markerDescription")
+fun markerDescription(textView: TextView, event: Event<Location>?) {
+    val location = event?.getContent() ?: return
+    textView.text = location.description
+}
+
+@BindingAdapter("app:markerTag")
+fun markerDescription(view: View, event: Event<Location>?) {
+    val location = event?.getContent() ?: return
+    view.tag = location
 }

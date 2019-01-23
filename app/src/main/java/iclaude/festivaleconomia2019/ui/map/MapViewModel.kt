@@ -1,5 +1,6 @@
 package iclaude.festivaleconomia2019.ui.map
 
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -14,6 +15,7 @@ import iclaude.festivaleconomia2019.model.data_classes.Location
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.utils.Event
+import iclaude.festivaleconomia2019.ui.utils.SingleLiveEvent
 import javax.inject.Inject
 
 class MapViewModel : ViewModel() {
@@ -35,6 +37,13 @@ class MapViewModel : ViewModel() {
     val bottomSheetStateEvent: LiveData<Event<Int>>
         get() = _bottomSheetStateEvent
 
+    // set marker's name and description in the bottom sheet
+    private val _markerInfoEvent = MutableLiveData<Event<Location>>()
+    val markerInfoEvent: LiveData<Event<Location>>
+        get() = _markerInfoEvent
+
+    // the user clicks on map icon to get directions to the selected location
+    val directionsEvent = SingleLiveEvent<Location>()
 
     init {
         App.component.inject(this)
@@ -44,6 +53,9 @@ class MapViewModel : ViewModel() {
 
     @Inject
     lateinit var mRepository: EventDataRepository
+
+    private var curLocation: Location? = null
+
 
     fun loadMap(locations: List<Location>) {
         val latLngBounds = LatLngBounds.builder().run {
@@ -59,18 +71,25 @@ class MapViewModel : ViewModel() {
     }
 
     fun zoomToMarker(marker: Marker) {
+        val loc = marker.tag as Location
+        curLocation = loc
+
         val cameraPosition = CameraPosition.Builder().run {
-            val loc = marker.tag as Location
             this.target(LatLng(loc.lat, loc.lng))
             this.zoom(17f)
             build()
         }
         _mapCenterEvent.value = Event(CameraUpdateFactory.newCameraPosition(cameraPosition))
+        _markerInfoEvent.value = Event(loc)
         _bottomSheetStateEvent.value = Event(BottomSheetBehavior.STATE_COLLAPSED)
     }
 
     fun onMapClick() {
         _bottomSheetStateEvent.value = Event(BottomSheetBehavior.STATE_HIDDEN)
+    }
+
+    fun showRoute(view: View) {
+        directionsEvent.postValue(curLocation)
     }
 
 }

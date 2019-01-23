@@ -1,5 +1,7 @@
 package iclaude.festivaleconomia2019.ui.map
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -36,6 +38,16 @@ class MapFragment : Fragment(), OnMapReadyCallback {
             onCreate(savedInstanceState)
             getMapAsync(this@MapFragment)
         }
+
+        mViewModel.directionsEvent.observe(this, Observer {
+            val uri = Uri.parse("google.navigation:q=${it.lat},${it.lng}")
+            val intent = Intent(Intent.ACTION_VIEW, uri).apply {
+                `package` = "com.google.android.apps.maps"
+            }
+            if (intent.resolveActivity(context?.packageManager) != null) {
+                startActivity(intent)
+            }
+        })
 
         return binding.root
     }
