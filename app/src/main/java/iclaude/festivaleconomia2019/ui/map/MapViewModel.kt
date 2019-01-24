@@ -19,7 +19,7 @@ import iclaude.festivaleconomia2019.ui.utils.SingleLiveEvent
 import javax.inject.Inject
 
 class MapViewModel : ViewModel() {
-    private val TAG = "MapViewModel"
+    private val TAG = this.javaClass.simpleName
 
 
     // center the map on a specific point
@@ -110,6 +110,9 @@ class MapViewModel : ViewModel() {
 
     // Update the state of the bottom sheet after drag events.
     fun updateBottomSheetState(state: Int) {
-        _bottomSheetStateEvent.value = Event(state)
+        val curState = (bottomSheetStateEvent.value as Event<Int>).peekContent()
+        if (state != curState) {
+            _bottomSheetStateEvent.value = Event(state)
+        }
     }
 }

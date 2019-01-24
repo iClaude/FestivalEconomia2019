@@ -1,11 +1,13 @@
 package iclaude.festivaleconomia2019.ui.map
 
 import android.content.Intent
+import android.graphics.drawable.AnimatedVectorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -13,6 +15,8 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_COLLAPSED
+import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
 import iclaude.festivaleconomia2019.databinding.FragmentMapBinding
 
 
@@ -21,6 +25,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
     private lateinit var mViewModel: MapViewModel
     private lateinit var mMapView: MapView
     private lateinit var binding: FragmentMapBinding
+    private lateinit var ivExpandIcon: ImageView
 
 
     override fun onCreateView(
@@ -52,6 +57,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
             }
         })
 
+        ivExpandIcon = binding.bottomSheet.expandIcon
         // update bottom sheet state after drag events
         BottomSheetBehavior.from(binding.bottomSheet.bottomSheet).apply {
             setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
@@ -60,10 +66,15 @@ class MapFragment : Fragment(), OnMapReadyCallback {
                 }
 
                 override fun onStateChanged(p0: View, state: Int) {
-                    mViewModel.updateBottomSheetState(state)
+                    if (state == STATE_COLLAPSED || state == STATE_EXPANDED) {
+                        mViewModel.updateBottomSheetState(state)
+
+                        (ivExpandIcon.drawable as AnimatedVectorDrawable).start()
+                    }
                 }
             })
         }
+
 
         return binding.root
     }
