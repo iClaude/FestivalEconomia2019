@@ -19,7 +19,6 @@ import iclaude.festivaleconomia2019.ui.utils.SingleLiveEvent
 import javax.inject.Inject
 
 class MapViewModel : ViewModel() {
-    private val TAG = this.javaClass.simpleName
 
 
     // center the map on a specific point
@@ -54,27 +53,38 @@ class MapViewModel : ViewModel() {
     @Inject
     lateinit var mRepository: EventDataRepository
 
-    private var curLocation: Location? = null
+    private var curMarker: Marker? = null
 
 
     // Load markers and center the map.
     fun loadMap(locations: List<Location>) {
+        _mapCenterEvent.value = Event(getCameraUpdate(locations))
+        _mapMarkersEvent.value = Event(locations)
+
+    }
+
+    private fun getCameraUpdate(locations: List<Location>): CameraUpdate {
+        // a marker is already selected: zoom to that marker
+        if (curMarker != null) {
+            val loc = curMarker?.tag as Location
+            return CameraUpdateFactory.newLatLngZoom(LatLng(loc.lat, loc.lng), 17f)
+        }
+
+        // no marker is selected: zoom to the center
         val latLngBounds = LatLngBounds.builder().run {
             locations.forEach {
                 include(LatLng(it.lat, it.lng))
             }
             build()
         }
-        val cameraUpdate = CameraUpdateFactory.newLatLngBounds(latLngBounds, 120)
-        _mapCenterEvent.value = Event(cameraUpdate)
-        _mapMarkersEvent.value = Event(locations)
+        return CameraUpdateFactory.newLatLngBounds(latLngBounds, 120)
 
     }
 
     // When clicking on a marker: zoom to marker, center the map and display bottom sheet (collapsed).
     fun zoomToMarker(marker: Marker) {
         val loc = marker.tag as Location
-        curLocation = loc
+        curMarker = marker
 
         val cameraPosition = CameraPosition.Builder().run {
             this.target(LatLng(loc.lat, loc.lng))
@@ -89,15 +99,16 @@ class MapViewModel : ViewModel() {
     // When clicking on the map: hide bottom sheet.
     fun onMapClick() {
         _bottomSheetStateEvent.value = Event(BottomSheetBehavior.STATE_HIDDEN)
+        curMarker = null
     }
 
     // Show directions to a location.
     fun showRoute(view: View) {
-        directionsEvent.postValue(curLocation)
+        directionsEvent.postValue(curMarker?.tag as Location)
     }
 
     // Click on bottom sheet title: expand or collapse.
-    fun onBottomSheetTitleClick(view: View) {
+    fun onBottomSheetExpandIconClick(view: View) {
         val state = (bottomSheetStateEvent.value as Event<Int>).peekContent()
         when (state) {
             BottomSheetBehavior.STATE_COLLAPSED -> _bottomSheetStateEvent.value =

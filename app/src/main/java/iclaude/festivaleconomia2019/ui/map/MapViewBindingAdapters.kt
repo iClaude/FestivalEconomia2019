@@ -14,9 +14,6 @@ import iclaude.festivaleconomia2019.model.data_classes.Location
 import iclaude.festivaleconomia2019.ui.utils.Event
 
 
-private const val TAG = "MapViewModel"
-
-
 /**
  * Sets the center of the map's camera. Call this every time the user selects a marker.
  */

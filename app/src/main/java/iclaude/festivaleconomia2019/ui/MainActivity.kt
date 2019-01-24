@@ -22,10 +22,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupBottomNavMenu(navController: NavController) {
         bottomNav.setOnNavigationItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.containerInfoFragment -> navController.navigate(R.id.action_global_containerInfoFragment)
-                R.id.containerSessionsFragment -> navController.navigate(R.id.action_global_containerSessionsFragment)
-                R.id.mapFragment -> navController.navigate(R.id.action_global_mapFragment)
+            if (menuItem.itemId != bottomNav.selectedItemId) {
+
+                when (menuItem.itemId) {
+                    R.id.containerInfoFragment -> navController.navigate(R.id.action_global_containerInfoFragment)
+                    R.id.containerSessionsFragment -> navController.navigate(R.id.action_global_containerSessionsFragment)
+                    R.id.mapFragment -> navController.navigate(R.id.action_global_mapFragment)
+                }
             }
             true
         }
