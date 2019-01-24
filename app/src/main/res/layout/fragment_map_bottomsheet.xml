@@ -32,7 +32,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/description_scrollview" android:layout_marginStart="16dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 app:markerTag="@{viewModel.markerInfoEvent}"
-                android:onClick="@{viewModel::showRoute}"/>
+                android:onClick="@{viewModel::showRoute}" android:scaleType="fitCenter"/>
 
         <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guide_peek_height"
@@ -71,7 +71,6 @@
                 android:id="@+id/clickable"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="?selectableItemBackground"
                 app:layout_constraintBottom_toBottomOf="@id/guide_peek_height"
                 app:layout_constraintTop_toTopOf="parent"/>
 
@@ -97,7 +96,10 @@
                 android:tintMode="src_in"
                 app:layout_constraintBottom_toBottomOf="@id/guide_peek_height"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                android:clickable="true"
+                android:background="?selectableItemBackgroundBorderless"
+                android:onClick="@{viewModel::onBottomSheetTitleClick}"/>
 
         <TextView
                 android:id="@+id/marker_title"
@@ -138,7 +140,10 @@
                 android:id="@+id/textView" app:layout_constraintStart_toEndOf="@+id/ivMap"
                 android:layout_marginStart="@dimen/margin_small"
                 app:layout_constraintBottom_toBottomOf="@+id/ivMap"
-                app:layout_constraintTop_toTopOf="@+id/ivMap"/>
+                app:layout_constraintTop_toTopOf="@+id/ivMap"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:onClick="@{viewModel::showRoute}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -57,6 +57,7 @@ class MapViewModel : ViewModel() {
     private var curLocation: Location? = null
 
 
+    // Load markers and center the map.
     fun loadMap(locations: List<Location>) {
         val latLngBounds = LatLngBounds.builder().run {
             locations.forEach {
@@ -70,6 +71,7 @@ class MapViewModel : ViewModel() {
 
     }
 
+    // When clicking on a marker: zoom to marker, center the map and display bottom sheet (collapsed).
     fun zoomToMarker(marker: Marker) {
         val loc = marker.tag as Location
         curLocation = loc
@@ -84,12 +86,30 @@ class MapViewModel : ViewModel() {
         _bottomSheetStateEvent.value = Event(BottomSheetBehavior.STATE_COLLAPSED)
     }
 
+    // When clicking on the map: hide bottom sheet.
     fun onMapClick() {
         _bottomSheetStateEvent.value = Event(BottomSheetBehavior.STATE_HIDDEN)
     }
 
+    // Show directions to a location.
     fun showRoute(view: View) {
         directionsEvent.postValue(curLocation)
     }
 
+    // Click on bottom sheet title: expand or collapse.
+    fun onBottomSheetTitleClick(view: View) {
+        val state = (bottomSheetStateEvent.value as Event<Int>).peekContent()
+        when (state) {
+            BottomSheetBehavior.STATE_COLLAPSED -> _bottomSheetStateEvent.value =
+                    Event(BottomSheetBehavior.STATE_EXPANDED)
+            BottomSheetBehavior.STATE_EXPANDED -> _bottomSheetStateEvent.value =
+                    Event(BottomSheetBehavior.STATE_COLLAPSED)
+        }
+        false
+    }
+
+    // Update the state of the bottom sheet after drag events.
+    fun updateBottomSheetState(state: Int) {
+        _bottomSheetStateEvent.value = Event(state)
+    }
 }

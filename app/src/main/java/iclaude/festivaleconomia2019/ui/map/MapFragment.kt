@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import iclaude.festivaleconomia2019.databinding.FragmentMapBinding
 
 
@@ -34,11 +35,13 @@ class MapFragment : Fragment(), OnMapReadyCallback {
             viewModel = this@MapFragment.mViewModel
         }
 
+        // initialize MapView
         mMapView = binding.mainContent.mapView.apply {
             onCreate(savedInstanceState)
             getMapAsync(this@MapFragment)
         }
 
+        // show directions to a location when the user wants to
         mViewModel.directionsEvent.observe(this, Observer {
             val uri = Uri.parse("google.navigation:q=${it.lat},${it.lng}")
             val intent = Intent(Intent.ACTION_VIEW, uri).apply {
@@ -48,6 +51,19 @@ class MapFragment : Fragment(), OnMapReadyCallback {
                 startActivity(intent)
             }
         })
+
+        // update bottom sheet state after drag events
+        BottomSheetBehavior.from(binding.bottomSheet.bottomSheet).apply {
+            setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
+                override fun onSlide(p0: View, p1: Float) {
+                    //To change body of created functions use File | Settings | File Templates.
+                }
+
+                override fun onStateChanged(p0: View, state: Int) {
+                    mViewModel.updateBottomSheetState(state)
+                }
+            })
+        }
 
         return binding.root
     }
