@@ -21,10 +21,15 @@ import javax.inject.Inject
 class MapViewModel : ViewModel() {
 
 
-    // center the map on a specific point
+    // center the map on a specific point with animation
     private val _mapCenterEvent = MutableLiveData<Event<CameraUpdate>>()
     val mapCenterEvent: LiveData<Event<CameraUpdate>>
         get() = _mapCenterEvent
+
+    // center the map on a specific point without animation (after rotating device)
+    private val _mapRotateEvent = MutableLiveData<Event<CameraUpdate>>()
+    val mapRotateEvent: LiveData<Event<CameraUpdate>>
+        get() = _mapRotateEvent
 
     // add markers to the map
     private val _mapMarkersEvent = MutableLiveData<Event<List<Location>>>()
@@ -54,13 +59,19 @@ class MapViewModel : ViewModel() {
     lateinit var mRepository: EventDataRepository
 
     private var curMarker: Marker? = null
+    private var mapLoaded = false
 
 
     // Load markers and center the map.
     fun loadMap(locations: List<Location>) {
-        _mapCenterEvent.value = Event(getCameraUpdate(locations))
+        if (mapLoaded) {
+            _mapRotateEvent.value = Event(getCameraUpdate(locations))
+        } else {
+            _mapCenterEvent.value = Event(getCameraUpdate(locations))
+        }
         _mapMarkersEvent.value = Event(locations)
 
+        mapLoaded = true
     }
 
     private fun getCameraUpdate(locations: List<Location>): CameraUpdate {

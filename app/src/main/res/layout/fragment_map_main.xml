@@ -48,6 +48,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/appbar"
                 app:mapCenter="@{viewModel.mapCenterEvent}"
+                app:mapRotate="@{viewModel.mapRotateEvent}"
                 app:mapMarkers="@{viewModel.mapMarkersEvent}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

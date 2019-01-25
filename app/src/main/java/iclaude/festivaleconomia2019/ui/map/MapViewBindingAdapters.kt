@@ -15,13 +15,26 @@ import iclaude.festivaleconomia2019.ui.utils.Event
 
 
 /**
- * Sets the center of the map's camera. Call this every time the user selects a marker.
+ * Sets the center of the map's camera with animation. Call this every time the
+ * user selects a marker.
  */
 @BindingAdapter("app:mapCenter")
 fun mapCenter(mapView: MapView, event: Event<CameraUpdate>?) {
     val update = event?.getContentIfNotHandled() ?: return
     mapView.getMapAsync {
         it.animateCamera(update)
+    }
+}
+
+/**
+ * Sets the center of the map's camera without animation. Call this every time the
+ * user rotates the device.
+ */
+@BindingAdapter("app:mapRotate")
+fun mapRotate(mapView: MapView, event: Event<CameraUpdate>?) {
+    val update = event?.getContentIfNotHandled() ?: return
+    mapView.getMapAsync {
+        it.moveCamera(update)
     }
 }
 
