@@ -23,17 +23,6 @@
             app:behavior_peekHeight="@dimen/bottom_sheet_peek_height"
             app:bottomSheetState="@{viewModel.bottomSheetStateEvent}" android:paddingBottom="@dimen/margin_normal">
 
-        <ImageButton
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:id="@+id/ivMap"
-                android:src="@drawable/img_gmap"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/description_scrollview" android:layout_marginStart="16dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                app:markerTag="@{viewModel.markerInfoEvent}"
-                android:onClick="@{viewModel::showRoute}" android:scaleType="fitCenter"/>
-
         <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guide_peek_height"
                 android:layout_width="0dp"
@@ -58,14 +47,46 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                    android:id="@+id/marker_description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:markerDescription="@{viewModel.markerInfoEvent}" android:paddingStart="@dimen/margin_normal"
-                    android:paddingEnd="@dimen/margin_normal" android:paddingTop="@dimen/margin_normal"
-                    android:paddingBottom="@dimen/margin_small"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/marker_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:markerDescription="@{viewModel.markerInfoEvent}" android:paddingStart="@dimen/margin_normal"
+                        android:paddingEnd="@dimen/margin_normal" android:paddingTop="@dimen/margin_normal"
+                        android:paddingBottom="@dimen/margin_small"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                    <ImageButton
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:id="@+id/ivMap"
+                            android:src="@drawable/img_gmap"
+                            android:layout_marginStart="16dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            app:markerTag="@{viewModel.markerInfoEvent}"
+                            android:onClick="@{viewModel::showRoute}" android:scaleType="fitCenter"/>
+
+                    <TextView
+                            android:text="@string/map_show_route"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:onClick="@{viewModel::showRoute}"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
         </androidx.core.widget.NestedScrollView>
+
 
         <View
                 android:id="@+id/clickable"
@@ -133,17 +154,6 @@
                 app:layout_constraintEnd_toStartOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/guide_peek_height"/>
-        <TextView
-                android:text="@string/map_show_route"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView" app:layout_constraintStart_toEndOf="@+id/ivMap"
-                android:layout_marginStart="@dimen/margin_small"
-                app:layout_constraintBottom_toBottomOf="@+id/ivMap"
-                app:layout_constraintTop_toTopOf="@+id/ivMap"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:onClick="@{viewModel::showRoute}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

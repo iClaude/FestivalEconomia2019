@@ -122,6 +122,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         gMap?.apply {
             setOnMarkerClickListener {
                 mViewModel.zoomToMarker(it)
+                it.showInfoWindow()
                 true
             }
             setOnMapClickListener { mViewModel.onMapClick() }
