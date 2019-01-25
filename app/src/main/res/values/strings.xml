@@ -5,6 +5,6 @@
     <string name="title_info">Info</string>
     <string name="title_map">Map</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="map_show_route">get directions…</string>
 </resources>
