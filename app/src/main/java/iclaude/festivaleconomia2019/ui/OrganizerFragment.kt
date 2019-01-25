@@ -10,8 +10,6 @@ import androidx.fragment.app.Fragment
 import iclaude.festivaleconomia2019.R
 
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
@@ -25,7 +23,6 @@ private const val ARG_PARAM2 = "param2"
  *
  */
 class OrganizerFragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
     private var listener: OnFragmentInteractionListener? = null
@@ -46,7 +43,6 @@ class OrganizerFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_organizer, container, false)
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
         listener?.onFragmentInteraction(uri)
     }
@@ -77,7 +73,6 @@ class OrganizerFragment : Fragment() {
      * for more information.
      */
     interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         fun onFragmentInteraction(uri: Uri)
     }
 
@@ -90,7 +85,6 @@ class OrganizerFragment : Fragment() {
          * @param param2 Parameter 2.
          * @return A new instance of fragment OrganizerFragment.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             OrganizerFragment().apply {
