@@ -7,7 +7,7 @@ import androidx.navigation.findNavController
 import iclaude.festivaleconomia2019.R
 import kotlinx.android.synthetic.main.activity_main.*
 
-
+// TODO: translate json file
 class MainActivity : AppCompatActivity() {
 
     private val TAG = "MainActivity"
