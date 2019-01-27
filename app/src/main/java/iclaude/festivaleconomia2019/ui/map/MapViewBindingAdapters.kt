@@ -19,6 +19,8 @@ import iclaude.festivaleconomia2019.model.data_classes.Location
 import iclaude.festivaleconomia2019.ui.utils.Event
 
 
+private const val TAG = "ICON_EXPAND"
+
 /**
  * Sets the center of the map's camera with animation. Call this every time the
  * user selects a marker.
@@ -72,7 +74,7 @@ fun mapMarkers(mapView: MapView, event: Event<LocationsAndSelectedMarker>?) {
  */
 @BindingAdapter("app:bottomSheetState")
 fun bottomSheetState(view: View, event: Event<Int>?) {
-    val state = event?.getContentIfNotHandled() ?: return
+    val state = event?.peekContent() ?: return
     BottomSheetBehavior.from(view).state = state
 
     if (!(state == BottomSheetBehavior.STATE_EXPANDED || state == BottomSheetBehavior.STATE_COLLAPSED)) return
@@ -108,7 +110,7 @@ fun markerDescription(textView: TextView, event: Event<Location>?) {
 }
 
 @BindingAdapter("app:markerTag")
-fun markerDescription(view: View, event: Event<Location>?) {
+fun markerTag(view: View, event: Event<Location>?) {
     val location = event?.getContent() ?: return
     view.tag = location
 }

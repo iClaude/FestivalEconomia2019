@@ -77,7 +77,6 @@ class MapViewModel : ViewModel() {
     private fun getCameraUpdate(locations: List<Location>): CameraUpdate {
         // a marker is already selected: zoom to that marker
         if (curMarker != null) {
-            curMarker?.showInfoWindow()
             val loc = curMarker?.tag as Location
             return CameraUpdateFactory.newLatLngZoom(LatLng(loc.lat, loc.lng), 17f)
         }
