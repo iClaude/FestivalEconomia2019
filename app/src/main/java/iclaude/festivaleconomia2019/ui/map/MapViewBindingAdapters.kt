@@ -1,8 +1,13 @@
 package iclaude.festivaleconomia2019.ui.map
 
+import android.graphics.drawable.Animatable
+import android.graphics.drawable.Drawable
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
+import androidx.vectordrawable.graphics.drawable.Animatable2Compat
+import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import com.google.android.gms.maps.CameraUpdate
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
@@ -69,6 +74,22 @@ fun mapMarkers(mapView: MapView, event: Event<LocationsAndSelectedMarker>?) {
 fun bottomSheetState(view: View, event: Event<Int>?) {
     val state = event?.getContentIfNotHandled() ?: return
     BottomSheetBehavior.from(view).state = state
+
+    if (!(state == BottomSheetBehavior.STATE_EXPANDED || state == BottomSheetBehavior.STATE_COLLAPSED)) return
+
+    val ivIcon = view.findViewById<ImageView>(R.id.expand_icon)
+    // animate icon rotation
+    ivIcon.setImageResource(if (state == BottomSheetBehavior.STATE_EXPANDED) R.drawable.avd_arrow_up else R.drawable.avd_arrow_down)
+    val drawable = ivIcon.drawable
+
+    AnimatedVectorDrawableCompat.registerAnimationCallback(
+        drawable,
+        object : Animatable2Compat.AnimationCallback() {
+            override fun onAnimationEnd(drawable: Drawable?) {
+                ivIcon.setImageResource(if (state == BottomSheetBehavior.STATE_EXPANDED) R.drawable.avd_arrow_down else R.drawable.avd_arrow_up)
+            }
+        })
+    (drawable as Animatable).start()
 }
 
 /**
