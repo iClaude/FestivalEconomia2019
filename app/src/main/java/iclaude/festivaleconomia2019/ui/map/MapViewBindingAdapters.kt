@@ -42,11 +42,11 @@ fun mapRotate(mapView: MapView, event: Event<CameraUpdate>?) {
  * Adds markers to the map.
  */
 @BindingAdapter("app:mapMarkers")
-fun mapMarkers(mapView: MapView, event: Event<List<Location>>?) {
-    val locations = event?.getContentIfNotHandled() ?: return
+fun mapMarkers(mapView: MapView, event: Event<LocationsAndSelectedMarker>?) {
+    val eventContent = event?.getContentIfNotHandled() ?: return
 
     mapView.getMapAsync { gMap ->
-        locations.forEach { loc ->
+        eventContent.locations.forEach { loc ->
             gMap.addMarker(
                 MarkerOptions()
                     .position(LatLng(loc.lat, loc.lng))
@@ -54,6 +54,7 @@ fun mapMarkers(mapView: MapView, event: Event<List<Location>>?) {
             ).apply {
                 title = loc.name
                 tag = loc
+                if (loc.id == eventContent.selectedMarkerId) showInfoWindow()
             }
 
 

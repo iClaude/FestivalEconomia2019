@@ -20,7 +20,6 @@ import javax.inject.Inject
 
 class MapViewModel : ViewModel() {
 
-
     // center the map on a specific point with animation
     private val _mapCenterEvent = MutableLiveData<Event<CameraUpdate>>()
     val mapCenterEvent: LiveData<Event<CameraUpdate>>
@@ -32,8 +31,8 @@ class MapViewModel : ViewModel() {
         get() = _mapRotateEvent
 
     // add markers to the map
-    private val _mapMarkersEvent = MutableLiveData<Event<List<Location>>>()
-    val mapMarkersEvent: LiveData<Event<List<Location>>>
+    private val _mapMarkersEvent = MutableLiveData<Event<LocationsAndSelectedMarker>>()
+    val mapMarkersEvent: LiveData<Event<LocationsAndSelectedMarker>>
         get() = _mapMarkersEvent
 
     // set the state of BottomSheet with location's info
@@ -59,6 +58,7 @@ class MapViewModel : ViewModel() {
     lateinit var mRepository: EventDataRepository
 
     private var curMarker: Marker? = null
+    private var selectedMarkerId: String = "00"
     private var mapLoaded = false
 
 
@@ -69,7 +69,7 @@ class MapViewModel : ViewModel() {
         } else {
             _mapCenterEvent.value = Event(getCameraUpdate(locations))
         }
-        _mapMarkersEvent.value = Event(locations)
+        _mapMarkersEvent.value = Event(LocationsAndSelectedMarker(locations, selectedMarkerId))
 
         mapLoaded = true
     }
@@ -96,6 +96,7 @@ class MapViewModel : ViewModel() {
     // When clicking on a marker: zoom to marker, center the map and display bottom sheet (collapsed).
     fun zoomToMarker(marker: Marker) {
         val loc = marker.tag as Location
+        selectedMarkerId = loc.id
         curMarker = marker
 
         val cameraPosition = CameraPosition.Builder().run {
@@ -112,6 +113,7 @@ class MapViewModel : ViewModel() {
     fun onMapClick() {
         _bottomSheetStateEvent.value = Event(BottomSheetBehavior.STATE_HIDDEN)
         curMarker = null
+        selectedMarkerId = "00"
     }
 
     // Show directions to a location.
@@ -138,4 +140,11 @@ class MapViewModel : ViewModel() {
             _bottomSheetStateEvent.value = Event(state)
         }
     }
+
+    override fun onCleared() {
+        super.onCleared()
+        selectedMarkerId = "00"
+    }
 }
+
+class LocationsAndSelectedMarker(val locations: List<Location>, val selectedMarkerId: String)
