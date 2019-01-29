@@ -7,4 +7,6 @@
     <color name="statusBarColor">#ffffff</color>
     <color name="mapFragmentAppbarColor">#e6ffffff</color>
     <color name="white">#fff</color>
+    <color name="light_grey">#e6e6e6</color>
+
 </resources>

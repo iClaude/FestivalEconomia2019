@@ -180,7 +180,7 @@
   "sessions": [
     {
       "description": "[TESTO ITALIANO] The keynote kicks off on November 7 at 10AM PST, where you'll hear directly from Dave Burke and others on the present and future of Android development.",
-      "endTimestamp": 1541617200000,
+      "endTimestamp": 1549357200000,
       "id": "01",
       "relatedSessions": [],
       "location": "01",
@@ -188,7 +188,7 @@
         "01",
         "02"
       ],
-      "startTimestamp": 1541613600000,
+      "startTimestamp": 1549353600000,
       "tags1": [
         "Keynote",
         "Session"
@@ -203,14 +203,14 @@
     },
     {
       "description": "The release of androidx.test v1.0 makes testing a first class citizen of Android developer tools. See how a new set of cross platform APIs enable you to write both unit and integration tests that run in any environment and learn of our upcoming plans for future releases.",
-      "endTimestamp": 1541620500000,
+      "endTimestamp": 1549450800000,
       "id": "02",
       "relatedSessions": [],
       "location": "02",
       "organizers": [
         "02"
       ],
-      "startTimestamp": 1541619300000,
+      "startTimestamp": 1549445400000,
       "tags1": [
         "Session"
       ],

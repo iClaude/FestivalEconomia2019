@@ -1,4 +1,4 @@
-package iclaude.festivaleconomia2019.ui
+package iclaude.festivaleconomia2019.ui.sessions
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,17 +8,13 @@ import androidx.fragment.app.Fragment
 import iclaude.festivaleconomia2019.R
 
 
-class ContainerSessionsFragment : Fragment() {
+class AgendaFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        val root = inflater.inflate(R.layout.fragment_container_sessions, container, false)
-        return root
-
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_sessions_agenda, container, false)
     }
-
-
 }

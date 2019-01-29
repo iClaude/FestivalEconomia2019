@@ -1,10 +1,17 @@
 <!-- TODO: translate this file in italian -->
 <resources>
     <string name="app_name">Economy Festival</string>
+    <string name="content_description" translatable="false">null</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
     <string name="title_schedule">Schedule</string>
     <string name="title_info">Info</string>
     <string name="title_map">Map</string>
 
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="map_show_route">get directions…</string>
+
+    <string name="sessions_agenda" translatable="false">Agenda</string>
+
+    <string name="shared_preferences_file" translatable="false">preferences</string>
+    <string name="pref_showlocal" translatable="false">show_local</string>
 </resources>
