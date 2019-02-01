@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ff5722</color>
-    <color name="colorPrimaryDark">#e64a19</color>
-    <color name="colorAccent">#1de9b6</color>
+    <color name="primaryColor">#ff5722</color>
+    <color name="primaryLightColor">#ff8a50</color>
+    <color name="primaryDarkColor">#c41c00</color>
+    <color name="secondaryColor">#1de9b6</color>
+    <color name="secondaryLightColor">#6effe8</color>
+    <color name="secondaryDarkColor">#00b686</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>
+    <color name="errorColor">#F44336</color>
+    <color name="onErrorColor">#FFFFFF</color>
+    <color name="surfaceColor">#FFFFFF</color>
+    <color name="onSurfaceColor">#212121</color>
+    <color name="backgroundColor">#FAFAFA</color>
+    <color name="onBackgroundColor">#212121</color>
 
     <color name="statusBarColor">#ffffff</color>
     <color name="mapFragmentAppbarColor">#e6ffffff</color>
     <color name="white">#fff</color>
+    <color name="whiteWithAlpha">#b3f2f2f2</color>
     <color name="light_grey">#e6e6e6</color>
 
 </resources>

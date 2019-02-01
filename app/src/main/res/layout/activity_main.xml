@@ -24,7 +24,6 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
-        style="@style/MyBottomNav"
         android:layout_width="0dp"
         android:layout_height="@dimen/bottom_navigation_height"
         app:layout_constraintBottom_toBottomOf="parent"

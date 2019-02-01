@@ -38,6 +38,9 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
+    // Material Components
+    implementation "com.google.android.material:material:1.1.0-alpha02"
+
     // Architecture components
     implementation "android.arch.lifecycle:extensions:1.1.1"
     implementation "android.arch.lifecycle:viewmodel:1.1.1"
