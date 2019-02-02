@@ -3,7 +3,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".ui.sessions.SessionFragment">
+             tools:context=".ui.sessions.SessionsFragment">
 
     <TextView
             android:layout_width="match_parent"

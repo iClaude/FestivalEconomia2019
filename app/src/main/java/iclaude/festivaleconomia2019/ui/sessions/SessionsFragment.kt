@@ -4,15 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import iclaude.festivaleconomia2019.R
+import kotlinx.android.synthetic.main.fragment_sessions.*
 
 
 private const val ARG_TIME = "time"
 
 
-class SessionFragment : Fragment() {
+class SessionsFragment : Fragment() {
+    private val TAG by lazy { this.javaClass.simpleName }
     private var param1: Long? = null
 
 
@@ -28,16 +29,20 @@ class SessionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_sessions, container, false)
-        root.findViewById<TextView>(R.id.tvParam).text = param1.toString()
 
         return root
     }
 
+    override fun onResume() {
+        super.onResume()
+
+        tvParam.text = param1.toString()
+    }
 
     companion object {
         @JvmStatic
         fun newInstance(param1: Long) =
-            SessionFragment().apply {
+            SessionsFragment().apply {
                 arguments = Bundle().apply {
                     putLong(ARG_TIME, param1)
                 }

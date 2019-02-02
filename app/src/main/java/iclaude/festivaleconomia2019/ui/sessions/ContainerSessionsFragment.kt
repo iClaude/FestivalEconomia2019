@@ -16,6 +16,7 @@ import iclaude.festivaleconomia2019.databinding.FragmentSessionsContainerBinding
 
 
 class ContainerSessionsFragment : Fragment() {
+    private val TAG by lazy { this.javaClass.simpleName }
 
     private lateinit var mViewModel: SessionsViewModel
     private lateinit var binding: FragmentSessionsContainerBinding
@@ -45,7 +46,11 @@ class ContainerSessionsFragment : Fragment() {
         // load data from repository
         mViewModel.mRepository.eventDataLive.observe(this, Observer {
             viewPager.adapter =
-                SessionsAdapter(fragmentManager!!, numberOfDays(context, it.sessions), daysLabels(context, it.sessions))
+                SessionsAdapter(
+                    childFragmentManager,
+                    numberOfDays(context, it.sessions),
+                    daysLabels(context, it.sessions)
+                )
             mViewModel.loadData(it.sessions, it.locations, it.tags)
         })
     }
@@ -63,7 +68,7 @@ class ContainerSessionsFragment : Fragment() {
 
         override fun getItem(position: Int): Fragment {
             return when (position) {
-                in 0 until numOfDays -> SessionFragment.newInstance(dayLabels[position].date!!.toInstant().toEpochMilli())
+                in 0 until numOfDays -> SessionsFragment.newInstance(dayLabels[position].date!!.toInstant().toEpochMilli())
                 else -> AgendaFragment()
             }
         }
