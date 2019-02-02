@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".ui.sessions.SessionsFragment">
 
-    <TextView
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="iclaude.festivaleconomia2019.ui.sessions.SessionsViewModel"/>
+
+    </data>
+
+    <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" android:id="@+id/tvParam"/>
+            tools:context=".ui.sessions.SessionsFragment">
 
-</FrameLayout>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/schedule_page_padding_bottom"
+                android:paddingTop="@dimen/spacing_normal"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:ignore="UnusedAttribute"/>
+    </FrameLayout>
+
+</layout>
