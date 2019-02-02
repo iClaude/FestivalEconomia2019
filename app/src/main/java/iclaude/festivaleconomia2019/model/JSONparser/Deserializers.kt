@@ -84,7 +84,8 @@ class TagDeserializer : JsonDeserializer<Tag> {
         val obj = json?.asJsonObject!!
 
         return Tag(
-                name = obj.get("name").asString,
+            id = obj.get("id").asString,
+            name = obj.get("name").asString,
             fontColor = obj.get("fontColor").asString,
             color = obj.get("color").asString
         )

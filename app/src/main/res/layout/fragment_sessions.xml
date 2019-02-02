@@ -19,6 +19,7 @@
             tools:context=".ui.sessions.SessionsFragment">
 
         <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSessions"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clipToPadding="false"
@@ -27,7 +28,8 @@
                 android:paddingTop="@dimen/spacing_normal"
                 android:scrollbars="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:ignore="UnusedAttribute"/>
+                tools:ignore="UnusedAttribute"
+                tools:listitem="@layout/item_session"/>
     </FrameLayout>
 
 </layout>

@@ -9,6 +9,7 @@ import org.threeten.bp.Instant
 import org.threeten.bp.ZoneId
 import org.threeten.bp.ZonedDateTime
 import org.threeten.bp.format.DateTimeFormatter
+import org.threeten.bp.temporal.ChronoUnit
 
 fun getEventTimeZone() = "Europe/Rome"
 
@@ -47,3 +48,20 @@ fun daysLabels(context: Context?, sessions: List<Session>): MutableList<DayLabel
 }
 
 class DayLabel(val date: ZonedDateTime?, val label: String)
+
+fun sessionLength(context: Context, startTimestamp: Long, endTimestamp: Long): String {
+    val startDate = ZonedDateTime.ofInstant(Instant.ofEpochMilli(startTimestamp), getZoneId(context))
+    val endDate = ZonedDateTime.ofInstant(Instant.ofEpochMilli(endTimestamp), getZoneId(context))
+
+    val diffHours = ChronoUnit.HOURS.between(startDate, endDate)
+    val diffMinutes = ChronoUnit.MINUTES.between(startDate, endDate)
+
+    return when (diffHours) {
+        in 1..Long.MAX_VALUE -> "${context.resources.getQuantityString(
+            R.plurals.time_hours,
+            diffHours.toInt(),
+            diffHours
+        )}"
+        else -> "${context.resources.getQuantityString(R.plurals.time_minutes, diffMinutes.toInt(), diffMinutes)}}"
+    }
+}

@@ -14,4 +14,12 @@
 
     <string name="shared_preferences_file" translatable="false">preferences</string>
     <string name="pref_showlocal" translatable="false">show_local</string>
+    <plurals name="time_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+    <plurals name="time_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
 </resources>

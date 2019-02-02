@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/SessionsItemTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/spacing_micro"
+        tools:drawableStart="@drawable/tag_dot"
+        tools:drawableTint="#f0f"
+        tools:text="Android"/>

@@ -9,6 +9,9 @@
     <dimen name="margin_small">8dp</dimen>
     <dimen name="a11y_min_touch_target">48dp</dimen>
     <dimen name="spacing_micro">4dp</dimen>
+    <dimen name="schedule_page_padding_bottom">56dp</dimen>
+    <dimen name="spacing_normal">8dp</dimen>
+    <dimen name="tag_dot_size">12dp</dimen>
     <item name="map_camera_target_lat" type="dimen" format="float">46.067354</item>
     <item name="map_camera_target_lng" type="dimen" format="float">11.121454</item>
 </resources>

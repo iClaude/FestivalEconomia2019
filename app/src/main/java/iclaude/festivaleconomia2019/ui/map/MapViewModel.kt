@@ -58,7 +58,7 @@ class MapViewModel : ViewModel() {
     lateinit var mRepository: EventDataRepository
 
     private var curMarker: Marker? = null
-    private var selectedMarkerId: String = "00"
+    private var selectedMarkerId: String = "xx"
     private var mapLoaded = false
 
 
@@ -112,7 +112,7 @@ class MapViewModel : ViewModel() {
     fun onMapClick() {
         _bottomSheetStateEvent.value = Event(BottomSheetBehavior.STATE_HIDDEN)
         curMarker = null
-        selectedMarkerId = "00"
+        selectedMarkerId = "xx"
     }
 
     // Show directions to a location.
@@ -142,7 +142,7 @@ class MapViewModel : ViewModel() {
 
     override fun onCleared() {
         super.onCleared()
-        selectedMarkerId = "00"
+        selectedMarkerId = "xx"
     }
 }
 

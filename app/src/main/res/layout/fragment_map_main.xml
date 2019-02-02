@@ -17,7 +17,7 @@
 
         <FrameLayout
                 android:id="@+id/appbar"
-                style="@style/App.AppBar"
+                style="@style/AppBar"
                 android:background="@color/mapFragmentAppbarColor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
                     android:gravity="center"
                     android:minHeight="?actionBarSize"
                     android:text="@string/title_map"
-                    android:textAppearance="@style/App.AppBar.Title"/>
+                    android:textAppearance="@style/AppBarTitle"/>
 
         </FrameLayout>
 

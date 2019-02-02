@@ -1,6 +1,14 @@
 {
   "locations": [
     {
+      "id": "00",
+      "name": "RAI",
+      "displayString": "RAI",
+      "description": "RAI – Radiotelevisione italiana S.p.A., known until 1954 as Radio Audizioni Italiane is the national public broadcasting company of Italy, owned by the Ministry of Economy and Finance. RAI operates many terrestrial and subscription television channels and radio stations. It is the biggest television broadcaster in Italy and competes with Mediaset, and other minor television and radio networks. RAI has a relatively high television audience share of 33.8%. \nRAI broadcasts are also received in neighbouring countries, including Albania, Bosnia, Croatia, Malta, Monaco, Montenegro, San Marino, Slovenia, Vatican City, Switzerland, and Tunisia, and elsewhere on pay television. Sometimes Rai 1 was received even further in Europe via Sporadic E until the digital switch off in July 2012. \nHalf of the RAI's revenues come from broadcast receiving licence fees, the rest from the sale of advertising time. In 1950, the RAI became one of the 23 founding broadcasting organizations of the European Broadcasting Union.",
+      "lat": 46.060581,
+      "lng": 11.122270
+    },
+    {
       "id": "01",
       "name": "Piazza Duomo",
       "displayString": "Piazza Duomo",
@@ -167,34 +175,26 @@
       "description": "The lot where the Palazzo della Regione stands is located near the Trento railway station and includes the Regional Council offices, the local government offices and the Council Chamber. The program’s different required functions are solved with three independent volumes. The two rectangular and one trapezoidal spaces are interconnected in an 'L' shaped plan.\nThe Trento Palazzo della Regione construction is a post-World War II project. Adalberto Libera’s architectural language seems completely different from the pure and rationalist one that had characterized its pre-war cycle. During the war, the architect had spent a period of voluntary confinement in his birthplace, Villa Lagarina, in Trentino. Back in Rome, he chose to start over, based on his profound theoretical reflections at Villa Lagarina. After the post-war enthusiasm with German-style idealism, Libera’s architecture preferred 'correctness' to great rationalist ideals.",
       "lat": 46.071599,
       "lng": 11.121597
-    },
-    {
-      "id": "22",
-      "name": "RAI",
-      "displayString": "RAI",
-      "description": "RAI – Radiotelevisione italiana S.p.A., known until 1954 as Radio Audizioni Italiane is the national public broadcasting company of Italy, owned by the Ministry of Economy and Finance. RAI operates many terrestrial and subscription television channels and radio stations. It is the biggest television broadcaster in Italy and competes with Mediaset, and other minor television and radio networks. RAI has a relatively high television audience share of 33.8%. \nRAI broadcasts are also received in neighbouring countries, including Albania, Bosnia, Croatia, Malta, Monaco, Montenegro, San Marino, Slovenia, Vatican City, Switzerland, and Tunisia, and elsewhere on pay television. Sometimes Rai 1 was received even further in Europe via Sporadic E until the digital switch off in July 2012. \nHalf of the RAI's revenues come from broadcast receiving licence fees, the rest from the sale of advertising time. In 1950, the RAI became one of the 23 founding broadcasting organizations of the European Broadcasting Union.",
-      "lat": 46.060581,
-      "lng": 11.122270
     }
   ],
   "sessions": [
     {
       "description": "[TESTO ITALIANO] The keynote kicks off on November 7 at 10AM PST, where you'll hear directly from Dave Burke and others on the present and future of Android development.",
       "endTimestamp": 1549357200000,
-      "id": "01",
+      "id": "00",
       "relatedSessions": [],
-      "location": "01",
+      "location": "00",
       "organizers": [
-        "01",
-        "02"
+        "00",
+        "01"
       ],
       "startTimestamp": 1549353600000,
       "tags1": [
-        "Keynote",
-        "Session"
+        "00",
+        "01"
       ],
       "tags2": [
-        "Others"
+        "02"
       ],
       "title": "Keynote",
       "photoUrl": "https://tuttosesto.net/wp-content/uploads/2018/06/wwwonline.jpg",
@@ -204,18 +204,18 @@
     {
       "description": "The release of androidx.test v1.0 makes testing a first class citizen of Android developer tools. See how a new set of cross platform APIs enable you to write both unit and integration tests that run in any environment and learn of our upcoming plans for future releases.",
       "endTimestamp": 1549450800000,
-      "id": "02",
+      "id": "01",
       "relatedSessions": [],
-      "location": "02",
+      "location": "01",
       "organizers": [
-        "02"
+        "01"
       ],
       "startTimestamp": 1549445400000,
       "tags1": [
-        "Session"
+        "01"
       ],
       "tags2": [
-        "Android"
+        "03"
       ],
       "title": "Testing Rebooted (with AndroidX Test)",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Richie_Gray_2016.jpg/1200px-Richie_Gray_2016.jpg",
@@ -226,7 +226,7 @@
     {
       "bio": "Izabela has been a Software Engineer on the Android Studio team for 2 years. She works on the Android Gradle Plugin and her main areas of expertise include resources and AAPT2 support. Beside being an engineer, Iza is also a diversity and inclusion activist.",
       "company": "Google",
-      "id": "01",
+      "id": "00",
       "name": "Izabela Orlowska",
       "thumbnailUrl": "https://developer.android.com/dev-summit/images/speakers/izabela_orlowska.jpg",
       "websiteUrl": "https://gfx.developpez.com/",
@@ -237,7 +237,7 @@
     {
       "bio": "Chris works as a software engineer at Google, working on the Android Gradle Plugin, first in Mountain View and now in London.\nPrior to joining Google, Chris worked as a Research Assistant in the Security Group of the The Computer Laboratory, University of Cambridge. He previously studied computer science as undergraduate at the University of Cambridge.",
       "company": "Samsung",
-      "id": "02",
+      "id": "01",
       "name": "Chris Warrington",
       "thumbnailUrl": "https://developer.android.com/dev-summit/images/speakers/chris_warrington.jpg",
       "websiteUrl": "",
@@ -248,21 +248,25 @@
   ],
   "tags": [
     {
+      "id": "00",
       "color": "#3D82EE",
       "fontColor": "#FFFFFF",
       "name": "Keynote"
     },
     {
+      "id": "01",
       "color": "#cce9c2",
       "fontColor": "#202124",
       "name": "Session"
     },
     {
+      "id": "02",
       "color": "#FDC93E",
       "fontColor": "#202124",
       "name": "Others"
     },
     {
+      "id": "03",
       "color": "#FFEAB3",
       "fontColor": "#202124",
       "name": "Android"

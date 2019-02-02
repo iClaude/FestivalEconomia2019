@@ -3,6 +3,7 @@ package iclaude.festivaleconomia2019.model.data_classes
 import android.graphics.Color.parseColor
 
 data class Tag(
+    val id: String,
     val name: String,
     val fontColor: String,
     val color: String

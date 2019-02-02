@@ -1,6 +1,14 @@
 {
   "locations": [
     {
+      "id": "00",
+      "name": "Sede RAI Trento",
+      "displayString": "Sede RAI Trento",
+      "description": "La Rai − Radiotelevisione Italiana S.p.A. è la società concessionaria in esclusiva del servizio pubblico radiotelevisivo in Italia. È una delle più grandi aziende di comunicazione d'Europa, il quinto gruppo televisivo del continente. \nNella Sede è attivo - in collaborazione con la Direzione Teche - il servizio 'Teca aperta' che consente, su appuntamento, di accedere alla consultazione e alla visione del Catalogo Multimediale della RAI, nel quale sono contenuti programmi televisivi e programmi radiofonici che si possono vedere e ascoltare mediante un PC collegato alla rete aziendale. Inoltre si possono ricercare gli estremi di altra documentazione (foto, manifesti, libri, spartiti, copioni, etc. etc.). \nDa questa sede saranno trasmessi programmi radiofonici dedicati al Festival dell'Economia.",
+      "lat": 46.060581,
+      "lng": 11.122270
+    },
+    {
       "id": "01",
       "name": "Piazza Duomo",
       "displayString": "Piazza Duomo",
@@ -167,55 +175,47 @@
       "description": "L'attuale palazzo sede della Regione Autonoma Trentino Alto Adige è sorto sulle rovine dell'ex casa 'Caneppele'(1877) che venne colpita dai bombardamenti della seconda guerra mondiale quando ospitava la sede trentina della Banca d'Italia. Nel dopoguerra gli uffici dell'Amministrazione Regionale erano dislocati in sette diversi edifici pertanto allo scopo di dare una unica e organica sede ai suoi servizi la Giunta Regionale nel 1953 ritenne opportuno bandire un concorso nazionale per la progettazione di una nuova sede. \nA conclusione del concorso nell'estate del 1954 venne proclamato vincitore, tra i più di cinquanta progetti presentati, quello dell'architetto trentino Adalberto Libera (1903-1963) esponente di spicco dell'architettura razionalista italiana dell'epoca che aveva precedentemente progettato, a Trento, le scuole Sanzio (1931-1934) e un edificio INA in via Galilei (1949). \nLa costruzione realizzata tra gli anni 1958-65 venne affidata alla Garboli di Roma che si avvalse della collaborazione in subappalto di numerose imprese specialistiche anche locali. La direzione dei lavori venne svolta dall'Ufficio Tecnico della Regione diretto dall'Ing. Arch. Ezio Miorelli. L'attuale edificio pur rispettando le linee architettoniche e i rapporti volumetrici fondamentali del progetto vincitore del concorso di progettazione venne rielaborato nella fase esecutiva per adempiere più strettamente alle necessità operative degli uffici regionali del tempo. ",
       "lat": 46.071599,
       "lng": 11.121597
-    },
-    {
-      "id": "22",
-      "name": "Sede RAI Trento",
-      "displayString": "Sede RAI Trento",
-      "description": "La Rai − Radiotelevisione Italiana S.p.A. è la società concessionaria in esclusiva del servizio pubblico radiotelevisivo in Italia. È una delle più grandi aziende di comunicazione d'Europa, il quinto gruppo televisivo del continente. \nNella Sede è attivo - in collaborazione con la Direzione Teche - il servizio 'Teca aperta' che consente, su appuntamento, di accedere alla consultazione e alla visione del Catalogo Multimediale della RAI, nel quale sono contenuti programmi televisivi e programmi radiofonici che si possono vedere e ascoltare mediante un PC collegato alla rete aziendale. Inoltre si possono ricercare gli estremi di altra documentazione (foto, manifesti, libri, spartiti, copioni, etc. etc.). \nDa questa sede saranno trasmessi programmi radiofonici dedicati al Festival dell'Economia.",
-      "lat": 46.060581,
-      "lng": 11.122270
     }
   ],
   "sessions": [
     {
       "description": "[TESTO ITALIANO] The keynote kicks off on November 7 at 10AM PST, where you'll hear directly from Dave Burke and others on the present and future of Android development.",
-      "endTimestamp": 1541617200000,
+      "endTimestamp": 1549357200000,
+      "id": "00",
+      "relatedSessions": [],
+      "location": "00",
+      "organizers": [
+        "00",
+        "01"
+      ],
+      "startTimestamp": 1549353600000,
+      "tags1": [
+        "00",
+        "01"
+      ],
+      "tags2": [
+        "02"
+      ],
+      "title": "Keynote",
+      "photoUrl": "https://tuttosesto.net/wp-content/uploads/2018/06/wwwonline.jpg",
+      "sessionUrl": "",
+      "youtubeUrl": ""
+    },
+    {
+      "description": "The release of androidx.test v1.0 makes testing a first class citizen of Android developer tools. See how a new set of cross platform APIs enable you to write both unit and integration tests that run in any environment and learn of our upcoming plans for future releases.",
+      "endTimestamp": 1549450800000,
       "id": "01",
       "relatedSessions": [],
       "location": "01",
       "organizers": [
-        "01",
-        "02"
+        "01"
       ],
-      "startTimestamp": 1541613600000,
+      "startTimestamp": 1549445400000,
       "tags1": [
-        "Keynote",
-        "Session"
+        "01"
       ],
       "tags2": [
-        "Others"
-      ],
-      "title": "Keynote",
-      "photoUrl": "https://tuttosesto.net/wp-content/uploads/2018/06/wwwonline.jpg",
-      "sessionUrl": "https://goo.gl/P1BAVR",
-      "youtubeUrl": "https://youtu.be/ei_5R0CvLm4"
-    },
-    {
-      "description": "The release of androidx.test v1.0 makes testing a first class citizen of Android developer tools. See how a new set of cross platform APIs enable you to write both unit and integration tests that run in any environment and learn of our upcoming plans for future releases.",
-      "endTimestamp": 1541620500000,
-      "id": "02",
-      "relatedSessions": [],
-      "location": "02",
-      "organizers": [
-        "02"
-      ],
-      "startTimestamp": 1541619300000,
-      "tags1": [
-        "Session"
-      ],
-      "tags2": [
-        "Android"
+        "03"
       ],
       "title": "Testing Rebooted (with AndroidX Test)",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Richie_Gray_2016.jpg/1200px-Richie_Gray_2016.jpg",
@@ -226,7 +226,7 @@
     {
       "bio": "Izabela has been a Software Engineer on the Android Studio team for 2 years. She works on the Android Gradle Plugin and her main areas of expertise include resources and AAPT2 support. Beside being an engineer, Iza is also a diversity and inclusion activist.",
       "company": "Google",
-      "id": "01",
+      "id": "00",
       "name": "Izabela Orlowska",
       "thumbnailUrl": "https://developer.android.com/dev-summit/images/speakers/izabela_orlowska.jpg",
       "websiteUrl": "https://gfx.developpez.com/",
@@ -237,7 +237,7 @@
     {
       "bio": "Chris works as a software engineer at Google, working on the Android Gradle Plugin, first in Mountain View and now in London.\n\nPrior to joining Google, Chris worked as a Research Assistant in the Security Group of the The Computer Laboratory, University of Cambridge. He previously studied computer science as undergraduate at the University of Cambridge.",
       "company": "Samsung",
-      "id": "02",
+      "id": "01",
       "name": "Chris Warrington",
       "thumbnailUrl": "https://developer.android.com/dev-summit/images/speakers/chris_warrington.jpg",
       "websiteUrl": "",
@@ -248,21 +248,25 @@
   ],
   "tags": [
     {
+      "id": "00",
       "color": "#3D82EE",
       "fontColor": "#FFFFFF",
       "name": "Keynote"
     },
     {
+      "id": "01",
       "color": "#cce9c2",
       "fontColor": "#202124",
       "name": "Session"
     },
     {
+      "id": "02",
       "color": "#FDC93E",
       "fontColor": "#202124",
       "name": "Others"
     },
     {
+      "id": "03",
       "color": "#FFEAB3",
       "fontColor": "#202124",
       "name": "Android"

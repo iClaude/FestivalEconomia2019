@@ -5,4 +5,13 @@
     <string name="title_info">Info</string>
     <string name="title_map">Mappa</string>
     <string name="map_show_route">indicazioni stradali…</string>
+
+    <plurals name="time_hours">
+        <item quantity="one">%d ora</item>
+        <item quantity="other">%d ore</item>
+    </plurals>
+    <plurals name="time_minutes">
+        <item quantity="one">%d minuto</item>
+        <item quantity="other">%d minuti</item>
+    </plurals>
 </resources>

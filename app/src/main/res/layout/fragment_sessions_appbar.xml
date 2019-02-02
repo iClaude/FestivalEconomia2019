@@ -5,7 +5,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/appbar"
-        style="@style/App.AppBar"
+        style="@style/AppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -34,13 +34,13 @@
                 android:gravity="center"
                 android:minHeight="?actionBarSize"
                 android:text="@string/title_schedule"
-                android:textAppearance="@style/App.AppBar.Title"/>
+                android:textAppearance="@style/AppBarTitle"/>
 
     </FrameLayout>
 
     <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
-            style="@style/App.TabLayout"
+            style="@style/TabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

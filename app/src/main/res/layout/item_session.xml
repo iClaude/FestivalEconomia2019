@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable name="sessionInfo" type="iclaude.festivaleconomia2019.ui.sessions.SessionsDisplayInfo"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:id="@+id/constraintLayout">
+
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/guideline"
+                                                    android:orientation="vertical"
+                                                    app:layout_constraintGuide_begin="64dp"/>
+        <TextView
+                android:id="@+id/tvTitle"
+                android:text="@{sessionInfo.title}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/SessionsItemTitle"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                tools:text="What's new in Android" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/cibBookmark"/>
+
+        <ImageView
+                android:layout_width="18dp"
+                android:layout_height="24dp" app:srcCompat="@drawable/ic_livestreamed"
+                android:id="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                android:scaleType="centerCrop"
+                android:visibility="@{sessionInfo.liveStreamed? View.VISIBLE : View.GONE}"
+                app:layout_constraintTop_toTopOf="@+id/tvLenLoc"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLenLoc"
+                app:layout_constraintEnd_toStartOf="@+id/tvLenLoc" android:layout_marginEnd="8dp"
+                android:contentDescription="@string/content_description"/>
+
+        <TextView
+                android:id="@+id/tvLenLoc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:lenLoc="@{sessionInfo}"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                android:textAppearance="@style/SessionsItemSubtitle"
+                tools:text="40 minutes / Amphitheatre"
+                app:layout_constraintEnd_toStartOf="@+id/cibBookmark"
+                android:layout_marginEnd="8dp" android:ellipsize="end" android:maxLines="1"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"/>
+
+        <com.google.android.material.internal.CheckableImageButton
+                android:id="@+id/cibBookmark"
+                android:layout_width="@dimen/a11y_min_touch_target"
+                android:layout_height="@dimen/a11y_min_touch_target"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/asld_star_event"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTitle" android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTags"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="@+id/guideline"
+                android:layout_width="0dp"
+                tools:listitem="@layout/item_session_tag"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

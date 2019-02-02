@@ -16,7 +16,7 @@ import iclaude.festivaleconomia2019.databinding.FragmentSessionsContainerBinding
 
 
 class ContainerSessionsFragment : Fragment() {
-    private val TAG by lazy { this.javaClass.simpleName }
+    private val TAG = "VIEW_MODEL"
 
     private lateinit var mViewModel: SessionsViewModel
     private lateinit var binding: FragmentSessionsContainerBinding
@@ -27,7 +27,7 @@ class ContainerSessionsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mViewModel = ViewModelProviders.of(this).get(SessionsViewModel::class.java)
+        mViewModel = ViewModelProviders.of(activity!!).get(SessionsViewModel::class.java)
         binding = FragmentSessionsContainerBinding.inflate(inflater, container, false).apply {
             viewModel = this@ContainerSessionsFragment.mViewModel
         }
@@ -51,7 +51,7 @@ class ContainerSessionsFragment : Fragment() {
                     numberOfDays(context, it.sessions),
                     daysLabels(context, it.sessions)
                 )
-            mViewModel.loadData(it.sessions, it.locations, it.tags)
+            mViewModel.loadData(it)
         })
     }
 
