@@ -45,13 +45,14 @@ class ContainerSessionsFragment : Fragment() {
 
         // load data from repository
         mViewModel.mRepository.eventDataLive.observe(this, Observer {
+            mViewModel.loadData(it)
+
             viewPager.adapter =
                 SessionsAdapter(
                     childFragmentManager,
                     numberOfDays(context, it.sessions),
                     daysLabels(context, it.sessions)
                 )
-            mViewModel.loadData(it)
         })
     }
 

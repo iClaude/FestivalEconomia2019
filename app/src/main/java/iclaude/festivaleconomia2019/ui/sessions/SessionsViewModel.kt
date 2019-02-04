@@ -1,5 +1,6 @@
 package iclaude.festivaleconomia2019.ui.sessions
 
+import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,7 +12,7 @@ import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import javax.inject.Inject
 
 class SessionsViewModel : ViewModel() {
-    private val TAG = "MY_BINDING_ADAPTER"
+    private val TAG = "PROGRESS_BAR"
 
     init {
         App.component.inject(this)
@@ -24,11 +25,10 @@ class SessionsViewModel : ViewModel() {
     val sessionsInfoLive: LiveData<List<SessionsDisplayInfo>>
         get() = _sessionsInfoLive
 
-    private val _dataLoadedLive: MutableLiveData<Boolean> = MutableLiveData()
-    val dataLoadedLive: LiveData<Boolean>
-        get() = _dataLoadedLive
+    var dataLoadedObs: ObservableBoolean = ObservableBoolean(false)
 
     fun loadData(eventData: EventData) {
+        dataLoadedObs.set(true)
         val sessions = eventData.sessions.map {
             SessionsDisplayInfo(
                 it.id, it.title,
@@ -39,8 +39,6 @@ class SessionsViewModel : ViewModel() {
             )
         }
         _sessionsInfoLive.value = sessions
-
-        _dataLoadedLive.value = true
     }
 }
 
