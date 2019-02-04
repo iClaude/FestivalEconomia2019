@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
+import iclaude.festivaleconomia2019.model.data_classes.Tag
 import iclaude.festivaleconomia2019.model.data_classes.hasSessionUrl
 import iclaude.festivaleconomia2019.model.data_classes.hasYoutubeUrl
 import iclaude.festivaleconomia2019.model.di.App
@@ -12,7 +13,7 @@ import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import javax.inject.Inject
 
 class SessionsViewModel : ViewModel() {
-    private val TAG = "PROGRESS_BAR"
+    private val TAG = "TAGS"
 
     init {
         App.component.inject(this)
@@ -35,7 +36,10 @@ class SessionsViewModel : ViewModel() {
                 it.hasSessionUrl() || (it.hasYoutubeUrl()),
                 it.startTimestamp,
                 it.endTimestamp,
-                eventData.locations[it.location.toInt()].name
+                eventData.locations[it.location.toInt()].name,
+                it.tags2.map {
+                    eventData.tags[it.toInt()]
+                }
             )
         }
         _sessionsInfoLive.value = sessions
@@ -48,5 +52,6 @@ class SessionsDisplayInfo(
     val liveStreamed: Boolean,
     val startTimestamp: Long,
     val endTimestamp: Long,
-    val location: String
+    val location: String,
+    val tags: List<Tag>
 )

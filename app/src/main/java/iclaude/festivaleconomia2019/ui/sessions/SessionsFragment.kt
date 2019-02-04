@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.ItemSessionBinding
+import iclaude.festivaleconomia2019.databinding.ItemSessionTagBinding
+import iclaude.festivaleconomia2019.model.data_classes.Tag
 import kotlinx.android.synthetic.main.fragment_sessions.*
 
 
@@ -69,6 +71,7 @@ class SessionsFragment : Fragment() {
     }
 
 
+    // Main RecyclerView classes.
     inner class SessionDiffCallback : DiffUtil.ItemCallback<SessionsDisplayInfo>() {
         override fun areItemsTheSame(oldItem: SessionsDisplayInfo, newItem: SessionsDisplayInfo): Boolean {
             return oldItem.id == newItem.id
@@ -104,4 +107,28 @@ class SessionsFragment : Fragment() {
     }
 }
 
+// Classes for tags RecyclerView.
+class TagAdapter : RecyclerView.Adapter<TagViewHolder>() {
+    private val TAG = "TAGS"
 
+    var tags = emptyList<Tag>()
+
+    override fun getItemCount() = tags.size
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TagViewHolder {
+        return TagViewHolder(
+            ItemSessionTagBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        )
+    }
+
+    override fun onBindViewHolder(holder: TagViewHolder, position: Int) {
+        holder.bind(tags[position])
+    }
+}
+
+class TagViewHolder(private val binding: ItemSessionTagBinding) : RecyclerView.ViewHolder(binding.root) {
+    fun bind(tag: Tag) {
+        binding.tag = tag
+        binding.executePendingBindings()
+    }
+}

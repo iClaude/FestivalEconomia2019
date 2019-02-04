@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        style="@style/SessionsItemTag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_normal"
-        android:layout_marginTop="@dimen/spacing_micro"
-        tools:drawableStart="@drawable/tag_dot"
-        tools:drawableTint="#f0f"
-        tools:text="Android"/>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="iclaude.festivaleconomia2019.model.data_classes.TagKt"/>
+
+        <variable
+                name="tag"
+                type="iclaude.festivaleconomia2019.model.data_classes.Tag"/>
+    </data>
+
+    <TextView
+            style="@style/SessionsItemTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/spacing_micro"
+            android:text="@{tag.name}"
+            app:tagTint="@{TagKt.getColorInt(tag)}"
+            tools:drawableStart="@drawable/tag_dot"
+            tools:drawableTint="#f0f"
+            tools:text="Android"/>
+
+</layout>

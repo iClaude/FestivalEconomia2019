@@ -194,7 +194,8 @@
         "01"
       ],
       "tags2": [
-        "02"
+        "00",
+        "01"
       ],
       "title": "Keynote",
       "photoUrl": "https://tuttosesto.net/wp-content/uploads/2018/06/wwwonline.jpg",
@@ -215,6 +216,8 @@
         "01"
       ],
       "tags2": [
+        "01",
+        "02",
         "03"
       ],
       "title": "Testing Rebooted (with AndroidX Test)",
