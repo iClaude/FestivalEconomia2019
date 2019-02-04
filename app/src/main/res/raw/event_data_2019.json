@@ -198,8 +198,8 @@
       ],
       "title": "Keynote",
       "photoUrl": "https://tuttosesto.net/wp-content/uploads/2018/06/wwwonline.jpg",
-      "sessionUrl": "https://goo.gl/P1BAVR",
-      "youtubeUrl": "https://youtu.be/ei_5R0CvLm4"
+      "sessionUrl": "",
+      "youtubeUrl": ""
     },
     {
       "description": "The release of androidx.test v1.0 makes testing a first class citizen of Android developer tools. See how a new set of cross platform APIs enable you to write both unit and integration tests that run in any environment and learn of our upcoming plans for future releases.",
