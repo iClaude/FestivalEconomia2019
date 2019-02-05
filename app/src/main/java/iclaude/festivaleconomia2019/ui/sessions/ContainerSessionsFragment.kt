@@ -10,9 +10,9 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.viewpager.widget.ViewPager
-import com.google.android.material.tabs.TabLayout
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionsContainerBinding
+import kotlinx.android.synthetic.main.fragment_sessions_appbar.*
 
 
 class ContainerSessionsFragment : Fragment() {
@@ -40,7 +40,6 @@ class ContainerSessionsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val tabs: TabLayout = view.findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
 
         // load data from repository
