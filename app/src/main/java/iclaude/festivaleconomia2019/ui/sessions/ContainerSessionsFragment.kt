@@ -18,16 +18,15 @@ import kotlinx.android.synthetic.main.fragment_sessions_appbar.*
 class ContainerSessionsFragment : Fragment() {
     private val TAG = "VIEW_MODEL"
 
-    private lateinit var mViewModel: SessionsViewModel
+    private lateinit var mViewModel: SessionsContainerViewModel
     private lateinit var binding: FragmentSessionsContainerBinding
     private lateinit var viewPager: ViewPager
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mViewModel = ViewModelProviders.of(activity!!).get(SessionsViewModel::class.java)
+        mViewModel = ViewModelProviders.of(this).get(SessionsContainerViewModel::class.java)
         binding = FragmentSessionsContainerBinding.inflate(inflater, container, false).apply {
             viewModel = this@ContainerSessionsFragment.mViewModel
         }
@@ -44,8 +43,7 @@ class ContainerSessionsFragment : Fragment() {
 
         // load data from repository
         mViewModel.mRepository.eventDataLive.observe(this, Observer {
-            mViewModel.loadData(it)
-
+            mViewModel.dataLoadedObs.set(true)
             viewPager.adapter =
                 SessionsAdapter(
                     childFragmentManager,
@@ -68,7 +66,18 @@ class ContainerSessionsFragment : Fragment() {
 
         override fun getItem(position: Int): Fragment {
             return when (position) {
-                in 0 until numOfDays -> SessionsFragment.newInstance(dayLabels[position].date!!.toInstant().toEpochMilli())
+                in 0 until numOfDays -> {
+                    val day = dayLabels[position].date
+                    SessionsFragment.newInstance(
+                        day!!.year,
+                        day.monthValue,
+                        day.dayOfMonth,
+                        day.hour,
+                        day.minute,
+                        day.second,
+                        day.zone.toString()
+                    )
+                }
                 else -> AgendaFragment()
             }
         }

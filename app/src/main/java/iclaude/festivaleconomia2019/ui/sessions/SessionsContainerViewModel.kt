@@ -1,0 +1,18 @@
+package iclaude.festivaleconomia2019.ui.sessions
+
+import androidx.databinding.ObservableBoolean
+import androidx.lifecycle.ViewModel
+import iclaude.festivaleconomia2019.model.di.App
+import iclaude.festivaleconomia2019.model.repository.EventDataRepository
+import javax.inject.Inject
+
+class SessionsContainerViewModel : ViewModel() {
+    init {
+        App.component.inject(this)
+    }
+
+    @Inject
+    lateinit var mRepository: EventDataRepository
+
+    var dataLoadedObs: ObservableBoolean = ObservableBoolean(false)
+}

@@ -15,41 +15,68 @@ import iclaude.festivaleconomia2019.databinding.ItemSessionBinding
 import iclaude.festivaleconomia2019.databinding.ItemSessionTagBinding
 import iclaude.festivaleconomia2019.model.data_classes.Tag
 import kotlinx.android.synthetic.main.fragment_sessions.*
+import org.threeten.bp.ZoneId
+import org.threeten.bp.ZonedDateTime
 
 
-private const val ARG_TIME = "time"
+private const val ARG_YEAR = "year"
+private const val ARG_MONTH = "month"
+private const val ARG_DAY = "day"
+private const val ARG_HOUR = "hour"
+private const val ARG_MINUTE = "minute"
+private const val ARG_SECOND = "second"
+private const val ARG_ZONE_ID = "zoneId"
+
 
 
 class SessionsFragment : Fragment() {
-    private val TAG = "VIEW_MODEL"
-    private var param1: Long? = null
     private lateinit var mViewModel: SessionsViewModel
     private val mRvAdapter = SessionListAdapter()
+    private lateinit var daySelected: ZonedDateTime
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: Long) =
+        fun newInstance(year: Int, month: Int, day: Int, hour: Int, minute: Int, second: Int, zoneId: String) =
             SessionsFragment().apply {
                 arguments = Bundle().apply {
-                    putLong(ARG_TIME, param1)
+                    putInt(ARG_YEAR, year)
+                    putInt(ARG_MONTH, month)
+                    putInt(ARG_DAY, day)
+                    putInt(ARG_HOUR, hour)
+                    putInt(ARG_MINUTE, minute)
+                    putInt(ARG_SECOND, second)
+                    putString(ARG_ZONE_ID, zoneId)
                 }
             }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         arguments?.let {
-            param1 = it.getLong(ARG_TIME)
+            val year = it.getInt(ARG_YEAR)
+            val month = it.getInt(ARG_MONTH)
+            val day = it.getInt(ARG_DAY)
+            val hour = it.getInt(ARG_HOUR)
+            val minute = it.getInt(ARG_MINUTE)
+            val second = it.getInt(ARG_SECOND)
+            val zoneId = it.getString(ARG_ZONE_ID)
+            daySelected = ZonedDateTime.of(year, month, day, hour, minute, second, 0, ZoneId.of(zoneId))
         }
+
+        mViewModel = ViewModelProviders.of(this).get(SessionsViewModel::class.java)
+        mViewModel.daySelected.value = daySelected
+        mViewModel.sessionsInfoFilteredLive.observe(this, Observer {
+            mRvAdapter.submitList(it)
+        })
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_sessions, container, false)
 
-        return root
+        return inflater.inflate(R.layout.fragment_sessions, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -60,16 +87,6 @@ class SessionsFragment : Fragment() {
             setHasFixedSize(true)
         }
     }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-        mViewModel = ViewModelProviders.of(activity!!).get(SessionsViewModel::class.java)
-        mViewModel.sessionsInfoLive.observe(this, Observer {
-            mRvAdapter.submitList(it)
-        })
-    }
-
 
     // Main RecyclerView classes.
     inner class SessionDiffCallback : DiffUtil.ItemCallback<SessionsDisplayInfo>() {
@@ -91,7 +108,7 @@ class SessionsFragment : Fragment() {
         }
     }
 
-    inner class SessionListAdapter() :
+    inner class SessionListAdapter :
         ListAdapter<SessionsDisplayInfo, SessionViewHolder>(SessionDiffCallback()) {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SessionViewHolder {
@@ -109,8 +126,6 @@ class SessionsFragment : Fragment() {
 
 // Classes for tags RecyclerView.
 class TagAdapter : RecyclerView.Adapter<TagViewHolder>() {
-    private val TAG = "TAGS"
-
     var tags = emptyList<Tag>()
 
     override fun getItemCount() = tags.size

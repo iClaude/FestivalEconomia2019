@@ -1,8 +1,8 @@
 package iclaude.festivaleconomia2019.ui.sessions
 
-import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.Tag
@@ -10,39 +10,51 @@ import iclaude.festivaleconomia2019.model.data_classes.hasSessionUrl
 import iclaude.festivaleconomia2019.model.data_classes.hasYoutubeUrl
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
+import org.threeten.bp.ZonedDateTime
 import javax.inject.Inject
 
 class SessionsViewModel : ViewModel() {
-    private val TAG = "TAGS"
+    private var origList: List<SessionsDisplayInfo>
 
     init {
         App.component.inject(this)
+        // load original static list only once; eventDataLive has already been obtained by container Fragment (no need to observe it)
+        origList = loadInfoList(mRepository.eventDataLive.value)
     }
 
     @Inject
     lateinit var mRepository: EventDataRepository
 
-    private var _sessionsInfoLive: MutableLiveData<List<SessionsDisplayInfo>> = MutableLiveData()
-    val sessionsInfoLive: LiveData<List<SessionsDisplayInfo>>
-        get() = _sessionsInfoLive
+    var daySelected: MutableLiveData<ZonedDateTime> = MutableLiveData()
 
-    var dataLoadedObs: ObservableBoolean = ObservableBoolean(false)
+    val sessionsInfoFilteredLive: LiveData<List<SessionsDisplayInfo>>
+        get() = Transformations.switchMap(daySelected) { dayChosen ->
+            val start = startOfDay(dayChosen).toInstant().toEpochMilli()
+            val end = endOfDay(dayChosen).toInstant().toEpochMilli()
 
-    fun loadData(eventData: EventData) {
-        dataLoadedObs.set(true)
-        val sessions = eventData.sessions.map {
+            val filteredList = origList.filter {
+                it.startTimestamp >= start && it.endTimestamp <= end
+            }
+
+            val result = MutableLiveData<List<SessionsDisplayInfo>>()
+            result.value = filteredList
+            result
+        }
+
+    private fun loadInfoList(eventData: EventData?): List<SessionsDisplayInfo> {
+        if (eventData == null) return emptyList()
+        return eventData.sessions.map { session ->
             SessionsDisplayInfo(
-                it.id, it.title,
-                it.hasSessionUrl() || (it.hasYoutubeUrl()),
-                it.startTimestamp,
-                it.endTimestamp,
-                eventData.locations[it.location.toInt()].name,
-                it.tags2.map {
+                session.id, session.title,
+                session.hasSessionUrl() || (session.hasYoutubeUrl()),
+                session.startTimestamp,
+                session.endTimestamp,
+                eventData.locations[session.location.toInt()].name,
+                session.tags2.map {
                     eventData.tags[it.toInt()]
                 }
             )
         }
-        _sessionsInfoLive.value = sessions
     }
 }
 

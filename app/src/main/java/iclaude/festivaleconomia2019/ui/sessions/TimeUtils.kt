@@ -65,3 +65,9 @@ fun sessionLength(context: Context, startTimestamp: Long, endTimestamp: Long): S
         else -> "${context.resources.getQuantityString(R.plurals.time_minutes, diffMinutes.toInt(), diffMinutes)}}"
     }
 }
+
+fun startOfDay(day: ZonedDateTime): ZonedDateTime =
+    ZonedDateTime.of(day.year, day.monthValue, day.dayOfMonth, 0, 0, 0, 0, day.zone)
+
+fun endOfDay(day: ZonedDateTime): ZonedDateTime =
+    ZonedDateTime.of(day.year, day.monthValue, day.dayOfMonth, 23, 59, 59, 0, day.zone)
