@@ -25,25 +25,25 @@ class JSONParserTest {
         val eventData = JSONparser.parseEventData(inputStream = inputStream)
 
         // number of objects
-        assertThat(eventData.locations.size, Is(equalTo(2)))
+        assertThat(eventData.locations.size, Is(equalTo(22)))
         assertThat(eventData.sessions.size, Is(equalTo(2)))
         assertThat(eventData.organizers.size, Is(equalTo(2)))
         assertThat(eventData.tags.size, Is(equalTo(4)))
 
         // locations
-        assertThat(eventData.locations[0].name, Is(equalTo("MUSE")))
-        assertThat(eventData.locations[0].lat, Is(equalTo(46.062627)))
-        assertThat(eventData.locations[1].description, containsString("Faculty of Economics"))
-        assertThat(eventData.locations[1].lng, Is(equalTo(11.117670)))
+        assertThat(eventData.locations[0].name, Is(equalTo("RAI")))
+        assertThat(eventData.locations[0].lat, Is(equalTo(46.060581)))
+        assertThat(eventData.locations[1].description, containsString("Piazza Duomo"))
+        assertThat(eventData.locations[1].lng, Is(equalTo(11.121334)))
 
         // sessions
-        assertThat(eventData.sessions[0].location, Is(equalTo("01")))
+        assertThat(eventData.sessions[0].location, Is(equalTo("00")))
         assertThat(eventData.sessions[0].relatedSessions?.size, Is(equalTo(0)))
         assertThat(eventData.sessions[0].hasRelatedSessions(), Is(equalTo(false)))
-        assertThat(eventData.sessions[0].tags1, hasItem("Keynote"))
+        assertThat(eventData.sessions[0].tags1, hasItem("01"))
         assertThat(eventData.sessions[1].youtubeUrl, nullValue())
         assertThat(eventData.sessions[1].hasYoutubeUrl(), Is(equalTo(false)))
-        assertThat(eventData.sessions[1].organizers[0], Is(equalTo("02")))
+        assertThat(eventData.sessions[1].organizers[0], Is(equalTo("01")))
 
         // organizers
         assertThat(eventData.organizers[0].name, Is(equalTo("Izabela Orlowska")))

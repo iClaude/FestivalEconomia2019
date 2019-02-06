@@ -1,0 +1,275 @@
+{
+  "locations": [
+    {
+      "id": "00",
+      "name": "RAI",
+      "displayString": "RAI",
+      "description": "RAI – Radiotelevisione italiana S.p.A., known until 1954 as Radio Audizioni Italiane is the national public broadcasting company of Italy, owned by the Ministry of Economy and Finance. RAI operates many terrestrial and subscription television channels and radio stations. It is the biggest television broadcaster in Italy and competes with Mediaset, and other minor television and radio networks. RAI has a relatively high television audience share of 33.8%. \nRAI broadcasts are also received in neighbouring countries, including Albania, Bosnia, Croatia, Malta, Monaco, Montenegro, San Marino, Slovenia, Vatican City, Switzerland, and Tunisia, and elsewhere on pay television. Sometimes Rai 1 was received even further in Europe via Sporadic E until the digital switch off in July 2012. \nHalf of the RAI's revenues come from broadcast receiving licence fees, the rest from the sale of advertising time. In 1950, the RAI became one of the 23 founding broadcasting organizations of the European Broadcasting Union.",
+      "lat": 46.060581,
+      "lng": 11.122270
+    },
+    {
+      "id": "01",
+      "name": "Piazza Duomo",
+      "displayString": "Piazza Duomo",
+      "description": "Trento’s Piazza Duomo is the buzzing heart of this city, the capital of the Trentino region. Duomo in Italian means Cathedral, and Trento’s Cathedral San Vigilio does indeed dominate the square, but there are lots of things that are equally important and interesting to see in this square.\nThe square from the middle-ages onwards became home to the civic and religious administration of the city, although before 1000 a.d it was an area beyond the city’s walls. The outward expansion of the city centred on this area, around a church dedicated to the city’s patron St. Vigilius, and with the construction of the Palazzo Pretorio and the Duomo it cemented its position as the main square of the city.",
+      "lat": 46.067523,
+      "lng": 11.121334
+    },
+    {
+      "id": "02",
+      "name": "Palazzo della Provincia",
+      "displayString": "Palazzo della Provincia - Depero Room",
+      "description": "Located inside the Palace of the Autonomous Province of Trento overlooking Piazza Dante, Sala Depero was in the past a sumptuous dining room of the Imperial Hotel Trento, then it became the seat of art exhibitions from the late twenties.It owes its name to Fortunato Depero, an artist from Rovereto (painter, sculptor and advertising) who, between 1953 and 1956, turned it into a work of art performing there his land in a colourful harmony combining futurism, cubism and abstract art . The decor was inspired by the movements of the Mitteleuropa aesthetics, born in the mid-nineteenth century, which had their maximum and most mature expression in the first two decades of the twentieth century, particularly the Secession of Vienna. All revisited and mitigated with an Italian taste that reduces its grandeur. The manufacture was entrusted to local artisans. From 1948 to 1960, it hosted the sessions of the provincial Council and the regional one.\nThe entrance from Piazza Dante has steps, while from Via Vannetti is barrier-free (ramp of 303cm with a difference in height of 6.6% and a bell height of 119cm). On the floor of the porter's lodge, there are Sala Depero and the toilets with grab bars on both sides (door width: 90cm, internal dimensions 180x200cm, toilet 50cm high). The Braille push-button lift (door width 90cm, dimensions 137x150) allows to reach the various floors of the building. Five parking areas reserved for people with disabilities in via Gazzoletti.",
+      "lat": 46.072239,
+      "lng": 11.121237
+    },
+    {
+      "id": "03",
+      "name": "Social Theater",
+      "displayString": "Social Theater",
+      "description": "The charm of this place is not only linked to the beauty of a 'real' theater, but in large part to the suggestions that it manages to evoke thanks to its history that begins on May 29, 1819 with the staging of 'La Cenerentola' by Gioachino Rossini. The theater was called Teatro Mazzurana, named after Felice Mazzurana, promoter of the construction and first owner. In 1835 the entrepreneur-coffee maker sold the property and the Theater changed its name to Teatro Sociale, run by the Theater Company. In nineteenth-century Trento, the Teatro Sociale was the driving force of an intense cultural activity, hosting events that went from opera to prose, from dance to classical music, but was also used for political meetings, balls, magic shows. \nPlaces reserved for disabled people in the first rows. The elevator (door width: 100cm, dimensions 150x180 cm) allows you to reach the Volkenstein hall and Palazzo Festi; the stage can be reached by a step from the back of the building. On the ground floor there are the toilets equipped with grab bars on both sides (door width 93 cm, internal dimensions 280x200 cm, height 50 cm). Parking reserved for people with disabilities located at 50 meters from the theater along Via Manci.",
+      "lat": 46.069659,
+      "lng": 11.122589
+    },
+    {
+      "id": "04",
+      "name": "Buonconsiglio Castle",
+      "displayString": "Buonconsiglio Castle - Marangonerie Room",
+      "description": "The Buonconsiglio Castle is the largest and most important monumental complex of the Trentino Alto Adige region. It was the residence of the prince-bishops of Trento from the 13th century to the end of the 18th century, and is composed of a series of buildings of different eras, enclosed by walls and positioned slightly higher than the city. Castelvecchio is the oldest nucleus, dominated by an imposing cylindrical tower; the Magno Palazzo is the 16th century expansion in the Italian Renaissance-style as commissioned by the Prince-Bishop and Cardinal Bernardo Cles (1485-1539); the Baroque-style Giunta Albertiana dates from the end of the 17th century.\nThe Marangonerie Room hosted the Historical Museum in Trento from 1985 until 2003. Currently, in addition to the bookshop, in the hall there is a first information point about the four sites of the museum. The size of the room allows it to be used for conferences, meetings, as well as, naturally, to be an exhibition space for temporary exhibitions. Parking spaces reserved for people with disabilities can be found in Piazza della Mostra.",
+      "lat": 46.071968,
+      "lng": 11.126899
+    },
+    {
+      "id": "05",
+      "name": "Palazzo Geremia",
+      "displayString": "Palazzo Geremia",
+      "description": "This palace is one of the most important secular monuments in the city. Its architectonic structure is double-faced: clearly Renaissance on the outside looking onto Via Belenzani and late Gothic on the inside. Thus, it is an expression of the change from Gothic to Renaissance and is influenced by both the Lombard and the Veneto art. \nBuilt between the end of the 15th century and the first years of the 16th by order of Giovanni Antonio Pona, known as Geremia, son of Geremia Pona, a citizen of Trento belonging to a family from Verona, it seems that Pona used free workmen who were active in Trento at that time. ",
+      "lat": 46.069474,
+      "lng": 11.120933
+    },
+    {
+      "id": "06",
+      "name": "Cinema Modena",
+      "displayString": "Cinema Modena",
+      "description": "The Cinema Theater Gustavo Modena of Trento - named after the great nineteenth-century actor originally from Mori - was founded in 1911 thanks to the entrepreneurial initiative of Giuseppe Lazzeri who created a popular open-air theater, building a stage overlooking a large square where, under a large tarpaulin to shelter from the frequent summer rains, spectators sat on wooden benches. The project was drafted by a Viennese architect who conceived a dome-shaped roof supported by arches made of fine wooden trellis (1912). The original structure, although modified several times, was maintained until 1997, when, in just 11 months, the current three screens structure was built, giving rise to the first real multiplex cinema in Trentino. \nA ramp of 20m with a gradient of 19% leads to the entrance of the cinema, where a door with manual opening towards the outside is placed (246cm wide, 105cm high, force required to open it: 2kg). Three tiered screening rooms allow wheelchair users to stop in the last row. There are toilets with grab bars on both sides of the toilet (90cm door, internal space 183x183cm, height 46cm). In Via San Francesco d'Assisi there is a car park reserved for people with disabilities.",
+      "lat": 46.067009,
+      "lng": 11.125600
+    },
+    {
+      "id": "07",
+      "name": "UNITN - Department of Economics and Management",
+      "displayString": "UNITN - Department of Economics and Management - Conference Hall",
+      "description": "The Department is the outgrowth of the Faculty of Economics and Commerce, which was founded in Trento in 1973. As a new academic institution, it brought together the two historical branches of Economics (DECO) and Informatics and Business Studies (DISA). The Department (DEM) is actively involved in numerous fields of economic and management research and its members have intrinsically diverse interests – from the theoretical to the empirical, quantitative to experimental, and case study analysis to computer simulations. DEM hosts a multidisciplinary research environment where academics apply a wide array of methodologies. \nPossibility to enter the Department of Economics and Management from via Rosmini with platform (105x143 cm, door 80 cm); regularly paved outdoor garden. Presence of ramps with variable slope from a minimum of 7.5% to a maximum of 10%, for lengths from 74 cm to 1000 cm. On the ground floor near the entrance: reception (counter 115 cm high) and ATM (125 cm high). The conference room on the ground floor is accessible, the stage can be reached with a 135 cm long slide and a 25.3% slope. Sala Soppalco reachable with stairlift (85x80 capacity 130 kg). All floors are accessible and all classrooms are accessible; in some rooms there are steps, with the possibility of stopping in the first row or in the upper part of the stalls. In the equipped toilets grab bars are placed on both sides (50 cm high). The parking spaces reserved for people with disabilities can be found in via Inama, other 3 stalls in the underground car park.",
+      "lat": 46.066319,
+      "lng": 11.117694
+    },
+    {
+      "id": "08",
+      "name": "Bruno Kessler Foundation",
+      "displayString": "Bruno Kessler Foundation - Conference Hall",
+      "description": "Top Research Institute in Italy, ranked at the 1st place for scientific excellence within 3 different subject areas (ICT, History and Sociology) and for the economic and social impact according to the quality of research ANVUR evaluation for the period 2010-2014.\nFondazione Bruno Kessler is a research non-profit public interest entity.\nBeing the result of a history that is more than half a century old, through 2 scientific hubs, 7 research centres, 410 researchers, 2 specialized libraries, 7 laboratories, FBK aims to results of excellence in science and technology with particular emphasis on interdisciplinary approaches and to the applicative dimension.\nWe achieve this thanks to our constant attention to collaborations and exchange activities with research organizations, both institutional and corporate, national and international, which extend our innovation capability and involve the community and the local economy in the circulation of knowledge and technologies.",
+      "lat": 46.062864,
+      "lng": 11.124389
+    },
+    {
+      "id": "09",
+      "name": "Philharmonic Hall",
+      "displayString": "Philharmonic Hall",
+      "description": "Founded in 1795 the Trento Philharmonic Society carried out its activity in various buildings of the city until 1905. The building where it is currently located was completed in a year, and inaugurated with a concert directed by Mo Vincenzo Gianferrari on May 30, 1905. The structure of the building includes a basement, a mezzanine floor with eight rooms and a small apartment for the concierge , the Concert Hall with two service rooms on the first floor, three rooms with five loggias towards the upper part of the Hall on the third floor. Except for very few modifications, the building still looks like when it was built in 1905.\nThe reserved parking spaces are in via Maffei. Presence of two other stalls along the way at about 100 meters. Entry without barriers for people with disabilities from Vicolo Pievano. The room is open according to the scheduled shows. Access to the Concert Hall through a 140 cm wide manual door. Access to the stage with 3 steps 22.5 cm high. The equipped toilets have grab bars on both sides.",
+      "lat": 46.066798,
+      "lng": 11.120471
+    },
+    {
+      "id": "10",
+      "name": "Municipal Library",
+      "displayString": "Municipal Library",
+      "description": "In the historic center, between via Torre Vanga and via Pozzo, with entrance on via Roma, the municipal library of Trento is located in the building of the former Jesuit College. The founding act of the municipal library of Trento, officially open to the public on January 1, 1856 - a period in which Trento and Trentino were part of the Land of Tyrol with the capital Innsbruck - can be identified in the will of the bishop Giovanni Benedetto Gentilotti who donated ten thousand volumes of his large library, collected during a long activity as a scholar, librarian and collector between Salzburg, Vienna and Rome. The municipal library of Trento has therefore arisen as an institution dedicated to the memory and documentation of the (Italian) culture of the territory. \nThe entrance door of the municipal library is 216 cm wide, 138cm high and requires a force of 4kg to open. Toilet facilities, accessible via a 8.24m long ramp with a gradient of 6.5%, have grab bars on both sides (89cm door, 175x169cm interior room mosaic, 46cm height toilet). Parking reserved for people with disabilities are in via Roma.",
+      "lat": 46.069824,
+      "lng": 11.120873
+    },
+    {
+      "id": "11",
+      "name": "Franco Demarchi Foundation",
+      "displayString": "Franco Demarchi Foundation - Great Hall",
+      "description": "Born as evolution and development of the Regional Institute of Studies and Social Research; The Demarchi Foundation aims to promote and carry out training and research in the social, educational and cultural fields for the benefit of local communities and their development. It also deals with training activities, continuous training and education and lifelong learning.",
+      "lat": 46.068904,
+      "lng": 11.119307
+    },
+    {
+      "id": "12",
+      "name": "Palazzo Bassetti",
+      "displayString": "Palazzo Bassetti - Intesa Sanpaolo Headquarters",
+      "description": "Palazzo Bassetti is now home to Intesa Sanpaolo, formerly the headquarters of the Banca di Trento and Bolzano since 1960. Once home to the Barons Bassetti, it was renovated by Eng. Saverio Tamanini (1833-1887), 'cultured and gentle spirit, artist of exquisite taste', one of the most famous professionals involved in the development of the city in the second half of the 19th century.  The BTB inaugurates the new salon in 1961 and restructures the entire building in 2000 (design by the architect Sergio Giovanazzi). \nThe conference room, located on the fourth floor, can be reached by elevator (75cm wide door, 289x279cm size). The speakers area has an 18 cm high step. The toilets equipped with grab bars on the side (47 cm high) are located on the ground floor. Other equipped toilets are present near the conference room (220x173 cm, door 80 cm, toilet 46 cm high with grab bars on both sides). In via Manci, parking spaces reserved for people with disabilities.",
+      "lat": 46.068028,
+      "lng": 11.124224
+    },
+    {
+      "id": "13",
+      "name": "Auditorium Santa Chiara",
+      "displayString": "Auditorium Santa Chiara",
+      "description": "The Auditorium Santa Chara is the largest theater in the city of Trento and its peculiarity is that from all seats there is good visibility. Recently renovated (in the summer of 2006), the Auditorium presents itself with an elegant and modern look. The excellent acoustics is perfect for symphonic music, while the sound-absorbing devices make it a perfect location for light music events and author's theater. The space is equipped with a cafeteria, recently renovated in a new modern and welcoming layout, ideal place for meetings with actors / authors and the public.",
+      "lat": 46.063428,
+      "lng": 11.124500
+    },
+    {
+      "id": "14",
+      "name": "Department of Humanities and Philosophy",
+      "displayString": "Department of Humanities and Philosophy",
+      "description": "The Department of Humanities and Philosophy is based in via Tommaso Gar n. 14. It is located in the historic center, a few hundred meters from Piazza Duomo and can be reached in about 5 minutes on foot from the train and bus station.",
+      "lat": 46.067519,
+      "lng": 11.116889
+    },
+    {
+      "id": "15",
+      "name": "Department of Sociology",
+      "displayString": "Department of Sociology - Kessler Room",
+      "description": "The inner courtyard of the department is paved in pebbles with porphyry lanes; inside the structure, in addition to the 127 cm entrance ramp with a gradient of 8.4%, there are other ramps from a minimum of 5.4% to a maximum of 13.9%, for lengths from 30 cm to 695 cm. The concierge, some offices and part of the laboratories can be reached by lift and by stair lift (75x80 capacity 230 kg). Access to the Kessler classroom with a 130 cm wide door, accessible throughout its perimeter with the exception of the final steps. Places reserved for people with disabilities in the first rows. The speakers area of the hall can be reached by an elevating platform (90x120) preceded by a 40 cm long ramp with a gradient of 20.2%. The toilets, equipped with grab bars on the opposite side (53 cm high), are on the first and second floor. Parking spaces reserved for people with disabilities can be found in via Verdi and via Maffei.",
+      "lat": 46.066679,
+      "lng": 11.119498
+    },
+    {
+      "id": "16",
+      "name": "OECD Offices",
+      "displayString": "Convent of San Marco - OECD Offices",
+      "description": "The convent of S. Marco, now home to the Organization for Economic Cooperation and Development, originates from the permission to establish an Augustinian settlement in the city in a place that was then at the edge of the urban center and near the Castle, granted in 1271 to the small community of Emeritan friars that had already been installed in Barbaniga di Civezzano during the first decades of the 13th century. As a result of the third French invasion, in 1809, Trento was annexed to the Italic Kingdom and the Augustinians were ordered to evacuate the Convent of San Marco, which became the headquarters of the Finance and State Property Office. \nFloor in cobblestone. The entrance door of the former convent has a 145 cm wide automatic opening. The rooms and offices can be reached via steps; the gardens, with a floor in cobblestones and grass, are free of barriers. Two parking spaces reserved for people with disabilities in via San Marco.",
+      "lat": 46.069845,
+      "lng": 11.125477
+    },
+    {
+      "id": "17",
+      "name": "School of Law - Room B",
+      "displayString": "School of Law - Room B",
+      "description": "The B Room is located in the basement of the Faculty and has 175 seats. Equipped for simultaneous translation, control room, audio-video systems, CCTV camera and videoconference - telephone connections, internet. In the Faculty there are elevators located in several points that allow you to reach all floors. Presence of internal and external ramps with gradient from 6.3% to 7.7% and length from a minimum of 355 cm to a maximum of 395 cm. The toilets on the ground floor are equipped with grab bars on both sides (49 cm high). The parking spaces reserved for people with disabilities are in via Verdi and via Rosmini.",
+      "lat": 46.067612,
+      "lng": 11.119043
+    },
+    {
+      "id": "18",
+      "name": "School of Law - Great Hall",
+      "displayString": "School of Law - Great Hall",
+      "description": "The Conference Hall of the Faculty of Law was inaugurated in October 2006 in the new wing designed along Via Rosmini by architect Mario Botta. With its 370 seats overall is the ideal venue for conferences and events of the faculty but also of the university. Modern and versatile, it can be divided into two separate classrooms through a sliding wall. It is equipped with a cabin for simultaneous translation, a control room and complete with audio video systems, CCTV cameras and videoconferencing facilities, telephone connections and the Internet. The new headquarters also features a large hall where the faculty reception is located, a cloakroom and a space for organizing coffee breaks and buffet lunches. \nThe Great Hall has steps 12.5 cm high and 97 cm deep; the speakers area is not accessible. There are elevators located in several points of the Faculty that allow you to reach all floors. Presence of internal and external ramps with slope from 6.3% to 7.7% and length from a minimum of 355 cm to a maximum of 395 cm. The toilets on the ground floor are equipped with grab bars on both sides (49 cm high). On all floors there are dedicated bathrooms. Parking spaces reserved for people with disabilities are in via Verdi and via Rosmini.",
+      "lat": 46.066946,
+      "lng": 11.119129
+    },
+    {
+      "id": "19",
+      "name": "MUSE",
+      "displayString": "MUSE - Science Museum of Trento",
+      "description": "The Autonomous Province of Trento asked starchitect Renzo Piano to create in a disused industrial area of approximately 19,000 sqm not just a museum, but a place to reflect on the relationship between nature and man. That is how the MUSE was born - so successful that it was the only museum in Italy to be awarded an honourable mention at the European Museum of the Year Awards 2015.\nFrom the mountains to the challenges of sustainability, from the first men on Earth to the DNA’s secrets. With “special effects” to experience virtually the same emotions of a climb on the Dolomites walls or a downhill skiing descent.A very real experience, however, is touching with your own hand fossils and minerals, using the microscope and going into the large greenhouse with living plants from the Tanzania forest.\nAnd more, the dinosaurs of the Alpine region, their footprints, the first painted stones and the weapons of prehistoric hunters in the ice age. In a science gym you can learn the principles of physics and mechanics with the help of interactive installations.",
+      "lat": 46.062635,
+      "lng": 11.114539
+    },
+    {
+      "id": "20",
+      "name": "Palazzo Calepini",
+      "displayString": "Palazzo Calepini - Caritro Foundation Headquarters",
+      "description": "In the heart of the historic center, behind the Cathedral of Trento, on the corner between Via Calepina and Via Garibaldi, Palazzo Calepini was for decades the headquarters of the Istituto di Credito Fondiario of Trentino Alto Adige. Now owned by the Cassa di Risparmio Foundation of Trento and Rovereto, the Palazzo is used as its registered and administrative office. A recent renovation has canceled the pre-existing 'banking' structure of the ground floor, leaving space for a large and modern conference room, with 150 seats and equipped with cutting-edge technology that makes it suitable for hosting conferences,  symposia, round tables, etc. \nThe entrance door is always open and followed by a counter-door with a 120cm wide automatic opening (on request, access without barriers from Via Dordi, 8). The toilets have a grab bar on the side (43 cm high). Reserved parking for people with disabilities is located in Via Calepina.",
+      "lat": 46.066935,
+      "lng": 11.122482
+    },
+    {
+      "id": "21",
+      "name": "Palazzo della Regione",
+      "displayString": "Palazzo della Regione",
+      "description": "The lot where the Palazzo della Regione stands is located near the Trento railway station and includes the Regional Council offices, the local government offices and the Council Chamber. The program’s different required functions are solved with three independent volumes. The two rectangular and one trapezoidal spaces are interconnected in an 'L' shaped plan.\nThe Trento Palazzo della Regione construction is a post-World War II project. Adalberto Libera’s architectural language seems completely different from the pure and rationalist one that had characterized its pre-war cycle. During the war, the architect had spent a period of voluntary confinement in his birthplace, Villa Lagarina, in Trentino. Back in Rome, he chose to start over, based on his profound theoretical reflections at Villa Lagarina. After the post-war enthusiasm with German-style idealism, Libera’s architecture preferred 'correctness' to great rationalist ideals.",
+      "lat": 46.071599,
+      "lng": 11.121597
+    }
+  ],
+  "sessions": [
+    {
+      "description": "[TESTO ITALIANO] The keynote kicks off on November 7 at 10AM PST, where you'll hear directly from Dave Burke and others on the present and future of Android development.",
+      "endTimestamp": 1549357200000,
+      "id": "00",
+      "relatedSessions": [],
+      "location": "00",
+      "organizers": [
+        "00",
+        "01"
+      ],
+      "startTimestamp": 1549353600000,
+      "tags1": [
+        "00",
+        "01"
+      ],
+      "tags2": [
+        "02"
+      ],
+      "title": "Keynote",
+      "photoUrl": "https://tuttosesto.net/wp-content/uploads/2018/06/wwwonline.jpg",
+      "sessionUrl": "",
+      "youtubeUrl": ""
+    },
+    {
+      "description": "The release of androidx.test v1.0 makes testing a first class citizen of Android developer tools. See how a new set of cross platform APIs enable you to write both unit and integration tests that run in any environment and learn of our upcoming plans for future releases.",
+      "endTimestamp": 1549450800000,
+      "id": "01",
+      "relatedSessions": [],
+      "location": "01",
+      "organizers": [
+        "01"
+      ],
+      "startTimestamp": 1549445400000,
+      "tags1": [
+        "01"
+      ],
+      "tags2": [
+        "03"
+      ],
+      "title": "Testing Rebooted (with AndroidX Test)",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Richie_Gray_2016.jpg/1200px-Richie_Gray_2016.jpg",
+      "sessionUrl": "https://goo.gl/Mddeq1"
+    }
+  ],
+  "organizers": [
+    {
+      "bio": "Izabela has been a Software Engineer on the Android Studio team for 2 years. She works on the Android Gradle Plugin and her main areas of expertise include resources and AAPT2 support. Beside being an engineer, Iza is also a diversity and inclusion activist.",
+      "company": "Google",
+      "id": "00",
+      "name": "Izabela Orlowska",
+      "thumbnailUrl": "https://developer.android.com/dev-summit/images/speakers/izabela_orlowska.jpg",
+      "websiteUrl": "https://gfx.developpez.com/",
+      "twitterUrl": "https://twitter.com/SandeepDinesh",
+      "linkedInUrl": "https://www.linkedin.com/in/dineshsandeep",
+      "facebookUrl": "https://it-it.facebook.com/romainpguy"
+    },
+    {
+      "bio": "Chris works as a software engineer at Google, working on the Android Gradle Plugin, first in Mountain View and now in London.\nPrior to joining Google, Chris worked as a Research Assistant in the Security Group of the The Computer Laboratory, University of Cambridge. He previously studied computer science as undergraduate at the University of Cambridge.",
+      "company": "Samsung",
+      "id": "01",
+      "name": "Chris Warrington",
+      "thumbnailUrl": "https://developer.android.com/dev-summit/images/speakers/chris_warrington.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/richfulcher",
+      "linkedInUrl": "https://www.linkedin.com/in/rich-fulcher-a3648a/",
+      "facebookUrl": ""
+    }
+  ],
+  "tags": [
+    {
+      "id": "00",
+      "color": "#3D82EE",
+      "fontColor": "#FFFFFF",
+      "name": "Keynote"
+    },
+    {
+      "id": "01",
+      "color": "#cce9c2",
+      "fontColor": "#202124",
+      "name": "Session"
+    },
+    {
+      "id": "02",
+      "color": "#FDC93E",
+      "fontColor": "#202124",
+      "name": "Others"
+    },
+    {
+      "id": "03",
+      "color": "#FFEAB3",
+      "fontColor": "#202124",
+      "name": "Android"
+    }
+  ]
+}
