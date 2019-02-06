@@ -65,7 +65,7 @@ fun sessionLength(context: Context, startTimestamp: Long, endTimestamp: Long): S
             diffHours.toInt(),
             diffHours
         )}"
-        else -> "${context.resources.getQuantityString(R.plurals.time_minutes, diffMinutes.toInt(), diffMinutes)}}"
+        else -> "${context.resources.getQuantityString(R.plurals.time_minutes, diffMinutes.toInt(), diffMinutes)}"
     }
 }
 
