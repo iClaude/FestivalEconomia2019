@@ -11,6 +11,9 @@ import org.threeten.bp.ZonedDateTime
 import org.threeten.bp.format.DateTimeFormatter
 import org.threeten.bp.temporal.ChronoUnit
 
+fun zonedDateTimeFromTimestamp(context: Context?, timestamp: Long): ZonedDateTime =
+    ZonedDateTime.ofInstant(Instant.ofEpochMilli(timestamp), getZoneId(context))
+
 fun getEventTimeZone() = "Europe/Rome"
 
 fun getZoneId(context: Context?): ZoneId {
@@ -26,14 +29,14 @@ fun getZoneId(context: Context?): ZoneId {
 }
 
 fun numberOfDays(context: Context?, sessions: List<Session>): Int {
-    val startDate = ZonedDateTime.ofInstant(Instant.ofEpochMilli(sessions.first().startTimestamp), getZoneId(context))
-    val endDate = ZonedDateTime.ofInstant(Instant.ofEpochMilli(sessions.last().startTimestamp), getZoneId(context))
+    val startDate = zonedDateTimeFromTimestamp(context, sessions.first().startTimestamp)
+    val endDate = zonedDateTimeFromTimestamp(context, sessions.last().startTimestamp)
     return Duration.between(startDate, endDate).toDays().toInt().plus(1)
 }
 
 fun daysLabels(context: Context?, sessions: List<Session>): MutableList<DayLabel> {
-    val startDate = ZonedDateTime.ofInstant(Instant.ofEpochMilli(sessions.first().startTimestamp), getZoneId(context))
-    val endDate = ZonedDateTime.ofInstant(Instant.ofEpochMilli(sessions.last().startTimestamp), getZoneId(context))
+    val startDate = zonedDateTimeFromTimestamp(context, sessions.first().startTimestamp)
+    val endDate = zonedDateTimeFromTimestamp(context, sessions.last().startTimestamp)
 
     val labels = mutableListOf<DayLabel>()
 
@@ -50,8 +53,8 @@ fun daysLabels(context: Context?, sessions: List<Session>): MutableList<DayLabel
 class DayLabel(val date: ZonedDateTime?, val label: String)
 
 fun sessionLength(context: Context, startTimestamp: Long, endTimestamp: Long): String {
-    val startDate = ZonedDateTime.ofInstant(Instant.ofEpochMilli(startTimestamp), getZoneId(context))
-    val endDate = ZonedDateTime.ofInstant(Instant.ofEpochMilli(endTimestamp), getZoneId(context))
+    val startDate = zonedDateTimeFromTimestamp(context, startTimestamp)
+    val endDate = zonedDateTimeFromTimestamp(context, endTimestamp)
 
     val diffHours = ChronoUnit.HOURS.between(startDate, endDate)
     val diffMinutes = ChronoUnit.MINUTES.between(startDate, endDate)
