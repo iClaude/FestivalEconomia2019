@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import iclaude.festivaleconomia2019.R
-import iclaude.festivaleconomia2019.databinding.FragmentSessionsContainerBinding
+import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
 import kotlinx.android.synthetic.main.fragment_session_container.*
 import kotlinx.android.synthetic.main.fragment_session_container_appbar.*
 
@@ -19,14 +19,14 @@ class SessionContainerFragment : Fragment() {
     private val TAG = "VIEW_MODEL"
 
     private lateinit var viewModel: SessionContainerViewModel
-    private lateinit var binding: FragmentSessionsContainerBinding
+    private lateinit var binding: FragmentSessionContainerBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         viewModel = ViewModelProviders.of(this).get(SessionContainerViewModel::class.java)
-        binding = FragmentSessionsContainerBinding.inflate(inflater, container, false).apply {
+        binding = FragmentSessionContainerBinding.inflate(inflater, container, false).apply {
             viewModel = this@SessionContainerFragment.viewModel
         }
 
