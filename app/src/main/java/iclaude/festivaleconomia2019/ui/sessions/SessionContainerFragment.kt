@@ -15,19 +15,19 @@ import kotlinx.android.synthetic.main.fragment_sessions_appbar.*
 import kotlinx.android.synthetic.main.fragment_sessions_container.*
 
 
-class ContainerSessionsFragment : Fragment() {
+class SessionContainerFragment : Fragment() {
     private val TAG = "VIEW_MODEL"
 
-    private lateinit var viewModel: SessionsContainerViewModel
+    private lateinit var viewModel: SessionContainerViewModel
     private lateinit var binding: FragmentSessionsContainerBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewModel = ViewModelProviders.of(this).get(SessionsContainerViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(SessionContainerViewModel::class.java)
         binding = FragmentSessionsContainerBinding.inflate(inflater, container, false).apply {
-            viewModel = this@ContainerSessionsFragment.viewModel
+            viewModel = this@SessionContainerFragment.viewModel
         }
 
         return binding.root
@@ -66,7 +66,7 @@ class ContainerSessionsFragment : Fragment() {
             return when (position) {
                 in 0 until numOfDays -> {
                     val day = dayLabels[position].date
-                    SessionsFragment.newInstance(
+                    SessionListFragment.newInstance(
                         day!!.year,
                         day.monthValue,
                         day.dayOfMonth,

@@ -9,14 +9,14 @@
 
         <variable
                 name="viewModel"
-                type="iclaude.festivaleconomia2019.ui.sessions.SessionsViewModel"/>
+                type="iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel"/>
 
     </data>
 
     <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".ui.sessions.SessionsFragment">
+            tools:context=".ui.sessions.SessionListFragment">
 
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvSessions"

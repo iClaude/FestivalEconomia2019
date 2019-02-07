@@ -28,16 +28,15 @@ private const val ARG_SECOND = "second"
 private const val ARG_ZONE_ID = "zoneId"
 
 
-
-class SessionsFragment : Fragment() {
-    private val viewModel by lazy { ViewModelProviders.of(this).get(SessionsViewModel::class.java) }
+class SessionListFragment : Fragment() {
+    private val viewModel by lazy { ViewModelProviders.of(this).get(SessionListViewModel::class.java) }
     private val rvAdapter = SessionListAdapter()
     private lateinit var daySelected: ZonedDateTime
 
     companion object {
         @JvmStatic
         fun newInstance(year: Int, month: Int, day: Int, hour: Int, minute: Int, second: Int, zoneId: String) =
-            SessionsFragment().apply {
+            SessionListFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_YEAR, year)
                     putInt(ARG_MONTH, month)

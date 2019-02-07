@@ -9,13 +9,13 @@
 
         <variable
                 name="viewModel"
-                type="iclaude.festivaleconomia2019.ui.sessions.SessionsContainerViewModel"/>
+                type="iclaude.festivaleconomia2019.ui.sessions.SessionContainerViewModel"/>
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".ui.sessions.ContainerSessionsFragment"
+            tools:context=".ui.sessions.SessionContainerFragment"
             android:id="@+id/coordinatorLayout">
 
         <include layout="@layout/fragment_sessions_appbar"/>

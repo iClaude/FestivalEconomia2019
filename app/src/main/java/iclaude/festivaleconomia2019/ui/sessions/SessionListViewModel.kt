@@ -13,7 +13,7 @@ import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import org.threeten.bp.ZonedDateTime
 import javax.inject.Inject
 
-class SessionsViewModel : ViewModel() {
+class SessionListViewModel : ViewModel() {
     private var origList: List<SessionsDisplayInfo>
 
     init {

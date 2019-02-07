@@ -6,7 +6,7 @@ import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import javax.inject.Inject
 
-class SessionsContainerViewModel : ViewModel() {
+class SessionContainerViewModel : ViewModel() {
     init {
         App.component.inject(this)
     }
