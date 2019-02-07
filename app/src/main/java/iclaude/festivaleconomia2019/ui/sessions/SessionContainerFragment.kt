@@ -11,8 +11,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionsContainerBinding
-import kotlinx.android.synthetic.main.fragment_sessions_appbar.*
-import kotlinx.android.synthetic.main.fragment_sessions_container.*
+import kotlinx.android.synthetic.main.fragment_session_container.*
+import kotlinx.android.synthetic.main.fragment_session_container_appbar.*
 
 
 class SessionContainerFragment : Fragment() {

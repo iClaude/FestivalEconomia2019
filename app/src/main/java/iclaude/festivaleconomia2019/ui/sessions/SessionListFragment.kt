@@ -15,7 +15,7 @@ import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.ItemSessionBinding
 import iclaude.festivaleconomia2019.databinding.ItemSessionTagBinding
 import iclaude.festivaleconomia2019.model.data_classes.Tag
-import kotlinx.android.synthetic.main.fragment_sessions.*
+import kotlinx.android.synthetic.main.fragment_session_list.*
 import org.threeten.bp.ZoneId
 import org.threeten.bp.ZonedDateTime
 
@@ -75,7 +75,7 @@ class SessionListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.fragment_sessions, container, false)
+        return inflater.inflate(R.layout.fragment_session_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

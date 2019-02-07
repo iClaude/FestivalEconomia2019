@@ -15,6 +15,6 @@ class AgendaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sessions_agenda, container, false)
+        return inflater.inflate(R.layout.fragment_session_agenda, container, false)
     }
 }
