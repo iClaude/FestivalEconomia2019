@@ -30,6 +30,7 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:ignore="UnusedAttribute"
                 tools:listitem="@layout/item_session"/>
+
     </FrameLayout>
 
 </layout>

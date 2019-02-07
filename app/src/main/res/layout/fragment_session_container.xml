@@ -23,8 +23,8 @@
         <androidx.viewpager.widget.ViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" android:layout_marginTop="112dp">
-        </androidx.viewpager.widget.ViewPager>
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
         <ImageView
                 android:layout_width="100dp"

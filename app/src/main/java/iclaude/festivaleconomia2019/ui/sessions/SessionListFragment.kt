@@ -65,9 +65,6 @@ class SessionListFragment : Fragment() {
         }
 
         viewModel.daySelected.value = daySelected
-        viewModel.sessionsInfoFilteredLive.observe(this, Observer {
-            initializeList(it)
-        })
     }
 
     override fun onCreateView(
@@ -80,6 +77,10 @@ class SessionListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel.sessionsInfoFilteredLive.observe(this, Observer {
+            initializeList(it)
+        })
 
         with(rvSessions) {
             adapter = rvAdapter
