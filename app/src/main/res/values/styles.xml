@@ -82,4 +82,19 @@
         <item name="android:drawableStart">@drawable/tag_dot</item>
     </style>
 
+    <style name="SessionListTimeHeaders">
+        <item name="android:width">@dimen/session_keyline</item>
+        <item name="android:paddingTop">@dimen/time_header_padding_top</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="hourTextSize">@dimen/time_header_hour_text_size</item>
+        <item name="hourMinTextSize">@dimen/time_header_hour_min_text_size</item>
+        <item name="meridiemTextSize">@dimen/time_header_meridiem_text_size</item>
+    </style>
+
+    <dimen name="session_keyline">64dp</dimen>
+    <dimen name="time_header_padding_top">4dp</dimen>
+    <dimen name="time_header_hour_text_size">24sp</dimen>
+    <dimen name="time_header_hour_min_text_size">20sp</dimen>
+    <dimen name="time_header_meridiem_text_size">12sp</dimen>
 </resources>
