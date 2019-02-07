@@ -55,7 +55,7 @@ class MapViewModel : ViewModel() {
     }
 
     @Inject
-    lateinit var mRepository: EventDataRepository
+    lateinit var repository: EventDataRepository
 
     private var curMarker: Marker? = null
     private var selectedMarkerId: String = "xx"

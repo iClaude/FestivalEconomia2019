@@ -9,28 +9,26 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.viewpager.widget.ViewPager
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionsContainerBinding
 import kotlinx.android.synthetic.main.fragment_sessions_appbar.*
+import kotlinx.android.synthetic.main.fragment_sessions_container.*
 
 
 class ContainerSessionsFragment : Fragment() {
     private val TAG = "VIEW_MODEL"
 
-    private lateinit var mViewModel: SessionsContainerViewModel
+    private lateinit var viewModel: SessionsContainerViewModel
     private lateinit var binding: FragmentSessionsContainerBinding
-    private lateinit var viewPager: ViewPager
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mViewModel = ViewModelProviders.of(this).get(SessionsContainerViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(SessionsContainerViewModel::class.java)
         binding = FragmentSessionsContainerBinding.inflate(inflater, container, false).apply {
-            viewModel = this@ContainerSessionsFragment.mViewModel
+            viewModel = this@ContainerSessionsFragment.viewModel
         }
-        viewPager = binding.viewPager
 
         return binding.root
 
@@ -42,8 +40,8 @@ class ContainerSessionsFragment : Fragment() {
         tabs.setupWithViewPager(viewPager)
 
         // load data from repository
-        mViewModel.mRepository.eventDataLive.observe(this, Observer {
-            mViewModel.dataLoadedObs.set(true)
+        viewModel.repository.eventDataLive.observe(this, Observer {
+            viewModel.dataLoadedObs.set(true)
             viewPager.adapter =
                 SessionsAdapter(
                     childFragmentManager,

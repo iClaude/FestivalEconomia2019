@@ -21,8 +21,8 @@ import iclaude.festivaleconomia2019.databinding.FragmentMapBinding
 
 class MapFragment : Fragment(), OnMapReadyCallback {
 
-    private lateinit var mViewModel: MapViewModel
-    private lateinit var mMapView: MapView
+    private lateinit var viewModel: MapViewModel
+    private lateinit var mapView: MapView
     private lateinit var binding: FragmentMapBinding
     private lateinit var ivExpandIcon: ImageView
 
@@ -31,22 +31,20 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //val root = inflater.inflate(R.layout.fragment_map, container, false)
-
-        mViewModel = ViewModelProviders.of(this).get(MapViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(MapViewModel::class.java)
         binding = FragmentMapBinding.inflate(inflater, container, false).apply {
             setLifecycleOwner(this@MapFragment)
-            viewModel = this@MapFragment.mViewModel
+            viewModel = this@MapFragment.viewModel
         }
 
         // initialize MapView
-        mMapView = binding.mainContent.mapView.apply {
+        mapView = binding.mainContent.mapView.apply {
             onCreate(savedInstanceState)
             getMapAsync(this@MapFragment)
         }
 
         // show directions to a location when the user wants to
-        mViewModel.directionsEvent.observe(this, Observer {
+        viewModel.directionsEvent.observe(this, Observer {
             val uri = Uri.parse("google.navigation:q=${it.lat},${it.lng}")
             val intent = Intent(Intent.ACTION_VIEW, uri).apply {
                 `package` = "com.google.android.apps.maps"
@@ -66,7 +64,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
 
                 override fun onStateChanged(p0: View, state: Int) {
                     if (state == STATE_COLLAPSED || state == STATE_EXPANDED) {
-                        mViewModel.updateBottomSheetState(state)
+                        viewModel.updateBottomSheetState(state)
                     }
                 }
             })
@@ -77,36 +75,36 @@ class MapFragment : Fragment(), OnMapReadyCallback {
 
     override fun onResume() {
         super.onResume()
-        mMapView.onResume()
+        mapView.onResume()
     }
 
     override fun onPause() {
         super.onPause()
-        mMapView.onPause()
+        mapView.onPause()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        mMapView.onDestroy()
+        mapView.onDestroy()
     }
 
     override fun onLowMemory() {
         super.onLowMemory()
-        mMapView.onLowMemory()
+        mapView.onLowMemory()
     }
 
     override fun onMapReady(gMap: GoogleMap?) {
-        mViewModel.mRepository.eventDataLive.observe(this, Observer {
-            mViewModel.loadMap(it.locations)
+        viewModel.repository.eventDataLive.observe(this, Observer {
+            viewModel.loadMap(it.locations)
         })
 
         gMap?.apply {
             setOnMarkerClickListener {
-                mViewModel.zoomToMarker(it)
+                viewModel.zoomToMarker(it)
                 it.showInfoWindow()
                 true
             }
-            setOnMapClickListener { mViewModel.onMapClick() }
+            setOnMapClickListener { viewModel.onMapClick() }
         }
 
     }

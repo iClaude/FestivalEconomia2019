@@ -12,7 +12,7 @@ class SessionsContainerViewModel : ViewModel() {
     }
 
     @Inject
-    lateinit var mRepository: EventDataRepository
+    lateinit var repository: EventDataRepository
 
     var dataLoadedObs: ObservableBoolean = ObservableBoolean(false)
 }

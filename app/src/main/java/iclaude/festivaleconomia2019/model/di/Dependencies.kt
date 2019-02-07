@@ -6,6 +6,7 @@ import dagger.Module
 import dagger.Provides
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
+import iclaude.festivaleconomia2019.ui.MainActivity
 import iclaude.festivaleconomia2019.ui.map.MapViewModel
 import iclaude.festivaleconomia2019.ui.sessions.SessionsContainerViewModel
 import iclaude.festivaleconomia2019.ui.sessions.SessionsViewModel
@@ -37,7 +38,8 @@ class RepoModule {
 @Component(modules = arrayOf(AppModule::class, RepoModule::class))
 @Singleton
 interface AppComponent {
-    fun inject(mapViewMode: MapViewModel)
+    fun inject(mainActivity: MainActivity)
+    fun inject(mapViewModel: MapViewModel)
     fun inject(sessionsContainerViewModel: SessionsContainerViewModel)
     fun inject(sessionsViewModel: SessionsViewModel)
 }

@@ -19,11 +19,11 @@ class SessionsViewModel : ViewModel() {
     init {
         App.component.inject(this)
         // load original static list only once; eventDataLive has already been obtained by container Fragment (no need to observe it)
-        origList = loadInfoList(mRepository.eventDataLive.value)
+        origList = loadInfoList(repository.eventDataLive.value)
     }
 
     @Inject
-    lateinit var mRepository: EventDataRepository
+    lateinit var repository: EventDataRepository
 
     var daySelected: MutableLiveData<ZonedDateTime> = MutableLiveData()
 

@@ -30,8 +30,8 @@ private const val ARG_ZONE_ID = "zoneId"
 
 
 class SessionsFragment : Fragment() {
-    private lateinit var mViewModel: SessionsViewModel
-    private val mRvAdapter = SessionListAdapter()
+    private val viewModel by lazy { ViewModelProviders.of(this).get(SessionsViewModel::class.java) }
+    private val rvAdapter = SessionListAdapter()
     private lateinit var daySelected: ZonedDateTime
 
     companion object {
@@ -64,10 +64,9 @@ class SessionsFragment : Fragment() {
             daySelected = ZonedDateTime.of(year, month, day, hour, minute, second, 0, ZoneId.of(zoneId))
         }
 
-        mViewModel = ViewModelProviders.of(this).get(SessionsViewModel::class.java)
-        mViewModel.daySelected.value = daySelected
-        mViewModel.sessionsInfoFilteredLive.observe(this, Observer {
-            mRvAdapter.submitList(it)
+        viewModel.daySelected.value = daySelected
+        viewModel.sessionsInfoFilteredLive.observe(this, Observer {
+            rvAdapter.submitList(it)
         })
     }
 
@@ -83,7 +82,7 @@ class SessionsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         with(rvSessions) {
-            adapter = mRvAdapter
+            adapter = rvAdapter
             setHasFixedSize(true)
         }
     }

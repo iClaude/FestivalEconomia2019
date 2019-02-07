@@ -4,23 +4,28 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.JSONparser.JSONparser
-import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import java.io.InputStream
 
 
 class EventDataRepository(private val inputStream: InputStream) {
+    private val job = Job()
+    private val ioScope = CoroutineScope(Dispatchers.IO + job)
 
-    private var mEventDataMutableLive: MutableLiveData<EventData> = MutableLiveData()
+    private val _eventDataLive: MutableLiveData<EventData> = MutableLiveData()
     val eventDataLive: LiveData<EventData>
-        get() = mEventDataMutableLive
+        get() = _eventDataLive
 
-
-    init {
-        GlobalScope.launch {
-            mEventDataMutableLive.postValue(JSONparser.parseEventData(inputStream))
+    fun loadEventData() {
+        ioScope.launch {
+            _eventDataLive.postValue(JSONparser.parseEventData(inputStream))
         }
     }
 
-
+    fun canceLoadingData() {
+        job.cancel()
+    }
 }
