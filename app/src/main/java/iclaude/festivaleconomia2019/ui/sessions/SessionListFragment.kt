@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.doOnNextLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -65,7 +66,7 @@ class SessionListFragment : Fragment() {
 
         viewModel.daySelected.value = daySelected
         viewModel.sessionsInfoFilteredLive.observe(this, Observer {
-            rvAdapter.submitList(it)
+            initializeList(it)
         })
     }
 
@@ -84,6 +85,26 @@ class SessionListFragment : Fragment() {
             adapter = rvAdapter
             setHasFixedSize(true)
         }
+    }
+
+    private fun initializeList(sessions: List<SessionsDisplayInfo>) {
+        rvAdapter.submitList(sessions)
+
+        val zoneId = getZoneId(context)
+        rvSessions.run {
+            doOnNextLayout {
+                // Recreate the decoration used for the sticky time headers
+                clearDecorations()
+                if (sessions.isNotEmpty()) {
+                    addItemDecoration(
+                        ScheduleTimeHeadersDecoration(
+                            it.context, sessions, zoneId
+                        )
+                    )
+                }
+            }
+        }
+
     }
 
     // Main RecyclerView classes.
