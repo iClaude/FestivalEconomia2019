@@ -29,7 +29,7 @@ class FilterChipAdapter : RecyclerView.Adapter<TagChipViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TagChipViewHolder {
         return TagChipViewHolder(
-            ItemFilterChipBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemSessionFilterChipBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         )
     }
 
@@ -38,7 +38,7 @@ class FilterChipAdapter : RecyclerView.Adapter<TagChipViewHolder>() {
     }
 }
 
-class TagChipViewHolder(private val binding: ItemFilterChipBinding) : ViewHolder(binding.root) {
+class TagChipViewHolder(private val binding: ItemSessionFilterChipBinding) : ViewHolder(binding.root) {
     fun bind(item: EventFilter) {
         binding.executeAfter {
             eventFilter = item
