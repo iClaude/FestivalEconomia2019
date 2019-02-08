@@ -42,6 +42,18 @@
                 android:indeterminateTint="@color/light_grey"
                 android:visibility="@{viewModel.dataLoadedObs? View.GONE : View.VISIBLE}"/>
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/filter_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/margin_normal"
+                android:contentDescription="@string/filters"
+                app:fabSize="auto"
+                app:hoveredFocusedTranslationZ="0dp"
+                app:pressedTranslationZ="0dp"
+                app:srcCompat="@drawable/ic_filter"/>
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </layout>
