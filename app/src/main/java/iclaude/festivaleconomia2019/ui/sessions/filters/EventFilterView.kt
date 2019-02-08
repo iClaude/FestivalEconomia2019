@@ -43,6 +43,9 @@ import androidx.core.content.res.getDrawableOrThrow
 import androidx.core.graphics.ColorUtils
 import androidx.core.graphics.withScale
 import androidx.core.graphics.withTranslation
+import iclaude.festivaleconomia2019.R
+import iclaude.festivaleconomia2019.utils.lerp
+import iclaude.festivaleconomia2019.utils.textWidth
 
 /**
  * A custom view for displaying filters. Allows a custom presentation of the tag color and selection
@@ -118,7 +121,7 @@ class EventFilterView @JvmOverloads constructor(
             attrs,
             R.styleable.EventFilterView,
             R.attr.eventFilterViewStyle,
-            R.style.Widget_ADSSched_EventFilters
+            R.style.EventFilters
         )
         outlinePaint = Paint(ANTI_ALIAS_FLAG).apply {
             color = a.getColorOrThrow(R.styleable.EventFilterView_android_strokeColor)
