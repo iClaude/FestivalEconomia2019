@@ -50,7 +50,7 @@ class SessionListViewModel : ViewModel() {
                 session.startTimestamp,
                 session.endTimestamp,
                 eventData.locations[session.location.toInt()].name,
-                session.tags2.map {
+                session.tags.map {
                     eventData.tags[it.toInt()]
                 }
             )

@@ -40,7 +40,7 @@ class JSONParserTest {
         assertThat(eventData.sessions[0].location, Is(equalTo("00")))
         assertThat(eventData.sessions[0].relatedSessions?.size, Is(equalTo(0)))
         assertThat(eventData.sessions[0].hasRelatedSessions(), Is(equalTo(false)))
-        assertThat(eventData.sessions[0].tags1, hasItem("01"))
+        assertThat(eventData.sessions[0].tags, hasItem("01"))
         assertThat(eventData.sessions[1].youtubeUrl, nullValue())
         assertThat(eventData.sessions[1].hasYoutubeUrl(), Is(equalTo(false)))
         assertThat(eventData.sessions[1].organizers[0], Is(equalTo("01")))
@@ -56,5 +56,7 @@ class JSONParserTest {
         assertThat(eventData.tags[0].name, Is(equalTo("Keynote")))
         assertThat(eventData.tags[1].color, IsEqualIgnoringCase("#cce9c2"))
         assertThat(eventData.tags[3].fontColor, IsEqualIgnoringCase("#202124"))
+        assertThat(eventData.tags[3].category, Is(equalTo("topic")))
+
     }
 }

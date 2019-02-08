@@ -18,6 +18,10 @@
     <string name="a11y_clear_tag_filters">Clear filters</string>
     <string name="reset">Reset</string>
     <string name="a11y_collapse_filters_sheet">Lower filters sheet</string>
+    <string name="category_heading_tracks">Topics</string>
+    <string name="category_heading_types">Types</string>
+    <string name="starred_events">Your starred events</string>
+    <string name="starred_events_short">Starred</string>
     <plurals name="time_hours">
         <item quantity="one">%d hour</item>
         <item quantity="other">%d hours</item>

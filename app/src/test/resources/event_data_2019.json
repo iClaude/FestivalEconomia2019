@@ -179,7 +179,7 @@
   ],
   "sessions": [
     {
-      "description": "[TESTO ITALIANO] The keynote kicks off on November 7 at 10AM PST, where you'll hear directly from Dave Burke and others on the present and future of Android development.",
+      "description": "The keynote kicks off on November 7 at 10AM PST, where you'll hear directly from Dave Burke and others on the present and future of Android development.",
       "endTimestamp": 1549357200000,
       "id": "00",
       "relatedSessions": [],
@@ -189,12 +189,9 @@
         "01"
       ],
       "startTimestamp": 1549353600000,
-      "tags1": [
+      "tags": [
         "00",
         "01"
-      ],
-      "tags2": [
-        "02"
       ],
       "title": "Keynote",
       "photoUrl": "https://tuttosesto.net/wp-content/uploads/2018/06/wwwonline.jpg",
@@ -211,10 +208,8 @@
         "01"
       ],
       "startTimestamp": 1549445400000,
-      "tags1": [
-        "01"
-      ],
-      "tags2": [
+      "tags": [
+        "01",
         "03"
       ],
       "title": "Testing Rebooted (with AndroidX Test)",
@@ -251,25 +246,29 @@
       "id": "00",
       "color": "#3D82EE",
       "fontColor": "#FFFFFF",
-      "name": "Keynote"
+      "name": "Keynote",
+      "category": "type"
     },
     {
       "id": "01",
       "color": "#cce9c2",
       "fontColor": "#202124",
-      "name": "Session"
+      "name": "Session",
+      "category": "topic"
     },
     {
       "id": "02",
       "color": "#FDC93E",
       "fontColor": "#202124",
-      "name": "Others"
+      "name": "Others",
+      "category": "topic"
     },
     {
       "id": "03",
       "color": "#FFEAB3",
       "fontColor": "#202124",
-      "name": "Android"
+      "name": "Android",
+      "category": "topic"
     }
   ]
 }

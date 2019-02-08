@@ -12,8 +12,7 @@ data class Session(
     val endTimestamp: Long,
     val location: String,
     val description: String,
-    val tags1: List<String>, // type of session: session, codelab, officehour, meetup, etc.
-    val tags2: List<String>, // topic of the session: Android, Economics, Cloud, Web, etc.
+    val tags: List<String>, // topic of the session: Android, Economics, Cloud, Web, etc.
     val organizers: List<String>,
     // optional data
     val relatedSessions: List<String>?,

@@ -18,4 +18,8 @@
     <string name="a11y_clear_tag_filters">Cancella filtri</string>
     <string name="reset">Reimposta</string>
     <string name="a11y_collapse_filters_sheet">Nascondi scheda filtri</string>
+    <string name="category_heading_tracks">Argomenti</string>
+    <string name="category_heading_types">Categorie</string>
+    <string name="starred_events">I tuoi eventi preferiti</string>
+    <string name="starred_events_short">Preferiti</string>
 </resources>

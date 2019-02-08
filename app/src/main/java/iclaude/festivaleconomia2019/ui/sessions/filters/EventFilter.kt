@@ -19,6 +19,12 @@ package iclaude.festivaleconomia2019.ui.sessions.filters
 import android.graphics.Color
 import androidx.annotation.StringRes
 import androidx.databinding.ObservableBoolean
+import iclaude.festivaleconomia2019.R
+import iclaude.festivaleconomia2019.model.data_classes.Tag
+import iclaude.festivaleconomia2019.model.data_classes.colorInt
+import iclaude.festivaleconomia2019.model.data_classes.fontColorInt
+import iclaude.festivaleconomia2019.model.data_classes.isUiContentEqual
+import iclaude.festivaleconomia2019.utils.hasSameValue
 
 sealed class EventFilter(isChecked: Boolean) {
 
@@ -54,7 +60,7 @@ sealed class EventFilter(isChecked: Boolean) {
     /** Filter for user's starred and reserved events. */
     class MyEventsFilter(isChecked: Boolean) : EventFilter(isChecked) {
 
-        override fun getFilterCategory(): EventFilterCategory = NONE
+        override fun getFilterCategory(): EventFilterCategory = EventFilterCategory.NONE
 
         override fun getColor(): Int = Color.parseColor("#4688f1") // @color/google_blue
 
@@ -78,9 +84,9 @@ sealed class EventFilter(isChecked: Boolean) {
             }
         }
 
-        override fun getColor(): Int = tag.color
+        override fun getColor(): Int = tag.colorInt
 
-        override fun getSelectedTextColor(): Int = tag.fontColor ?: super.getSelectedTextColor()
+        override fun getSelectedTextColor(): Int = tag.fontColorInt ?: super.getSelectedTextColor()
 
         override fun getTextResId(): Int = 0
         override fun getShortTextResId(): Int = 0
