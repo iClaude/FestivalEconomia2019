@@ -58,30 +58,14 @@
                         android:paddingEnd="@dimen/margin_normal" android:paddingTop="@dimen/margin_normal"
                         android:paddingBottom="@dimen/margin_small"/>
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                              android:orientation="horizontal">
-
-                    <ImageButton
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:id="@+id/ivMap"
-                            android:src="@drawable/img_gmap"
-                            android:layout_marginStart="16dp"
-                            android:background="?attr/selectableItemBackgroundBorderless"
-                            app:markerTag="@{viewModel.markerInfoEvent}"
-                            android:onClick="@{viewModel::showRoute}" android:scaleType="fitCenter"/>
-
-                    <TextView
-                            android:text="@string/map_show_route"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/textView"
-                            android:layout_marginStart="@dimen/margin_small"
-                            android:background="?attr/selectableItemBackground"
-                            android:clickable="true"
-                            android:onClick="@{viewModel::showRoute}"/>
-
-                </LinearLayout>
+                <com.google.android.material.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        app:chipIcon="@drawable/ic_directions_black_24dp"
+                        android:text="@string/map_show_route"
+                        android:onClick="@{viewModel::showRoute}"/>
 
             </LinearLayout>
 
