@@ -21,11 +21,16 @@ class SessionContainerFragment : Fragment() {
     private lateinit var viewModel: SessionContainerViewModel
     private lateinit var binding: FragmentSessionContainerBinding
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel = ViewModelProviders.of(this).get(SessionContainerViewModel::class.java)
+
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewModel = ViewModelProviders.of(this).get(SessionContainerViewModel::class.java)
         binding = FragmentSessionContainerBinding.inflate(inflater, container, false).apply {
             viewModel = this@SessionContainerFragment.viewModel
         }

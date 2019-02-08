@@ -26,12 +26,15 @@ class MapFragment : Fragment(), OnMapReadyCallback {
     private lateinit var binding: FragmentMapBinding
     private lateinit var ivExpandIcon: ImageView
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel = ViewModelProviders.of(this).get(MapViewModel::class.java)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewModel = ViewModelProviders.of(this).get(MapViewModel::class.java)
         binding = FragmentMapBinding.inflate(inflater, container, false).apply {
             setLifecycleOwner(this@MapFragment)
             viewModel = this@MapFragment.viewModel

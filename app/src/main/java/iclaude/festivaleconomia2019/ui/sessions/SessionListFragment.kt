@@ -30,7 +30,7 @@ private const val ARG_ZONE_ID = "zoneId"
 
 
 class SessionListFragment : Fragment() {
-    private val viewModel by lazy { ViewModelProviders.of(this).get(SessionListViewModel::class.java) }
+    private lateinit var viewModel: SessionListViewModel
     private val rvAdapter = SessionListAdapter()
     private lateinit var daySelected: ZonedDateTime
 
@@ -64,6 +64,7 @@ class SessionListFragment : Fragment() {
             daySelected = ZonedDateTime.of(year, month, day, hour, minute, second, 0, ZoneId.of(zoneId))
         }
 
+        viewModel = ViewModelProviders.of(this).get(SessionListViewModel::class.java)
         viewModel.daySelected.value = daySelected
     }
 
