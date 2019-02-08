@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="eventFilter"
+                type="iclaude.festivaleconomia2019.ui.sessions.filters.EventFilter"/>
+
+        <variable
+                name="viewModel"
+                type="iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel"/>
+    </data>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="?android:listPreferredItemHeightSmall">
+
+        <iclaude.festivaleconomia2019.ui.sessions.filters.EventFilterView
+                android:id="@+id/filter_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_micro"
+                android:layout_marginTop="@dimen/spacing_micro"
+                android:checked="@{eventFilter.isChecked}"
+                app:color="@{eventFilter.getColor()}"
+                app:eventFilter="@{eventFilter}"
+                app:eventFilterText="@{eventFilter}"
+                app:selectedTextColor="@{eventFilter.getSelectedTextColor()}"
+                app:viewModel="@{viewModel}"/>
+
+    </FrameLayout>
+
+</layout>
