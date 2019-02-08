@@ -5,6 +5,7 @@
     <string name="title_info">Info</string>
     <string name="title_map">Mappa</string>
     <string name="map_show_route">indicazioni stradali…</string>
+    <string name="filters">Filtri</string>
 
     <plurals name="time_hours">
         <item quantity="one">%d ora</item>
@@ -14,4 +15,7 @@
         <item quantity="one">%d minuto</item>
         <item quantity="other">%d minuti</item>
     </plurals>
+    <string name="a11y_clear_tag_filters">Cancella filtri</string>
+    <string name="reset">Reimposta</string>
+    <string name="a11y_collapse_filters_sheet">Nascondi scheda filtri</string>
 </resources>

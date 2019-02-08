@@ -14,6 +14,10 @@
 
     <string name="shared_preferences_file" translatable="false">preferences</string>
     <string name="pref_showlocal" translatable="false">show_local</string>
+    <string name="filters">Filters</string>
+    <string name="a11y_clear_tag_filters">Clear filters</string>
+    <string name="reset">Reset</string>
+    <string name="a11y_collapse_filters_sheet">Lower filters sheet</string>
     <plurals name="time_hours">
         <item quantity="one">%d hour</item>
         <item quantity="other">%d hours</item>

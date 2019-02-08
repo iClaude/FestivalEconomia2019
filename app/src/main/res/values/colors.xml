@@ -21,5 +21,6 @@
     <color name="whiteWithAlpha">#b3f2f2f2</color>
     <color name="light_grey">#e6e6e6</color>
     <color name="default_tag_color">#999</color>
+    <color name="dark_gray">#ff808080</color>
 
 </resources>

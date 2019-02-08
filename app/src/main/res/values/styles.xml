@@ -92,9 +92,17 @@
         <item name="meridiemTextSize">@dimen/time_header_meridiem_text_size</item>
     </style>
 
-    <dimen name="session_keyline">64dp</dimen>
-    <dimen name="time_header_padding_top">4dp</dimen>
-    <dimen name="time_header_hour_text_size">24sp</dimen>
-    <dimen name="time_header_hour_min_text_size">20sp</dimen>
-    <dimen name="time_header_meridiem_text_size">12sp</dimen>
+    <style name="BorderlessButton" parent="@style/Widget.MaterialComponents.Button.TextButton">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:paddingTop">@dimen/padding_borderless_button</item>
+        <item name="android:paddingBottom">@dimen/padding_borderless_button</item>
+    </style>
+
+    <dimen name="padding_borderless_button">16dp</dimen>
 </resources>

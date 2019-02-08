@@ -12,6 +12,12 @@
     <dimen name="schedule_page_padding_bottom">56dp</dimen>
     <dimen name="spacing_normal">8dp</dimen>
     <dimen name="tag_dot_size">12dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
     <item name="map_camera_target_lat" type="dimen" format="float">46.067354</item>
     <item name="map_camera_target_lng" type="dimen" format="float">11.121454</item>
+    <dimen name="session_keyline">64dp</dimen>
+    <dimen name="time_header_padding_top">4dp</dimen>
+    <dimen name="time_header_hour_text_size">24sp</dimen>
+    <dimen name="time_header_hour_min_text_size">20sp</dimen>
+    <dimen name="time_header_meridiem_text_size">12sp</dimen>
 </resources>
