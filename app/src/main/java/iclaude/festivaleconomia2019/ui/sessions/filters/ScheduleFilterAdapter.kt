@@ -24,16 +24,21 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager.SpanSizeLookup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import iclaude.festivaleconomia2019.R
+import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
+import iclaude.festivaleconomia2019.ui.sessions.filters.EventFilter.EventFilterCategory
+import iclaude.festivaleconomia2019.ui.sessions.filters.EventFilter.TagFilter
+import iclaude.festivaleconomia2019.utils.exceptionInDebug
 
 /**
  * Adapter for the filters drawer
  */
-class ScheduleFilterAdapter(val viewModel: ScheduleViewModel) :
+class ScheduleFilterAdapter(val viewModel: SessionListViewModel) :
     ListAdapter<Any, ViewHolder>(EventFilterDiff) {
 
     companion object {
-        private const val VIEW_TYPE_HEADING = R.layout.item_filter_heading
-        private const val VIEW_TYPE_FILTER = R.layout.item_event_filter
+        private const val VIEW_TYPE_HEADING = R.layout.item_session_filter_heading
+        private const val VIEW_TYPE_FILTER = R.layout.item_session_event_filter
 
         /**
          * Inserts category headings in a list of [EventFilter]s to make a heterogeneous list.
@@ -42,10 +47,10 @@ class ScheduleFilterAdapter(val viewModel: ScheduleViewModel) :
          */
         private fun insertCategoryHeadings(list: List<EventFilter>?): List<Any> {
             val newList = mutableListOf<Any>()
-            var previousCategory: EventFilterCategory = NONE
+            var previousCategory: EventFilterCategory = EventFilterCategory.NONE
             list?.forEach {
                 val category = it.getFilterCategory()
-                if (category != previousCategory && category != NONE) {
+                if (category != previousCategory && category != EventFilterCategory.NONE) {
                     newList.add(category)
                 }
                 newList.add(it)
@@ -92,7 +97,7 @@ class ScheduleFilterAdapter(val viewModel: ScheduleViewModel) :
     }
 
     private fun createFilterViewHolder(parent: ViewGroup): FilterViewHolder {
-        val binding = ItemEventFilterBinding.inflate(
+        val binding = ItemSessionEventFilterBinding.inflate(
             LayoutInflater.from(parent.context),
             parent, false
         ).apply {
@@ -118,7 +123,7 @@ class ScheduleFilterAdapter(val viewModel: ScheduleViewModel) :
     }
 
     /** ViewHolder for [TagFilter] items. */
-    class FilterViewHolder(private val binding: ItemEventFilterBinding) :
+    class FilterViewHolder(private val binding: ItemSessionEventFilterBinding) :
         ViewHolder(binding.root) {
 
         internal fun bind(item: EventFilter) {

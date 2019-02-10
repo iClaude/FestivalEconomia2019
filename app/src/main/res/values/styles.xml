@@ -115,5 +115,15 @@
         <item name="showIcons">true</item>
     </style>
 
+    <style name="Body" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="Subhead" parent="@style/Body">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
     <dimen name="padding_borderless_button">16dp</dimen>
 </resources>
