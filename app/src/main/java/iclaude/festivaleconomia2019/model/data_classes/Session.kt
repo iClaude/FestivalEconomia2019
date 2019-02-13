@@ -18,7 +18,8 @@ data class Session(
     val relatedSessions: List<String>?,
     val photoUrl: String?,
     val sessionUrl: String?,
-    val youtubeUrl: String?
+    val youtubeUrl: String?,
+    val starred: Boolean = false
 )
 
 fun Session.isLive(): Boolean {
