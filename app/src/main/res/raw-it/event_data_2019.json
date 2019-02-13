@@ -209,7 +209,7 @@
       ],
       "startTimestamp": 1541618100000,
       "tags": [
-        "01,"
+        "01",
         "05"
       ],
       "title": "Fun with LiveData",
@@ -418,7 +418,7 @@
         "01"
       ],
       "startTimestamp": 1541704200000,
-      "tags2": [
+      "tags": [
         "01",
         "04",
         "09"
