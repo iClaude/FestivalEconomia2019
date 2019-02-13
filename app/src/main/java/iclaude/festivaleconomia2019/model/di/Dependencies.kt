@@ -8,7 +8,6 @@ import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.MainActivity
 import iclaude.festivaleconomia2019.ui.map.MapViewModel
-import iclaude.festivaleconomia2019.ui.sessions.SessionContainerViewModel
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 import java.io.InputStream
 import javax.inject.Singleton
@@ -40,6 +39,5 @@ class RepoModule {
 interface AppComponent {
     fun inject(mainActivity: MainActivity)
     fun inject(mapViewModel: MapViewModel)
-    fun inject(sessionsContainerViewModel: SessionContainerViewModel)
     fun inject(sessionsViewModel: SessionListViewModel)
 }

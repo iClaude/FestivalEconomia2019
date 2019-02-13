@@ -50,7 +50,7 @@ fun daysLabels(context: Context?, sessions: List<Session>): MutableList<DayLabel
     return labels
 }
 
-class DayLabel(val date: ZonedDateTime?, val label: String)
+class DayLabel(val date: ZonedDateTime = ZonedDateTime.now(), val label: String)
 
 fun sessionLength(context: Context, startTimestamp: Long, endTimestamp: Long): String {
     val startDate = zonedDateTimeFromTimestamp(context, startTimestamp)
@@ -74,3 +74,6 @@ fun startOfDay(day: ZonedDateTime): ZonedDateTime =
 
 fun endOfDay(day: ZonedDateTime): ZonedDateTime =
     ZonedDateTime.of(day.year, day.monthValue, day.dayOfMonth, 23, 59, 59, 0, day.zone)
+
+fun timestampToZonedDateTime(timestamp: Long, context: Context?): ZonedDateTime =
+    ZonedDateTime.ofInstant(Instant.ofEpochMilli(timestamp), getZoneId(context))

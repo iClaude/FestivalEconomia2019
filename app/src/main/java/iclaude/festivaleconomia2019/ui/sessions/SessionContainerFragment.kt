@@ -9,22 +9,25 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
 import kotlinx.android.synthetic.main.fragment_session_container.*
 import kotlinx.android.synthetic.main.fragment_session_container_appbar.*
+import kotlinx.android.synthetic.main.fragment_session_list_filtersheet.*
 
 
 class SessionContainerFragment : Fragment() {
-    private val TAG = "VIEW_MODEL"
 
-    private lateinit var viewModel: SessionContainerViewModel
+    private lateinit var viewModel: SessionListViewModel
     private lateinit var binding: FragmentSessionContainerBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(SessionContainerViewModel::class.java)
-
+        viewModel = activity?.run {
+            ViewModelProviders.of(this).get(SessionListViewModel::class.java)
+        } ?: throw Exception("Invalid Activity")
     }
 
     override fun onCreateView(
@@ -42,51 +45,51 @@ class SessionContainerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        tabs.setupWithViewPager(viewPager)
-
         // load data from repository
-        viewModel.repository.eventDataLive.observe(this, Observer {
-            viewModel.dataLoadedObs.set(true)
+        viewModel.repository.eventDataLive.observe(this, Observer { eventData ->
+            with(viewModel) {
+                dataLoadedObs.set(true)
+                loadInfoList(eventData)
+            }
+
             viewPager.adapter =
                 SessionsAdapter(
                     childFragmentManager,
-                    numberOfDays(context, it.sessions),
-                    daysLabels(context, it.sessions)
+                    numberOfDays(context, eventData.sessions),
+                    daysLabels(context, eventData.sessions).also {
+                        it.add(DayLabel(label = getString(R.string.sessions_agenda)))
+                    }
                 )
         })
+
+        tabs.setupWithViewPager(viewPager)
+
+        fabFilter.setOnClickListener {
+            val bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet).apply {
+                state = BottomSheetBehavior.STATE_EXPANDED
+            }
+        }
     }
 
     inner class SessionsAdapter(
         fm: FragmentManager,
-        private var numOfDays: Int,
-        private var dayLabels: MutableList<DayLabel>
+        private var numDays: Int,
+        private var tabsInfo: MutableList<DayLabel>
     ) : FragmentPagerAdapter(fm) {
-        init {
-            dayLabels.add(DayLabel(null, getString(R.string.sessions_agenda)))
-        }
 
-        override fun getCount() = numOfDays + 1
+        override fun getCount() = numDays + 1
 
         override fun getItem(position: Int): Fragment {
             return when (position) {
-                in 0 until numOfDays -> {
-                    val day = dayLabels[position].date
-                    SessionListFragment.newInstance(
-                        day!!.year,
-                        day.monthValue,
-                        day.dayOfMonth,
-                        day.hour,
-                        day.minute,
-                        day.second,
-                        day.zone.toString()
-                    )
+                in 0 until numDays -> {
+                    SessionListFragment.newInstance(position)
                 }
                 else -> AgendaFragment()
             }
         }
 
         override fun getPageTitle(position: Int): CharSequence {
-            return dayLabels[position].label
+            return tabsInfo[position].label
         }
     }
 }

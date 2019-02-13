@@ -11,42 +11,26 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import iclaude.festivaleconomia2019.R
+import iclaude.festivaleconomia2019.databinding.FragmentSessionListBinding
 import iclaude.festivaleconomia2019.databinding.ItemSessionBinding
 import iclaude.festivaleconomia2019.databinding.ItemSessionTagBinding
 import iclaude.festivaleconomia2019.model.data_classes.Tag
-import iclaude.festivaleconomia2019.ui.sessions.filters.Filter
 import kotlinx.android.synthetic.main.fragment_session_list.*
-import org.threeten.bp.ZoneId
-import org.threeten.bp.ZonedDateTime
-
-
-private const val ARG_YEAR = "year"
-private const val ARG_MONTH = "month"
-private const val ARG_DAY = "day"
-private const val ARG_HOUR = "hour"
-private const val ARG_MINUTE = "minute"
-private const val ARG_SECOND = "second"
-private const val ARG_ZONE_ID = "zoneId"
-
 
 class SessionListFragment : Fragment() {
     private lateinit var viewModel: SessionListViewModel
+    private lateinit var binding: FragmentSessionListBinding
     private val rvAdapter = SessionListAdapter()
-    private lateinit var daySelected: ZonedDateTime
+    private var day: Int = 0
 
     companion object {
+        private const val ARG_DAY = "day"
+
         @JvmStatic
-        fun newInstance(year: Int, month: Int, day: Int, hour: Int, minute: Int, second: Int, zoneId: String) =
+        fun newInstance(time: Int) =
             SessionListFragment().apply {
                 arguments = Bundle().apply {
-                    putInt(ARG_YEAR, year)
-                    putInt(ARG_MONTH, month)
-                    putInt(ARG_DAY, day)
-                    putInt(ARG_HOUR, hour)
-                    putInt(ARG_MINUTE, minute)
-                    putInt(ARG_SECOND, second)
-                    putString(ARG_ZONE_ID, zoneId)
+                    putInt(ARG_DAY, time)
                 }
             }
     }
@@ -54,35 +38,31 @@ class SessionListFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        arguments?.let {
-            val year = it.getInt(ARG_YEAR)
-            val month = it.getInt(ARG_MONTH)
-            val day = it.getInt(ARG_DAY)
-            val hour = it.getInt(ARG_HOUR)
-            val minute = it.getInt(ARG_MINUTE)
-            val second = it.getInt(ARG_SECOND)
-            val zoneId = it.getString(ARG_ZONE_ID)
-            daySelected = ZonedDateTime.of(year, month, day, hour, minute, second, 0, ZoneId.of(zoneId))
-        }
+        day = arguments?.getInt(ARG_DAY) ?: 0
 
-        viewModel = ViewModelProviders.of(this).get(SessionListViewModel::class.java)
-        val filter = viewModel.filterSelected.value?.copy(day = daySelected) ?: Filter(day = daySelected)
-        viewModel.filterSelected.value = filter
+        viewModel = activity?.run {
+            ViewModelProviders.of(this).get(SessionListViewModel::class.java)
+        } ?: throw Exception("Invalid Activity")
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentSessionListBinding.inflate(inflater, container, false).apply {
+            viewModel = this@SessionListFragment.viewModel
+        }
 
-        return inflater.inflate(R.layout.fragment_session_list, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.sessionsInfoFilteredLive.observe(this, Observer {
-            initializeList(it)
+        viewModel.sessionsInfoFilteredLive.observe(this, Observer { list ->
+            initializeList(list.filter {
+                it.day == day
+            })
         })
 
         with(rvSessions) {
