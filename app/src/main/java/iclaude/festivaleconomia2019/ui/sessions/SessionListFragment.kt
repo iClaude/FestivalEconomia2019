@@ -15,6 +15,7 @@ import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.ItemSessionBinding
 import iclaude.festivaleconomia2019.databinding.ItemSessionTagBinding
 import iclaude.festivaleconomia2019.model.data_classes.Tag
+import iclaude.festivaleconomia2019.ui.sessions.filters.Filter
 import kotlinx.android.synthetic.main.fragment_session_list.*
 import org.threeten.bp.ZoneId
 import org.threeten.bp.ZonedDateTime
@@ -65,7 +66,8 @@ class SessionListFragment : Fragment() {
         }
 
         viewModel = ViewModelProviders.of(this).get(SessionListViewModel::class.java)
-        viewModel.daySelected.value = daySelected
+        val filter = viewModel.filterSelected.value?.copy(day = daySelected) ?: Filter(day = daySelected)
+        viewModel.filterSelected.value = filter
     }
 
     override fun onCreateView(

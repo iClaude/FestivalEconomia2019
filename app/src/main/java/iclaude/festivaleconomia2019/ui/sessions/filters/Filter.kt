@@ -1,15 +1,12 @@
 package iclaude.festivaleconomia2019.ui.sessions.filters
 
-class Filter() {
-    var tags: MutableList<String> = mutableListOf()
+import org.threeten.bp.ZonedDateTime
 
-    fun addTag(tag: String) {
-        tags.add(tag)
-    }
-
-    fun removeTag(tag: String) {
-        tags.remove(tag)
-    }
-
+data class Filter(
+    var day: ZonedDateTime? = null,
+    var tags: MutableList<String> = mutableListOf(),
     var starred: Boolean = false
-}
+)
+
+
+
