@@ -22,9 +22,8 @@
     <string name="category_heading_types">Categorie</string>
     <string name="starred_events">I tuoi eventi preferiti</string>
     <string name="starred_events_short">Preferiti</string>
-    <string name="a11y_filter_applied">%1s filtro applicato</string>
-    <string name="a11y_filter_not_applied">%1s filtro non applicato</string>
     <plurals name="filtered_sessions">
+        <item quantity="zero">%d sessioni</item>
         <item quantity="one">%d sessione</item>
         <item quantity="other">%d sessioni</item>
     </plurals>

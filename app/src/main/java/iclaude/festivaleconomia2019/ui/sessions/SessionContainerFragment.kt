@@ -9,12 +9,11 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.google.android.material.bottomsheet.BottomSheetBehavior
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
+import iclaude.festivaleconomia2019.ui.sessions.filters.FilterFragment
 import kotlinx.android.synthetic.main.fragment_session_container.*
 import kotlinx.android.synthetic.main.fragment_session_container_appbar.*
-import kotlinx.android.synthetic.main.fragment_session_list_filtersheet.*
 
 
 class SessionContainerFragment : Fragment() {
@@ -65,8 +64,8 @@ class SessionContainerFragment : Fragment() {
         tabs.setupWithViewPager(viewPager)
 
         fabFilter.setOnClickListener {
-            val bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet).apply {
-                state = BottomSheetBehavior.STATE_EXPANDED
+            fragmentManager?.run {
+                FilterFragment().show(this, "bottom sheet")
             }
         }
     }

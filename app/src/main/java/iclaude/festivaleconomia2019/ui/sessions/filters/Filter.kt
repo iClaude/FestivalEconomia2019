@@ -11,5 +11,7 @@ fun Filter.hasTags() = tags.isNotEmpty()
 
 fun Filter.isStarred() = starred
 
+fun Filter.isFilterSet() = hasTags() || isStarred()
+
 
 

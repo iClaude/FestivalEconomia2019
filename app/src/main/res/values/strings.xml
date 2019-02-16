@@ -32,6 +32,7 @@
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="filtered_sessions">
+        <item quantity="zero">%d sessions</item>
         <item quantity="one">%d session</item>
         <item quantity="other">%d sessions</item>
     </plurals>
