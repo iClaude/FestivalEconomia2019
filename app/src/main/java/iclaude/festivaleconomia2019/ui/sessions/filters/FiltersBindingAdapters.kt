@@ -30,10 +30,15 @@ fun showWithFilter(view: View, filter: Filter) {
 
 }
 
-@BindingAdapter("app:topicTags")
-fun addTopicTags(chipGroup: ChipGroup, tags: List<Tag>) {
+@BindingAdapter("app:tags")
+fun addTags(chipGroup: ChipGroup, tags: List<Tag>) {
+    val cat = when (chipGroup.id) {
+        R.id.cgTopics -> CATEGORY_TOPIC
+        else -> CATEGORY_TYPE
+    }
+
     for (tag in tags) {
-        if (tag.category == CATEGORY_TOPIC) {
+        if (tag.category == cat) {
             val context = chipGroup.context
             val chip = LayoutInflater.from(context).inflate(R.layout.item_filter_chip, chipGroup, false) as Chip
             chip.run {
@@ -46,18 +51,3 @@ fun addTopicTags(chipGroup: ChipGroup, tags: List<Tag>) {
     }
 }
 
-@BindingAdapter("app:typeTags")
-fun addTypeTags(chipGroup: ChipGroup, tags: List<Tag>) {
-    for (tag in tags) {
-        if (tag.category == CATEGORY_TYPE) {
-            val context = chipGroup.context
-            val chip = LayoutInflater.from(context).inflate(R.layout.item_filter_chip, chipGroup, false) as Chip
-            chip.run {
-                text = tag.name
-                isCloseIconVisible = true
-                setOnCloseIconClickListener { chipGroup.removeView(this) }
-                chipGroup.addView(this)
-            }
-        }
-    }
-}
