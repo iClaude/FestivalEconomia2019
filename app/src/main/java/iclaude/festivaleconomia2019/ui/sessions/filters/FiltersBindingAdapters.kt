@@ -9,6 +9,7 @@ import com.google.android.material.chip.ChipGroup
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.data_classes.Tag
 import iclaude.festivaleconomia2019.model.data_classes.Tag.Companion.CATEGORY_TOPIC
+import iclaude.festivaleconomia2019.model.data_classes.Tag.Companion.CATEGORY_TYPE
 
 @BindingAdapter("app:filterSet", "app:sessionsFiltered", requireAll = true)
 fun fitleFilter(textView: TextView, filter: Filter, sessions: Int) {
@@ -41,8 +42,22 @@ fun addTopicTags(chipGroup: ChipGroup, tags: List<Tag>) {
                 setOnCloseIconClickListener { chipGroup.removeView(this) }
                 chipGroup.addView(this)
             }
-
         }
     }
+}
 
+@BindingAdapter("app:typeTags")
+fun addTypeTags(chipGroup: ChipGroup, tags: List<Tag>) {
+    for (tag in tags) {
+        if (tag.category == CATEGORY_TYPE) {
+            val context = chipGroup.context
+            val chip = LayoutInflater.from(context).inflate(R.layout.item_filter_chip, chipGroup, false) as Chip
+            chip.run {
+                text = tag.name
+                isCloseIconVisible = true
+                setOnCloseIconClickListener { chipGroup.removeView(this) }
+                chipGroup.addView(this)
+            }
+        }
+    }
 }
