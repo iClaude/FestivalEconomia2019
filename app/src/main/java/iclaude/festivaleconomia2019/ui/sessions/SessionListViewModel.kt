@@ -75,6 +75,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
 
         filterByDays(sessionsInfo)
+        _tagsLive.value = repository.eventDataLive.value?.tags
     }
 
     private fun filterByDays(sessions: List<SessionsDisplayInfo>) {
@@ -90,6 +91,10 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
             }
         }
     }
+
+    private var _tagsLive: MutableLiveData<List<Tag>> = MutableLiveData()
+    val tagsLive: LiveData<List<Tag>>
+        get() = _tagsLive
 }
 
 class SessionsDisplayInfo(
