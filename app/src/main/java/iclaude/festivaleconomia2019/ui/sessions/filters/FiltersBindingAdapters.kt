@@ -10,6 +10,7 @@ import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.data_classes.Tag
 import iclaude.festivaleconomia2019.model.data_classes.Tag.Companion.CATEGORY_TOPIC
 import iclaude.festivaleconomia2019.model.data_classes.Tag.Companion.CATEGORY_TYPE
+import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 
 @BindingAdapter("app:filterSet", "app:sessionsFiltered", requireAll = true)
 fun fitleFilter(textView: TextView, filter: Filter, sessions: Int) {
@@ -30,8 +31,8 @@ fun showWithFilter(view: View, filter: Filter) {
 
 }
 
-@BindingAdapter("app:tags")
-fun addTags(chipGroup: ChipGroup, tags: List<Tag>) {
+@BindingAdapter("app:tags", "app:viewModel", requireAll = true)
+fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewModel) {
     val cat = when (chipGroup.id) {
         R.id.cgTopics -> CATEGORY_TOPIC
         else -> CATEGORY_TYPE
@@ -43,11 +44,33 @@ fun addTags(chipGroup: ChipGroup, tags: List<Tag>) {
             val chip = LayoutInflater.from(context).inflate(R.layout.item_filter_chip, chipGroup, false) as Chip
             chip.run {
                 text = tag.name
-                isCloseIconVisible = true
-                setOnCloseIconClickListener { chipGroup.removeView(this) }
+                setTag(tag)
+                isChecked = viewModel.filterSelected.value?.tags?.contains(tag) ?: false
+                isCloseIconVisible = isChecked
+
+                setOnCloseIconClickListener {
+                    isChecked = false
+                }
+
+                setOnCheckedChangeListener { buttonView, isChecked ->
+                    isCloseIconVisible = isChecked
+                    updateFilter(isChecked, viewModel, buttonView)
+                }
+
                 chipGroup.addView(this)
             }
         }
     }
 }
+
+fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, view: View) {
+    val filter = viewModel.filterSelected.value
+    val tag = view.tag as Tag
+    when (toAdd) {
+        true -> filter?.tags?.add(tag)
+        else -> filter?.tags?.remove(tag)
+    }
+    viewModel.filterSelected.value = filter
+}
+
 
