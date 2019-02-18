@@ -34,6 +34,7 @@ class FilterFragment() : BottomSheetDialogFragment() {
             filter?.starred = isChecked
             viewModel.filterSelected.value = filter
         }
+
         return binding.root
     }
 
@@ -52,8 +53,10 @@ class FilterFragment() : BottomSheetDialogFragment() {
                 chip.isChecked = false
             }
             chipStarred.isChecked = false
+        }
 
-
+        ibCollapse.setOnClickListener {
+            dismiss()
         }
     }
 }
