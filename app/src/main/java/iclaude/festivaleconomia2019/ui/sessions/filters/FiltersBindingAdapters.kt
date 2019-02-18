@@ -1,5 +1,6 @@
 package iclaude.festivaleconomia2019.ui.sessions.filters
 
+import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
@@ -10,7 +11,10 @@ import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.data_classes.Tag
 import iclaude.festivaleconomia2019.model.data_classes.Tag.Companion.CATEGORY_TOPIC
 import iclaude.festivaleconomia2019.model.data_classes.Tag.Companion.CATEGORY_TYPE
+import iclaude.festivaleconomia2019.model.data_classes.colorInt
+import iclaude.festivaleconomia2019.model.data_classes.fontColorInt
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
+
 
 @BindingAdapter("app:filterSet", "app:sessionsFiltered", requireAll = true)
 fun fitleFilter(textView: TextView, filter: Filter, sessions: Int) {
@@ -52,6 +56,11 @@ fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewMod
                 setTag(tag)
                 isChecked = viewModel.filterSelected.value?.tags?.contains(tag) ?: false
                 isCloseIconVisible = isChecked
+                val colorStateList = createChipColorStateList(tag.colorInt)
+                val fontColorStateList = createChipColorStateList(tag.fontColorInt)
+                chipBackgroundColor = colorStateList
+                setTextColor(fontColorStateList)
+                closeIconTint = fontColorStateList
 
                 setOnCloseIconClickListener {
                     isChecked = false
@@ -68,7 +77,7 @@ fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewMod
     }
 }
 
-fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, view: View) {
+private fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, view: View) {
     val filter = viewModel.filterSelected.value
     val tag = view.tag as Tag
     when (toAdd) {
@@ -76,6 +85,17 @@ fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, view: View) {
         else -> filter?.tags?.remove(tag)
     }
     viewModel.filterSelected.value = filter
+}
+
+fun createChipColorStateList(color: Int): ColorStateList {
+    val states = arrayOf(
+        intArrayOf(android.R.attr.state_checked), // checked
+        intArrayOf(-android.R.attr.state_checked) // unchecked
+    )
+
+    val colors = intArrayOf(color, color)
+
+    return ColorStateList(states, colors)
 }
 
 
