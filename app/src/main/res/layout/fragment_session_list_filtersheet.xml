@@ -51,7 +51,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/chipStarred" android:layout_marginTop="8dp"
                 app:layout_constraintTop_toBottomOf="@+id/bReset" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal" android:text="@string/starred_events"/>
+                android:layout_marginStart="@dimen/margin_normal" android:text="@string/starred_events"
+                app:filterStarred="@{viewModel.filterSelected}"/>
         <TextView
                 android:text="@string/tags_topics"
                 android:layout_width="wrap_content"

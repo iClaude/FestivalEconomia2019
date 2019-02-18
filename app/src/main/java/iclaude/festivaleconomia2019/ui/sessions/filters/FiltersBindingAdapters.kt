@@ -31,6 +31,11 @@ fun showWithFilter(view: View, filter: Filter, sessions: Int) {
 
 }
 
+@BindingAdapter("app:filterStarred")
+fun checkWithStarredFilter(chip: Chip, filter: Filter) {
+    chip.isChecked = filter.isStarred()
+}
+
 @BindingAdapter("app:tags", "app:viewModel", requireAll = true)
 fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewModel) {
     val cat = when (chipGroup.id) {

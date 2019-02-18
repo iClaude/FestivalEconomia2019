@@ -27,6 +27,13 @@ class FilterFragment() : BottomSheetDialogFragment() {
         binding = FragmentSessionListFiltersheetBinding.inflate(inflater, container, false).apply {
             viewModel = this@FilterFragment.viewModel
         }
+
+        val cStarred = binding.chipStarred
+        cStarred.setOnCheckedChangeListener { compoundButton, isChecked ->
+            val filter = viewModel.filterSelected.value
+            filter?.starred = isChecked
+            viewModel.filterSelected.value = filter
+        }
         return binding.root
     }
 
