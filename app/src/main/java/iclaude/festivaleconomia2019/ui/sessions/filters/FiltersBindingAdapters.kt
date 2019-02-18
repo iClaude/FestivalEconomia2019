@@ -61,6 +61,7 @@ fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewMod
                 chipBackgroundColor = colorStateList
                 setTextColor(fontColorStateList)
                 closeIconTint = fontColorStateList
+                checkedIcon?.setTint(tag.fontColorInt)
 
                 setOnCloseIconClickListener {
                     isChecked = false
