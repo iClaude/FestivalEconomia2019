@@ -4,10 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.forEach
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.chip.Chip
 import iclaude.festivaleconomia2019.databinding.FragmentSessionListFiltersheetBinding
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
+import kotlinx.android.synthetic.main.fragment_session_list_filtersheet.*
 
 class FilterFragment() : BottomSheetDialogFragment() {
     private lateinit var viewModel: SessionListViewModel
@@ -27,4 +30,23 @@ class FilterFragment() : BottomSheetDialogFragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        bReset.setOnClickListener {
+            viewModel.filterSelected.value = Filter()
+
+            cgTopics.forEach {
+                val chip = it as Chip
+                chip.isChecked = false
+            }
+            cgTypes.forEach {
+                val chip = it as Chip
+                chip.isChecked = false
+            }
+            chipStarred.isChecked = false
+
+
+        }
+    }
 }

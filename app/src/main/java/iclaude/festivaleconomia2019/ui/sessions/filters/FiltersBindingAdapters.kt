@@ -22,8 +22,8 @@ fun fitleFilter(textView: TextView, filter: Filter, sessions: Int) {
     textView.text = str
 }
 
-@BindingAdapter("app:showWithFilter")
-fun showWithFilter(view: View, filter: Filter) {
+@BindingAdapter("app:filterSet2", "app:sessionsFiltered2", requireAll = true)
+fun showWithFilter(view: View, filter: Filter, sessions: Int) {
     if (filter.isFilterSet())
         view.visibility = View.VISIBLE
     else
