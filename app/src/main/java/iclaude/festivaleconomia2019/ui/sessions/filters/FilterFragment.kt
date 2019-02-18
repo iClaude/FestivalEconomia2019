@@ -29,11 +29,19 @@ class FilterFragment() : BottomSheetDialogFragment() {
         }
 
         val cStarred = binding.chipStarred
-        cStarred.setOnCheckedChangeListener { compoundButton, isChecked ->
-            val filter = viewModel.filterSelected.value
-            filter?.starred = isChecked
-            viewModel.filterSelected.value = filter
+        cStarred.apply {
+            isCloseIconVisible = isChecked
+            setOnCheckedChangeListener { compoundButton, isChecked ->
+                val filter = viewModel.filterSelected.value
+                filter?.starred = isChecked
+                viewModel.filterSelected.value = filter
+                isCloseIconVisible = isChecked
+            }
+            setOnCloseIconClickListener {
+                isChecked = false
+            }
         }
+
 
         return binding.root
     }
