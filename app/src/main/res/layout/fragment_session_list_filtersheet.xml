@@ -19,7 +19,8 @@
             app:layout_behavior="@string/bottom_sheet_behavior"
             app:behavior_hideable="true"
             android:paddingBottom="@dimen/margin_small"
-            app:behavior_peekHeight="0dp">
+            app:behavior_peekHeight="64dp"
+    >
 
         <TextView
                 android:layout_width="wrap_content"
@@ -42,9 +43,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:id="@+id/bReset" android:layout_marginTop="8dp"
+                android:id="@+id/bReset"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal" android:visibility="visible"/>
+                android:layout_marginStart="@dimen/margin_normal" android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/guideline1"/>
 
         <com.google.android.material.chip.Chip
                 style="@style/Widget.MaterialComponents.Chip.Filter"
@@ -54,7 +56,7 @@
                 app:chipBackgroundColor="@color/csl_filter_chip_starred_background"
                 app:closeIconTint="@color/csl_filter_chip_starred_foreground"
                 android:id="@+id/chipStarred"
-                app:layout_constraintTop_toBottomOf="@+id/bReset" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guideline1" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="@dimen/margin_normal" android:text="@string/starred_events"
                 app:filterStarred="@{viewModelDer.filterSelected}"
                 android:layout_marginTop="4dp"/>
@@ -109,7 +111,12 @@
                 android:background="?selectableItemBackgroundBorderless"
                 android:contentDescription="@string/content_description"
                 android:scaleType="center"
-                android:tint="@color/dark_gray"/>
+                android:tint="@color/dark_gray" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline1"/>
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content" android:id="@+id/guideline1"
+                                                    app:layout_constraintGuide_begin="64dp"
+                                                    android:orientation="horizontal"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
