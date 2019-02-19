@@ -17,7 +17,6 @@ import iclaude.festivaleconomia2019.model.data_classes.fontColorInt
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 
 // Filter sheet binding adapters.
-
 @BindingAdapter("app:filterSet", "app:sessionsFiltered", requireAll = true)
 fun fitleFilter(textView: TextView, filter: Filter, sessions: Int) {
     var str: String = textView.context.resources.getString(R.string.filters)
@@ -75,19 +74,13 @@ fun colorChip(chip: Chip, tag: Tag) {
 @BindingAdapter("app:listeners", "app:tag", requireAll = true)
 fun addChipListeners(chip: Chip, viewModel: SessionListViewModel, tag: Tag) {
     chip.run {
-        setOnCloseIconClickListener {
-            isChecked = false
-        }
-
         setOnCheckedChangeListener { buttonView, isChecked ->
-            isCloseIconVisible = isChecked
             updateFilter(isChecked, viewModel, buttonView, tag)
         }
     }
 }
 
 // Utility functions.
-
 private fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, view: View, tag: Tag) {
     val filter = viewModel.filterSelected.value
     when (toAdd) {

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
         <import type="android.view.View"/>
@@ -52,6 +54,11 @@
                 app:hoveredFocusedTranslationZ="0dp"
                 app:pressedTranslationZ="0dp"
                 app:srcCompat="@drawable/ic_filter"/>
+
+        <include
+                android:id="@+id/bottomSheet"
+                layout="@layout/fragment_session_list_filtersheet"
+                bind:viewModelDer="@{viewModel}"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

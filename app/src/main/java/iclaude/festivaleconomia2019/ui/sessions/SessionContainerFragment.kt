@@ -4,22 +4,29 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.forEach
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetBehavior.*
+import com.google.android.material.chip.Chip
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
-import iclaude.festivaleconomia2019.ui.sessions.filters.FilterFragment
+import iclaude.festivaleconomia2019.ui.sessions.filters.Filter
 import kotlinx.android.synthetic.main.fragment_session_container.*
 import kotlinx.android.synthetic.main.fragment_session_container_appbar.*
+import kotlinx.android.synthetic.main.fragment_session_list_filtersheet.*
+import kotlinx.android.synthetic.main.fragment_session_list_filtersheet.view.*
 
 
 class SessionContainerFragment : Fragment() {
 
     private lateinit var viewModel: SessionListViewModel
     private lateinit var binding: FragmentSessionContainerBinding
+    private lateinit var bottomSheetBehavior: BottomSheetBehavior<View>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +44,14 @@ class SessionContainerFragment : Fragment() {
             viewModel = this@SessionContainerFragment.viewModel
         }
 
+        binding.root.chipStarred.apply {
+            setOnCheckedChangeListener { compoundButton, isChecked ->
+                val filter = viewModel.filterSelected.value
+                filter?.starred = isChecked
+                viewModel.filterSelected.value = filter
+            }
+        }
+
         return binding.root
 
     }
@@ -44,7 +59,7 @@ class SessionContainerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // load data from repository
+        // setup ViewPager and TabLayout
         viewModel.repository.eventDataLive.observe(this, Observer { eventData ->
             with(viewModel) {
                 dataLoadedObs.set(true)
@@ -60,13 +75,31 @@ class SessionContainerFragment : Fragment() {
                     }
                 )
         })
-
         tabs.setupWithViewPager(viewPager)
 
         fabFilter.setOnClickListener {
             fragmentManager?.run {
-                FilterFragment().show(this, "bottom sheet")
+                bottomSheetBehavior.state = STATE_EXPANDED
             }
+        }
+
+        // filter sheet
+        bottomSheetBehavior = from(bottomSheet)
+        bReset.setOnClickListener {
+            viewModel.filterSelected.value = Filter()
+
+            cgTopics.forEach {
+                val chip = it as Chip
+                chip.isChecked = false
+            }
+            cgTypes.forEach {
+                val chip = it as Chip
+                chip.isChecked = false
+            }
+            chipStarred.isChecked = false
+        }
+        ibCollapse.setOnClickListener {
+            bottomSheetBehavior.state = STATE_HIDDEN
         }
     }
 
