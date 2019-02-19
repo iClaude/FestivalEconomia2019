@@ -8,6 +8,7 @@ import androidx.databinding.BindingAdapter
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import iclaude.festivaleconomia2019.R
+import iclaude.festivaleconomia2019.databinding.ItemFilterChipBinding
 import iclaude.festivaleconomia2019.model.data_classes.Tag
 import iclaude.festivaleconomia2019.model.data_classes.Tag.Companion.CATEGORY_TOPIC
 import iclaude.festivaleconomia2019.model.data_classes.Tag.Companion.CATEGORY_TYPE
@@ -15,6 +16,7 @@ import iclaude.festivaleconomia2019.model.data_classes.colorInt
 import iclaude.festivaleconomia2019.model.data_classes.fontColorInt
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 
+// Filter sheet binding adapters.
 
 @BindingAdapter("app:filterSet", "app:sessionsFiltered", requireAll = true)
 fun fitleFilter(textView: TextView, filter: Filter, sessions: Int) {
@@ -48,39 +50,46 @@ fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewMod
     }
 
     for (tag in tags) {
-        if (tag.category == cat) {
-            val context = chipGroup.context
-            val chip = LayoutInflater.from(context).inflate(R.layout.item_filter_chip, chipGroup, false) as Chip
-            chip.run {
-                text = tag.name
-                setTag(tag)
-                isChecked = viewModel.filterSelected.value?.tags?.contains(tag) ?: false
-                isCloseIconVisible = isChecked
-                val colorStateList = createChipColorStateList(tag.colorInt)
-                val fontColorStateList = createChipColorStateList(tag.fontColorInt)
-                chipBackgroundColor = colorStateList
-                setTextColor(fontColorStateList)
-                closeIconTint = fontColorStateList
-                checkedIcon?.setTint(tag.fontColorInt)
+        if (tag.category != cat) continue
+        val context = chipGroup.context
+        val binding = ItemFilterChipBinding.inflate(LayoutInflater.from(context), chipGroup, false).apply {
+            setTag(tag)
+            filter = viewModel.filterSelected.value
+            setViewModel(viewModel)
+        }
+        chipGroup.addView(binding.root)
+    }
+}
 
-                setOnCloseIconClickListener {
-                    isChecked = false
-                }
+// Filter Chip binding adapters.
+@BindingAdapter("app:colors")
+fun colorChip(chip: Chip, tag: Tag) {
+    val colorStateList = createChipColorStateList(tag.colorInt)
+    val fontColorStateList = createChipColorStateList(tag.fontColorInt)
+    chip.apply {
+        chipBackgroundColor = colorStateList
+        setTextColor(fontColorStateList)
+    }
+}
 
-                setOnCheckedChangeListener { buttonView, isChecked ->
-                    isCloseIconVisible = isChecked
-                    updateFilter(isChecked, viewModel, buttonView)
-                }
+@BindingAdapter("app:listeners", "app:tag", requireAll = true)
+fun addChipListeners(chip: Chip, viewModel: SessionListViewModel, tag: Tag) {
+    chip.run {
+        setOnCloseIconClickListener {
+            isChecked = false
+        }
 
-                chipGroup.addView(this)
-            }
+        setOnCheckedChangeListener { buttonView, isChecked ->
+            isCloseIconVisible = isChecked
+            updateFilter(isChecked, viewModel, buttonView, tag)
         }
     }
 }
 
-private fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, view: View) {
+// Utility functions.
+
+private fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, view: View, tag: Tag) {
     val filter = viewModel.filterSelected.value
-    val tag = view.tag as Tag
     when (toAdd) {
         true -> filter?.tags?.add(tag)
         else -> filter?.tags?.remove(tag)
@@ -88,7 +97,7 @@ private fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, view: 
     viewModel.filterSelected.value = filter
 }
 
-fun createChipColorStateList(color: Int): ColorStateList {
+private fun createChipColorStateList(color: Int): ColorStateList {
     val states = arrayOf(
         intArrayOf(android.R.attr.state_checked), // checked
         intArrayOf(-android.R.attr.state_checked) // unchecked

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.chip.Chip
+
+<layout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        style="@style/Widget.MaterialComponents.Chip.Filter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+                name="tag"
+                type="iclaude.festivaleconomia2019.model.data_classes.Tag"/>
+        <variable
+                name="filter"
+                type="iclaude.festivaleconomia2019.ui.sessions.filters.Filter"/>
+        <variable
+                name="viewModel"
+                type="iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel"/>
+    </data>
+
+    <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{tag.name}"
+            android:checked="@{filter.tags != null ? filter.tags.contains(tag) : false}"
+            app:closeIconVisible="@{filter.tags != null ? filter.tags.contains(tag) : false}"
+            app:colors="@{tag}"
+            app:listeners="@{viewModel}"
+            app:tag="@{tag}"/>
+
+</layout>
