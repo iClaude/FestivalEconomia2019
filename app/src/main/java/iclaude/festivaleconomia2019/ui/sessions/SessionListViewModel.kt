@@ -14,7 +14,7 @@ import iclaude.festivaleconomia2019.model.data_classes.hasYoutubeUrl
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.sessions.filters.Filter
-import iclaude.festivaleconomia2019.ui.sessions.filters.hasTags
+import iclaude.festivaleconomia2019.ui.sessions.filters.isFilterSet
 import iclaude.festivaleconomia2019.ui.sessions.filters.isStarred
 import org.threeten.bp.temporal.ChronoUnit
 import javax.inject.Inject
@@ -39,17 +39,10 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         get() = Transformations.switchMap(filterSelected) { filter ->
             val filteredList = sessionsInfo.toMutableList()
 
-            // filter by stars
-            if (filter.isStarred()) {
+            // filter by tags and starred
+            if (filter.isFilterSet()) {
                 filteredList.retainAll {
-                    it.starred
-                }
-            }
-
-            // filter by tags
-            if (filter.hasTags()) {
-                filteredList.retainAll {
-                    it.tags.intersect(filter.tags).isNotEmpty()
+                    it.tags.intersect(filter.tags).isNotEmpty() || (filter.isStarred() && it.starred)
                 }
             }
 
