@@ -14,6 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:elevation="8dp"
             android:background="@drawable/filters_sheet_background"
             app:layout_behavior="@string/bottom_sheet_behavior"
             app:behavior_hideable="true"
