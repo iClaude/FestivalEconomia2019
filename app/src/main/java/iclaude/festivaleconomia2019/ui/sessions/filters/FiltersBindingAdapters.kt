@@ -4,7 +4,9 @@ import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.BindingAdapter
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import iclaude.festivaleconomia2019.R
@@ -60,7 +62,16 @@ fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewMod
     }
 }
 
-// Filter Chip binding adapters.
+@BindingAdapter("app:showFiltersSet")
+fun showFiltersSet(constraintLayout: ConstraintLayout, hasAnyFilters: Boolean) {
+    BottomSheetBehavior.from(constraintLayout).apply {
+        isHideable = !hasAnyFilters
+        skipCollapsed = !hasAnyFilters
+    }
+
+}
+
+// Filter chip binding adapters.
 @BindingAdapter("app:colors")
 fun colorChip(chip: Chip, tag: Tag) {
     val colorStateList = createChipColorStateList(tag.colorInt)
@@ -87,7 +98,7 @@ private fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, view: 
         true -> filter?.tags?.add(tag)
         else -> filter?.tags?.remove(tag)
     }
-    viewModel.filterSelected.value = filter
+    viewModel.updateFilter(filter)
 }
 
 private fun createChipColorStateList(color: Int): ColorStateList {

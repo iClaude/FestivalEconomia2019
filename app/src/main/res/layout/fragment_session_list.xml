@@ -6,11 +6,10 @@
         xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <import type="android.view.View"/>
         <variable
                 name="viewModel"
                 type="iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel"/>
-
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -22,9 +21,9 @@
                 android:id="@+id/rvSessions"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:clipToPadding="false"
+                android:clipToPadding="@{viewModel.hasAnyFiltersObs? true : false}"
                 android:orientation="vertical"
-                android:paddingBottom="@dimen/schedule_page_padding_bottom"
+                android:paddingBottom="@dimen/filtersheet_peek_height"
                 android:paddingTop="@dimen/spacing_normal"
                 android:scrollbars="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

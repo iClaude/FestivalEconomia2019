@@ -48,7 +48,7 @@ class SessionContainerFragment : Fragment() {
             setOnCheckedChangeListener { compoundButton, isChecked ->
                 val filter = viewModel.filterSelected.value
                 filter?.starred = isChecked
-                viewModel.filterSelected.value = filter
+                viewModel.updateFilter(filter)
             }
         }
 
@@ -77,6 +77,7 @@ class SessionContainerFragment : Fragment() {
         })
         tabs.setupWithViewPager(viewPager)
 
+        // fab
         fabFilter.setOnClickListener {
             fragmentManager?.run {
                 bottomSheetBehavior.state = STATE_EXPANDED
@@ -85,8 +86,10 @@ class SessionContainerFragment : Fragment() {
 
         // filter sheet
         bottomSheetBehavior = from(bottomSheet)
+        bottomSheetBehavior.state = STATE_HIDDEN
+
         bReset.setOnClickListener {
-            viewModel.filterSelected.value = Filter()
+            viewModel.updateFilter(Filter())
 
             cgTopics.forEach {
                 val chip = it as Chip
@@ -99,7 +102,12 @@ class SessionContainerFragment : Fragment() {
             chipStarred.isChecked = false
         }
         ibCollapse.setOnClickListener {
-            bottomSheetBehavior.state = STATE_HIDDEN
+            bottomSheetBehavior.run {
+                state = when (skipCollapsed) {
+                    true -> STATE_HIDDEN
+                    else -> STATE_COLLAPSED
+                }
+            }
         }
     }
 

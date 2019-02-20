@@ -53,7 +53,8 @@
                 app:fabSize="auto"
                 app:hoveredFocusedTranslationZ="0dp"
                 app:pressedTranslationZ="0dp"
-                app:srcCompat="@drawable/ic_filter"/>
+                app:srcCompat="@drawable/ic_filter"
+                android:visibility="@{viewModel.hasAnyFiltersObs? View.GONE : View.VISIBLE}"/>
 
         <include
                 android:id="@+id/bottomSheet"

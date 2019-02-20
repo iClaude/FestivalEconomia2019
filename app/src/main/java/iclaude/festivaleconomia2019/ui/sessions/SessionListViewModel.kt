@@ -23,10 +23,15 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     private lateinit var sessionsInfo: List<SessionsDisplayInfo>
 
     var filterSelected: MutableLiveData<Filter> = MutableLiveData()
+    var hasAnyFiltersObs: ObservableBoolean = ObservableBoolean(false)
+    fun updateFilter(filter: Filter?) {
+        filterSelected.value = filter
+        hasAnyFiltersObs.set(filter?.isFilterSet() ?: false)
+    }
 
     init {
         App.component.inject(this)
-        filterSelected.value = Filter()
+        updateFilter(Filter())
     }
 
     @Inject
