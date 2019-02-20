@@ -19,6 +19,7 @@ import iclaude.festivaleconomia2019.model.data_classes.fontColorInt
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 
 // Filter sheet binding adapters.
+// Title. If filter is not set, display "Filters", otherwise display "x sessions" (number of filtered sessions).
 @BindingAdapter("app:isFilterSet", "app:sessionsFiltered", requireAll = true)
 fun title(textView: TextView, isFilterSet: Boolean, sessions: Int) {
     var str: String = textView.context.resources.getString(R.string.filters)
@@ -27,15 +28,6 @@ fun title(textView: TextView, isFilterSet: Boolean, sessions: Int) {
         str = textView.context.resources.getQuantityString(R.plurals.filtered_sessions, sessions, sessions)
     }
     textView.text = str
-}
-
-@BindingAdapter("app:filterSet2", "app:sessionsFiltered2", requireAll = true)
-fun showWithFilter(view: View, filter: Filter, sessions: Int) {
-    if (filter.isFilterSet())
-        view.visibility = View.VISIBLE
-    else
-        view.visibility = View.INVISIBLE
-
 }
 
 @BindingAdapter("app:filterStarred")

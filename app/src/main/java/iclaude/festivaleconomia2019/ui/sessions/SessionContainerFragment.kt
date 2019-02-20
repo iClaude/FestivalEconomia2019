@@ -16,7 +16,6 @@ import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
 import kotlinx.android.synthetic.main.fragment_session_container.*
 import kotlinx.android.synthetic.main.fragment_session_container_appbar.*
 import kotlinx.android.synthetic.main.fragment_session_list_filtersheet.*
-import kotlinx.android.synthetic.main.fragment_session_list_filtersheet.view.*
 
 
 class SessionContainerFragment : Fragment() {
@@ -39,14 +38,6 @@ class SessionContainerFragment : Fragment() {
     ): View? {
         binding = FragmentSessionContainerBinding.inflate(inflater, container, false).apply {
             viewModel = this@SessionContainerFragment.viewModel
-        }
-
-        binding.root.chipStarred.apply {
-            setOnCheckedChangeListener { compoundButton, isChecked ->
-                val filter = viewModel.filterSelected.value
-                filter?.starred = isChecked
-                viewModel.updateFilter(filter)
-            }
         }
 
         return binding.root

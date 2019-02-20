@@ -60,17 +60,18 @@
                 tools:visibility="visible"/>
 
         <com.google.android.material.chip.Chip
+                android:id="@+id/chipStarred"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/csl_filter_chip_starred_foreground"
                 app:chipBackgroundColor="@color/csl_filter_chip_starred_background"
                 app:closeIconTint="@color/csl_filter_chip_starred_foreground"
-                android:id="@+id/chipStarred"
                 app:layout_constraintTop_toBottomOf="@+id/guideline1" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="@dimen/margin_normal" android:text="@string/starred_events"
                 app:filterStarred="@{viewModelDer.filterSelected}"
                 app:uncheckTag="@{viewModelDer.clearTagsObs}"
+                android:onCheckedChanged="@{(compoundButton, isChecked) -> viewModelDer.chipStarredCheckedChanged(compoundButton, isChecked)}"
                 android:layout_marginTop="4dp"/>
 
         <TextView

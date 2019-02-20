@@ -1,6 +1,7 @@
 package iclaude.festivaleconomia2019.ui.sessions
 
 import android.app.Application
+import android.widget.CompoundButton
 import androidx.databinding.*
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
@@ -106,6 +107,12 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     val clearTagsObs: ObservableInt = ObservableInt(0)
 
     val titleHeaderAlphaObs: ObservableFloat = ObservableFloat(0f)
+
+    fun chipStarredCheckedChanged(compoundButton: CompoundButton, isChecked: Boolean) {
+        val filter = filterSelected.value
+        filter?.starred = isChecked
+        updateFilter(filter)
+    }
 }
 
 class SessionsDisplayInfo(
