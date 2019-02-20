@@ -1,9 +1,7 @@
 package iclaude.festivaleconomia2019.ui.sessions
 
 import android.app.Application
-import androidx.databinding.ObservableBoolean
-import androidx.databinding.ObservableFloat
-import androidx.databinding.ObservableInt
+import androidx.databinding.*
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -28,6 +26,12 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     fun updateFilter(filter: Filter?) {
         filterSelected.value = filter
         hasAnyFiltersObs.set(filter?.isFilterSet() ?: false)
+    }
+
+    fun clearFilters() {
+        filterSelected.value = Filter()
+        hasAnyFiltersObs.set(false)
+        clearTagsObs.set(clearTagsObs.get() + 1)
     }
 
     init {
@@ -91,15 +95,16 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
-    private var _tagsLive: MutableLiveData<List<Tag>> = MutableLiveData()
-    val tagsLive: LiveData<List<Tag>>
-        get() = _tagsLive
-
+    // Data for filter sheet.
+    val tagsObs: ObservableList<Tag> = ObservableArrayList()
     private fun loadAllTags() {
-        _tagsLive.value = repository.eventDataLive.value?.tags
+        val tags = repository.eventDataLive.value?.tags
+        tagsObs.clear()
+        tagsObs.addAll(tags ?: return)
     }
 
-    // Data for filter sheet.
+    val clearTagsObs: ObservableInt = ObservableInt(0)
+
     val titleHeaderAlphaObs: ObservableFloat = ObservableFloat(0f)
 }
 

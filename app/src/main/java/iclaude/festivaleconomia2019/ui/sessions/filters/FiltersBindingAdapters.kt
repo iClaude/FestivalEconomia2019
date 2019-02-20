@@ -45,6 +45,7 @@ fun checkWithStarredFilter(chip: Chip, filter: Filter) {
 
 @BindingAdapter("app:tags", "app:viewModel", requireAll = true)
 fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewModel) {
+    chipGroup.removeAllViews()
     val cat = when (chipGroup.id) {
         R.id.cgTopics -> CATEGORY_TOPIC
         else -> CATEGORY_TYPE
@@ -62,6 +63,16 @@ fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewMod
     }
 }
 
+@BindingAdapter("app:uncheckTags")
+fun uncheckTags(chipGroup: ChipGroup, count: Int) {
+    if (count > 0) chipGroup.clearCheck()
+}
+
+@BindingAdapter("app:uncheckTag")
+fun uncheckTag(chip: Chip, count: Int) {
+    if (count > 0) chip.isChecked = false
+}
+
 @BindingAdapter("app:showFiltersSet")
 fun showFiltersSet(constraintLayout: ConstraintLayout, hasAnyFilters: Boolean) {
     BottomSheetBehavior.from(constraintLayout).apply {
@@ -69,6 +80,11 @@ fun showFiltersSet(constraintLayout: ConstraintLayout, hasAnyFilters: Boolean) {
         skipCollapsed = !hasAnyFilters
     }
 
+}
+
+@BindingAdapter("app:goneUnless")
+fun goneUnless(view: View, isToShow: Boolean) {
+    view.visibility = if (isToShow) View.VISIBLE else View.GONE
 }
 
 // Filter chip binding adapters.
