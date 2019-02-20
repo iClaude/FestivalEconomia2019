@@ -19,6 +19,16 @@ import iclaude.festivaleconomia2019.model.data_classes.fontColorInt
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 
 // Filter sheet binding adapters.
+
+// Filter sheet is hideable only when filter is not set. Otherwise it gets collapsed when dismissed, displaying the tags selected.
+@BindingAdapter("app:filterSheetHideable")
+fun filterSheetHideable(constraintLayout: ConstraintLayout, hasAnyFilters: Boolean) {
+    BottomSheetBehavior.from(constraintLayout).apply {
+        isHideable = !hasAnyFilters
+        skipCollapsed = !hasAnyFilters
+    }
+}
+
 // Title. If filter is not set, display "Filters", otherwise display "x sessions" (number of filtered sessions).
 @BindingAdapter("app:isFilterSet", "app:sessionsFiltered", requireAll = true)
 fun title(textView: TextView, isFilterSet: Boolean, sessions: Int) {
@@ -30,11 +40,13 @@ fun title(textView: TextView, isFilterSet: Boolean, sessions: Int) {
     textView.text = str
 }
 
-@BindingAdapter("app:filterStarred")
-fun checkWithStarredFilter(chip: Chip, filter: Filter) {
+// Chip for starred sessions. Check if a filter with starred sessions is set.
+@BindingAdapter("app:chipStarredChecked")
+fun chipStarredChecked(chip: Chip, filter: Filter) {
     chip.isChecked = filter.isStarred()
 }
 
+// Topics and types ChipGroups. Add all tags.
 @BindingAdapter("app:tags", "app:viewModel", requireAll = true)
 fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewModel) {
     chipGroup.removeAllViews()
@@ -55,23 +67,16 @@ fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewMod
     }
 }
 
+// ChipGroups: when filter is cleared, uncheck all tags.
 @BindingAdapter("app:uncheckTags")
 fun uncheckTags(chipGroup: ChipGroup, count: Int) {
     if (count > 0) chipGroup.clearCheck()
 }
 
+// Chip: when filter is cleared, uncheck this chip (used for chipStarred, which is outside of ChipGroups.
 @BindingAdapter("app:uncheckTag")
 fun uncheckTag(chip: Chip, count: Int) {
     if (count > 0) chip.isChecked = false
-}
-
-@BindingAdapter("app:showFiltersSet")
-fun showFiltersSet(constraintLayout: ConstraintLayout, hasAnyFilters: Boolean) {
-    BottomSheetBehavior.from(constraintLayout).apply {
-        isHideable = !hasAnyFilters
-        skipCollapsed = !hasAnyFilters
-    }
-
 }
 
 @BindingAdapter("app:goneUnless")

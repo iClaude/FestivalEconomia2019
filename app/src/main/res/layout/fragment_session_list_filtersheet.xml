@@ -26,7 +26,7 @@
             android:paddingBottom="@dimen/margin_small"
             android:layout_marginBottom="4dp"
             app:behavior_peekHeight="@dimen/filtersheet_peek_height"
-            app:showFiltersSet="@{viewModelDer.hasAnyFiltersObs}">
+            app:filterSheetHideable="@{viewModelDer.hasAnyFiltersObs}">
 
         <TextView
                 android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
                 app:closeIconTint="@color/csl_filter_chip_starred_foreground"
                 app:layout_constraintTop_toBottomOf="@+id/guideline1" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="@dimen/margin_normal" android:text="@string/starred_events"
-                app:filterStarred="@{viewModelDer.filterSelected}"
+                app:chipStarredChecked="@{viewModelDer.filterSelected}"
                 app:uncheckTag="@{viewModelDer.clearTagsObs}"
                 android:onCheckedChanged="@{(compoundButton, isChecked) -> viewModelDer.chipStarredCheckedChanged(compoundButton, isChecked)}"
                 android:layout_marginTop="4dp"/>
