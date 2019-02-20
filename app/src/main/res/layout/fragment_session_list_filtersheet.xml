@@ -117,18 +117,23 @@
                 android:layout_marginTop="@dimen/margin_small"
                 android:layout_marginStart="@dimen/margin_normal"
                 android:layout_marginEnd="@dimen/margin_normal"/>
+
         <ImageButton
+                android:id="@+id/ibCollapse"
                 android:layout_width="@dimen/a11y_min_touch_target"
-                android:layout_height="@dimen/a11y_min_touch_target" app:srcCompat="@drawable/ic_chevron_collapse"
-                android:id="@+id/ibCollapse" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="@dimen/a11y_min_touch_target"
+                app:srcCompat="@drawable/ic_chevron_collapse"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="@dimen/margin_small"
                 android:alpha="@{viewModelDer.titleHeaderAlphaObs}"
+                android:clickable="@{viewModelDer.titleHeaderAlphaObs > 0f}"
                 app:layout_constraintTop_toTopOf="parent"
                 android:background="?selectableItemBackgroundBorderless"
                 android:contentDescription="@string/content_description"
                 android:scaleType="center"
                 android:tint="@color/dark_gray"
                 app:layout_constraintBottom_toTopOf="@+id/guideline1"/>
+
         <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content" android:id="@+id/guideline1"
                                                     app:layout_constraintGuide_begin="@dimen/filtersheet_peek_height"
