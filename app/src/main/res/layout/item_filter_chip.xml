@@ -22,7 +22,6 @@
             android:layout_height="wrap_content"
             android:text="@{tag.name}"
             android:checked="@{filter.tags != null ? filter.tags.contains(tag) : false}"
-            app:closeIconVisible="@{filter.tags != null ? filter.tags.contains(tag) : false}"
             app:colors="@{tag}"
             app:listeners="@{viewModel}"
             app:tag="@{tag}"/>

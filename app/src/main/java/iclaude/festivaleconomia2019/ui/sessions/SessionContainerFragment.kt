@@ -85,8 +85,12 @@ class SessionContainerFragment : Fragment() {
         }
 
         // filter sheet
-        bottomSheetBehavior = from(bottomSheet)
-        bottomSheetBehavior.state = STATE_HIDDEN
+        bottomSheetBehavior = from(bottomSheet).apply {
+            state = when (viewModel.hasAnyFiltersObs.get()) {
+                true -> STATE_COLLAPSED
+                else -> STATE_HIDDEN
+            }
+        }
 
         bReset.setOnClickListener {
             viewModel.updateFilter(Filter())
