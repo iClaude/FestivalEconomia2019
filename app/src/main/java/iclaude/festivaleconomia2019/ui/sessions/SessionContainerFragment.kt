@@ -15,7 +15,6 @@ import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
 import kotlinx.android.synthetic.main.fragment_session_container.*
 import kotlinx.android.synthetic.main.fragment_session_container_appbar.*
-import kotlinx.android.synthetic.main.fragment_session_list_filtersheet.*
 
 
 class SessionContainerFragment : Fragment() {
@@ -73,37 +72,20 @@ class SessionContainerFragment : Fragment() {
         }
 
         // filter sheet
-        bottomSheetBehavior = from(bottomSheet).apply {
-            state = when (viewModel.hasAnyFiltersObs.get()) {
-                true -> STATE_COLLAPSED
-                else -> STATE_HIDDEN
-            }
+        viewModel.run {
+            titleHeaderAlphaObs.set(0f)
+            collapseFilterSheet()
         }
 
+        bottomSheetBehavior = from(bottomSheet)
         bottomSheetBehavior.setBottomSheetCallback(object : BottomSheetCallback() {
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
                 viewModel.titleHeaderAlphaObs.set(slideOffset)
             }
 
             override fun onStateChanged(bottomSheet: View, newState: Int) {
-                val enabled = when (newState) {
-                    STATE_COLLAPSED -> false
-                    else -> true
-                }
-                tvTitle.isEnabled = enabled
-                ibCollapse.isEnabled = enabled
             }
         })
-
-
-        ibCollapse.setOnClickListener {
-            bottomSheetBehavior.run {
-                state = when (skipCollapsed) {
-                    true -> STATE_HIDDEN
-                    else -> STATE_COLLAPSED
-                }
-            }
-        }
     }
 
     inner class SessionsAdapter(

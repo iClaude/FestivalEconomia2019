@@ -113,6 +113,11 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         filter?.starred = isChecked
         updateFilter(filter)
     }
+
+    val collapseFilterSheetObs: ObservableInt = ObservableInt(0)
+    fun collapseFilterSheet() {
+        collapseFilterSheetObs.set(collapseFilterSheetObs.get() + 1)
+    }
 }
 
 class SessionsDisplayInfo(
