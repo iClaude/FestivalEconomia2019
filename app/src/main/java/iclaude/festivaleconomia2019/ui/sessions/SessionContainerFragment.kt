@@ -98,11 +98,13 @@ class SessionContainerFragment : Fragment() {
             }
 
             override fun onStateChanged(bottomSheet: View, newState: Int) {
-                gTitleHeader.visibility =
-                    when (newState) {
-                        STATE_COLLAPSED -> View.GONE
-                        else -> View.VISIBLE
-                    }
+                val enabled = when (newState) {
+                    STATE_COLLAPSED -> false
+                    else -> true
+                }
+                bReset.isEnabled = enabled
+                tvTitle.isEnabled = enabled
+                ibCollapse.isEnabled = enabled
             }
         })
 
