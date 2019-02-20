@@ -2,6 +2,7 @@ package iclaude.festivaleconomia2019.ui.sessions
 
 import android.app.Application
 import androidx.databinding.ObservableBoolean
+import androidx.databinding.ObservableFloat
 import androidx.databinding.ObservableInt
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
@@ -23,7 +24,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     private lateinit var sessionsInfo: List<SessionsDisplayInfo>
 
     var filterSelected: MutableLiveData<Filter> = MutableLiveData()
-    var hasAnyFiltersObs: ObservableBoolean = ObservableBoolean(false)
+    val hasAnyFiltersObs: ObservableBoolean = ObservableBoolean(false)
     fun updateFilter(filter: Filter?) {
         filterSelected.value = filter
         hasAnyFiltersObs.set(filter?.isFilterSet() ?: false)
@@ -97,6 +98,9 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     private fun loadAllTags() {
         _tagsLive.value = repository.eventDataLive.value?.tags
     }
+
+    // Data for filter sheet.
+    val titleHeaderAlphaObs: ObservableFloat = ObservableFloat(0f)
 }
 
 class SessionsDisplayInfo(

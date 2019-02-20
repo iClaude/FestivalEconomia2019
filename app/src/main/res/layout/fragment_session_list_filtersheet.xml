@@ -32,6 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvTitle"
+                android:alpha="@{viewModelDer.titleHeaderAlphaObs}"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="@dimen/margin_normal" app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="@dimen/margin_normal"
@@ -46,6 +47,7 @@
                 app:filterSet2="@{viewModelDer.filterSelected}"
                 app:sessionsFiltered2="@{viewModelDer.sessionsFilteredObs}"
                 android:text="@string/filter_reset"
+                android:alpha="@{viewModelDer.titleHeaderAlphaObs}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
@@ -113,6 +115,7 @@
                 android:layout_height="@dimen/a11y_min_touch_target" app:srcCompat="@drawable/ic_chevron_collapse"
                 android:id="@+id/ibCollapse" app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="@dimen/margin_small"
+                android:alpha="@{viewModelDer.titleHeaderAlphaObs}"
                 app:layout_constraintTop_toTopOf="@+id/bReset"
                 android:background="?selectableItemBackgroundBorderless"
                 android:contentDescription="@string/content_description"
@@ -123,6 +126,12 @@
                                                     android:layout_height="wrap_content" android:id="@+id/guideline1"
                                                     app:layout_constraintGuide_begin="@dimen/filtersheet_peek_height"
                                                     android:orientation="horizontal"/>
+
+        <androidx.constraintlayout.widget.Group
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gTitleHeader"
+                app:constraint_referenced_ids="bReset,tvTitle,ibCollapse"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -92,6 +92,20 @@ class SessionContainerFragment : Fragment() {
             }
         }
 
+        bottomSheetBehavior.setBottomSheetCallback(object : BottomSheetCallback() {
+            override fun onSlide(bottomSheet: View, slideOffset: Float) {
+                viewModel.titleHeaderAlphaObs.set(slideOffset)
+            }
+
+            override fun onStateChanged(bottomSheet: View, newState: Int) {
+                gTitleHeader.visibility =
+                    when (newState) {
+                        STATE_COLLAPSED -> View.GONE
+                        else -> View.VISIBLE
+                    }
+            }
+        })
+
         bReset.setOnClickListener {
             viewModel.updateFilter(Filter())
 
@@ -105,6 +119,7 @@ class SessionContainerFragment : Fragment() {
             }
             chipStarred.isChecked = false
         }
+
         ibCollapse.setOnClickListener {
             bottomSheetBehavior.run {
                 state = when (skipCollapsed) {
