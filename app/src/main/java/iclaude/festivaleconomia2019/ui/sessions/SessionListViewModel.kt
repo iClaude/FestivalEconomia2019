@@ -43,8 +43,8 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     lateinit var repository: EventDataRepository
 
     var dataLoadedObs: ObservableBoolean = ObservableBoolean(false)
-    var sessionsFilteredObs: ObservableInt = ObservableInt(0)
 
+    var sessionsFilteredObs: ObservableInt = ObservableInt(0)
     val sessionsInfoFilteredLive: LiveData<List<SessionsDisplayInfo>>
         get() = Transformations.switchMap(filterSelected) { filter ->
             val filteredList = sessionsInfo.toMutableList()

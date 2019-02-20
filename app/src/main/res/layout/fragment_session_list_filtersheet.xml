@@ -39,7 +39,7 @@
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="?android:textColorPrimary"
                 android:text="@string/filters"
-                app:filterSet="@{viewModelDer.filterSelected}"
+                app:isFilterSet="@{viewModelDer.hasAnyFiltersObs}"
                 app:sessionsFiltered="@{viewModelDer.sessionsFilteredObs}"
                 app:layout_constraintBottom_toTopOf="@+id/guideline1"
                 app:layout_constraintTop_toTopOf="parent"/>

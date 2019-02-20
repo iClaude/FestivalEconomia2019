@@ -19,11 +19,11 @@ import iclaude.festivaleconomia2019.model.data_classes.fontColorInt
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 
 // Filter sheet binding adapters.
-@BindingAdapter("app:filterSet", "app:sessionsFiltered", requireAll = true)
-fun fitleFilter(textView: TextView, filter: Filter, sessions: Int) {
+@BindingAdapter("app:isFilterSet", "app:sessionsFiltered", requireAll = true)
+fun title(textView: TextView, isFilterSet: Boolean, sessions: Int) {
     var str: String = textView.context.resources.getString(R.string.filters)
 
-    if (filter.isFilterSet()) {
+    if (isFilterSet) {
         str = textView.context.resources.getQuantityString(R.plurals.filtered_sessions, sessions, sessions)
     }
     textView.text = str
