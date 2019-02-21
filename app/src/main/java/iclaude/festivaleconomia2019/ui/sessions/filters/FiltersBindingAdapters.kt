@@ -69,12 +69,6 @@ fun uncheckTags(chipGroup: ChipGroup, count: Int) {
     if (count > 0) chipGroup.clearCheck()
 }
 
-// Chip: when filter is cleared, uncheck this chip (used for chipStarred, which is outside of ChipGroups.
-@BindingAdapter("app:uncheckTag")
-fun uncheckTag(chip: Chip, count: Int) {
-    if (count > 0) chip.isChecked = false
-}
-
 @BindingAdapter("app:goneUnless")
 fun goneUnless(view: View, isToShow: Boolean) {
     view.visibility = if (isToShow) View.VISIBLE else View.GONE

@@ -32,7 +32,8 @@
                 android:layout_height="150dp" app:srcCompat="@drawable/event_logo"
                 android:id="@+id/imageView2"
                 android:layout_gravity="center"
-                android:visibility="@{viewModel.dataLoadedObs? View.GONE : View.VISIBLE}"/>
+                android:visibility="@{viewModel.dataLoadedObs? View.GONE : View.VISIBLE}"
+                android:contentDescription="@string/content_description"/>
 
         <ProgressBar
                 android:id="@+id/pbLoading"
