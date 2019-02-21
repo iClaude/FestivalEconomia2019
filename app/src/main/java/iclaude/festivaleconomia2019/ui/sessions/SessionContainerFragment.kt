@@ -10,8 +10,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.google.android.material.bottomsheet.BottomSheetBehavior.BottomSheetCallback
-import com.google.android.material.bottomsheet.BottomSheetBehavior.from
+import com.google.android.material.bottomsheet.BottomSheetBehavior.*
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
 import kotlinx.android.synthetic.main.fragment_session_container.*
@@ -70,8 +69,15 @@ class SessionContainerFragment : Fragment() {
         viewModel.run {
             titleHeaderAlphaObs.set(0f)
             changeFilterSheetState(false)
-            changeFilterSheetState.observe(this@SessionContainerFragment, Observer {
+            changeFilterSheetStateCommand.observe(this@SessionContainerFragment, Observer {
                 bottomSheetBehavior.state = it
+            })
+            removeFilterSheetCommand.observe(this@SessionContainerFragment, Observer {
+                bottomSheetBehavior.run {
+                    isHideable = true
+                    state = STATE_HIDDEN
+                }
+
             })
         }
 

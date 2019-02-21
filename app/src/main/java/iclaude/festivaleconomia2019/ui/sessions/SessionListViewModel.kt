@@ -29,6 +29,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     var filterSelected: MutableLiveData<Filter> = MutableLiveData()
     val isFilterTaggedObs: ObservableBoolean = ObservableBoolean(false)
     val isFilterStarredObs: ObservableBoolean = ObservableBoolean(false)
+
     fun updateFilter(filter: Filter?) {
         filterSelected.value = filter
         isFilterTaggedObs.set(filter?.hasTags() ?: false)
@@ -40,6 +41,11 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         isFilterTaggedObs.set(false)
         isFilterStarredObs.set(false)
         clearTagsObs.set(clearTagsObs.get() + 1)
+    }
+
+    fun clearFiltersAndCollapse() {
+        clearFilters()
+        removeFilterSheetCommand.call()
     }
 
     init {
@@ -122,17 +128,18 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     }
 
     // Filter sheet commands.
-    val changeFilterSheetState: SingleLiveEvent<Int> = SingleLiveEvent()
+    val changeFilterSheetStateCommand: SingleLiveEvent<Int> = SingleLiveEvent()
+    val removeFilterSheetCommand: SingleLiveEvent<Void> = SingleLiveEvent()
 
     fun changeFilterSheetState(toExpand: Boolean) {
         // expand
         if (toExpand) {
-            changeFilterSheetState.value = STATE_EXPANDED
+            changeFilterSheetStateCommand.value = STATE_EXPANDED
             return
         }
 
         // collapse or hide depending on filters
-        changeFilterSheetState.value = when (isFilterTaggedObs.get() || isFilterStarredObs.get()) {
+        changeFilterSheetStateCommand.value = when (isFilterTaggedObs.get() || isFilterStarredObs.get()) {
             true -> BottomSheetBehavior.STATE_COLLAPSED
             else -> BottomSheetBehavior.STATE_HIDDEN
         }

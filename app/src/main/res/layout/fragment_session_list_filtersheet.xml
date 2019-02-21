@@ -135,6 +135,23 @@
                 android:tint="@color/dark_gray"
                 app:layout_constraintBottom_toTopOf="@+id/guideline1"/>
 
+        <ImageButton
+                android:id="@+id/ibClearFilters"
+                android:layout_width="@dimen/a11y_min_touch_target"
+                android:layout_height="@dimen/a11y_min_touch_target"
+                app:srcCompat="@drawable/ic_clear_all"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:alpha="@{1f - viewModelDer.titleHeaderAlphaObs}"
+                android:clickable="@{viewModelDer.titleHeaderAlphaObs == 0f}"
+                android:onClick="@{(v) -> viewModelDer.clearFiltersAndCollapse()}"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@string/content_description"
+                android:scaleType="center"
+                android:tint="@color/dark_gray"
+                app:layout_constraintBottom_toTopOf="@+id/guideline1"/>
+
         <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content" android:id="@+id/guideline1"
                                                     app:layout_constraintGuide_begin="@dimen/filtersheet_peek_height"
