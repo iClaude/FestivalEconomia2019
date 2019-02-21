@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.BindingAdapter
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
@@ -17,6 +18,7 @@ import iclaude.festivaleconomia2019.model.data_classes.Tag.Companion.CATEGORY_TY
 import iclaude.festivaleconomia2019.model.data_classes.colorInt
 import iclaude.festivaleconomia2019.model.data_classes.fontColorInt
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
+import iclaude.festivaleconomia2019.ui.sessions.TagAdapter
 
 // Filter sheet binding adapters.
 
@@ -76,6 +78,15 @@ fun uncheckTag(chip: Chip, count: Int) {
 @BindingAdapter("app:goneUnless")
 fun goneUnless(view: View, isToShow: Boolean) {
     view.visibility = if (isToShow) View.VISIBLE else View.GONE
+}
+
+@BindingAdapter("app:filterTags")
+fun filterTags(recyclerView: RecyclerView, filterTags: List<Tag>?) {
+    recyclerView.adapter = (recyclerView.adapter as? TagAdapter ?: TagAdapter())
+        .apply {
+            tags = filterTags ?: emptyList()
+            notifyDataSetChanged()
+        }
 }
 
 // Filter chip binding adapters.

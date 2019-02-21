@@ -29,11 +29,18 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     var filterSelected: MutableLiveData<Filter> = MutableLiveData()
     val isFilterTaggedObs: ObservableBoolean = ObservableBoolean(false)
     val isFilterStarredObs: ObservableBoolean = ObservableBoolean(false)
+    val filterTagsObs: ObservableList<Tag> = ObservableArrayList()
 
     fun updateFilter(filter: Filter?) {
         filterSelected.value = filter
         isFilterTaggedObs.set(filter?.hasTags() ?: false)
         isFilterStarredObs.set(filter?.isStarred() ?: false)
+        filterTagsObs.apply {
+            clear()
+            filter?.let {
+                this.addAll(it.tags)
+            }
+        }
     }
 
     fun clearFilters() {
@@ -41,6 +48,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         isFilterTaggedObs.set(false)
         isFilterStarredObs.set(false)
         clearTagsObs.set(clearTagsObs.get() + 1)
+        filterTagsObs.clear()
     }
 
     fun clearFiltersAndCollapse() {
