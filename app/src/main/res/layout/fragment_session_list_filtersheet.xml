@@ -179,7 +179,7 @@
                 tools:listitem="@layout/item_session_tag"
                 android:alpha="@{1f - viewModelDer.titleHeaderAlphaObs}"
                 app:filterTags="@{viewModelDer.filterTagsObs}"
-                app:goneUnless="@{viewModelDer.titleHeaderAlphaObs == 0}"/>
+                app:goneUnless="@{viewModelDer.titleHeaderAlphaObs != 1}"/>
 
         <View android:layout_width="0dp"
               android:layout_height="0dp"
@@ -192,7 +192,7 @@
               android:clickable="@{viewModelDer.titleHeaderAlphaObs == 0}"
               android:alpha="0"
               android:onClick="@{(v) -> viewModelDer.changeFilterSheetState(true)}"
-              app:goneUnless="@{viewModelDer.titleHeaderAlphaObs == 0}"/>
+              app:goneUnless="@{viewModelDer.titleHeaderAlphaObs != 1}"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
