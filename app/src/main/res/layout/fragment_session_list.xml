@@ -21,7 +21,7 @@
                 android:id="@+id/rvSessions"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:clipToPadding="@{viewModel.hasAnyFiltersObs? true : false}"
+                android:clipToPadding="@{(viewModel.isFilterTaggedObs || viewModel.isFilterStarredObs)? true : false}"
                 android:orientation="vertical"
                 android:paddingBottom="@dimen/filtersheet_peek_height"
                 android:paddingTop="@dimen/spacing_normal"

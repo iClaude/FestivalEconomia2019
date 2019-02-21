@@ -16,6 +16,7 @@ import iclaude.festivaleconomia2019.model.data_classes.hasYoutubeUrl
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.sessions.filters.Filter
+import iclaude.festivaleconomia2019.ui.sessions.filters.hasTags
 import iclaude.festivaleconomia2019.ui.sessions.filters.isFilterSet
 import iclaude.festivaleconomia2019.ui.sessions.filters.isStarred
 import iclaude.festivaleconomia2019.ui.utils.SingleLiveEvent
@@ -26,15 +27,18 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     private lateinit var sessionsInfo: List<SessionsDisplayInfo>
 
     var filterSelected: MutableLiveData<Filter> = MutableLiveData()
-    val hasAnyFiltersObs: ObservableBoolean = ObservableBoolean(false)
+    val isFilterTaggedObs: ObservableBoolean = ObservableBoolean(false)
+    val isFilterStarredObs: ObservableBoolean = ObservableBoolean(false)
     fun updateFilter(filter: Filter?) {
         filterSelected.value = filter
-        hasAnyFiltersObs.set(filter?.isFilterSet() ?: false)
+        isFilterTaggedObs.set(filter?.hasTags() ?: false)
+        isFilterStarredObs.set(filter?.isStarred() ?: false)
     }
 
     fun clearFilters() {
         filterSelected.value = Filter()
-        hasAnyFiltersObs.set(false)
+        isFilterTaggedObs.set(false)
+        isFilterStarredObs.set(false)
         clearTagsObs.set(clearTagsObs.get() + 1)
     }
 
@@ -128,7 +132,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
 
         // collapse or hide depending on filters
-        changeFilterSheetState.value = when (hasAnyFiltersObs.get()) {
+        changeFilterSheetState.value = when (isFilterTaggedObs.get() || isFilterStarredObs.get()) {
             true -> BottomSheetBehavior.STATE_COLLAPSED
             else -> BottomSheetBehavior.STATE_HIDDEN
         }

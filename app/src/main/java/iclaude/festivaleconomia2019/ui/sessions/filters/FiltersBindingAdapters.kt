@@ -40,12 +40,6 @@ fun title(textView: TextView, isFilterSet: Boolean, sessions: Int) {
     textView.text = str
 }
 
-// Chip for starred sessions. Check if a filter with starred sessions is set.
-@BindingAdapter("app:chipStarredChecked")
-fun chipStarredChecked(chip: Chip, filter: Filter) {
-    chip.isChecked = filter.isStarred()
-}
-
 // Topics and types ChipGroups. Add all tags.
 @BindingAdapter("app:tags", "app:viewModel", requireAll = true)
 fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewModel) {
