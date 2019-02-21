@@ -7,6 +7,8 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.Tag
 import iclaude.festivaleconomia2019.model.data_classes.hasSessionUrl
@@ -16,6 +18,7 @@ import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.sessions.filters.Filter
 import iclaude.festivaleconomia2019.ui.sessions.filters.isFilterSet
 import iclaude.festivaleconomia2019.ui.sessions.filters.isStarred
+import iclaude.festivaleconomia2019.ui.utils.SingleLiveEvent
 import org.threeten.bp.temporal.ChronoUnit
 import javax.inject.Inject
 
@@ -114,9 +117,21 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         updateFilter(filter)
     }
 
-    val collapseFilterSheetObs: ObservableInt = ObservableInt(0)
-    fun collapseFilterSheet() {
-        collapseFilterSheetObs.set(collapseFilterSheetObs.get() + 1)
+    // Filter sheet commands.
+    val changeFilterSheetState: SingleLiveEvent<Int> = SingleLiveEvent()
+
+    fun changeFilterSheetState(toExpand: Boolean) {
+        // expand
+        if (toExpand) {
+            changeFilterSheetState.value = STATE_EXPANDED
+            return
+        }
+
+        // collapse or hide depending on filters
+        changeFilterSheetState.value = when (hasAnyFiltersObs.get()) {
+            true -> BottomSheetBehavior.STATE_COLLAPSED
+            else -> BottomSheetBehavior.STATE_HIDDEN
+        }
     }
 }
 

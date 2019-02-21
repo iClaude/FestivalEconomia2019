@@ -10,7 +10,8 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.google.android.material.bottomsheet.BottomSheetBehavior.*
+import com.google.android.material.bottomsheet.BottomSheetBehavior.BottomSheetCallback
+import com.google.android.material.bottomsheet.BottomSheetBehavior.from
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
 import kotlinx.android.synthetic.main.fragment_session_container.*
@@ -64,20 +65,16 @@ class SessionContainerFragment : Fragment() {
         })
         tabs.setupWithViewPager(viewPager)
 
-        // fab
-        fabFilter.setOnClickListener {
-            fragmentManager?.run {
-                bottomSheetBehavior.state = STATE_EXPANDED
-            }
-        }
-
         // filter sheet
+        bottomSheetBehavior = from(bottomSheet)
         viewModel.run {
             titleHeaderAlphaObs.set(0f)
-            collapseFilterSheet()
+            changeFilterSheetState(false)
+            changeFilterSheetState.observe(this@SessionContainerFragment, Observer {
+                bottomSheetBehavior.state = it
+            })
         }
 
-        bottomSheetBehavior = from(bottomSheet)
         bottomSheetBehavior.setBottomSheetCallback(object : BottomSheetCallback() {
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
                 viewModel.titleHeaderAlphaObs.set(slideOffset)

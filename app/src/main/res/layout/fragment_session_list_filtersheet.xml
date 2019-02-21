@@ -26,9 +26,7 @@
             android:paddingBottom="@dimen/margin_small"
             android:layout_marginBottom="4dp"
             app:behavior_peekHeight="@dimen/filtersheet_peek_height"
-            app:filterSheetHideable="@{viewModelDer.hasAnyFiltersObs}"
-            app:collapseFilterSheet="@{viewModelDer.collapseFilterSheetObs}"
-            app:viewModel="@{viewModelDer}">
+            app:filterSheetHideable="@{viewModelDer.hasAnyFiltersObs}">
 
         <TextView
                 android:layout_width="wrap_content"
@@ -130,7 +128,7 @@
                 android:layout_marginEnd="@dimen/margin_small"
                 android:alpha="@{viewModelDer.titleHeaderAlphaObs}"
                 android:clickable="@{viewModelDer.titleHeaderAlphaObs > 0f}"
-                android:onClick="@{(v) -> viewModelDer.collapseFilterSheet()}"
+                android:onClick="@{(v) -> viewModelDer.changeFilterSheetState(false)}"
                 app:layout_constraintTop_toTopOf="parent"
                 android:background="?selectableItemBackgroundBorderless"
                 android:contentDescription="@string/content_description"

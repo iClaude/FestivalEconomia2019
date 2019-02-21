@@ -29,17 +29,6 @@ fun filterSheetHideable(constraintLayout: ConstraintLayout, hasAnyFilters: Boole
     }
 }
 
-@BindingAdapter("app:collapseFilterSheet", "app:viewModel", requireAll = true)
-fun collapseFilterSheet(constraintLayout: ConstraintLayout, count: Int, viewModel: SessionListViewModel) {
-    if (count == 0) return
-    BottomSheetBehavior.from(constraintLayout).apply {
-        state = when (viewModel.hasAnyFiltersObs.get()) {
-            true -> BottomSheetBehavior.STATE_COLLAPSED
-            else -> BottomSheetBehavior.STATE_HIDDEN
-        }
-    }
-}
-
 // Title. If filter is not set, display "Filters", otherwise display "x sessions" (number of filtered sessions).
 @BindingAdapter("app:isFilterSet", "app:sessionsFiltered", requireAll = true)
 fun title(textView: TextView, isFilterSet: Boolean, sessions: Int) {
