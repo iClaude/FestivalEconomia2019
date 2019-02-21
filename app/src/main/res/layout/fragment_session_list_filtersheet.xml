@@ -28,6 +28,74 @@
             app:behavior_peekHeight="@dimen/filtersheet_peek_height"
             app:filterSheetHideable="@{viewModelDer.isFilterTaggedObs || viewModelDer.isFilterStarredObs}">
 
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guideline1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                               android:layout_height="wrap_content"
+                                                               android:orientation="vertical">
+                <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/cgTypes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2"
+                        app:viewModel="@{viewModelDer}"
+                        app:tags="@{viewModelDer.tagsObs}"
+                        app:uncheckTags="@{viewModelDer.clearTagsObs}"
+                        android:layout_marginTop="@dimen/margin_small"
+                />
+                <TextView
+                        android:text="@string/tags_types"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView2" app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cgTopics"
+                        android:layout_marginTop="24dp"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"/>
+                <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/cgTopics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/textView"
+                        app:viewModel="@{viewModelDer}"
+                        app:tags="@{viewModelDer.tagsObs}"
+                        app:uncheckTags="@{viewModelDer.clearTagsObs}"
+                        android:layout_marginTop="@dimen/margin_small"
+                />
+                <TextView
+                        android:text="@string/tags_topics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="24dp"
+                        app:layout_constraintTop_toBottomOf="@+id/chipStarred"/>
+                <com.google.android.material.chip.Chip
+                        android:id="@+id/chipStarred"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/csl_filter_chip_starred_foreground"
+                        app:chipBackgroundColor="@color/csl_filter_chip_starred_background"
+                        app:closeIconTint="@color/csl_filter_chip_starred_foreground"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="@string/starred_events"
+                        android:checked="@{viewModelDer.isFilterStarredObs}"
+                        android:onCheckedChanged="@{(compoundButton, isChecked) -> viewModelDer.chipStarredCheckedChanged(compoundButton, isChecked)}"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,65 +126,6 @@
                 android:layout_marginStart="@dimen/margin_normal" android:visibility="visible"
                 app:layout_constraintBottom_toTopOf="@+id/guideline1"
                 tools:visibility="visible"/>
-
-        <com.google.android.material.chip.Chip
-                android:id="@+id/chipStarred"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/csl_filter_chip_starred_foreground"
-                app:chipBackgroundColor="@color/csl_filter_chip_starred_background"
-                app:closeIconTint="@color/csl_filter_chip_starred_foreground"
-                app:layout_constraintTop_toBottomOf="@+id/guideline1" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal" android:text="@string/starred_events"
-                android:checked="@{viewModelDer.isFilterStarredObs}"
-                android:onCheckedChanged="@{(compoundButton, isChecked) -> viewModelDer.chipStarredCheckedChanged(compoundButton, isChecked)}"
-                android:layout_marginTop="4dp"/>
-
-        <TextView
-                android:text="@string/tags_topics"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal" android:layout_marginTop="24dp"
-                app:layout_constraintTop_toBottomOf="@+id/chipStarred"/>
-
-        <com.google.android.material.chip.ChipGroup
-                android:id="@+id/cgTopics"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:layout_editor_absoluteX="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                app:viewModel="@{viewModelDer}"
-                app:tags="@{viewModelDer.tagsObs}"
-                app:uncheckTags="@{viewModelDer.clearTagsObs}"
-                android:layout_marginTop="@dimen/margin_small"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:layout_marginEnd="@dimen/margin_normal"/>
-
-        <TextView
-                android:text="@string/tags_types"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView2" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal" app:layout_constraintTop_toBottomOf="@+id/cgTopics"
-                android:layout_marginTop="24dp"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"/>
-
-        <com.google.android.material.chip.ChipGroup
-                android:id="@+id/cgTypes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/textView2"
-                app:viewModel="@{viewModelDer}"
-                app:tags="@{viewModelDer.tagsObs}"
-                app:uncheckTags="@{viewModelDer.clearTagsObs}"
-                tools:layout_editor_absoluteX="16dp"
-                android:layout_marginTop="@dimen/margin_small"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:layout_marginEnd="@dimen/margin_normal"/>
 
         <ImageButton
                 android:id="@+id/ibCollapse"
@@ -173,7 +182,7 @@
                 app:goneUnless="@{viewModelDer.titleHeaderAlphaObs == 0}"/>
 
         <View android:layout_width="0dp"
-              android:layout_height="wrap_content"
+              android:layout_height="0dp"
               app:layout_constraintTop_toTopOf="parent"
               app:layout_constraintBottom_toTopOf="@+id/guideline1"
               app:layout_constraintStart_toStartOf="parent"
