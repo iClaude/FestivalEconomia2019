@@ -26,6 +26,8 @@ import javax.inject.Inject
 class SessionListViewModel(val context: Application) : AndroidViewModel(context) {
     private lateinit var sessionsInfo: List<SessionsDisplayInfo>
 
+    private val starredTag = Tag("99", "none", "Favorites", "#212121", "#1de9b6")
+
     var filterSelected: MutableLiveData<Filter> = MutableLiveData()
     val isFilterTaggedObs: ObservableBoolean = ObservableBoolean(false)
     val isFilterStarredObs: ObservableBoolean = ObservableBoolean(false)
@@ -38,6 +40,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         filterTagsObs.apply {
             clear()
             filter?.let {
+                if (filter.isStarred()) this.add(starredTag)
                 this.addAll(it.tags)
             }
         }

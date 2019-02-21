@@ -88,7 +88,6 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/csl_filter_chip_starred_foreground"
                         app:chipBackgroundColor="@color/csl_filter_chip_starred_background"
-                        app:closeIconTint="@color/csl_filter_chip_starred_foreground"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         android:text="@string/starred_events"
