@@ -169,7 +169,8 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_session_tag"
                 android:alpha="@{1f - viewModelDer.titleHeaderAlphaObs}"
-                app:filterTags="@{viewModelDer.filterTagsObs}"/>
+                app:filterTags="@{viewModelDer.filterTagsObs}"
+                app:goneUnless="@{viewModelDer.titleHeaderAlphaObs == 0}"/>
 
         <View android:layout_width="0dp"
               android:layout_height="wrap_content"
@@ -179,10 +180,10 @@
               android:layout_marginStart="@dimen/margin_normal"
               app:layout_constraintEnd_toStartOf="@+id/ibClearFilters"
               android:layout_marginEnd="@dimen/margin_small"
-              android:clickable="@{viewModelDer.titleHeaderAlphaObs == 0f}"
+              android:clickable="@{viewModelDer.titleHeaderAlphaObs == 0}"
               android:alpha="0"
               android:onClick="@{(v) -> viewModelDer.changeFilterSheetState(true)}"
-              app:goneUnless="@{viewModelDer.titleHeaderAlphaObs == 0f}"/>
+              app:goneUnless="@{viewModelDer.titleHeaderAlphaObs == 0}"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
