@@ -28,7 +28,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     private val starredTag = Tag("99", "none", "Favorites", "#212121", "#1de9b6")
 
-    var filterSelected: MutableLiveData<Filter> = MutableLiveData()
+    val filterSelected: MutableLiveData<Filter> = MutableLiveData()
     val isFilterTaggedObs: ObservableBoolean = ObservableBoolean(false)
     val isFilterStarredObs: ObservableBoolean = ObservableBoolean(false)
     val filterTagsObs: ObservableList<Tag> = ObservableArrayList()
@@ -67,9 +67,9 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     @Inject
     lateinit var repository: EventDataRepository
 
-    var dataLoadedObs: ObservableBoolean = ObservableBoolean(false)
+    val dataLoadedObs: ObservableBoolean = ObservableBoolean(false)
 
-    var sessionsFilteredObs: ObservableInt = ObservableInt(0)
+    val sessionsFilteredObs: ObservableInt = ObservableInt(0)
     val sessionsInfoFilteredLive: LiveData<List<SessionsDisplayInfo>>
         get() = Transformations.switchMap(filterSelected) { filter ->
             val filteredList = sessionsInfo.toMutableList()
