@@ -72,13 +72,15 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     val sessionsFilteredObs: ObservableInt = ObservableInt(0)
     val sessionsInfoFilteredLive: LiveData<List<SessionsDisplayInfo>>
         get() = Transformations.switchMap(filterSelected) { filter ->
-            val filteredList = sessionsInfo.toMutableList()
+            var filteredList = sessionsInfo.toMutableList()
 
             // filter by tags and starred
-            if (filter.isFilterSet()) {
-                filteredList.retainAll {
-                    it.tags.intersect(filter.tags).isNotEmpty() || (filter.isStarred() && it.starred)
-                }
+            if(filter.isFilterSet()) {
+                filteredList = sessionsInfo.filter {
+                    !(filter.isStarred().xor(it.starred))
+                }.filter {
+                    it.tags.intersect(filter.tags).isNotEmpty()
+                }.toMutableList()
             }
 
             sessionsFilteredObs.set(filteredList.size)
