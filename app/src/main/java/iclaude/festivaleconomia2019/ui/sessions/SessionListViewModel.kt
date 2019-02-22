@@ -138,6 +138,8 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         updateFilter(filter)
     }
 
+    val scrollYObs: ObservableInt = ObservableInt(0)
+
     // Filter sheet commands.
     val changeFilterSheetStateCommand: SingleLiveEvent<Int> = SingleLiveEvent()
     val removeFilterSheetCommand: SingleLiveEvent<Void> = SingleLiveEvent()

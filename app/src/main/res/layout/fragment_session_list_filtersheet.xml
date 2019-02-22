@@ -30,9 +30,9 @@
 
 
         <androidx.core.widget.NestedScrollView
+                android:id="@+id/nsvContent"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginTop="@dimen/margin_small"
                 android:layout_marginStart="@dimen/margin_normal"
                 android:layout_marginEnd="@dimen/margin_normal"
                 app:layout_constraintStart_toStartOf="parent"
@@ -192,6 +192,24 @@
               android:alpha="0"
               android:onClick="@{(v) -> viewModelDer.changeFilterSheetState(true)}"
               app:goneUnless="@{viewModelDer.titleHeaderAlphaObs != 1}"/>
+
+        <!--
+          ~ Mimics raising the elevation of a container around the header elements (like when an
+          ~ AppBarLayout reaches the collapsed state). We fake this because (a) there is no
+          ~ container view around these views, and (b) the extra elevation shows along the top of
+          ~ the sheet, particularly around the rounded corners, and doesn't look good.
+          -->
+        <View
+                android:id="@+id/filters_header_shadow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/guideline1"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:alpha="0"
+                android:background="@drawable/filters_sheet_header_shadow"
+                android:stateListAnimator="@animator/active_alpha"
+                app:scrolling="@{viewModelDer.scrollYObs}"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -83,6 +83,14 @@ fun filterTags(recyclerView: RecyclerView, filterTags: List<Tag>?) {
         }
 }
 
+@BindingAdapter("app:scrolling")
+fun changeElevationWhenScrolling(view: View, scrollY: Int) {
+    view.isActivated = when (scrollY) {
+        in 1..Int.MAX_VALUE -> true
+        else -> false
+    }
+}
+
 // Filter chip binding adapters.
 @BindingAdapter("app:colors")
 fun colorChip(chip: Chip, tag: Tag) {

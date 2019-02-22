@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -15,6 +16,7 @@ import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
 import kotlinx.android.synthetic.main.fragment_session_container.*
 import kotlinx.android.synthetic.main.fragment_session_container_appbar.*
+import kotlinx.android.synthetic.main.fragment_session_list_filtersheet.*
 
 
 class SessionContainerFragment : Fragment() {
@@ -68,6 +70,7 @@ class SessionContainerFragment : Fragment() {
         bottomSheetBehavior = from(bottomSheet)
         viewModel.run {
             titleHeaderAlphaObs.set(0f)
+            scrollYObs.set(0)
             changeFilterSheetState(false)
             changeFilterSheetStateCommand.observe(this@SessionContainerFragment, Observer {
                 bottomSheetBehavior.state = it
@@ -79,6 +82,10 @@ class SessionContainerFragment : Fragment() {
                 }
 
             })
+        }
+
+        nsvContent.setOnScrollChangeListener { v: NestedScrollView?, scrollX: Int, scrollY: Int, oldScrollX: Int, oldScrollY: Int ->
+            viewModel.scrollYObs.set(scrollY)
         }
 
         bottomSheetBehavior.setBottomSheetCallback(object : BottomSheetCallback() {
