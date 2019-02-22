@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.widget.NestedScrollView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -21,6 +22,21 @@ import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 import iclaude.festivaleconomia2019.ui.sessions.TagAdapter
 
 // Filter sheet binding adapters.
+
+// Change header alpha on view model when sliding the bottom sheet.
+@BindingAdapter("app:bottomSheetCallback")
+fun addBottomSheetCallback(view: View, viewModel: SessionListViewModel) {
+    with(BottomSheetBehavior.from(view)) {
+        setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
+            override fun onSlide(bottomSheet: View, slideOffset: Float) {
+                viewModel.titleHeaderAlphaObs.set(slideOffset)
+            }
+
+            override fun onStateChanged(bottomSheet: View, newState: Int) {
+            }
+        })
+    }
+}
 
 // Filter sheet is hideable only when filter is not set. Otherwise it gets collapsed when dismissed, displaying the tags selected.
 @BindingAdapter("app:filterSheetHideable")
@@ -83,6 +99,15 @@ fun filterTags(recyclerView: RecyclerView, filterTags: List<Tag>?) {
         }
 }
 
+// Add a scrolling listener to NestedScrollView to update scrollY property in view model.
+@BindingAdapter("app:scrollListener")
+fun addScrollListener(nestedScrollView: NestedScrollView, viewModel: SessionListViewModel) {
+    nestedScrollView.setOnScrollChangeListener { v: NestedScrollView?, scrollX: Int, scrollY: Int, oldScrollX: Int, oldScrollY: Int ->
+        viewModel.scrollYObs.set(scrollY)
+    }
+}
+
+// Add elevation to header when scrolling.
 @BindingAdapter("app:scrolling")
 fun changeElevationWhenScrolling(view: View, scrollY: Int) {
     view.isActivated = when (scrollY) {
