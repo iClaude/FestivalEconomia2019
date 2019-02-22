@@ -86,8 +86,8 @@ class SessionContainerFragment : Fragment() {
 
     inner class SessionsAdapter(
         fm: FragmentManager,
-        private var numDays: Int,
-        private var tabsInfo: MutableList<DayLabel>
+        private val numDays: Int,
+        private val tabsInfo: MutableList<DayLabel>
     ) : FragmentPagerAdapter(fm) {
 
         override fun getCount() = numDays + 1
