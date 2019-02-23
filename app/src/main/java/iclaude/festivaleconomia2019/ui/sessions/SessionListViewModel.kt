@@ -2,6 +2,7 @@ package iclaude.festivaleconomia2019.ui.sessions
 
 import android.app.Application
 import android.widget.CompoundButton
+import androidx.core.content.ContextCompat
 import androidx.databinding.*
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
@@ -9,6 +10,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
+import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.Tag
 import iclaude.festivaleconomia2019.model.data_classes.hasSessionUrl
@@ -23,38 +25,19 @@ import javax.inject.Inject
 class SessionListViewModel(val context: Application) : AndroidViewModel(context) {
     private lateinit var sessionsInfo: List<SessionsDisplayInfo>
 
-    private val starredTag = Tag("99", "none", "Favorites", "#212121", "#1de9b6")
-
-    val filterSelected: MutableLiveData<Filter> = MutableLiveData()
-    val isFilterTaggedObs: ObservableBoolean = ObservableBoolean(false)
-    val isFilterStarredObs: ObservableBoolean = ObservableBoolean(false)
-    val filterTagsObs: ObservableList<Tag> = ObservableArrayList()
-
-    fun updateFilter(filter: Filter?) {
-        filterSelected.value = filter
-        isFilterTaggedObs.set(filter?.hasTags() ?: false)
-        isFilterStarredObs.set(filter?.isStarred() ?: false)
-        filterTagsObs.apply {
-            clear()
-            filter?.let {
-                if (filter.isStarred()) this.add(starredTag)
-                this.addAll(it.tagsTypes + it.tagsTopics)
-            }
-        }
-    }
-
-    fun clearFilters() {
-        filterSelected.value = Filter()
-        isFilterTaggedObs.set(false)
-        isFilterStarredObs.set(false)
-        clearTagsObs.set(clearTagsObs.get() + 1)
-        filterTagsObs.clear()
-    }
-
-    fun clearFiltersAndCollapse() {
-        clearFilters()
-        removeFilterSheetCommand.call()
-    }
+    val filterSelected: MutableLiveData<Filter> = MutableLiveData() // filter currently applied
+    private val starredTag = Tag(
+        "99",
+        "none",
+        context.getString(R.string.filter_favorites),
+        Integer.toHexString(ContextCompat.getColor(context, R.color.onSurfaceColor)),
+        "#" + Integer.toHexString(ContextCompat.getColor(context, R.color.secondaryColor))
+    )
+    val isFilterTaggedObs: ObservableBoolean = ObservableBoolean(false) // does current filter have tags?
+    val isFilterStarredObs: ObservableBoolean =
+        ObservableBoolean(false) // does current filter include starred sessions?
+    val filterTagsObs: ObservableList<Tag> =
+        ObservableArrayList() // list of selected tags (filters) to show when filter sheet is collapsed
 
     init {
         App.component.inject(this)
@@ -125,7 +108,32 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
-    // Data for filter sheet.
+    // Filtering BottomSheet.
+
+    fun updateFilter(filter: Filter) {
+        filterSelected.value = filter
+        isFilterTaggedObs.set(filter.hasTags())
+        isFilterStarredObs.set(filter.isStarred())
+        filterTagsObs.apply {
+            clear()
+            if (filter.isStarred()) this.add(starredTag)
+            this.addAll(filter.tagsTypes + filter.tagsTopics)
+        }
+    }
+
+    fun clearFilters() {
+        filterSelected.value = Filter()
+        isFilterTaggedObs.set(false)
+        isFilterStarredObs.set(false)
+        clearTagsObs.set(clearTagsObs.get() + 1)
+        filterTagsObs.clear()
+    }
+
+    fun clearFiltersAndCollapse() {
+        clearFilters()
+        removeFilterSheetCommand.call()
+    }
+
     val tagsObs: ObservableList<Tag> = ObservableArrayList()
     private fun loadAllTags() {
         val tags = repository.eventDataLive.value?.tags
@@ -138,8 +146,8 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     val titleHeaderAlphaObs: ObservableFloat = ObservableFloat(0f)
 
     fun chipStarredCheckedChanged(compoundButton: CompoundButton, isChecked: Boolean) {
-        val filter = filterSelected.value
-        filter?.starred = isChecked
+        val filter = filterSelected.value ?: Filter()
+        filter.starred = isChecked
         updateFilter(filter)
     }
 

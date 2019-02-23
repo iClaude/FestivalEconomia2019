@@ -139,11 +139,11 @@ fun addChipListeners(chip: Chip, viewModel: SessionListViewModel, tag: Tag) {
 
 // Utility functions.
 private fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, tag: Tag) {
-    val filter = viewModel.filterSelected.value
+    val filter = viewModel.filterSelected.value ?: Filter()
     when(tag.category) {
-        CATEGORY_TYPE -> filter?.tagsTypes
-        else -> filter?.tagsTopics
-    }?.let {
+        CATEGORY_TYPE -> filter.tagsTypes
+        else -> filter.tagsTopics
+    }.let {
         when (toAdd) {
             true -> it.add(tag)
             else -> it.remove(tag)

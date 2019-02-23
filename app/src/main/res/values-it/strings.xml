@@ -28,4 +28,5 @@
         <item quantity="other">%d sessioni</item>
     </plurals>
     <string name="filter_reset">Reimposta</string>
+    <string name="filter_favorites">Preferiti</string>
 </resources>

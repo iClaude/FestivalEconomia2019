@@ -22,6 +22,7 @@
     <string name="starred_events">Your starred events</string>
     <string name="starred_events_short">Starred</string>
     <string name="filter_reset">Reset</string>
+    <string name="filter_favorites">Favorites</string>
     <plurals name="time_hours">
         <item quantity="one">%d hour</item>
         <item quantity="other">%d hours</item>
