@@ -23,33 +23,25 @@ import org.threeten.bp.temporal.ChronoUnit
 import javax.inject.Inject
 
 class SessionListViewModel(val context: Application) : AndroidViewModel(context) {
-    private lateinit var sessionsInfo: List<SessionsDisplayInfo>
 
+    // ************************ Filters ******************************
     val filterSelected: MutableLiveData<Filter> = MutableLiveData() // filter currently applied
-    private val starredTag = Tag(
-        "99",
-        "none",
-        context.getString(R.string.filter_favorites),
-        Integer.toHexString(ContextCompat.getColor(context, R.color.onSurfaceColor)),
-        "#" + Integer.toHexString(ContextCompat.getColor(context, R.color.secondaryColor))
-    )
     val isFilterTaggedObs: ObservableBoolean = ObservableBoolean(false) // does current filter have tags?
     val isFilterStarredObs: ObservableBoolean =
         ObservableBoolean(false) // does current filter include starred sessions?
     val filterTagsObs: ObservableList<Tag> =
         ObservableArrayList() // list of selected tags (filters) to show when filter sheet is collapsed
 
-    init {
-        App.component.inject(this)
-        updateFilter(Filter())
-    }
 
+    // ********************* Sessions list ******************************
     @Inject
     lateinit var repository: EventDataRepository
 
+    private lateinit var sessionsInfo: List<SessionsDisplayInfo>
+
     val dataLoadedObs: ObservableBoolean = ObservableBoolean(false)
 
-    val sessionsFilteredObs: ObservableInt = ObservableInt(0)
+    // List of filtered sessions. When filterSelected changes, this list changes too using a switchMap transformation.
     val sessionsInfoFilteredLive: LiveData<List<SessionsDisplayInfo>>
         get() = Transformations.switchMap(filterSelected) { filter ->
             var filteredList = sessionsInfo.toMutableList()
@@ -73,7 +65,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
             MutableLiveData<List<SessionsDisplayInfo>>().apply { value = filteredList }
         }
 
-    // load original list of sessions when data is loaded: triggered from SessionContainerFragment
+    // load original list of sessions when data is loaded from repository: triggered from SessionContainerFragment
     fun loadInfoList(eventData: EventData) {
         sessionsInfo = eventData.sessions.map { session ->
             SessionsDisplayInfo(
@@ -90,11 +82,13 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
             )
         }
 
-        filterByDays(sessionsInfo)
+        paginateByDay(sessionsInfo)
         loadAllTags()
     }
 
-    private fun filterByDays(sessions: List<SessionsDisplayInfo>) {
+    /* Add day number on each session. This is used to separate sessions by day (filtering is done by
+        SessionListFragment.*/
+    private fun paginateByDay(sessions: List<SessionsDisplayInfo>) {
         var i = 0
         var baseDay = timestampToZonedDateTime(sessions[0].startTimestamp, context)
         for (session in sessions) {
@@ -108,8 +102,8 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
-    // Filtering BottomSheet.
-
+    // ********************** filtering BottomSheet ******************************
+    // operations
     fun updateFilter(filter: Filter) {
         filterSelected.value = filter
         isFilterTaggedObs.set(filter.hasTags())
@@ -121,6 +115,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
+    // reset button is clicked when filter sheet is expanded: all filters are cleared
     fun clearFilters() {
         filterSelected.value = Filter()
         isFilterTaggedObs.set(false)
@@ -129,31 +124,47 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         filterTagsObs.clear()
     }
 
+    // clear filters button is clicked when filter sheet is collapsed: clear filter and hide bottom sheet
     fun clearFiltersAndCollapse() {
         clearFilters()
         removeFilterSheetCommand.call()
     }
 
-    val tagsObs: ObservableList<Tag> = ObservableArrayList()
-    private fun loadAllTags() {
-        val tags = repository.eventDataLive.value?.tags
-        tagsObs.clear()
-        tagsObs.addAll(tags ?: return)
-    }
-
-    val clearTagsObs: ObservableInt = ObservableInt(0)
-
-    val titleHeaderAlphaObs: ObservableFloat = ObservableFloat(0f)
-
+    // chip for starred sessions is checked/unchecked
     fun chipStarredCheckedChanged(compoundButton: CompoundButton, isChecked: Boolean) {
         val filter = filterSelected.value ?: Filter()
         filter.starred = isChecked
         updateFilter(filter)
     }
 
-    val scrollYObs: ObservableInt = ObservableInt(0)
+    // BottomSheet UI
+    private val starredTag = Tag( // tag for favorite sessions
+        "99",
+        "none",
+        context.getString(R.string.filter_favorites),
+        Integer.toHexString(ContextCompat.getColor(context, R.color.onSurfaceColor)),
+        "#" + Integer.toHexString(ContextCompat.getColor(context, R.color.secondaryColor))
+    )
 
-    // Filter sheet commands.
+    val sessionsFilteredObs: ObservableInt =
+        ObservableInt(0) // number of filtered sessions (to display in filter sheets when some tags are selected)
+
+    val tagsObs: ObservableList<Tag> = ObservableArrayList() // list of all tags: used to add Chips to ChipGroups
+    private fun loadAllTags() {
+        val tags = repository.eventDataLive.value?.tags
+        tagsObs.clear()
+        tagsObs.addAll(tags ?: return)
+    }
+
+    val clearTagsObs: ObservableInt =
+        ObservableInt(0) // when filter is cleared all Chips in ChipGroups must be unchecked
+
+    val titleHeaderAlphaObs: ObservableFloat = ObservableFloat(0f) // change header alpha when draggin bottom sheet
+
+    val scrollYObs: ObservableInt =
+        ObservableInt(0) // scroll view inside bottom sheet y offset (used to change header elevation)
+
+    // BottomSheet expand/collapse states
     val changeFilterSheetStateCommand: SingleLiveEvent<Int> = SingleLiveEvent()
     val removeFilterSheetCommand: SingleLiveEvent<Void> = SingleLiveEvent()
 
@@ -170,8 +181,14 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
             else -> BottomSheetBehavior.STATE_HIDDEN
         }
     }
+
+    init {
+        App.component.inject(this)
+        updateFilter(Filter())
+    }
 }
 
+// ********************* Sessions' info to display in the list. ****************************
 class SessionsDisplayInfo(
     val id: String,
     val title: String,
