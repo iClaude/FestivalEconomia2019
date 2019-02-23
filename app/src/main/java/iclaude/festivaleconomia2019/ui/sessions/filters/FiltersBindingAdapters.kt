@@ -117,6 +117,7 @@ fun changeElevationWhenScrolling(view: View, scrollY: Int) {
 }
 
 // Filter chip binding adapters.
+
 @BindingAdapter("app:colors")
 fun colorChip(chip: Chip, tag: Tag) {
     val colorStateList = createChipColorStateList(tag.colorInt)
@@ -131,18 +132,24 @@ fun colorChip(chip: Chip, tag: Tag) {
 fun addChipListeners(chip: Chip, viewModel: SessionListViewModel, tag: Tag) {
     chip.run {
         setOnCheckedChangeListener { buttonView, isChecked ->
-            updateFilter(isChecked, viewModel, buttonView, tag)
+            updateFilter(isChecked, viewModel, tag)
         }
     }
 }
 
 // Utility functions.
-private fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, view: View, tag: Tag) {
+private fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, tag: Tag) {
     val filter = viewModel.filterSelected.value
-    when (toAdd) {
-        true -> filter?.tags?.add(tag)
-        else -> filter?.tags?.remove(tag)
+    when(tag.category) {
+        CATEGORY_TYPE -> filter?.tagsTypes
+        else -> filter?.tagsTopics
+    }?.let {
+        when (toAdd) {
+            true -> it.add(tag)
+            else -> it.remove(tag)
+        }
     }
+
     viewModel.updateFilter(filter)
 }
 

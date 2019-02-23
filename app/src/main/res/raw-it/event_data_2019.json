@@ -453,14 +453,14 @@
   "tags": [
     {
       "id": "00",
-      "color": "#3D82EE",
-      "fontColor": "#FFFFFF",
+      "color": "#aaaaaa",
+      "fontColor": "#202124",
       "name": "Keynote",
       "category": "type"
     },
     {
       "id": "01",
-      "color": "#cce9c2",
+      "color": "#aaaaaa",
       "fontColor": "#202124",
       "name": "Session",
       "category": "type"

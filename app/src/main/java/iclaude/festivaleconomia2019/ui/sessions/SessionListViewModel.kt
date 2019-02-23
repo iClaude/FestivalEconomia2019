@@ -15,10 +15,7 @@ import iclaude.festivaleconomia2019.model.data_classes.hasSessionUrl
 import iclaude.festivaleconomia2019.model.data_classes.hasYoutubeUrl
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
-import iclaude.festivaleconomia2019.ui.sessions.filters.Filter
-import iclaude.festivaleconomia2019.ui.sessions.filters.hasTags
-import iclaude.festivaleconomia2019.ui.sessions.filters.isFilterSet
-import iclaude.festivaleconomia2019.ui.sessions.filters.isStarred
+import iclaude.festivaleconomia2019.ui.sessions.filters.*
 import iclaude.festivaleconomia2019.ui.utils.SingleLiveEvent
 import org.threeten.bp.temporal.ChronoUnit
 import javax.inject.Inject
@@ -41,7 +38,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
             clear()
             filter?.let {
                 if (filter.isStarred()) this.add(starredTag)
-                this.addAll(it.tags)
+                this.addAll(it.tagsTypes + it.tagsTopics)
             }
         }
     }
@@ -75,13 +72,19 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
             var filteredList = sessionsInfo.toMutableList()
 
             // filter by tags and starred
-            if(filter.isFilterSet()) {
-                filteredList = sessionsInfo.filter {
-                    !(filter.isStarred().xor(it.starred))
-                }.filter {
-                    it.tags.intersect(filter.tags).isNotEmpty()
-                }.toMutableList()
-            }
+            if(filter.isFilterSet()) filteredList = sessionsInfo.filter {
+                !(filter.isStarred().xor(it.starred))
+            }.filter {
+               if(filter.hasTypeTags())
+                   it.tags.intersect(filter.tagsTypes).isNotEmpty()
+               else
+                   true
+            }.filter {
+                if(filter.hasTopicTags())
+                    it.tags.intersect(filter.tagsTopics).isNotEmpty()
+                else
+                    true
+            }.toMutableList()
 
             sessionsFilteredObs.set(filteredList.size)
             MutableLiveData<List<SessionsDisplayInfo>>().apply { value = filteredList }

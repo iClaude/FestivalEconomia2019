@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{tag.name}"
-            android:checked="@{filter.tags != null ? filter.tags.contains(tag) : false}"
+            android:checked="@{filter.tagsTypes.contains(tag) || filter.tagsTopics.contains(tag)}"
             app:colors="@{tag}"
             app:listeners="@{viewModel}"
             app:tag="@{tag}"/>
