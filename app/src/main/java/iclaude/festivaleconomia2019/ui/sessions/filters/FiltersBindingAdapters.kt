@@ -3,8 +3,6 @@ package iclaude.festivaleconomia2019.ui.sessions.filters
 import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.widget.NestedScrollView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -21,7 +19,7 @@ import iclaude.festivaleconomia2019.model.data_classes.fontColorInt
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 import iclaude.festivaleconomia2019.ui.sessions.TagAdapter
 
-// Filter sheet binding adapters.
+//********************************** Filter sheet binding adapters. ************************************************
 
 // Change header alpha on view model when sliding the bottom sheet.
 @BindingAdapter("app:bottomSheetCallback")
@@ -31,34 +29,23 @@ fun addBottomSheetCallback(view: View, viewModel: SessionListViewModel) {
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
                 viewModel.titleHeaderAlphaObs.set(slideOffset)
             }
-
             override fun onStateChanged(bottomSheet: View, newState: Int) {
             }
         })
     }
 }
 
-// Filter sheet is hideable only when filter is not set. Otherwise it gets collapsed when dismissed, displaying the tags selected.
+/* Filter sheet is hideable only when filter is not set. Otherwise it gets collapsed when dismissed, displaying the
+tags selected.*/
 @BindingAdapter("app:filterSheetHideable")
-fun filterSheetHideable(constraintLayout: ConstraintLayout, hasAnyFilters: Boolean) {
-    BottomSheetBehavior.from(constraintLayout).apply {
+fun filterSheetHideable(view: View, hasAnyFilters: Boolean) {
+    BottomSheetBehavior.from(view).apply {
         isHideable = !hasAnyFilters
         skipCollapsed = !hasAnyFilters
     }
 }
 
-// Title. If filter is not set, display "Filters", otherwise display "x sessions" (number of filtered sessions).
-@BindingAdapter("app:isFilterSet", "app:sessionsFiltered", requireAll = true)
-fun title(textView: TextView, isFilterSet: Boolean, sessions: Int) {
-    var str: String = textView.context.resources.getString(R.string.filters)
-
-    if (isFilterSet) {
-        str = textView.context.resources.getQuantityString(R.plurals.filtered_sessions, sessions, sessions)
-    }
-    textView.text = str
-}
-
-// Topics and types ChipGroups. Add all tags.
+// Chipgroups for topics and types filters. Adds all tags to the layout.
 @BindingAdapter("app:tags", "app:viewModel", requireAll = true)
 fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewModel) {
     chipGroup.removeAllViews()
@@ -85,11 +72,8 @@ fun uncheckTags(chipGroup: ChipGroup, count: Int) {
     if (count > 0) chipGroup.clearCheck()
 }
 
-@BindingAdapter("app:goneUnless")
-fun goneUnless(view: View, isToShow: Boolean) {
-    view.visibility = if (isToShow) View.VISIBLE else View.GONE
-}
-
+/* When the BottomSheet is collapsed and a filter is applied, a RecyclerView displays the selected tags. This adapter
+sets up the adapter of the RecyclerView.*/
 @BindingAdapter("app:filterTags")
 fun filterTags(recyclerView: RecyclerView, filterTags: List<Tag>?) {
     recyclerView.adapter = (recyclerView.adapter as? TagAdapter ?: TagAdapter())
@@ -108,7 +92,7 @@ fun addScrollListener(nestedScrollView: NestedScrollView, viewModel: SessionList
 }
 
 // Add elevation to header when scrolling.
-@BindingAdapter("app:scrolling")
+@BindingAdapter("app:elevated")
 fun changeElevationWhenScrolling(view: View, scrollY: Int) {
     view.isActivated = when (scrollY) {
         in 1..Int.MAX_VALUE -> true
@@ -116,8 +100,9 @@ fun changeElevationWhenScrolling(view: View, scrollY: Int) {
     }
 }
 
-// Filter chip binding adapters.
+//***************************************** Filter chip binding adapters.*******************************************
 
+// Apply background and foreground colors to each Chip.
 @BindingAdapter("app:colors")
 fun colorChip(chip: Chip, tag: Tag) {
     val colorStateList = createChipColorStateList(tag.colorInt)
@@ -130,10 +115,8 @@ fun colorChip(chip: Chip, tag: Tag) {
 
 @BindingAdapter("app:listeners", "app:tag", requireAll = true)
 fun addChipListeners(chip: Chip, viewModel: SessionListViewModel, tag: Tag) {
-    chip.run {
-        setOnCheckedChangeListener { buttonView, isChecked ->
-            updateFilter(isChecked, viewModel, tag)
-        }
+    chip.setOnCheckedChangeListener { buttonView, isChecked ->
+        updateFilter(isChecked, viewModel, tag)
     }
 }
 

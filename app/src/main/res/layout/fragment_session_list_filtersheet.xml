@@ -6,6 +6,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <import type="android.view.View"/>
         <variable
                 name="viewModelDer"
                 type="iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel"/>
@@ -107,9 +108,7 @@
                 android:layout_marginEnd="@dimen/margin_normal"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="?android:textColorPrimary"
-                android:text="@string/filters"
-                app:isFilterSet="@{viewModelDer.isFilterTaggedObs || viewModelDer.isFilterStarredObs}"
-                app:sessionsFiltered="@{viewModelDer.sessionsFilteredObs}"
+                android:text="@{(viewModelDer.isFilterTaggedObs || viewModelDer.isFilterStarredObs)? @plurals/filtered_sessions(viewModelDer.sessionsFilteredObs, viewModelDer.sessionsFilteredObs) : @string/filters}"
                 app:layout_constraintBottom_toTopOf="@+id/guideline1"
                 app:layout_constraintTop_toTopOf="parent"/>
 
@@ -119,12 +118,12 @@
                 android:clickable="@{viewModelDer.titleHeaderAlphaObs > 0f}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:goneUnless="@{viewModelDer.isFilterTaggedObs || viewModelDer.isFilterStarredObs}"
+                android:visibility="@{(viewModelDer.isFilterTaggedObs || viewModelDer.isFilterStarredObs)? View.VISIBLE : View.GONE}"
                 android:onClick="@{(v) -> viewModelDer.clearFilters()}"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:id="@+id/bReset"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal" android:visibility="visible"
+                android:layout_marginStart="@dimen/margin_normal"
                 app:layout_constraintBottom_toTopOf="@+id/guideline1"
                 tools:visibility="visible"/>
 
@@ -180,7 +179,7 @@
                 tools:listitem="@layout/item_session_tag"
                 android:alpha="@{1f - viewModelDer.titleHeaderAlphaObs}"
                 app:filterTags="@{viewModelDer.filterTagsObs}"
-                app:goneUnless="@{viewModelDer.titleHeaderAlphaObs != 1}"/>
+                android:visibility="@{(viewModelDer.titleHeaderAlphaObs != 1)? View.VISIBLE : View.GONE}"/>
 
         <View android:layout_width="0dp"
               android:layout_height="0dp"
@@ -193,7 +192,7 @@
               android:clickable="@{viewModelDer.titleHeaderAlphaObs == 0}"
               android:alpha="0"
               android:onClick="@{(v) -> viewModelDer.changeFilterSheetState(true)}"
-              app:goneUnless="@{viewModelDer.titleHeaderAlphaObs != 1}"/>
+              android:visibility="@{(viewModelDer.titleHeaderAlphaObs != 1)? View.VISIBLE : View.GONE}"/>
 
         <!--
           ~ Mimics raising the elevation of a container around the header elements (like when an
@@ -211,7 +210,7 @@
                 android:alpha="0"
                 android:background="@drawable/filters_sheet_header_shadow"
                 android:stateListAnimator="@animator/active_alpha"
-                app:scrolling="@{viewModelDer.scrollYObs}"/>
+                app:elevated="@{viewModelDer.scrollYObs}"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
