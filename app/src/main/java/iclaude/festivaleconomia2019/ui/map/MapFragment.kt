@@ -1,12 +1,16 @@
 package iclaude.festivaleconomia2019.ui.map
 
+import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -19,10 +23,13 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDE
 import iclaude.festivaleconomia2019.databinding.FragmentMapBinding
 
 
+const val LOCATION_PERMISSION = 99
+
 class MapFragment : Fragment(), OnMapReadyCallback {
 
     private lateinit var viewModel: MapViewModel
     private lateinit var mapView: MapView
+    private var googleMap: GoogleMap? = null
     private lateinit var binding: FragmentMapBinding
     private lateinit var ivExpandIcon: ImageView
 
@@ -36,7 +43,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMapBinding.inflate(inflater, container, false).apply {
-            setLifecycleOwner(this@MapFragment)
+            lifecycleOwner = this@MapFragment
             viewModel = this@MapFragment.viewModel
         }
 
@@ -97,6 +104,8 @@ class MapFragment : Fragment(), OnMapReadyCallback {
     }
 
     override fun onMapReady(gMap: GoogleMap?) {
+        googleMap = gMap
+
         viewModel.repository.eventDataLive.observe(this, Observer {
             viewModel.loadMap(it.locations)
         })
@@ -110,6 +119,39 @@ class MapFragment : Fragment(), OnMapReadyCallback {
             setOnMapClickListener { viewModel.onMapClick() }
         }
 
+        // request for displaying user's location
+        if (ContextCompat.checkSelfPermission(activity!!, Manifest.permission.ACCESS_FINE_LOCATION)
+            == PackageManager.PERMISSION_GRANTED
+        ) {
+            showUserPosition()
+        } else {
+            requestPermissions(
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                LOCATION_PERMISSION
+            )
+        }
+
     }
 
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
+        when (requestCode) {
+            LOCATION_PERMISSION -> {
+                if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                    showUserPosition()
+                }
+            }
+            else -> {
+            }
+        }
+    }
+
+    @SuppressLint("MissingPermission")
+    private fun showUserPosition() {
+        googleMap?.isMyLocationEnabled = true
+
+    }
 }

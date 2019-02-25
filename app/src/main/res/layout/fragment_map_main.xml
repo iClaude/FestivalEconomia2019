@@ -40,6 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/mapView"
+                android:paddingTop="?actionBarSize"
                 app:cameraZoom="@dimen/camera_zoom"
                 app:cameraTargetLat="@dimen/map_camera_target_lat"
                 app:cameraTargetLng="@dimen/map_camera_target_lng"
