@@ -19,7 +19,9 @@
             tools:context=".ui.sessions.SessionContainerFragment"
             android:id="@+id/coordinatorLayout">
 
-        <include layout="@layout/fragment_session_container_appbar"/>
+        <include android:id="@+id/appbar"
+                 layout="@layout/fragment_session_container_appbar"
+                 bind:viewModelDer="@{viewModel}"/>
 
         <androidx.viewpager.widget.ViewPager
                 android:id="@+id/viewPager"

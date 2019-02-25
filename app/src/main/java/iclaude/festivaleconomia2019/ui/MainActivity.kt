@@ -47,4 +47,5 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         repository.canceLoadingData()
     }
+
 }

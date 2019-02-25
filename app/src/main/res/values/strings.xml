@@ -36,4 +36,10 @@
         <item quantity="one">%d session</item>
         <item quantity="other">%d sessions</item>
     </plurals>
+
+    <string name="login_error">Login failed with error code: %1$d</string>
+    <string name="logout_dialog_title">Log out?</string>
+    <string name="logout_dialog_msg">This will log you out of the app.</string>
+    <string name="logout_dialog_accept">Accept</string>
+    <string name="logout_dialog_cancel">Cancel</string>
 </resources>
