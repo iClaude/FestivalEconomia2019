@@ -20,6 +20,7 @@
         <item name="colorOnBackground">@color/onBackgroundColor</item>
 
         <item name="android:statusBarColor">@color/statusBarColor</item>
+        <item name="android:navigationBarColor">@color/primaryColor</item>
 
         <!-- Widget global styles. -->
         <item name="bottomNavigationStyle">@style/BottomNavigationView</item>
