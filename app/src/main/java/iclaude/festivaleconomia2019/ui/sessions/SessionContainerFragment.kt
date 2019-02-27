@@ -113,7 +113,7 @@ class SessionContainerFragment : Fragment() {
                 .createSignInIntentBuilder()
                 .setAvailableProviders(providers)
                 .setTheme(R.style.AppTheme)
-                .setLogo(R.drawable.festival_logo)
+                .setLogo(R.drawable.event_logo_login)
                 .build(),
             RC_SIGN_IN
         )
