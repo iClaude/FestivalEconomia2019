@@ -29,4 +29,10 @@
     </plurals>
     <string name="filter_reset">Reimposta</string>
     <string name="filter_favorites">Preferiti</string>
+
+    <string name="login_error">Login fallito con codice errore: %1$d</string>
+    <string name="logout_dialog_title">Log out?</string>
+    <string name="logout_dialog_msg">Sarai disconnesso dall\'app.</string>
+    <string name="logout_dialog_accept">Procedi</string>
+    <string name="logout_dialog_cancel">Annulla</string>
 </resources>

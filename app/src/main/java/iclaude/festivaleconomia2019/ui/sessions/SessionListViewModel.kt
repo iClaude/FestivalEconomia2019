@@ -1,6 +1,7 @@
 package iclaude.festivaleconomia2019.ui.sessions
 
 import android.app.Application
+import android.net.Uri
 import android.widget.CompoundButton
 import androidx.core.content.ContextCompat
 import androidx.databinding.*
@@ -10,6 +11,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.Tag
@@ -182,9 +185,39 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
+    //***************************** User authentication *************************************
+    val userImageUriObs: ObservableField<Uri> = ObservableField()
+
+    enum class Authentication { LOGIN, LOGOUT }
+
+    val authCommand: SingleLiveEvent<Authentication> = SingleLiveEvent()
+
+    fun onProfileClicked() {
+        if (FirebaseAuth.getInstance().currentUser == null) {
+            authCommand.value = Authentication.LOGIN
+        } else {
+            authCommand.value = Authentication.LOGOUT
+        }
+    }
+
+    fun showUserPhoto(user: FirebaseUser) {
+        for (profile in user.providerData) {
+            val photoUri = profile.photoUrl
+            photoUri?.let {
+                userImageUriObs.set(it)
+                return
+            }
+        }
+    }
+
     init {
         App.component.inject(this)
         updateFilter(Filter())
+
+        FirebaseAuth.getInstance().currentUser?.let {
+            showUserPhoto(it)
+        }
+
     }
 }
 
