@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        repository.loadEventData()
+        repository.loadEventDataFromJSONFile()
 
         val navController = findNavController(R.id.my_nav_host_fragment)
         setupBottomNavMenu(navController)

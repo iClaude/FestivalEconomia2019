@@ -5,6 +5,5 @@ package iclaude.festivaleconomia2019.model.data_classes
  */
 data class User(
     val uid: String = "",
-    val devicesTokens: List<String> = emptyList(),
-    val starredSessions: List<String>? = null
+    val starredSessions: List<String> = emptyList()
 )
