@@ -98,7 +98,13 @@ class SessionListFragment : Fragment() {
         }
 
         override fun areContentsTheSame(oldItem: SessionsDisplayInfo, newItem: SessionsDisplayInfo): Boolean {
-            return oldItem.title == newItem.title && oldItem.liveStreamed == newItem.liveStreamed && oldItem.startTimestamp == newItem.startTimestamp && oldItem.endTimestamp == newItem.endTimestamp
+            return oldItem.title == newItem.title
+                    && oldItem.liveStreamed == newItem.liveStreamed
+                    && oldItem.startTimestamp == newItem.startTimestamp
+                    && oldItem.endTimestamp == newItem.endTimestamp
+                    && oldItem.location == newItem.location
+                    && oldItem.tags == newItem.tags
+                    && oldItem.starred == newItem.starred
         }
     }
 
@@ -124,6 +130,10 @@ class SessionListFragment : Fragment() {
             val sessionInfo = getItem(position)
             holder.bind(sessionInfo)
         }
+    }
+
+    interface ListEvents {
+        fun onStarClicked(sessionId: String)
     }
 }
 
