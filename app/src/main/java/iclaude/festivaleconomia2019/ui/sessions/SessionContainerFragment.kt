@@ -150,7 +150,7 @@ class SessionContainerFragment : Fragment() {
                 user?.let {
                     with(viewModel) {
                         this.showUserPhoto(it)
-                        this.repository.updateWithStarredSessionsFromFirebase()
+                        this.repository.updateEventDataWithStarredSessionsFromFirebase()
                     }
                 }
             } else {

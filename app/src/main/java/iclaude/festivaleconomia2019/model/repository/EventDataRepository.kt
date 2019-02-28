@@ -27,11 +27,11 @@ class EventDataRepository(private val inputStream: InputStream) {
     fun loadEventDataFromJSONFile() {
         ioScope.launch {
             _eventDataLive.postValue(JSONparser.parseEventData(inputStream))
-            updateWithStarredSessionsFromFirebase()
+            updateEventDataWithStarredSessionsFromFirebase()
         }
     }
 
-    fun updateWithStarredSessionsFromFirebase() {
+    fun updateEventDataWithStarredSessionsFromFirebase() {
         val user = FirebaseAuth.getInstance().currentUser ?: return
 
         val db = FirebaseFirestore.getInstance()
@@ -56,9 +56,40 @@ class EventDataRepository(private val inputStream: InputStream) {
                 }
             }
             .addOnFailureListener {
-                Log.w(TAG, "Error in searching User in Firebase", it)
+                Log.w(TAG, "Get starred sessions - Error in searching User in Firebase", it)
 
             }
+    }
+
+    fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
+        val user = FirebaseAuth.getInstance().currentUser ?: return
+
+        val db = FirebaseFirestore.getInstance()
+        db.collection(FIREBASE_PATH_USERS).document(user.uid).get()
+            .addOnSuccessListener {
+                if (it.exists()) {
+                    val userInFirebase = it.toObject(User::class.java)
+                    userInFirebase?.let { userInFirebase ->
+                        val starredSessions = userInFirebase.starredSessions.toMutableList()
+                        if (toStar) {
+                            if (!starredSessions.contains(sessionId)) starredSessions.add(sessionId)
+                        } else {
+                            starredSessions.remove(sessionId)
+                        }
+                        updateStarredSessions(db, "$FIREBASE_PATH_USERS${user.uid}", starredSessions)
+                    }
+                }
+            }
+            .addOnFailureListener {
+                Log.w(TAG, "Star/Unstar session - Error in searching User in Firebase", it)
+            }
+    }
+
+    private fun updateStarredSessions(db: FirebaseFirestore, path: String, sessions: List<String>) {
+        db.document(path)
+            .update("starredSessions", sessions)
+            .addOnSuccessListener { Log.d(TAG, "starredSessions updated") }
+            .addOnFailureListener { Log.w(TAG, "Error updating starredSessions", it) }
     }
 
     fun canceLoadingData() {
