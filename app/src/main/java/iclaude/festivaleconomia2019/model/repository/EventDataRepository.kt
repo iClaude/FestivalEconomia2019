@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.JSONparser.JSONparser
@@ -17,6 +18,9 @@ import java.io.InputStream
 
 class EventDataRepository(private val inputStream: InputStream) {
     private val TAG by lazy { this.javaClass.simpleName }
+
+    //************************** Local JSON file **************************
+
     private val job = Job()
     private val ioScope = CoroutineScope(Dispatchers.IO + job)
 
@@ -27,41 +31,55 @@ class EventDataRepository(private val inputStream: InputStream) {
     fun loadEventDataFromJSONFile() {
         ioScope.launch {
             _eventDataLive.postValue(JSONparser.parseEventData(inputStream))
-            updateEventDataWithStarredSessionsFromFirebase()
         }
     }
 
-    fun updateEventDataWithStarredSessionsFromFirebase() {
-        val user = FirebaseAuth.getInstance().currentUser ?: return
+    //*************************** Firebase **********************************
+
+    fun addUser(user: FirebaseUser) {
+        val db = FirebaseFirestore.getInstance()
+        db.collection(FIREBASE_PATH_USERS).document(user.uid).get()
+            .addOnSuccessListener {
+                if (!it.exists()) {
+                    db.collection(FIREBASE_PATH_USERS).document(user.uid)
+                        .set(User(uid = user.uid))
+                        .addOnSuccessListener { Log.d(TAG, "New user successfully added") }
+                        .addOnFailureListener { e -> Log.w(TAG, "Error adding new user", e) }
+                }
+            }
+            .addOnFailureListener {
+                Log.w(TAG, "Error adding new user to Firebase", it)
+            }
+    }
+
+    fun getStarredSessions(): List<String> {
+        var starredSessions: List<String> = mutableListOf()
+
+        val user = FirebaseAuth.getInstance().currentUser ?: return starredSessions
 
         val db = FirebaseFirestore.getInstance()
         db.collection(FIREBASE_PATH_USERS).document(user.uid).get()
             .addOnSuccessListener {
-                if (it.exists()) {
-                    val userInFirebase = it.toObject(User::class.java)
-                    userInFirebase?.let { userInFirebase ->
-                        val eventData = eventDataLive.value
-                        eventData?.sessions?.let { sessions ->
-                            for (sessionId in userInFirebase.starredSessions) {
-                                sessions[sessionId.toInt()].starred = true
-                            }
-                            _eventDataLive.postValue(eventData)
+                val userInFirebase = it.toObject(User::class.java)
+                userInFirebase?.let { userInFirebase ->
+                    eventDataLive.value?.sessions?.let { sessions ->
+                        for (sessionId in userInFirebase.starredSessions) {
+                            sessions[sessionId.toInt()].starred = true
                         }
                     }
-                } else {
-                    db.collection(FIREBASE_PATH_USERS).document(user.uid)
-                        .set(User(uid = user.uid))
-                        .addOnSuccessListener { Log.d(TAG, "New User successfully added!") }
-                        .addOnFailureListener { e -> Log.w(TAG, "Error adding new User", e) }
+                    starredSessions = userInFirebase.starredSessions
                 }
             }
             .addOnFailureListener {
-                Log.w(TAG, "Get starred sessions - Error in searching User in Firebase", it)
+                Log.w(TAG, "Error in searching user in Firebase", it)
 
             }
+
+        return starredSessions
     }
 
     fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
+        // update Firebase db
         val user = FirebaseAuth.getInstance().currentUser ?: return
 
         val db = FirebaseFirestore.getInstance()
@@ -83,6 +101,11 @@ class EventDataRepository(private val inputStream: InputStream) {
             .addOnFailureListener {
                 Log.w(TAG, "Star/Unstar session - Error in searching User in Firebase", it)
             }
+
+        // update local repository
+        eventDataLive.value?.sessions?.let { sessions ->
+            sessions[sessionId.toInt()].starred = toStar
+        }
     }
 
     private fun updateStarredSessions(db: FirebaseFirestore, path: String, sessions: List<String>) {

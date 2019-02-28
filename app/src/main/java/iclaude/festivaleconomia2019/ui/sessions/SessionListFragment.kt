@@ -20,7 +20,7 @@ import kotlinx.android.synthetic.main.fragment_session_list.*
 class SessionListFragment : Fragment() {
     private lateinit var viewModel: SessionListViewModel
     private lateinit var binding: FragmentSessionListBinding
-    private val rvAdapter = SessionListAdapter()
+    private lateinit var rvAdapter: SessionListAdapter
     private var day: Int = 0
 
     companion object {
@@ -43,6 +43,7 @@ class SessionListFragment : Fragment() {
         viewModel = activity?.run {
             ViewModelProviders.of(this).get(SessionListViewModel::class.java)
         } ?: throw Exception("Invalid Activity")
+        rvAdapter = SessionListAdapter()
     }
 
     override fun onCreateView(
@@ -112,6 +113,7 @@ class SessionListFragment : Fragment() {
         fun bind(sessionInfo: SessionsDisplayInfo) {
             with(binding) {
                 this.sessionInfo = sessionInfo
+                this.viewModel = this@SessionListFragment.viewModel
                 executePendingBindings()
             }
         }

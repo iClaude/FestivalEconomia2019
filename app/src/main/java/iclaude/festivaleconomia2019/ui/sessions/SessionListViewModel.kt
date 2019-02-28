@@ -69,6 +69,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
 
     // load original list of sessions when data is loaded from repository: triggered from SessionContainerFragment
+    // TODO: check how often this method is called
     fun loadInfoList(eventData: EventData) {
         sessionsInfo = eventData.sessions.map { session ->
             SessionsDisplayInfo(
@@ -87,6 +88,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
         paginateByDay(sessionsInfo)
         loadAllTags()
+        updateSessionListWithStarredSessions()
     }
 
     /* Add day number on each session. This is used to separate sessions by day (filtering is done by
@@ -208,6 +210,28 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
                 return
             }
         }
+    }
+
+    // ************************* Starred sessions **********************************
+    fun updateSessionListWithStarredSessions() {
+        val starredSessions = repository.getStarredSessions()
+        if (starredSessions.isEmpty()) return
+
+        starredSessions.forEach {
+            sessionsInfo[it.toInt()].starred = true
+        }
+
+        // force sessionsInfoFilteredLive update
+        val filter = filterSelected.value
+        filterSelected.value = filter
+    }
+
+    fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
+        repository.starOrUnstarSession(sessionId, toStar)
+        sessionsInfo[sessionId.toInt()].starred = toStar
+        // force sessionsInfoFilteredLive update
+        val filter = filterSelected.value
+        filterSelected.value = filter
     }
 
     init {

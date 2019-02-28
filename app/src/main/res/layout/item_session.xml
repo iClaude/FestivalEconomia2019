@@ -7,7 +7,11 @@
     <data>
         <import type="android.view.View"/>
 
-        <variable name="sessionInfo" type="iclaude.festivaleconomia2019.ui.sessions.SessionsDisplayInfo"/>
+        <variable name="sessionInfo"
+                  type="iclaude.festivaleconomia2019.ui.sessions.SessionsDisplayInfo"/>
+        <variable
+                name="viewModel"
+                type="iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical"
@@ -65,7 +69,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tvTitle" android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
-                android:checked="@{sessionInfo.starred}"/>
+                android:checked="@{sessionInfo.starred}"
+                app:viewModel="@{viewModel}"
+                app:onStarClickListener="@{sessionInfo}"/>
+
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvTags"
                 android:orientation="horizontal"
