@@ -42,7 +42,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     @Inject
     lateinit var repository: EventDataRepository
 
-    private lateinit var sessionsInfo: List<SessionsDisplayInfo>
+    private var sessionsInfo: MutableList<SessionsDisplayInfo> = mutableListOf()
 
     val dataLoadedObs: ObservableBoolean = ObservableBoolean(false)
 
@@ -53,7 +53,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
             // filter by tags and starred
             if(filter.isFilterSet()) filteredList = sessionsInfo.filter {
-                !(filter.isStarred().xor(it.starred))
+                if (filter.isStarred()) it.starred else true
             }.filter {
                if(filter.hasTypeTags())
                    it.tags.intersect(filter.tagsTypes).isNotEmpty()
@@ -71,8 +71,9 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
 
     // load original list of sessions when data is loaded from repository: triggered from SessionContainerFragment
-    // TODO: check how often this method is called
     fun loadInfoList(eventData: EventData) {
+        if (sessionsInfo.isNotEmpty()) return
+
         sessionsInfo = eventData.sessions.map { session ->
             SessionsDisplayInfo(
                 session.id, session.title,
@@ -86,7 +87,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
                 0,
                 false
             )
-        }
+        }.toMutableList()
 
         paginateByDay(sessionsInfo)
         loadAllTags()
@@ -227,11 +228,6 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         repository.getStarredSessions(OnSuccessListener {
             val userInFirebase = it.toObject(User::class.java)
             userInFirebase?.let { userInFirebase ->
-                repository.eventDataLive.value?.sessions?.let { sessions ->
-                    for (sessionId in userInFirebase.starredSessions) {
-                        sessions[sessionId.toInt()].starred = true
-                    }
-                }
                 val starredSessions = mutableListOf<String>()
                 starredSessions.addAll(userInFirebase.starredSessions)
                 starredSessions.forEach { sessionId ->
@@ -247,6 +243,13 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
         repository.starOrUnstarSession(sessionId, toStar)
         sessionsInfo[sessionId.toInt()].starred = toStar
+        forceListUpdate()
+    }
+
+    fun unstarAllSessions() {
+        sessionsInfo.forEach {
+            it.starred = false
+        }
         forceListUpdate()
     }
 

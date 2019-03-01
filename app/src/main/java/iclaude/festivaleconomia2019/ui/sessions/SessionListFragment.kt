@@ -1,7 +1,6 @@
 package iclaude.festivaleconomia2019.ui.sessions
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -45,6 +44,12 @@ class SessionListFragment : Fragment() {
             ViewModelProviders.of(this).get(SessionListViewModel::class.java)
         } ?: throw Exception("Invalid Activity")
         rvAdapter = SessionListAdapter()
+
+        viewModel.sessionsInfoFilteredLive.observe(this, Observer { list ->
+            initializeList(list.filter {
+                it.day == day
+            })
+        })
     }
 
     override fun onCreateView(
@@ -55,32 +60,19 @@ class SessionListFragment : Fragment() {
             viewModel = this@SessionListFragment.viewModel
         }
 
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        viewModel.sessionsInfoFilteredLive.observe(this, Observer { list ->
-            for (session in list) {
-                if (session.starred) {
-                    Log.d("FAVORITES", "day: $day; session starred: ${session.id}")
-                }
-            }
-
-            initializeList(list.filter {
-                it.day == day
-            })
-        })
-
-        with(rvSessions) {
+        with(binding.rvSessions) {
             adapter = rvAdapter
             setHasFixedSize(true)
         }
+
+        return binding.root
     }
 
     private fun initializeList(sessions: List<SessionsDisplayInfo>) {
-        rvAdapter.submitList(sessions)
+        rvAdapter.apply {
+            submitList(sessions)
+            notifyDataSetChanged() // damn Google! why are you forcing me to do that???
+        }
 
         val zoneId = getZoneId(context)
         rvSessions.run {

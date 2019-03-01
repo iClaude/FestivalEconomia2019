@@ -128,7 +128,10 @@ class SessionContainerFragment : Fragment() {
                 AuthUI.getInstance()
                     .signOut(context!!)
                     .addOnCompleteListener {
-                        viewModel.userImageUriObs.set(null)
+                        viewModel.run {
+                            userImageUriObs.set(null)
+                            unstarAllSessions()
+                        }
                     }
                 dialog.dismiss()
             }
@@ -149,9 +152,9 @@ class SessionContainerFragment : Fragment() {
                 val user = FirebaseAuth.getInstance().currentUser
                 user?.let {
                     with(viewModel) {
-                        this.showUserPhoto(it)
-                        this.repository.addUser(it)
-                        this.updateSessionListWithStarredSessions()
+                        showUserPhoto(it)
+                        repository.addUser(it)
+                        updateSessionListWithStarredSessions()
                     }
                 }
             } else {
