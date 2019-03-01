@@ -9,6 +9,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
+import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
 import com.google.firebase.auth.FirebaseAuth
@@ -16,6 +17,7 @@ import com.google.firebase.auth.FirebaseUser
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.Tag
+import iclaude.festivaleconomia2019.model.data_classes.User
 import iclaude.festivaleconomia2019.model.data_classes.hasSessionUrl
 import iclaude.festivaleconomia2019.model.data_classes.hasYoutubeUrl
 import iclaude.festivaleconomia2019.model.di.App
@@ -104,6 +106,14 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
             } else {
                 session.day = i
             }
+        }
+    }
+
+    fun forceListUpdate() {
+        val filter = filterSelected.value
+        filter?.let {
+            val newFilter = Filter(filter.tagsTypes, filter.tagsTopics, filter.starred)
+            filterSelected.value = newFilter
         }
     }
 
@@ -214,24 +224,30 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     // ************************* Starred sessions **********************************
     fun updateSessionListWithStarredSessions() {
-        val starredSessions = repository.getStarredSessions()
-        if (starredSessions.isEmpty()) return
-
-        starredSessions.forEach {
-            sessionsInfo[it.toInt()].starred = true
-        }
-
-        // force sessionsInfoFilteredLive update
-        val filter = filterSelected.value
-        filterSelected.value = filter
+        repository.getStarredSessions(OnSuccessListener {
+            val userInFirebase = it.toObject(User::class.java)
+            userInFirebase?.let { userInFirebase ->
+                repository.eventDataLive.value?.sessions?.let { sessions ->
+                    for (sessionId in userInFirebase.starredSessions) {
+                        sessions[sessionId.toInt()].starred = true
+                    }
+                }
+                val starredSessions = mutableListOf<String>()
+                starredSessions.addAll(userInFirebase.starredSessions)
+                starredSessions.forEach { sessionId ->
+                    sessionsInfo[sessionId.toInt()].starred = true
+                }
+                if (starredSessions.isNotEmpty()) {
+                    forceListUpdate()
+                }
+            }
+        })
     }
 
     fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
         repository.starOrUnstarSession(sessionId, toStar)
         sessionsInfo[sessionId.toInt()].starred = toStar
-        // force sessionsInfoFilteredLive update
-        val filter = filterSelected.value
-        filterSelected.value = filter
+        forceListUpdate()
     }
 
     init {

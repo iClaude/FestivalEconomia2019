@@ -3,8 +3,10 @@ package iclaude.festivaleconomia2019.model.repository
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.JSONparser.JSONparser
@@ -52,30 +54,16 @@ class EventDataRepository(private val inputStream: InputStream) {
             }
     }
 
-    fun getStarredSessions(): List<String> {
-        var starredSessions: List<String> = mutableListOf()
-
-        val user = FirebaseAuth.getInstance().currentUser ?: return starredSessions
+    fun getStarredSessions(successCallback: OnSuccessListener<DocumentSnapshot>) {
+        val user = FirebaseAuth.getInstance().currentUser ?: return
 
         val db = FirebaseFirestore.getInstance()
         db.collection(FIREBASE_PATH_USERS).document(user.uid).get()
-            .addOnSuccessListener {
-                val userInFirebase = it.toObject(User::class.java)
-                userInFirebase?.let { userInFirebase ->
-                    eventDataLive.value?.sessions?.let { sessions ->
-                        for (sessionId in userInFirebase.starredSessions) {
-                            sessions[sessionId.toInt()].starred = true
-                        }
-                    }
-                    starredSessions = userInFirebase.starredSessions
-                }
-            }
+            .addOnSuccessListener(successCallback)
             .addOnFailureListener {
                 Log.w(TAG, "Error in searching user in Firebase", it)
 
             }
-
-        return starredSessions
     }
 
     fun starOrUnstarSession(sessionId: String, toStar: Boolean) {

@@ -1,6 +1,7 @@
 package iclaude.festivaleconomia2019.ui.sessions
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -61,6 +62,12 @@ class SessionListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.sessionsInfoFilteredLive.observe(this, Observer { list ->
+            for (session in list) {
+                if (session.starred) {
+                    Log.d("FAVORITES", "day: $day; session starred: ${session.id}")
+                }
+            }
+
             initializeList(list.filter {
                 it.day == day
             })
