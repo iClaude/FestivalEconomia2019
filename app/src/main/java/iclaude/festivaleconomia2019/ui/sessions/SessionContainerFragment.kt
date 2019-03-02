@@ -1,11 +1,15 @@
 package iclaude.festivaleconomia2019.ui.sessions
 
 import android.app.Activity
+import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.StringRes
+import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -32,7 +36,6 @@ class SessionContainerFragment : Fragment() {
     private lateinit var viewModel: SessionListViewModel
     private lateinit var binding: FragmentSessionContainerBinding
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<View>
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,7 +96,20 @@ class SessionContainerFragment : Fragment() {
             authCommand.observe(this@SessionContainerFragment, Observer { command ->
                 when (command) {
                     Authentication.LOGIN -> logIn()
+                    Authentication.LOGIN_FROM_STAR -> logInFromStar()
                     else -> logOut()
+                }
+            })
+            starCommand.observe(this@SessionContainerFragment, Observer { toStar ->
+                val pref = activity?.getPreferences(Context.MODE_PRIVATE)
+                val showSnackbar = pref?.getBoolean("starring_show_snackbar", true) ?: true
+                if (!showSnackbar) return@Observer
+                val msgId = if (toStar) R.string.starred else R.string.unstarred
+                val snackbar = Snackbar.make(fabFilter, msgId, Snackbar.LENGTH_SHORT).run {
+                    setAction(R.string.starred_unstarred_not_show) {
+                        pref?.edit { putBoolean("starring_show_snackbar", false) }
+                    }
+                    show()
                 }
             })
         }
@@ -119,25 +135,47 @@ class SessionContainerFragment : Fragment() {
         )
     }
 
+    private fun logInFromStar() {
+        val posButtonListener = DialogInterface.OnClickListener { dialog, which ->
+            logIn()
+            dialog?.dismiss()
+        }
+        val negButtonListener = DialogInterface.OnClickListener { dialog, which -> dialog?.dismiss() }
+        showAlertDialog(
+            R.string.login_confirm_title, R.string.login_confirm_msg, R.string.login_confirm_accept,
+            R.string.login_confirm_cancel, posButtonListener, negButtonListener
+        )
+    }
 
     private fun logOut() {
-        MaterialAlertDialogBuilder(context!!)
-            .setTitle(R.string.logout_dialog_title)
-            .setMessage(R.string.logout_dialog_msg)
-            .setPositiveButton(R.string.logout_dialog_accept) { dialog, _ ->
-                AuthUI.getInstance()
-                    .signOut(context!!)
-                    .addOnCompleteListener {
-                        viewModel.run {
-                            userImageUriObs.set(null)
-                            unstarAllSessions()
-                        }
+        val posButtonListener = DialogInterface.OnClickListener { dialog, which ->
+            AuthUI.getInstance()
+                .signOut(context!!)
+                .addOnCompleteListener {
+                    viewModel.run {
+                        userImageUriObs.set(null)
+                        unstarAllSessions()
                     }
-                dialog.dismiss()
-            }
-            .setNegativeButton(R.string.logout_dialog_cancel) { dialog, _ ->
-                dialog.dismiss()
-            }
+                }
+            dialog?.dismiss()
+        }
+        val negButtonListener = DialogInterface.OnClickListener { dialog, which -> dialog?.dismiss() }
+        showAlertDialog(
+            R.string.logout_dialog_title, R.string.logout_dialog_msg, R.string.logout_dialog_accept,
+            R.string.logout_dialog_cancel, posButtonListener, negButtonListener
+        )
+    }
+
+    private fun showAlertDialog(
+        @StringRes title: Int, @StringRes msg: Int, @StringRes posButton: Int,
+        @StringRes negButton: Int, posButtonListener: DialogInterface.OnClickListener,
+        negButtonListener: DialogInterface.OnClickListener
+    ) {
+        MaterialAlertDialogBuilder(context!!)
+            .setTitle(title)
+            .setMessage(msg)
+            .setPositiveButton(posButton, posButtonListener)
+            .setNegativeButton(negButton, negButtonListener)
             .show()
     }
 
@@ -159,7 +197,7 @@ class SessionContainerFragment : Fragment() {
                 }
             } else {
                 Snackbar.make(
-                    fabFilter, getString(R.string.login_error, response?.getError()?.getErrorCode() ?: 0),
+                    fabFilter, getString(R.string.login_error, response?.error?.errorCode ?: 0),
                     Snackbar.LENGTH_SHORT
                 )
                     .show()

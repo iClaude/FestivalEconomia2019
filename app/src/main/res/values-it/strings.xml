@@ -35,4 +35,13 @@
     <string name="logout_dialog_msg">Sarai disconnesso dall\'app.</string>
     <string name="logout_dialog_accept">Procedi</string>
     <string name="logout_dialog_cancel">Annulla</string>
+    <string name="login_confirm_title">Log in?</string>
+    <string name="login_confirm_msg">Accedi per salvare eventi e commentare le sessioni. Le azioni saranno sincronizzate
+        col tuo account su tutti i tuoi dispositivi.
+    </string>
+    <string name="login_confirm_accept">Login</string>
+    <string name="login_confirm_cancel">Non ora</string>
+    <string name="starred">Evento aggiunto ai preferiti</string>
+    <string name="unstarred">Evento rimosso dai preferiti</string>
+    <string name="starred_unstarred_not_show">Non mostrare</string>
 </resources>

@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.internal.CheckableImageButton
+import com.google.firebase.auth.FirebaseAuth
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.data_classes.Tag
 
@@ -49,9 +50,13 @@ fun onStarClickListener(
     viewModel: SessionListViewModel
 ) {
     button.setOnClickListener {
-        val b = it as CheckableImageButton
-        b.isChecked = !b.isChecked
-        viewModel.starOrUnstarSession(sessionInfo.id, b.isChecked)
+        if (FirebaseAuth.getInstance().currentUser != null) {
+            val b = it as CheckableImageButton
+            b.isChecked = !b.isChecked
+            viewModel.starOrUnstarSession(sessionInfo.id, b.isChecked)
+        } else {
+            viewModel.onStarClickedUserNotConnected()
+        }
     }
 }
 

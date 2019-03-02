@@ -201,7 +201,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     //***************************** User authentication *************************************
     val userImageUriObs: ObservableField<Uri> = ObservableField()
 
-    enum class Authentication { LOGIN, LOGOUT }
+    enum class Authentication { LOGIN, LOGOUT, LOGIN_FROM_STAR }
 
     val authCommand: SingleLiveEvent<Authentication> = SingleLiveEvent()
 
@@ -211,6 +211,10 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         } else {
             authCommand.value = Authentication.LOGOUT
         }
+    }
+
+    fun onStarClickedUserNotConnected() {
+        authCommand.value = Authentication.LOGIN_FROM_STAR
     }
 
     fun showUserPhoto(user: FirebaseUser) {
@@ -240,10 +244,13 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         })
     }
 
+    val starCommand: SingleLiveEvent<Boolean> = SingleLiveEvent()
+
     fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
         repository.starOrUnstarSession(sessionId, toStar)
         sessionsInfo[sessionId.toInt()].starred = toStar
         forceListUpdate()
+        starCommand.value = toStar
     }
 
     fun unstarAllSessions() {
