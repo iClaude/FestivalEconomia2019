@@ -42,12 +42,12 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     @Inject
     lateinit var repository: EventDataRepository
 
-    private var sessionsInfo: MutableList<SessionsDisplayInfo> = mutableListOf()
+    private var sessionsInfo: MutableList<SessionInfoForList> = mutableListOf()
 
     val dataLoadedObs: ObservableBoolean = ObservableBoolean(false)
 
     // List of filtered sessions. When filterSelected changes, this list changes too using a switchMap transformation.
-    val sessionsInfoFilteredLive: LiveData<List<SessionsDisplayInfo>>
+    val sessionsInfoFilteredLive: LiveData<List<SessionInfoForList>>
         get() = Transformations.switchMap(filterSelected) { filter ->
             var filteredList = sessionsInfo.toMutableList()
 
@@ -67,7 +67,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
             }.toMutableList()
 
             sessionsFilteredObs.set(filteredList.size)
-            MutableLiveData<List<SessionsDisplayInfo>>().apply { value = filteredList }
+            MutableLiveData<List<SessionInfoForList>>().apply { value = filteredList }
         }
 
     // load original list of sessions when data is loaded from repository: triggered from SessionContainerFragment
@@ -75,7 +75,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         if (sessionsInfo.isNotEmpty()) return
 
         sessionsInfo = eventData.sessions.map { session ->
-            SessionsDisplayInfo(
+            SessionInfoForList(
                 session.id, session.title,
                 session.hasSessionUrl() || (session.hasYoutubeUrl()),
                 session.startTimestamp,
@@ -96,7 +96,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     /* Add day number on each session. This is used to separate sessions by day (filtering is done by
         SessionListFragment.*/
-    private fun paginateByDay(sessions: List<SessionsDisplayInfo>) {
+    private fun paginateByDay(sessions: List<SessionInfoForList>) {
         var i = 0
         var baseDay = timestampToZonedDateTime(sessions[0].startTimestamp, context)
         for (session in sessions) {
@@ -110,7 +110,8 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
-    fun forceListUpdate() {
+    // Reapply the same filter for triggering un update of the list.
+    private fun forceListUpdate() {
         val filter = filterSelected.value
         filter?.let {
             val newFilter = Filter(filter.tagsTypes, filter.tagsTopics, filter.starred)
@@ -175,7 +176,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     val clearTagsObs: ObservableInt =
         ObservableInt(0) // when filter is cleared all Chips in ChipGroups must be unchecked
 
-    val titleHeaderAlphaObs: ObservableFloat = ObservableFloat(0f) // change header alpha when draggin bottom sheet
+    val titleHeaderAlphaObs: ObservableFloat = ObservableFloat(0f) // change header alpha when dragging bottom sheet
 
     val scrollYObs: ObservableInt =
         ObservableInt(0) // scroll view inside bottom sheet y offset (used to change header elevation)
@@ -229,28 +230,25 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     // ************************* Starred sessions **********************************
     fun updateSessionListWithStarredSessions() {
-        repository.getStarredSessions(OnSuccessListener {
-            val userInFirebase = it.toObject(User::class.java)
+        repository.getStarredSessions(OnSuccessListener { documentSnapshot ->
+            val userInFirebase = documentSnapshot.toObject(User::class.java)
             userInFirebase?.let { userInFirebase ->
-                val starredSessions = mutableListOf<String>()
-                starredSessions.addAll(userInFirebase.starredSessions)
-                starredSessions.forEach { sessionId ->
-                    sessionsInfo[sessionId.toInt()].starred = true
+                if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
+
+                userInFirebase.starredSessions.forEach {
+                    sessionsInfo[it.toInt()].starred = true
                 }
-                if (starredSessions.isNotEmpty()) {
-                    forceListUpdate()
-                }
+                forceListUpdate()
             }
         })
     }
 
-    val starCommand: SingleLiveEvent<Boolean> = SingleLiveEvent()
+    val showSnackBarForStarringCommand: SingleLiveEvent<Boolean> = SingleLiveEvent()
 
     fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
         repository.starOrUnstarSession(sessionId, toStar)
         sessionsInfo[sessionId.toInt()].starred = toStar
-        forceListUpdate()
-        starCommand.value = toStar
+        showSnackBarForStarringCommand.value = toStar
     }
 
     fun unstarAllSessions() {
@@ -272,7 +270,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 }
 
 // ********************* Sessions' info to display in the list. ****************************
-class SessionsDisplayInfo(
+class SessionInfoForList(
     val id: String,
     val title: String,
     val liveStreamed: Boolean,

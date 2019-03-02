@@ -5,6 +5,8 @@ import android.util.Log
 import androidx.databinding.ObservableBoolean
 import iclaude.festivaleconomia2019.BuildConfig
 
+const val TAG = "ICLAUDE_EVENTS"
+
 fun ObservableBoolean.hasSameValue(other: ObservableBoolean) = get() == other.get()
 
 /**

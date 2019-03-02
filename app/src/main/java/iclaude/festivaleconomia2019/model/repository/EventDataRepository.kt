@@ -11,6 +11,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.JSONparser.JSONparser
 import iclaude.festivaleconomia2019.model.data_classes.User
+import iclaude.festivaleconomia2019.utils.TAG
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -19,7 +20,6 @@ import java.io.InputStream
 
 
 class EventDataRepository(private val inputStream: InputStream) {
-    private val TAG by lazy { this.javaClass.simpleName }
 
     //************************** Local JSON file **************************
 
@@ -50,7 +50,7 @@ class EventDataRepository(private val inputStream: InputStream) {
                 }
             }
             .addOnFailureListener {
-                Log.w(TAG, "Error adding new user to Firebase", it)
+                Log.w(TAG, "Error getting user in Firebase", it)
             }
     }
 
@@ -61,13 +61,12 @@ class EventDataRepository(private val inputStream: InputStream) {
         db.collection(FIREBASE_PATH_USERS).document(user.uid).get()
             .addOnSuccessListener(successCallback)
             .addOnFailureListener {
-                Log.w(TAG, "Error in searching user in Firebase", it)
+                Log.w(TAG, "Error getting user in Firebase", it)
 
             }
     }
 
     fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
-        // update Firebase db
         val user = FirebaseAuth.getInstance().currentUser ?: return
 
         val db = FirebaseFirestore.getInstance()
@@ -76,34 +75,29 @@ class EventDataRepository(private val inputStream: InputStream) {
                 if (it.exists()) {
                     val userInFirebase = it.toObject(User::class.java)
                     userInFirebase?.let { userInFirebase ->
-                        val starredSessions = userInFirebase.starredSessions.toMutableList()
+                        val starredSessionsUpdated = userInFirebase.starredSessions.toMutableList()
                         if (toStar) {
-                            if (!starredSessions.contains(sessionId)) starredSessions.add(sessionId)
+                            if (!starredSessionsUpdated.contains(sessionId)) starredSessionsUpdated.add(sessionId)
                         } else {
-                            starredSessions.remove(sessionId)
+                            starredSessionsUpdated.remove(sessionId)
                         }
-                        updateStarredSessions(db, "$FIREBASE_PATH_USERS${user.uid}", starredSessions)
+                        updateStarredSessions(db, "$FIREBASE_PATH_USERS${user.uid}", starredSessionsUpdated)
                     }
                 }
             }
             .addOnFailureListener {
-                Log.w(TAG, "Star/Unstar session - Error in searching User in Firebase", it)
+                Log.w(TAG, "Error getting user in Firebase", it)
             }
-
-        // update local repository
-        eventDataLive.value?.sessions?.let { sessions ->
-            sessions[sessionId.toInt()].starred = toStar
-        }
     }
 
     private fun updateStarredSessions(db: FirebaseFirestore, path: String, sessions: List<String>) {
         db.document(path)
             .update("starredSessions", sessions)
-            .addOnSuccessListener { Log.d(TAG, "starredSessions updated") }
-            .addOnFailureListener { Log.w(TAG, "Error updating starredSessions", it) }
+            .addOnSuccessListener { Log.d(TAG, "User starred sessions updated") }
+            .addOnFailureListener { Log.w(TAG, "Error updating user starred sessions", it) }
     }
 
-    fun canceLoadingData() {
+    fun cancelLoadingData() {
         job.cancel()
     }
 

@@ -53,7 +53,6 @@ class SessionContainerFragment : Fragment() {
         }
 
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -100,12 +99,12 @@ class SessionContainerFragment : Fragment() {
                     else -> logOut()
                 }
             })
-            starCommand.observe(this@SessionContainerFragment, Observer { toStar ->
+            showSnackBarForStarringCommand.observe(this@SessionContainerFragment, Observer { toStar ->
                 val pref = activity?.getPreferences(Context.MODE_PRIVATE)
                 val showSnackbar = pref?.getBoolean("starring_show_snackbar", true) ?: true
                 if (!showSnackbar) return@Observer
                 val msgId = if (toStar) R.string.starred else R.string.unstarred
-                val snackbar = Snackbar.make(fabFilter, msgId, Snackbar.LENGTH_SHORT).run {
+                Snackbar.make(fabFilter, msgId, Snackbar.LENGTH_SHORT).run {
                     setAction(R.string.starred_unstarred_not_show) {
                         pref?.edit { putBoolean("starring_show_snackbar", false) }
                     }

@@ -68,7 +68,7 @@ class SessionListFragment : Fragment() {
         return binding.root
     }
 
-    private fun initializeList(sessions: List<SessionsDisplayInfo>) {
+    private fun initializeList(sessions: List<SessionInfoForList>) {
         rvAdapter.apply {
             submitList(sessions)
             notifyDataSetChanged() // damn Google! why are you forcing me to do that???
@@ -88,16 +88,15 @@ class SessionListFragment : Fragment() {
                 }
             }
         }
-
     }
 
     // Main RecyclerView classes.
-    inner class SessionDiffCallback : DiffUtil.ItemCallback<SessionsDisplayInfo>() {
-        override fun areItemsTheSame(oldItem: SessionsDisplayInfo, newItem: SessionsDisplayInfo): Boolean {
+    inner class SessionDiffCallback : DiffUtil.ItemCallback<SessionInfoForList>() {
+        override fun areItemsTheSame(oldItem: SessionInfoForList, newItem: SessionInfoForList): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: SessionsDisplayInfo, newItem: SessionsDisplayInfo): Boolean {
+        override fun areContentsTheSame(oldItem: SessionInfoForList, newItem: SessionInfoForList): Boolean {
             return oldItem.title == newItem.title
                     && oldItem.liveStreamed == newItem.liveStreamed
                     && oldItem.startTimestamp == newItem.startTimestamp
@@ -109,7 +108,7 @@ class SessionListFragment : Fragment() {
     }
 
     inner class SessionViewHolder(private val binding: ItemSessionBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(sessionInfo: SessionsDisplayInfo) {
+        fun bind(sessionInfo: SessionInfoForList) {
             with(binding) {
                 this.sessionInfo = sessionInfo
                 this.viewModel = this@SessionListFragment.viewModel
@@ -119,7 +118,7 @@ class SessionListFragment : Fragment() {
     }
 
     inner class SessionListAdapter :
-        ListAdapter<SessionsDisplayInfo, SessionViewHolder>(SessionDiffCallback()) {
+        ListAdapter<SessionInfoForList, SessionViewHolder>(SessionDiffCallback()) {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SessionViewHolder {
             val layoutInflater = LayoutInflater.from(parent.context)

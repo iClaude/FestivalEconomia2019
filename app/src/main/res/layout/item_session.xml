@@ -8,7 +8,7 @@
         <import type="android.view.View"/>
 
         <variable name="sessionInfo"
-                  type="iclaude.festivaleconomia2019.ui.sessions.SessionsDisplayInfo"/>
+                  type="iclaude.festivaleconomia2019.ui.sessions.SessionInfoForList"/>
         <variable
                 name="viewModel"
                 type="iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel"/>

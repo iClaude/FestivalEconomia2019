@@ -15,7 +15,7 @@ import iclaude.festivaleconomia2019.model.data_classes.Tag
 private const val TAG = "TAGS"
 
 @BindingAdapter("app:lenLoc")
-fun lenLoc(textView: TextView, sessionInfo: SessionsDisplayInfo?) {
+fun lenLoc(textView: TextView, sessionInfo: SessionInfoForList?) {
     if (sessionInfo == null) return
     textView.text = "${sessionLength(
         textView.context,
@@ -46,7 +46,7 @@ fun tagTint(textView: TextView, color: Int) {
 @BindingAdapter("app:onStarClickListener", "app:viewModel", requireAll = true)
 fun onStarClickListener(
     button: CheckableImageButton,
-    sessionInfo: SessionsDisplayInfo,
+    sessionInfo: SessionInfoForList,
     viewModel: SessionListViewModel
 ) {
     button.setOnClickListener {

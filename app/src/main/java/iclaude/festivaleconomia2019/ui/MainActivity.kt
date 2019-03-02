@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.my_nav_host_fragment)
         setupBottomNavMenu(navController)
+
     }
 
     private fun setupBottomNavMenu(navController: NavController) {
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        repository.canceLoadingData()
+        repository.cancelLoadingData()
     }
 
 }

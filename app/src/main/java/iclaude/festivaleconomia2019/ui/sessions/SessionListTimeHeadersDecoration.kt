@@ -30,7 +30,7 @@ import org.threeten.bp.format.DateTimeFormatter
 
 fun indexSessionHeaders(
     context: Context,
-    sessions: List<SessionsDisplayInfo>,
+    sessions: List<SessionInfoForList>,
     zoneId: ZoneId
 ): List<Pair<Int, ZonedDateTime>> {
     return sessions
@@ -53,7 +53,7 @@ fun RecyclerView.clearDecorations() {
  */
 class ScheduleTimeHeadersDecoration(
     context: Context,
-    sessions: List<SessionsDisplayInfo>,
+    sessions: List<SessionInfoForList>,
     zoneId: ZoneId
 ) : RecyclerView.ItemDecoration() {
     private val TAG by lazy { this.javaClass.simpleName }
