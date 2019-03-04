@@ -24,9 +24,17 @@ import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.sessions.filters.*
 import iclaude.festivaleconomia2019.ui.utils.SingleLiveEvent
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class SessionListViewModel(val context: Application) : AndroidViewModel(context) {
+
+    private val viewModelJob = Job()
+    private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
+
 
     // ************************ Filters ******************************
     val filterSelected: MutableLiveData<Filter> = MutableLiveData() // filter currently applied
@@ -50,45 +58,52 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         get() = Transformations.switchMap(filterSelected) { filter ->
             var filteredList = sessionsInfo.toMutableList()
 
-            // filter by tags and starred
-            if(filter.isFilterSet()) filteredList = sessionsInfo.filter {
-                if (filter.isStarred()) it.starred else true
-            }.filter {
-               if(filter.hasTypeTags())
-                   it.tags.intersect(filter.tagsTypes).isNotEmpty()
-               else
-                   true
-            }.filter {
-                if(filter.hasTopicTags())
-                    it.tags.intersect(filter.tagsTopics).isNotEmpty()
-                else
-                    true
-            }.toMutableList()
+            uiScope.launch {
 
-            sessionsFilteredObs.set(filteredList.size)
+                // filter by tags and starred
+                if (filter.isFilterSet()) filteredList = sessionsInfo.filter {
+                    if (filter.isStarred()) it.starred else true
+                }.filter {
+                    if (filter.hasTypeTags())
+                        it.tags.intersect(filter.tagsTypes).isNotEmpty()
+                    else
+                        true
+                }.filter {
+                    if (filter.hasTopicTags())
+                        it.tags.intersect(filter.tagsTopics).isNotEmpty()
+                    else
+                        true
+                }.toMutableList()
+
+                sessionsFilteredObs.set(filteredList.size)
+            }
+
             MutableLiveData<List<SessionInfoForList>>().apply { value = filteredList }
+
         }
 
     // load original list of sessions when data is loaded from repository: triggered from SessionContainerFragment
     fun loadInfoList(eventData: EventData) {
         if (sessionsInfo.isNotEmpty()) return
 
-        sessionsInfo = eventData.sessions.map { session ->
-            SessionInfoForList(
-                session.id, session.title,
-                session.hasSessionUrl() || (session.hasYoutubeUrl()),
-                session.startTimestamp,
-                session.endTimestamp,
-                eventData.locations[session.location.toInt()].name,
-                session.tags.map {
-                    eventData.tags[it.toInt()]
-                },
-                session.day,
-                false
-            )
-        }.toMutableList()
+        uiScope.launch {
+            sessionsInfo = eventData.sessions.map { session ->
+                SessionInfoForList(
+                    session.id, session.title,
+                    session.hasSessionUrl() || (session.hasYoutubeUrl()),
+                    session.startTimestamp,
+                    session.endTimestamp,
+                    eventData.locations[session.location.toInt()].name,
+                    session.tags.map {
+                        eventData.tags[it.toInt()]
+                    },
+                    session.day,
+                    false
+                )
+            }.toMutableList()
 
-        loadAllTags()
+            loadAllTags()
+        }
         updateSessionListWithStarredSessions()
     }
 
@@ -249,6 +264,12 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
 
     }
+
+    override fun onCleared() {
+        super.onCleared()
+        viewModelJob.cancel()
+    }
+
 }
 
 // ********************* Sessions' info to display in the list. ****************************
