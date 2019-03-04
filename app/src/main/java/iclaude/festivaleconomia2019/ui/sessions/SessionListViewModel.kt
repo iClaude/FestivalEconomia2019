@@ -24,7 +24,6 @@ import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.sessions.filters.*
 import iclaude.festivaleconomia2019.ui.utils.SingleLiveEvent
-import org.threeten.bp.temporal.ChronoUnit
 import javax.inject.Inject
 
 class SessionListViewModel(val context: Application) : AndroidViewModel(context) {
@@ -84,30 +83,13 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
                 session.tags.map {
                     eventData.tags[it.toInt()]
                 },
-                0,
+                session.day,
                 false
             )
         }.toMutableList()
 
-        paginateByDay(sessionsInfo)
         loadAllTags()
         updateSessionListWithStarredSessions()
-    }
-
-    /* Add day number on each session. This is used to separate sessions by day (filtering is done by
-        SessionListFragment.*/
-    private fun paginateByDay(sessions: List<SessionInfoForList>) {
-        var i = 0
-        var baseDay = timestampToZonedDateTime(sessions[0].startTimestamp, context)
-        for (session in sessions) {
-            val curDay = timestampToZonedDateTime(session.startTimestamp, context)
-            if (ChronoUnit.DAYS.between(baseDay, curDay) > 0) {
-                session.day = ++i
-                baseDay = curDay
-            } else {
-                session.day = i
-            }
-        }
     }
 
     // Reapply the same filter for triggering un update of the list.

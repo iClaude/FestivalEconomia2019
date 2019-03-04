@@ -189,6 +189,7 @@
         "01"
       ],
       "startTimestamp": 1541613600000,
+      "day": 0,
       "tags": [
         "00",
         "02"
@@ -201,6 +202,7 @@
     {
       "description": "LiveData is a simple observable data holder that is aware of the lifecycle of the observers. It was designed to avoid memory leaks and null pointer exceptions between an activity or fragment and a ViewModel. \n\nHowever, you can also use LiveData beyond the ViewModel. Components like Room or Workmanager also expose LiveData observables, and you can make your own data sources lifecycle-aware.\n\nIn this talk, we'll deep dive into patterns with LiveData such as the different types of transformations (map, switchMap and MediatorLiveData), handling events and building reactive architectures as well as common antipatterns and code-smells to avoid.",
       "endTimestamp": 1541619300000,
+      "day": 0,
       "id": "01",
       "relatedSessions": [],
       "location": "01",
@@ -219,6 +221,7 @@
     {
       "description": "Room is Android's persistence library that provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite.\n\nThis talk covers some of the new features added to Room since its announcement at I/O 2017 and additionally touches on some of the best practices.",
       "endTimestamp": 1541620500000,
+      "day": 0,
       "id": "02",
       "relatedSessions": [],
       "location": "10",
@@ -239,6 +242,7 @@
     {
       "description": "Android Lint already scans your app for hundreds of common issues, contributing to the code warnings that you see in Android Studio. But Lint can do even more for advanced users. Come to this demo-heavy talk to learn about the less common uses of Lint, which may include: \n\n - Writing custom Lint checks for domain- or team-specific needs\n - Using annotations to catch threading bugs *before* they cause UI freezes\n - Enabling off-by-default checks to improve Java/Kotlin interoperability\n - Performance best practices when running Lint on a CI server\n",
       "endTimestamp": 1541619300000,
+      "day": 0,
       "id": "03",
       "relatedSessions": [],
       "location": "15",
@@ -255,6 +259,7 @@
     {
       "description": "The release of androidx.test v1.0 makes testing a first class citizen of Android developer tools. See how a new set of cross platform APIs enable you to write both unit and integration tests that run in any environment and learn of our upcoming plans for future releases.",
       "endTimestamp": 1541620500000,
+      "day": 0,
       "id": "04",
       "relatedSessions": [],
       "location": "11",
@@ -273,6 +278,7 @@
     {
       "description": "JNI is hard. Join the NDK engineering team to understand some of the pitfalls when writing JNI and some of best ways to make your life easier. ",
       "endTimestamp": 1541621400000,
+      "day": 0,
       "id": "05",
       "relatedSessions": [],
       "location": "07",
@@ -290,6 +296,7 @@
     {
       "description": "Have you heard about Kotlin multiplatform? With Kotlin/JS, Kotlin/Native and Kotlin/JVM, you can share your business logic between Android and other platforms. In just 5 minutes we will write a multiplatform utility class.",
       "endTimestamp": 1541621760000,
+      "day": 0,
       "id": "06",
       "relatedSessions": [],
       "location": "08",
@@ -307,6 +314,7 @@
     {
       "description": "Did you know that VectorDrawables support theme colors, stateful colors and even gradients? Did you know this works back to API14 with AndroidX? Are you getting the most out of your vectors to support different view states, using the same drawables in differently themed screens, or avoiding bloating your app with large illustrations?\n\nThis lightning talk paints a picture of these advanced features of VectorDrawables and how to use them.",
       "endTimestamp": 1541622120000,
+      "day": 0,
       "id": "07",
       "relatedSessions": [],
       "location": "20",
@@ -325,6 +333,7 @@
     {
       "description": "Data Binding has come a long way, and is now an integrated part of the Architecture Components within Jetpack, thanks to built-in observation of LiveData.   Level up with Data Binding and simplify your Android coding.",
       "endTimestamp": 1541622480000,
+      "day": 0,
       "id": "08",
       "relatedSessions": [
         "01",
@@ -344,6 +353,7 @@
     {
       "description": "Watch the Android performance team take systraces of your apps and identify potential performance improvements during app startup and other performance-sensitive areas. ",
       "endTimestamp": 1541622840000,
+      "day": 0,
       "id": "09",
       "relatedSessions": [
         "05",
@@ -368,6 +378,7 @@
     {
       "description": "Text layout has high impact on almost every application's performance. This talk covers common usage patterns of text in Android apps and common pitfalls developers fall into that can be avoided, emphasizing performance issues and how to avoid them. We will also talk about how to improve text layout performance in your app using PrecomputedText and RecyclerView prefetch, and talk about best practices for editable text.      ",
       "endTimestamp": 1541702400000,
+      "day": 1,
       "id": "10",
       "relatedSessions": [],
       "location": "15",
@@ -389,6 +400,7 @@
     {
       "description": "Android offers many different locations and ways to store data, and we'll share best-practices for each of them, helping you build robust, secure, and flexible apps along the way.",
       "endTimestamp": 1541703600000,
+      "day": 1,
       "id": "11",
       "relatedSessions": [
         "07"
@@ -408,6 +420,7 @@
     {
       "description": "Come ask your questions to some of the Android experts. Maybe we'll even know the answers!",
       "endTimestamp": 1541706600000,
+      "day": 1,
       "id": "12",
       "relatedSessions": [
         "03",
