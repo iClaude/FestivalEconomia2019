@@ -6,7 +6,13 @@ data class Filter(
     var tagsTypes: MutableList<Tag> = mutableListOf(),
     var tagsTopics: MutableList<Tag> = mutableListOf(),
     var starred: Boolean = false
-)
+) {
+    fun clear() {
+        tagsTypes.clear()
+        tagsTopics.clear()
+        starred = false
+    }
+}
 
 fun Filter.hasTypeTags() = tagsTypes.isNotEmpty()
 

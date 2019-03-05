@@ -29,23 +29,6 @@
                 android:layout_height="match_parent"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
-        <ImageView
-                android:layout_width="100dp"
-                android:layout_height="150dp" app:srcCompat="@drawable/event_logo"
-                android:id="@+id/imageView2"
-                android:layout_gravity="center"
-                android:visibility="@{viewModel.dataLoadedObs? View.GONE : View.VISIBLE}"
-                android:contentDescription="@string/content_description"/>
-
-        <ProgressBar
-                android:id="@+id/pbLoading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:indeterminate="true"
-                android:indeterminateTint="@color/light_grey"
-                android:visibility="@{viewModel.dataLoadedObs? View.GONE : View.VISIBLE}"/>
-
         <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fabFilter"
                 android:layout_width="wrap_content"

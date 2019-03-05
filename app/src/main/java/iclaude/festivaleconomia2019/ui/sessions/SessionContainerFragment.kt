@@ -61,7 +61,6 @@ class SessionContainerFragment : Fragment() {
         // setup ViewPager and TabLayout
         viewModel.repository.eventDataLive.observe(this, Observer { eventData ->
             with(viewModel) {
-                dataLoadedObs.set(true)
                 loadInfoList(eventData)
             }
 

@@ -59,7 +59,7 @@ fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewMod
         val context = chipGroup.context
         val binding = ItemFilterChipBinding.inflate(LayoutInflater.from(context), chipGroup, false).apply {
             setTag(tag)
-            filter = viewModel.filterSelected.value
+            filter = viewModel.filter
             setViewModel(viewModel)
         }
         chipGroup.addView(binding.root)
@@ -122,10 +122,9 @@ fun addChipListeners(chip: Chip, viewModel: SessionListViewModel, tag: Tag) {
 
 // Utility functions.
 private fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, tag: Tag) {
-    val filter = viewModel.filterSelected.value ?: Filter()
     when(tag.category) {
-        CATEGORY_TYPE -> filter.tagsTypes
-        else -> filter.tagsTopics
+        CATEGORY_TYPE -> viewModel.filter.tagsTypes
+        else -> viewModel.filter.tagsTopics
     }.let {
         when (toAdd) {
             true -> it.add(tag)
@@ -133,7 +132,7 @@ private fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, tag: T
         }
     }
 
-    viewModel.updateFilter(filter)
+    viewModel.filterUpdated()
 }
 
 private fun createChipColorStateList(color: Int): ColorStateList {

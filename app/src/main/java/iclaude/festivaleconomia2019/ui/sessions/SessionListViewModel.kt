@@ -8,7 +8,6 @@ import androidx.databinding.*
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
@@ -33,11 +32,12 @@ import javax.inject.Inject
 class SessionListViewModel(val context: Application) : AndroidViewModel(context) {
 
     private val viewModelJob = Job()
-    private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
+    private val defaultScope = CoroutineScope(Dispatchers.Default + viewModelJob)
+    private val mainScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
 
     // ************************ Filters ******************************
-    val filterSelected: MutableLiveData<Filter> = MutableLiveData() // filter currently applied
+    var filter: Filter = Filter() // filter currently applied
     val isFilterTaggedObs: ObservableBoolean = ObservableBoolean(false) // does current filter have tags?
     val isFilterStarredObs: ObservableBoolean =
         ObservableBoolean(false) // does current filter include starred sessions?
@@ -49,45 +49,22 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     @Inject
     lateinit var repository: EventDataRepository
 
-    private var sessionsInfo: MutableList<SessionInfoForList> = mutableListOf()
+    private var sessions: MutableList<SessionInfoForList> = mutableListOf()
 
     val dataLoadedObs: ObservableBoolean = ObservableBoolean(false)
 
-    // List of filtered sessions. When filterSelected changes, this list changes too using a switchMap transformation.
+    // List of filtered sessions.
+    private val _sessionsInfoFilteredLive: MutableLiveData<List<SessionInfoForList>> = MutableLiveData()
     val sessionsInfoFilteredLive: LiveData<List<SessionInfoForList>>
-        get() = Transformations.switchMap(filterSelected) { filter ->
-            var filteredList = sessionsInfo.toMutableList()
+        get() = _sessionsInfoFilteredLive
 
-            uiScope.launch {
-
-                // filter by tags and starred
-                if (filter.isFilterSet()) filteredList = sessionsInfo.filter {
-                    if (filter.isStarred()) it.starred else true
-                }.filter {
-                    if (filter.hasTypeTags())
-                        it.tags.intersect(filter.tagsTypes).isNotEmpty()
-                    else
-                        true
-                }.filter {
-                    if (filter.hasTopicTags())
-                        it.tags.intersect(filter.tagsTopics).isNotEmpty()
-                    else
-                        true
-                }.toMutableList()
-
-                sessionsFilteredObs.set(filteredList.size)
-            }
-
-            MutableLiveData<List<SessionInfoForList>>().apply { value = filteredList }
-
-        }
 
     // load original list of sessions when data is loaded from repository: triggered from SessionContainerFragment
     fun loadInfoList(eventData: EventData) {
-        if (sessionsInfo.isNotEmpty()) return
+        if (sessions.isNotEmpty()) return
 
-        uiScope.launch {
-            sessionsInfo = eventData.sessions.map { session ->
+        defaultScope.launch {
+            sessions = eventData.sessions.map { session ->
                 SessionInfoForList(
                     session.id, session.title,
                     session.hasSessionUrl() || (session.hasYoutubeUrl()),
@@ -102,24 +79,44 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
                 )
             }.toMutableList()
 
-            loadAllTags()
+            mainScope.launch {
+                dataLoadedObs.set(true)
+                _sessionsInfoFilteredLive.value = sessions
+                loadAllTags()
+                updateSessionListWithStarredSessions()
+            }
         }
-        updateSessionListWithStarredSessions()
     }
 
-    // Reapply the same filter for triggering un update of the list.
-    private fun forceListUpdate() {
-        val filter = filterSelected.value
-        filter?.let {
-            val newFilter = Filter(filter.tagsTypes, filter.tagsTopics, filter.starred)
-            filterSelected.value = newFilter
+    private fun filterList() {
+        defaultScope.launch {
+            var filteredList = sessions.toMutableList()
+
+            // filter by tags and starred
+            if (filter.isFilterSet()) filteredList = sessions.filter {
+                if (filter.isStarred()) it.starred else true
+            }.filter {
+                if (filter.hasTypeTags())
+                    it.tags.intersect(filter.tagsTypes).isNotEmpty()
+                else
+                    true
+            }.filter {
+                if (filter.hasTopicTags())
+                    it.tags.intersect(filter.tagsTopics).isNotEmpty()
+                else
+                    true
+            }.toMutableList()
+
+            mainScope.launch {
+                _sessionsInfoFilteredLive.value = filteredList
+                sessionsFilteredObs.set(filteredList.size)
+            }
         }
     }
 
     // ********************** filtering BottomSheet ******************************
     // operations
-    fun updateFilter(filter: Filter) {
-        filterSelected.value = filter
+    fun filterUpdated() {
         isFilterTaggedObs.set(filter.hasTags())
         isFilterStarredObs.set(filter.isStarred())
         filterTagsObs.apply {
@@ -127,15 +124,17 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
             if (filter.isStarred()) this.add(starredTag)
             this.addAll(filter.tagsTypes + filter.tagsTopics)
         }
+        filterList()
     }
 
     // reset button is clicked when filter sheet is expanded: all filters are cleared
     fun clearFilters() {
-        filterSelected.value = Filter()
+        filter.clear()
         isFilterTaggedObs.set(false)
         isFilterStarredObs.set(false)
         clearTagsObs.set(clearTagsObs.get() + 1)
         filterTagsObs.clear()
+        filterList()
     }
 
     // clear filters button is clicked when filter sheet is collapsed: clear filter and hide bottom sheet
@@ -146,9 +145,8 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     // chip for starred sessions is checked/unchecked
     fun chipStarredCheckedChanged(compoundButton: CompoundButton, isChecked: Boolean) {
-        val filter = filterSelected.value ?: Filter()
         filter.starred = isChecked
-        updateFilter(filter)
+        filterUpdated()
     }
 
     // BottomSheet UI
@@ -233,9 +231,9 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
                 if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
 
                 userInFirebase.starredSessions.forEach {
-                    sessionsInfo[it.toInt()].starred = true
+                    sessions[it.toInt()].starred = true
                 }
-                forceListUpdate()
+                filterList()
             }
         })
     }
@@ -244,20 +242,19 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
         repository.starOrUnstarSession(sessionId, toStar)
-        sessionsInfo[sessionId.toInt()].starred = toStar
+        sessions[sessionId.toInt()].starred = toStar
         showSnackBarForStarringCommand.value = toStar
     }
 
     fun unstarAllSessions() {
-        sessionsInfo.forEach {
+        sessions.forEach {
             it.starred = false
         }
-        forceListUpdate()
+        filterList()
     }
 
     init {
         App.component.inject(this)
-        updateFilter(Filter())
 
         FirebaseAuth.getInstance().currentUser?.let {
             showUserPhoto(it)
