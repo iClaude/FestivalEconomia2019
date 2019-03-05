@@ -132,7 +132,7 @@ private fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, tag: T
         }
     }
 
-    viewModel.filterUpdated()
+    viewModel.filterList()
 }
 
 private fun createChipColorStateList(color: Int): ColorStateList {

@@ -88,7 +88,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
-    private fun filterList() {
+    fun filterList() {
         defaultScope.launch {
             var filteredList = sessions.toMutableList()
 
@@ -110,6 +110,13 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
             mainScope.launch {
                 _sessionsInfoFilteredLive.value = filteredList
                 sessionsFilteredObs.set(filteredList.size)
+                isFilterTaggedObs.set(filter.hasTags())
+                isFilterStarredObs.set(filter.isStarred())
+                filterTagsObs.apply {
+                    clear()
+                    if (filter.isStarred()) this.add(starredTag)
+                    this.addAll(filter.tagsTypes + filter.tagsTopics)
+                }
             }
         }
     }
@@ -117,23 +124,13 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     // ********************** filtering BottomSheet ******************************
     // operations
     fun filterUpdated() {
-        isFilterTaggedObs.set(filter.hasTags())
-        isFilterStarredObs.set(filter.isStarred())
-        filterTagsObs.apply {
-            clear()
-            if (filter.isStarred()) this.add(starredTag)
-            this.addAll(filter.tagsTypes + filter.tagsTopics)
-        }
         filterList()
     }
 
     // reset button is clicked when filter sheet is expanded: all filters are cleared
     fun clearFilters() {
         filter.clear()
-        isFilterTaggedObs.set(false)
-        isFilterStarredObs.set(false)
         clearTagsObs.set(clearTagsObs.get() + 1)
-        filterTagsObs.clear()
         filterList()
     }
 
@@ -146,7 +143,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     // chip for starred sessions is checked/unchecked
     fun chipStarredCheckedChanged(compoundButton: CompoundButton, isChecked: Boolean) {
         filter.starred = isChecked
-        filterUpdated()
+        filterList()
     }
 
     // BottomSheet UI
@@ -259,7 +256,6 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         FirebaseAuth.getInstance().currentUser?.let {
             showUserPhoto(it)
         }
-
     }
 
     override fun onCleared() {

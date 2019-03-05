@@ -31,7 +31,7 @@ class RepoModule {
 
     @Provides
     @Singleton
-    fun provideRepository(inputStream: InputStream) = EventDataRepository(inputStream)
+    fun provideRepository(inputStream: InputStream): EventDataRepository = EventDataRepository(inputStream)
 }
 
 @Component(modules = arrayOf(AppModule::class, RepoModule::class))
