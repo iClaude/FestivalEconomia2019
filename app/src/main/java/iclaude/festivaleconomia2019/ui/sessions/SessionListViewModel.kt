@@ -9,6 +9,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
+import com.firebase.ui.auth.AuthUI
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
@@ -235,6 +236,30 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         authCommand.value = Authentication.LOGIN_FROM_STAR
     }
 
+    fun getLoginProviders() = arrayListOf(
+        AuthUI.IdpConfig.GoogleBuilder().build(),
+        AuthUI.IdpConfig.FacebookBuilder().build(),
+        AuthUI.IdpConfig.TwitterBuilder().build()
+    )
+
+    fun onUserLoggedIn(user: FirebaseUser) {
+        showUserPhoto(user)
+        addUserToFirebase(user)
+        updateSessionListWithStarredSessions()
+    }
+
+    fun onUserLoggedOut() {
+        userImageUriObs.set(null)
+        sessions.forEach {
+            it.starred = false
+        }
+        filterList()
+    }
+
+    fun addUserToFirebase(user: FirebaseUser) {
+        repository.addUser(user)
+    }
+
     fun showUserPhoto(user: FirebaseUser) {
         for (profile in user.providerData) {
             val photoUri = profile.photoUrl
@@ -243,10 +268,6 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
                 return
             }
         }
-    }
-
-    fun addUser(user: FirebaseUser) {
-        repository.addUser(user)
     }
 
     // Starred sessions for logged-in users.
@@ -273,12 +294,6 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         showSnackBarForStarringCommand.value = toStar
     }
 
-    fun unstarAllSessions() {
-        sessions.forEach {
-            it.starred = false
-        }
-        filterList()
-    }
 
 
     override fun onCleared() {

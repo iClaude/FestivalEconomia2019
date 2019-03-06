@@ -116,15 +116,13 @@ class SessionContainerFragment : Fragment() {
         }
     }
 
-    private fun logIn() {
-        // Choose authentication providers
-        val providers = arrayListOf(
-            AuthUI.IdpConfig.GoogleBuilder().build(),
-            AuthUI.IdpConfig.FacebookBuilder().build(),
-            AuthUI.IdpConfig.TwitterBuilder().build()
-        )
+    // User login/logout.
 
-        // Create and launch sign-in intent
+    private fun logIn() {
+        // Choose authentication providers.
+        val providers = viewModel.getLoginProviders()
+
+        // Create and launch sign-in intent.
         startActivityForResult(
             AuthUI.getInstance()
                 .createSignInIntentBuilder()
@@ -153,10 +151,7 @@ class SessionContainerFragment : Fragment() {
             AuthUI.getInstance()
                 .signOut(context!!)
                 .addOnCompleteListener {
-                    viewModel.run {
-                        userImageUriObs.set(null)
-                        unstarAllSessions()
-                    }
+                    viewModel.onUserLoggedOut()
                 }
             dialog?.dismiss()
         }
@@ -190,11 +185,7 @@ class SessionContainerFragment : Fragment() {
                 // Successfully signed in
                 val user = FirebaseAuth.getInstance().currentUser
                 user?.let {
-                    with(viewModel) {
-                        showUserPhoto(it)
-                        addUser(it)
-                        updateSessionListWithStarredSessions()
-                    }
+                    viewModel.onUserLoggedIn(it)
                 }
             } else {
                 Snackbar.make(
