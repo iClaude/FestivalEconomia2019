@@ -23,6 +23,8 @@ class EventDataRepository(private val inputStream: InputStream) {
 
     //************************** Local JSON file **************************
 
+    var dataLoaded = false
+
     private val job = Job()
     private val ioScope = CoroutineScope(Dispatchers.IO + job)
 
@@ -33,7 +35,12 @@ class EventDataRepository(private val inputStream: InputStream) {
     fun loadEventDataFromJSONFile() {
         ioScope.launch {
             _eventDataLive.postValue(JSONparser.parseEventData(inputStream))
+            dataLoaded = true
         }
+    }
+
+    fun cancelLoadingData() {
+        job.cancel()
     }
 
     //*************************** Firebase **********************************
@@ -95,10 +102,6 @@ class EventDataRepository(private val inputStream: InputStream) {
             .update("starredSessions", sessions)
             .addOnSuccessListener { Log.d(TAG, "User starred sessions updated") }
             .addOnFailureListener { Log.w(TAG, "Error updating user starred sessions", it) }
-    }
-
-    fun cancelLoadingData() {
-        job.cancel()
     }
 
     companion object {

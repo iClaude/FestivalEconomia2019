@@ -41,6 +41,9 @@ class SessionContainerFragment : Fragment() {
         super.onCreate(savedInstanceState)
         viewModel = activity?.run {
             ViewModelProviders.of(this).get(SessionListViewModel::class.java)
+        }?.also {
+            it.loadDataFromRepo()
+            it.loadUserInfo()
         } ?: throw Exception("Invalid Activity")
     }
 
@@ -59,7 +62,7 @@ class SessionContainerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // setup ViewPager and TabLayout
-        viewModel.repository.eventDataLive.observe(this, Observer { eventData ->
+        viewModel.eventDataFromRepoLive.observe(this, Observer { eventData ->
             with(viewModel) {
                 loadInfoList(eventData)
             }
@@ -189,7 +192,7 @@ class SessionContainerFragment : Fragment() {
                 user?.let {
                     with(viewModel) {
                         showUserPhoto(it)
-                        repository.addUser(it)
+                        addUser(it)
                         updateSessionListWithStarredSessions()
                     }
                 }

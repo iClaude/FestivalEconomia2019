@@ -8,6 +8,7 @@ import androidx.databinding.*
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
@@ -35,6 +36,29 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     private val defaultScope = CoroutineScope(Dispatchers.Default + viewModelJob)
     private val mainScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
+    init {
+        App.component.inject(this)
+    }
+
+    // Event data fetched from repository.
+    @Inject
+    lateinit var repository: EventDataRepository
+    val eventDataFromRepoLive = Transformations.switchMap(repository.eventDataLive) {
+        MutableLiveData<EventData>().apply {
+            value = it
+        }
+    }
+
+    // Initializations.
+    fun loadDataFromRepo() {
+        if (!repository.dataLoaded) repository.loadEventDataFromJSONFile()
+    }
+
+    fun loadUserInfo() {
+        FirebaseAuth.getInstance().currentUser?.let {
+            showUserPhoto(it)
+        }
+    }
 
     // ************************ Filters ******************************
     var filter: Filter = Filter() // filter currently applied
@@ -46,8 +70,6 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
 
     // ********************* Sessions list ******************************
-    @Inject
-    lateinit var repository: EventDataRepository
 
     private var sessions: MutableList<SessionInfoForList> = mutableListOf()
 
@@ -220,6 +242,10 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
+    fun addUser(user: FirebaseUser) {
+        repository.addUser(user)
+    }
+
     // ************************* Starred sessions **********************************
     fun updateSessionListWithStarredSessions() {
         repository.getStarredSessions(OnSuccessListener { documentSnapshot ->
@@ -250,17 +276,11 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         filterList()
     }
 
-    init {
-        App.component.inject(this)
-
-        FirebaseAuth.getInstance().currentUser?.let {
-            showUserPhoto(it)
-        }
-    }
 
     override fun onCleared() {
         super.onCleared()
         viewModelJob.cancel()
+        repository.cancelLoadingData()
     }
 
 }

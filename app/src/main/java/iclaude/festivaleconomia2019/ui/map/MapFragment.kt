@@ -35,7 +35,9 @@ class MapFragment : Fragment(), OnMapReadyCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MapViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(MapViewModel::class.java).also {
+            it.loadDataFromRepo()
+        }
     }
 
     override fun onCreateView(
@@ -106,7 +108,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
     override fun onMapReady(gMap: GoogleMap?) {
         googleMap = gMap
 
-        viewModel.repository.eventDataLive.observe(this, Observer {
+        viewModel.eventDataFromRepoLive.observe(this, Observer {
             viewModel.loadMap(it.locations)
         })
 

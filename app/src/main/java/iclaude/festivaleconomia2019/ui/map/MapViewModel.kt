@@ -3,6 +3,7 @@ package iclaude.festivaleconomia2019.ui.map
 import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.google.android.gms.maps.CameraUpdate
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -11,6 +12,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.Marker
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.Location
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
@@ -19,6 +21,28 @@ import iclaude.festivaleconomia2019.ui.utils.SingleLiveEvent
 import javax.inject.Inject
 
 class MapViewModel : ViewModel() {
+
+    // set the state of BottomSheet with location's info
+    private val _bottomSheetStateEvent = MutableLiveData<Event<Int>>()
+    val bottomSheetStateEvent: LiveData<Event<Int>>
+        get() = _bottomSheetStateEvent
+
+    init {
+        App.component.inject(this)
+        _bottomSheetStateEvent.value = Event(BottomSheetBehavior.STATE_HIDDEN)
+    }
+
+    @Inject
+    lateinit var repository: EventDataRepository
+    val eventDataFromRepoLive = Transformations.switchMap(repository.eventDataLive) {
+        MutableLiveData<EventData>().apply {
+            value = it
+        }
+    }
+
+    fun loadDataFromRepo() {
+        if (!repository.dataLoaded) repository.loadEventDataFromJSONFile()
+    }
 
     // center the map on a specific point with animation
     private val _mapCenterEvent = MutableLiveData<Event<CameraUpdate>>()
@@ -35,11 +59,6 @@ class MapViewModel : ViewModel() {
     val mapMarkersEvent: LiveData<Event<LocationsAndSelectedMarker>>
         get() = _mapMarkersEvent
 
-    // set the state of BottomSheet with location's info
-    private val _bottomSheetStateEvent = MutableLiveData<Event<Int>>()
-    val bottomSheetStateEvent: LiveData<Event<Int>>
-        get() = _bottomSheetStateEvent
-
     // set marker's name and description in the bottom sheet
     private val _markerInfoEvent = MutableLiveData<Event<Location>>()
     val markerInfoEvent: LiveData<Event<Location>>
@@ -47,15 +66,6 @@ class MapViewModel : ViewModel() {
 
     // the user clicks on map icon to get directions to the selected location
     val directionsEvent = SingleLiveEvent<Location>()
-
-    init {
-        App.component.inject(this)
-
-        _bottomSheetStateEvent.value = Event(BottomSheetBehavior.STATE_HIDDEN)
-    }
-
-    @Inject
-    lateinit var repository: EventDataRepository
 
     private var curMarker: Marker? = null
     private var selectedMarkerId: String = "xx"
@@ -143,6 +153,7 @@ class MapViewModel : ViewModel() {
     override fun onCleared() {
         super.onCleared()
         selectedMarkerId = "xx"
+        repository.cancelLoadingData()
     }
 }
 
