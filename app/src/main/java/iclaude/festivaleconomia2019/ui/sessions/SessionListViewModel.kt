@@ -1,11 +1,12 @@
 package iclaude.festivaleconomia2019.ui.sessions
 
+import android.app.Application
 import android.net.Uri
 import androidx.databinding.*
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
-import androidx.lifecycle.ViewModel
 import com.firebase.ui.auth.AuthUI
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -27,7 +28,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class SessionListViewModel() : ViewModel() {
+class SessionListViewModel(val context: Application) : AndroidViewModel(context) {
 
     private val viewModelJob = Job()
     private val defaultScope = CoroutineScope(Dispatchers.Default + viewModelJob)
@@ -92,7 +93,11 @@ class SessionListViewModel() : ViewModel() {
                     session.hasSessionUrl() || (session.hasYoutubeUrl()),
                     session.startTimestamp,
                     session.endTimestamp,
-                    eventData.locations[session.location.toInt()].name,
+                    "${sessionLength(
+                        context,
+                        session.startTimestamp,
+                        session.endTimestamp
+                    )} / ${eventData.locations[session.location.toInt()].name}",
                     session.tags.map {
                         eventData.tags[it.toInt()]
                     },
@@ -296,7 +301,7 @@ class SessionInfoForList(
     val liveStreamed: Boolean,
     val startTimestamp: Long,
     val endTimestamp: Long,
-    val location: String,
+    val lenLoc: String,
     val tags: List<Tag>,
     var day: Int,
     var starred: Boolean

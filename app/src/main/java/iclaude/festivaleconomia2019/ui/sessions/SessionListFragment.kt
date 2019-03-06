@@ -104,7 +104,7 @@ class SessionListFragment : Fragment() {
                     && oldItem.liveStreamed == newItem.liveStreamed
                     && oldItem.startTimestamp == newItem.startTimestamp
                     && oldItem.endTimestamp == newItem.endTimestamp
-                    && oldItem.location == newItem.location
+                    && oldItem.lenLoc == newItem.lenLoc
                     && oldItem.tags == newItem.tags
                     && oldItem.starred == newItem.starred
         }
