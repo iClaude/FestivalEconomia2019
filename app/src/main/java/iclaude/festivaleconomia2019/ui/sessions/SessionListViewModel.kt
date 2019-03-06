@@ -34,6 +34,9 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     private val defaultScope = CoroutineScope(Dispatchers.Default + viewModelJob)
     private val mainScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
+    // User info.
+    val userImageUriObs: ObservableField<Uri> = ObservableField()
+
     init {
         App.component.inject(this)
         loadDataFromRepo()
@@ -209,8 +212,6 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     }
 
     // User authentication.
-
-    val userImageUriObs: ObservableField<Uri> = ObservableField()
 
     enum class Authentication { LOGIN, LOGOUT, LOGIN_FROM_STAR }
 
