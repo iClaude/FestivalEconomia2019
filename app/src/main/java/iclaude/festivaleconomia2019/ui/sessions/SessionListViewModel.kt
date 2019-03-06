@@ -1,21 +1,17 @@
 package iclaude.festivaleconomia2019.ui.sessions
 
-import android.app.Application
 import android.net.Uri
-import android.widget.CompoundButton
-import androidx.core.content.ContextCompat
 import androidx.databinding.*
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
+import androidx.lifecycle.ViewModel
 import com.firebase.ui.auth.AuthUI
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.Tag
 import iclaude.festivaleconomia2019.model.data_classes.User
@@ -31,7 +27,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class SessionListViewModel(val context: Application) : AndroidViewModel(context) {
+class SessionListViewModel() : ViewModel() {
 
     private val viewModelJob = Job()
     private val defaultScope = CoroutineScope(Dispatchers.Default + viewModelJob)
@@ -164,20 +160,9 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         removeFilterSheetCommand.call()
     }
 
-    // Chip for starred sessions is checked/unchecked.
-    fun chipStarredCheckedChanged(compoundButton: CompoundButton, isChecked: Boolean) {
-        filter.starred = isChecked
-        filterList()
-    }
 
     // BottomSheet UI.
-    private val starredTag = Tag( // tag for favorite sessions
-        "99",
-        "none",
-        context.getString(R.string.filter_favorites),
-        Integer.toHexString(ContextCompat.getColor(context, R.color.onSurfaceColor)),
-        "#" + Integer.toHexString(ContextCompat.getColor(context, R.color.secondaryColor))
-    )
+    lateinit var starredTag: Tag
 
     val sessionsFilteredObs: ObservableInt =
         ObservableInt(0) // number of filtered sessions (to display in filter sheets when some tags are selected)
