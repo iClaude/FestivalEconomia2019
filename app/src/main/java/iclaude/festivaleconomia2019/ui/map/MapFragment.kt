@@ -35,9 +35,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MapViewModel::class.java).also {
-            it.loadDataFromRepo()
-        }
+        viewModel = ViewModelProviders.of(this).get(MapViewModel::class.java)
     }
 
     override fun onCreateView(

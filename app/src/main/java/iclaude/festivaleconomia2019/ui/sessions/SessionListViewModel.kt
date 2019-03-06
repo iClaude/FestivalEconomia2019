@@ -36,6 +36,8 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     init {
         App.component.inject(this)
+        loadDataFromRepo()
+        loadUserInfo()
     }
 
     // Event data fetched from repository.
@@ -50,11 +52,11 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     // Initializations.
 
-    fun loadDataFromRepo() {
+    private fun loadDataFromRepo() {
         if (!repository.dataLoaded) repository.loadEventDataFromJSONFile()
     }
 
-    fun loadUserInfo() {
+    private fun loadUserInfo() {
         FirebaseAuth.getInstance().currentUser?.let {
             showUserPhoto(it)
         }

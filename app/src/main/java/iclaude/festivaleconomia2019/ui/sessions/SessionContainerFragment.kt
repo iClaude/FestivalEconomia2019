@@ -41,9 +41,6 @@ class SessionContainerFragment : Fragment() {
         super.onCreate(savedInstanceState)
         viewModel = activity?.run {
             ViewModelProviders.of(this).get(SessionListViewModel::class.java)
-        }?.also {
-            it.loadDataFromRepo()
-            it.loadUserInfo()
         } ?: throw Exception("Invalid Activity")
     }
 

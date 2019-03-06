@@ -29,19 +29,22 @@ class MapViewModel : ViewModel() {
 
     init {
         App.component.inject(this)
+        loadDataFromRepo()
         _bottomSheetStateEvent.value = Event(BottomSheetBehavior.STATE_HIDDEN)
+    }
+
+    // Initialization.
+    private fun loadDataFromRepo() {
+        if (!repository.dataLoaded) repository.loadEventDataFromJSONFile()
     }
 
     @Inject
     lateinit var repository: EventDataRepository
+
     val eventDataFromRepoLive = Transformations.switchMap(repository.eventDataLive) {
         MutableLiveData<EventData>().apply {
             value = it
         }
-    }
-
-    fun loadDataFromRepo() {
-        if (!repository.dataLoaded) repository.loadEventDataFromJSONFile()
     }
 
     // center the map on a specific point with animation
