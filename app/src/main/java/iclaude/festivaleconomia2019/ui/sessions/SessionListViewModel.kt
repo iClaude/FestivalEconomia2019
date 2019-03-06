@@ -41,6 +41,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     }
 
     // Event data fetched from repository.
+
     @Inject
     lateinit var repository: EventDataRepository
     val eventDataFromRepoLive = Transformations.switchMap(repository.eventDataLive) {
@@ -50,6 +51,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     }
 
     // Initializations.
+
     fun loadDataFromRepo() {
         if (!repository.dataLoaded) repository.loadEventDataFromJSONFile()
     }
@@ -60,7 +62,8 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
-    // ************************ Filters ******************************
+    // Filters.
+
     var filter: Filter = Filter() // filter currently applied
     val isFilterTaggedObs: ObservableBoolean = ObservableBoolean(false) // does current filter have tags?
     val isFilterStarredObs: ObservableBoolean =
@@ -69,7 +72,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         ObservableArrayList() // list of selected tags (filters) to show when filter sheet is collapsed
 
 
-    // ********************* Sessions list ******************************
+    // Sessions list.
 
     private var sessions: MutableList<SessionInfoForList> = mutableListOf()
 
@@ -81,7 +84,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         get() = _sessionsInfoFilteredLive
 
 
-    // load original list of sessions when data is loaded from repository: triggered from SessionContainerFragment
+    // Load original list of sessions when data is loaded from repository: triggered from SessionContainerFragment.
     fun loadInfoList(eventData: EventData) {
         if (sessions.isNotEmpty()) return
 
@@ -143,32 +146,30 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
-    // ********************** filtering BottomSheet ******************************
-    // operations
-    fun filterUpdated() {
-        filterList()
-    }
+    // Filtering BottomSheet.
 
-    // reset button is clicked when filter sheet is expanded: all filters are cleared
+    // Operations.
+
+    // Reset button is clicked when filter sheet is expanded: all filters are cleared.
     fun clearFilters() {
         filter.clear()
         clearTagsObs.set(clearTagsObs.get() + 1)
         filterList()
     }
 
-    // clear filters button is clicked when filter sheet is collapsed: clear filter and hide bottom sheet
+    // Clear filters button is clicked when filter sheet is collapsed: clear filter and hide bottom sheet.
     fun clearFiltersAndCollapse() {
         clearFilters()
         removeFilterSheetCommand.call()
     }
 
-    // chip for starred sessions is checked/unchecked
+    // Chip for starred sessions is checked/unchecked.
     fun chipStarredCheckedChanged(compoundButton: CompoundButton, isChecked: Boolean) {
         filter.starred = isChecked
         filterList()
     }
 
-    // BottomSheet UI
+    // BottomSheet UI.
     private val starredTag = Tag( // tag for favorite sessions
         "99",
         "none",
@@ -195,7 +196,8 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     val scrollYObs: ObservableInt =
         ObservableInt(0) // scroll view inside bottom sheet y offset (used to change header elevation)
 
-    // BottomSheet expand/collapse states
+    // BottomSheet expand/collapse states.
+
     val changeFilterSheetStateCommand: SingleLiveEvent<Int> = SingleLiveEvent()
     val removeFilterSheetCommand: SingleLiveEvent<Void> = SingleLiveEvent()
 
@@ -213,7 +215,8 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
-    //***************************** User authentication *************************************
+    // User authentication.
+
     val userImageUriObs: ObservableField<Uri> = ObservableField()
 
     enum class Authentication { LOGIN, LOGOUT, LOGIN_FROM_STAR }
@@ -246,7 +249,8 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         repository.addUser(user)
     }
 
-    // ************************* Starred sessions **********************************
+    // Starred sessions for logged-in users.
+
     fun updateSessionListWithStarredSessions() {
         repository.getStarredSessions(OnSuccessListener { documentSnapshot ->
             val userInFirebase = documentSnapshot.toObject(User::class.java)
@@ -285,7 +289,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
 }
 
-// ********************* Sessions' info to display in the list. ****************************
+// Sessions' info to display in the list.
 class SessionInfoForList(
     val id: String,
     val title: String,
