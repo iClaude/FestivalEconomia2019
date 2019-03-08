@@ -9,8 +9,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import com.firebase.ui.auth.AuthUI
 import com.google.android.gms.tasks.OnSuccessListener
-import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
+import com.google.android.material.bottomsheet.BottomSheetBehavior.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
@@ -21,7 +20,7 @@ import iclaude.festivaleconomia2019.model.data_classes.hasYoutubeUrl
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.sessions.filters.*
-import iclaude.festivaleconomia2019.ui.utils.SingleLiveEvent
+import iclaude.festivaleconomia2019.ui.utils.Event
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -167,7 +166,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     // Clear filters button is clicked when filter sheet is collapsed: clear filter and hide bottom sheet.
     fun clearFiltersAndCollapse() {
         clearFilters()
-        removeFilterSheetCommand.call()
+        _removeFilterSheetEvent.value = Event(Unit)
     }
 
 
@@ -194,20 +193,25 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     // BottomSheet expand/collapse states.
 
-    val changeFilterSheetStateCommand: SingleLiveEvent<Int> = SingleLiveEvent()
-    val removeFilterSheetCommand: SingleLiveEvent<Void> = SingleLiveEvent()
+    private val _changeFilterSheetStateEvent = MutableLiveData<Event<Int>>()
+    val changeFilterSheetStateEvent: LiveData<Event<Int>>
+        get() = _changeFilterSheetStateEvent
+
+    private val _removeFilterSheetEvent = MutableLiveData<Event<Any>>()
+    val removeFilterSheetEvent: LiveData<Event<Any>>
+        get() = _removeFilterSheetEvent
 
     fun changeFilterSheetState(toExpand: Boolean) {
         // expand
         if (toExpand) {
-            changeFilterSheetStateCommand.value = STATE_EXPANDED
+            _changeFilterSheetStateEvent.value = Event(STATE_EXPANDED)
             return
         }
 
         // collapse or hide depending on filters
-        changeFilterSheetStateCommand.value = when (isFilterTaggedObs.get() || isFilterStarredObs.get()) {
-            true -> BottomSheetBehavior.STATE_COLLAPSED
-            else -> BottomSheetBehavior.STATE_HIDDEN
+        _changeFilterSheetStateEvent.value = when (isFilterTaggedObs.get() || isFilterStarredObs.get()) {
+            true -> Event(STATE_COLLAPSED)
+            else -> Event(STATE_HIDDEN)
         }
     }
 
@@ -215,18 +219,20 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     enum class Authentication { LOGIN, LOGOUT, LOGIN_FROM_STAR }
 
-    val authCommand: SingleLiveEvent<Authentication> = SingleLiveEvent()
+    private val _authEvent = MutableLiveData<Event<Authentication>>()
+    val authEvent: LiveData<Event<Authentication>>
+        get() = _authEvent
 
     fun onProfileClicked() {
         if (FirebaseAuth.getInstance().currentUser == null) {
-            authCommand.value = Authentication.LOGIN
+            _authEvent.value = Event(Authentication.LOGIN)
         } else {
-            authCommand.value = Authentication.LOGOUT
+            _authEvent.value = Event(Authentication.LOGOUT)
         }
     }
 
     fun onStarClickedUserNotConnected() {
-        authCommand.value = Authentication.LOGIN_FROM_STAR
+        _authEvent.value = Event(Authentication.LOGIN_FROM_STAR)
     }
 
     fun getLoginProviders() = arrayListOf(
@@ -279,12 +285,14 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         })
     }
 
-    val showSnackBarForStarringCommand: SingleLiveEvent<Boolean> = SingleLiveEvent()
+    private val _showSnackBarForStarringEvent = MutableLiveData<Event<Boolean>>()
+    val showSnackBarForStarringEvent: LiveData<Event<Boolean>>
+        get() = _showSnackBarForStarringEvent
 
     fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
         repository.starOrUnstarSession(sessionId, toStar)
         sessions[sessionId.toInt()].starred = toStar
-        showSnackBarForStarringCommand.value = toStar
+        _showSnackBarForStarringEvent.value = Event(toStar)
     }
 
 

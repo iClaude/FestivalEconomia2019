@@ -17,7 +17,6 @@ import iclaude.festivaleconomia2019.model.data_classes.Location
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.utils.Event
-import iclaude.festivaleconomia2019.ui.utils.SingleLiveEvent
 import javax.inject.Inject
 
 class MapViewModel : ViewModel() {
@@ -68,7 +67,9 @@ class MapViewModel : ViewModel() {
         get() = _markerInfoEvent
 
     // the user clicks on map icon to get directions to the selected location
-    val directionsEvent = SingleLiveEvent<Location>()
+    private val _directionsEvent = MutableLiveData<Event<Location>>()
+    val directionsEvent: LiveData<Event<Location>>
+        get() = _directionsEvent
 
     private var curMarker: Marker? = null
     private var selectedMarkerId: String = "xx"
@@ -130,7 +131,7 @@ class MapViewModel : ViewModel() {
 
     // Show directions to a location.
     fun showRoute(view: View) {
-        directionsEvent.postValue(curMarker?.tag as Location)
+        _directionsEvent.postValue(Event(curMarker?.tag as Location))
     }
 
     // Click on bottom sheet title: expand or collapse.

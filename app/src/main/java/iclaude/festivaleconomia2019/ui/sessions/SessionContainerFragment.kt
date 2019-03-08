@@ -26,6 +26,7 @@ import com.google.firebase.auth.FirebaseAuth
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel.Authentication
+import iclaude.festivaleconomia2019.ui.utils.EventObserver
 import kotlinx.android.synthetic.main.fragment_session_container.*
 import kotlinx.android.synthetic.main.fragment_session_container_appbar.*
 
@@ -81,27 +82,26 @@ class SessionContainerFragment : Fragment() {
             titleHeaderAlphaObs.set(0f)
             scrollYObs.set(0)
             changeFilterSheetState(false)
-            changeFilterSheetStateCommand.observe(this@SessionContainerFragment, Observer {
+            changeFilterSheetStateEvent.observe(this@SessionContainerFragment, EventObserver {
                 bottomSheetBehavior.state = it
             })
-            removeFilterSheetCommand.observe(this@SessionContainerFragment, Observer {
+            removeFilterSheetEvent.observe(this@SessionContainerFragment, EventObserver {
                 bottomSheetBehavior.run {
                     isHideable = true
                     state = STATE_HIDDEN
                 }
-
             })
-            authCommand.observe(this@SessionContainerFragment, Observer { command ->
+            authEvent.observe(this@SessionContainerFragment, EventObserver { command ->
                 when (command) {
                     Authentication.LOGIN -> logIn()
                     Authentication.LOGIN_FROM_STAR -> logInFromStar()
                     else -> logOut()
                 }
             })
-            showSnackBarForStarringCommand.observe(this@SessionContainerFragment, Observer { toStar ->
+            showSnackBarForStarringEvent.observe(this@SessionContainerFragment, EventObserver { toStar ->
                 val pref = activity?.getPreferences(Context.MODE_PRIVATE)
                 val showSnackbar = pref?.getBoolean("starring_show_snackbar", true) ?: true
-                if (!showSnackbar) return@Observer
+                if (!showSnackbar) return@EventObserver
                 val msgId = if (toStar) R.string.starred else R.string.unstarred
                 Snackbar.make(fabFilter, msgId, Snackbar.LENGTH_SHORT).run {
                     setAction(R.string.starred_unstarred_not_show) {
