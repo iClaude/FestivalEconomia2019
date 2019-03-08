@@ -69,9 +69,7 @@ class SessionContainerFragment : Fragment() {
                 SessionsAdapter(
                     childFragmentManager,
                     numberOfDays(context, eventData.sessions),
-                    daysLabels(context, eventData.sessions).also {
-                        it.add(DayLabel(label = getString(R.string.sessions_agenda)))
-                    }
+                    daysLabels(context, eventData.sessions)
                 )
         })
         tabs.setupWithViewPager(viewPager)
@@ -209,16 +207,9 @@ class SessionContainerFragment : Fragment() {
         private val tabsInfo: MutableList<DayLabel>
     ) : FragmentPagerAdapter(fm) {
 
-        override fun getCount() = numDays + 1
+        override fun getCount() = numDays
 
-        override fun getItem(position: Int): Fragment {
-            return when (position) {
-                in 0 until numDays -> {
-                    SessionListFragment.newInstance(position)
-                }
-                else -> AgendaFragment()
-            }
-        }
+        override fun getItem(position: Int): Fragment = SessionListFragment.newInstance(position)
 
         override fun getPageTitle(position: Int): CharSequence {
             return tabsInfo[position].label
