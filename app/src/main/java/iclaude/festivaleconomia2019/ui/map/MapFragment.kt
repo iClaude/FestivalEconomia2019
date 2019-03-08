@@ -21,6 +21,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_COLLAPSED
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
 import iclaude.festivaleconomia2019.databinding.FragmentMapBinding
+import iclaude.festivaleconomia2019.ui.utils.EventObserver
 
 
 const val LOCATION_PERMISSION = 99
@@ -54,7 +55,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         }
 
         // show directions to a location when the user wants to
-        viewModel.directionsEvent.observe(this, Observer {
+        viewModel.directionsEvent.observe(this, EventObserver {
             val uri = Uri.parse("google.navigation:q=${it.lat},${it.lng}")
             val intent = Intent(Intent.ACTION_VIEW, uri).apply {
                 `package` = "com.google.android.apps.maps"
@@ -106,7 +107,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
     override fun onMapReady(gMap: GoogleMap?) {
         googleMap = gMap
 
-        viewModel.repository.eventDataLive.observe(this, Observer {
+        viewModel.eventDataFromRepoLive.observe(this, Observer {
             viewModel.loadMap(it.locations)
         })
 

@@ -10,6 +10,7 @@ data class Session(
     val title: String,
     val startTimestamp: Long,
     val endTimestamp: Long,
+    val day: Int,
     val location: String,
     val description: String,
     val tags: List<String>, // topic of the session: Android, Economics, Cloud, Web, etc.

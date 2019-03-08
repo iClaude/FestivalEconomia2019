@@ -12,6 +12,7 @@ data class Tag(
     companion object {
         const val CATEGORY_TYPE = "type"
         const val CATEGORY_TOPIC = "topic"
+        const val CATEGORY_STAR = "star"
     }
 }
 

@@ -14,16 +14,6 @@ import iclaude.festivaleconomia2019.model.data_classes.Tag
 
 private const val TAG = "TAGS"
 
-@BindingAdapter("app:lenLoc")
-fun lenLoc(textView: TextView, sessionInfo: SessionInfoForList?) {
-    if (sessionInfo == null) return
-    textView.text = "${sessionLength(
-        textView.context,
-        sessionInfo.startTimestamp,
-        sessionInfo.endTimestamp
-    )} / ${sessionInfo.location}"
-}
-
 @BindingAdapter("app:sessionTags")
 fun sessionTags(recyclerView: RecyclerView, sessionTags: List<Tag>?) {
     recyclerView.adapter = (recyclerView.adapter as? TagAdapter ?: TagAdapter())
@@ -55,7 +45,7 @@ fun onStarClickListener(
             b.isChecked = !b.isChecked
             viewModel.starOrUnstarSession(sessionInfo.id, b.isChecked)
         } else {
-            viewModel.onStarClickedUserNotConnected()
+            viewModel.startAuthFlow()
         }
     }
 }

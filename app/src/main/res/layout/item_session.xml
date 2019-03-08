@@ -51,7 +51,7 @@
                 android:id="@+id/tvLenLoc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:lenLoc="@{sessionInfo}"
+                android:text="@{sessionInfo.lenLoc}"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 android:textAppearance="@style/SessionsItemSubtitle"
                 tools:text="40 minutes / Amphitheatre"

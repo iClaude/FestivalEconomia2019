@@ -17,9 +17,17 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.data_classes.Location
 import iclaude.festivaleconomia2019.ui.utils.Event
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
 
 
 private const val TAG = "ICON_EXPAND"
+private val viewModelJob = Job()
+private val defaultScope = CoroutineScope(Dispatchers.Default + viewModelJob)
+private val mainScope = CoroutineScope(Dispatchers.Main + viewModelJob)
+
 
 /**
  * Sets the center of the map's camera with animation. Call this every time the
@@ -53,18 +61,24 @@ fun mapMarkers(mapView: MapView, event: Event<LocationsAndSelectedMarker>?) {
     val eventContent = event?.getContentIfNotHandled() ?: return
 
     mapView.getMapAsync { gMap ->
-        eventContent.locations.forEach { loc ->
-            gMap.addMarker(
+        defaultScope.launch {
+            val locations = mutableListOf<Location>()
+            val markers = eventContent.locations.map { loc ->
+                locations.add(loc)
                 MarkerOptions()
                     .position(LatLng(loc.lat, loc.lng))
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker))
-            ).apply {
-                title = loc.name
-                tag = loc
-                if (loc.id == eventContent.selectedMarkerId) showInfoWindow()
             }
 
-
+            mainScope.launch {
+                markers.forEachIndexed { index, markerOptions ->
+                    gMap.addMarker(markerOptions).apply {
+                        title = locations[index].name
+                        tag = locations[index]
+                        if (locations[index].id == eventContent.selectedMarkerId) showInfoWindow()
+                    }
+                }
+            }
         }
     }
 }

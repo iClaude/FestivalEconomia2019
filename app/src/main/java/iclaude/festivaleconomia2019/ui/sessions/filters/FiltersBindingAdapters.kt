@@ -3,6 +3,7 @@ package iclaude.festivaleconomia2019.ui.sessions.filters
 import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.core.widget.NestedScrollView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +13,7 @@ import com.google.android.material.chip.ChipGroup
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.ItemFilterChipBinding
 import iclaude.festivaleconomia2019.model.data_classes.Tag
+import iclaude.festivaleconomia2019.model.data_classes.Tag.Companion.CATEGORY_STAR
 import iclaude.festivaleconomia2019.model.data_classes.Tag.Companion.CATEGORY_TOPIC
 import iclaude.festivaleconomia2019.model.data_classes.Tag.Companion.CATEGORY_TYPE
 import iclaude.festivaleconomia2019.model.data_classes.colorInt
@@ -59,11 +61,36 @@ fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewMod
         val context = chipGroup.context
         val binding = ItemFilterChipBinding.inflate(LayoutInflater.from(context), chipGroup, false).apply {
             setTag(tag)
-            filter = viewModel.filterSelected.value
+            filter = viewModel.filter
             setViewModel(viewModel)
         }
         chipGroup.addView(binding.root)
     }
+}
+
+// Set up Chip for starred sessions.
+@BindingAdapter("app:starredChip")
+fun setupStarredChip(chip: Chip, viewModel: SessionListViewModel) {
+    val context = chip.context
+    val tag = Tag( // tag for favorite sessions
+        "99",
+        CATEGORY_STAR,
+        context.getString(R.string.filter_favorites),
+        "#${Integer.toHexString(ContextCompat.getColor(context, R.color.onSurfaceColor))}",
+        "#${Integer.toHexString(ContextCompat.getColor(context, R.color.secondaryColor))}"
+    )
+    viewModel.starredTag = tag
+
+    val colorStateList = createChipColorStateList(tag.colorInt)
+    val fontColorStateList = createChipColorStateList(tag.fontColorInt)
+    chip.apply {
+        chipBackgroundColor = colorStateList
+        setTextColor(fontColorStateList)
+        setOnCheckedChangeListener { buttonView, isChecked ->
+            updateFilter(isChecked, viewModel, tag)
+        }
+    }
+
 }
 
 // ChipGroups: when filter is cleared, uncheck all tags.
@@ -122,18 +149,23 @@ fun addChipListeners(chip: Chip, viewModel: SessionListViewModel, tag: Tag) {
 
 // Utility functions.
 private fun updateFilter(toAdd: Boolean, viewModel: SessionListViewModel, tag: Tag) {
-    val filter = viewModel.filterSelected.value ?: Filter()
     when(tag.category) {
-        CATEGORY_TYPE -> filter.tagsTypes
-        else -> filter.tagsTopics
+        CATEGORY_TYPE -> viewModel.filter.tagsTypes
+        CATEGORY_TOPIC -> viewModel.filter.tagsTopics
+        else -> {
+            viewModel.filter.starred = toAdd
+            viewModel.filterList()
+            return
+        }
     }.let {
         when (toAdd) {
             true -> it.add(tag)
             else -> it.remove(tag)
         }
+        viewModel.filterList()
     }
 
-    viewModel.updateFilter(filter)
+
 }
 
 private fun createChipColorStateList(color: Int): ColorStateList {

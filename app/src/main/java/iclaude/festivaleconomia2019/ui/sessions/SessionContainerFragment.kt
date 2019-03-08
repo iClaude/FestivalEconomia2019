@@ -25,7 +25,8 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
-import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel.Authentication
+import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel.Authentication.*
+import iclaude.festivaleconomia2019.ui.utils.EventObserver
 import kotlinx.android.synthetic.main.fragment_session_container.*
 import kotlinx.android.synthetic.main.fragment_session_container_appbar.*
 
@@ -59,9 +60,8 @@ class SessionContainerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // setup ViewPager and TabLayout
-        viewModel.repository.eventDataLive.observe(this, Observer { eventData ->
+        viewModel.eventDataFromRepoLive.observe(this, Observer { eventData ->
             with(viewModel) {
-                dataLoadedObs.set(true)
                 loadInfoList(eventData)
             }
 
@@ -82,27 +82,27 @@ class SessionContainerFragment : Fragment() {
             titleHeaderAlphaObs.set(0f)
             scrollYObs.set(0)
             changeFilterSheetState(false)
-            changeFilterSheetStateCommand.observe(this@SessionContainerFragment, Observer {
+            changeFilterSheetStateEvent.observe(this@SessionContainerFragment, EventObserver {
                 bottomSheetBehavior.state = it
             })
-            removeFilterSheetCommand.observe(this@SessionContainerFragment, Observer {
+            removeFilterSheetEvent.observe(this@SessionContainerFragment, EventObserver {
                 bottomSheetBehavior.run {
                     isHideable = true
                     state = STATE_HIDDEN
                 }
-
             })
-            authCommand.observe(this@SessionContainerFragment, Observer { command ->
+            authEvent.observe(this@SessionContainerFragment, EventObserver { command ->
                 when (command) {
-                    Authentication.LOGIN -> logIn()
-                    Authentication.LOGIN_FROM_STAR -> logInFromStar()
-                    else -> logOut()
+                    LOGIN_REQUEST -> requestLogin()
+                    LOGIN_CONFIRMED -> logIn()
+                    LOGOUT_REQUEST -> requestLogout()
+                    LOGOUT_CONFIRMED -> logOut()
                 }
             })
-            showSnackBarForStarringCommand.observe(this@SessionContainerFragment, Observer { toStar ->
+            showSnackBarForStarringEvent.observe(this@SessionContainerFragment, EventObserver { toStar ->
                 val pref = activity?.getPreferences(Context.MODE_PRIVATE)
                 val showSnackbar = pref?.getBoolean("starring_show_snackbar", true) ?: true
-                if (!showSnackbar) return@Observer
+                if (!showSnackbar) return@EventObserver
                 val msgId = if (toStar) R.string.starred else R.string.unstarred
                 Snackbar.make(fabFilter, msgId, Snackbar.LENGTH_SHORT).run {
                     setAction(R.string.starred_unstarred_not_show) {
@@ -114,29 +114,12 @@ class SessionContainerFragment : Fragment() {
         }
     }
 
-    private fun logIn() {
-        // Choose authentication providers
-        val providers = arrayListOf(
-            AuthUI.IdpConfig.GoogleBuilder().build(),
-            AuthUI.IdpConfig.FacebookBuilder().build(),
-            AuthUI.IdpConfig.TwitterBuilder().build()
-        )
+    // User login/logout.
 
-        // Create and launch sign-in intent
-        startActivityForResult(
-            AuthUI.getInstance()
-                .createSignInIntentBuilder()
-                .setAvailableProviders(providers)
-                .setTheme(R.style.AppTheme)
-                .setLogo(R.drawable.event_logo_login)
-                .build(),
-            RC_SIGN_IN
-        )
-    }
-
-    private fun logInFromStar() {
+    // Request user confirmation for login.
+    private fun requestLogin() {
         val posButtonListener = DialogInterface.OnClickListener { dialog, which ->
-            logIn()
+            viewModel.confirmLogin()
             dialog?.dismiss()
         }
         val negButtonListener = DialogInterface.OnClickListener { dialog, which -> dialog?.dismiss() }
@@ -146,16 +129,27 @@ class SessionContainerFragment : Fragment() {
         )
     }
 
-    private fun logOut() {
-        val posButtonListener = DialogInterface.OnClickListener { dialog, which ->
+    // User has confirmed login.
+    private fun logIn() {
+        // Choose authentication providers.
+        val providers = viewModel.getLoginProviders()
+
+        // Create and launch sign-in intent.
+        startActivityForResult(
             AuthUI.getInstance()
-                .signOut(context!!)
-                .addOnCompleteListener {
-                    viewModel.run {
-                        userImageUriObs.set(null)
-                        unstarAllSessions()
-                    }
-                }
+                .createSignInIntentBuilder()
+                .setAvailableProviders(providers)
+                .setTheme(R.style.AppTheme)
+                .setLogo(R.mipmap.ic_launcher_round)
+                .build(),
+            RC_SIGN_IN
+        )
+    }
+
+    // Request user confirmation for logout.
+    private fun requestLogout() {
+        val posButtonListener = DialogInterface.OnClickListener { dialog, which ->
+            viewModel.confirmLogout()
             dialog?.dismiss()
         }
         val negButtonListener = DialogInterface.OnClickListener { dialog, which -> dialog?.dismiss() }
@@ -163,6 +157,15 @@ class SessionContainerFragment : Fragment() {
             R.string.logout_dialog_title, R.string.logout_dialog_msg, R.string.logout_dialog_accept,
             R.string.logout_dialog_cancel, posButtonListener, negButtonListener
         )
+    }
+
+    // User has confirmed logout.
+    private fun logOut() {
+        AuthUI.getInstance()
+            .signOut(context!!)
+            .addOnCompleteListener {
+                viewModel.onUserLoggedOut()
+            }
     }
 
     private fun showAlertDialog(
@@ -188,11 +191,7 @@ class SessionContainerFragment : Fragment() {
                 // Successfully signed in
                 val user = FirebaseAuth.getInstance().currentUser
                 user?.let {
-                    with(viewModel) {
-                        showUserPhoto(it)
-                        repository.addUser(it)
-                        updateSessionListWithStarredSessions()
-                    }
+                    viewModel.onUserLoggedIn(it)
                 }
             } else {
                 Snackbar.make(

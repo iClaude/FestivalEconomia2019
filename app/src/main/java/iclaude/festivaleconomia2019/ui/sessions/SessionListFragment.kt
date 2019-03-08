@@ -15,7 +15,6 @@ import iclaude.festivaleconomia2019.databinding.FragmentSessionListBinding
 import iclaude.festivaleconomia2019.databinding.ItemSessionBinding
 import iclaude.festivaleconomia2019.databinding.ItemSessionTagBinding
 import iclaude.festivaleconomia2019.model.data_classes.Tag
-import kotlinx.android.synthetic.main.fragment_session_list.*
 
 class SessionListFragment : Fragment() {
     private lateinit var viewModel: SessionListViewModel
@@ -44,12 +43,6 @@ class SessionListFragment : Fragment() {
             ViewModelProviders.of(this).get(SessionListViewModel::class.java)
         } ?: throw Exception("Invalid Activity")
         rvAdapter = SessionListAdapter()
-
-        viewModel.sessionsInfoFilteredLive.observe(this, Observer { list ->
-            initializeList(list.filter {
-                it.day == day
-            })
-        })
     }
 
     override fun onCreateView(
@@ -68,6 +61,16 @@ class SessionListFragment : Fragment() {
         return binding.root
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        viewModel.sessionsInfoFilteredLive.observe(this, Observer { list ->
+            initializeList(list.filter {
+                it.day == day
+            })
+        })
+    }
+
     private fun initializeList(sessions: List<SessionInfoForList>) {
         rvAdapter.apply {
             submitList(sessions)
@@ -75,7 +78,7 @@ class SessionListFragment : Fragment() {
         }
 
         val zoneId = getZoneId(context)
-        rvSessions.run {
+        binding.rvSessions.run {
             doOnNextLayout {
                 // Recreate the decoration used for the sticky time headers
                 clearDecorations()
@@ -101,7 +104,7 @@ class SessionListFragment : Fragment() {
                     && oldItem.liveStreamed == newItem.liveStreamed
                     && oldItem.startTimestamp == newItem.startTimestamp
                     && oldItem.endTimestamp == newItem.endTimestamp
-                    && oldItem.location == newItem.location
+                    && oldItem.lenLoc == newItem.lenLoc
                     && oldItem.tags == newItem.tags
                     && oldItem.starred == newItem.starred
         }

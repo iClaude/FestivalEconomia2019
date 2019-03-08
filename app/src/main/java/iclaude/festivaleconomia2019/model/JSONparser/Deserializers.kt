@@ -40,6 +40,7 @@ class SessionDeserializer : JsonDeserializer<Session> {
                 title = obj.get("title").asString,
                 startTimestamp = obj.get("startTimestamp").asLong,
                 endTimestamp = obj.get("endTimestamp").asLong,
+            day = obj.get("day").asInt,
                 location = obj.get("location").asString,
                 description = obj.get("description").asString,
             tags = tags.toList(),
