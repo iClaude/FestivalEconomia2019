@@ -33,6 +33,6 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-        bottomNav.menu.findItem(R.id.containerSessionsFragment).setChecked(true)
+        bottomNav.menu.findItem(R.id.containerInfoFragment).setChecked(true)
     }
 }
