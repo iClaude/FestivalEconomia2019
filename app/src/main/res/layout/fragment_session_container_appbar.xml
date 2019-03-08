@@ -32,7 +32,7 @@
                     android:foreground="?selectableItemBackground"
                     android:padding="@dimen/spacing_micro"
                     tools:src="@tools:sample/avatars"
-                    android:onClick="@{() -> viewModelDer.onProfileClicked()}"
+                    android:onClick="@{() -> viewModelDer.startAuthFlow()}"
                     app:imageUri="@{viewModelDer.userImageUriObs}"
                     app:clipToCircle="@{true}"
                     app:placeholder="@{@drawable/ic_account_circle}"/>

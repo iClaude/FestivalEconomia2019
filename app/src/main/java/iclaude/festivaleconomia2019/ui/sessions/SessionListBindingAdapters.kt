@@ -45,7 +45,7 @@ fun onStarClickListener(
             b.isChecked = !b.isChecked
             viewModel.starOrUnstarSession(sessionInfo.id, b.isChecked)
         } else {
-            viewModel.onStarClickedUserNotConnected()
+            viewModel.startAuthFlow()
         }
     }
 }

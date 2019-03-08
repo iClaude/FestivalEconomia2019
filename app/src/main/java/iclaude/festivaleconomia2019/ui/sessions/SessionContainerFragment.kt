@@ -25,7 +25,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
-import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel.Authentication
+import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel.Authentication.*
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
 import kotlinx.android.synthetic.main.fragment_session_container.*
 import kotlinx.android.synthetic.main.fragment_session_container_appbar.*
@@ -93,9 +93,10 @@ class SessionContainerFragment : Fragment() {
             })
             authEvent.observe(this@SessionContainerFragment, EventObserver { command ->
                 when (command) {
-                    Authentication.LOGIN -> logIn()
-                    Authentication.LOGIN_FROM_STAR -> logInFromStar()
-                    else -> logOut()
+                    LOGIN_REQUEST -> requestLogin()
+                    LOGIN_CONFIRMED -> logIn()
+                    LOGOUT_REQUEST -> requestLogout()
+                    LOGOUT_CONFIRMED -> logOut()
                 }
             })
             showSnackBarForStarringEvent.observe(this@SessionContainerFragment, EventObserver { toStar ->
@@ -115,6 +116,20 @@ class SessionContainerFragment : Fragment() {
 
     // User login/logout.
 
+    // Request user confirmation for login.
+    private fun requestLogin() {
+        val posButtonListener = DialogInterface.OnClickListener { dialog, which ->
+            viewModel.confirmLogin()
+            dialog?.dismiss()
+        }
+        val negButtonListener = DialogInterface.OnClickListener { dialog, which -> dialog?.dismiss() }
+        showAlertDialog(
+            R.string.login_confirm_title, R.string.login_confirm_msg, R.string.login_confirm_accept,
+            R.string.login_confirm_cancel, posButtonListener, negButtonListener
+        )
+    }
+
+    // User has confirmed login.
     private fun logIn() {
         // Choose authentication providers.
         val providers = viewModel.getLoginProviders()
@@ -131,25 +146,10 @@ class SessionContainerFragment : Fragment() {
         )
     }
 
-    private fun logInFromStar() {
+    // Request user confirmation for logout.
+    private fun requestLogout() {
         val posButtonListener = DialogInterface.OnClickListener { dialog, which ->
-            logIn()
-            dialog?.dismiss()
-        }
-        val negButtonListener = DialogInterface.OnClickListener { dialog, which -> dialog?.dismiss() }
-        showAlertDialog(
-            R.string.login_confirm_title, R.string.login_confirm_msg, R.string.login_confirm_accept,
-            R.string.login_confirm_cancel, posButtonListener, negButtonListener
-        )
-    }
-
-    private fun logOut() {
-        val posButtonListener = DialogInterface.OnClickListener { dialog, which ->
-            AuthUI.getInstance()
-                .signOut(context!!)
-                .addOnCompleteListener {
-                    viewModel.onUserLoggedOut()
-                }
+            viewModel.confirmLogout()
             dialog?.dismiss()
         }
         val negButtonListener = DialogInterface.OnClickListener { dialog, which -> dialog?.dismiss() }
@@ -157,6 +157,15 @@ class SessionContainerFragment : Fragment() {
             R.string.logout_dialog_title, R.string.logout_dialog_msg, R.string.logout_dialog_accept,
             R.string.logout_dialog_cancel, posButtonListener, negButtonListener
         )
+    }
+
+    // User has confirmed logout.
+    private fun logOut() {
+        AuthUI.getInstance()
+            .signOut(context!!)
+            .addOnCompleteListener {
+                viewModel.onUserLoggedOut()
+            }
     }
 
     private fun showAlertDialog(

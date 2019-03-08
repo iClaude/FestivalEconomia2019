@@ -217,22 +217,26 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     // User authentication.
 
-    enum class Authentication { LOGIN, LOGOUT, LOGIN_FROM_STAR }
+    enum class Authentication { LOGIN_REQUEST, LOGIN_CONFIRMED, LOGOUT_REQUEST, LOGOUT_CONFIRMED }
 
     private val _authEvent = MutableLiveData<Event<Authentication>>()
     val authEvent: LiveData<Event<Authentication>>
         get() = _authEvent
 
-    fun onProfileClicked() {
+    fun startAuthFlow() {
         if (FirebaseAuth.getInstance().currentUser == null) {
-            _authEvent.value = Event(Authentication.LOGIN)
+            _authEvent.value = Event(Authentication.LOGIN_REQUEST)
         } else {
-            _authEvent.value = Event(Authentication.LOGOUT)
+            _authEvent.value = Event(Authentication.LOGOUT_REQUEST)
         }
     }
 
-    fun onStarClickedUserNotConnected() {
-        _authEvent.value = Event(Authentication.LOGIN_FROM_STAR)
+    fun confirmLogin() {
+        _authEvent.value = Event(Authentication.LOGIN_CONFIRMED)
+    }
+
+    fun confirmLogout() {
+        _authEvent.value = Event(Authentication.LOGOUT_CONFIRMED)
     }
 
     fun getLoginProviders() = arrayListOf(
