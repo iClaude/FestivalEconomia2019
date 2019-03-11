@@ -64,12 +64,15 @@ class SessionListFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        viewModel.sessionsInfoFilteredLive.observe(this, Observer { list ->
-            initializeList(list.filter {
-                it.day == day
+        viewModel.run {
+            sessionsInfoFilteredLive.observe(this@SessionListFragment, Observer { list ->
+                initializeList(list.filter {
+                    it.day == day
+                })
             })
-        })
+        }
     }
+
 
     private fun initializeList(sessions: List<SessionInfoForList>) {
         rvAdapter.apply {

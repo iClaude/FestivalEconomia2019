@@ -17,7 +17,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical"
                                                        android:layout_width="match_parent"
                                                        android:layout_height="wrap_content"
-                                                       android:id="@+id/constraintLayout">
+                                                       android:id="@+id/constraintLayout"
+                                                       android:background="?selectableItemBackground"
+                                                       android:onClick="@{() -> viewModel.goToSession(sessionInfo.id)}">
 
         <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"

@@ -8,7 +8,12 @@
     <fragment
             android:id="@+id/containerSessionsFragment"
             android:name="iclaude.festivaleconomia2019.ui.sessions.SessionContainerFragment"
-            android:label="fragment_container_sessions" tools:layout="@layout/fragment_session_container"/>
+            android:label="fragment_container_sessions" tools:layout="@layout/fragment_session_container">
+        <action android:id="@+id/action_containerSessionsFragment_to_sessionInfoFragment"
+                app:destination="@id/sessionInfoFragment" app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim" app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
     <fragment android:id="@+id/FAQFragment" android:name="iclaude.festivaleconomia2019.ui.FAQFragment"
               android:label="fragment_faq" tools:layout="@layout/fragment_faq"/>
     <fragment android:id="@+id/aboutFragment" android:name="iclaude.festivaleconomia2019.ui.AboutFragment"
@@ -17,9 +22,16 @@
               android:label="fragment_settings" tools:layout="@layout/fragment_settings"/>
     <fragment android:id="@+id/infoFragment" android:name="iclaude.festivaleconomia2019.ui.InfoFragment"
               android:label="fragment_info" tools:layout="@layout/fragment_info"/>
+
     <fragment android:id="@+id/sessionsFragment"
               android:name="iclaude.festivaleconomia2019.ui.sessions.SessionListFragment"
               android:label="fragment_sessions" tools:layout="@layout/fragment_session_list"/>
+    <fragment android:id="@+id/sessionInfoFragment"
+              android:name="iclaude.festivaleconomia2019.ui.sessioninfo.SessionInfoFragment"
+              android:label="fragment_session_info" tools:layout="@layout/fragment_session_info">
+        <argument android:name="sessionId" app:argType="string"/>
+    </fragment>
+
     <fragment android:id="@+id/organizerFragment" android:name="iclaude.festivaleconomia2019.ui.OrganizerFragment"
               android:label="fragment_organizer" tools:layout="@layout/fragment_organizer"/>
     <fragment android:id="@+id/mapFragment" android:name="iclaude.festivaleconomia2019.ui.map.MapFragment"

@@ -15,6 +15,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -108,6 +109,10 @@ class SessionContainerFragment : Fragment() {
                     }
                     show()
                 }
+            })
+            goToSessionEvent.observe(this@SessionContainerFragment, EventObserver {
+                val action = SessionContainerFragmentDirections.ActionContainerSessionsFragmentToSessionInfoFragment(it)
+                findNavController().navigate(action)
             })
         }
     }

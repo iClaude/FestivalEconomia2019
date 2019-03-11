@@ -300,6 +300,14 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     }
 
 
+    // Session's detailed info.
+    private val _goToSessionEvent = MutableLiveData<Event<String>>()
+    val goToSessionEvent: LiveData<Event<String>>
+        get() = _goToSessionEvent
+
+    fun goToSession(sessionId: String) {
+        _goToSessionEvent.value = Event(sessionId)
+    }
 
     override fun onCleared() {
         super.onCleared()
