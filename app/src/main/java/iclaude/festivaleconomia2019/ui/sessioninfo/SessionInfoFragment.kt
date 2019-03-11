@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import iclaude.festivaleconomia2019.R
 import kotlinx.android.synthetic.main.fragment_session_info.*
 
@@ -13,11 +14,13 @@ import kotlinx.android.synthetic.main.fragment_session_info.*
 class SessionInfoFragment : Fragment() {
 
     private lateinit var sessionId: String
+    private lateinit var viewModel: SessionInfoViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         sessionId = SessionInfoFragmentArgs.fromBundle(arguments!!).sessionId
+        viewModel = ViewModelProviders.of(this).get(SessionInfoViewModel::class.java)
     }
 
     override fun onCreateView(
