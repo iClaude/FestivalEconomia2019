@@ -6,34 +6,46 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import iclaude.festivaleconomia2019.R
-import kotlinx.android.synthetic.main.fragment_session_info.*
+import iclaude.festivaleconomia2019.databinding.FragmentSessionInfoBinding
+import iclaude.festivaleconomia2019.ui.utils.EventObserver
 
 
 class SessionInfoFragment : Fragment() {
 
     private lateinit var sessionId: String
     private lateinit var viewModel: SessionInfoViewModel
+    private lateinit var binding: FragmentSessionInfoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         sessionId = SessionInfoFragmentArgs.fromBundle(arguments!!).sessionId
-        viewModel = ViewModelProviders.of(this).get(SessionInfoViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(SessionInfoViewModel::class.java).apply {
+            sessionId = this@SessionInfoFragment.sessionId
+
+            eventDataFromRepoLive.observe(this@SessionInfoFragment, Observer {
+                viewModel.loadSessionInfo()
+            })
+
+            startYoutubeVideoEvent.observe(this@SessionInfoFragment, EventObserver {
+
+            })
+        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_session_info, container, false)
+        binding = FragmentSessionInfoBinding.inflate(inflater, container, false).apply {
+            viewModel = this@SessionInfoFragment.viewModel
+        }
+
+        return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        tvArgs.text = sessionId
-    }
 }
+
+

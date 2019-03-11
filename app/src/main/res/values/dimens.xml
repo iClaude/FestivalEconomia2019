@@ -21,4 +21,5 @@
     <dimen name="time_header_hour_min_text_size">20sp</dimen>
     <dimen name="time_header_meridiem_text_size">12sp</dimen>
     <dimen name="filtersheet_peek_height">48dp</dimen>
+    <dimen name="session_info_appbar_height">250dp</dimen>
 </resources>
