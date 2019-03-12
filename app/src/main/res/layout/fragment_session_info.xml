@@ -27,7 +27,9 @@
             <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="match_parent"
                                                                         android:layout_height="match_parent"
                                                                         app:layout_scrollFlags="scroll"
-                                                                        android:fitsSystemWindows="true">
+                                                                        android:fitsSystemWindows="true"
+                                                                        android:foreground="?selectableItemBackground"
+                                                                        android:onClick="@{() -> viewModel.startYoutubeVideo()}">
                 <ImageView
                         android:id="@+id/ivSessionImage"
                         android:layout_width="match_parent"
@@ -43,8 +45,8 @@
                            android:layout_height="64dp"
                            android:src="@drawable/ic_play"
                            android:layout_gravity="center"
-                           android:visibility="@{viewModel.youtubeUrlObs == null ? View.GONE : View.VISIBLE}"
-                           android:onClick="@{() -> viewModel.startYoutubeVideo()}"/>
+                           android:contentDescription="@string/content_description"
+                           android:visibility="@{viewModel.youtubeUrlObs == null ? View.GONE : View.VISIBLE}"/>
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 

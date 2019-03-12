@@ -6,6 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
+import iclaude.festivaleconomia2019.model.data_classes.hasPhotoUrl
+import iclaude.festivaleconomia2019.model.data_classes.hasYoutubeUrl
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.utils.Event
@@ -38,8 +40,8 @@ class SessionInfoViewModel : ViewModel() {
         val id = sessionId.toInt()
         sessionInfo = SessionInfo(
             eventData.sessions[id].id,
-            eventData.sessions[id].photoUrl,
-            eventData.sessions[id].youtubeUrl
+            if (eventData.sessions[id].hasPhotoUrl()) eventData.sessions[id].photoUrl else null,
+            if (eventData.sessions[id].hasYoutubeUrl()) eventData.sessions[id].youtubeUrl else null
         )
 
         // Load observables for data binding.
@@ -52,7 +54,7 @@ class SessionInfoViewModel : ViewModel() {
         get() = _startYoutubeVideoEvent
 
     fun startYoutubeVideo() {
-        val url = youtubeUrlObs.get() ?: return
+        val url = sessionInfo.youtubeUrl ?: return
 
         _startYoutubeVideoEvent.value = Event(url)
     }

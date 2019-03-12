@@ -1,6 +1,8 @@
 package iclaude.festivaleconomia2019.ui.sessioninfo
 
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -30,7 +32,13 @@ class SessionInfoFragment : Fragment() {
             })
 
             startYoutubeVideoEvent.observe(this@SessionInfoFragment, EventObserver {
-
+                val intent = Intent().apply {
+                    action = Intent.ACTION_VIEW
+                    data = Uri.parse(it)
+                }
+                if (intent.resolveActivity(context?.packageManager) != null) {
+                    startActivity(intent)
+                }
             })
         }
     }
