@@ -32,6 +32,12 @@ class SessionInfoFragment : Fragment() {
                 viewModel.loadSessionInfo()
             })
 
+            sessionInfoLoadedEvent.observe(this@SessionInfoFragment, EventObserver { info ->
+                binding?.apply {
+                    sessionData = info
+                }
+            })
+
             startYoutubeVideoEvent.observe(this@SessionInfoFragment, EventObserver {
                 val intent = Intent().apply {
                     action = Intent.ACTION_VIEW

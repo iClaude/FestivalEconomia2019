@@ -7,6 +7,9 @@
     <data>
         <import type="android.view.View"/>
         <variable
+                name="sessionData"
+                type="iclaude.festivaleconomia2019.ui.sessioninfo.SessionInfo"/>
+        <variable
                 name="viewModel"
                 type="iclaude.festivaleconomia2019.ui.sessioninfo.SessionInfoViewModel"/>
     </data>
@@ -38,7 +41,7 @@
                         android:fitsSystemWindows="true"
                         app:layout_collapseMode="parallax"
                         android:contentDescription="@string/content_description"
-                        app:sessionImage="@{viewModel.imageUrlObs}"
+                        app:sessionImage="@{sessionData.photoUrl}"
                         android:background="?selectableItemBackground"/>
 
                 <ImageView android:layout_width="64dp"
@@ -46,7 +49,7 @@
                            android:src="@drawable/ic_play"
                            android:layout_gravity="center"
                            android:contentDescription="@string/content_description"
-                           android:visibility="@{viewModel.youtubeUrlObs == null ? View.GONE : View.VISIBLE}"/>
+                           android:visibility="@{sessionData.youtubeUrl == null ? View.GONE : View.VISIBLE}"/>
 
                 <ImageButton
                         android:id="@+id/up"

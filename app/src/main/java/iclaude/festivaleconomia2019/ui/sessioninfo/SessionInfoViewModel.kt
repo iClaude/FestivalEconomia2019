@@ -1,6 +1,5 @@
 package iclaude.festivaleconomia2019.ui.sessioninfo
 
-import androidx.databinding.ObservableField
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -30,23 +29,26 @@ class SessionInfoViewModel : ViewModel() {
     lateinit var sessionId: String
     private lateinit var sessionInfo: SessionInfo
 
-    val imageUrlObs = ObservableField<String>()
-    val youtubeUrlObs = ObservableField<String>()
 
     // Load session info when repository is ready.
+
+    private val _sessionInfoLoadedEvent = MutableLiveData<Event<SessionInfo>>()
+    val sessionInfoLoadedEvent: LiveData<Event<SessionInfo>>
+        get() = _sessionInfoLoadedEvent
+
     fun loadSessionInfo() {
         val eventData: EventData = eventDataFromRepoLive.value ?: return
 
         val id = sessionId.toInt()
         sessionInfo = SessionInfo(
             eventData.sessions[id].id,
+            eventData.sessions[id].title,
             if (eventData.sessions[id].hasPhotoUrl()) eventData.sessions[id].photoUrl else null,
             if (eventData.sessions[id].hasYoutubeUrl()) eventData.sessions[id].youtubeUrl else null
         )
 
-        // Load observables for data binding.
-        imageUrlObs.set(sessionInfo.photoUrl)
-        youtubeUrlObs.set(sessionInfo.youtubeUrl)
+        // Session info loaded: communicate it to Fragment in order to bind data to layout.
+        _sessionInfoLoadedEvent.value = Event(sessionInfo)
     }
 
     // User clicks the button in the app bar to watch the YouTube video of the event.
@@ -75,6 +77,7 @@ class SessionInfoViewModel : ViewModel() {
 // Info to display in the layout.
 class SessionInfo(
     val id: String,
+    val title: String,
     val photoUrl: String?,
     val youtubeUrl: String?
 )
