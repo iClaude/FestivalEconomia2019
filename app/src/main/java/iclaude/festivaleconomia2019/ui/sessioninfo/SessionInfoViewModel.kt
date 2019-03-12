@@ -49,6 +49,8 @@ class SessionInfoViewModel : ViewModel() {
         youtubeUrlObs.set(sessionInfo.youtubeUrl)
     }
 
+    // User clicks the button in the app bar to watch the YouTube video of the event.
+
     private val _startYoutubeVideoEvent = MutableLiveData<Event<String>>()
     val startYoutubeVideoEvent: LiveData<Event<String>>
         get() = _startYoutubeVideoEvent
@@ -57,6 +59,16 @@ class SessionInfoViewModel : ViewModel() {
         val url = sessionInfo.youtubeUrl ?: return
 
         _startYoutubeVideoEvent.value = Event(url)
+    }
+
+    // User clicks the arrow in the app bar to navigate to previous Fragment.
+
+    private val _navigateBackEvent = MutableLiveData<Event<Any>>()
+    val navigateBackEvent: LiveData<Event<Any>>
+        get() = _navigateBackEvent
+
+    fun navigateBack() {
+        _navigateBackEvent.value = Event(Unit)
     }
 }
 

@@ -48,6 +48,16 @@
                            android:contentDescription="@string/content_description"
                            android:visibility="@{viewModel.youtubeUrlObs == null ? View.GONE : View.VISIBLE}"/>
 
+                <ImageButton
+                        android:id="@+id/up"
+                        android:layout_width="?actionBarSize"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="start|top"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/content_description"
+                        app:srcCompat="@drawable/ic_arrow_back"
+                        android:onClick="@{() -> viewModel.navigateBack()}"/>
+
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
         </com.google.android.material.appbar.AppBarLayout>
