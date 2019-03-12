@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+                name="sessionDataDer"
+                type="iclaude.festivaleconomia2019.ui.details.session.SessionInfo"/>
+        <variable
+                name="viewModelDer"
+                type="iclaude.festivaleconomia2019.ui.details.session.SessionInfoViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="match_parent"
+                                                       android:layout_margin="@dimen/margin_normal">
+
+
+        <TextView
+                android:text="@{sessionDataDer.title}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="36sp"
+                android:id="@+id/tvTitle"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/SessionDetailTitle"
+                tools:text="Session title"/>
+        <TextView
+                tools:text="Mar, Mag 8, 10:00 - 11:30 AM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTime" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:startTimestamp="@{sessionDataDer.startTimestamp}"
+                app:endTimestamp="@{sessionDataDer.endTimestamp}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

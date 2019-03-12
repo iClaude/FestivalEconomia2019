@@ -7,8 +7,8 @@ import dagger.Provides
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.MainActivity
+import iclaude.festivaleconomia2019.ui.details.session.SessionInfoViewModel
 import iclaude.festivaleconomia2019.ui.map.MapViewModel
-import iclaude.festivaleconomia2019.ui.sessioninfo.SessionInfoViewModel
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 import java.io.InputStream
 import javax.inject.Singleton

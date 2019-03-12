@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="AppTheme" parent="BaseAppTheme"/>
 
@@ -91,6 +91,19 @@
         <item name="hourTextSize">@dimen/time_header_hour_text_size</item>
         <item name="hourMinTextSize">@dimen/time_header_hour_min_text_size</item>
         <item name="meridiemTextSize">@dimen/time_header_meridiem_text_size</item>
+    </style>
+
+    <!-- Session details. -->
+    <style name="SessionDetailTitle">
+        <item name="android:gravity">start|bottom</item>
+        <item name="android:textAppearance">@style/Title</item>
+        <item name="android:breakStrategy" tools:targetApi="m">balanced</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+    </style>
+
+    <style name="Title" parent="@style/TextAppearance.MaterialComponents.Headline1">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
     </style>
 
 </resources>

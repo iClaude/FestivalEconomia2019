@@ -1,4 +1,4 @@
-package iclaude.festivaleconomia2019.ui.sessioninfo
+package iclaude.festivaleconomia2019.ui.details.session
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -40,11 +40,15 @@ class SessionInfoViewModel : ViewModel() {
         val eventData: EventData = eventDataFromRepoLive.value ?: return
 
         val id = sessionId.toInt()
+        val session = eventData.sessions[id]
+
         sessionInfo = SessionInfo(
-            eventData.sessions[id].id,
-            eventData.sessions[id].title,
-            if (eventData.sessions[id].hasPhotoUrl()) eventData.sessions[id].photoUrl else null,
-            if (eventData.sessions[id].hasYoutubeUrl()) eventData.sessions[id].youtubeUrl else null
+            session.id,
+            session.title,
+            session.startTimestamp,
+            session.endTimestamp,
+            if (session.hasPhotoUrl()) session.photoUrl else null,
+            if (session.hasYoutubeUrl()) session.youtubeUrl else null
         )
 
         // Session info loaded: communicate it to Fragment in order to bind data to layout.
@@ -78,6 +82,8 @@ class SessionInfoViewModel : ViewModel() {
 class SessionInfo(
     val id: String,
     val title: String,
+    val startTimestamp: Long,
+    val endTimestamp: Long,
     val photoUrl: String?,
     val youtubeUrl: String?
 )

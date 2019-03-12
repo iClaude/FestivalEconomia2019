@@ -2,23 +2,24 @@
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools">
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
         <import type="android.view.View"/>
         <variable
                 name="sessionData"
-                type="iclaude.festivaleconomia2019.ui.sessioninfo.SessionInfo"/>
+                type="iclaude.festivaleconomia2019.ui.details.session.SessionInfo"/>
         <variable
                 name="viewModel"
-                type="iclaude.festivaleconomia2019.ui.sessioninfo.SessionInfoViewModel"/>
+                type="iclaude.festivaleconomia2019.ui.details.session.SessionInfoViewModel"/>
     </data>
 
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".ui.sessioninfo.SessionInfoFragment"
+            tools:context=".ui.details.session.SessionInfoFragment"
             android:fitsSystemWindows="true"
             android:id="@+id/coordinatorLayout">
 
@@ -68,6 +69,11 @@
         <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
                                                android:layout_height="match_parent"
                                                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <include android:id="@+id/content"
+                     layout="@layout/fragment_session_info_content"
+                     bind:sessionDataDer="@{sessionData}"
+                     bind:viewModelDer="@{viewModel}"/>
 
         </androidx.core.widget.NestedScrollView>
 

@@ -1,10 +1,12 @@
-package iclaude.festivaleconomia2019.ui.sessioninfo
+package iclaude.festivaleconomia2019.ui.details.session
 
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import iclaude.festivaleconomia2019.R
+import iclaude.festivaleconomia2019.ui.sessions.sessionInfoTimeDetails
 
 @BindingAdapter("app:sessionImage")
 fun imageUrl(imageView: ImageView, imageUrl: String?) {
@@ -22,4 +24,9 @@ fun imageUrl(imageView: ImageView, imageUrl: String?) {
         .setDefaultRequestOptions(requestOptions)
         .load(imageUrl)
         .into(imageView)
+}
+
+@BindingAdapter("app:startTimestamp", "app:endTimestamp", requireAll = true)
+fun timeDetails(textView: TextView, startTimestamp: Long, endTimestamp: Long) {
+    textView.text = sessionInfoTimeDetails(textView.context, startTimestamp, endTimestamp)
 }

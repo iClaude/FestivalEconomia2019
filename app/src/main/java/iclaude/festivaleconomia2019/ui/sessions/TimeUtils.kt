@@ -11,6 +11,7 @@ import org.threeten.bp.ZonedDateTime
 import org.threeten.bp.format.DateTimeFormatter
 import org.threeten.bp.temporal.ChronoUnit
 
+
 fun zonedDateTimeFromTimestamp(context: Context?, timestamp: Long): ZonedDateTime =
     ZonedDateTime.ofInstant(Instant.ofEpochMilli(timestamp), getZoneId(context))
 
@@ -77,3 +78,17 @@ fun endOfDay(day: ZonedDateTime): ZonedDateTime =
 
 fun timestampToZonedDateTime(timestamp: Long, context: Context?): ZonedDateTime =
     ZonedDateTime.ofInstant(Instant.ofEpochMilli(timestamp), getZoneId(context))
+
+fun sessionInfoTimeDetails(context: Context?, startTimestamp: Long, endTimestamp: Long): String {
+    val startTime = zonedDateTimeFromTimestamp(context, startTimestamp)
+    val endTime = zonedDateTimeFromTimestamp(context, endTimestamp)
+
+    val str1 = formatDate("EE, MMM d, h:mm - ", startTime)
+    val str2 = formatDate("h:mm a", endTime)
+
+    return str1 + str2
+}
+
+fun formatDate(format: String, time: ZonedDateTime): String {
+    return DateTimeFormatter.ofPattern(format).format(time)
+}
