@@ -5,10 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
-import iclaude.festivaleconomia2019.model.data_classes.Session
-import iclaude.festivaleconomia2019.model.data_classes.Tag
-import iclaude.festivaleconomia2019.model.data_classes.hasPhotoUrl
-import iclaude.festivaleconomia2019.model.data_classes.hasYoutubeUrl
+import iclaude.festivaleconomia2019.model.data_classes.*
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.utils.Event
@@ -49,6 +46,9 @@ class SessionInfoViewModel : ViewModel() {
             session.title,
             session.startTimestamp,
             session.endTimestamp,
+            session.hasSessionUrl() || session.hasYoutubeUrl(),
+            eventData.locations[session.location.toInt()].name,
+            session.description,
             getTags(session, eventData.tags),
             if (session.hasPhotoUrl()) session.photoUrl else null,
             if (session.hasYoutubeUrl()) session.youtubeUrl else null
@@ -95,6 +95,9 @@ class SessionInfo(
     val title: String,
     val startTimestamp: Long,
     val endTimestamp: Long,
+    val liveStreamed: Boolean,
+    val location: String,
+    val description: String,
     val tags: List<Tag>,
     val photoUrl: String?,
     val youtubeUrl: String?
