@@ -34,7 +34,6 @@
                 app:layout_collapseMode="parallax"
                 android:contentDescription="@string/content_description"
                 app:sessionImage="@{sessionDataDer.photoUrl}"
-                app:visibleWithPhoto="@{sessionDataDer.photoUrl}"
                 android:background="?selectableItemBackground"/>
 
         <androidx.constraintlayout.widget.Guideline
@@ -84,7 +83,7 @@
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
                 app:layout_constraintTop_toTopOf="@id/ivSessionImage"
                 app:goneWithPhoto="@{sessionDataDer.photoUrl}"
-                tools:text="Session Title"/>
+                tools:text="Getting the Most Out of Android Lint"/>
 
         <ImageButton
                 android:id="@+id/up"
@@ -95,7 +94,7 @@
                 android:background="?selectableItemBackgroundBorderless"
                 android:contentDescription="@string/content_description"
                 app:srcCompat="@drawable/ic_arrow_back"
-                android:onClick="@{() -> viewModel.navigateBack()}"/>
+                android:onClick="@{() -> viewModelDer.navigateBack()}"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

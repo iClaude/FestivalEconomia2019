@@ -9,11 +9,12 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.ui.sessions.sessionInfoTimeDetails
+import iclaude.festivaleconomia2019.ui.utils.HeaderGridDrawable
 
 @BindingAdapter("app:sessionImage")
 fun imageUrl(imageView: ImageView, imageUrl: String?) {
     if (imageUrl.isNullOrEmpty()) {
-        imageView.visibility = View.GONE
+        imageView.setImageDrawable(HeaderGridDrawable(imageView.context))
         return
     }
 
@@ -52,11 +53,11 @@ fun eventHeaderAnim(lottieView: LottieAnimationView, sessionInfo: SessionInfo) {
 }
 
 @BindingAdapter("app:visibleWithPhoto")
-fun visibleWithPhoto(view: View, photoUrl: String) {
+fun visibleWithPhoto(view: View, photoUrl: String?) {
     view.visibility = if (photoUrl.isNullOrEmpty()) View.GONE else View.VISIBLE
 }
 
 @BindingAdapter("app:goneWithPhoto")
-fun goneWithPhoto(view: View, photoUrl: String) {
+fun goneWithPhoto(view: View, photoUrl: String?) {
     view.visibility = if (photoUrl.isNullOrEmpty()) View.VISIBLE else View.GONE
 }

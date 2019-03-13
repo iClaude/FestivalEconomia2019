@@ -25,4 +25,10 @@
         <attr name="foreground" format="reference"/>
         <attr name="showIcons" format="boolean"/>
     </declare-styleable>
+
+    <declare-styleable name="HeaderGridDrawable">
+        <attr name="android:color"/>
+        <attr name="gridSize" format="dimension"/>
+        <attr name="gridStrokeWidth" format="dimension"/>
+    </declare-styleable>
 </resources>
