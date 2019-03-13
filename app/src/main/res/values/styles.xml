@@ -99,9 +99,11 @@
         <item name="android:textAppearance">@style/Title</item>
         <item name="android:breakStrategy" tools:targetApi="m">balanced</item>
         <item name="android:lineSpacingMultiplier">1</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">34sp</item>
     </style>
 
-    <style name="Title" parent="@style/TextAppearance.MaterialComponents.Headline1">
+    <style name="Title" parent="@style/TextAppearance.AppCompat.Display1">
         <item name="android:fontFamily">@font/open_sans</item>
         <item name="android:textColor">?android:textColorPrimary</item>
     </style>

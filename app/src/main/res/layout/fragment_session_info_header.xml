@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+                name="sessionDataDer"
+                type="iclaude.festivaleconomia2019.ui.details.session.SessionInfo"/>
+        <variable
+                name="viewModelDer"
+                type="iclaude.festivaleconomia2019.ui.details.session.SessionInfoViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/margin_normal"/>
+
+        <ImageView
+                android:id="@+id/ivSessionImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"
+                android:contentDescription="@string/content_description"
+                app:sessionImage="@{sessionDataDer.photoUrl}"
+                app:visibleWithPhoto="@{sessionDataDer.photoUrl}"
+                android:background="?selectableItemBackground"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_title_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.65"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintBottom_toBottomOf="@id/ivSessionImage"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@id/ivSessionImage"
+                app:layout_constraintStart_toEndOf="@id/guideline_title_end"
+                app:layout_constraintTop_toTopOf="@id/ivSessionImage"
+                app:layout_constraintVertical_bias="0"
+                app:eventHeaderAnim="@{sessionDataDer}"
+                app:goneWithPhoto="@{sessionDataDer.photoUrl}"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
+
+        <ImageView android:layout_width="64dp"
+                   android:layout_height="64dp"
+                   android:src="@drawable/ic_play"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   android:contentDescription="@string/content_description"
+                   android:visibility="@{sessionDataDer.youtubeUrl == null ? View.GONE : View.VISIBLE}"/>
+
+        <!-- Title on header: only shown if there isn't a photo header or video. -->
+        <TextView
+                android:id="@+id/session_detail_title"
+                style="@style/SessionDetailTitle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingBottom="@dimen/margin_normal"
+                android:paddingTop="72dp"
+                android:text="@{sessionDataDer.title}"
+                app:layout_constraintBottom_toBottomOf="@id/ivSessionImage"
+                app:layout_constraintEnd_toEndOf="@id/guideline_title_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toTopOf="@id/ivSessionImage"
+                app:goneWithPhoto="@{sessionDataDer.photoUrl}"
+                tools:text="Session Title"/>
+
+        <ImageButton
+                android:id="@+id/up"
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@string/content_description"
+                app:srcCompat="@drawable/ic_arrow_back"
+                android:onClick="@{() -> viewModel.navigateBack()}"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -90,4 +90,7 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
     implementation 'com.facebook.android:facebook-android-sdk:4.40.0'
     implementation 'com.twitter.sdk.android:twitter-core:3.3.0'
+
+    // Lottie animations.
+    implementation 'com.airbnb.android:lottie:3.0.0-beta4'
 }

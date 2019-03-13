@@ -5,6 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
+import iclaude.festivaleconomia2019.model.data_classes.Session
+import iclaude.festivaleconomia2019.model.data_classes.Tag
 import iclaude.festivaleconomia2019.model.data_classes.hasPhotoUrl
 import iclaude.festivaleconomia2019.model.data_classes.hasYoutubeUrl
 import iclaude.festivaleconomia2019.model.di.App
@@ -47,12 +49,21 @@ class SessionInfoViewModel : ViewModel() {
             session.title,
             session.startTimestamp,
             session.endTimestamp,
+            getTags(session, eventData.tags),
             if (session.hasPhotoUrl()) session.photoUrl else null,
             if (session.hasYoutubeUrl()) session.youtubeUrl else null
         )
 
         // Session info loaded: communicate it to Fragment in order to bind data to layout.
         _sessionInfoLoadedEvent.value = Event(sessionInfo)
+    }
+
+    private fun getTags(session: Session, tagsList: List<Tag>): List<Tag> {
+        val tags = mutableListOf<Tag>()
+        for (tagId in session.tags) {
+            tags.add(tagsList[tagId.toInt()])
+        }
+        return tags
     }
 
     // User clicks the button in the app bar to watch the YouTube video of the event.
@@ -84,6 +95,7 @@ class SessionInfo(
     val title: String,
     val startTimestamp: Long,
     val endTimestamp: Long,
+    val tags: List<Tag>,
     val photoUrl: String?,
     val youtubeUrl: String?
 )
