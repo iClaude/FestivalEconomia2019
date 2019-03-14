@@ -50,6 +50,7 @@ class SessionInfoViewModel : ViewModel() {
             eventData.locations[session.location.toInt()].name,
             session.description,
             getTags(session, eventData.tags),
+            getOrganizers(session, eventData.organizers),
             if (session.hasPhotoUrl()) session.photoUrl else null,
             if (session.hasYoutubeUrl()) session.youtubeUrl else null
         )
@@ -64,6 +65,14 @@ class SessionInfoViewModel : ViewModel() {
             tags.add(tagsList[tagId.toInt()])
         }
         return tags
+    }
+
+    private fun getOrganizers(session: Session, organizersList: List<Organizer>): List<Organizer> {
+        val organizers = mutableListOf<Organizer>()
+        for (organizerId in session.organizers) {
+            organizers.add(organizersList[organizerId.toInt()])
+        }
+        return organizers
     }
 
     // User clicks the button in the app bar to watch the YouTube video of the event.
@@ -99,6 +108,7 @@ class SessionInfo(
     val location: String,
     val description: String,
     val tags: List<Tag>,
+    val organizers: List<Organizer>,
     val photoUrl: String?,
     val youtubeUrl: String?
 )

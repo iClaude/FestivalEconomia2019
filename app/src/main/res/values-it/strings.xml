@@ -44,4 +44,5 @@
     <string name="starred">Evento aggiunto ai preferiti</string>
     <string name="unstarred">Evento rimosso dai preferiti</string>
     <string name="starred_unstarred_not_show">Non mostrare</string>
+    <string name="session_info_organizers">ORGANIZZATORI</string>
 </resources>

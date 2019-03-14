@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="organizer"
+                type="iclaude.festivaleconomia2019.model.data_classes.Organizer"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingTop="@dimen/spacing_normal"
+            android:paddingBottom="@dimen/spacing_normal">
+
+        <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="@dimen/organizer_headshot_size"
+                android:layout_height="@dimen/organizer_headshot_size"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:importantForAccessibility="no"
+                android:contentDescription="@string/content_description"
+                tools:src="@tools:sample/avatars"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:speakerImage="@{organizer}"/>
+        <TextView
+                android:text="@{organizer.name}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_goneMarginEnd="@dimen/margin_normal"
+                android:id="@+id/textView5" app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toTopOf="parent" tools:text="Sundar Pichai"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:textColor="@color/primaryColor" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintBottom_toTopOf="@+id/textView6"
+                app:layout_constraintVertical_chainStyle="spread_inside"/>
+        <TextView
+                android:text="@{organizer.company}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_goneMarginEnd="@dimen/margin_normal"
+                android:id="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+                android:layout_marginStart="16dp" tools:text="Google"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
