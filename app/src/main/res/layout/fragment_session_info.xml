@@ -31,9 +31,7 @@
             <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="match_parent"
                                                                         android:layout_height="match_parent"
                                                                         app:layout_scrollFlags="scroll"
-                                                                        android:fitsSystemWindows="true"
-                                                                        android:foreground="?selectableItemBackground"
-                                                                        android:onClick="@{() -> viewModel.startYoutubeVideo()}">
+                                                                        android:fitsSystemWindows="true">
 
                 <include android:id="@+id/header"
                          layout="@layout/fragment_session_info_header"

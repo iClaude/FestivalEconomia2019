@@ -7,7 +7,6 @@ import androidx.databinding.BindingAdapter
 import com.airbnb.lottie.LottieAnimationView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.ui.sessions.sessionInfoTimeDetails
 import iclaude.festivaleconomia2019.ui.utils.HeaderGridDrawable
 
@@ -18,18 +17,9 @@ fun imageUrl(imageView: ImageView, imageUrl: String?) {
         return
     }
 
-    val headers = mutableListOf<Int>(
-        R.drawable.event_header_1, R.drawable.event_header_2, R.drawable.event_header_3,
-        R.drawable.event_header_4, R.drawable.event_header_5, R.drawable.event_header_6
-    )
-    val index = (0..5).shuffled().first()
-
-    val requestOptions = RequestOptions().apply {
-        this.placeholder(headers[index])
-    }
     Glide
-        .with(imageView.context)
-        .setDefaultRequestOptions(requestOptions)
+        .with(imageView)
+        .setDefaultRequestOptions(RequestOptions().placeholder(HeaderGridDrawable(imageView.context)))
         .load(imageUrl)
         .into(imageView)
 }
@@ -52,12 +42,19 @@ fun eventHeaderAnim(lottieView: LottieAnimationView, sessionInfo: SessionInfo) {
     lottieView.setAnimation(anim)
 }
 
-@BindingAdapter("app:visibleWithPhoto")
-fun visibleWithPhoto(view: View, photoUrl: String?) {
-    view.visibility = if (photoUrl.isNullOrEmpty()) View.GONE else View.VISIBLE
+@BindingAdapter("app:visibleWithPhotoOrVideo")
+fun visibleWithPhotoOrVideo(view: View, sessionInfo: SessionInfo) {
+    view.visibility =
+        if (sessionInfo.photoUrl.isNullOrEmpty() && sessionInfo.youtubeUrl.isNullOrEmpty()) View.GONE else View.VISIBLE
+}
+
+@BindingAdapter("app:goneWithPhotoOrVideo")
+fun goneWithPhotoOrVideo(view: View, sessionInfo: SessionInfo) {
+    view.visibility =
+        if (sessionInfo.photoUrl.isNullOrEmpty() && sessionInfo.youtubeUrl.isNullOrEmpty()) View.VISIBLE else View.GONE
 }
 
 @BindingAdapter("app:goneWithPhoto")
-fun goneWithPhoto(view: View, photoUrl: String?) {
-    view.visibility = if (photoUrl.isNullOrEmpty()) View.VISIBLE else View.GONE
+fun goneWithPhoto(view: View, sessionInfo: SessionInfo) {
+    view.visibility = if (sessionInfo.photoUrl.isNullOrEmpty()) View.VISIBLE else View.GONE
 }

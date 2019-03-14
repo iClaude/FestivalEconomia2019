@@ -25,6 +25,13 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_begin="@dimen/margin_normal"/>
 
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_title_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.65"/>
+
         <ImageView
                 android:id="@+id/ivSessionImage"
                 android:layout_width="match_parent"
@@ -33,15 +40,23 @@
                 android:fitsSystemWindows="true"
                 app:layout_collapseMode="parallax"
                 android:contentDescription="@string/content_description"
-                app:sessionImage="@{sessionDataDer.photoUrl}"
-                android:background="?selectableItemBackground"/>
+                app:sessionImage="@{sessionDataDer.photoUrl}"/>
 
-        <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline_title_end"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.65"/>
+        <!-- Play button, shown if there is a recording available -->
+        <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/scrim"
+                android:contentDescription="@string/content_description"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:onClick="@{() -> viewModelDer.startYoutubeVideo()}"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@id/ivSessionImage"
+                app:layout_constraintEnd_toEndOf="@id/ivSessionImage"
+                app:layout_constraintStart_toStartOf="@id/ivSessionImage"
+                app:layout_constraintTop_toTopOf="@id/ivSessionImage"
+                android:visibility="@{sessionDataDer.youtubeUrl == null ? View.GONE : View.VISIBLE}"
+                app:srcCompat="@drawable/ic_play"/>
 
         <com.airbnb.lottie.LottieAnimationView
                 android:layout_width="0dp"
@@ -55,19 +70,9 @@
                 app:layout_constraintTop_toTopOf="@id/ivSessionImage"
                 app:layout_constraintVertical_bias="0"
                 app:eventHeaderAnim="@{sessionDataDer}"
-                app:goneWithPhoto="@{sessionDataDer.photoUrl}"
+                app:goneWithPhoto="@{sessionDataDer}"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"/>
-
-        <ImageView android:layout_width="64dp"
-                   android:layout_height="64dp"
-                   android:src="@drawable/ic_play"
-                   app:layout_constraintTop_toTopOf="parent"
-                   app:layout_constraintBottom_toBottomOf="parent"
-                   app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintEnd_toEndOf="parent"
-                   android:contentDescription="@string/content_description"
-                   android:visibility="@{sessionDataDer.youtubeUrl == null ? View.GONE : View.VISIBLE}"/>
 
         <!-- Title on header: only shown if there isn't a photo header or video. -->
         <TextView
@@ -77,12 +82,13 @@
                 android:layout_height="0dp"
                 android:paddingBottom="@dimen/margin_normal"
                 android:paddingTop="72dp"
+                android:layout_marginBottom="16dp"
                 android:text="@{sessionDataDer.title}"
                 app:layout_constraintBottom_toBottomOf="@id/ivSessionImage"
                 app:layout_constraintEnd_toEndOf="@id/guideline_title_end"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
                 app:layout_constraintTop_toTopOf="@id/ivSessionImage"
-                app:goneWithPhoto="@{sessionDataDer.photoUrl}"
+                app:goneWithPhotoOrVideo="@{sessionDataDer}"
                 tools:text="Getting the Most Out of Android Lint"/>
 
         <ImageButton
@@ -95,7 +101,6 @@
                 android:contentDescription="@string/content_description"
                 app:srcCompat="@drawable/ic_arrow_back"
                 android:onClick="@{() -> viewModelDer.navigateBack()}"/>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

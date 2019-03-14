@@ -10,8 +10,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.navigation.fragment.findNavController
-import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionInfoBinding
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
 
@@ -50,7 +48,7 @@ class SessionInfoFragment : Fragment() {
             })
 
             navigateBackEvent.observe(this@SessionInfoFragment, EventObserver {
-                findNavController().navigate(R.id.toMainActivityAction)
+                activity?.finish()
             })
         }
     }
@@ -65,6 +63,7 @@ class SessionInfoFragment : Fragment() {
 
         return binding.root
     }
+
 
 }
 

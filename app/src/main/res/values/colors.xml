@@ -41,5 +41,6 @@
     <color name="ads_light_blue">#a7d7fe</color>
     <color name="ads_light_green">#c3e3b4</color>
     <color name="ads_lighter_green">#94c27e</color>
+    <color name="scrim">#33000000</color>
 
 </resources>
