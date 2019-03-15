@@ -141,5 +141,6 @@ fun lenLocText(textView: TextView, session: Session, location: Location) {
         session.startTimestamp,
         session.endTimestamp
     )} / ${location.name}"
+    textView.text = str
 }
 

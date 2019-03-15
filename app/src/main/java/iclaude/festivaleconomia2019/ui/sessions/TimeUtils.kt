@@ -95,5 +95,5 @@ fun formatDate(format: String, time: ZonedDateTime): String {
 
 fun getDateShortStr(context: Context?, timestamp: Long): String {
     val time = zonedDateTimeFromTimestamp(context, timestamp)
-    return formatDate("EE,MMM d", time)
+    return formatDate("EE, MMM d", time)
 }
