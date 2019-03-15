@@ -38,10 +38,11 @@
                 android:layout_marginStart="16dp"
                 app:layout_constraintTop_toTopOf="parent" tools:text="Sundar Pichai"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                android:textColor="@color/primaryColor" app:layout_constraintHorizontal_bias="0.5"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintBottom_toTopOf="@+id/textView6"
-                app:layout_constraintVertical_chainStyle="spread_inside"/>
+                app:layout_constraintVertical_chainStyle="spread_inside" android:textColor="@color/primaryColor"
+                android:textStyle="bold"/>
         <TextView
                 android:text="@{organizer.company}"
                 android:layout_width="0dp"
