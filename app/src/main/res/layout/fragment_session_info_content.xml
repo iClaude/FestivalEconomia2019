@@ -15,7 +15,7 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
-                                                       android:layout_height="match_parent">
+                                                       android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline_start"
@@ -60,7 +60,7 @@
                 android:id="@+id/imageView"
                 android:scaleType="centerCrop"
                 android:contentDescription="@string/content_description"
-                app:layout_constraintTop_toTopOf="@+id/tvLoc" app:layout_constraintBottom_toBottomOf="@+id/tvLoc"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLoc"
                 app:layout_constraintStart_toEndOf="@+id/tvLoc"
                 android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 android:layout_marginEnd="8dp"/>
@@ -111,7 +111,7 @@
                 android:id="@+id/llOrganizers"
                 android:orientation="vertical"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content" android:layout_marginTop="16dp"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:organizers="@{sessionDataDer.organizers}">
@@ -120,7 +120,7 @@
                 android:text="@string/session_info_related_events"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView5" android:layout_marginTop="16dp"
+                android:id="@+id/textView5" android:layout_marginTop="24dp"
                 app:layout_constraintTop_toBottomOf="@+id/llOrganizers"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
@@ -130,7 +130,7 @@
                 android:id="@+id/llRelatedEvents"
                 android:orientation="vertical"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content" android:layout_marginTop="16dp"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
                 app:layout_constraintTop_toBottomOf="@+id/textView5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

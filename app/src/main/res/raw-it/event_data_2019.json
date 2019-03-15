@@ -200,7 +200,7 @@
       "youtubeUrl": "https://youtu.be/ei_5R0CvLm4"
     },
     {
-      "description": "LiveData is a simple observable data holder that is aware of the lifecycle of the observers. It was designed to avoid memory leaks and null pointer exceptions between an activity or fragment and a ViewModel. \n\nHowever, you can also use LiveData beyond the ViewModel. Components like Room or Workmanager also expose LiveData observables, and you can make your own data sources lifecycle-aware.\n\nIn this talk, we'll deep dive into patterns with LiveData such as the different types of transformations (map, switchMap and MediatorLiveData), handling events and building reactive architectures as well as common antipatterns and code-smells to avoid.",
+      "description": "LiveData is a simple observable data holder that is aware of the lifecycle of the observers. It was designed to avoid memory leaks and null pointer exceptions between an activity or fragment and a ViewModel. \nHowever, you can also use LiveData beyond the ViewModel. Components like Room or Workmanager also expose LiveData observables, and you can make your own data sources lifecycle-aware.\nIn this talk, we'll deep dive into patterns with LiveData such as the different types of transformations (map, switchMap and MediatorLiveData), handling events and building reactive architectures as well as common antipatterns and code-smells to avoid.",
       "endTimestamp": 1541619300000,
       "day": 0,
       "id": "01",
@@ -219,7 +219,7 @@
       "sessionUrl": "https://goo.gl/Mddeq1"
     },
     {
-      "description": "Room is Android's persistence library that provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite.\n\nThis talk covers some of the new features added to Room since its announcement at I/O 2017 and additionally touches on some of the best practices.",
+      "description": "Room is Android's persistence library that provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite.\nThis talk covers some of the new features added to Room since its announcement at I/O 2017 and additionally touches on some of the best practices.",
       "endTimestamp": 1541620500000,
       "day": 0,
       "id": "02",
@@ -240,7 +240,7 @@
       "youtubeUrl": "https://www.youtube.com/watch?v=sU-ot_Oz3AE&index=4&list=PLWz5rJ2EKKc8WFYCR9esqGGY0vOZm2l6e&t=0s"
     },
     {
-      "description": "Android Lint already scans your app for hundreds of common issues, contributing to the code warnings that you see in Android Studio. But Lint can do even more for advanced users. Come to this demo-heavy talk to learn about the less common uses of Lint, which may include: \n\n - Writing custom Lint checks for domain- or team-specific needs\n - Using annotations to catch threading bugs *before* they cause UI freezes\n - Enabling off-by-default checks to improve Java/Kotlin interoperability\n - Performance best practices when running Lint on a CI server\n",
+      "description": "Android Lint already scans your app for hundreds of common issues, contributing to the code warnings that you see in Android Studio. But Lint can do even more for advanced users. Come to this demo-heavy talk to learn about the less common uses of Lint, which may include: \n - Writing custom Lint checks for domain- or team-specific needs\n - Using annotations to catch threading bugs *before* they cause UI freezes\n - Enabling off-by-default checks to improve Java/Kotlin interoperability\n - Performance best practices when running Lint on a CI server\n",
       "endTimestamp": 1541619300000,
       "day": 0,
       "id": "03",
@@ -312,7 +312,7 @@
       "title": "3 Platforms in 5 Minutes with Kotlin"
     },
     {
-      "description": "Did you know that VectorDrawables support theme colors, stateful colors and even gradients? Did you know this works back to API14 with AndroidX? Are you getting the most out of your vectors to support different view states, using the same drawables in differently themed screens, or avoiding bloating your app with large illustrations?\n\nThis lightning talk paints a picture of these advanced features of VectorDrawables and how to use them.",
+      "description": "Did you know that VectorDrawables support theme colors, stateful colors and even gradients? Did you know this works back to API14 with AndroidX? Are you getting the most out of your vectors to support different view states, using the same drawables in differently themed screens, or avoiding bloating your app with large illustrations?\nThis lightning talk paints a picture of these advanced features of VectorDrawables and how to use them.",
       "endTimestamp": 1541622120000,
       "day": 0,
       "id": "07",
@@ -452,7 +452,7 @@
       "facebookUrl": "https://it-it.facebook.com/romainpguy"
     },
     {
-      "bio": "Chris works as a software engineer at Google, working on the Android Gradle Plugin, first in Mountain View and now in London.\n\nPrior to joining Google, Chris worked as a Research Assistant in the Security Group of the The Computer Laboratory, University of Cambridge. He previously studied computer science as undergraduate at the University of Cambridge.",
+      "bio": "Chris works as a software engineer at Google, working on the Android Gradle Plugin, first in Mountain View and now in London.\nPrior to joining Google, Chris worked as a Research Assistant in the Security Group of the The Computer Laboratory, University of Cambridge. He previously studied computer science as undergraduate at the University of Cambridge.",
       "company": "Samsung",
       "id": "01",
       "name": "Chris Warrington",
