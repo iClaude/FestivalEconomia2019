@@ -45,4 +45,5 @@
     <string name="unstarred">Evento rimosso dai preferiti</string>
     <string name="starred_unstarred_not_show">Non mostrare</string>
     <string name="session_info_organizers">ORGANIZZATORI</string>
+    <string name="session_info_related_events">EVENTI COLLEGATI</string>
 </resources>

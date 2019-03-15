@@ -92,3 +92,8 @@ fun sessionInfoTimeDetails(context: Context?, startTimestamp: Long, endTimestamp
 fun formatDate(format: String, time: ZonedDateTime): String {
     return DateTimeFormatter.ofPattern(format).format(time)
 }
+
+fun getDateShortStr(context: Context?, timestamp: Long): String {
+    val time = zonedDateTimeFromTimestamp(context, timestamp)
+    return formatDate("EE,MMM d", time)
+}

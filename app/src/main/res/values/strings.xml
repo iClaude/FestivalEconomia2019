@@ -52,4 +52,5 @@
     <string name="unstarred">Session removed from favorites</string>
     <string name="starred_unstarred_not_show">Do not show</string>
     <string name="session_info_organizers">ORGANIZERS</string>
+    <string name="session_info_related_events">RELATED EVENTS</string>
 </resources>

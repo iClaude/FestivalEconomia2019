@@ -11,9 +11,11 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.ItemOrganizerBinding
-import iclaude.festivaleconomia2019.model.data_classes.Organizer
-import iclaude.festivaleconomia2019.model.data_classes.hasThumbnailUrl
+import iclaude.festivaleconomia2019.databinding.ItemSessionRelatedBinding
+import iclaude.festivaleconomia2019.model.data_classes.*
+import iclaude.festivaleconomia2019.ui.sessions.getDateShortStr
 import iclaude.festivaleconomia2019.ui.sessions.sessionInfoTimeDetails
+import iclaude.festivaleconomia2019.ui.sessions.sessionLength
 import iclaude.festivaleconomia2019.ui.utils.HeaderGridDrawable
 
 @BindingAdapter("app:sessionImage")
@@ -66,7 +68,7 @@ fun goneWithPhoto(view: View, sessionInfo: SessionInfo) {
 }
 
 @BindingAdapter("app:speakerImage")
-fun speakerImage(imageView: ImageView, organizer: Organizer) {
+fun speakerImage(imageView: ImageView, organizer: Organizer?) {
     organizer ?: return
 
     // Want a 'random' default avatar but should be stable as used on both session details &
@@ -102,3 +104,42 @@ fun addOrganizers(layout: LinearLayout, organizers: List<Organizer>) {
         layout.addView(binding.root)
     }
 }
+
+@BindingAdapter("app:relatedSessionsVisibility")
+fun relatedSessionsVisibility(view: View, sessionInfo: SessionInfo) {
+    view.visibility = if (sessionInfo.hasRelatedSessions()) View.VISIBLE else View.GONE
+}
+
+@BindingAdapter("app:relatedSessions", "app:viewModel", requireAll = true)
+fun addRelatedSessions(layout: LinearLayout, relatedSessions: List<Session>, viewModel: SessionInfoViewModel) {
+    val eventData = viewModel.repository.eventDataLive.value ?: return
+
+    val context = layout.context
+    val locations: List<Location> = eventData.locations
+
+    for (session in relatedSessions) {
+        val location = locations[session.location.toInt()]
+        val binding = ItemSessionRelatedBinding.inflate(LayoutInflater.from(context), layout, false).apply {
+            setSession(session)
+            setLocation(location)
+        }
+        layout.addView(binding.root)
+    }
+}
+
+@BindingAdapter("app:liveStreamedVisibility")
+fun liveStreamedVisibility(view: View, session: Session) {
+    view.visibility = if (session.hasSessionUrl() || session.hasYoutubeUrl()) View.VISIBLE else View.GONE
+
+}
+
+@BindingAdapter("app:lenLocText", "app:location", requireAll = true)
+fun lenLocText(textView: TextView, session: Session, location: Location) {
+    val context = textView.context
+    val str = "${getDateShortStr(context, session.startTimestamp)} / ${sessionLength(
+        context,
+        session.startTimestamp,
+        session.endTimestamp
+    )} / ${location.name}"
+}
+
