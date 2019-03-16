@@ -122,6 +122,7 @@ fun addRelatedSessions(layout: LinearLayout, relatedSessions: List<Session>, vie
         val binding = ItemSessionRelatedBinding.inflate(LayoutInflater.from(context), layout, false).apply {
             setSession(session)
             setLocation(location)
+            setViewModel(viewModel)
         }
         layout.addView(binding.root)
     }

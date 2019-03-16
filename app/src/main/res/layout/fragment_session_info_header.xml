@@ -91,17 +91,6 @@
                 app:goneWithPhotoOrVideo="@{sessionDataDer}"
                 tools:text="Getting the Most Out of Android Lint"/>
 
-        <ImageButton
-                android:id="@+id/up"
-                android:layout_width="?actionBarSize"
-                android:layout_height="?actionBarSize"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:background="?selectableItemBackgroundBorderless"
-                android:contentDescription="@string/content_description"
-                app:srcCompat="@drawable/ic_arrow_back"
-                android:onClick="@{() -> viewModelDer.navigateBack()}"/>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

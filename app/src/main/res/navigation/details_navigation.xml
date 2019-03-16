@@ -9,10 +9,16 @@
               android:name="iclaude.festivaleconomia2019.ui.details.session.SessionInfoFragment"
               android:label="SessionInfoFragment"
               tools:layout="@layout/fragment_session_info">
+
         <argument android:name="sessionId" app:argType="string"/>
-        <action android:id="@+id/toMainActivityAction" app:destination="@id/mainActivity"
-                app:exitAnim="@anim/slide_out_bottom"/>
+
     </fragment>
-    <activity android:id="@+id/mainActivity" android:name="iclaude.festivaleconomia2019.ui.MainActivity"
-              android:label="activity_main" tools:layout="@layout/activity_main"/>
+
+    <fragment android:id="@+id/sessionInfoFragment2"
+              android:name="iclaude.festivaleconomia2019.ui.details.session.SessionInfoFragment"
+              android:label="SessionInfoFragment"
+              tools:layout="@layout/fragment_session_info"/>
+
+    <argument android:name="sessionId" app:argType="string"/>
+
 </navigation>

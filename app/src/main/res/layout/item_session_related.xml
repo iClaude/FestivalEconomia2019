@@ -5,6 +5,8 @@
         xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable name="viewModel"
+                  type="iclaude.festivaleconomia2019.ui.details.session.SessionInfoViewModel"/>
         <variable
                 name="session"
                 type="iclaude.festivaleconomia2019.model.data_classes.Session"/>
@@ -18,7 +20,8 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:paddingBottom="@dimen/spacing_normal"
-            android:background="?android:attr/selectableItemBackground">
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="@{() -> viewModel.goToSession(session.id)}">
 
         <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline_start"

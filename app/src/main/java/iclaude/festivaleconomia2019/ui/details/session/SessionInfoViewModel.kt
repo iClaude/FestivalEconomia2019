@@ -99,14 +99,14 @@ class SessionInfoViewModel : ViewModel() {
         _startYoutubeVideoEvent.value = Event(url)
     }
 
-    // User clicks the arrow in the app bar to navigate to previous Fragment.
+    // User clicks to a related session to navigate to it.
 
-    private val _navigateBackEvent = MutableLiveData<Event<Any>>()
-    val navigateBackEvent: LiveData<Event<Any>>
-        get() = _navigateBackEvent
+    private val _goToSessionEvent = MutableLiveData<Event<String>>()
+    val goToSessionEvent: LiveData<Event<String>>
+        get() = _goToSessionEvent
 
-    fun navigateBack() {
-        _navigateBackEvent.value = Event(Unit)
+    fun goToSession(sessionId: String) {
+        _goToSessionEvent.value = Event(sessionId)
     }
 }
 
