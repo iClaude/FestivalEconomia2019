@@ -22,7 +22,6 @@ import kotlinx.android.synthetic.main.fragment_session_info.*
 
 class SessionInfoFragment : Fragment() {
 
-    private lateinit var sessionId: String
     private lateinit var viewModel: SessionInfoViewModel
     private lateinit var binding: FragmentSessionInfoBinding
 
@@ -36,9 +35,9 @@ class SessionInfoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        sessionId = SessionInfoFragmentArgs.fromBundle(arguments!!).sessionId
+        val idSession = SessionInfoFragmentArgs.fromBundle(arguments!!).sessionId
         viewModel.apply {
-            sessionId = this@SessionInfoFragment.sessionId
+            sessionId = idSession
 
             eventDataFromRepoLive.observe(this@SessionInfoFragment, Observer {
                 viewModel.loadSessionInfo()
