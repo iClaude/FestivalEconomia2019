@@ -14,10 +14,12 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.internal.CheckableImageButton
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionInfoBinding
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
 import kotlinx.android.synthetic.main.fragment_session_info.*
+import kotlinx.android.synthetic.main.fragment_session_info_content.*
 
 
 class SessionInfoFragment : Fragment() {
@@ -44,9 +46,10 @@ class SessionInfoFragment : Fragment() {
             })
 
             sessionInfoLoadedEvent.observe(this@SessionInfoFragment, EventObserver { info ->
-                binding?.apply {
+                binding.apply {
                     sessionData = info
                 }
+                if (info.hasRelatedSessions()) viewModel.findStarredSessions()
             })
 
             startYoutubeVideoEvent.observe(this@SessionInfoFragment, EventObserver {
@@ -67,6 +70,15 @@ class SessionInfoFragment : Fragment() {
                     }
                 }
                 findNavController().navigate(R.id.sessionInfoFragment, bundleOf("sessionId" to it), options)
+            })
+
+            starredSessionsLive.observe(this@SessionInfoFragment, Observer { starredSessionIds ->
+                starredSessionIds.forEach { id ->
+                    val starredSessionView: View? = llRelatedEvents.findViewWithTag<View>(id)
+                    starredSessionView?.findViewById<CheckableImageButton>(R.id.cibBookmark).apply {
+                        this?.isChecked = true
+                    }
+                }
             })
         }
 

@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import com.google.android.gms.tasks.OnSuccessListener
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.*
 import iclaude.festivaleconomia2019.model.di.App
@@ -107,6 +108,23 @@ class SessionInfoViewModel : ViewModel() {
 
     fun goToSession(sessionId: String) {
         _goToSessionEvent.value = Event(sessionId)
+    }
+
+    // Find starred sessions for logged-in users.
+
+    private val _starredSessionsLive = MutableLiveData<List<String>>()
+    val starredSessionsLive: LiveData<List<String>>
+        get() = _starredSessionsLive
+
+    fun findStarredSessions() {
+        repository.getStarredSessions(OnSuccessListener { documentSnapshot ->
+            val userInFirebase = documentSnapshot.toObject(User::class.java)
+            userInFirebase?.let { userInFirebase ->
+                if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
+
+                _starredSessionsLive.value = userInFirebase.starredSessions
+            }
+        })
     }
 }
 

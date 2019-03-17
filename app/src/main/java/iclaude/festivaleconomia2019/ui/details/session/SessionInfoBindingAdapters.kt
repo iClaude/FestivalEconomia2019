@@ -124,7 +124,9 @@ fun addRelatedSessions(layout: LinearLayout, relatedSessions: List<Session>, vie
             setLocation(location)
             setViewModel(viewModel)
         }
-        layout.addView(binding.root)
+
+        val view = binding.root.apply { tag = session.id }
+        layout.addView(view)
     }
 }
 
