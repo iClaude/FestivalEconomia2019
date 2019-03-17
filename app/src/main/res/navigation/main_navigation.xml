@@ -9,9 +9,9 @@
             android:id="@+id/containerSessionsFragment"
             android:name="iclaude.festivaleconomia2019.ui.sessions.SessionContainerFragment"
             android:label="fragment_container_sessions" tools:layout="@layout/fragment_session_container">
-        <action android:id="@+id/action_containerSessionsFragment_to_detailsActivity"
-                app:destination="@id/detailsActivity" app:enterAnim="@anim/slide_in_bottom"
-                app:popExitAnim="@anim/slide_out_bottom"/>
+        <action android:id="@+id/action_containerSessionsFragment_to_sessionInfoFragment"
+                app:destination="@id/sessionInfoFragment" app:enterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment android:id="@+id/FAQFragment" android:name="iclaude.festivaleconomia2019.ui.FAQFragment"
               android:label="fragment_faq" tools:layout="@layout/fragment_faq"/>
@@ -39,8 +39,14 @@
             app:launchSingleTop="true" app:popUpTo="@+id/mobile_navigation"/>
     <action android:id="@+id/action_global_mapFragment" app:destination="@id/mapFragment" app:launchSingleTop="true"
             app:popUpTo="@+id/mobile_navigation"/>
-    <activity android:id="@+id/detailsActivity" android:name="iclaude.festivaleconomia2019.ui.details.DetailsActivity"
-              android:label="activity_details" tools:layout="@layout/activity_details">
+
+    <fragment android:id="@+id/sessionInfoFragment"
+              android:name="iclaude.festivaleconomia2019.ui.details.session.SessionInfoFragment"
+              android:label="SessionInfoFragment"
+              tools:layout="@layout/fragment_session_info">
+
         <argument android:name="sessionId" app:argType="string"/>
-    </activity>
+
+    </fragment>
+
 </navigation>

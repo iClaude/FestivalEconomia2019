@@ -111,8 +111,8 @@ class SessionContainerFragment : Fragment() {
                 }
             })
             goToSessionEvent.observe(this@SessionContainerFragment, EventObserver {
-                SessionContainerFragmentDirections.actionContainerSessionsFragmentToDetailsActivity(it).let {
-                    findNavController().navigate(it)
+                SessionContainerFragmentDirections.actionContainerSessionsFragmentToSessionInfoFragment(it).run {
+                    findNavController().navigate(this)
                 }
             })
         }
