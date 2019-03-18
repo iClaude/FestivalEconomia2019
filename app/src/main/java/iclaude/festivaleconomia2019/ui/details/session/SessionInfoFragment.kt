@@ -34,7 +34,7 @@ class SessionInfoFragment : Fragment() {
     private lateinit var viewModel: SessionInfoViewModel
     private lateinit var sessionListViewModel: SessionListViewModel
     private lateinit var binding: FragmentSessionInfoBinding
-    private lateinit var loginManager: LoginManager
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -112,8 +112,8 @@ class SessionInfoFragment : Fragment() {
 
             authEvent.observe(this@SessionInfoFragment, EventObserver { command ->
                 when (command) {
-                    Authentication.LOGIN_REQUEST -> loginManager.requestLogin()
-                    Authentication.LOGIN_CONFIRMED -> loginManager.logIn()
+                    Authentication.LOGIN_REQUEST -> LoginManager.requestLogin(activity!!, viewModel)
+                    Authentication.LOGIN_CONFIRMED -> LoginManager.logIn(this@SessionInfoFragment, viewModel)
                 }
             })
         }
@@ -129,14 +129,13 @@ class SessionInfoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         toolbar.setupWithNavController(findNavController())
-        loginManager = LoginManager(context!!, viewModel, this)
     }
 
     // User login result.
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        loginManager.loginResult(requestCode, resultCode, data, cibBookmark)
+        LoginManager.loginResult(requestCode, resultCode, data, cibBookmark, activity!!, viewModel)
     }
 }
 

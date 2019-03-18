@@ -32,7 +32,7 @@ class SessionContainerFragment : Fragment() {
     private lateinit var viewModel: SessionListViewModel
     private lateinit var binding: FragmentSessionContainerBinding
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<View>
-    private lateinit var loginManager: LoginManager
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,8 +54,6 @@ class SessionContainerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        loginManager = LoginManager(context!!, viewModel, this)
 
         // setup ViewPager and TabLayout
         viewModel.eventDataFromRepoLive.observe(this, Observer { eventData ->
@@ -92,10 +90,10 @@ class SessionContainerFragment : Fragment() {
 
             authEvent.observe(this@SessionContainerFragment, EventObserver { command ->
                 when (command) {
-                    Authentication.LOGIN_REQUEST -> loginManager.requestLogin()
-                    Authentication.LOGIN_CONFIRMED -> loginManager.logIn()
-                    Authentication.LOGOUT_REQUEST -> loginManager.requestLogout()
-                    Authentication.LOGOUT_CONFIRMED -> loginManager.logOut()
+                    Authentication.LOGIN_REQUEST -> LoginManager.requestLogin(activity!!, viewModel)
+                    Authentication.LOGIN_CONFIRMED -> LoginManager.logIn(this@SessionContainerFragment, viewModel)
+                    Authentication.LOGOUT_REQUEST -> LoginManager.requestLogout(activity!!, viewModel)
+                    Authentication.LOGOUT_CONFIRMED -> LoginManager.logOut(activity!!, viewModel)
                 }
             })
 
@@ -128,7 +126,7 @@ class SessionContainerFragment : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        loginManager.loginResult(requestCode, resultCode, data, fabFilter)
+        LoginManager.loginResult(requestCode, resultCode, data, fabFilter, activity!!, viewModel)
     }
 
     inner class SessionsAdapter(

@@ -15,10 +15,10 @@ import com.google.firebase.auth.FirebaseAuth
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.ui.sessions.RC_SIGN_IN
 
-class LoginManager(val context: Context, private val loginFlow: LoginFlow, val fragment: Fragment) {
+object LoginManager {
 
     // Request user confirmation for login.
-    fun requestLogin() {
+    fun requestLogin(context: Context, loginFlow: LoginFlow) {
         val posButtonListener = DialogInterface.OnClickListener { dialog, which ->
             loginFlow.confirmLogin()
             dialog?.dismiss()
@@ -26,12 +26,13 @@ class LoginManager(val context: Context, private val loginFlow: LoginFlow, val f
         val negButtonListener = DialogInterface.OnClickListener { dialog, which -> dialog?.dismiss() }
         showAlertDialog(
             R.string.login_confirm_title, R.string.login_confirm_msg, R.string.login_confirm_accept,
-            R.string.login_confirm_cancel, posButtonListener, negButtonListener
+            R.string.login_confirm_cancel, posButtonListener, negButtonListener,
+            context
         )
     }
 
     // User has confirmed login.
-    fun logIn() {
+    fun logIn(fragment: Fragment, loginFlow: LoginFlow) {
         // Choose authentication providers.
         val providers = loginFlow.getLoginProviders()
 
@@ -48,7 +49,7 @@ class LoginManager(val context: Context, private val loginFlow: LoginFlow, val f
     }
 
     // Request user confirmation for logout.
-    fun requestLogout() {
+    fun requestLogout(context: Context, loginFlow: LoginFlow) {
         val posButtonListener = DialogInterface.OnClickListener { dialog, which ->
             loginFlow.confirmLogout()
             dialog?.dismiss()
@@ -56,12 +57,13 @@ class LoginManager(val context: Context, private val loginFlow: LoginFlow, val f
         val negButtonListener = DialogInterface.OnClickListener { dialog, which -> dialog?.dismiss() }
         showAlertDialog(
             R.string.logout_dialog_title, R.string.logout_dialog_msg, R.string.logout_dialog_accept,
-            R.string.logout_dialog_cancel, posButtonListener, negButtonListener
+            R.string.logout_dialog_cancel, posButtonListener, negButtonListener,
+            context
         )
     }
 
     // User has confirmed logout.
-    fun logOut() {
+    fun logOut(context: Context, loginFlow: LoginFlow) {
         AuthUI.getInstance()
             .signOut(context)
             .addOnCompleteListener {
@@ -69,7 +71,14 @@ class LoginManager(val context: Context, private val loginFlow: LoginFlow, val f
             }
     }
 
-    fun loginResult(requestCode: Int, resultCode: Int, data: Intent?, viewForSnackBar: View) {
+    fun loginResult(
+        requestCode: Int,
+        resultCode: Int,
+        data: Intent?,
+        viewForSnackBar: View,
+        context: Context,
+        loginFlow: LoginFlow
+    ) {
         if (requestCode == RC_SIGN_IN) {
             val response = IdpResponse.fromResultIntent(data)
 
@@ -92,7 +101,8 @@ class LoginManager(val context: Context, private val loginFlow: LoginFlow, val f
     private fun showAlertDialog(
         @StringRes title: Int, @StringRes msg: Int, @StringRes posButton: Int,
         @StringRes negButton: Int, posButtonListener: DialogInterface.OnClickListener,
-        negButtonListener: DialogInterface.OnClickListener
+        negButtonListener: DialogInterface.OnClickListener,
+        context: Context
     ) {
         MaterialAlertDialogBuilder(context)
             .setTitle(title)
