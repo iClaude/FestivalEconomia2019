@@ -1,14 +1,11 @@
 package iclaude.festivaleconomia2019.ui.sessions
 
-import android.app.Activity
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.StringRes
 import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -16,17 +13,14 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
-import com.firebase.ui.auth.AuthUI
-import com.firebase.ui.auth.IdpResponse
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_HIDDEN
 import com.google.android.material.bottomsheet.BottomSheetBehavior.from
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.auth.FirebaseAuth
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
 import iclaude.festivaleconomia2019.ui.login.LoginFlow.Authentication
+import iclaude.festivaleconomia2019.ui.login.LoginManager
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
 import kotlinx.android.synthetic.main.fragment_session_container.*
 import kotlinx.android.synthetic.main.fragment_session_container_appbar.*
@@ -38,6 +32,7 @@ class SessionContainerFragment : Fragment() {
     private lateinit var viewModel: SessionListViewModel
     private lateinit var binding: FragmentSessionContainerBinding
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<View>
+    private lateinit var loginManager: LoginManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +55,8 @@ class SessionContainerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        loginManager = LoginManager(context!!, viewModel, this)
+
         // setup ViewPager and TabLayout
         viewModel.eventDataFromRepoLive.observe(this, Observer { eventData ->
             with(viewModel) {
@@ -81,23 +78,27 @@ class SessionContainerFragment : Fragment() {
             titleHeaderAlphaObs.set(0f)
             scrollYObs.set(0)
             changeFilterSheetState(false)
+
             changeFilterSheetStateEvent.observe(this@SessionContainerFragment, EventObserver {
                 bottomSheetBehavior.state = it
             })
+
             removeFilterSheetEvent.observe(this@SessionContainerFragment, EventObserver {
                 bottomSheetBehavior.run {
                     isHideable = true
                     state = STATE_HIDDEN
                 }
             })
+
             authEvent.observe(this@SessionContainerFragment, EventObserver { command ->
                 when (command) {
-                    Authentication.LOGIN_REQUEST -> requestLogin()
-                    Authentication.LOGIN_CONFIRMED -> logIn()
-                    Authentication.LOGOUT_REQUEST -> requestLogout()
-                    Authentication.LOGOUT_CONFIRMED -> logOut()
+                    Authentication.LOGIN_REQUEST -> loginManager.requestLogin()
+                    Authentication.LOGIN_CONFIRMED -> loginManager.logIn()
+                    Authentication.LOGOUT_REQUEST -> loginManager.requestLogout()
+                    Authentication.LOGOUT_CONFIRMED -> loginManager.logOut()
                 }
             })
+
             showSnackBarForStarringEvent.observe(this@SessionContainerFragment, EventObserver { toStar ->
                 val pref = PreferenceManager.getDefaultSharedPreferences(context)
                 val showSnackbar = pref?.getBoolean("starring_show_snackbar", true) ?: true
@@ -110,104 +111,24 @@ class SessionContainerFragment : Fragment() {
                     show()
                 }
             })
+
             goToSessionEvent.observe(this@SessionContainerFragment, EventObserver {
                 SessionContainerFragmentDirections.actionContainerSessionsFragmentToDetailsGraph(it).run {
                     findNavController().navigate(this)
                 }
             })
+
             starredSessionsUpdateEvent.observe(this@SessionContainerFragment, EventObserver {
                 viewModel.updateSessionListWithStarredSessions()
             })
         }
     }
 
-    // User login/logout.
-
-    // Request user confirmation for login.
-    private fun requestLogin() {
-        val posButtonListener = DialogInterface.OnClickListener { dialog, which ->
-            viewModel.confirmLogin()
-            dialog?.dismiss()
-        }
-        val negButtonListener = DialogInterface.OnClickListener { dialog, which -> dialog?.dismiss() }
-        showAlertDialog(
-            R.string.login_confirm_title, R.string.login_confirm_msg, R.string.login_confirm_accept,
-            R.string.login_confirm_cancel, posButtonListener, negButtonListener
-        )
-    }
-
-    // User has confirmed login.
-    private fun logIn() {
-        // Choose authentication providers.
-        val providers = viewModel.getLoginProviders()
-
-        // Create and launch sign-in intent.
-        startActivityForResult(
-            AuthUI.getInstance()
-                .createSignInIntentBuilder()
-                .setAvailableProviders(providers)
-                .setTheme(R.style.AppTheme)
-                .setLogo(R.mipmap.ic_launcher_round)
-                .build(),
-            RC_SIGN_IN
-        )
-    }
-
-    // Request user confirmation for logout.
-    private fun requestLogout() {
-        val posButtonListener = DialogInterface.OnClickListener { dialog, which ->
-            viewModel.confirmLogout()
-            dialog?.dismiss()
-        }
-        val negButtonListener = DialogInterface.OnClickListener { dialog, which -> dialog?.dismiss() }
-        showAlertDialog(
-            R.string.logout_dialog_title, R.string.logout_dialog_msg, R.string.logout_dialog_accept,
-            R.string.logout_dialog_cancel, posButtonListener, negButtonListener
-        )
-    }
-
-    // User has confirmed logout.
-    private fun logOut() {
-        AuthUI.getInstance()
-            .signOut(context!!)
-            .addOnCompleteListener {
-                viewModel.onUserLoggedOut()
-            }
-    }
-
-    private fun showAlertDialog(
-        @StringRes title: Int, @StringRes msg: Int, @StringRes posButton: Int,
-        @StringRes negButton: Int, posButtonListener: DialogInterface.OnClickListener,
-        negButtonListener: DialogInterface.OnClickListener
-    ) {
-        MaterialAlertDialogBuilder(context!!)
-            .setTitle(title)
-            .setMessage(msg)
-            .setPositiveButton(posButton, posButtonListener)
-            .setNegativeButton(negButton, negButtonListener)
-            .show()
-    }
-
+    // User login result.
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == RC_SIGN_IN) {
-            val response = IdpResponse.fromResultIntent(data)
-
-            if (resultCode == Activity.RESULT_OK) {
-                // Successfully signed in
-                val user = FirebaseAuth.getInstance().currentUser
-                user?.let {
-                    viewModel.onUserLoggedIn(it)
-                }
-            } else {
-                Snackbar.make(
-                    fabFilter, getString(R.string.login_error, response?.error?.errorCode ?: 0),
-                    Snackbar.LENGTH_SHORT
-                )
-                    .show()
-            }
-        }
+        loginManager.loginResult(requestCode, resultCode, data, fabFilter)
     }
 
     inner class SessionsAdapter(
