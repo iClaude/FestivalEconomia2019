@@ -26,7 +26,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
-import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel.Authentication.*
+import iclaude.festivaleconomia2019.ui.login.LoginFlow.Authentication
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
 import kotlinx.android.synthetic.main.fragment_session_container.*
 import kotlinx.android.synthetic.main.fragment_session_container_appbar.*
@@ -92,10 +92,10 @@ class SessionContainerFragment : Fragment() {
             })
             authEvent.observe(this@SessionContainerFragment, EventObserver { command ->
                 when (command) {
-                    LOGIN_REQUEST -> requestLogin()
-                    LOGIN_CONFIRMED -> logIn()
-                    LOGOUT_REQUEST -> requestLogout()
-                    LOGOUT_CONFIRMED -> logOut()
+                    Authentication.LOGIN_REQUEST -> requestLogin()
+                    Authentication.LOGIN_CONFIRMED -> logIn()
+                    Authentication.LOGOUT_REQUEST -> requestLogout()
+                    Authentication.LOGOUT_CONFIRMED -> logOut()
                 }
             })
             showSnackBarForStarringEvent.observe(this@SessionContainerFragment, EventObserver { toStar ->

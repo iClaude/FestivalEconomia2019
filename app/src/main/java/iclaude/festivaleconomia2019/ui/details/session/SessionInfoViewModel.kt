@@ -4,18 +4,17 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import com.firebase.ui.auth.AuthUI
 import com.google.android.gms.tasks.OnSuccessListener
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.*
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
+import iclaude.festivaleconomia2019.ui.login.LoginFlow
 import iclaude.festivaleconomia2019.ui.utils.Event
 import javax.inject.Inject
 
-class SessionInfoViewModel : ViewModel() {
+class SessionInfoViewModel : ViewModel(), LoginFlow {
     @Inject
     lateinit var repository: EventDataRepository
 
@@ -146,33 +145,18 @@ class SessionInfoViewModel : ViewModel() {
 
     // User authentication.
 
-    enum class Authentication { LOGIN_REQUEST, LOGIN_CONFIRMED }
+    override val _authEvent: MutableLiveData<Event<LoginFlow.Authentication>> = MutableLiveData()
 
-    private val _authEvent = MutableLiveData<Event<Authentication>>()
-    val authEvent: LiveData<Event<Authentication>>
-        get() = _authEvent
-
-    fun startAuthFlow() {
-        if (FirebaseAuth.getInstance().currentUser == null)
-            _authEvent.value = Event(Authentication.LOGIN_REQUEST)
-    }
-
-    fun confirmLogin() {
-        _authEvent.value = Event(Authentication.LOGIN_CONFIRMED)
-    }
-
-    fun getLoginProviders() = arrayListOf(
-        AuthUI.IdpConfig.GoogleBuilder().build(),
-        AuthUI.IdpConfig.FacebookBuilder().build(),
-        AuthUI.IdpConfig.TwitterBuilder().build()
-    )
-
-    fun onUserLoggedIn(user: FirebaseUser) {
+    override fun onUserLoggedIn(user: FirebaseUser) {
         addUserToFirebase(user)
         findStarredSessions()
     }
 
-    fun addUserToFirebase(user: FirebaseUser) {
+    override fun onUserLoggedOut() {
+        // no need to log out from this Fragment
+    }
+
+    override fun addUserToFirebase(user: FirebaseUser) {
         repository.addUser(user)
     }
 

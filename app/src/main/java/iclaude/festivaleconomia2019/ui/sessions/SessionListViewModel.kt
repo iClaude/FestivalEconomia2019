@@ -7,7 +7,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
-import com.firebase.ui.auth.AuthUI
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior.*
 import com.google.firebase.auth.FirebaseAuth
@@ -19,6 +18,7 @@ import iclaude.festivaleconomia2019.model.data_classes.hasSessionUrl
 import iclaude.festivaleconomia2019.model.data_classes.hasYoutubeUrl
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
+import iclaude.festivaleconomia2019.ui.login.LoginFlow
 import iclaude.festivaleconomia2019.ui.sessions.filters.*
 import iclaude.festivaleconomia2019.ui.utils.Event
 import kotlinx.coroutines.CoroutineScope
@@ -27,7 +27,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class SessionListViewModel(val context: Application) : AndroidViewModel(context) {
+class SessionListViewModel(val context: Application) : AndroidViewModel(context), LoginFlow {
 
     private val viewModelJob = Job()
     private val defaultScope = CoroutineScope(Dispatchers.Default + viewModelJob)
@@ -217,41 +217,15 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     // User authentication.
 
-    enum class Authentication { LOGIN_REQUEST, LOGIN_CONFIRMED, LOGOUT_REQUEST, LOGOUT_CONFIRMED }
+    override val _authEvent: MutableLiveData<Event<LoginFlow.Authentication>> = MutableLiveData()
 
-    private val _authEvent = MutableLiveData<Event<Authentication>>()
-    val authEvent: LiveData<Event<Authentication>>
-        get() = _authEvent
-
-    fun startAuthFlow() {
-        if (FirebaseAuth.getInstance().currentUser == null) {
-            _authEvent.value = Event(Authentication.LOGIN_REQUEST)
-        } else {
-            _authEvent.value = Event(Authentication.LOGOUT_REQUEST)
-        }
-    }
-
-    fun confirmLogin() {
-        _authEvent.value = Event(Authentication.LOGIN_CONFIRMED)
-    }
-
-    fun confirmLogout() {
-        _authEvent.value = Event(Authentication.LOGOUT_CONFIRMED)
-    }
-
-    fun getLoginProviders() = arrayListOf(
-        AuthUI.IdpConfig.GoogleBuilder().build(),
-        AuthUI.IdpConfig.FacebookBuilder().build(),
-        AuthUI.IdpConfig.TwitterBuilder().build()
-    )
-
-    fun onUserLoggedIn(user: FirebaseUser) {
+    override fun onUserLoggedIn(user: FirebaseUser) {
         showUserPhoto(user)
         addUserToFirebase(user)
         updateSessionListWithStarredSessions()
     }
 
-    fun onUserLoggedOut() {
+    override fun onUserLoggedOut() {
         userImageUriObs.set(null)
         sessions.forEach {
             it.starred = false
@@ -259,7 +233,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         filterList()
     }
 
-    fun addUserToFirebase(user: FirebaseUser) {
+    override fun addUserToFirebase(user: FirebaseUser) {
         repository.addUser(user)
     }
 

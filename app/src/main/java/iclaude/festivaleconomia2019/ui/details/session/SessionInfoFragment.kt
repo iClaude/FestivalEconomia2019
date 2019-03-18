@@ -27,7 +27,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionInfoBinding
-import iclaude.festivaleconomia2019.ui.details.session.SessionInfoViewModel.Authentication
+import iclaude.festivaleconomia2019.ui.login.LoginFlow.Authentication
 import iclaude.festivaleconomia2019.ui.sessions.RC_SIGN_IN
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
