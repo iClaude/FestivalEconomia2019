@@ -1,10 +1,10 @@
 package iclaude.festivaleconomia2019.ui.sessions
 
 import android.app.Activity
-import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -99,7 +99,7 @@ class SessionContainerFragment : Fragment() {
                 }
             })
             showSnackBarForStarringEvent.observe(this@SessionContainerFragment, EventObserver { toStar ->
-                val pref = activity?.getPreferences(Context.MODE_PRIVATE)
+                val pref = PreferenceManager.getDefaultSharedPreferences(context)
                 val showSnackbar = pref?.getBoolean("starring_show_snackbar", true) ?: true
                 if (!showSnackbar) return@EventObserver
                 val msgId = if (toStar) R.string.starred else R.string.unstarred

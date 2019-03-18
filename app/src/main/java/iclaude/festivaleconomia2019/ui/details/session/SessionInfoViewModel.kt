@@ -4,7 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import com.firebase.ui.auth.AuthUI
 import com.google.android.gms.tasks.OnSuccessListener
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.*
 import iclaude.festivaleconomia2019.model.di.App
@@ -110,6 +113,9 @@ class SessionInfoViewModel : ViewModel() {
         _goToSessionEvent.value = Event(sessionId)
     }
 
+
+    // Starred sessions (related events).
+
     // Find starred sessions for logged-in users.
 
     private val _starredSessionsLive = MutableLiveData<List<String>>()
@@ -126,6 +132,50 @@ class SessionInfoViewModel : ViewModel() {
             }
         })
     }
+
+    // User stars/unstars a related session.
+
+    private val _showSnackBarForStarringEvent = MutableLiveData<Event<Boolean>>()
+    val showSnackBarForStarringEvent: LiveData<Event<Boolean>>
+        get() = _showSnackBarForStarringEvent
+
+    fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
+        repository.starOrUnstarSession(sessionId, toStar)
+        _showSnackBarForStarringEvent.value = Event(toStar)
+    }
+
+    // User authentication.
+
+    enum class Authentication { LOGIN_REQUEST, LOGIN_CONFIRMED }
+
+    private val _authEvent = MutableLiveData<Event<Authentication>>()
+    val authEvent: LiveData<Event<Authentication>>
+        get() = _authEvent
+
+    fun startAuthFlow() {
+        if (FirebaseAuth.getInstance().currentUser == null)
+            _authEvent.value = Event(Authentication.LOGIN_REQUEST)
+    }
+
+    fun confirmLogin() {
+        _authEvent.value = Event(Authentication.LOGIN_CONFIRMED)
+    }
+
+    fun getLoginProviders() = arrayListOf(
+        AuthUI.IdpConfig.GoogleBuilder().build(),
+        AuthUI.IdpConfig.FacebookBuilder().build(),
+        AuthUI.IdpConfig.TwitterBuilder().build()
+    )
+
+    fun onUserLoggedIn(user: FirebaseUser) {
+        addUserToFirebase(user)
+        findStarredSessions()
+    }
+
+    fun addUserToFirebase(user: FirebaseUser) {
+        repository.addUser(user)
+    }
+
 }
 
 // Info to display in the layout.

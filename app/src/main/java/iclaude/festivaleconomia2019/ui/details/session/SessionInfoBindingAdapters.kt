@@ -9,6 +9,8 @@ import androidx.databinding.BindingAdapter
 import com.airbnb.lottie.LottieAnimationView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.google.android.material.internal.CheckableImageButton
+import com.google.firebase.auth.FirebaseAuth
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.ItemOrganizerBinding
 import iclaude.festivaleconomia2019.databinding.ItemSessionRelatedBinding
@@ -147,3 +149,19 @@ fun lenLocText(textView: TextView, session: Session, location: Location) {
     textView.text = str
 }
 
+@BindingAdapter("app:onStarClickListenerRelated", "app:viewModel", requireAll = true)
+fun onStarClickListener(
+    button: CheckableImageButton,
+    session: Session,
+    viewModel: SessionInfoViewModel
+) {
+    button.setOnClickListener {
+        if (FirebaseAuth.getInstance().currentUser != null) {
+            val b = it as CheckableImageButton
+            b.isChecked = !b.isChecked
+            viewModel.starOrUnstarSession(session.id, b.isChecked)
+        } else {
+            viewModel.startAuthFlow()
+        }
+    }
+}
