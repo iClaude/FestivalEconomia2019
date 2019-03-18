@@ -275,12 +275,21 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     // Starred sessions for logged-in users.
 
+    private val _starredSessionsUpdateEvent = MutableLiveData<Event<Any>>()
+    val starredSessionsUpdateEvent: LiveData<Event<Any>>
+        get() = _starredSessionsUpdateEvent
+
+    fun starredSessionsNeedUpdate() {
+        _starredSessionsUpdateEvent.value = Event(Unit)
+    }
+
     fun updateSessionListWithStarredSessions() {
         repository.getStarredSessions(OnSuccessListener { documentSnapshot ->
             val userInFirebase = documentSnapshot.toObject(User::class.java)
             userInFirebase?.let { userInFirebase ->
                 if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
 
+                sessions.forEach { it.starred = false }
                 userInFirebase.starredSessions.forEach {
                     sessions[it.toInt()].starred = true
                 }

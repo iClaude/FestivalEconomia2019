@@ -29,6 +29,7 @@ import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionInfoBinding
 import iclaude.festivaleconomia2019.ui.details.session.SessionInfoViewModel.Authentication
 import iclaude.festivaleconomia2019.ui.sessions.RC_SIGN_IN
+import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
 import kotlinx.android.synthetic.main.fragment_session_info.*
 import kotlinx.android.synthetic.main.fragment_session_info_content.*
@@ -38,12 +39,16 @@ import kotlinx.android.synthetic.main.item_session_related.*
 class SessionInfoFragment : Fragment() {
 
     private lateinit var viewModel: SessionInfoViewModel
+    private lateinit var sessionListViewModel: SessionListViewModel
     private lateinit var binding: FragmentSessionInfoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         viewModel = ViewModelProviders.of(this).get(SessionInfoViewModel::class.java)
+        sessionListViewModel = activity?.run {
+            ViewModelProviders.of(this).get(SessionListViewModel::class.java)
+        } ?: throw Exception("Invalid Activity")
     }
 
     override fun onCreateView(
@@ -97,6 +102,8 @@ class SessionInfoFragment : Fragment() {
             })
 
             showSnackBarForStarringEvent.observe(this@SessionInfoFragment, EventObserver { toStar ->
+                sessionListViewModel.starredSessionsNeedUpdate()
+
                 val pref = PreferenceManager.getDefaultSharedPreferences(context)
                 val showSnackbar = pref?.getBoolean("starring_show_snackbar", true) ?: true
                 if (!showSnackbar) return@EventObserver

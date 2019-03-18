@@ -115,6 +115,9 @@ class SessionContainerFragment : Fragment() {
                     findNavController().navigate(this)
                 }
             })
+            starredSessionsUpdateEvent.observe(this@SessionContainerFragment, EventObserver {
+                viewModel.updateSessionListWithStarredSessions()
+            })
         }
     }
 
