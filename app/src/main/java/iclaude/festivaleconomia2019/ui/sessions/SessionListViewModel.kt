@@ -241,7 +241,8 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         for (profile in user.providerData) {
             val photoUri = profile.photoUrl
             photoUri?.let {
-                userImageUriObs.set(it)
+                val oldPhotoUri = userImageUriObs.get()
+                if (it != oldPhotoUri) userImageUriObs.set(it)
                 return
             }
         }
@@ -249,12 +250,12 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     // Starred sessions for logged-in users.
 
-    private val _starredSessionsUpdateEvent = MutableLiveData<Event<Any>>()
-    val starredSessionsUpdateEvent: LiveData<Event<Any>>
-        get() = _starredSessionsUpdateEvent
+    private val _loginDataUpdateEvent = MutableLiveData<Event<Any>>()
+    val loginDataUpdateEvent: LiveData<Event<Any>>
+        get() = _loginDataUpdateEvent
 
-    fun starredSessionsNeedUpdate() {
-        _starredSessionsUpdateEvent.value = Event(Unit)
+    fun loginDataNeedsUpdate() {
+        _loginDataUpdateEvent.value = Event(Unit)
     }
 
     fun updateSessionListWithStarredSessions() {

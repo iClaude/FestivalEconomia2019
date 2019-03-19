@@ -96,8 +96,6 @@ class SessionInfoFragment : Fragment() {
             })
 
             showSnackBarForStarringEvent.observe(this@SessionInfoFragment, EventObserver { toStar ->
-                sessionListViewModel.starredSessionsNeedUpdate()
-
                 val pref = PreferenceManager.getDefaultSharedPreferences(context)
                 val showSnackbar = pref?.getBoolean("starring_show_snackbar", true) ?: true
                 if (!showSnackbar) return@EventObserver
@@ -115,6 +113,13 @@ class SessionInfoFragment : Fragment() {
                     Authentication.LOGIN_REQUEST -> LoginManager.requestLogin(activity!!, viewModel)
                     Authentication.LOGIN_CONFIRMED -> LoginManager.logIn(this@SessionInfoFragment, viewModel)
                 }
+            })
+
+            /* If the user logs in-out or stars/unstars sessions in this Fragment,
+               SessionListFragment should also be updated (showing avatar and updating starred
+               sessions). */
+            loginOperationsEvent.observe(this@SessionInfoFragment, EventObserver {
+                sessionListViewModel.loginDataNeedsUpdate()
             })
         }
 

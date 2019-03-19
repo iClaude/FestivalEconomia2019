@@ -17,6 +17,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_HIDDEN
 import com.google.android.material.bottomsheet.BottomSheetBehavior.from
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
 import iclaude.festivaleconomia2019.ui.login.LoginFlow.Authentication
@@ -116,8 +117,10 @@ class SessionContainerFragment : Fragment() {
                 }
             })
 
-            starredSessionsUpdateEvent.observe(this@SessionContainerFragment, EventObserver {
-                viewModel.updateSessionListWithStarredSessions()
+            loginDataUpdateEvent.observe(this@SessionContainerFragment, EventObserver {
+                FirebaseAuth.getInstance().currentUser?.let {
+                    viewModel.onUserLoggedIn(it)
+                }
             })
         }
     }

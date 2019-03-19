@@ -134,6 +134,12 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
 
     // User stars/unstars a related session.
 
+    /* If the user logs in-out or stars/unstars sessions in this Fragment, SessionListFragment
+       should also be updated (showing avatar and updating starred sessions). */
+    private val _loginOperationsEvent = MutableLiveData<Event<Any>>()
+    val loginOperationsEvent: LiveData<Event<Any>>
+        get() = _loginOperationsEvent
+
     private val _showSnackBarForStarringEvent = MutableLiveData<Event<Boolean>>()
     val showSnackBarForStarringEvent: LiveData<Event<Boolean>>
         get() = _showSnackBarForStarringEvent
@@ -141,6 +147,7 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
     fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
         repository.starOrUnstarSession(sessionId, toStar)
         _showSnackBarForStarringEvent.value = Event(toStar)
+        _loginOperationsEvent.value = Event(Unit)
     }
 
     // User authentication.
@@ -150,6 +157,7 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
     override fun onUserLoggedIn(user: FirebaseUser) {
         addUserToFirebase(user)
         findStarredSessions()
+        _loginOperationsEvent.value = Event(Unit)
     }
 
     override fun onUserLoggedOut() {
