@@ -28,6 +28,8 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
         }
     }
 
+    var locationId: Int = -1
+
     lateinit var sessionId: String
     private lateinit var sessionInfo: SessionInfo
 
@@ -59,6 +61,8 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
             if (session.hasPhotoUrl()) session.photoUrl else null,
             if (session.hasYoutubeUrl()) session.youtubeUrl else null
         )
+
+        locationId = session.location.toInt()
 
         // Session info loaded: communicate it to Fragment in order to bind data to layout.
         _sessionInfoLoadedEvent.value = Event(sessionInfo)

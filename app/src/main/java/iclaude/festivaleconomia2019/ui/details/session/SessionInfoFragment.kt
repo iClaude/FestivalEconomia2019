@@ -17,12 +17,14 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.internal.CheckableImageButton
 import com.google.android.material.snackbar.Snackbar
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionInfoBinding
 import iclaude.festivaleconomia2019.ui.login.LoginFlow.Authentication
 import iclaude.festivaleconomia2019.ui.login.LoginManager
+import iclaude.festivaleconomia2019.ui.map.MapFragmentDirections
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
 import kotlinx.android.synthetic.main.fragment_session_info.*
@@ -40,6 +42,7 @@ class SessionInfoFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         activity?.getWindow()?.setStatusBarColor(Color.TRANSPARENT)
         super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
 
         viewModel = ViewModelProviders.of(this).get(SessionInfoViewModel::class.java)
         sessionListViewModel = activity?.run {
@@ -138,6 +141,22 @@ class SessionInfoFragment : Fragment() {
         with(toolbar) {
             setupWithNavController(findNavController())
             inflateMenu(R.menu.session_info)
+            setOnMenuItemClickListener { item ->
+                when (item.itemId) {
+                    R.id.action_location -> {
+                        val action = MapFragmentDirections.actionGlobalMapFragment().apply {
+                            setLocationId(viewModel.locationId)
+                        }
+                        findNavController().navigate(action)
+                        (activity?.findViewById<BottomNavigationView>(R.id.bottomNav) as BottomNavigationView)?.let {
+                            it.menu.findItem(R.id.mapFragment).setChecked(true)
+                        }
+
+                        true
+                    }
+                    else -> super.onOptionsItemSelected(item)
+                }
+            }
         }
     }
 
@@ -147,6 +166,7 @@ class SessionInfoFragment : Fragment() {
 
         LoginManager.loginResult(requestCode, resultCode, data, cibBookmark, activity!!, viewModel)
     }
+
 }
 
 

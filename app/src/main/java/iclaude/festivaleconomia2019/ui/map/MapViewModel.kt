@@ -46,6 +46,10 @@ class MapViewModel : ViewModel() {
         }
     }
 
+    // Location id to navigate to.
+    var locationId =
+        -1 // -1 if MapFragment is opened wihout a specific location to navigate to, or locationId otherwise (if opened from SessionInfoFragment with the id of the location to display).
+
     // center the map on a specific point with animation
     private val _mapCenterEvent = MutableLiveData<Event<CameraUpdate>>()
     val mapCenterEvent: LiveData<Event<CameraUpdate>>
@@ -57,8 +61,8 @@ class MapViewModel : ViewModel() {
         get() = _mapRotateEvent
 
     // add markers to the map
-    private val _mapMarkersEvent = MutableLiveData<Event<LocationsAndSelectedMarker>>()
-    val mapMarkersEvent: LiveData<Event<LocationsAndSelectedMarker>>
+    private val _mapMarkersEvent = MutableLiveData<Event<LocationsAndSelectedLocation>>()
+    val mapMarkersEvent: LiveData<Event<LocationsAndSelectedLocation>>
         get() = _mapMarkersEvent
 
     // set marker's name and description in the bottom sheet
@@ -71,28 +75,29 @@ class MapViewModel : ViewModel() {
     val directionsEvent: LiveData<Event<Location>>
         get() = _directionsEvent
 
-    private var curMarker: Marker? = null
-    private var selectedMarkerId: String = "xx"
+    private var curLocation: Location? = null
     private var mapLoaded = false
 
 
     // Load markers and center the map.
     fun loadMap(locations: List<Location>) {
-        if (mapLoaded) {
+        if (locationId != -1) { // zoom to a specific location with animation
+            zoomToMarker(location = locations[locationId])
+            locationId = -1
+        } else if (mapLoaded) {
             _mapRotateEvent.value = Event(getCameraUpdate(locations))
         } else {
             _mapCenterEvent.value = Event(getCameraUpdate(locations))
         }
-        _mapMarkersEvent.value = Event(LocationsAndSelectedMarker(locations, selectedMarkerId))
+        _mapMarkersEvent.value = Event(LocationsAndSelectedLocation(locations, curLocation))
 
         mapLoaded = true
     }
 
     private fun getCameraUpdate(locations: List<Location>): CameraUpdate {
         // a marker is already selected: zoom to that marker
-        if (curMarker != null) {
-            val loc = curMarker?.tag as Location
-            return CameraUpdateFactory.newLatLngZoom(LatLng(loc.lat, loc.lng), 17f)
+        if (curLocation != null) {
+            return CameraUpdateFactory.newLatLngZoom(LatLng(curLocation!!.lat, curLocation!!.lng), 17f)
         }
 
         // no marker is selected: zoom to the center
@@ -106,11 +111,19 @@ class MapViewModel : ViewModel() {
 
     }
 
-    // When clicking on a marker: zoom to marker, center the map and display bottom sheet (collapsed).
-    fun zoomToMarker(marker: Marker) {
-        val loc = marker.tag as Location
-        selectedMarkerId = loc.id
-        curMarker = marker
+    private fun getCameraUpdateForDestination(location: Location): CameraUpdate {
+        return CameraUpdateFactory.newLatLngZoom(LatLng(location.lat, location.lng), 17f)
+    }
+
+    /* When clicking on a marker: zoom to marker, center the map and display bottom sheet (collapsed).
+       When navigating from SessionInfoFragment marker is null and a location is provided instead:
+       in this case navigate to the selected location showing info in the BottomSheet but without
+       displaying the info window or select a specific Marker. */
+    fun zoomToMarker(marker: Marker? = null, location: Location? = null) {
+        if (marker == null && location == null) return
+
+        val loc = marker?.tag as? Location ?: location
+        curLocation = loc!! // at this point loc must not be null
 
         val cameraPosition = CameraPosition.Builder().run {
             this.target(LatLng(loc.lat, loc.lng))
@@ -125,13 +138,13 @@ class MapViewModel : ViewModel() {
     // When clicking on the map: hide bottom sheet.
     fun onMapClick() {
         _bottomSheetStateEvent.value = Event(BottomSheetBehavior.STATE_HIDDEN)
-        curMarker = null
-        selectedMarkerId = "xx"
+        curLocation = null
     }
 
     // Show directions to a location.
     fun showRoute(view: View) {
-        _directionsEvent.postValue(Event(curMarker?.tag as Location))
+        curLocation ?: return
+        _directionsEvent.postValue(Event(curLocation!!))
     }
 
     // Click on bottom sheet title: expand or collapse.
@@ -156,9 +169,9 @@ class MapViewModel : ViewModel() {
 
     override fun onCleared() {
         super.onCleared()
-        selectedMarkerId = "xx"
+        curLocation = null
         repository.cancelLoadingData()
     }
 }
 
-class LocationsAndSelectedMarker(val locations: List<Location>, val selectedMarkerId: String)
+class LocationsAndSelectedLocation(val locations: List<Location>, val selectedLocation: Location?)

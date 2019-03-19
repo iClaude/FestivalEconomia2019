@@ -36,7 +36,8 @@ class MapFragment : Fragment(), OnMapReadyCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MapViewModel::class.java)
+        val id = MapFragmentArgs.fromBundle(arguments!!).locationId
+        viewModel = ViewModelProviders.of(this).get(MapViewModel::class.java).apply { locationId = id }
     }
 
     override fun onCreateView(
@@ -97,6 +98,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
     override fun onDestroy() {
         super.onDestroy()
         mapView.onDestroy()
+        arguments?.putInt("locationId", -1)
     }
 
     override fun onLowMemory() {
@@ -113,7 +115,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
 
         gMap?.apply {
             setOnMarkerClickListener {
-                viewModel.zoomToMarker(it)
+                viewModel.zoomToMarker(marker = it)
                 it.showInfoWindow()
                 true
             }
@@ -153,6 +155,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
     @SuppressLint("MissingPermission")
     private fun showUserPosition() {
         googleMap?.isMyLocationEnabled = true
-
     }
+
+
 }

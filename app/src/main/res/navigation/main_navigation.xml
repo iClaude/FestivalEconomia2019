@@ -32,7 +32,13 @@
               android:label="fragment_session_list" tools:layout="@layout/fragment_session_list"/>
 
     <fragment android:id="@+id/mapFragment" android:name="iclaude.festivaleconomia2019.ui.map.MapFragment"
-              android:label="fragment_map" tools:layout="@layout/fragment_map"/>
+              android:label="fragment_map"
+              tools:layout="@layout/fragment_map">
+        <argument
+                android:name="locationId"
+                app:argType="integer"
+                android:defaultValue="-1"/>
+    </fragment>
     <fragment android:id="@+id/containerInfoFragment"
               android:name="iclaude.festivaleconomia2019.ui.ContainerInfoFragment"
               android:label="fragment_container_info" tools:layout="@layout/fragment_container_info"/>
