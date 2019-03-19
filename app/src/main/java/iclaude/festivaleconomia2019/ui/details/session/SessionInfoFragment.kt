@@ -2,6 +2,7 @@ package iclaude.festivaleconomia2019.ui.details.session
 
 
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.preference.PreferenceManager
@@ -37,6 +38,7 @@ class SessionInfoFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        activity?.getWindow()?.setStatusBarColor(Color.TRANSPARENT)
         super.onCreate(savedInstanceState)
 
         viewModel = ViewModelProviders.of(this).get(SessionInfoViewModel::class.java)
@@ -133,7 +135,10 @@ class SessionInfoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        toolbar.setupWithNavController(findNavController())
+        with(toolbar) {
+            setupWithNavController(findNavController())
+            inflateMenu(R.menu.session_info)
+        }
     }
 
     // User login result.

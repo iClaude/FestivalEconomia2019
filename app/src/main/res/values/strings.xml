@@ -53,4 +53,6 @@
     <string name="starred_unstarred_not_show">Do not show</string>
     <string name="session_info_organizers">ORGANIZERS</string>
     <string name="session_info_related_events">RELATED EVENTS</string>
+    <string name="action_share">share</string>
+    <string name="action_location">location</string>
 </resources>
