@@ -23,7 +23,9 @@
             android:fitsSystemWindows="true"
             android:id="@+id/coordinatorLayout">
 
-        <com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
                                                          android:layout_height="@dimen/session_info_appbar_height"
                                                          android:fitsSystemWindows="true"
                                                          android:background="@color/surfaceColor">
@@ -53,6 +55,15 @@
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
         </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            android:src="@drawable/ic_star"
+            app:layout_anchor="@id/appbar"
+            app:layout_anchorGravity="bottom|end"
+            android:layout_marginEnd="@dimen/margin_normal" />
 
         <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
                                                android:layout_height="match_parent"
