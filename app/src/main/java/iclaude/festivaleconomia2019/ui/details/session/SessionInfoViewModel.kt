@@ -31,7 +31,7 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
     var locationId: Int = -1
 
     lateinit var sessionId: String
-    private lateinit var sessionInfo: SessionInfo
+    lateinit var sessionInfo: SessionInfo
 
 
     // Load session info when repository is ready.
@@ -59,7 +59,8 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
             getOrganizers(session, eventData.organizers),
             getRelatedSessions(session, eventData.sessions),
             if (session.hasPhotoUrl()) session.photoUrl else null,
-            if (session.hasYoutubeUrl()) session.youtubeUrl else null
+            if (session.hasYoutubeUrl()) session.youtubeUrl else null,
+            if (session.hasSessionUrl()) session.sessionUrl else null
         )
 
         locationId = session.location.toInt()
@@ -187,7 +188,8 @@ class SessionInfo(
     val organizers: List<Organizer>,
     val relatedSessions: List<Session>?,
     val photoUrl: String?,
-    val youtubeUrl: String?
+    val youtubeUrl: String?,
+    val sessionUrl: String?
 )
 
 fun SessionInfo.hasRelatedSessions() = relatedSessions?.isNotEmpty() ?: false

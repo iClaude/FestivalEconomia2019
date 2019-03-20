@@ -9,8 +9,10 @@ import android.preference.PreferenceManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.ShareActionProvider
 import androidx.core.content.edit
 import androidx.core.os.bundleOf
+import androidx.core.view.MenuItemCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -26,6 +28,7 @@ import iclaude.festivaleconomia2019.ui.login.LoginFlow.Authentication
 import iclaude.festivaleconomia2019.ui.login.LoginManager
 import iclaude.festivaleconomia2019.ui.map.MapFragmentDirections
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
+import iclaude.festivaleconomia2019.ui.sessions.sessionInfoTimeDetails
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
 import kotlinx.android.synthetic.main.fragment_session_info.*
 import kotlinx.android.synthetic.main.fragment_session_info_content.*
@@ -37,10 +40,11 @@ class SessionInfoFragment : Fragment() {
     private lateinit var viewModel: SessionInfoViewModel
     private lateinit var sessionListViewModel: SessionListViewModel
     private lateinit var binding: FragmentSessionInfoBinding
+    private lateinit var actionProvider: ShareActionProvider
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        activity?.getWindow()?.setStatusBarColor(Color.TRANSPARENT)
+        activity?.window?.statusBarColor = Color.TRANSPARENT
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
 
@@ -67,6 +71,9 @@ class SessionInfoFragment : Fragment() {
                     sessionData = info
                 }
                 if (info.hasRelatedSessions()) viewModel.findStarredSessions()
+
+                // Setup ShareActionProvider with session info.
+                actionProvider.setShareIntent(createShareIntent())
             })
 
             startYoutubeVideoEvent.observe(this@SessionInfoFragment, EventObserver {
@@ -141,16 +148,20 @@ class SessionInfoFragment : Fragment() {
         with(toolbar) {
             setupWithNavController(findNavController())
             inflateMenu(R.menu.session_info)
+
+            menu.findItem(R.id.action_share).also { menuItem ->
+                actionProvider = MenuItemCompat.getActionProvider(menuItem) as ShareActionProvider
+            }
+
             setOnMenuItemClickListener { item ->
                 when (item.itemId) {
                     R.id.action_location -> {
                         val action = MapFragmentDirections.actionGlobalMapFragment().apply {
-                            setLocationId(viewModel.locationId)
+                            locationId = viewModel.locationId
                         }
                         findNavController().navigate(action)
-                        (activity?.findViewById<BottomNavigationView>(R.id.bottomNav) as BottomNavigationView)?.let {
-                            it.menu.findItem(R.id.mapFragment).setChecked(true)
-                        }
+                        (activity?.findViewById(R.id.bottomNav) as BottomNavigationView).menu.findItem(R.id.mapFragment)
+                            .isChecked = true
 
                         true
                     }
@@ -165,6 +176,26 @@ class SessionInfoFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
 
         LoginManager.loginResult(requestCode, resultCode, data, cibBookmark, activity!!, viewModel)
+    }
+
+    private fun createShareIntent(): Intent {
+        return Intent().apply {
+            action = Intent.ACTION_SEND
+            type = "text/plain"
+            putExtra(Intent.EXTRA_TEXT, createShareString())
+        }
+    }
+
+    private fun createShareString(): String {
+        val sessionInfo = viewModel.sessionInfo
+        val str = "${getString(R.string.session_info_share)}\n${sessionInfo.title}\n${sessionInfoTimeDetails(
+            context,
+            sessionInfo.startTimestamp, sessionInfo.endTimestamp
+        )}\n${sessionInfo.location}\n${sessionInfo.description.take(
+            120
+        )}...\nWebsite: ${if (sessionInfo.sessionUrl != null) sessionInfo.sessionUrl else "-"}"
+
+        return str
     }
 
 }
