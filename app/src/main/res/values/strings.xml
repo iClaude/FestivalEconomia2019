@@ -55,5 +55,6 @@
     <string name="session_info_related_events">RELATED EVENTS</string>
     <string name="action_share">share</string>
     <string name="action_location">location</string>
+    <string name="session_info_share_msg">Share via</string>
     <string name="session_info_share">Have a look at this event:</string>
 </resources>

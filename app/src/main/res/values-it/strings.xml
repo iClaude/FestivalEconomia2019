@@ -48,5 +48,6 @@
     <string name="session_info_related_events">EVENTI COLLEGATI</string>
     <string name="action_share">condividi</string>
     <string name="action_location">luogo</string>
+    <string name="session_info_share_msg">Condividi con</string>
     <string name="session_info_share">Dai un\'occhiata a questo evento:</string>
 </resources>
