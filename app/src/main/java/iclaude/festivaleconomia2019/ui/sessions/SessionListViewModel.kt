@@ -14,7 +14,6 @@ import com.google.firebase.auth.FirebaseUser
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.Tag
 import iclaude.festivaleconomia2019.model.data_classes.User
-import iclaude.festivaleconomia2019.model.data_classes.hasSessionUrl
 import iclaude.festivaleconomia2019.model.data_classes.hasYoutubeUrl
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
@@ -94,7 +93,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
             sessions = eventData.sessions.map { session ->
                 SessionInfoForList(
                     session.id, session.title,
-                    session.hasSessionUrl() || (session.hasYoutubeUrl()),
+                    session.hasYoutubeUrl(),
                     session.startTimestamp,
                     session.endTimestamp,
                     "${sessionLength(

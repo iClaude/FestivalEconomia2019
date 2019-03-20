@@ -134,7 +134,7 @@ fun addRelatedSessions(layout: LinearLayout, relatedSessions: List<Session>, vie
 
 @BindingAdapter("app:liveStreamedVisibility")
 fun liveStreamedVisibility(view: View, session: Session) {
-    view.visibility = if (session.hasSessionUrl() || session.hasYoutubeUrl()) View.VISIBLE else View.GONE
+    view.visibility = if (session.hasYoutubeUrl()) View.VISIBLE else View.GONE
 
 }
 

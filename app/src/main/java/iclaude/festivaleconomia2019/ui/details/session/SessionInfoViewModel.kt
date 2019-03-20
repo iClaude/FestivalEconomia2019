@@ -51,7 +51,7 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
             session.title,
             session.startTimestamp,
             session.endTimestamp,
-            session.hasSessionUrl() || session.hasYoutubeUrl(),
+            session.hasYoutubeUrl(),
             eventData.locations[session.location.toInt()].displayString
                 ?: eventData.locations[session.location.toInt()].name,
             session.description,

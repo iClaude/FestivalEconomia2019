@@ -18,8 +18,8 @@ data class Session(
     // optional data
     val relatedSessions: List<String>?,
     val photoUrl: String?,
-    val sessionUrl: String?,
-    val youtubeUrl: String?,
+    val sessionUrl: String?, // url to official web page of the event
+    val youtubeUrl: String?, // url to youtube video or livestream page
     var starred: Boolean = false
 )
 
