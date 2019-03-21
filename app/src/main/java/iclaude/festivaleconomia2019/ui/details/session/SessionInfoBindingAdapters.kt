@@ -42,15 +42,16 @@ fun timeDetails(textView: TextView, startTimestamp: Long, endTimestamp: Long) {
 @BindingAdapter("app:eventHeaderAnim")
 fun eventHeaderAnim(lottieView: LottieAnimationView, sessionInfo: SessionInfo) {
     val rnd = (1..6).shuffled().first()
-    val anim = when (rnd) {
+
+    lottieView.setAnimation(
+        when (rnd) {
         1 -> "lottie/eco1.json"
         2 -> "lottie/eco2.json"
         3 -> "lottie/eco3.json"
         4 -> "lottie/eco4.json"
-        5 -> "lottie/eco5.json"
-        else -> "lottie/eco6.json"
-    }
-    lottieView.setAnimation(anim)
+            else -> "lottie/eco5.json"
+        }
+    )
 }
 
 @BindingAdapter("app:visibleWithPhotoOrVideo")
