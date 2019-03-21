@@ -50,4 +50,6 @@
     <string name="action_location">luogo</string>
     <string name="session_info_share_msg">Condividi con</string>
     <string name="session_info_share">Dai un\'occhiata a questo evento:</string>
+    <string name="a11y_starred">Evento prenotato</string>
+    <string name="a11y_unstarred">Evento non prenotato</string>
 </resources>
