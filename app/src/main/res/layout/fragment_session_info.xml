@@ -63,14 +63,22 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabSize="normal"
-                android:src="@drawable/ic_star"
+        <com.google.android.material.internal.CheckableImageButton
+                android:id="@+id/cibStar"
+                android:layout_width="@dimen/fab_size"
+                android:layout_height="@dimen/fab_size"
+                android:elevation="8dp"
                 app:layout_anchor="@id/appbar"
                 app:layout_anchorGravity="bottom|end"
-                android:layout_marginEnd="@dimen/margin_normal"/>
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:background="@drawable/oval_ripple"
+                android:stateListAnimator="@animator/fab_raise"
+                android:src="@drawable/asld_star_event"
+                app:starred="@{viewModel.starredSessionObs}"
+                app:onStarClickListener="@{sessionData.id}"
+                app:viewModel="@{viewModel}"
+                app:layout_behavior="iclaude.festivaleconomia2019.ui.utils.StarButtonBehavior"/>
 
         <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"

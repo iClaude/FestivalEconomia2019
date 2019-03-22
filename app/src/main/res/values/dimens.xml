@@ -24,4 +24,5 @@
     <dimen name="session_info_appbar_height">250dp</dimen>
     <dimen name="organizer_headshot_size">40dp</dimen>
     <dimen name="speaker_headshot_size">40dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
 </resources>

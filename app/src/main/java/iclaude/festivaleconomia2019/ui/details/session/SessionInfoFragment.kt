@@ -30,7 +30,6 @@ import iclaude.festivaleconomia2019.ui.sessions.sessionInfoTimeDetails
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
 import kotlinx.android.synthetic.main.fragment_session_info.*
 import kotlinx.android.synthetic.main.fragment_session_info_content.*
-import kotlinx.android.synthetic.main.item_session_related.*
 
 
 class SessionInfoFragment : Fragment() {
@@ -67,7 +66,7 @@ class SessionInfoFragment : Fragment() {
                 binding.apply {
                     sessionData = info
                 }
-                if (info.hasRelatedSessions()) viewModel.findStarredSessions()
+                viewModel.findStarredSessions()
             })
 
             startYoutubeVideoEvent.observe(this@SessionInfoFragment, EventObserver {
@@ -93,8 +92,9 @@ class SessionInfoFragment : Fragment() {
             })
 
             starredSessionsLive.observe(this@SessionInfoFragment, Observer { starredSessionIds ->
+                // List of related sessions.
                 starredSessionIds.forEach { id ->
-                    val starredSessionView: View? = llRelatedEvents.findViewWithTag(id)
+                    val starredSessionView: View? = llRelatedEvents?.findViewWithTag(id)
                     starredSessionView?.findViewById<CheckableImageButton>(R.id.cibBookmark).apply {
                         this?.isChecked = true
                     }
@@ -106,7 +106,7 @@ class SessionInfoFragment : Fragment() {
                 val showSnackbar = pref?.getBoolean("starring_show_snackbar", true) ?: true
                 if (!showSnackbar) return@EventObserver
                 val msgId = if (toStar) R.string.starred else R.string.unstarred
-                Snackbar.make(cibBookmark, msgId, Snackbar.LENGTH_SHORT).run {
+                Snackbar.make(cibStar, msgId, Snackbar.LENGTH_SHORT).run {
                     setAction(R.string.starred_unstarred_not_show) {
                         pref?.edit { putBoolean("starring_show_snackbar", false) }
                     }
@@ -174,7 +174,7 @@ class SessionInfoFragment : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        LoginManager.loginResult(requestCode, resultCode, data, cibBookmark, activity!!, viewModel)
+        LoginManager.loginResult(requestCode, resultCode, data, cibStar, activity!!, viewModel)
     }
 
     private fun createShareIntent(): Intent {

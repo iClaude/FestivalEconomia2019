@@ -167,3 +167,28 @@ fun onStarClickListener(
         }
     }
 }
+
+// Star button to star/unstar this session.
+
+// Checked or unchecked state.
+@BindingAdapter("app:starred")
+fun starredSession(button: CheckableImageButton, isStarred: Boolean) {
+    button.isChecked = isStarred
+}
+
+// Click listener.
+@BindingAdapter("app:onStarClickListener", "app:viewModel", requireAll = true)
+fun onStarFabClicked(
+    button: CheckableImageButton,
+    sessionId: String,
+    viewModel: SessionInfoViewModel
+) {
+    button.setOnClickListener { button ->
+        if (FirebaseAuth.getInstance().currentUser != null) {
+            val starButton = (button as CheckableImageButton).also { it.toggle() }
+            viewModel.starOrUnstarSession(sessionId, starButton.isChecked)
+        } else {
+            viewModel.startAuthFlow()
+        }
+    }
+}

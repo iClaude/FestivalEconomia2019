@@ -1,5 +1,6 @@
 package iclaude.festivaleconomia2019.ui.details.session
 
+import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -120,6 +121,9 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
 
     // Starred sessions (related events).
 
+    // Star FAB representing this session.
+    val starredSessionObs = ObservableBoolean(false)
+
     // Find starred sessions for logged-in users.
 
     private val _starredSessionsLive = MutableLiveData<List<String>>()
@@ -133,6 +137,7 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
                 if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
 
                 _starredSessionsLive.value = userInFirebase.starredSessions
+                starredSessionObs.set(userInFirebase.starredSessions.contains(sessionInfo.id))
             }
         })
     }
