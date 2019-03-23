@@ -72,7 +72,7 @@
                             tools:text="Getting the Most Out of Android Lint"
                             android:textAppearance="@style/AppBarTitle"
                             android:alpha="0"
-                            android:text="@{sessionData.title}"
+                            app:titleOrInfo="@{sessionData}"
                             app:showOrHide="@{viewModel.appBarCollapsedPercentageObs}"
                             android:textAlignment="viewStart"/>
 

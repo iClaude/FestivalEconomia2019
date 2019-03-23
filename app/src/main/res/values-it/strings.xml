@@ -52,4 +52,5 @@
     <string name="session_info_share">Dai un\'occhiata a questo evento:</string>
     <string name="a11y_starred">Evento prenotato</string>
     <string name="a11y_unstarred">Evento non prenotato</string>
+    <string name="session_info_info">Informazioni</string>
 </resources>

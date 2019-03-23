@@ -197,6 +197,14 @@ fun onStarFabClicked(
 
 // App bar.
 
+@BindingAdapter("app:titleOrInfo")
+fun displayTitleOrInfo(textView: TextView, sessionInfo: SessionInfo) {
+    textView.text = if (sessionInfo.photoUrl.isNullOrEmpty() && sessionInfo.youtubeUrl.isNullOrEmpty())
+        sessionInfo.title
+    else
+        textView.context.getString(R.string.session_info_info)
+}
+
 @BindingAdapter("app:onOffsetChangedListener")
 fun addOnOffsetChangedListener(appBarLayout: AppBarLayout, viewModel: SessionInfoViewModel) {
     appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
