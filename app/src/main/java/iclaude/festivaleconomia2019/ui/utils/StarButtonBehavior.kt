@@ -16,15 +16,6 @@ class StarButtonBehavior : CoordinatorLayout.Behavior<CheckableImageButton> {
 
     private val tmpRect = Rect()
 
-    private var isAppBarExpandedHeightSet: Boolean = false
-    private var appBarExpandedHeight: Int = 0
-        set(value) {
-            if (!isAppBarExpandedHeightSet) {
-                field = value
-                isAppBarExpandedHeightSet = true
-            }
-        }
-
     override fun layoutDependsOn(parent: CoordinatorLayout, child: CheckableImageButton, dependency: View): Boolean {
         return dependency is AppBarLayout
     }
@@ -38,11 +29,10 @@ class StarButtonBehavior : CoordinatorLayout.Behavior<CheckableImageButton> {
         appBarLayout ?: return false
 
         ViewGroupUtils.getDescendantRect(parent, appBarLayout, tmpRect)
-        appBarExpandedHeight = tmpRect.bottom
         val appBarMinHeight = appBarLayout.minimumHeightForVisibleOverlappingContent.toFloat() * 2 / 3
 
         child.apply {
-            alpha = ((tmpRect.bottom - appBarMinHeight) / (appBarExpandedHeight - appBarMinHeight)).coerceAtLeast(0f)
+            alpha = ((tmpRect.bottom - appBarMinHeight) / (appBarLayout.totalScrollRange)).coerceAtLeast(0f)
             isEnabled = this.alpha > 0.5
         }
 
