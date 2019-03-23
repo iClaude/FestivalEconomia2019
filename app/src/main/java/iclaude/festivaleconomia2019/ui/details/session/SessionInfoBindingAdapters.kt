@@ -200,7 +200,16 @@ fun onStarFabClicked(
 @BindingAdapter("app:onOffsetChangedListener")
 fun addOnOffsetChangedListener(appBarLayout: AppBarLayout, viewModel: SessionInfoViewModel) {
     appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
-        val percExpanded = 1f - verticalOffset.absoluteValue.toFloat() / appBarLayout.totalScrollRange
-        viewModel.appbarExpandedPercObs.set(percExpanded)
+        val percCollapsed = verticalOffset.absoluteValue.toFloat() / appBarLayout.totalScrollRange
+        viewModel.appBarCollapsedPercentageObs.set(percCollapsed)
     })
+}
+
+@BindingAdapter("app:showOrHide")
+fun showOrHide(view: View, appBarCollapsedPercentage: Float) {
+    val curAlpha = view.alpha
+    val newAlpha = if (appBarCollapsedPercentage > 0.9) 1f else 0f
+    if (curAlpha == newAlpha) return
+
+    view.animate().alpha(newAlpha).duration = 300
 }

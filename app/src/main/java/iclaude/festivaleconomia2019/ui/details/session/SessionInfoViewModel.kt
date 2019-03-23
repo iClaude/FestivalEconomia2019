@@ -180,7 +180,7 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
     }
 
     // AppBar info.
-    val appbarExpandedPercObs = ObservableFloat(1f)
+    val appBarCollapsedPercentageObs = ObservableFloat(0f)
 
 }
 

@@ -58,7 +58,25 @@
                         android:layout_height="?attr/actionBarSize"
                         android:background="@android:color/transparent"
                         app:titleTextColor="@color/fui_transparent"
-                        app:layout_collapseMode="pin"/>
+                        app:layout_collapseMode="pin"
+                        app:contentInsetLeft="0dp"
+                        app:contentInsetStart="0dp"
+                        app:contentInsetStartWithNavigation="0dp">
+
+                    <TextView
+                            android:id="@+id/tvToolbarTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            tools:text="Getting the Most Out of Android Lint"
+                            android:textAppearance="@style/AppBarTitle"
+                            android:alpha="0"
+                            android:text="@{sessionData.title}"
+                            app:showOrHide="@{viewModel.appBarCollapsedPercentageObs}"
+                            android:textAlignment="viewStart"/>
+
+                </androidx.appcompat.widget.Toolbar>
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
