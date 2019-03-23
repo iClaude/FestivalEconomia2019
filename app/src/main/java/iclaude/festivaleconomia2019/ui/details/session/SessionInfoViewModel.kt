@@ -1,6 +1,7 @@
 package iclaude.festivaleconomia2019.ui.details.session
 
 import androidx.databinding.ObservableBoolean
+import androidx.databinding.ObservableFloat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -177,6 +178,9 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
     override fun addUserToFirebase(user: FirebaseUser) {
         repository.addUser(user)
     }
+
+    // AppBar info.
+    val appbarExpandedPercObs = ObservableFloat(1f)
 
 }
 

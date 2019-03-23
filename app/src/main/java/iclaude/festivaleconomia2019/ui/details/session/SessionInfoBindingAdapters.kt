@@ -9,6 +9,7 @@ import androidx.databinding.BindingAdapter
 import com.airbnb.lottie.LottieAnimationView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.internal.CheckableImageButton
 import com.google.firebase.auth.FirebaseAuth
 import iclaude.festivaleconomia2019.R
@@ -19,6 +20,7 @@ import iclaude.festivaleconomia2019.ui.sessions.getDateShortStr
 import iclaude.festivaleconomia2019.ui.sessions.sessionInfoTimeDetails
 import iclaude.festivaleconomia2019.ui.sessions.sessionLength
 import iclaude.festivaleconomia2019.ui.utils.HeaderGridDrawable
+import kotlin.math.absoluteValue
 
 @BindingAdapter("app:sessionImage")
 fun imageUrl(imageView: ImageView, imageUrl: String?) {
@@ -191,4 +193,14 @@ fun onStarFabClicked(
             viewModel.startAuthFlow()
         }
     }
+}
+
+// App bar.
+
+@BindingAdapter("app:onOffsetChangedListener")
+fun addOnOffsetChangedListener(appBarLayout: AppBarLayout, viewModel: SessionInfoViewModel) {
+    appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
+        val percExpanded = 1f - verticalOffset.absoluteValue.toFloat() / appBarLayout.totalScrollRange
+        viewModel.appbarExpandedPercObs.set(percExpanded)
+    })
 }
