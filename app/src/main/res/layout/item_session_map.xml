@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="iclaude.festivaleconomia2019.ui.map.MapViewModel"/>
+
+        <variable
+                name="session"
+                type="iclaude.festivaleconomia2019.model.data_classes.Session"/>
+
+        <variable
+                name="location"
+                type="iclaude.festivaleconomia2019.model.data_classes.Location"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingBottom="@dimen/spacing_normal"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true">
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/margin_normal"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/margin_small"/>
+
+        <TextView
+                android:id="@+id/tvTitle"
+                android:text="@{session.title}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SessionsItemTitle"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="What's new in Android"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+                android:layout_width="18dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/ic_livestreamed"
+                android:id="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                android:scaleType="centerCrop"
+                app:liveStreamedVisibility="@{session}"
+                app:layout_constraintTop_toTopOf="@+id/tvLenLoc"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLenLoc"
+                android:contentDescription="@string/content_description"/>
+
+        <TextView
+                android:id="@+id/tvLenLoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                android:textAppearance="@style/SessionsItemSubtitle"
+                tools:text="Mon 8 / 8:00 - 9:30 AM"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                android:layout_marginTop="4dp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constrainedWidth="true"
+                android:layout_marginStart="8dp"
+                app:layout_goneMarginStart="0dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
