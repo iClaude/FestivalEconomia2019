@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.airbnb.lottie.LottieAnimationView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.internal.CheckableImageButton
@@ -33,6 +34,7 @@ fun imageUrl(imageView: ImageView, imageUrl: String?) {
         .with(imageView)
         .setDefaultRequestOptions(RequestOptions().placeholder(HeaderGridDrawable(imageView.context)))
         .load(imageUrl)
+        .transition(DrawableTransitionOptions.withCrossFade())
         .into(imageView)
 }
 
