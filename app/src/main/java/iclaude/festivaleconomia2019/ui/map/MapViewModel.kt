@@ -176,6 +176,16 @@ class MapViewModel : ViewModel() {
         }
     }
 
+    // User clicks to session in the list of sessions to see more details.
+
+    private val _goToSessionEvent = MutableLiveData<Event<String>>()
+    val goToSessionEvent: LiveData<Event<String>>
+        get() = _goToSessionEvent
+
+    fun goToSession(sessionId: String) {
+        _goToSessionEvent.value = Event(sessionId)
+    }
+
     override fun onCleared() {
         super.onCleared()
         curLocation = null

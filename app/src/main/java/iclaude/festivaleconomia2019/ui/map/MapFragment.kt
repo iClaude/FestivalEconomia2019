@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -55,16 +56,25 @@ class MapFragment : Fragment(), OnMapReadyCallback {
             getMapAsync(this@MapFragment)
         }
 
-        // show directions to a location when the user wants to
-        viewModel.directionsEvent.observe(this, EventObserver {
-            val uri = Uri.parse("google.navigation:q=${it.lat},${it.lng}")
-            val intent = Intent(Intent.ACTION_VIEW, uri).apply {
-                `package` = "com.google.android.apps.maps"
-            }
-            if (intent.resolveActivity(context?.packageManager) != null) {
-                startActivity(intent)
-            }
-        })
+        viewModel.apply {
+            // show directions to a location when the user wants to
+            directionsEvent.observe(this@MapFragment, EventObserver {
+                val uri = Uri.parse("google.navigation:q=${it.lat},${it.lng}")
+                val intent = Intent(Intent.ACTION_VIEW, uri).apply {
+                    `package` = "com.google.android.apps.maps"
+                }
+                if (intent.resolveActivity(context?.packageManager) != null) {
+                    startActivity(intent)
+                }
+            })
+
+            // show session's info when the user clicks on a session in the session list of the BottomSheet
+            goToSessionEvent.observe(this@MapFragment, EventObserver {
+                MapFragmentDirections.actionMapFragmentToDetailsGraph(it).run {
+                    findNavController().navigate(this)
+                }
+            })
+        }
 
         ivExpandIcon = binding.bottomSheet.expandIcon
         // update bottom sheet state after drag events

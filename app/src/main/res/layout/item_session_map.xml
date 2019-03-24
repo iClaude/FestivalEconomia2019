@@ -23,7 +23,8 @@
             android:clickable="true"
             android:paddingBottom="@dimen/spacing_normal"
             android:background="?android:attr/selectableItemBackground"
-            android:focusable="true">
+            android:focusable="true"
+            android:onClick="@{() -> viewModel.goToSession(session.id)}">
 
         <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline_start"
