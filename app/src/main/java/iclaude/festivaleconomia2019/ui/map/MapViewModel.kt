@@ -14,6 +14,7 @@ import com.google.android.gms.maps.model.Marker
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.Location
+import iclaude.festivaleconomia2019.model.data_classes.Session
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.utils.Event
@@ -69,6 +70,11 @@ class MapViewModel : ViewModel() {
     private val _markerInfoEvent = MutableLiveData<Event<Location>>()
     val markerInfoEvent: LiveData<Event<Location>>
         get() = _markerInfoEvent
+
+    // list of sessions held at the selected location
+    private val _sessionListEvent = MutableLiveData<Event<List<Session>?>>()
+    val sessionListEvent: LiveData<Event<List<Session>?>>
+        get() = _sessionListEvent
 
     // the user clicks on map icon to get directions to the selected location
     private val _directionsEvent = MutableLiveData<Event<Location>>()
@@ -132,6 +138,9 @@ class MapViewModel : ViewModel() {
         }
         _mapCenterEvent.value = Event(CameraUpdateFactory.newCameraPosition(cameraPosition))
         _markerInfoEvent.value = Event(loc)
+        _sessionListEvent.value = Event(repository.eventDataLive.value?.sessions?.filter {
+            it.id == loc.id
+        })
         _bottomSheetStateEvent.value = Event(BottomSheetBehavior.STATE_COLLAPSED)
     }
 
