@@ -61,4 +61,5 @@
 
     <string name="a11y_starred">Event bookmarked</string>
     <string name="a11y_unstarred">Event not bookmarked</string>
+    <string name="map_programmed_events">PROGRAMMED EVENTS</string>
 </resources>
