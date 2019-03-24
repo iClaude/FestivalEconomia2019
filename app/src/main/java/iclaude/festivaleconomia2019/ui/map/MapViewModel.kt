@@ -139,7 +139,7 @@ class MapViewModel : ViewModel() {
         _mapCenterEvent.value = Event(CameraUpdateFactory.newCameraPosition(cameraPosition))
         _markerInfoEvent.value = Event(loc)
         _sessionListEvent.value = Event(repository.eventDataLive.value?.sessions?.filter {
-            it.id == loc.id
+            it.location == loc.id
         })
         _bottomSheetStateEvent.value = Event(BottomSheetBehavior.STATE_COLLAPSED)
     }

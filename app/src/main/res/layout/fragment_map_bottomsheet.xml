@@ -72,7 +72,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/tvSessions"
-                        android:layout_marginTop="@dimen/margin_normal"
+                        android:layout_marginTop="24dp"
                         android:layout_marginStart="@dimen/margin_normal"
                         android:layout_marginEnd="@dimen/margin_normal"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
@@ -85,6 +85,8 @@
                         android:orientation="vertical"
                         android:scrollbars="vertical"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:sessionsForLocation="@{viewModel.sessionListEvent}"
+                        app:viewModel="@{viewModel}"
                         tools:listitem="@layout/item_session_map"/>
 
             </LinearLayout>

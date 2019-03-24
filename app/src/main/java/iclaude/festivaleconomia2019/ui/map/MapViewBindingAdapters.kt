@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
+import androidx.recyclerview.widget.RecyclerView
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import com.google.android.gms.maps.CameraUpdate
@@ -16,6 +17,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.data_classes.Location
+import iclaude.festivaleconomia2019.model.data_classes.Session
 import iclaude.festivaleconomia2019.ui.utils.Event
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -109,7 +111,7 @@ fun bottomSheetState(view: View, event: Event<Int>?) {
 }
 
 /**
- * Sets marker's data (title, description, lat/lng) in the bottom sheet.
+ * Sets marker's data (title, description, lat/lng, session list) in the bottom sheet.
  */
 @BindingAdapter("app:markerTitle")
 fun markerTitle(textView: TextView, event: Event<Location>?) {
@@ -127,4 +129,11 @@ fun markerDescription(textView: TextView, event: Event<Location>?) {
 fun markerTag(view: View, event: Event<Location>?) {
     val location = event?.getContent() ?: return
     view.tag = location
+}
+
+@BindingAdapter("app:sessionsForLocation", "app:viewModel", requireAll = true)
+fun addSessionsForLocation(recyclerView: RecyclerView, event: Event<List<Session>?>?, viewModel: MapViewModel) {
+    val sessions = event?.getContent() ?: return
+
+    recyclerView.adapter = SessionListAdapter(viewModel).apply { submitList(sessions) }
 }
