@@ -11,10 +11,12 @@ import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.Marker
+import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.Location
 import iclaude.festivaleconomia2019.model.data_classes.Session
+import iclaude.festivaleconomia2019.model.data_classes.User
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.utils.Event
@@ -22,7 +24,7 @@ import javax.inject.Inject
 
 class MapViewModel : ViewModel() {
 
-    // set the state of BottomSheet with location's info
+    // Set the state of BottomSheet with location's info.
     private val _bottomSheetStateEvent = MutableLiveData<Event<Int>>()
     val bottomSheetStateEvent: LiveData<Event<Int>>
         get() = _bottomSheetStateEvent
@@ -51,32 +53,32 @@ class MapViewModel : ViewModel() {
     var locationId =
         -1 // -1 if MapFragment is opened wihout a specific location to navigate to, or locationId otherwise (if opened from SessionInfoFragment with the id of the location to display).
 
-    // center the map on a specific point with animation
+    // Center the map on a specific point with animation.
     private val _mapCenterEvent = MutableLiveData<Event<CameraUpdate>>()
     val mapCenterEvent: LiveData<Event<CameraUpdate>>
         get() = _mapCenterEvent
 
-    // center the map on a specific point without animation (after rotating device)
+    // Center the map on a specific point without animation (after rotating device).
     private val _mapRotateEvent = MutableLiveData<Event<CameraUpdate>>()
     val mapRotateEvent: LiveData<Event<CameraUpdate>>
         get() = _mapRotateEvent
 
-    // add markers to the map
+    // Add markers to the map.
     private val _mapMarkersEvent = MutableLiveData<Event<LocationsAndSelectedLocation>>()
     val mapMarkersEvent: LiveData<Event<LocationsAndSelectedLocation>>
         get() = _mapMarkersEvent
 
-    // set marker's name and description in the bottom sheet
+    // Set marker's name and description in the bottom sheet.
     private val _markerInfoEvent = MutableLiveData<Event<Location>>()
     val markerInfoEvent: LiveData<Event<Location>>
         get() = _markerInfoEvent
 
-    // list of sessions held at the selected location
+    // List of sessions held at the selected location.
     private val _sessionListEvent = MutableLiveData<Event<List<Session>?>>()
     val sessionListEvent: LiveData<Event<List<Session>?>>
         get() = _sessionListEvent
 
-    // the user clicks on map icon to get directions to the selected location
+    // The user clicks on map icon to get directions to the selected location.
     private val _directionsEvent = MutableLiveData<Event<Location>>()
     val directionsEvent: LiveData<Event<Location>>
         get() = _directionsEvent
@@ -176,7 +178,32 @@ class MapViewModel : ViewModel() {
         }
     }
 
-    // User clicks to session in the list of sessions to see more details.
+    /**
+     * Find starred sessions to update session list.
+     */
+
+    private val _starredSessionsEvent = MutableLiveData<Event<List<Session>>>()
+    val starredSessionsEvent: LiveData<Event<List<Session>>>
+        get() = _starredSessionsEvent
+
+    fun updateSessionListWithStarredSessions(sessions: List<Session>) {
+        repository.getStarredSessions(OnSuccessListener { documentSnapshot ->
+            val userInFirebase = documentSnapshot.toObject(User::class.java)
+            userInFirebase?.let { userInFirebase ->
+                if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
+
+                sessions.forEach { session ->
+                    session.starred = userInFirebase.starredSessions.contains(session.id)
+                }
+
+                _starredSessionsEvent.value = Event(sessions)
+            }
+        })
+    }
+
+    /**
+     * User clicks to session in the list of sessions to see more details.
+     */
 
     private val _goToSessionEvent = MutableLiveData<Event<String>>()
     val goToSessionEvent: LiveData<Event<String>>

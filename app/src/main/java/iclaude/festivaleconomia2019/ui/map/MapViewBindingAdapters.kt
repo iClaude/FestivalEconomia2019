@@ -113,6 +113,7 @@ fun bottomSheetState(view: View, event: Event<Int>?) {
 /**
  * Sets marker's data (title, description, lat/lng, session list) in the bottom sheet.
  */
+
 @BindingAdapter("app:markerTitle")
 fun markerTitle(textView: TextView, event: Event<Location>?) {
     val location = event?.getContent() ?: return
@@ -131,9 +132,31 @@ fun markerTag(view: View, event: Event<Location>?) {
     view.tag = location
 }
 
+// Title for programmed events visibility.
+@BindingAdapter("app:sessionsForLocation")
+fun programmedSessionsTitle(textView: TextView, event: Event<List<Session>?>?) {
+    val sessions = event?.getContent() ?: return
+
+    textView.visibility = if (sessions.isNotEmpty()) View.VISIBLE else View.GONE
+}
+
+// List of programmed events.
 @BindingAdapter("app:sessionsForLocation", "app:viewModel", requireAll = true)
 fun addSessionsForLocation(recyclerView: RecyclerView, event: Event<List<Session>?>?, viewModel: MapViewModel) {
     val sessions = event?.getContent() ?: return
 
     recyclerView.adapter = SessionListAdapter(viewModel).apply { submitList(sessions) }
+    viewModel.updateSessionListWithStarredSessions(sessions)
+}
+
+// Update list of programmed events with starred events.
+@BindingAdapter("app:starredSessions")
+fun updateSessionListWithStarredSessions(recyclerView: RecyclerView, event: Event<List<Session>?>?) {
+    val sessions = event?.getContent() ?: return
+    recyclerView.adapter ?: return
+
+    (recyclerView.adapter as SessionListAdapter).apply {
+        submitList(sessions)
+        notifyDataSetChanged()
+    }
 }

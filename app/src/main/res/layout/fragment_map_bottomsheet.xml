@@ -75,7 +75,9 @@
                         android:layout_marginTop="24dp"
                         android:layout_marginStart="@dimen/margin_normal"
                         android:layout_marginEnd="@dimen/margin_normal"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+                        app:sessionsForLocation="@{viewModel.sessionListEvent}"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                />
 
                 <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rvSessions"
@@ -87,6 +89,7 @@
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         app:sessionsForLocation="@{viewModel.sessionListEvent}"
                         app:viewModel="@{viewModel}"
+                        app:starredSessions="@{viewModel.starredSessionsEvent}"
                         tools:listitem="@layout/item_session_map"/>
 
             </LinearLayout>

@@ -20,6 +20,7 @@ class SessionDiffCallback : DiffUtil.ItemCallback<Session>() {
                 && oldItem.youtubeUrl == newItem.youtubeUrl
                 && oldItem.startTimestamp == newItem.startTimestamp
                 && oldItem.startTimestamp == newItem.startTimestamp
+                && oldItem.starred == newItem.starred
 
     }
 }
