@@ -52,7 +52,8 @@
                 android:layout_marginTop="@dimen/margin_small"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constrainedWidth="true"
-                android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/cibBookmark"/>
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/ivStar"/>
 
         <ImageView
                 android:layout_width="18dp"
@@ -81,18 +82,17 @@
                 app:layout_constrainedWidth="true"
                 android:layout_marginStart="8dp"
                 app:layout_goneMarginStart="0dp" android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toStartOf="@+id/cibBookmark"/>
+                app:layout_constraintEnd_toStartOf="@+id/ivStar"/>
 
-        <com.google.android.material.internal.CheckableImageButton
-                android:id="@+id/cibBookmark"
+        <ImageView
+                android:id="@+id/ivStar"
                 android:layout_width="@dimen/a11y_min_touch_target"
                 android:layout_height="@dimen/a11y_min_touch_target"
-                android:background="?selectableItemBackgroundBorderless"
                 android:contentDescription="@string/content_description"
-                android:src="@drawable/asld_star_event"
+                android:scaleType="center"
+                android:src="@{session.starred ? @drawable/ic_star : @drawable/ic_star_border}"
                 app:layout_constraintEnd_toStartOf="@id/guideline_end"
-                app:layout_constraintTop_toTopOf="parent"
-                android:checked="@{session.starred}"/>
+                app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
