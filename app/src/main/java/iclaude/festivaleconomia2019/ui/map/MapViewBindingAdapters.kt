@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
@@ -92,10 +93,14 @@ fun mapMarkers(mapView: MapView, event: Event<LocationsAndSelectedLocation>?) {
 fun showNumOfEventsOnInfoWindow(textView: TextView, viewModel: MapViewModel, location: Location) {
     val sessions = viewModel.eventDataFromRepoLive.value?.sessions ?: return
 
+    val context = textView.context
     val numOfEvents = sessions.filter { it.location == location.id }.size
-    if (numOfEvents == 0) return
 
-    textView.text = textView.context.resources.getQuantityString(R.plurals.map_events_here, numOfEvents, numOfEvents)
+    textView.apply {
+        text = context.resources.getQuantityString(R.plurals.map_events_here, numOfEvents, numOfEvents)
+        if (numOfEvents == 0)
+            setTextColor(ContextCompat.getColor(context, R.color.link))
+    }
 }
 
 /**

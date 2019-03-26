@@ -124,6 +124,11 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         })
 
         gMap?.apply {
+            setInfoWindowAdapter(CustomMarkerInfoWindow(activity!!, viewModel))
+            setOnInfoWindowClickListener {
+                viewModel.updateBottomSheetState(BottomSheetBehavior.STATE_EXPANDED)
+            }
+
             setOnMarkerClickListener {
                 viewModel.zoomToMarker(marker = it)
                 it.showInfoWindow()
