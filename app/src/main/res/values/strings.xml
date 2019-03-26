@@ -8,6 +8,10 @@
     <string name="title_map">Map</string>
 
     <string name="map_show_route">get directions…</string>
+    <plurals name="map_events_here">
+        <item quantity="one">%d event here</item>
+        <item quantity="other">%d events here</item>
+    </plurals>
 
     <string name="sessions_agenda" translatable="false">Agenda</string>
 

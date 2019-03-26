@@ -56,8 +56,10 @@ fun mapRotate(mapView: MapView, event: Event<CameraUpdate>?) {
 }
 
 /**
- * Adds markers to the map.
+ * Markers.
  */
+
+// Add markers to map.
 @BindingAdapter("app:mapMarkers")
 fun mapMarkers(mapView: MapView, event: Event<LocationsAndSelectedLocation>?) {
     val eventContent = event?.getContentIfNotHandled() ?: return
@@ -83,6 +85,17 @@ fun mapMarkers(mapView: MapView, event: Event<LocationsAndSelectedLocation>?) {
             }
         }
     }
+}
+
+// Display marker info window with location name and number of events.
+@BindingAdapter("app:viewModel", "app:location", requireAll = true)
+fun showNumOfEventsOnInfoWindow(textView: TextView, viewModel: MapViewModel, location: Location) {
+    val sessions = viewModel.eventDataFromRepoLive.value?.sessions ?: return
+
+    val numOfEvents = sessions.filter { it.location == location.id }.size
+    if (numOfEvents == 0) return
+
+    textView.text = textView.context.resources.getQuantityString(R.plurals.map_events_here, numOfEvents, numOfEvents)
 }
 
 /**

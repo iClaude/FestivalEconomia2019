@@ -6,6 +6,11 @@
     <string name="title_map">Mappa</string>
     <string name="map_show_route">indicazioni stradali…</string>
     <string name="map_programmed_events">EVENTI IN PROGRAMMA</string>
+    <plurals name="map_events_here">
+        <item quantity="one">%d evento</item>
+        <item quantity="other">%d eventi</item>
+    </plurals>
+
     <string name="filters">Filtri</string>
 
     <plurals name="time_hours">
