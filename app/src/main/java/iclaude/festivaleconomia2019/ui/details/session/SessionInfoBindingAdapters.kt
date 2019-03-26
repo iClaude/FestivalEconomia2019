@@ -23,8 +23,39 @@ import iclaude.festivaleconomia2019.ui.sessions.sessionLength
 import iclaude.festivaleconomia2019.ui.utils.HeaderGridDrawable
 import kotlin.math.absoluteValue
 
+/**
+ * App bar content.
+ */
+
+// Show session's title or generic info in the Toolbar.
+@BindingAdapter("app:titleOrInfo")
+fun displayTitleOrInfo(textView: TextView, sessionInfo: SessionInfo) {
+    textView.text = if (sessionInfo.photoUrl.isNullOrEmpty() && sessionInfo.youtubeUrl.isNullOrEmpty())
+        sessionInfo.title
+    else
+        textView.context.getString(R.string.session_info_info)
+}
+
+@BindingAdapter("app:onOffsetChangedListener")
+fun addOnOffsetChangedListener(appBarLayout: AppBarLayout, viewModel: SessionInfoViewModel) {
+    appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
+        val percCollapsed = verticalOffset.absoluteValue.toFloat() / appBarLayout.totalScrollRange
+        viewModel.appBarCollapsedPercentageObs.set(percCollapsed)
+    })
+}
+
+// Title in the Toolbar: displayed when app bar is collapsed.
+@BindingAdapter("app:showOrHide")
+fun showOrHide(view: View, appBarCollapsedPercentage: Float) {
+    val curAlpha = view.alpha
+    val newAlpha = if (appBarCollapsedPercentage > 0.9) 1f else 0f
+    if (curAlpha == newAlpha) return
+
+    view.animate().alpha(newAlpha).duration = 300
+}
+
 @BindingAdapter("app:sessionImage")
-fun imageUrl(imageView: ImageView, imageUrl: String?) {
+fun sessionImage(imageView: ImageView, imageUrl: String?) {
     if (imageUrl.isNullOrEmpty()) {
         imageView.setImageDrawable(HeaderGridDrawable(imageView.context))
         return
@@ -38,11 +69,7 @@ fun imageUrl(imageView: ImageView, imageUrl: String?) {
         .into(imageView)
 }
 
-@BindingAdapter("app:startTimestamp", "app:endTimestamp", requireAll = true)
-fun timeDetails(textView: TextView, startTimestamp: Long, endTimestamp: Long) {
-    textView.text = sessionInfoTimeDetails(textView.context, startTimestamp, endTimestamp)
-}
-
+// Lottie animation.
 @BindingAdapter("app:eventHeaderAnim")
 fun eventHeaderAnim(lottieView: LottieAnimationView, sessionInfo: SessionInfo) {
     val rnd = (1..6).shuffled().first()
@@ -75,6 +102,29 @@ fun goneWithPhoto(view: View, sessionInfo: SessionInfo) {
     view.visibility = if (sessionInfo.photoUrl.isNullOrEmpty()) View.VISIBLE else View.GONE
 }
 
+
+// Time info.
+@BindingAdapter("app:startTimestamp", "app:endTimestamp", requireAll = true)
+fun timeDetails(textView: TextView, startTimestamp: Long, endTimestamp: Long) {
+    textView.text = sessionInfoTimeDetails(textView.context, startTimestamp, endTimestamp)
+}
+
+/**
+ *  Organizers.
+ */
+
+@BindingAdapter("app:organizers")
+fun addOrganizers(layout: LinearLayout, organizers: List<Organizer>) {
+    val context = layout.context
+
+    for (organizer in organizers) {
+        val binding = ItemOrganizerBinding.inflate(LayoutInflater.from(context), layout, false).apply {
+            setOrganizer(organizer)
+        }
+        layout.addView(binding.root)
+    }
+}
+
 @BindingAdapter("app:speakerImage")
 fun speakerImage(imageView: ImageView, organizer: Organizer?) {
     organizer ?: return
@@ -101,17 +151,9 @@ fun speakerImage(imageView: ImageView, organizer: Organizer?) {
     }
 }
 
-@BindingAdapter("app:organizers")
-fun addOrganizers(layout: LinearLayout, organizers: List<Organizer>) {
-    val context = layout.context
-
-    for (organizer in organizers) {
-        val binding = ItemOrganizerBinding.inflate(LayoutInflater.from(context), layout, false).apply {
-            setOrganizer(organizer)
-        }
-        layout.addView(binding.root)
-    }
-}
+/**
+ * Related sessions.
+ */
 
 @BindingAdapter("app:relatedSessionsVisibility")
 fun relatedSessionsVisibility(view: View, sessionInfo: SessionInfo) {
@@ -138,12 +180,14 @@ fun addRelatedSessions(layout: LinearLayout, relatedSessions: List<Session>, vie
     }
 }
 
+// Icon for livestreamed sessions.
 @BindingAdapter("app:liveStreamedVisibility")
 fun liveStreamedVisibility(view: View, session: Session) {
     view.visibility = if (session.hasYoutubeUrl()) View.VISIBLE else View.GONE
 
 }
 
+// Time and location of each related session.
 @BindingAdapter("app:lenLocText", "app:location", requireAll = true)
 fun lenLocText(textView: TextView, session: Session, location: Location) {
     val context = textView.context
@@ -155,6 +199,7 @@ fun lenLocText(textView: TextView, session: Session, location: Location) {
     textView.text = str
 }
 
+// Star button to star/unstar each related session.
 @BindingAdapter("app:onStarClickListenerRelated", "app:viewModel", requireAll = true)
 fun onStarClickListener(
     button: CheckableImageButton,
@@ -172,7 +217,9 @@ fun onStarClickListener(
     }
 }
 
-// Star button to star/unstar this session.
+/**
+ * Star button to star/unstar this session.
+ */
 
 // Checked or unchecked state.
 @BindingAdapter("app:starred")
@@ -197,29 +244,14 @@ fun onStarFabClicked(
     }
 }
 
-// App bar.
 
-@BindingAdapter("app:titleOrInfo")
-fun displayTitleOrInfo(textView: TextView, sessionInfo: SessionInfo) {
-    textView.text = if (sessionInfo.photoUrl.isNullOrEmpty() && sessionInfo.youtubeUrl.isNullOrEmpty())
-        sessionInfo.title
-    else
-        textView.context.getString(R.string.session_info_info)
-}
+// Link to session's webpage.
+@BindingAdapter("app:websiteLink")
+fun addWebsiteLink(textView: TextView, url: String?) {
+    if (url.isNullOrEmpty()) {
+        textView.visibility = View.GONE
+        return
+    }
 
-@BindingAdapter("app:onOffsetChangedListener")
-fun addOnOffsetChangedListener(appBarLayout: AppBarLayout, viewModel: SessionInfoViewModel) {
-    appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
-        val percCollapsed = verticalOffset.absoluteValue.toFloat() / appBarLayout.totalScrollRange
-        viewModel.appBarCollapsedPercentageObs.set(percCollapsed)
-    })
-}
-
-@BindingAdapter("app:showOrHide")
-fun showOrHide(view: View, appBarCollapsedPercentage: Float) {
-    val curAlpha = view.alpha
-    val newAlpha = if (appBarCollapsedPercentage > 0.9) 1f else 0f
-    if (curAlpha == newAlpha) return
-
-    view.animate().alpha(newAlpha).duration = 300
+    textView.text = url
 }

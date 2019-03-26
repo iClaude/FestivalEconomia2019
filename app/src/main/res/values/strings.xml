@@ -58,6 +58,7 @@
     <string name="session_info_share_msg">Share via</string>
     <string name="session_info_share">Have a look at this event:</string>
     <string name="session_info_info">Event info</string>
+    <string name="session_info_website">Event\'s website</string>
 
     <string name="a11y_starred">Event bookmarked</string>
     <string name="a11y_unstarred">Event not bookmarked</string>
