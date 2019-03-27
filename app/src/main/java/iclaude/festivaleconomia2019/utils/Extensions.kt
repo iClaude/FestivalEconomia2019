@@ -1,7 +1,9 @@
 package iclaude.festivaleconomia2019.utils
 
+import android.content.Context
 import android.text.StaticLayout
 import android.util.Log
+import android.view.LayoutInflater
 import androidx.databinding.ObservableBoolean
 import iclaude.festivaleconomia2019.BuildConfig
 
@@ -37,3 +39,6 @@ fun exceptionInDebug(t: Throwable) {
         Log.e("EXCEPTION", t.toString())
     }
 }
+
+// Inflate a layout with context.layoutInflater.inflate(...).
+val Context.layoutInflater get() = LayoutInflater.from(this)

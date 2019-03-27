@@ -1,12 +1,12 @@
 package iclaude.festivaleconomia2019.ui.map
 
-import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import iclaude.festivaleconomia2019.databinding.ItemSessionMapBinding
 import iclaude.festivaleconomia2019.model.data_classes.Session
+import iclaude.festivaleconomia2019.utils.layoutInflater
 
 // RecyclerView classe for the list of sessions held at a particular location, displayed in the BottomSheet.
 
@@ -40,7 +40,7 @@ class SessionListAdapter(private val mapViewModel: MapViewModel) :
     ListAdapter<Session, SessionViewHolder>(SessionDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SessionViewHolder {
-        val layoutInflater = LayoutInflater.from(parent.context)
+        val layoutInflater = parent.context.layoutInflater
         val binding = ItemSessionMapBinding.inflate(layoutInflater, parent, false)
         return SessionViewHolder(binding, mapViewModel)
     }

@@ -1,7 +1,6 @@
 package iclaude.festivaleconomia2019.ui.sessions.filters
 
 import android.content.res.ColorStateList
-import android.view.LayoutInflater
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.core.widget.NestedScrollView
@@ -20,6 +19,7 @@ import iclaude.festivaleconomia2019.model.data_classes.colorInt
 import iclaude.festivaleconomia2019.model.data_classes.fontColorInt
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 import iclaude.festivaleconomia2019.ui.sessions.TagAdapter
+import iclaude.festivaleconomia2019.utils.layoutInflater
 
 //********************************** Filter sheet binding adapters. ************************************************
 
@@ -59,7 +59,7 @@ fun addTags(chipGroup: ChipGroup, tags: List<Tag>, viewModel: SessionListViewMod
     for (tag in tags) {
         if (tag.category != cat) continue
         val context = chipGroup.context
-        val binding = ItemFilterChipBinding.inflate(LayoutInflater.from(context), chipGroup, false).apply {
+        val binding = ItemFilterChipBinding.inflate(context.layoutInflater, chipGroup, false).apply {
             setTag(tag)
             filter = viewModel.filter
             setViewModel(viewModel)
