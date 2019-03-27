@@ -88,7 +88,13 @@ fun mapMarkers(mapView: MapView, event: Event<LocationsAndSelectedLocation>?) {
     }
 }
 
-// Display marker info window with location name and number of events.
+// Marker's InfoWindow: name, truncated if lenght > 35 characters.
+@BindingAdapter("app:textWithMaxLength")
+fun textWithMaxLenght(textView: TextView, str: String) {
+    textView.text = if (str.length <= 35) str else str.take(35) + "..."
+}
+
+// Marker's InfoWindow: number of events held at this location.
 @BindingAdapter("app:viewModel", "app:location", requireAll = true)
 fun showNumOfEventsOnInfoWindow(textView: TextView, viewModel: MapViewModel, location: Location) {
     val sessions = viewModel.eventDataFromRepoLive.value?.sessions ?: return
