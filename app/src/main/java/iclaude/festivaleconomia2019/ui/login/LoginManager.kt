@@ -43,6 +43,10 @@ object LoginManager {
                 .setAvailableProviders(providers)
                 .setTheme(R.style.AppTheme)
                 .setLogo(R.mipmap.ic_launcher_round)
+                .setTosAndPrivacyPolicyUrls(
+                    "https://drive.google.com/file/d/19iOz3EP86Z0K2i3nsbiwjQQuABxzktC6/view?usp=sharing",
+                    "https://drive.google.com/file/d/19iOz3EP86Z0K2i3nsbiwjQQuABxzktC6/view?usp=sharing"
+                )
                 .build(),
             RC_SIGN_IN
         )
