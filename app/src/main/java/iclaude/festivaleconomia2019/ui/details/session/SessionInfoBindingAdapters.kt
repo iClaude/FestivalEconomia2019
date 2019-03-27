@@ -1,5 +1,7 @@
 package iclaude.festivaleconomia2019.ui.details.session
 
+import android.text.SpannableString
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
@@ -21,6 +23,7 @@ import iclaude.festivaleconomia2019.ui.sessions.getDateShortStr
 import iclaude.festivaleconomia2019.ui.sessions.sessionInfoTimeDetails
 import iclaude.festivaleconomia2019.ui.sessions.sessionLength
 import iclaude.festivaleconomia2019.ui.utils.HeaderGridDrawable
+import iclaude.festivaleconomia2019.ui.utils.MyClickableSpan
 import kotlin.math.absoluteValue
 
 /**
@@ -253,5 +256,10 @@ fun addWebsiteLink(textView: TextView, url: String?) {
         return
     }
 
-    textView.text = url
+    textView.apply {
+        text = SpannableString(textView.text).apply {
+            setSpan(MyClickableSpan(textView.context, url), 0, textView.text.length, 0)
+        }
+        movementMethod = LinkMovementMethod.getInstance()
+    }
 }

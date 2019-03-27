@@ -109,6 +109,15 @@ fun showNumOfEventsOnInfoWindow(textView: TextView, viewModel: MapViewModel, loc
     }
 }
 
+// Marker's InfoWindow: icon, depending on the number of events held at this location.
+@BindingAdapter("app:viewModel", "app:location", requireAll = true)
+fun selectIcon(imageView: ImageView, viewModel: MapViewModel, location: Location) {
+    val sessions = viewModel.eventDataFromRepoLive.value?.sessions ?: return
+
+    val numOfEvents = sessions.filter { it.location == location.id }.size
+    imageView.setImageResource(if (numOfEvents > 0) R.drawable.ic_event_available_black_24dp else R.drawable.ic_event_busy_black_24dp)
+}
+
 /**
  * Sets the current state of the BottomSheet.
  */
