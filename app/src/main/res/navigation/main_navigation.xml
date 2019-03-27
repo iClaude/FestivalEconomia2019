@@ -52,11 +52,11 @@
 
     <!--Global actions (top level destinations: list of sessions, map and info-->
     <action android:id="@+id/action_global_containerSessionsFragment" app:destination="@id/containerSessionsFragment"
-            app:launchSingleTop="true" app:popUpTo="@+id/mobile_navigation"/>
+            app:launchSingleTop="true" app:popUpTo="@+id/containerInfoFragment"/>
     <action android:id="@+id/action_global_containerInfoFragment" app:destination="@id/containerInfoFragment"
             app:launchSingleTop="true" app:popUpTo="@+id/mobile_navigation"/>
     <action android:id="@+id/action_global_mapFragment" app:destination="@id/mapFragment" app:launchSingleTop="true"
-            app:popUpTo="@+id/mobile_navigation"/>
+            app:popUpTo="@+id/containerInfoFragment"/>
 
     <!--Detailed infos: sessions and organizers-->
     <navigation android:id="@+id/detailsGraph" app:startDestination="@id/sessionInfoFragment">
