@@ -1,5 +1,6 @@
 package iclaude.festivaleconomia2019.ui.map
 
+import android.util.Log
 import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -11,6 +12,7 @@ import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.Marker
+import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
@@ -187,18 +189,20 @@ class MapViewModel : ViewModel() {
         get() = _starredSessionsEvent
 
     fun updateSessionListWithStarredSessions(sessions: List<Session>) {
-        repository.getStarredSessions(OnSuccessListener { documentSnapshot ->
-            val userInFirebase = documentSnapshot.toObject(User::class.java)
-            userInFirebase?.let { userInFirebase ->
-                if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
+        repository.getStarredSessions(
+            OnSuccessListener { documentSnapshot ->
+                val userInFirebase = documentSnapshot.toObject(User::class.java)
+                userInFirebase?.let { userInFirebase ->
+                    if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
 
-                sessions.forEach { session ->
-                    session.starred = userInFirebase.starredSessions.contains(session.id)
+                    sessions.forEach { session ->
+                        session.starred = userInFirebase.starredSessions.contains(session.id)
+                    }
+
+                    _starredSessionsEvent.value = Event(sessions)
                 }
-
-                _starredSessionsEvent.value = Event(sessions)
-            }
-        })
+            },
+            OnFailureListener { Log.w(iclaude.festivaleconomia2019.utils.TAG, "Error getting user in Firebase", it) })
     }
 
     /**

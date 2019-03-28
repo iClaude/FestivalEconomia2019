@@ -1,11 +1,13 @@
 package iclaude.festivaleconomia2019.ui.details.session
 
+import android.util.Log
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableFloat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.auth.FirebaseUser
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
@@ -14,6 +16,7 @@ import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.login.LoginFlow
 import iclaude.festivaleconomia2019.ui.utils.Event
+import iclaude.festivaleconomia2019.utils.TAG
 import javax.inject.Inject
 
 class SessionInfoViewModel : ViewModel(), LoginFlow {
@@ -132,15 +135,17 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
         get() = _starredSessionsLive
 
     fun findStarredSessions() {
-        repository.getStarredSessions(OnSuccessListener { documentSnapshot ->
-            val userInFirebase = documentSnapshot.toObject(User::class.java)
-            userInFirebase?.let { userInFirebase ->
-                if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
+        repository.getStarredSessions(
+            OnSuccessListener { documentSnapshot ->
+                val userInFirebase = documentSnapshot.toObject(User::class.java)
+                userInFirebase?.let { userInFirebase ->
+                    if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
 
-                _starredSessionsLive.value = userInFirebase.starredSessions
-                starredSessionObs.set(userInFirebase.starredSessions.contains(sessionInfo.id))
-            }
-        })
+                    _starredSessionsLive.value = userInFirebase.starredSessions
+                    starredSessionObs.set(userInFirebase.starredSessions.contains(sessionInfo.id))
+                }
+            },
+            OnFailureListener { Log.w(TAG, "Error getting user in Firebase", it) })
     }
 
     // User stars/unstars a related session.

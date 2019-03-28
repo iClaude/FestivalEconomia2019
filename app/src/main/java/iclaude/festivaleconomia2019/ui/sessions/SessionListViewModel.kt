@@ -2,11 +2,13 @@ package iclaude.festivaleconomia2019.ui.sessions
 
 import android.app.Application
 import android.net.Uri
+import android.util.Log
 import androidx.databinding.*
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
+import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior.*
 import com.google.firebase.auth.FirebaseAuth
@@ -269,8 +271,10 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         get() = _loginDataUpdateEvent
 
     // When data is fetched from Firebase, hide the progress bar of SwipeRefreshLayout, if present.
-    private val _dataFetchedFromFirebaseEvent = MutableLiveData<Event<Any>>()
-    val dataFetchedFromFirebaseEvent: LiveData<Event<Any>>
+    enum class FirebaseResult { SUCCESS, ERROR }
+
+    private val _dataFetchedFromFirebaseEvent = MutableLiveData<Event<FirebaseResult>>()
+    val dataFetchedFromFirebaseEvent: LiveData<Event<FirebaseResult>>
         get() = _dataFetchedFromFirebaseEvent
 
     fun loginDataNeedsUpdate() {
@@ -278,18 +282,24 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     }
 
     fun updateSessionListWithStarredSessions() {
-        repository.getStarredSessions(OnSuccessListener { documentSnapshot ->
-            val userInFirebase = documentSnapshot.toObject(User::class.java)
-            userInFirebase?.let { userInFirebase ->
-                if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
+        repository.getStarredSessions(
+            OnSuccessListener { documentSnapshot ->
+                val userInFirebase = documentSnapshot.toObject(User::class.java)
+                userInFirebase?.let { userInFirebase ->
+                    if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
 
-                sessions.forEach { it.starred = false }
-                userInFirebase.starredSessions.forEach {
-                    sessions[it.toInt()].starred = true
+                    sessions.forEach { it.starred = false }
+                    userInFirebase.starredSessions.forEach {
+                        sessions[it.toInt()].starred = true
+                    }
+                    filterList()
                 }
-                filterList()
-            }
-        })
+                _dataFetchedFromFirebaseEvent.value = Event(FirebaseResult.SUCCESS)
+            },
+            OnFailureListener {
+                Log.w(iclaude.festivaleconomia2019.utils.TAG, "Error getting user in Firebase", it)
+                _dataFetchedFromFirebaseEvent.value = Event(FirebaseResult.ERROR)
+            })
     }
 
     private val _showSnackBarForStarringEvent = MutableLiveData<Event<Boolean>>()

@@ -19,7 +19,10 @@ private const val TAG = "TAGS"
 fun addRefreshListener(swipeRefreshLayout: SwipeRefreshLayout, viewModel: SessionListViewModel) {
     swipeRefreshLayout.setColorSchemeResources(R.color.primaryColor)
     swipeRefreshLayout.setOnRefreshListener {
-        viewModel.updateSessionListWithStarredSessions()
+        if (FirebaseAuth.getInstance().currentUser != null)
+            viewModel.updateSessionListWithStarredSessions()
+        else
+            swipeRefreshLayout.isRefreshing = false
     }
 }
 

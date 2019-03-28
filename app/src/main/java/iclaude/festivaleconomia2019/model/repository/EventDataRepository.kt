@@ -3,6 +3,7 @@ package iclaude.festivaleconomia2019.model.repository
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -61,16 +62,13 @@ class EventDataRepository(private val inputStream: InputStream) {
             }
     }
 
-    fun getStarredSessions(successCallback: OnSuccessListener<DocumentSnapshot>) {
+    fun getStarredSessions(successCallback: OnSuccessListener<DocumentSnapshot>, failureCallback: OnFailureListener) {
         val user = FirebaseAuth.getInstance().currentUser ?: return
 
         val db = FirebaseFirestore.getInstance()
         db.collection(FIREBASE_PATH_USERS).document(user.uid).get()
             .addOnSuccessListener(successCallback)
-            .addOnFailureListener {
-                Log.w(TAG, "Error getting user in Firebase", it)
-
-            }
+            .addOnFailureListener(failureCallback)
     }
 
     fun starOrUnstarSession(sessionId: String, toStar: Boolean) {

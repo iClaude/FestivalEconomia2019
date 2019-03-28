@@ -8,8 +8,11 @@ import androidx.core.view.doOnNextLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.google.android.material.snackbar.Snackbar
+import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionListBinding
 import iclaude.festivaleconomia2019.ui.utils.getZoneId
+import kotlinx.android.synthetic.main.fragment_session_list.*
 
 class SessionListFragment : Fragment() {
     private lateinit var viewModel: SessionListViewModel
@@ -64,6 +67,13 @@ class SessionListFragment : Fragment() {
                 initializeList(list.filter {
                     it.day == day
                 })
+            })
+
+            dataFetchedFromFirebaseEvent.observe(this@SessionListFragment, Observer {
+                swipeRefreshLayout.isRefreshing = false
+                if (it.getContentIfNotHandled() == SessionListViewModel.FirebaseResult.ERROR) {
+                    Snackbar.make(rvSessions, R.string.session_list_download_error, Snackbar.LENGTH_SHORT).show()
+                }
             })
         }
     }
