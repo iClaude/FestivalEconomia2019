@@ -22,7 +22,10 @@ import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentSessionContainerBinding
 import iclaude.festivaleconomia2019.ui.login.LoginFlow.Authentication
 import iclaude.festivaleconomia2019.ui.login.LoginManager
+import iclaude.festivaleconomia2019.ui.utils.DayLabel
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
+import iclaude.festivaleconomia2019.ui.utils.daysLabels
+import iclaude.festivaleconomia2019.ui.utils.numberOfDays
 import kotlinx.android.synthetic.main.fragment_session_container.*
 import kotlinx.android.synthetic.main.fragment_session_container_appbar.*
 

@@ -20,6 +20,7 @@ import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.login.LoginFlow
 import iclaude.festivaleconomia2019.ui.sessions.filters.*
 import iclaude.festivaleconomia2019.ui.utils.Event
+import iclaude.festivaleconomia2019.ui.utils.sessionLength
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

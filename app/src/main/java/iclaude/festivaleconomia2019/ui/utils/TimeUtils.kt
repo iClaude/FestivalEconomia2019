@@ -1,4 +1,4 @@
-package iclaude.festivaleconomia2019.ui.sessions
+package iclaude.festivaleconomia2019.ui.utils
 
 import android.content.Context
 import android.text.TextUtils
@@ -30,14 +30,18 @@ fun getZoneId(context: Context?): ZoneId {
 }
 
 fun numberOfDays(context: Context?, sessions: List<Session>): Int {
-    val startDate = zonedDateTimeFromTimestamp(context, sessions.first().startTimestamp)
-    val endDate = zonedDateTimeFromTimestamp(context, sessions.last().startTimestamp)
+    val startDate =
+        zonedDateTimeFromTimestamp(context, sessions.first().startTimestamp)
+    val endDate =
+        zonedDateTimeFromTimestamp(context, sessions.last().startTimestamp)
     return Duration.between(startDate, endDate).toDays().toInt().plus(1)
 }
 
 fun daysLabels(context: Context?, sessions: List<Session>): MutableList<DayLabel> {
-    val startDate = zonedDateTimeFromTimestamp(context, sessions.first().startTimestamp)
-    val endDate = zonedDateTimeFromTimestamp(context, sessions.last().startTimestamp)
+    val startDate =
+        zonedDateTimeFromTimestamp(context, sessions.first().startTimestamp)
+    val endDate =
+        zonedDateTimeFromTimestamp(context, sessions.last().startTimestamp)
 
     val labels = mutableListOf<DayLabel>()
 

@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import iclaude.festivaleconomia2019.databinding.FragmentSessionListBinding
+import iclaude.festivaleconomia2019.ui.utils.getZoneId
 
 class SessionListFragment : Fragment() {
     private lateinit var viewModel: SessionListViewModel

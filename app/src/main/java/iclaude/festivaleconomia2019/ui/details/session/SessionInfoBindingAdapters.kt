@@ -19,11 +19,7 @@ import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.ItemOrganizerBinding
 import iclaude.festivaleconomia2019.databinding.ItemSessionRelatedBinding
 import iclaude.festivaleconomia2019.model.data_classes.*
-import iclaude.festivaleconomia2019.ui.sessions.getDateShortStr
-import iclaude.festivaleconomia2019.ui.sessions.sessionInfoTimeDetails
-import iclaude.festivaleconomia2019.ui.sessions.sessionLength
-import iclaude.festivaleconomia2019.ui.utils.HeaderGridDrawable
-import iclaude.festivaleconomia2019.ui.utils.MyClickableSpan
+import iclaude.festivaleconomia2019.ui.utils.*
 import kotlin.math.absoluteValue
 
 /**
@@ -109,7 +105,8 @@ fun goneWithPhoto(view: View, sessionInfo: SessionInfo) {
 // Time info.
 @BindingAdapter("app:startTimestamp", "app:endTimestamp", requireAll = true)
 fun timeDetails(textView: TextView, startTimestamp: Long, endTimestamp: Long) {
-    textView.text = sessionInfoTimeDetails(textView.context, startTimestamp, endTimestamp)
+    textView.text =
+        sessionInfoTimeDetails(textView.context, startTimestamp, endTimestamp)
 }
 
 /**
@@ -194,7 +191,10 @@ fun liveStreamedVisibility(view: View, session: Session) {
 @BindingAdapter("app:lenLocText", "app:location", requireAll = true)
 fun lenLocText(textView: TextView, session: Session, location: Location) {
     val context = textView.context
-    val str = "${getDateShortStr(context, session.startTimestamp)} / ${sessionLength(
+    val str = "${getDateShortStr(
+        context,
+        session.startTimestamp
+    )} / ${sessionLength(
         context,
         session.startTimestamp,
         session.endTimestamp
