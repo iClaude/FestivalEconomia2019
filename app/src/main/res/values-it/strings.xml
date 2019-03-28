@@ -60,4 +60,5 @@
     <string name="a11y_unstarred">Evento non prenotato</string>
     <string name="session_info_info">Informazioni</string>
     <string name="session_info_website">Sito ufficiale</string>
+    <string name="session_list_download_error">Oops, si è verificato un problema. Riprova più tardi.</string>
 </resources>

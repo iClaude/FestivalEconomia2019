@@ -7,12 +7,21 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.google.android.material.internal.CheckableImageButton
 import com.google.firebase.auth.FirebaseAuth
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.data_classes.Tag
 
 private const val TAG = "TAGS"
+
+@BindingAdapter("app:refreshListener")
+fun addRefreshListener(swipeRefreshLayout: SwipeRefreshLayout, viewModel: SessionListViewModel) {
+    swipeRefreshLayout.setColorSchemeResources(R.color.primaryColor)
+    swipeRefreshLayout.setOnRefreshListener {
+        viewModel.updateSessionListWithStarredSessions()
+    }
+}
 
 @BindingAdapter("app:sessionTags")
 fun sessionTags(recyclerView: RecyclerView, sessionTags: List<Tag>?) {

@@ -42,7 +42,9 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         loadUserInfo()
     }
 
-    // Event data fetched from repository.
+    /**
+     * Event data fetched from repository.
+     */
 
     @Inject
     lateinit var repository: EventDataRepository
@@ -52,7 +54,9 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
-    // Initializations.
+    /**
+     * Initializations.
+     */
 
     private fun loadDataFromRepo() {
         if (!repository.dataLoaded) repository.loadEventDataFromJSONFile()
@@ -64,7 +68,9 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
-    // Filters.
+    /**
+     * Filters.
+     */
 
     var filter: Filter = Filter() // filter currently applied
     val isFilterTaggedObs: ObservableBoolean = ObservableBoolean(false) // does current filter have tags?
@@ -74,7 +80,9 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         ObservableArrayList() // list of selected tags (filters) to show when filter sheet is collapsed
 
 
-    // Sessions list.
+    /**
+     * Sessions list.
+     */
 
     private var sessions: MutableList<SessionInfoForList> = mutableListOf()
 
@@ -152,7 +160,9 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
-    // Filtering BottomSheet.
+    /**
+     * Filtering BottomSheet.
+     */
 
     // Operations.
 
@@ -215,7 +225,9 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
-    // User authentication.
+    /**
+     * User authentication.
+     */
 
     override val _authEvent: MutableLiveData<Event<LoginFlow.Authentication>> = MutableLiveData()
 
@@ -248,11 +260,18 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         }
     }
 
-    // Starred sessions for logged-in users.
+    /**
+     * Starred sessions for logged-in users.
+     */
 
     private val _loginDataUpdateEvent = MutableLiveData<Event<Any>>()
     val loginDataUpdateEvent: LiveData<Event<Any>>
         get() = _loginDataUpdateEvent
+
+    // When data is fetched from Firebase, hide the progress bar of SwipeRefreshLayout, if present.
+    private val _dataFetchedFromFirebaseEvent = MutableLiveData<Event<Any>>()
+    val dataFetchedFromFirebaseEvent: LiveData<Event<Any>>
+        get() = _dataFetchedFromFirebaseEvent
 
     fun loginDataNeedsUpdate() {
         _loginDataUpdateEvent.value = Event(Unit)
@@ -284,7 +303,10 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     }
 
 
-    // Session's detailed info.
+    /**
+     * Session's detailed info.
+     */
+
     private val _goToSessionEvent = MutableLiveData<Event<String>>()
     val goToSessionEvent: LiveData<Event<String>>
         get() = _goToSessionEvent
@@ -293,6 +315,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         _goToSessionEvent.value = Event(sessionId)
     }
 
+    // ViewModel destroyed.
     override fun onCleared() {
         super.onCleared()
         viewModelJob.cancel()
