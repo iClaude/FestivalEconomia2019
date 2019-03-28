@@ -10,6 +10,7 @@ import iclaude.festivaleconomia2019.ui.MainActivity
 import iclaude.festivaleconomia2019.ui.details.session.SessionInfoViewModel
 import iclaude.festivaleconomia2019.ui.map.MapViewModel
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
+import iclaude.festivaleconomia2019.utils.openRawResource
 import java.io.InputStream
 import javax.inject.Singleton
 
@@ -28,7 +29,7 @@ class RepoModule {
     @Provides
     @Singleton
     fun provideInputStream(context: Context): InputStream =
-        context.resources.openRawResource(R.raw.event_data_2019)
+        context.openRawResource(R.raw.event_data_2019)
 
     @Provides
     @Singleton

@@ -20,6 +20,7 @@ import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.data_classes.Location
 import iclaude.festivaleconomia2019.model.data_classes.Session
 import iclaude.festivaleconomia2019.ui.utils.Event
+import iclaude.festivaleconomia2019.utils.getQuantityString
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -103,7 +104,7 @@ fun showNumOfEventsOnInfoWindow(textView: TextView, viewModel: MapViewModel, loc
     val numOfEvents = sessions.filter { it.location == location.id }.size
 
     textView.apply {
-        text = context.resources.getQuantityString(R.plurals.map_events_here, numOfEvents, numOfEvents)
+        text = context.getQuantityString(R.plurals.map_events_here, numOfEvents, numOfEvents)
         if (numOfEvents == 0)
             setTextColor(ContextCompat.getColor(context, R.color.link))
     }

@@ -4,6 +4,7 @@ import android.content.Context
 import android.text.TextUtils
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.data_classes.Session
+import iclaude.festivaleconomia2019.utils.getQuantityString
 import org.threeten.bp.Duration
 import org.threeten.bp.Instant
 import org.threeten.bp.ZoneId
@@ -65,12 +66,12 @@ fun sessionLength(context: Context, startTimestamp: Long, endTimestamp: Long): S
     val diffMinutes = ChronoUnit.MINUTES.between(startDate, endDate)
 
     return when (diffHours) {
-        in 1..Long.MAX_VALUE -> "${context.resources.getQuantityString(
+        in 1..Long.MAX_VALUE -> "${context.getQuantityString(
             R.plurals.time_hours,
             diffHours.toInt(),
-            diffHours
+            diffHours.toInt()
         )}"
-        else -> "${context.resources.getQuantityString(R.plurals.time_minutes, diffMinutes.toInt(), diffMinutes)}"
+        else -> "${context.getQuantityString(R.plurals.time_minutes, diffMinutes.toInt(), diffMinutes.toInt())}"
     }
 }
 

@@ -4,6 +4,8 @@ import android.content.Context
 import android.text.StaticLayout
 import android.util.Log
 import android.view.LayoutInflater
+import androidx.annotation.PluralsRes
+import androidx.annotation.RawRes
 import androidx.databinding.ObservableBoolean
 import iclaude.festivaleconomia2019.BuildConfig
 
@@ -42,3 +44,11 @@ fun exceptionInDebug(t: Throwable) {
 
 // Inflate a layout with context.layoutInflater.inflate(...).
 val Context.layoutInflater get() = LayoutInflater.from(this)
+
+// Obtain raw resource from Context without calling resources every time.
+inline fun Context.openRawResource(@RawRes resId: Int) =
+    this.resources.openRawResource(resId)
+
+// Obtain a quantity String from Context without calling resources every time.
+inline fun Context.getQuantityString(@PluralsRes resId: Int, quantity: Int, vararg formatArgs: Any) =
+    this.resources.getQuantityString(resId, quantity, *formatArgs)
