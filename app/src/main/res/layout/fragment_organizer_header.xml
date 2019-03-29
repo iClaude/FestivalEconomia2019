@@ -7,11 +7,11 @@
     <data>
         <import type="android.view.View"/>
         <variable
-                name="sessionDataDer"
-                type="iclaude.festivaleconomia2019.ui.details.session.SessionInfo"/>
+                name="organizerDataDer"
+                type="iclaude.festivaleconomia2019.ui.details.organizer.OrganizerInfo"/>
         <variable
                 name="viewModelDer"
-                type="iclaude.festivaleconomia2019.ui.details.session.SessionInfoViewModel"/>
+                type="iclaude.festivaleconomia2019.ui.details.organizer.OrganizerViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,54 +43,21 @@
                 android:fitsSystemWindows="true"
                 app:layout_collapseMode="parallax"
                 android:contentDescription="@string/content_description"
-                app:sessionImage="@{sessionDataDer.photoUrl}"/>
+                app:sessionImage="@{null}"/>
 
-        <!-- Play button, shown if there is a recording available -->
-        <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="@color/scrim"
-                android:contentDescription="@string/content_description"
-                android:foreground="?selectableItemBackgroundBorderless"
-                android:onClick="@{() -> viewModelDer.startYoutubeVideo()}"
-                android:scaleType="center"
-                app:layout_constraintBottom_toBottomOf="@id/ivAppBarImage"
-                app:layout_constraintEnd_toEndOf="@id/ivAppBarImage"
-                app:layout_constraintStart_toStartOf="@id/ivAppBarImage"
-                app:layout_constraintTop_toTopOf="@id/ivAppBarImage"
-                android:visibility="@{sessionDataDer.youtubeUrl == null ? View.GONE : View.VISIBLE}"
-                app:srcCompat="@drawable/ic_play"/>
-
-        <com.airbnb.lottie.LottieAnimationView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginTop="80dp"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toEndOf="@id/ivAppBarImage"
-                app:layout_constraintStart_toEndOf="@id/guideline_title_end"
-                app:layout_constraintTop_toTopOf="@id/ivAppBarImage"
-                app:eventHeaderAnim="@{sessionDataDer}"
-                app:goneWithPhoto="@{sessionDataDer}"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                android:scaleType="fitCenter"/>
-
-        <!-- Title on header: only shown if there isn't a photo header or video. -->
         <TextView
-                android:id="@+id/session_detail_title"
+                android:id="@+id/tvName"
                 style="@style/SessionDetailTitle"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:paddingTop="72dp"
                 android:layout_marginBottom="8dp"
-                android:text="@{sessionDataDer.title}"
+                android:text="@{organizerDataDer.name}"
                 app:layout_constraintBottom_toBottomOf="@id/ivAppBarImage"
                 app:layout_constraintEnd_toEndOf="@id/guideline_title_end"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
                 app:layout_constraintTop_toTopOf="@id/ivAppBarImage"
-                app:goneWithPhotoOrVideo="@{sessionDataDer}"
-                tools:text="Getting the Most Out of Android Lint"/>
+                tools:text="George Soros"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

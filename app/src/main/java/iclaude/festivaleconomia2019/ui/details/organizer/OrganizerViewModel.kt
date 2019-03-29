@@ -1,5 +1,6 @@
 package iclaude.festivaleconomia2019.ui.details.organizer
 
+import androidx.databinding.ObservableFloat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -59,6 +60,9 @@ class OrganizerViewModel : ViewModel() {
         // Session info loaded: communicate it to Fragment in order to bind data to layout.
         _organizerInfoLoadedEvent.value = Event(organizerInfo)
     }
+
+    // AppBar info.
+    val appBarCollapsedPercentageObs = ObservableFloat(0f)
 }
 
 // Info to display in the layout.

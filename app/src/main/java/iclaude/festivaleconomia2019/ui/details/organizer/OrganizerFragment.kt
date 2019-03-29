@@ -8,9 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import iclaude.festivaleconomia2019.databinding.FragmentOrganizerBinding
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
+import kotlinx.android.synthetic.main.fragment_session_info.*
 
 class OrganizerFragment : Fragment() {
 
@@ -57,4 +60,9 @@ class OrganizerFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        toolbar.setupWithNavController(findNavController())
+    }
 }

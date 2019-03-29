@@ -149,7 +149,7 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
     val starredSessionObs = ObservableBoolean(false)
 
     /**
-     * // Find starred sessions for logged-in users.
+     * Find starred sessions for logged-in users.
      */
 
     private val _starredSessionsLive = MutableLiveData<List<String>>()
