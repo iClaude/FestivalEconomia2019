@@ -7,6 +7,7 @@ import dagger.Provides
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
 import iclaude.festivaleconomia2019.ui.MainActivity
+import iclaude.festivaleconomia2019.ui.details.organizer.OrganizerViewModel
 import iclaude.festivaleconomia2019.ui.details.session.SessionInfoViewModel
 import iclaude.festivaleconomia2019.ui.map.MapViewModel
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
@@ -43,4 +44,5 @@ interface AppComponent {
     fun inject(mapViewModel: MapViewModel)
     fun inject(sessionsViewModel: SessionListViewModel)
     fun inject(sessionInfoViewModel: SessionInfoViewModel)
+    fun inject(organizerViewModel: OrganizerViewModel)
 }
