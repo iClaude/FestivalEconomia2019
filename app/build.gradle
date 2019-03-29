@@ -39,7 +39,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0-alpha02'
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha03'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
@@ -47,46 +47,46 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
-    // Material Components
-    implementation "com.google.android.material:material:1.1.0-alpha03"
+    // Material Components.
+    implementation "com.google.android.material:material:1.1.0-alpha05"
 
-    // Architecture components
+    // Architecture components.
     implementation "android.arch.lifecycle:extensions:1.1.1"
     implementation "android.arch.lifecycle:viewmodel:1.1.1"
 
-    // Kotlin coroutines
+    // Kotlin coroutines.
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.0'
 
-    // Navigation
-    implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0-rc01'
-    implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0-rc01'
+    // Navigation.
+    implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0'
+    implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0'
 
-    // Firebase
-    implementation 'com.google.firebase:firebase-core:16.0.7'
-    implementation 'com.google.firebase:firebase-firestore:18.0.1'
+    // Firebase.
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.firebase:firebase-firestore:18.2.0'
 
-    // Dagger2
+    // Dagger2.
     implementation "com.google.dagger:dagger:2.21"
     implementation "com.google.dagger:dagger-android:2.21"
     implementation "com.google.dagger:dagger-android-support:2.21"
     kapt "com.google.dagger:dagger-compiler:2.21"
     kapt "com.google.dagger:dagger-android-processor:2.21"
 
-    // Google Maps
-    implementation "com.google.android.gms:play-services-maps:16.0.0"
+    // Google Maps.
+    implementation "com.google.android.gms:play-services-maps:16.1.0"
 
-    // Date and time API for Java
+    // Date and time API for Java.
     implementation "com.jakewharton.threetenabp:threetenabp:1.1.1"
     testImplementation "org.threeten:threetenbp:1.3.7"
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
-    implementation "androidx.core:core-ktx:1.1.0-alpha04"
+    implementation "androidx.core:core-ktx:1.1.0-alpha05"
 
-    // Glide
+    // Glide.
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
-    // Firebase UI authentication
+    // Firebase UI authentication.
     implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
     implementation 'com.facebook.android:facebook-android-sdk:4.40.0'
     implementation 'com.twitter.sdk.android:twitter-core:3.3.0'
