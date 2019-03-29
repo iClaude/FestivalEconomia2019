@@ -122,6 +122,7 @@ fun addOrganizers(layout: LinearLayout, organizers: List<Organizer>, viewModel: 
         val binding = ItemOrganizerBinding.inflate(LayoutInflater.from(context), layout, false).apply {
             setOrganizer(organizer)
             setViewModel(viewModel)
+            ivAvatar.transitionName = "${context.getString(R.string.speaker_headshot_transition)}${organizer.id}"
         }
         layout.addView(binding.root)
     }

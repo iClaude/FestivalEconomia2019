@@ -10,21 +10,31 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.transition.TransitionInflater
+import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentOrganizerBinding
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
 import kotlinx.android.synthetic.main.fragment_session_info.*
+import kotlinx.android.synthetic.main.item_organizer.*
 
 class OrganizerFragment : Fragment() {
 
     private lateinit var viewModel: OrganizerViewModel
     private lateinit var sessionListViewModel: SessionListViewModel
     private lateinit var binding: FragmentOrganizerBinding
+    private lateinit var idOrganizer: String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         activity?.window?.statusBarColor = Color.TRANSPARENT
         super.onCreate(savedInstanceState)
+
+        // Avatar transition.
+        with(TransitionInflater.from(context).inflateTransition(android.R.transition.move)) {
+            sharedElementEnterTransition = this
+            sharedElementReturnTransition = this // currently not working
+        }
 
         viewModel = ViewModelProviders.of(this).get(OrganizerViewModel::class.java)
         sessionListViewModel = activity?.run {
@@ -36,7 +46,7 @@ class OrganizerFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val idOrganizer = OrganizerFragmentArgs.fromBundle(arguments!!).organizerId
+        idOrganizer = OrganizerFragmentArgs.fromBundle(arguments!!).organizerId
 
         viewModel.apply {
             organizerId = idOrganizer
@@ -63,6 +73,7 @@ class OrganizerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        ivAvatar.transitionName = "${context!!.getString(R.string.speaker_headshot_transition)}${idOrganizer}"
         toolbar.setupWithNavController(findNavController())
     }
 }

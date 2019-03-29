@@ -24,14 +24,13 @@
             android:onClick="@{() -> viewModel.goToOrganizer(organizer.id)}">
 
         <ImageView
-                android:id="@+id/ivAppBarImage"
+                android:id="@+id/ivAvatar"
                 android:layout_width="@dimen/organizer_headshot_size"
                 android:layout_height="@dimen/organizer_headshot_size"
                 android:layout_marginStart="@dimen/margin_normal"
                 android:importantForAccessibility="no"
                 android:contentDescription="@string/content_description"
                 tools:src="@tools:sample/avatars"
-                android:transitionName="@string/speaker_headshot_transition"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
                 app:speakerImage="@{organizer}"/>
@@ -40,7 +39,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_goneMarginEnd="@dimen/margin_normal"
-                android:id="@+id/textView5" app:layout_constraintStart_toEndOf="@+id/ivAppBarImage"
+                android:id="@+id/textView5"
+                app:layout_constraintStart_toEndOf="@+id/ivAvatar"
                 android:layout_marginStart="16dp"
                 app:layout_constraintTop_toTopOf="parent" tools:text="Sundar Pichai"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
@@ -56,7 +56,8 @@
                 app:layout_goneMarginEnd="@dimen/margin_normal"
                 android:id="@+id/textView6"
                 app:layout_constraintTop_toBottomOf="@+id/textView5"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@+id/ivAppBarImage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivAvatar"
                 android:layout_marginStart="16dp" tools:text="Google"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>

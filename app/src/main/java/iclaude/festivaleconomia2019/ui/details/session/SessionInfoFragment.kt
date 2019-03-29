@@ -14,6 +14,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import androidx.navigation.ui.setupWithNavController
@@ -30,6 +31,7 @@ import iclaude.festivaleconomia2019.ui.utils.EventObserver
 import iclaude.festivaleconomia2019.ui.utils.sessionInfoTimeDetails
 import kotlinx.android.synthetic.main.fragment_session_info.*
 import kotlinx.android.synthetic.main.fragment_session_info_content.*
+import kotlinx.android.synthetic.main.item_organizer.*
 
 
 class SessionInfoFragment : Fragment() {
@@ -80,8 +82,12 @@ class SessionInfoFragment : Fragment() {
             })
 
             goToOrganizerEvent.observe(this@SessionInfoFragment, EventObserver { organizerId ->
-                val action = SessionInfoFragmentDirections.actionSessionInfoFragmentToOrganizerFragment(organizerId)
-                findNavController().navigate(action)
+                val extras =
+                    FragmentNavigatorExtras(ivAvatar to "${context!!.getString(R.string.speaker_headshot_transition)}${organizerId}")
+                val action =
+                    SessionInfoFragmentDirections.actionSessionInfoFragmentToOrganizerFragment(organizerId).run {
+                        findNavController().navigate(this, extras)
+                    }
             })
 
             goToSessionEvent.observe(this@SessionInfoFragment, EventObserver {
