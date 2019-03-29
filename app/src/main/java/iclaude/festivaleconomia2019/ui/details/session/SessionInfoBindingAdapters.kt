@@ -113,13 +113,15 @@ fun timeDetails(textView: TextView, startTimestamp: Long, endTimestamp: Long) {
  *  Organizers.
  */
 
-@BindingAdapter("app:organizers")
-fun addOrganizers(layout: LinearLayout, organizers: List<Organizer>) {
+// Add organizers as child Views of LinearLayout.
+@BindingAdapter("app:organizers", "app:viewModel", requireAll = true)
+fun addOrganizers(layout: LinearLayout, organizers: List<Organizer>, viewModel: SessionInfoViewModel) {
     val context = layout.context
 
     for (organizer in organizers) {
         val binding = ItemOrganizerBinding.inflate(LayoutInflater.from(context), layout, false).apply {
             setOrganizer(organizer)
+            setViewModel(viewModel)
         }
         layout.addView(binding.root)
     }
@@ -150,6 +152,10 @@ fun speakerImage(imageView: ImageView, organizer: Organizer?) {
         imageView.setImageResource(placeholderId)
     }
 }
+
+// Click listener for organizer View: go to OrganizerFragment.
+
+
 
 /**
  * Related sessions.

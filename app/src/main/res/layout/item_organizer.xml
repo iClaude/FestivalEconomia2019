@@ -8,6 +8,10 @@
         <variable
                 name="organizer"
                 type="iclaude.festivaleconomia2019.model.data_classes.Organizer"/>
+
+        <variable
+                name="viewModel"
+                type="iclaude.festivaleconomia2019.ui.details.session.SessionInfoViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,7 +20,8 @@
             android:clickable="true"
             android:background="?android:attr/selectableItemBackground"
             android:paddingTop="@dimen/spacing_normal"
-            android:paddingBottom="@dimen/spacing_normal">
+            android:paddingBottom="@dimen/spacing_normal"
+            android:onClick="@{() -> viewModel.goToOrganizer(organizer.id)}">
 
         <ImageView
                 android:id="@+id/ivAvatar"

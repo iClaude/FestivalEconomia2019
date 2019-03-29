@@ -79,6 +79,11 @@ class SessionInfoFragment : Fragment() {
                 }
             })
 
+            goToOrganizerEvent.observe(this@SessionInfoFragment, EventObserver { organizerId ->
+                val action = SessionInfoFragmentDirections.actionSessionInfoFragmentToOrganizerFragment(organizerId)
+                findNavController().navigate(action)
+            })
+
             goToSessionEvent.observe(this@SessionInfoFragment, EventObserver {
                 val options = navOptions {
                     anim {

@@ -39,7 +39,9 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
     lateinit var sessionInfo: SessionInfo
 
 
-    // Load session info when repository is ready.
+    /**
+     * Load session info when repository is ready.
+     */
 
     private val _sessionInfoLoadedEvent = MutableLiveData<Event<SessionInfo>>()
     val sessionInfoLoadedEvent: LiveData<Event<SessionInfo>>
@@ -100,7 +102,9 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
         return sessions
     }
 
-    // User clicks the button in the app bar to watch the YouTube video of the event.
+    /**
+     * User clicks the button in the app bar to watch the YouTube video of the event.
+     */
 
     private val _startYoutubeVideoEvent = MutableLiveData<Event<String>>()
     val startYoutubeVideoEvent: LiveData<Event<String>>
@@ -112,7 +116,9 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
         _startYoutubeVideoEvent.value = Event(url)
     }
 
-    // User clicks to a related session to navigate to it.
+    /**
+     * User clicks on a related session to navigate to it.
+     */
 
     private val _goToSessionEvent = MutableLiveData<Event<String>>()
     val goToSessionEvent: LiveData<Event<String>>
@@ -122,13 +128,29 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
         _goToSessionEvent.value = Event(sessionId)
     }
 
+    /**
+     * User clicks on an organizer to navigate to it.
+     */
 
-    // Starred sessions (related events).
+    private val _goToOrganizerEvent = MutableLiveData<Event<String>>()
+    val goToOrganizerEvent: LiveData<Event<String>>
+        get() = _goToOrganizerEvent
+
+    fun goToOrganizer(organizerId: String) {
+        _goToOrganizerEvent.value = Event(organizerId)
+    }
+
+
+    /**
+     * Starred sessions (related events).
+     */
 
     // Star FAB representing this session.
     val starredSessionObs = ObservableBoolean(false)
 
-    // Find starred sessions for logged-in users.
+    /**
+     * // Find starred sessions for logged-in users.
+     */
 
     private val _starredSessionsLive = MutableLiveData<List<String>>()
     val starredSessionsLive: LiveData<List<String>>
@@ -148,7 +170,9 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
             OnFailureListener { Log.w(TAG, "Error getting user in Firebase", it) })
     }
 
-    // User stars/unstars a related session.
+    /**
+     * User stars/unstars a related session.
+     */
 
     /* If the user logs in-out or stars/unstars sessions in this Fragment, SessionListFragment
        should also be updated (showing avatar and updating starred sessions). */
@@ -166,7 +190,9 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
         _loginOperationsEvent.value = Event(Unit)
     }
 
-    // User authentication.
+    /**
+     * User authentication.
+     */
 
     override val _authEvent: MutableLiveData<Event<LoginFlow.Authentication>> = MutableLiveData()
 
