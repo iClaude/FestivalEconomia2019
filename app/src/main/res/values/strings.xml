@@ -68,4 +68,5 @@
     <string name="a11y_unstarred">Event not bookmarked</string>
     <string name="map_programmed_events">PROGRAMMED EVENTS</string>
     <string name="session_list_download_error">Oops, there was a problem. Try again later!</string>
+    <string name="speaker_headshot_transition" translatable="false">speaker_headshot</string>
 </resources>

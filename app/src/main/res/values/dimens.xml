@@ -25,4 +25,5 @@
     <dimen name="organizer_headshot_size">40dp</dimen>
     <dimen name="speaker_headshot_size">40dp</dimen>
     <dimen name="fab_size">56dp</dimen>
+    <dimen name="speaker_large_headshot_size">112dp</dimen>
 </resources>
