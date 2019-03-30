@@ -19,6 +19,8 @@ import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.ItemOrganizerBinding
 import iclaude.festivaleconomia2019.databinding.ItemSessionRelatedBinding
 import iclaude.festivaleconomia2019.model.data_classes.*
+import iclaude.festivaleconomia2019.ui.details.RelatedSessions
+import iclaude.festivaleconomia2019.ui.login.LoginFlow
 import iclaude.festivaleconomia2019.ui.utils.*
 import kotlin.math.absoluteValue
 
@@ -179,7 +181,8 @@ fun addRelatedSessions(layout: LinearLayout, relatedSessions: List<Session>, vie
         val binding = ItemSessionRelatedBinding.inflate(LayoutInflater.from(context), layout, false).apply {
             setSession(session)
             setLocation(location)
-            setViewModel(viewModel)
+            setLoginFlow(viewModel)
+            setRelatedSessions(viewModel)
         }
 
         val view = binding.root.apply { tag = session.id }
@@ -210,19 +213,20 @@ fun lenLocText(textView: TextView, session: Session, location: Location) {
 }
 
 // Star button to star/unstar each related session.
-@BindingAdapter("app:onStarClickListenerRelated", "app:viewModel", requireAll = true)
+@BindingAdapter("app:onStarClickListenerRelated", "app:loginFlow", "app:relatedSessions", requireAll = true)
 fun onStarClickListener(
     button: CheckableImageButton,
     session: Session,
-    viewModel: SessionInfoViewModel
+    loginFlow: LoginFlow,
+    relatedSessions: RelatedSessions
 ) {
     button.setOnClickListener {
         if (FirebaseAuth.getInstance().currentUser != null) {
             val b = it as CheckableImageButton
             b.isChecked = !b.isChecked
-            viewModel.starOrUnstarSession(session.id, b.isChecked)
+            relatedSessions.starOrUnstarSession(session.id, b.isChecked)
         } else {
-            viewModel.startAuthFlow()
+            loginFlow.startAuthFlow()
         }
     }
 }

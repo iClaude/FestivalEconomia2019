@@ -5,11 +5,19 @@
         xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable name="viewModel"
-                  type="iclaude.festivaleconomia2019.ui.details.session.SessionInfoViewModel"/>
+
+        <variable
+                name="loginFlow"
+                type="iclaude.festivaleconomia2019.ui.login.LoginFlow"/>
+
+        <variable
+                name="relatedSessions"
+                type="iclaude.festivaleconomia2019.ui.details.RelatedSessions"/>
+
         <variable
                 name="session"
                 type="iclaude.festivaleconomia2019.model.data_classes.Session"/>
+
         <variable
                 name="location"
                 type="iclaude.festivaleconomia2019.model.data_classes.Location"/>
@@ -21,7 +29,7 @@
             android:clickable="true"
             android:paddingBottom="@dimen/spacing_normal"
             android:background="?android:attr/selectableItemBackground"
-            android:onClick="@{() -> viewModel.goToSession(session.id)}">
+            android:onClick="@{() -> relatedSessions.goToSession(session.id)}">
 
         <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline_start"
@@ -61,7 +69,8 @@
                 android:src="@drawable/asld_star_event"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintTop_toTopOf="parent"
-                app:viewModel="@{viewModel}"
+                app:relatedSessions="@{relatedSessions}"
+                app:loginFlow="@{loginFlow}"
                 app:onStarClickListenerRelated="@{session}"/>
 
         <ImageView

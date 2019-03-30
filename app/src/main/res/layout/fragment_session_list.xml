@@ -30,26 +30,18 @@
                 android:visibility="@{viewModel.dataLoadedObs? View.GONE : View.VISIBLE}"
                 android:layout_marginTop="64dp" android:layout_gravity="center_horizontal"/>
 
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-                android:id="@+id/swipeRefreshLayout"
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSessions"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:refreshListener="@{viewModel}">
-
-            <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvSessions"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:clipToPadding="@{(viewModel.isFilterTaggedObs || viewModel.isFilterStarredObs)? true : false}"
-                    android:orientation="vertical"
-                    android:paddingBottom="@dimen/filtersheet_peek_height"
-                    android:paddingTop="@dimen/spacing_normal"
-                    android:scrollbars="vertical"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:ignore="UnusedAttribute"
-                    tools:listitem="@layout/item_session"/>
-
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                android:clipToPadding="@{(viewModel.isFilterTaggedObs || viewModel.isFilterStarredObs)? true : false}"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/filtersheet_peek_height"
+                android:paddingTop="@dimen/spacing_normal"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:ignore="UnusedAttribute"
+                tools:listitem="@layout/item_session"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

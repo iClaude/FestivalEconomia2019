@@ -70,7 +70,6 @@ class SessionListFragment : Fragment() {
             })
 
             dataFetchedFromFirebaseEvent.observe(this@SessionListFragment, Observer {
-                swipeRefreshLayout.isRefreshing = false
                 if (it.getContentIfNotHandled() == SessionListViewModel.FirebaseResult.ERROR) {
                     Snackbar.make(rvSessions, R.string.session_list_download_error, Snackbar.LENGTH_SHORT).show()
                 }

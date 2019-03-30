@@ -1,18 +1,25 @@
 package iclaude.festivaleconomia2019.ui.details.organizer
 
+import android.util.Log
 import androidx.databinding.ObservableFloat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import com.google.android.gms.tasks.OnFailureListener
+import com.google.android.gms.tasks.OnSuccessListener
+import com.google.firebase.auth.FirebaseUser
 import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.*
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
+import iclaude.festivaleconomia2019.ui.details.RelatedSessions
+import iclaude.festivaleconomia2019.ui.login.LoginFlow
 import iclaude.festivaleconomia2019.ui.utils.Event
+import iclaude.festivaleconomia2019.utils.TAG
 import javax.inject.Inject
 
-class OrganizerViewModel : ViewModel() {
+class OrganizerViewModel : ViewModel(), LoginFlow, RelatedSessions {
     @Inject
     lateinit var repository: EventDataRepository
 
@@ -63,6 +70,69 @@ class OrganizerViewModel : ViewModel() {
 
     // AppBar info.
     val appBarCollapsedPercentageObs = ObservableFloat(0f)
+
+    /**
+     * User clicks on a related session to navigate to it.
+     */
+    override val _goToSessionEvent = MutableLiveData<Event<String>>()
+
+    /**
+     * Find starred sessions for logged-in users.
+     */
+
+    private val _starredSessionsLive = MutableLiveData<List<String>>()
+    val starredSessionsLive: LiveData<List<String>>
+        get() = _starredSessionsLive
+
+    fun findStarredSessions() {
+        repository.getStarredSessions(
+            OnSuccessListener { documentSnapshot ->
+                val userInFirebase = documentSnapshot.toObject(User::class.java)
+                userInFirebase?.let { userInFirebase ->
+                    if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
+
+                    _starredSessionsLive.value = userInFirebase.starredSessions
+                }
+            },
+            OnFailureListener { Log.w(TAG, "Error getting user in Firebase", it) })
+    }
+
+    /**
+     * User authentication.
+     * Implementation of LoginFlow interface.
+     */
+
+    override val _authEvent: MutableLiveData<Event<LoginFlow.Authentication>> = MutableLiveData()
+
+    override fun onUserLoggedIn(user: FirebaseUser) {
+        addUserToFirebase(user)
+        findStarredSessions()
+        _loginOperationsEvent.value = Event(Unit)
+    }
+
+    override fun onUserLoggedOut() {
+        // no need to log out from this Fragment
+    }
+
+    override fun addUserToFirebase(user: FirebaseUser) {
+        repository.addUser(user)
+    }
+
+    /**
+     * User stars/unstars a related session.
+     * Implementation of RelatedSessions interface.
+     */
+
+    /* If the user logs in-out or stars/unstars sessions in this Fragment, SessionListFragment
+       should also be updated (showing avatar and updating starred sessions). */
+    override val _loginOperationsEvent = MutableLiveData<Event<Any>>()
+
+    override val _showSnackBarForStarringEvent = MutableLiveData<Event<Boolean>>()
+
+    override fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
+        repository.starOrUnstarSession(sessionId, toStar)
+        super.starOrUnstarSession(sessionId, toStar)
+    }
 }
 
 // Info to display in the layout.

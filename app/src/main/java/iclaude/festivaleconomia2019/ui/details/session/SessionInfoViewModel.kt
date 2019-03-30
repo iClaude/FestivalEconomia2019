@@ -14,12 +14,13 @@ import iclaude.festivaleconomia2019.model.JSONparser.EventData
 import iclaude.festivaleconomia2019.model.data_classes.*
 import iclaude.festivaleconomia2019.model.di.App
 import iclaude.festivaleconomia2019.model.repository.EventDataRepository
+import iclaude.festivaleconomia2019.ui.details.RelatedSessions
 import iclaude.festivaleconomia2019.ui.login.LoginFlow
 import iclaude.festivaleconomia2019.ui.utils.Event
 import iclaude.festivaleconomia2019.utils.TAG
 import javax.inject.Inject
 
-class SessionInfoViewModel : ViewModel(), LoginFlow {
+class SessionInfoViewModel : ViewModel(), LoginFlow, RelatedSessions {
     @Inject
     lateinit var repository: EventDataRepository
 
@@ -119,14 +120,8 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
     /**
      * User clicks on a related session to navigate to it.
      */
+    override val _goToSessionEvent = MutableLiveData<Event<String>>()
 
-    private val _goToSessionEvent = MutableLiveData<Event<String>>()
-    val goToSessionEvent: LiveData<Event<String>>
-        get() = _goToSessionEvent
-
-    fun goToSession(sessionId: String) {
-        _goToSessionEvent.value = Event(sessionId)
-    }
 
     /**
      * User clicks on an organizer to navigate to it.
@@ -172,26 +167,23 @@ class SessionInfoViewModel : ViewModel(), LoginFlow {
 
     /**
      * User stars/unstars a related session.
+     * Implementation of RelatedSessions interface.
      */
 
     /* If the user logs in-out or stars/unstars sessions in this Fragment, SessionListFragment
        should also be updated (showing avatar and updating starred sessions). */
-    private val _loginOperationsEvent = MutableLiveData<Event<Any>>()
-    val loginOperationsEvent: LiveData<Event<Any>>
-        get() = _loginOperationsEvent
+    override val _loginOperationsEvent = MutableLiveData<Event<Any>>()
 
-    private val _showSnackBarForStarringEvent = MutableLiveData<Event<Boolean>>()
-    val showSnackBarForStarringEvent: LiveData<Event<Boolean>>
-        get() = _showSnackBarForStarringEvent
+    override val _showSnackBarForStarringEvent = MutableLiveData<Event<Boolean>>()
 
-    fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
+    override fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
         repository.starOrUnstarSession(sessionId, toStar)
-        _showSnackBarForStarringEvent.value = Event(toStar)
-        _loginOperationsEvent.value = Event(Unit)
+        super.starOrUnstarSession(sessionId, toStar)
     }
 
     /**
      * User authentication.
+     * Implementation of LoginFlow interface.
      */
 
     override val _authEvent: MutableLiveData<Event<LoginFlow.Authentication>> = MutableLiveData()

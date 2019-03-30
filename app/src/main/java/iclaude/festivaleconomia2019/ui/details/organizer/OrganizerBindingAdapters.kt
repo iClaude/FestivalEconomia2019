@@ -1,11 +1,16 @@
 package iclaude.festivaleconomia2019.ui.details.organizer
 
+import android.view.LayoutInflater
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.appbar.AppBarLayout
 import iclaude.festivaleconomia2019.R
+import iclaude.festivaleconomia2019.databinding.ItemSessionRelatedBinding
+import iclaude.festivaleconomia2019.model.data_classes.Location
+import iclaude.festivaleconomia2019.model.data_classes.Session
 import kotlin.math.absoluteValue
 
 /**
@@ -48,5 +53,27 @@ fun speakerImage(imageView: ImageView, organizerInfo: OrganizerInfo?) {
             )
 
         imageLoad.into(imageView)
+    }
+}
+
+// List of sessions held by this organizer.
+@BindingAdapter("app:organizerSessions", "app:viewModel", requireAll = true)
+fun addRelatedSessions(layout: LinearLayout, relatedSessions: List<Session>, viewModel: OrganizerViewModel) {
+    val eventData = viewModel.repository.eventDataLive.value ?: return
+
+    val context = layout.context
+    val locations: List<Location> = eventData.locations
+
+    for (session in relatedSessions) {
+        val location = locations[session.location.toInt()]
+        val binding = ItemSessionRelatedBinding.inflate(LayoutInflater.from(context), layout, false).apply {
+            setSession(session)
+            setLocation(location)
+            loginFlow = viewModel
+            setRelatedSessions(viewModel)
+        }
+
+        val view = binding.root.apply { tag = session.id }
+        layout.addView(view)
     }
 }
