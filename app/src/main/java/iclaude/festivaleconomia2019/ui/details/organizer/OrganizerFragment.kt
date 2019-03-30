@@ -31,7 +31,8 @@ class OrganizerFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         // Avatar transition.
-        with(TransitionInflater.from(context).inflateTransition(android.R.transition.move)) {
+        with(TransitionInflater.from(context).inflateTransition(R.transition.changebounds_with_arcmotion)) {
+            duration = 500 // bug in source code?
             sharedElementEnterTransition = this
             sharedElementReturnTransition = this // currently not working
         }
@@ -73,7 +74,8 @@ class OrganizerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        ivAvatar.transitionName = "${context!!.getString(R.string.speaker_headshot_transition)}${idOrganizer}"
+        ivAvatar.transitionName =
+            "${context!!.getString(R.string.speaker_headshot_transition)}${idOrganizer}" // retrieve the unique transition name for the organizer's avatar (there could be more organizers for the same event and we must know which avatar to animate)
         toolbar.setupWithNavController(findNavController())
     }
 }

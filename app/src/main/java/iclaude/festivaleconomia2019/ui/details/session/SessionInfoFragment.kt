@@ -83,7 +83,7 @@ class SessionInfoFragment : Fragment() {
 
             goToOrganizerEvent.observe(this@SessionInfoFragment, EventObserver { organizerId ->
                 val extras =
-                    FragmentNavigatorExtras(ivAvatar to "${context!!.getString(R.string.speaker_headshot_transition)}${organizerId}")
+                    FragmentNavigatorExtras(ivAvatar to "${context!!.getString(R.string.speaker_headshot_transition)}${organizerId}") // use a unique transition name for each avatar in the list
                 val action =
                     SessionInfoFragmentDirections.actionSessionInfoFragmentToOrganizerFragment(organizerId).run {
                         findNavController().navigate(this, extras)
