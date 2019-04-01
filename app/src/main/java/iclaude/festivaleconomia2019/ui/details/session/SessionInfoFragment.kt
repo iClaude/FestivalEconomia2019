@@ -3,13 +3,13 @@ package iclaude.festivaleconomia2019.ui.details.session
 
 import android.content.Intent
 import android.graphics.Color
-import android.net.Uri
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.edit
+import androidx.core.net.toUri
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -74,7 +74,7 @@ class SessionInfoFragment : Fragment() {
             startYoutubeVideoEvent.observe(this@SessionInfoFragment, EventObserver {
                 val intent = Intent().apply {
                     action = Intent.ACTION_VIEW
-                    data = Uri.parse(it)
+                    data = it.toUri()
                 }
                 if (intent.resolveActivity(context?.packageManager) != null) {
                     startActivity(intent)

@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.view.plusAssign
 import androidx.databinding.BindingAdapter
 import com.airbnb.lottie.LottieAnimationView
 import com.bumptech.glide.Glide
@@ -126,7 +127,7 @@ fun addOrganizers(layout: LinearLayout, organizers: List<Organizer>, viewModel: 
             setViewModel(viewModel)
             ivAvatar.transitionName = "${context.getString(R.string.speaker_headshot_transition)}${organizer.id}"
         }
-        layout.addView(binding.root)
+        layout += binding.root
     }
 }
 
@@ -186,7 +187,7 @@ fun addRelatedSessions(layout: LinearLayout, relatedSessions: List<Session>, vie
         }
 
         val view = binding.root.apply { tag = session.id }
-        layout.addView(view)
+        layout += view
     }
 }
 

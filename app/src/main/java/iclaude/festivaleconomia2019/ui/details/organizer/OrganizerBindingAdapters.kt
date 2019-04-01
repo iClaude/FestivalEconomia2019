@@ -3,6 +3,7 @@ package iclaude.festivaleconomia2019.ui.details.organizer
 import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.LinearLayout
+import androidx.core.view.plusAssign
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -74,6 +75,6 @@ fun addRelatedSessions(layout: LinearLayout, relatedSessions: List<Session>, vie
         }
 
         val view = binding.root.apply { tag = session.id }
-        layout.addView(view)
+        layout += view
     }
 }

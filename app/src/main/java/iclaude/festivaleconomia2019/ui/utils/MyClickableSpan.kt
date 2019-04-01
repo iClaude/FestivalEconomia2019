@@ -2,11 +2,11 @@ package iclaude.festivaleconomia2019.ui.utils
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.text.TextPaint
 import android.text.style.ClickableSpan
 import android.view.View
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import iclaude.festivaleconomia2019.R
 
 /**
@@ -16,7 +16,7 @@ import iclaude.festivaleconomia2019.R
 class MyClickableSpan(val context: Context, private val url: String) : ClickableSpan() {
     override fun onClick(widget: View) {
         with(Intent(Intent.ACTION_VIEW)) {
-            data = Uri.parse(url)
+            data = url.toUri()
             context.startActivity(this)
         }
     }

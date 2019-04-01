@@ -4,13 +4,13 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -59,7 +59,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         viewModel.apply {
             // show directions to a location when the user wants to
             directionsEvent.observe(this@MapFragment, EventObserver {
-                val uri = Uri.parse("google.navigation:q=${it.lat},${it.lng}")
+                val uri = "google.navigation:q=${it.lat},${it.lng}".toUri()
                 val intent = Intent(Intent.ACTION_VIEW, uri).apply {
                     `package` = "com.google.android.apps.maps"
                 }
