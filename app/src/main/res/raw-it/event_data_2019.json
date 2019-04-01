@@ -341,7 +341,8 @@
       ],
       "location": "06",
       "organizers": [
-        "00"
+        "00",
+        "02"
       ],
       "startTimestamp": 1541622180000,
       "tags": [
@@ -428,7 +429,8 @@
       ],
       "location": "06",
       "organizers": [
-        "01"
+        "03",
+        "04"
       ],
       "startTimestamp": 1541704200000,
       "tags": [
@@ -457,6 +459,38 @@
       "id": "01",
       "name": "Chris Warrington",
       "thumbnailUrl": "https://developer.android.com/dev-summit/images/speakers/chris_warrington.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/richfulcher",
+      "linkedInUrl": "https://www.linkedin.com/in/rich-fulcher-a3648a/",
+      "facebookUrl": ""
+    },
+    {
+      "bio": "Mario works as a software engineer at Google, working on the Android Gradle Plugin, first in Mountain View and now in London.\nPrior to joining Google, Chris worked as a Research Assistant in the Security Group of the The Computer Laboratory, University of Cambridge. He previously studied computer science as undergraduate at the University of Cambridge.",
+      "company": "Samsung",
+      "id": "02",
+      "name": "Mario Rossi",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/richfulcher",
+      "linkedInUrl": "https://www.linkedin.com/in/rich-fulcher-a3648a/",
+      "facebookUrl": ""
+    },
+    {
+      "bio": "George Soros works as a software engineer at Google, working on the Android Gradle Plugin, first in Mountain View and now in London.\nPrior to joining Google, Chris worked as a Research Assistant in the Security Group of the The Computer Laboratory, University of Cambridge. He previously studied computer science as undergraduate at the University of Cambridge.",
+      "company": "Samsung",
+      "id": "03",
+      "name": "George Soros",
+      "thumbnailUrl": "https://i.pinimg.com/originals/a5/9b/08/a59b0828c1892960828020d5377dcf3d.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/richfulcher",
+      "linkedInUrl": "https://www.linkedin.com/in/rich-fulcher-a3648a/",
+      "facebookUrl": ""
+    },
+    {
+      "bio": "George Lucas works as a software engineer at Google, working on the Android Gradle Plugin, first in Mountain View and now in London.\nPrior to joining Google, Chris worked as a Research Assistant in the Security Group of the The Computer Laboratory, University of Cambridge. He previously studied computer science as undergraduate at the University of Cambridge.",
+      "company": "Samsung",
+      "id": "04",
+      "name": "George Lucas",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/George_Lucas_cropped_2009.jpg",
       "websiteUrl": "",
       "twitterUrl": "https://twitter.com/richfulcher",
       "linkedInUrl": "https://www.linkedin.com/in/rich-fulcher-a3648a/",

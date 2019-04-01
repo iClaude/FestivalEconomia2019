@@ -68,8 +68,21 @@ class OrganizerViewModel : ViewModel(), LoginFlow, RelatedSessions {
         _organizerInfoLoadedEvent.value = Event(organizerInfo)
     }
 
-    // AppBar info.
+    /**
+     * AppBar info.
+     */
+
+    // App bar collapsed percentage.
     val appBarCollapsedPercentageObs = ObservableFloat(0f)
+
+    // Avatar has been loaded.
+    private val _avatarLoadedEvent = MutableLiveData<Event<Any>>()
+    val avatarLoadedEvent: LiveData<Event<Any>>
+        get() = _avatarLoadedEvent
+
+    fun avatarWasLoaded() {
+        _avatarLoadedEvent.value = Event(Unit)
+    }
 
     /**
      * User clicks on a related session to navigate to it.

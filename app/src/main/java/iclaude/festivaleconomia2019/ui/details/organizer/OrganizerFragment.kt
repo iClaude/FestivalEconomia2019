@@ -41,6 +41,8 @@ class OrganizerFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         // Avatar transition.
+        postponeEnterTransition()
+
         with(TransitionInflater.from(context).inflateTransition(android.R.transition.move)) {
             duration = 500 // bug in source code?
             sharedElementEnterTransition = this
@@ -71,6 +73,10 @@ class OrganizerFragment : Fragment() {
                     organizerData = info
                 }
                 viewModel.findStarredSessions()
+            })
+
+            avatarLoadedEvent.observe(this@OrganizerFragment, EventObserver {
+                startPostponedEnterTransition()
             })
 
             goToSessionEvent.observe(this@OrganizerFragment, EventObserver {
@@ -144,4 +150,5 @@ class OrganizerFragment : Fragment() {
 
         LoginManager.loginResult(requestCode, resultCode, data, llOrganizerEvents, activity!!, viewModel)
     }
+
 }

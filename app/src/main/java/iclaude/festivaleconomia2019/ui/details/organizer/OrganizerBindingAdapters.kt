@@ -1,12 +1,17 @@
 package iclaude.festivaleconomia2019.ui.details.organizer
 
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.view.plusAssign
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.request.target.Target
 import com.google.android.material.appbar.AppBarLayout
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.ItemSessionRelatedBinding
@@ -30,12 +35,10 @@ fun addOnOffsetChangedListener(appBarLayout: AppBarLayout, viewModel: OrganizerV
 /**
  * Loads a [Speaker]'s photo or picks a default avatar if no photo is specified.
  */
-@BindingAdapter("app:speakerImage")
-fun speakerImage(imageView: ImageView, organizerInfo: OrganizerInfo?) {
+@BindingAdapter("speakerImageWithListener", "app:viewModel", requireAll = true)
+fun speakerImage(imageView: ImageView, organizerInfo: OrganizerInfo?, viewModel: OrganizerViewModel) {
     organizerInfo ?: return
 
-    // Want a 'random' default avatar but should be stable as used on both session details &
-    // speaker detail screens (as a shared element transition), so use first initial to pick.
     val placeholderId = when (organizerInfo.name[0].toLowerCase()) {
         in 'a'..'i' -> R.drawable.ic_default_avatar_1
         in 'j'..'r' -> R.drawable.ic_default_avatar_2
@@ -44,16 +47,38 @@ fun speakerImage(imageView: ImageView, organizerInfo: OrganizerInfo?) {
 
     if (organizerInfo.thumbnailUrl.isNullOrBlank()) {
         imageView.setImageResource(placeholderId)
+        viewModel.avatarWasLoaded()
     } else {
-        val imageLoad = Glide.with(imageView)
+        Glide.with(imageView)
             .load(organizerInfo.thumbnailUrl)
             .apply(
                 RequestOptions()
                     .placeholder(placeholderId)
                     .circleCrop()
             )
+            .listener(object : RequestListener<Drawable?> {
+                override fun onLoadFailed(
+                    e: GlideException?,
+                    model: Any?,
+                    target: Target<Drawable?>?,
+                    isFirstResource: Boolean
+                ): Boolean {
+                    viewModel.avatarWasLoaded()
+                    return false
+                }
 
-        imageLoad.into(imageView)
+                override fun onResourceReady(
+                    resource: Drawable?,
+                    model: Any?,
+                    target: Target<Drawable?>?,
+                    dataSource: DataSource?,
+                    isFirstResource: Boolean
+                ): Boolean {
+                    viewModel.avatarWasLoaded()
+                    return false
+                }
+            })
+            .into(imageView)
     }
 }
 
