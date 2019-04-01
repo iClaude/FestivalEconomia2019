@@ -61,4 +61,5 @@
     <string name="session_info_info">Informazioni</string>
     <string name="session_info_website">Sito ufficiale</string>
     <string name="session_list_download_error">Oops, si è verificato un problema. Riprova più tardi.</string>
+    <string name="organizer_link_website">Sito</string>
 </resources>

@@ -36,10 +36,27 @@
                 android:text="@{organizerDataDer.bio}"/>
 
         <TextView
+                android:id="@+id/tvSocialMedia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvBio"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/margin_normal"
+                tools:text="@tools:sample/lorem"
+                app:websiteUrl="@{organizerDataDer.websiteUrl}"
+                app:twitterUrl="@{organizerDataDer.twitterUrl}"
+                app:linkedInUrl="@{organizerDataDer.linkedInUrl}"
+                app:facebookUrl="@{organizerDataDer.facebookUrl}"
+                android:textColor="@color/link"/>
+
+        <TextView
                 android:id="@+id/tvRelatedEventsTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/tvBio"
+                app:layout_constraintTop_toBottomOf="@+id/tvSocialMedia"
                 android:layout_marginTop="24dp"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="@dimen/margin_normal"

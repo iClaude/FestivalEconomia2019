@@ -69,4 +69,8 @@
     <string name="map_programmed_events">PROGRAMMED EVENTS</string>
     <string name="session_list_download_error">Oops, there was a problem. Try again later!</string>
     <string name="speaker_headshot_transition" translatable="false">speaker_headshot</string>
+    <string name="organizer_link_website">Website</string>
+    <string name="organizer_link_twitter" translatable="false">Twitter</string>
+    <string name="organizer_link_linkedin" translatable="false">LinkedIn</string>
+    <string name="organizer_link_facebook" translatable="false">Facebook</string>
 </resources>

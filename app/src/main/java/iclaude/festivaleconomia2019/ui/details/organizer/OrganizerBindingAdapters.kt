@@ -1,9 +1,17 @@
 package iclaude.festivaleconomia2019.ui.details.organizer
 
 import android.graphics.drawable.Drawable
+import android.text.SpannableString
+import android.text.SpannableStringBuilder
+import android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+import android.text.method.LinkMovementMethod
+import android.text.style.URLSpan
 import android.view.LayoutInflater
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.core.view.plusAssign
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
@@ -55,13 +63,11 @@ fun speakerImage(imageView: ImageView, organizerInfo: OrganizerInfo?, viewModel:
                 RequestOptions()
                     .placeholder(placeholderId)
                     .circleCrop()
+                    .onlyRetrieveFromCache(true)
             )
             .listener(object : RequestListener<Drawable?> {
                 override fun onLoadFailed(
-                    e: GlideException?,
-                    model: Any?,
-                    target: Target<Drawable?>?,
-                    isFirstResource: Boolean
+                    e: GlideException?, model: Any?, target: Target<Drawable?>?, isFirstResource: Boolean
                 ): Boolean {
                     viewModel.avatarWasLoaded()
                     return false
@@ -81,6 +87,44 @@ fun speakerImage(imageView: ImageView, organizerInfo: OrganizerInfo?, viewModel:
             .into(imageView)
     }
 }
+
+/**
+ * Formats a [TextView] to display a [Speaker]'s social links.
+ */
+@BindingAdapter(value = ["app:websiteUrl", "app:twitterUrl", "linkedInUrl", "facebookUrl"], requireAll = true)
+fun createSpeakerLinksView(
+    textView: TextView, websiteUrl: String?, twitterUrl: String?, linkedInUrl: String?, facebookUrl: String?
+) {
+    val links = mapOf(
+        R.string.organizer_link_website to websiteUrl,
+        R.string.organizer_link_twitter to twitterUrl,
+        R.string.organizer_link_linkedin to linkedInUrl,
+        R.string.organizer_link_facebook to facebookUrl
+    )
+        .filterValues { !it.isNullOrEmpty() }
+        .map { (labelRes, url) ->
+            val span = SpannableString(textView.context.getString(labelRes))
+            span.setSpan(URLSpan(url), 0, span.length, SPAN_EXCLUSIVE_EXCLUSIVE)
+            span
+        }
+        .joinTo(
+            SpannableStringBuilder(),
+            separator = " - "
+        )
+    if (links.isNotBlank()) {
+        textView.apply {
+            visibility = VISIBLE
+            text = links
+            // Make links clickable
+            movementMethod = LinkMovementMethod.getInstance()
+            isFocusable = false
+            isClickable = false
+        }
+    } else {
+        textView.visibility = GONE
+    }
+}
+
 
 // List of sessions held by this organizer.
 @BindingAdapter("app:organizerSessions", "app:viewModel", requireAll = true)
