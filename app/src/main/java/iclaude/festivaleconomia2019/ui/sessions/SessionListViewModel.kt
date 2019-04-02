@@ -182,7 +182,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     // Reset button is clicked when filter sheet is expanded: all filters are cleared.
     fun clearFilters() {
         filter.clear()
-        clearTagsObs.set(clearTagsObs.get() + 1)
+        _clearTags.value = clearTags.value!!.plus(1)
         filterList()
     }
 
@@ -209,8 +209,10 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         tagsObs.addAll(tags ?: return)
     }
 
-    val clearTagsObs: ObservableInt =
-        ObservableInt(0) // when filter is cleared all Chips in ChipGroups must be unchecked
+    // When filter is cleared all Chips in ChipGroups must be unchecked.
+    private val _clearTags = MutableLiveData<Int>().apply { value = 0 }
+    val clearTags: LiveData<Int>
+        get() = _clearTags
 
     val titleHeaderAlphaObs: ObservableFloat = ObservableFloat(0f) // change header alpha when dragging bottom sheet
 

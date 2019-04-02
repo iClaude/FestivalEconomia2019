@@ -54,7 +54,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/textView2"
                         app:viewModel="@{viewModelDer}"
                         app:tags="@{viewModelDer.tagsObs}"
-                        app:uncheckTags="@{viewModelDer.clearTagsObs}"
+                        app:uncheckTags="@{viewModelDer.clearTags}"
                         android:layout_marginTop="@dimen/margin_small"
                 />
                 <TextView
@@ -72,7 +72,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/textView"
                         app:viewModel="@{viewModelDer}"
                         app:tags="@{viewModelDer.tagsObs}"
-                        app:uncheckTags="@{viewModelDer.clearTagsObs}"
+                        app:uncheckTags="@{viewModelDer.clearTags}"
                         android:layout_marginTop="@dimen/margin_small"
                 />
                 <TextView
