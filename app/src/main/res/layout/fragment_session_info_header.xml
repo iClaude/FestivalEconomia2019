@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.65"/>
+                app:layout_constraintGuide_percent="0.70"/>
 
         <ImageView
                 android:id="@+id/ivAppBarImage"
@@ -70,7 +70,7 @@
                 app:layout_constraintEnd_toEndOf="@id/ivAppBarImage"
                 app:layout_constraintStart_toEndOf="@id/guideline_title_end"
                 app:layout_constraintTop_toTopOf="@id/ivAppBarImage"
-                app:eventHeaderAnim="@{sessionDataDer}"
+                app:lottie_fileName="lottie/lottie_eco_1.json"
                 app:goneWithPhoto="@{sessionDataDer}"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"

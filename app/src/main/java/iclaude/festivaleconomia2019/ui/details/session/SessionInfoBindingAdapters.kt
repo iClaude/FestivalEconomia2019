@@ -71,18 +71,18 @@ fun sessionImage(imageView: ImageView, imageUrl: String?) {
         .into(imageView)
 }
 
-// Lottie animation.
+// Lottie animation: random choice with 5 different animations (unused for now).
 @BindingAdapter("app:eventHeaderAnim")
 fun eventHeaderAnim(lottieView: LottieAnimationView, sessionInfo: SessionInfo) {
     val rnd = (1..6).shuffled().first()
 
     lottieView.setAnimation(
         when (rnd) {
-        1 -> "lottie/eco1.json"
-        2 -> "lottie/eco2.json"
-        3 -> "lottie/eco3.json"
-        4 -> "lottie/eco4.json"
-            else -> "lottie/eco5.json"
+            1 -> "lottie/lottie_eco_1.json"
+            2 -> "lottie/lottie_eco_2.json"
+            3 -> "lottie/lottie_eco_3.json"
+            4 -> "lottie/lottie_eco_4.json"
+            else -> "lottie/lottie_eco_5.json"
         }
     )
 }
