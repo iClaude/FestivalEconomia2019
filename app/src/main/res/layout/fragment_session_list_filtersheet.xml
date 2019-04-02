@@ -103,7 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvTitle"
-                android:alpha="@{viewModelDer.titleHeaderAlphaObs}"
+                android:alpha="@{viewModelDer.titleHeaderAlpha}"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="@dimen/margin_normal" app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="@dimen/margin_normal"
@@ -115,8 +115,8 @@
 
         <com.google.android.material.button.MaterialButton
                 android:text="@string/filter_reset"
-                android:alpha="@{viewModelDer.titleHeaderAlphaObs}"
-                android:clickable="@{viewModelDer.titleHeaderAlphaObs > 0f}"
+                android:alpha="@{viewModelDer.titleHeaderAlpha}"
+                android:clickable="@{viewModelDer.titleHeaderAlpha > 0f}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="@{(viewModelDer.isFilterTagged || viewModelDer.isFilterStarred)? View.VISIBLE : View.GONE}"
@@ -135,8 +135,8 @@
                 app:srcCompat="@drawable/ic_chevron_collapse"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="@dimen/margin_small"
-                android:alpha="@{viewModelDer.titleHeaderAlphaObs}"
-                android:clickable="@{viewModelDer.titleHeaderAlphaObs > 0f}"
+                android:alpha="@{viewModelDer.titleHeaderAlpha}"
+                android:clickable="@{viewModelDer.titleHeaderAlpha > 0f}"
                 android:onClick="@{(v) -> viewModelDer.changeFilterSheetState(false)}"
                 app:layout_constraintTop_toTopOf="parent"
                 android:background="?selectableItemBackgroundBorderless"
@@ -152,8 +152,8 @@
                 app:srcCompat="@drawable/ic_clear_all"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="@dimen/margin_small"
-                android:alpha="@{1f - viewModelDer.titleHeaderAlphaObs}"
-                android:clickable="@{viewModelDer.titleHeaderAlphaObs == 0f}"
+                android:alpha="@{1f - viewModelDer.titleHeaderAlpha}"
+                android:clickable="@{viewModelDer.titleHeaderAlpha == 0f}"
                 android:onClick="@{(v) -> viewModelDer.clearFiltersAndCollapse()}"
                 app:layout_constraintTop_toTopOf="parent"
                 android:background="?selectableItemBackgroundBorderless"
@@ -178,9 +178,9 @@
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_session_tag"
-                android:alpha="@{1f - viewModelDer.titleHeaderAlphaObs}"
+                android:alpha="@{1f - viewModelDer.titleHeaderAlpha}"
                 app:filterTags="@{viewModelDer.filterTags}"
-                android:visibility="@{(viewModelDer.titleHeaderAlphaObs != 1)? View.VISIBLE : View.GONE}"/>
+                android:visibility="@{(viewModelDer.titleHeaderAlpha != 1)? View.VISIBLE : View.GONE}"/>
 
         <View android:layout_width="0dp"
               android:layout_height="0dp"
@@ -190,10 +190,10 @@
               android:layout_marginStart="@dimen/margin_normal"
               app:layout_constraintEnd_toStartOf="@+id/ibClearFilters"
               android:layout_marginEnd="@dimen/margin_small"
-              android:clickable="@{viewModelDer.titleHeaderAlphaObs == 0}"
+              android:clickable="@{viewModelDer.titleHeaderAlpha == 0}"
               android:alpha="0"
               android:onClick="@{(v) -> viewModelDer.changeFilterSheetState(true)}"
-              android:visibility="@{(viewModelDer.titleHeaderAlphaObs != 1)? View.VISIBLE : View.GONE}"/>
+              android:visibility="@{(viewModelDer.titleHeaderAlpha != 1)? View.VISIBLE : View.GONE}"/>
 
         <!--
           ~ Mimics raising the elevation of a container around the header elements (like when an

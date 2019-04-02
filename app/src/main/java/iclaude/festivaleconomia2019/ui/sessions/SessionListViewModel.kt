@@ -3,7 +3,10 @@ package iclaude.festivaleconomia2019.ui.sessions
 import android.app.Application
 import android.net.Uri
 import android.util.Log
-import androidx.databinding.*
+import androidx.databinding.ObservableArrayList
+import androidx.databinding.ObservableField
+import androidx.databinding.ObservableInt
+import androidx.databinding.ObservableList
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -214,7 +217,14 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     val clearTags: LiveData<Int>
         get() = _clearTags
 
-    val titleHeaderAlphaObs: ObservableFloat = ObservableFloat(0f) // change header alpha when dragging bottom sheet
+    // Change header alpha when dragging bottom sheet.
+    private val _titleHeaderAlpha = MutableLiveData<Float>().apply { value = 0f }
+    val titleHeaderAlpha: LiveData<Float>
+        get() = _titleHeaderAlpha
+
+    fun setTitleHeaderAlpha(alpha: Float) {
+        _titleHeaderAlpha.value = alpha
+    }
 
     val scrollYObs: ObservableInt =
         ObservableInt(0) // scroll view inside bottom sheet y offset (used to change header elevation)

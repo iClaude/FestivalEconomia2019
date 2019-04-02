@@ -78,7 +78,7 @@ class SessionContainerFragment : Fragment() {
         // filter sheet
         bottomSheetBehavior = from(bottomSheet)
         viewModel.run {
-            titleHeaderAlphaObs.set(0f)
+            setTitleHeaderAlpha(0f)
             scrollYObs.set(0)
             changeFilterSheetState(false)
 

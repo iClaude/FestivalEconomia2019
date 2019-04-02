@@ -29,7 +29,7 @@ fun addBottomSheetCallback(view: View, viewModel: SessionListViewModel) {
     with(BottomSheetBehavior.from(view)) {
         setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
-                viewModel.titleHeaderAlphaObs.set(slideOffset)
+                viewModel.setTitleHeaderAlpha(slideOffset)
             }
             override fun onStateChanged(bottomSheet: View, newState: Int) {
             }
