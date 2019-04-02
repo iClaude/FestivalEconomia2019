@@ -3,7 +3,6 @@ package iclaude.festivaleconomia2019.ui.sessions
 import android.app.Application
 import android.net.Uri
 import android.util.Log
-import androidx.databinding.ObservableField
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -36,7 +35,10 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     private val mainScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
     // User info.
-    val userImageUriObs: ObservableField<Uri> = ObservableField()
+    private val _userImageUri = MutableLiveData<Uri>()
+    val userImageUri: LiveData<Uri>
+        get() = _userImageUri
+
 
     init {
         App.component.inject(this)
@@ -274,7 +276,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     }
 
     override fun onUserLoggedOut() {
-        userImageUriObs.set(null)
+        _userImageUri.value = null
         sessions.forEach {
             it.starred = false
         }
@@ -289,8 +291,8 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         for (profile in user.providerData) {
             val photoUri = profile.photoUrl
             photoUri?.let {
-                val oldPhotoUri = userImageUriObs.get()
-                if (it != oldPhotoUri) userImageUriObs.set(it)
+                val oldPhotoUri = userImageUri.value
+                if (it != oldPhotoUri) _userImageUri.value = it
                 return
             }
         }
