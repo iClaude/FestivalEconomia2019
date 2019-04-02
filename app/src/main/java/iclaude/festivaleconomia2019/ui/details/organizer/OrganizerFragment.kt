@@ -131,6 +131,7 @@ class OrganizerFragment : Fragment() {
 
         binding = FragmentOrganizerBinding.inflate(inflater, container, false).apply {
             viewModel = this@OrganizerFragment.viewModel
+            lifecycleOwner = this@OrganizerFragment.viewLifecycleOwner
         }
 
         return binding.root

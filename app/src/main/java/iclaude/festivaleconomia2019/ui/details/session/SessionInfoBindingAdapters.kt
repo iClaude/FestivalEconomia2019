@@ -42,7 +42,7 @@ fun displayTitleOrInfo(textView: TextView, sessionInfo: SessionInfo) {
 fun addOnOffsetChangedListener(appBarLayout: AppBarLayout, viewModel: SessionInfoViewModel) {
     appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
         val percCollapsed = verticalOffset.absoluteValue.toFloat() / appBarLayout.totalScrollRange
-        viewModel.appBarCollapsedPercentageObs.set(percCollapsed)
+        viewModel.setAppBarCollapsedPercentage(percCollapsed)
     })
 }
 

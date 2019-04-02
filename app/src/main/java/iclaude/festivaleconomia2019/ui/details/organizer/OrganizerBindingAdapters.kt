@@ -36,7 +36,7 @@ import kotlin.math.absoluteValue
 fun addOnOffsetChangedListener(appBarLayout: AppBarLayout, viewModel: OrganizerViewModel) {
     appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
         val percCollapsed = verticalOffset.absoluteValue.toFloat() / appBarLayout.totalScrollRange
-        viewModel.appBarCollapsedPercentageObs.set(percCollapsed)
+        viewModel.setAppBarCollapsedPercentage(percCollapsed)
     })
 }
 

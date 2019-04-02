@@ -73,7 +73,7 @@
                             android:textAppearance="@style/AppBarTitle"
                             android:alpha="0"
                             app:titleOrInfo="@{sessionData}"
-                            app:showOrHide="@{viewModel.appBarCollapsedPercentageObs}"
+                            app:showOrHide="@{viewModel.appBarCollapsedPercentage}"
                             android:textAlignment="viewStart"/>
 
                 </androidx.appcompat.widget.Toolbar>
@@ -94,7 +94,7 @@
                 android:background="@drawable/oval_ripple"
                 android:stateListAnimator="@animator/fab_raise"
                 android:src="@drawable/asld_star_event"
-                app:starred="@{viewModel.starredSessionObs}"
+                app:starred="@{viewModel.isThisSessionStarred}"
                 app:onStarClickListener="@{sessionData.id}"
                 app:viewModel="@{viewModel}"
                 app:layout_behavior="iclaude.festivaleconomia2019.ui.utils.StarButtonBehavior"/>

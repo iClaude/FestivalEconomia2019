@@ -142,6 +142,7 @@ class SessionInfoFragment : Fragment() {
 
         binding = FragmentSessionInfoBinding.inflate(inflater, container, false).apply {
             viewModel = this@SessionInfoFragment.viewModel
+            lifecycleOwner = this@SessionInfoFragment.viewLifecycleOwner
         }
 
         return binding.root

@@ -71,7 +71,7 @@
                             android:textAppearance="@style/AppBarTitle"
                             android:alpha="0"
                             android:text="@{organizerData.name}"
-                            app:showOrHide="@{viewModel.appBarCollapsedPercentageObs}"
+                            app:showOrHide="@{viewModel.appBarCollapsedPercentage}"
                             android:textAlignment="viewStart"/>
 
                 </androidx.appcompat.widget.Toolbar>

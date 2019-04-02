@@ -1,8 +1,6 @@
 package iclaude.festivaleconomia2019.ui.details.session
 
 import android.util.Log
-import androidx.databinding.ObservableBoolean
-import androidx.databinding.ObservableFloat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -140,8 +138,10 @@ class SessionInfoViewModel : ViewModel(), LoginFlow, RelatedSessions {
      * Starred sessions (related events).
      */
 
-    // Star FAB representing this session.
-    val starredSessionObs = ObservableBoolean(false)
+    // If this session is starred the FAB should be checked.
+    private val _isThisSessionStarred = MutableLiveData<Boolean>().apply { value = false }
+    val isThisSessionStarred: LiveData<Boolean>
+        get() = _isThisSessionStarred
 
     /**
      * Find starred sessions for logged-in users.
@@ -159,7 +159,7 @@ class SessionInfoViewModel : ViewModel(), LoginFlow, RelatedSessions {
                     if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
 
                     _starredSessionsLive.value = userInFirebase.starredSessions
-                    starredSessionObs.set(userInFirebase.starredSessions.contains(sessionInfo.id))
+                    _isThisSessionStarred.value = userInFirebase.starredSessions.contains(sessionInfo.id)
                 }
             },
             OnFailureListener { Log.w(TAG, "Error getting user in Firebase", it) })
@@ -202,8 +202,18 @@ class SessionInfoViewModel : ViewModel(), LoginFlow, RelatedSessions {
         repository.addUser(user)
     }
 
-    // AppBar info.
-    val appBarCollapsedPercentageObs = ObservableFloat(0f)
+    /**
+     * AppBar info.
+     */
+
+    // When app bar is collapsed we need to display the title (or generic info) in the Toolbar.
+    private val _appBarCollapsedPercentage = MutableLiveData<Float>().apply { value = 0f }
+    val appBarCollapsedPercentage: LiveData<Float>
+        get() = _appBarCollapsedPercentage
+
+    fun setAppBarCollapsedPercentage(perc: Float) {
+        _appBarCollapsedPercentage.value = perc
+    }
 
 }
 

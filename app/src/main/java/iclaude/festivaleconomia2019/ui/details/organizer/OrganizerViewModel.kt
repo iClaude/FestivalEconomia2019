@@ -1,7 +1,6 @@
 package iclaude.festivaleconomia2019.ui.details.organizer
 
 import android.util.Log
-import androidx.databinding.ObservableFloat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -72,8 +71,14 @@ class OrganizerViewModel : ViewModel(), LoginFlow, RelatedSessions {
      * AppBar info.
      */
 
-    // App bar collapsed percentage.
-    val appBarCollapsedPercentageObs = ObservableFloat(0f)
+    // When app bar is collapsed we need to display organizer's name in the Toolbar.
+    private val _appBarCollapsedPercentage = MutableLiveData<Float>().apply { value = 0f }
+    val appBarCollapsedPercentage: LiveData<Float>
+        get() = _appBarCollapsedPercentage
+
+    fun setAppBarCollapsedPercentage(perc: Float) {
+        _appBarCollapsedPercentage.value = perc
+    }
 
     // Avatar has been loaded.
     private val _avatarLoadedEvent = MutableLiveData<Event<Any>>()
