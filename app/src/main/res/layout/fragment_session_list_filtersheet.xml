@@ -179,7 +179,7 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_session_tag"
                 android:alpha="@{1f - viewModelDer.titleHeaderAlphaObs}"
-                app:filterTags="@{viewModelDer.filterTagsObs}"
+                app:filterTags="@{viewModelDer.filterTags}"
                 android:visibility="@{(viewModelDer.titleHeaderAlphaObs != 1)? View.VISIBLE : View.GONE}"/>
 
         <View android:layout_width="0dp"

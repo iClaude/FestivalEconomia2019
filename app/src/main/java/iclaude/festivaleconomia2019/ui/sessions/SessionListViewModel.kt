@@ -78,8 +78,11 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     val isFilterTaggedObs: ObservableBoolean = ObservableBoolean(false) // does current filter have tags?
     val isFilterStarredObs: ObservableBoolean =
         ObservableBoolean(false) // does current filter include starred sessions?
-    val filterTagsObs: ObservableList<Tag> =
-        ObservableArrayList() // list of selected tags (filters) to show when filter sheet is collapsed
+
+    // List of selected tags (filters) to show when filter sheet is collapsed.
+    private val _filterTags = MutableLiveData<List<Tag>>().apply { value = mutableListOf() }
+    val filterTags: LiveData<List<Tag>>
+        get() = _filterTags
 
 
     /**
@@ -153,8 +156,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
                 sessionsFilteredObs.set(filteredList.size)
                 isFilterTaggedObs.set(filter.hasTags())
                 isFilterStarredObs.set(filter.isStarred())
-                filterTagsObs.apply {
-                    clear()
+                _filterTags.value = mutableListOf<Tag>().apply {
                     if (filter.isStarred()) this.add(starredTag)
                     this.addAll(filter.tagsTypes + filter.tagsTopics)
                 }

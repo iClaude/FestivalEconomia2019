@@ -51,6 +51,7 @@ class SessionContainerFragment : Fragment() {
     ): View? {
         binding = FragmentSessionContainerBinding.inflate(inflater, container, false).apply {
             viewModel = this@SessionContainerFragment.viewModel
+            lifecycleOwner = this@SessionContainerFragment.viewLifecycleOwner
         }
 
         return binding.root
