@@ -3,9 +3,7 @@ package iclaude.festivaleconomia2019.ui.sessions
 import android.app.Application
 import android.net.Uri
 import android.util.Log
-import androidx.databinding.ObservableArrayList
 import androidx.databinding.ObservableField
-import androidx.databinding.ObservableList
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -204,11 +202,16 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         get() = _numOfSessionsFiltered
 
 
-    val tagsObs: ObservableList<Tag> = ObservableArrayList() // list of all tags: used to add Chips to ChipGroups
+    // List of all tags: used to add Chips to ChipGroups.
+    private val _tags = MutableLiveData<List<Tag>>().apply { value = mutableListOf() }
+    val tags: LiveData<List<Tag>>
+        get() = _tags
+
     private fun loadAllTags() {
         val tags = repository.eventDataLive.value?.tags
-        tagsObs.clear()
-        tagsObs.addAll(tags ?: return)
+        _tags.value = mutableListOf<Tag>().apply {
+            addAll(tags ?: return)
+        }
     }
 
     // When filter is cleared all Chips in ChipGroups must be unchecked.
