@@ -5,7 +5,6 @@ import android.text.SpannableString
 import android.text.SpannableStringBuilder
 import android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
 import android.text.method.LinkMovementMethod
-import android.text.style.URLSpan
 import android.view.LayoutInflater
 import android.view.View.GONE
 import android.view.View.VISIBLE
@@ -25,6 +24,7 @@ import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.ItemSessionRelatedBinding
 import iclaude.festivaleconomia2019.model.data_classes.Location
 import iclaude.festivaleconomia2019.model.data_classes.Session
+import iclaude.festivaleconomia2019.ui.utils.MyClickableSpan
 import kotlin.math.absoluteValue
 
 /**
@@ -101,16 +101,19 @@ fun createSpeakerLinksView(
         R.string.organizer_link_linkedin to linkedInUrl,
         R.string.organizer_link_facebook to facebookUrl
     )
-        .filterValues { !it.isNullOrEmpty() }
+        .filterValues {
+            !it.isNullOrEmpty()
+        }
         .map { (labelRes, url) ->
             val span = SpannableString(textView.context.getString(labelRes))
-            span.setSpan(URLSpan(url), 0, span.length, SPAN_EXCLUSIVE_EXCLUSIVE)
+            span.setSpan(MyClickableSpan(textView.context, url!!), 0, span.length, SPAN_EXCLUSIVE_EXCLUSIVE)
             span
         }
         .joinTo(
             SpannableStringBuilder(),
             separator = " - "
         )
+
     if (links.isNotBlank()) {
         textView.apply {
             visibility = VISIBLE
