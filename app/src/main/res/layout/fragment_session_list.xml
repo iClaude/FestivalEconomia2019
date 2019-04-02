@@ -21,13 +21,13 @@
                 android:layout_width="120dp"
                 android:layout_height="120dp" app:srcCompat="@drawable/event_logo" android:id="@+id/imageView2"
                 android:scaleType="centerInside" android:layout_gravity="center"
-                android:visibility="@{viewModel.dataLoadedObs? View.GONE : View.VISIBLE}"/>
+                android:visibility="@{viewModel.isDataLoaded? View.GONE : View.VISIBLE}"/>
         <ProgressBar
                 style="?android:attr/progressBarStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/progressBar"
-                android:visibility="@{viewModel.dataLoadedObs? View.GONE : View.VISIBLE}"
+                android:visibility="@{viewModel.isDataLoaded? View.GONE : View.VISIBLE}"
                 android:layout_marginTop="64dp" android:layout_gravity="center_horizontal"/>
 
         <androidx.recyclerview.widget.RecyclerView

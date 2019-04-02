@@ -98,7 +98,9 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     private var sessions: MutableList<SessionInfoForList> = mutableListOf()
 
-    val dataLoadedObs: ObservableBoolean = ObservableBoolean(false)
+    private val _isDataLoaded = MutableLiveData<Boolean>().apply { value = false }
+    val isDataLoaded: LiveData<Boolean>
+        get() = _isDataLoaded
 
     // List of filtered sessions.
     private val _sessionsInfoFilteredLive: MutableLiveData<List<SessionInfoForList>> = MutableLiveData()
@@ -131,7 +133,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
             }.toMutableList()
 
             mainScope.launch {
-                dataLoadedObs.set(true)
+                _isDataLoaded.value = true
                 _sessionsInfoFilteredLive.value = sessions
                 loadAllTags()
                 updateSessionListWithStarredSessions()
