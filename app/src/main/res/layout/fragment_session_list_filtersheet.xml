@@ -109,7 +109,7 @@
                 android:layout_marginEnd="@dimen/margin_normal"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="?android:textColorPrimary"
-                android:text="@{(viewModelDer.isFilterTagged || viewModelDer.isFilterStarred)? @plurals/filtered_sessions(viewModelDer.sessionsFilteredObs, viewModelDer.sessionsFilteredObs) : @string/filters}"
+                android:text="@{(viewModelDer.isFilterTagged || viewModelDer.isFilterStarred)? @plurals/filtered_sessions(viewModelDer.numOfSessionsFiltered, viewModelDer.numOfSessionsFiltered) : @string/filters}"
                 app:layout_constraintBottom_toTopOf="@+id/guideline1"
                 app:layout_constraintTop_toTopOf="parent"/>
 

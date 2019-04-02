@@ -162,7 +162,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
             mainScope.launch {
                 _sessionsInfoFilteredLive.value = filteredList
-                sessionsFilteredObs.set(filteredList.size)
+                _numOfSessionsFiltered.value = filteredList.size
                 _isFilterTagged.value = filter.hasTags()
                 _isFilterStarred.value = filter.isStarred()
                 _filterTags.value = mutableListOf<Tag>().apply {
@@ -196,8 +196,11 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
     // BottomSheet UI.
     lateinit var starredTag: Tag
 
-    val sessionsFilteredObs: ObservableInt =
-        ObservableInt(0) // number of filtered sessions (to display in filter sheets when some tags are selected)
+    // Number of filtered sessions (to display in filter sheets when some tags are selected).
+    private val _numOfSessionsFiltered = MutableLiveData<Int>().apply { value = 0 }
+    val numOfSessionsFiltered: LiveData<Int>
+        get() = _numOfSessionsFiltered
+
 
     val tagsObs: ObservableList<Tag> = ObservableArrayList() // list of all tags: used to add Chips to ChipGroups
     private fun loadAllTags() {
