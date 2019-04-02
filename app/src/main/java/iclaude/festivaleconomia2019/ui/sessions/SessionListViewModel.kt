@@ -5,7 +5,6 @@ import android.net.Uri
 import android.util.Log
 import androidx.databinding.ObservableArrayList
 import androidx.databinding.ObservableField
-import androidx.databinding.ObservableInt
 import androidx.databinding.ObservableList
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
@@ -226,8 +225,14 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         _titleHeaderAlpha.value = alpha
     }
 
-    val scrollYObs: ObservableInt =
-        ObservableInt(0) // scroll view inside bottom sheet y offset (used to change header elevation)
+    // Scroll view inside bottom sheet y offset (used to change header elevation).
+    private val _scrollY = MutableLiveData<Int>().apply { value = 0 }
+    val scrollY: LiveData<Int>
+        get() = _scrollY
+
+    fun setScrollY(scroll: Int) {
+        _scrollY.value = scroll
+    }
 
     // BottomSheet expand/collapse states.
 

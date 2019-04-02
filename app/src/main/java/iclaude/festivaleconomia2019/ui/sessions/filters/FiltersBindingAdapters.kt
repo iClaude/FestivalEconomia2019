@@ -114,7 +114,7 @@ fun filterTags(recyclerView: RecyclerView, filterTags: List<Tag>?) {
 @BindingAdapter("app:scrollListener")
 fun addScrollListener(nestedScrollView: NestedScrollView, viewModel: SessionListViewModel) {
     nestedScrollView.setOnScrollChangeListener { v: NestedScrollView?, scrollX: Int, scrollY: Int, oldScrollX: Int, oldScrollY: Int ->
-        viewModel.scrollYObs.set(scrollY)
+        viewModel.setScrollY(scrollY)
     }
 }
 
