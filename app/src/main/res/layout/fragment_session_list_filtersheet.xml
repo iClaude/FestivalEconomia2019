@@ -28,7 +28,7 @@
             android:layout_marginBottom="4dp"
             app:behavior_peekHeight="@dimen/filtersheet_peek_height"
             app:bottomSheetCallback="@{viewModelDer}"
-            app:filterSheetHideable="@{viewModelDer.isFilterTaggedObs || viewModelDer.isFilterStarredObs}">
+            app:filterSheetHideable="@{viewModelDer.isFilterTaggedObs || viewModelDer.isFilterStarred}">
 
 
         <androidx.core.widget.NestedScrollView
@@ -94,7 +94,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         android:text="@string/starred_events"
-                        android:checked="@{viewModelDer.isFilterStarredObs}"
+                        android:checked="@{viewModelDer.isFilterStarred}"
                         app:starredChip="@{viewModelDer}"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -109,7 +109,7 @@
                 android:layout_marginEnd="@dimen/margin_normal"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="?android:textColorPrimary"
-                android:text="@{(viewModelDer.isFilterTaggedObs || viewModelDer.isFilterStarredObs)? @plurals/filtered_sessions(viewModelDer.sessionsFilteredObs, viewModelDer.sessionsFilteredObs) : @string/filters}"
+                android:text="@{(viewModelDer.isFilterTaggedObs || viewModelDer.isFilterStarred)? @plurals/filtered_sessions(viewModelDer.sessionsFilteredObs, viewModelDer.sessionsFilteredObs) : @string/filters}"
                 app:layout_constraintBottom_toTopOf="@+id/guideline1"
                 app:layout_constraintTop_toTopOf="parent"/>
 
@@ -119,7 +119,7 @@
                 android:clickable="@{viewModelDer.titleHeaderAlphaObs > 0f}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="@{(viewModelDer.isFilterTaggedObs || viewModelDer.isFilterStarredObs)? View.VISIBLE : View.GONE}"
+                android:visibility="@{(viewModelDer.isFilterTaggedObs || viewModelDer.isFilterStarred)? View.VISIBLE : View.GONE}"
                 android:onClick="@{(v) -> viewModelDer.clearFilters()}"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:id="@+id/bReset"

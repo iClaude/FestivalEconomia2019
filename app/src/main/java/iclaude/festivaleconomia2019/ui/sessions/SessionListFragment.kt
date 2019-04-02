@@ -49,6 +49,7 @@ class SessionListFragment : Fragment() {
     ): View? {
         binding = FragmentSessionListBinding.inflate(inflater, container, false).apply {
             viewModel = this@SessionListFragment.viewModel
+            lifecycleOwner = this@SessionListFragment.viewLifecycleOwner
         }
 
         with(binding.rvSessions) {
