@@ -20,7 +20,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/bottom_navigation_height">
 
         <TextView
                 android:id="@+id/tvBio"
@@ -50,7 +51,7 @@
                 app:twitterUrl="@{organizerDataDer.twitterUrl}"
                 app:linkedInUrl="@{organizerDataDer.linkedInUrl}"
                 app:facebookUrl="@{organizerDataDer.facebookUrl}"
-                android:textColor="@color/link"/>
+                android:textColor="@color/link" android:textStyle="bold"/>
 
         <TextView
                 android:id="@+id/tvRelatedEventsTitle"

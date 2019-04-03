@@ -81,7 +81,6 @@
                 android:scaleType="centerCrop"
                 app:liveStreamedVisibility="@{session}"
                 app:layout_constraintTop_toTopOf="@+id/tvLenLoc"
-                app:layout_constraintBottom_toBottomOf="@+id/tvLenLoc"
                 android:contentDescription="@string/content_description"/>
 
         <TextView
