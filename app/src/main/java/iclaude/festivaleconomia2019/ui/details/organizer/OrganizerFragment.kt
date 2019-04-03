@@ -43,8 +43,8 @@ class OrganizerFragment : Fragment() {
         // Avatar transition.
         activity?.postponeEnterTransition()
 
-        with(TransitionInflater.from(context).inflateTransition(android.R.transition.move)) {
-            duration = 300 // bug in source code?
+        with(TransitionInflater.from(context).inflateTransition(R.transition.changebounds_with_arcmotion)) {
+            duration = 1500 // bug in source code?
             sharedElementEnterTransition = this
             sharedElementReturnTransition = this // currently not working
         }
