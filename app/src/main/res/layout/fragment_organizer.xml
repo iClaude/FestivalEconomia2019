@@ -16,6 +16,10 @@
         <variable
                 name="viewModel"
                 type="iclaude.festivaleconomia2019.ui.details.organizer.OrganizerViewModel"/>
+
+        <variable
+                name="avatarListener"
+                type="iclaude.festivaleconomia2019.ui.details.organizer.ImageLoadListener"/>
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -48,7 +52,8 @@
                         android:id="@+id/header"
                         layout="@layout/fragment_organizer_header"
                         bind:organizerDataDer="@{organizerData}"
-                        bind:viewModelDer="@{viewModel}"/>
+                        bind:viewModelDer="@{viewModel}"
+                        bind:avatarListenerDer="@{avatarListener}"/>
 
                 <androidx.appcompat.widget.Toolbar
                         android:id="@+id/toolbar"

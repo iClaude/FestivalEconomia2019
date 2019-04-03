@@ -1,5 +1,6 @@
 package iclaude.festivaleconomia2019.ui.details.session
 
+import android.graphics.drawable.Drawable
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
@@ -11,8 +12,12 @@ import androidx.core.view.plusAssign
 import androidx.databinding.BindingAdapter
 import com.airbnb.lottie.LottieAnimationView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.request.target.Target
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.internal.CheckableImageButton
 import com.google.firebase.auth.FirebaseAuth
@@ -21,8 +26,10 @@ import iclaude.festivaleconomia2019.databinding.ItemOrganizerBinding
 import iclaude.festivaleconomia2019.databinding.ItemSessionRelatedBinding
 import iclaude.festivaleconomia2019.model.data_classes.*
 import iclaude.festivaleconomia2019.ui.details.RelatedSessions
+import iclaude.festivaleconomia2019.ui.details.organizer.ImageLoadListener
 import iclaude.festivaleconomia2019.ui.login.LoginFlow
 import iclaude.festivaleconomia2019.ui.utils.*
+import kotlinx.android.synthetic.main.item_organizer.view.*
 import kotlin.math.absoluteValue
 
 /**
@@ -125,14 +132,19 @@ fun addOrganizers(layout: LinearLayout, organizers: List<Organizer>, viewModel: 
         val binding = ItemOrganizerBinding.inflate(LayoutInflater.from(context), layout, false).apply {
             setOrganizer(organizer)
             setViewModel(viewModel)
-            ivAvatar.transitionName = "${context.getString(R.string.speaker_headshot_transition)}${organizer.id}"
+            ivAvatar.transitionName += organizer.id
         }
+
+        binding.root.setOnClickListener {
+            viewModel.goToOrganizer(SharedElementTransitionData(it.ivAvatar, it.ivAvatar.transitionName, organizer.id))
+        }
+
         layout += binding.root
     }
 }
 
-@BindingAdapter("app:speakerImage")
-fun speakerImage(imageView: ImageView, organizer: Organizer?) {
+@BindingAdapter("app:speakerImage", "app:listener", requireAll = false)
+fun speakerImage(imageView: ImageView, organizer: Organizer?, listener: ImageLoadListener?) {
     organizer ?: return
 
     // Want a 'random' default avatar but should be stable as used on both session details &
@@ -144,14 +156,41 @@ fun speakerImage(imageView: ImageView, organizer: Organizer?) {
     }
 
     if (organizer.hasThumbnailUrl()) {
-        Glide.with(imageView)
+        val imageLoad = Glide.with(imageView)
             .load(organizer.thumbnailUrl)
             .apply(
                 RequestOptions()
                     .placeholder(placeholderId)
                     .circleCrop()
             )
-            .into(imageView)
+
+        if (listener != null) {
+            imageLoad.listener(object : RequestListener<Drawable?> {
+                override fun onLoadFailed(
+                    e: GlideException?,
+                    model: Any?,
+                    target: Target<Drawable?>?,
+                    isFirstResource: Boolean
+                ): Boolean {
+                    listener.onImageLoadFailed()
+                    return false
+                }
+
+                override fun onResourceReady(
+                    resource: Drawable?,
+                    model: Any?,
+                    target: Target<Drawable?>?,
+                    dataSource: DataSource?,
+                    isFirstResource: Boolean
+                ): Boolean {
+                    listener.onImageLoaded()
+                    return false
+                }
+            })
+        }
+
+        imageLoad.into(imageView)
+
     } else {
         imageView.setImageResource(placeholderId)
     }

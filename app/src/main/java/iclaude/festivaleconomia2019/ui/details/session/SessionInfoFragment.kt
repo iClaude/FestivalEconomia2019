@@ -31,7 +31,6 @@ import iclaude.festivaleconomia2019.ui.utils.EventObserver
 import iclaude.festivaleconomia2019.ui.utils.sessionInfoTimeDetails
 import kotlinx.android.synthetic.main.fragment_session_info.*
 import kotlinx.android.synthetic.main.fragment_session_info_content.*
-import kotlinx.android.synthetic.main.item_organizer.*
 
 
 class SessionInfoFragment : Fragment() {
@@ -81,11 +80,11 @@ class SessionInfoFragment : Fragment() {
                 }
             })
 
-            goToOrganizerEvent.observe(this@SessionInfoFragment, EventObserver { organizerId ->
+            goToOrganizerEvent.observe(this@SessionInfoFragment, EventObserver {
                 val extras =
-                    FragmentNavigatorExtras(ivAvatar to "${context!!.getString(R.string.speaker_headshot_transition)}${organizerId}") // use a unique transition name for each avatar in the list
+                    FragmentNavigatorExtras(it.avatar to it.nameOfTransition) // use a unique transition name for each avatar in the list
                 val action =
-                    SessionInfoFragmentDirections.actionSessionInfoFragmentToOrganizerFragment(organizerId).run {
+                    SessionInfoFragmentDirections.actionSessionInfoFragmentToOrganizerFragment(it.idOfOrganizer).run {
                         findNavController().navigate(this, extras)
                     }
             })

@@ -20,8 +20,7 @@
             android:clickable="true"
             android:background="?android:attr/selectableItemBackground"
             android:paddingTop="@dimen/spacing_normal"
-            android:paddingBottom="@dimen/spacing_normal"
-            android:onClick="@{() -> viewModel.goToOrganizer(organizer.id)}">
+            android:paddingBottom="@dimen/spacing_normal">
 
         <ImageView
                 android:id="@+id/ivAvatar"
@@ -33,6 +32,7 @@
                 tools:src="@tools:sample/avatars"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:transitionName="@string/speaker_headshot_transition"
                 app:speakerImage="@{organizer}"/>
         <TextView
                 android:text="@{organizer.name}"

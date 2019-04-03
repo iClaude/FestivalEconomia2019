@@ -1,6 +1,7 @@
 package iclaude.festivaleconomia2019.ui.details.session
 
 import android.util.Log
+import android.widget.ImageView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -125,12 +126,12 @@ class SessionInfoViewModel : ViewModel(), LoginFlow, RelatedSessions {
      * User clicks on an organizer to navigate to it.
      */
 
-    private val _goToOrganizerEvent = MutableLiveData<Event<String>>()
-    val goToOrganizerEvent: LiveData<Event<String>>
+    private val _goToOrganizerEvent = MutableLiveData<Event<SharedElementTransitionData>>()
+    val goToOrganizerEvent: LiveData<Event<SharedElementTransitionData>>
         get() = _goToOrganizerEvent
 
-    fun goToOrganizer(organizerId: String) {
-        _goToOrganizerEvent.value = Event(organizerId)
+    fun goToOrganizer(data: SharedElementTransitionData) {
+        _goToOrganizerEvent.value = Event(data)
     }
 
 
@@ -235,3 +236,5 @@ class SessionInfo(
 )
 
 fun SessionInfo.hasRelatedSessions() = relatedSessions?.isNotEmpty() ?: false
+
+class SharedElementTransitionData(val avatar: ImageView, val nameOfTransition: String, val idOfOrganizer: String)

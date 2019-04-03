@@ -40,36 +40,36 @@ fun addOnOffsetChangedListener(appBarLayout: AppBarLayout, viewModel: OrganizerV
     })
 }
 
-/**
- * Loads a [Speaker]'s photo or picks a default avatar if no photo is specified.
- */
-@BindingAdapter("speakerImageWithListener", "app:viewModel", requireAll = true)
-fun speakerImage(imageView: ImageView, organizerInfo: OrganizerInfo?, viewModel: OrganizerViewModel) {
-    organizerInfo ?: return
+@BindingAdapter("app:speakerImage", "app:listener", requireAll = false)
+fun speakerImage(imageView: ImageView, organizer: OrganizerInfo?, listener: ImageLoadListener?) {
+    organizer ?: return
 
-    val placeholderId = when (organizerInfo.name[0].toLowerCase()) {
+    // Want a 'random' default avatar but should be stable as used on both session details &
+    // speaker detail screens (as a shared element transition), so use first initial to pick.
+    val placeholderId = when (organizer.name[0].toLowerCase()) {
         in 'a'..'i' -> R.drawable.ic_default_avatar_1
         in 'j'..'r' -> R.drawable.ic_default_avatar_2
         else -> R.drawable.ic_default_avatar_3
     }
 
-    if (organizerInfo.thumbnailUrl.isNullOrBlank()) {
-        imageView.setImageResource(placeholderId)
-        viewModel.avatarWasLoaded()
-    } else {
-        Glide.with(imageView)
-            .load(organizerInfo.thumbnailUrl)
+    if (!organizer.thumbnailUrl.isNullOrEmpty()) {
+        val imageLoad = Glide.with(imageView)
+            .load(organizer.thumbnailUrl)
             .apply(
                 RequestOptions()
                     .placeholder(placeholderId)
                     .circleCrop()
-                    .onlyRetrieveFromCache(true)
             )
-            .listener(object : RequestListener<Drawable?> {
+
+        if (listener != null) {
+            imageLoad.listener(object : RequestListener<Drawable?> {
                 override fun onLoadFailed(
-                    e: GlideException?, model: Any?, target: Target<Drawable?>?, isFirstResource: Boolean
+                    e: GlideException?,
+                    model: Any?,
+                    target: Target<Drawable?>?,
+                    isFirstResource: Boolean
                 ): Boolean {
-                    viewModel.avatarWasLoaded()
+                    listener.onImageLoadFailed()
                     return false
                 }
 
@@ -80,11 +80,16 @@ fun speakerImage(imageView: ImageView, organizerInfo: OrganizerInfo?, viewModel:
                     dataSource: DataSource?,
                     isFirstResource: Boolean
                 ): Boolean {
-                    viewModel.avatarWasLoaded()
+                    listener.onImageLoaded()
                     return false
                 }
             })
-            .into(imageView)
+        }
+
+        imageLoad.into(imageView)
+
+    } else {
+        imageView.setImageResource(placeholderId)
     }
 }
 
@@ -149,4 +154,12 @@ fun addRelatedSessions(layout: LinearLayout, relatedSessions: List<Session>, vie
         val view = binding.root.apply { tag = session.id }
         layout += view
     }
+}
+
+/**
+ * An interface for responding to image loading completion.
+ */
+interface ImageLoadListener {
+    fun onImageLoaded()
+    fun onImageLoadFailed()
 }

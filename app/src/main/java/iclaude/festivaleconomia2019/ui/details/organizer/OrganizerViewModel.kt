@@ -63,6 +63,8 @@ class OrganizerViewModel : ViewModel(), LoginFlow, RelatedSessions {
             if (organizer.hasfacebookUrl()) organizer.facebookUrl else null
         )
 
+        _hasProfileImageEvent.value = Event(!organizerInfo.thumbnailUrl.isNullOrEmpty())
+
         // Session info loaded: communicate it to Fragment in order to bind data to layout.
         _organizerInfoLoadedEvent.value = Event(organizerInfo)
     }
@@ -81,13 +83,9 @@ class OrganizerViewModel : ViewModel(), LoginFlow, RelatedSessions {
     }
 
     // Avatar has been loaded.
-    private val _avatarLoadedEvent = MutableLiveData<Event<Any>>()
-    val avatarLoadedEvent: LiveData<Event<Any>>
-        get() = _avatarLoadedEvent
-
-    fun avatarWasLoaded() {
-        _avatarLoadedEvent.value = Event(Unit)
-    }
+    private val _hasProfileImageEvent = MutableLiveData<Event<Boolean>>()
+    val hasProfileImageEvent: LiveData<Event<Boolean>>
+        get() = _hasProfileImageEvent
 
     /**
      * User clicks on a related session to navigate to it.

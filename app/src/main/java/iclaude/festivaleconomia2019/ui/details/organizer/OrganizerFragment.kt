@@ -7,6 +7,7 @@ import android.preference.PreferenceManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.core.content.edit
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
@@ -24,9 +25,9 @@ import iclaude.festivaleconomia2019.ui.login.LoginFlow
 import iclaude.festivaleconomia2019.ui.login.LoginManager
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
+import iclaude.festivaleconomia2019.ui.utils.postponeEnterTransition
 import kotlinx.android.synthetic.main.fragment_organizer_content.*
 import kotlinx.android.synthetic.main.fragment_session_info.*
-import kotlinx.android.synthetic.main.item_organizer.*
 
 class OrganizerFragment : Fragment() {
 
@@ -40,11 +41,8 @@ class OrganizerFragment : Fragment() {
         activity?.window?.statusBarColor = Color.TRANSPARENT
         super.onCreate(savedInstanceState)
 
-        // Avatar transition.
-        activity?.postponeEnterTransition()
-
         with(TransitionInflater.from(context).inflateTransition(R.transition.changebounds_with_arcmotion)) {
-            duration = 1500 // bug in source code?
+            duration = 500 // bug in source code?
             sharedElementEnterTransition = this
             sharedElementReturnTransition = this // currently not working
         }
@@ -59,6 +57,9 @@ class OrganizerFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Delay the Activity enter transition until speaker image has loaded
+        activity?.postponeEnterTransition(500L)
+
         idOrganizer = OrganizerFragmentArgs.fromBundle(arguments!!).organizerId
 
         viewModel.apply {
@@ -68,15 +69,15 @@ class OrganizerFragment : Fragment() {
                 viewModel.loadOrganizerInfo()
             })
 
+            hasProfileImageEvent.observe(this@OrganizerFragment, EventObserver { hasProfile ->
+                if (!hasProfile) activity?.startPostponedEnterTransition()
+            })
+
             organizerInfoLoadedEvent.observe(this@OrganizerFragment, EventObserver { info ->
                 binding.apply {
                     organizerData = info
                 }
                 viewModel.findStarredSessions()
-            })
-
-            avatarLoadedEvent.observe(this@OrganizerFragment, EventObserver {
-                activity?.startPostponedEnterTransition()
             })
 
             goToSessionEvent.observe(this@OrganizerFragment, EventObserver {
@@ -132,7 +133,20 @@ class OrganizerFragment : Fragment() {
         binding = FragmentOrganizerBinding.inflate(inflater, container, false).apply {
             viewModel = this@OrganizerFragment.viewModel
             lifecycleOwner = this@OrganizerFragment.viewLifecycleOwner
+
+            avatarListener = object : ImageLoadListener {
+                override fun onImageLoaded() {
+                    activity?.startPostponedEnterTransition()
+                }
+
+                override fun onImageLoadFailed() {
+                    activity?.startPostponedEnterTransition()
+                }
+            }
         }
+
+        // retrieve the unique transition name for the organizer's avatar (there could be more organizers for the same event and we must know which avatar to animate)
+        binding.root.findViewById<ImageView>(R.id.ivAvatar).transitionName += idOrganizer
 
         return binding.root
     }
@@ -140,8 +154,6 @@ class OrganizerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        ivAvatar.transitionName =
-            "${context!!.getString(R.string.speaker_headshot_transition)}${idOrganizer}" // retrieve the unique transition name for the organizer's avatar (there could be more organizers for the same event and we must know which avatar to animate)
         toolbar.setupWithNavController(findNavController())
     }
 
