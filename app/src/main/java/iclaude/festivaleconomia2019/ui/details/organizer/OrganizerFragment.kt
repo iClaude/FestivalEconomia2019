@@ -1,7 +1,6 @@
 package iclaude.festivaleconomia2019.ui.details.organizer
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.LayoutInflater
@@ -38,7 +37,6 @@ class OrganizerFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        activity?.window?.statusBarColor = Color.TRANSPARENT
         super.onCreate(savedInstanceState)
 
         with(TransitionInflater.from(context).inflateTransition(R.transition.changebounds_with_arcmotion)) {

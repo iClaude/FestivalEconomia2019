@@ -2,7 +2,6 @@ package iclaude.festivaleconomia2019.ui.details.session
 
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.LayoutInflater
@@ -41,7 +40,6 @@ class SessionInfoFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        activity?.window?.statusBarColor = Color.TRANSPARENT
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
 

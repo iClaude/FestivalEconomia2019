@@ -26,14 +26,12 @@
             android:id="@+id/coordinatorLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".ui.details.organizer.OrganizerFragment"
-            android:fitsSystemWindows="true">
+            tools:context=".ui.details.organizer.OrganizerFragment">
 
         <com.google.android.material.appbar.AppBarLayout
                 android:id="@+id/appbar"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/session_info_appbar_height"
-                android:fitsSystemWindows="true"
                 android:background="@color/surfaceColor"
                 android:elevation="4dp"
                 app:onOffsetChangedListener="@{viewModel}">
@@ -45,8 +43,7 @@
                     app:layout_scrollFlags="scroll|exitUntilCollapsed"
                     app:titleEnabled="false"
                     app:contentScrim="@color/surfaceColor"
-                    app:statusBarScrim="@color/statusBarColor"
-                    android:fitsSystemWindows="true">
+                    app:statusBarScrim="@color/statusBarColor">
 
                 <include
                         android:id="@+id/header"
