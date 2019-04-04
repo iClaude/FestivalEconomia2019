@@ -79,12 +79,12 @@ class SessionInfoFragment : Fragment() {
             })
 
             goToOrganizerEvent.observe(this@SessionInfoFragment, EventObserver {
-                val extras =
-                    FragmentNavigatorExtras(it.avatar to it.nameOfTransition) // use a unique transition name for each avatar in the list
-                val action =
-                    SessionInfoFragmentDirections.actionSessionInfoFragmentToOrganizerFragment(it.idOfOrganizer).run {
-                        findNavController().navigate(this, extras)
-                    }
+                // Use a unique transition name for each avatar in the list.
+                val extras = FragmentNavigatorExtras(it.avatar to it.nameOfTransition)
+                findNavController().navigate(
+                    R.id.action_sessionInfoFragment_to_organizerFragment,
+                    bundleOf("organizerId" to it.idOfOrganizer), null, extras
+                )
             })
 
             goToSessionEvent.observe(this@SessionInfoFragment, EventObserver {
