@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <transitionSet>
     <changeBounds>
-        <arcMotion/>
+        <pathMotion class="iclaude.festivaleconomia2019.ui.utils.TransitionArcMotion"/>
     </changeBounds>
     <changeTransform/>
     <changeClipBounds/>
