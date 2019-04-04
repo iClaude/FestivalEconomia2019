@@ -12,8 +12,6 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ui.details.DetailsActivity">
-        </activity>
 
         <uses-library
                 android:name="org.apache.http.legacy"
@@ -29,10 +27,11 @@
 
         <meta-data
                 android:name="preloaded_fonts"
-                android:resource="@array/preloaded_fonts"/> <!-- TODO: substitute this testing API key with a real one -->
+                android:resource="@array/preloaded_fonts"/>
+        <!-- TODO: when I have a signed version of the app, restrict the API key in the console to Android app -->
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
-                android:value="AIzaSyBmyQw0O5WrMGyvMTuDgPU1qfIkThFm-A4"/>
+                android:value="@string/google_maps_api_key"/>
     </application>
 
 </manifest>
