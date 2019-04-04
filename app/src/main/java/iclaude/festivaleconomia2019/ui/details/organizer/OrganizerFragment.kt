@@ -39,10 +39,11 @@ class OrganizerFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Shared element transition for organizer avatar.
         with(TransitionInflater.from(context).inflateTransition(R.transition.changebounds_with_arcmotion)) {
             duration = 500 // bug in source code?
             sharedElementEnterTransition = this
-            sharedElementReturnTransition = this // currently not working
+            sharedElementReturnTransition = this
         }
 
         viewModel = ViewModelProviders.of(this).get(OrganizerViewModel::class.java)
@@ -143,8 +144,11 @@ class OrganizerFragment : Fragment() {
             }
         }
 
-        // retrieve the unique transition name for the organizer's avatar (there could be more organizers for the same event and we must know which avatar to animate)
-        binding.root.findViewById<ImageView>(R.id.ivAvatar).transitionName += idOrganizer
+        /* Retrieve the unique transition name for the organizer's avatar (there could be
+        more organizers for the same event and we must know which avatar to animate).*/
+        val avatar = binding.root.findViewById<ImageView>(R.id.ivAvatar).apply {
+            transitionName += idOrganizer
+        }
 
         return binding.root
     }
@@ -154,6 +158,7 @@ class OrganizerFragment : Fragment() {
 
         toolbar.setupWithNavController(findNavController())
     }
+
 
     // User login result.
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

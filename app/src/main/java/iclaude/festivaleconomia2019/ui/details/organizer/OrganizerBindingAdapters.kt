@@ -40,7 +40,7 @@ fun addOnOffsetChangedListener(appBarLayout: AppBarLayout, viewModel: OrganizerV
     })
 }
 
-@BindingAdapter("app:speakerImage", "app:listener", requireAll = false)
+@BindingAdapter("app:speakerImage", "app:listener", requireAll = true)
 fun speakerImage(imageView: ImageView, organizer: OrganizerInfo?, listener: ImageLoadListener?) {
     organizer ?: return
 
@@ -55,9 +55,11 @@ fun speakerImage(imageView: ImageView, organizer: OrganizerInfo?, listener: Imag
     if (!organizer.thumbnailUrl.isNullOrEmpty()) {
         val imageLoad = Glide.with(imageView)
             .load(organizer.thumbnailUrl)
+            .override(448, 448)
             .apply(
                 RequestOptions()
                     .placeholder(placeholderId)
+                    .onlyRetrieveFromCache(true)
                     .circleCrop()
             )
 

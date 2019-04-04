@@ -158,6 +158,7 @@ fun speakerImage(imageView: ImageView, organizer: Organizer?, listener: ImageLoa
     if (organizer.hasThumbnailUrl()) {
         val imageLoad = Glide.with(imageView)
             .load(organizer.thumbnailUrl)
+            .override(448, 448)
             .apply(
                 RequestOptions()
                     .placeholder(placeholderId)
