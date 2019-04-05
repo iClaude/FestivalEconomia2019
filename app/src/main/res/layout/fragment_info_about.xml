@@ -37,15 +37,19 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvVersion"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tvAppName" app:layout_constraintHorizontal_bias="0.0"/>
+
         <TextView
                 android:text="@string/info_about_desc_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvDescTitle" android:layout_marginTop="32dp"
-                app:layout_constraintTop_toBottomOf="@+id/tvAuthor" app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/tvDescTitle"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvAuthor"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                />
         <TextView
                 android:text="@string/info_about_desc"
                 android:layout_width="wrap_content"
@@ -54,38 +58,54 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvDescTitle" app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"/>
+
         <TextView
                 android:text="@string/info_about_nerd_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvNerdTitle" android:layout_marginTop="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/tvDesc" app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/tvNerdTitle"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvGithub"
+                />
+
         <TextView
                 android:text="@string/info_about_nerd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvNerd" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/tvNerdTitle" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+                android:id="@+id/tvNerd"
+                app:layout_constraintTop_toBottomOf="@+id/tvNerdTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.187"
+                android:layout_marginTop="8dp"/>
+
         <TextView
                 android:text="@string/info_about_github_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvGithubTitle" android:layout_marginTop="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/tvNerd" app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/tvGithubTitle"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvDesc"
+                />
+
         <TextView
                 android:text="@string/info_about_github"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView15" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/tvGithubTitle" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+                android:id="@+id/tvGithub"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvGithubTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"/>
         <ImageView
                 android:src="@drawable/ic_squirrel_round"
                 android:layout_width="wrap_content"

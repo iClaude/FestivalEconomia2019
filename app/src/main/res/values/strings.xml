@@ -83,18 +83,21 @@
     <string name="info_about_version" translatable="false">v. 1.0</string>
     <string name="info_about_author" translatable="false">by Claudio \"iClaude\" Agostini</string>
     <string name="info_about_desc_title">Description</string>
-    <string name="info_about_desc">This is an unofficial app dedicated to the Economics Festival 2019 held in Trento
-        (Italy) from 30 May to 3 June.
+    <string name="info_about_desc">Economics Festival is the unofficial app dedicated to the Economics Festival 2019,
+        held in Trento (Italy) from May 30 to June 3.
     </string>
     <string name="info_about_nerd_title">Nerd\'s details</string>
     <string name="info_about_nerd">The UI an logic of the app is based on the Google IO 2018 official app. The source
         code (written in Kotlin), on the other hand, is mostly written from scratch.\nThe app is based on the MVVM
         pattern and
-        makes use of the following APIs: Android Material and Architecture Components, Kotlin coroutines, Navigation
-        Component, Firebase Firestore and authentication UI, Dagger2, Google Maps, ThreeTenAbp, Glide, Lottie
-        animations.
+        makes use of the following libraries: Android Material, Architecture and Navigation Components, Kotlin coroutines,
+        Firebase Firestore and authentication UI, Dagger2, Google Maps, ThreeTenAbp, Glide, Lottie animations.
     </string>
     <string name="info_about_github_title" translatable="false">GitHub repository</string>
-    <string name="info_about_github">The app is open source and can be found at this Github repository.</string>
+    <string name="info_about_github">The app is open source and can be found at this %s.</string>
+    <string name="info_about_githubrepo" translatable="false">GitHub repository</string>
+    <string name="info_about_linkedInUrl" translatable="false">https://www.linkedin.com/in/claudio-agostini-241109a8/</string>
+    <string name="info_about_githubUrl" translatable="false">https://github.com/iClaude/FestivalEconomia2019</string>
+    <string name="info_about_googleIOappUrl" translatable="false">https://github.com/google/iosched</string>
 
 </resources>
