@@ -64,4 +64,19 @@
     <string name="organizer_link_website">Sito</string>
     <string name="info_event">Evento</string>
     <string name="info_settings">Impostazioni</string>
+    <string name="info_about_desc_title">Descrizione</string>
+    <string name="info_about_desc">Questa è un\'app non ufficiale dedicata al Festival dell\'Economia 2019 che si tiene
+        a Trento dal 30 Maggio
+        al 2 Giugno.
+    </string>
+    <string name="info_about_nerd_title">Dettagli da nerd</string>
+    <string name="info_about_nerd">La UI e la logica dell\'app sono basate sull\'app ufficiale dell\'evento Google IO
+        2018.
+        Il codice sorgente (scritto in Kotlin), d\'altra parte, è per lo più riscritto da zero.\nL\'app implementa il
+        modello MVVM e fa uso delle seguenti API: Android Material and Architecture Components, Kotlin coroutines,
+        Navigation Component, Firebase Firestore and authentication UI, Dagger2, Google Maps, ThreeTenAbp, Glide,
+        Lottie animations.
+    </string>
+    <string name="info_about_github">Questa app è open source e il codice si trova nella seguente Github repository.
+    </string>
 </resources>
