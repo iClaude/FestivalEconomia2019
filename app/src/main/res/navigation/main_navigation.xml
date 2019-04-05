@@ -38,17 +38,17 @@
     </fragment>
 
     <!--Info about the event-->
-    <fragment android:id="@+id/FAQFragment" android:name="iclaude.festivaleconomia2019.ui.FAQFragment"
-              android:label="fragment_faq" tools:layout="@layout/fragment_faq"/>
-    <fragment android:id="@+id/aboutFragment" android:name="iclaude.festivaleconomia2019.ui.AboutFragment"
-              android:label="fragment_about" tools:layout="@layout/fragment_about"/>
-    <fragment android:id="@+id/settingsFragment" android:name="iclaude.festivaleconomia2019.ui.SettingsFragment"
-              android:label="fragment_settings" tools:layout="@layout/fragment_settings"/>
-    <fragment android:id="@+id/infoFragment" android:name="iclaude.festivaleconomia2019.ui.InfoFragment"
-              android:label="fragment_info" tools:layout="@layout/fragment_info"/>
+    <fragment android:id="@+id/FAQFragment" android:name="iclaude.festivaleconomia2019.ui.info.FAQFragment"
+              android:label="fragment_faq" tools:layout="@layout/fragment_info_faq"/>
+    <fragment android:id="@+id/aboutFragment" android:name="iclaude.festivaleconomia2019.ui.info.AboutFragment"
+              android:label="fragment_about" tools:layout="@layout/fragment_info_about"/>
+    <fragment android:id="@+id/settingsFragment" android:name="iclaude.festivaleconomia2019.ui.info.SettingsFragment"
+              android:label="fragment_settings" tools:layout="@layout/fragment_info_settings"/>
+    <fragment android:id="@+id/infoFragment" android:name="iclaude.festivaleconomia2019.ui.info.InfoFragment"
+              android:label="fragment_info" tools:layout="@layout/fragment_info_info"/>
     <fragment android:id="@+id/containerInfoFragment"
-              android:name="iclaude.festivaleconomia2019.ui.ContainerInfoFragment"
-              android:label="fragment_container_info" tools:layout="@layout/fragment_container_info"/>
+              android:name="iclaude.festivaleconomia2019.ui.info.ContainerInfoFragment"
+              android:label="fragment_container_info" tools:layout="@layout/fragment_info_container"/>
 
     <!--Global actions (top level destinations: list of sessions, map and info-->
     <action android:id="@+id/action_global_containerSessionsFragment" app:destination="@id/containerSessionsFragment"
