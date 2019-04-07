@@ -1,15 +1,13 @@
 package iclaude.festivaleconomia2019.ui.info
 
 import android.os.Bundle
-import android.text.SpannableString
-import android.text.Spanned
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import iclaude.festivaleconomia2019.R
-import iclaude.festivaleconomia2019.ui.utils.MyClickableSpan
+import iclaude.festivaleconomia2019.ui.utils.buildSpannableString
 import kotlinx.android.synthetic.main.fragment_info_about.*
 
 
@@ -37,11 +35,19 @@ class AboutFragment : Fragment() {
     // Create SpannableStrings for this page: clickable links and other formattings.
     private fun createSpans() {
         // Link to developer's LinkedIn page.
-        val spanAuthor = SpannableString(tvAuthor.text).apply {
-            setSpan(
-                MyClickableSpan(context!!, getString(R.string.info_about_linkedInUrl)), 3, length,
-                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
+        val authorStr = tvAuthor.text.toString()
+        val spanAuthor = buildSpannableString {
+            string = authorStr
+
+            span {
+                start = 3
+                end = authorStr.length
+                clickableSpan {
+                    context = getContext()
+                    url = getString(R.string.info_about_linkedInUrl)
+
+                }
+            }
         }
         tvAuthor.apply {
             text = spanAuthor
@@ -53,30 +59,39 @@ class AboutFragment : Fragment() {
         // Link to the app's GitHub repository.
         val subStrToSpanGitHub = getString(R.string.info_about_githubrepo)
         val completeStrGitHub = getString(R.string.info_about_github, subStrToSpanGitHub)
-        val spanGithub = SpannableString(completeStrGitHub).apply {
-            setSpan(
-                MyClickableSpan(context!!, getString(R.string.info_about_githubUrl)),
-                indexOf(subStrToSpanGitHub),
-                length,
-                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
+        val spanGitHub = buildSpannableString {
+            string = getString(R.string.info_about_github, subStrToSpanGitHub)
+
+            span {
+                start = completeStrGitHub.indexOf(subStrToSpanGitHub)
+                end = completeStrGitHub.length
+                clickableSpan {
+                    context = getContext()
+                    url = getString(R.string.info_about_githubUrl)
+                }
+            }
         }
         tvGithub.apply {
-            text = spanGithub
+            text = spanGitHub
             movementMethod = LinkMovementMethod.getInstance()
             isFocusable = true
             isClickable = true
         }
 
         // Link to Google IO 2018 app's GitHub repository.
+        val nerdsDetails = tvNerd.text.toString()
         val subStrToSpanGoogleApp = "Google IO 2018"
-        val spanNerd = SpannableString(tvNerd.text).apply {
-            setSpan(
-                MyClickableSpan(context!!, getString(R.string.info_about_googleIOappUrl)),
-                indexOf(subStrToSpanGoogleApp),
-                indexOf(subStrToSpanGoogleApp) + 14,
-                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
+        val spanNerd = buildSpannableString {
+            string = nerdsDetails
+
+            span {
+                start = nerdsDetails.indexOf(subStrToSpanGoogleApp)
+                end = nerdsDetails.indexOf(subStrToSpanGoogleApp) + 14
+                clickableSpan {
+                    context = getContext()
+                    url = getString(R.string.info_about_googleIOappUrl)
+                }
+            }
         }
         tvNerd.apply {
             text = spanNerd
