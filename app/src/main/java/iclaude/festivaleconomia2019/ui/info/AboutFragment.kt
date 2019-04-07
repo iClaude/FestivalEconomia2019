@@ -56,7 +56,41 @@ class AboutFragment : Fragment() {
             isClickable = true
         }
 
-        // Link to the app's GitHub repository.
+        // App's description.
+        val unofficialAppStr = getString(R.string.info_about_desc_unofficial_app)
+        val economicsFestivalStr = getString(R.string.info_about_desc_economics_festival)
+        val description = getString(R.string.info_about_desc, unofficialAppStr, economicsFestivalStr)
+        val spanDesc = buildSpannableString {
+            string = description
+
+            span {
+                start = description.indexOf(unofficialAppStr)
+                end = description.indexOf(unofficialAppStr) + unofficialAppStr.length
+
+                bold()
+                increaseSizeBy(1.2f)
+                underline()
+            }
+
+            span {
+                start = description.indexOf(economicsFestivalStr)
+                end = description.indexOf(economicsFestivalStr) + economicsFestivalStr.length
+                bold()
+                increaseSizeBy(1.2f)
+                clickableSpan {
+                    context = getContext()
+                    url = getString(R.string.official_site_url)
+                }
+            }
+        }
+        tvDesc.apply {
+            text = spanDesc
+            movementMethod = LinkMovementMethod.getInstance()
+            isFocusable = true
+            isClickable = true
+        }
+
+        // GitHub repository info.
         val subStrToSpanGitHub = getString(R.string.info_about_githubrepo)
         val completeStrGitHub = getString(R.string.info_about_github, subStrToSpanGitHub)
         val spanGitHub = buildSpannableString {
@@ -70,6 +104,13 @@ class AboutFragment : Fragment() {
                     url = getString(R.string.info_about_githubUrl)
                 }
             }
+
+            span {
+                start = completeStrGitHub.indexOf("open source")
+                end = completeStrGitHub.indexOf("open source") + 11
+                bold()
+                increaseSizeBy(1.2f)
+            }
         }
         tvGithub.apply {
             text = spanGitHub
@@ -78,7 +119,7 @@ class AboutFragment : Fragment() {
             isClickable = true
         }
 
-        // Link to Google IO 2018 app's GitHub repository.
+        // Nerd's details.
         val nerdsDetails = tvNerd.text.toString()
         val subStrToSpanGoogleApp = "Google IO 2018"
         val spanNerd = buildSpannableString {
@@ -87,10 +128,19 @@ class AboutFragment : Fragment() {
             span {
                 start = nerdsDetails.indexOf(subStrToSpanGoogleApp)
                 end = nerdsDetails.indexOf(subStrToSpanGoogleApp) + 14
+
                 clickableSpan {
                     context = getContext()
                     url = getString(R.string.info_about_googleIOappUrl)
                 }
+            }
+
+            span {
+                start = nerdsDetails.indexOf("MVVM pattern")
+                end = nerdsDetails.indexOf("MVVM pattern") + 12
+                bold()
+                italic()
+                increaseSizeBy(1.2f)
             }
         }
         tvNerd.apply {

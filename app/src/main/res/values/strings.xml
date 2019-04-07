@@ -7,6 +7,8 @@
     <string name="title_info">Info</string>
     <string name="title_map">Map</string>
 
+    <string name="official_site_url" translatable="false">https://2019.festivaleconomia.eu/</string>
+
     <string name="map_show_route">get directions…</string>
     <plurals name="map_events_here">
         <item quantity="one">%d event here</item>
@@ -83,9 +85,11 @@
     <string name="info_about_version" translatable="false">v. 1.0</string>
     <string name="info_about_author" translatable="false">by Claudio \"iClaude\" Agostini</string>
     <string name="info_about_desc_title">Description</string>
-    <string name="info_about_desc">Economics Festival is the unofficial app dedicated to the Economics Festival 2019,
+    <string name="info_about_desc">Economics Festival is the %1$s dedicated to the %2$s,
         held in Trento (Italy) from May 30 to June 3.
     </string>
+    <string name="info_about_desc_unofficial_app">unofficial app</string>
+    <string name="info_about_desc_economics_festival">Economics Festival 2019</string>
     <string name="info_about_nerd_title">Nerd\'s details</string>
     <string name="info_about_nerd">The UI an logic of the app is based on the Google IO 2018 official app. The source
         code (written in Kotlin), on the other hand, is mostly written from scratch.\nThe app is based on the MVVM

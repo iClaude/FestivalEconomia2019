@@ -65,14 +65,16 @@
     <string name="info_event">Evento</string>
     <string name="info_settings">Impostazioni</string>
     <string name="info_about_desc_title">Descrizione</string>
-    <string name="info_about_desc">Economics Festival è l\'app non ufficiale dedicata al Festival dell\'Economia 2019 che si tiene
+    <string name="info_about_desc">Economics Festival è l\'app %1$s dedicata al %2$s che si tiene
         a Trento dal 30 Maggio al 2 Giugno.
     </string>
+    <string name="info_about_desc_unofficial_app">non ufficiale</string>
+    <string name="info_about_desc_economics_festival">Festival dell\'Economia 2019</string>
     <string name="info_about_nerd_title">Dettagli da nerd</string>
     <string name="info_about_nerd">La UI e la logica dell\'app sono basate sull\'app ufficiale dell\'evento Google IO
         2018.
         Il codice sorgente (scritto in Kotlin), d\'altra parte, è per lo più riscritto da zero.\nL\'app implementa il
-        pattern MVVM e fa uso delle seguenti librerie: Android Material, Architecture e Navigation Components, Kotlin coroutines,
+        MVVM pattern e fa uso delle seguenti librerie: Android Material, Architecture e Navigation Components, Kotlin coroutines,
         Firebase Firestore e authentication UI, Dagger2, Google Maps, ThreeTenAbp, Glide, Lottie animations.
     </string>
     <string name="info_about_github">Questa app è open source e il codice sorgente si trova nella seguente %s.
