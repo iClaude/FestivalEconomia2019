@@ -1,7 +1,7 @@
 package iclaude.festivaleconomia2019.ui.utils
 
 import android.content.Context
-import android.text.TextUtils
+import android.preference.PreferenceManager
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.data_classes.Session
 import iclaude.festivaleconomia2019.utils.getQuantityString
@@ -20,14 +20,15 @@ fun getEventTimeZone() = "Europe/Rome"
 
 fun getZoneId(context: Context?): ZoneId {
 
-    val showLocal = context?.getSharedPreferences(
-        context.getString(R.string.shared_preferences_file),
-        Context.MODE_PRIVATE
-    )?.getBoolean(context.getString(R.string.pref_showlocal), false) ?: false
-    return if (showLocal || TextUtils.isEmpty(getEventTimeZone()))
-        ZoneId.systemDefault()
-    else
+    val showRomeTimezone = PreferenceManager.getDefaultSharedPreferences(context)?.getBoolean(
+        context?.getString(R.string.info_pref_timezone_key),
+        true
+    ) ?: false
+
+    return if (showRomeTimezone)
         ZoneId.of(getEventTimeZone())
+    else
+        ZoneId.systemDefault()
 }
 
 fun numberOfDays(context: Context?, sessions: List<Session>): Int {

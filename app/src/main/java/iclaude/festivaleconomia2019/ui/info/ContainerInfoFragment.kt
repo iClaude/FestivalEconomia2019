@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.ui.info.about.AboutFragment
+import iclaude.festivaleconomia2019.ui.info.preferences.SettingsFragment
 import kotlinx.android.synthetic.main.fragment_info_container.*
 import kotlinx.android.synthetic.main.fragment_info_container_appbar.*
 
@@ -39,7 +40,7 @@ class ContainerInfoFragment : Fragment() {
                 0 -> InfoFragment.newInstance()
                 1 -> FAQFragment.newInstance()
                 2 -> AboutFragment.newInstance()
-                else -> SettingsFragment.newInstance()
+                else -> SettingsFragment()
             }
 
         override fun getPageTitle(position: Int): CharSequence =

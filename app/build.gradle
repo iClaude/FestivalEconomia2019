@@ -93,4 +93,7 @@ dependencies {
 
     // Lottie animations.
     implementation 'com.airbnb.android:lottie:3.0.0-beta4'
+
+    // Preferences.
+    implementation 'androidx.preference:preference:1.1.0-alpha04'
 }

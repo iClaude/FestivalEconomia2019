@@ -76,12 +76,14 @@
     <string name="organizer_link_linkedin" translatable="false">LinkedIn</string>
     <string name="organizer_link_facebook" translatable="false">Facebook</string>
 
-    <!-- Info Fragments. -->
-    <!-- General. -->
+    <!-- Info Fragments -->
+    <!-- General -->
     <string name="info_event">Event</string>
     <string name="info_faq" translatable="false">FAQ</string>
     <string name="info_about" translatable="false">About</string>
     <string name="info_settings">Settings</string>
+
+    <!-- About -->
     <string name="info_about_version" translatable="false">v. 1.0</string>
     <string name="info_about_author" translatable="false">by Claudio \"iClaude\" Agostini</string>
     <string name="info_about_desc_title">Description</string>
@@ -107,5 +109,18 @@
     <string name="info_about_privacy_policy_link" translatable="false">
         https://drive.google.com/file/d/19iOz3EP86Z0K2i3nsbiwjQQuABxzktC6/view?usp=sharing
     </string>
+
+    <!-- Settings -->
+    <string name="info_pref_timezone_key" translatable="false">rome_timezone</string>
+    <string name="info_pref_timezone_title">Rome time zone</string>
+    <string name="info_pref_timezone_summary">Show times in the event\'s time zone</string>
+
+    <string name="info_pref_notifications_key" translatable="false">notifications_enabled</string>
+    <string name="info_pref_notifications_title">Enable notifications</string>
+    <string name="info_pref_notifications_summary">Only for favorite events</string>
+
+    <string name="info_pref_website_key" translatable="false">website</string>
+    <string name="info_pref_website_title">Official website</string>
+    <string name="info_pref_website_summary">Go to event\'s official website</string>
 
 </resources>

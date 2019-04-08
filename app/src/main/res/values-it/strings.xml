@@ -79,4 +79,10 @@
     </string>
     <string name="info_about_github">Questa app è open source e il codice sorgente si trova nella seguente %s.
     </string>
+    <string name="info_pref_timezone_title">Fuso orario di Roma</string>
+    <string name="info_pref_timezone_summary">Mostra gli orari nel fuso orario dell\'evento</string>
+    <string name="info_pref_notifications_title">Abilita notifiche</string>
+    <string name="info_pref_notifications_summary">Solo per eventi preferiti</string>
+    <string name="info_pref_website_title">Sito ufficiale</string>
+    <string name="info_pref_website_summary">Vai al sito ufficiale dell\'evento</string>
 </resources>
