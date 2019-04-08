@@ -143,6 +143,16 @@
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"
                 app:lottie_scale="1.2"/>
+        <TextView
+                android:id="@+id/tvPrivacy"
+                tools:text="Privacy Policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintTop_toBottomOf="@+id/tvNerd"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_normal" android:clickable="true"
+                android:focusableInTouchMode="true" android:focusable="auto"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

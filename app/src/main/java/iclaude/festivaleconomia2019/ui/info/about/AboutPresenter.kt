@@ -15,6 +15,7 @@ interface AboutView {
     fun showDescription(spannableString: SpannableString)
     fun showGitHubText(spannableString: SpannableString)
     fun showNerdsDetails(spannableString: SpannableString)
+    fun showPrivacyPolicy(spannableString: SpannableString)
 }
 
 class AboutPresenter(private var aboutView: AboutView, private var mContext: Context) {
@@ -25,6 +26,7 @@ class AboutPresenter(private var aboutView: AboutView, private var mContext: Con
         aboutView.showDescription(createDescriptionText())
         aboutView.showGitHubText(createGitHubText())
         aboutView.showNerdsDetails(createNerdsDetailsText())
+        aboutView.showPrivacyPolicy(createPrivacyPolicyText())
     }
 
     /**
@@ -127,6 +129,27 @@ class AboutPresenter(private var aboutView: AboutView, private var mContext: Con
                 bold()
                 italic()
                 increaseSizeBy(1.2f)
+            }
+        }
+    }
+
+    // Privacy policy.
+    private fun createPrivacyPolicyText(): SpannableString {
+        val privacyStr = mContext.getString(R.string.info_about_privacy_policy)
+        val privacyUrl = mContext.getString(R.string.info_about_privacy_policy_link)
+
+        return buildSpannableString {
+            string = privacyStr
+
+            span {
+                start = 0
+                end = privacyStr.length
+
+                clickableSpan {
+                    context = mContext
+                    url = privacyUrl
+                }
+                bold()
             }
         }
     }

@@ -68,4 +68,11 @@ class AboutFragment : Fragment(), AboutView {
             movementMethod = LinkMovementMethod.getInstance()
         }
     }
+
+    override fun showPrivacyPolicy(spannableString: SpannableString) {
+        tvPrivacy.apply {
+            text = spannableString
+            movementMethod = LinkMovementMethod.getInstance()
+        }
+    }
 }

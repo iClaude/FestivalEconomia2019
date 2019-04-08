@@ -103,5 +103,9 @@
     <string name="info_about_linkedInUrl" translatable="false">https://www.linkedin.com/in/claudio-agostini-241109a8/</string>
     <string name="info_about_githubUrl" translatable="false">https://github.com/iClaude/FestivalEconomia2019</string>
     <string name="info_about_googleIOappUrl" translatable="false">https://github.com/google/iosched</string>
+    <string name="info_about_privacy_policy" translatable="false">Privacy Policy</string>
+    <string name="info_about_privacy_policy_link" translatable="false">
+        https://drive.google.com/file/d/19iOz3EP86Z0K2i3nsbiwjQQuABxzktC6/view?usp=sharing
+    </string>
 
 </resources>
