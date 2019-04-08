@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import iclaude.festivaleconomia2019.R
+import iclaude.festivaleconomia2019.ui.info.about.AboutFragment
 import kotlinx.android.synthetic.main.fragment_info_container.*
 import kotlinx.android.synthetic.main.fragment_info_container_appbar.*
 

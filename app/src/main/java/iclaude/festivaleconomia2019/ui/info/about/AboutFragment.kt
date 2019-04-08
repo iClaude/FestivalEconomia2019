@@ -1,4 +1,4 @@
-package iclaude.festivaleconomia2019.ui.info
+package iclaude.festivaleconomia2019.ui.info.about
 
 import android.os.Bundle
 import android.text.method.LinkMovementMethod

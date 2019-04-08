@@ -9,7 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
                                                        android:layout_height="match_parent"
-                                                       tools:context=".ui.info.AboutFragment"
+                                                       tools:context=".ui.info.about.AboutFragment"
                                                        android:id="@+id/constraintLayout"
                                                        android:paddingTop="@dimen/margin_normal"
                                                        android:paddingBottom="@dimen/margin_normal">
