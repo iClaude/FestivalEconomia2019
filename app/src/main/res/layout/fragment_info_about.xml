@@ -39,7 +39,8 @@
                 android:id="@+id/tvAuthor"
                 app:layout_constraintTop_toBottomOf="@+id/tvVersion"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/tvAppName" app:layout_constraintHorizontal_bias="0.0"/>
+                app:layout_constraintStart_toStartOf="@+id/tvAppName" app:layout_constraintHorizontal_bias="0.0"
+                android:linksClickable="true" android:focusable="auto" android:focusableInTouchMode="true"/>
 
         <TextView
                 android:text="@string/info_about_desc_title"
@@ -68,7 +69,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 android:layout_marginStart="@dimen/margin_normal"
                 android:layout_marginEnd="@dimen/margin_normal"
-                app:layout_constrainedWidth="true"/>
+                app:layout_constrainedWidth="true" android:linksClickable="true" android:focusable="auto"
+                android:focusableInTouchMode="true"/>
 
         <TextView
                 android:text="@string/info_about_nerd_title"
@@ -97,7 +99,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginStart="@dimen/margin_normal"
                 android:layout_marginEnd="@dimen/margin_normal"
-                app:layout_constrainedWidth="true"/>
+                app:layout_constrainedWidth="true" android:linksClickable="true" android:focusable="auto"
+                android:focusableInTouchMode="true"/>
 
         <TextView
                 android:text="@string/info_about_github_title"
@@ -126,7 +129,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 android:layout_marginStart="@dimen/margin_normal"
                 android:layout_marginEnd="@dimen/margin_normal"
-                app:layout_constrainedWidth="true"/>
+                app:layout_constrainedWidth="true" android:linksClickable="true" android:focusable="auto"
+                android:focusableInTouchMode="true"/>
 
         <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/lottieView"
