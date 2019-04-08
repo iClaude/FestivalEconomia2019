@@ -51,7 +51,11 @@
                 app:twitterUrl="@{organizerDataDer.twitterUrl}"
                 app:linkedInUrl="@{organizerDataDer.linkedInUrl}"
                 app:facebookUrl="@{organizerDataDer.facebookUrl}"
-                android:textColor="@color/link" android:textStyle="bold"/>
+                android:textColor="@color/link"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="auto"
+                android:focusableInTouchMode="true"/>
 
         <TextView
                 android:id="@+id/tvRelatedEventsTitle"

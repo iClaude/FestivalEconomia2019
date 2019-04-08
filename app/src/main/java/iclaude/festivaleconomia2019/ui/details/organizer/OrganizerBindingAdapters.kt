@@ -127,8 +127,6 @@ fun createSpeakerLinksView(
             text = links
             // Make links clickable
             movementMethod = LinkMovementMethod.getInstance()
-            isFocusable = false
-            isClickable = false
         }
     } else {
         textView.visibility = GONE
