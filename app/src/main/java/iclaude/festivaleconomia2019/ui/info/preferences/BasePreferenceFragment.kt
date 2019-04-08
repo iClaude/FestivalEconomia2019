@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
  */
 abstract class BasePreferenceFragment : PreferenceFragmentCompat() {
     private fun setAllPreferencesToAvoidHavingExtraSpace(preference: Preference) {
-        preference.isIconSpaceReserved = false
+        preference.isIconSpaceReserved = (preference.key == "website")
         if (preference is PreferenceGroup)
             for (i in 0 until preference.preferenceCount)
                 setAllPreferencesToAvoidHavingExtraSpace(preference.getPreference(i))

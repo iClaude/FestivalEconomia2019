@@ -18,7 +18,8 @@
     <Preference
             app:key="@string/info_pref_website_key"
             app:title="@string/info_pref_website_title"
-            app:summary="@string/info_pref_website_summary">
+            app:summary="@string/info_pref_website_summary"
+            app:icon="@drawable/ic_web_black_24dp">
         <intent
                 android:action="android.intent.action.VIEW"
                 android:data="@string/official_site_url"/>
