@@ -18,6 +18,14 @@ object WorkRequestBuilder {
     const val SESSION_ORGANIZERS = "organizers"
 
 
+    // Create and enqueue multiple requests for multiple Sessions.
+    fun buildNotificationRequestForMultipleSessions(sessions: List<Session>) {
+        deleteAllRequests()
+        for (session in sessions) {
+            buildNotificationRequest(session)
+        }
+    }
+
     // Create and enqueue a request for a specific Session.
     fun buildNotificationRequest(session: Session) {
         val inputData = Data.Builder().run {
