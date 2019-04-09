@@ -44,6 +44,16 @@ class EventDataRepository(private val inputStream: InputStream) {
         job.cancel()
     }
 
+    // List of the ids of all starred sessions.
+    val starredSessions: MutableList<String> = mutableListOf()
+
+    fun addStarredSessions(sessions: List<String>) {
+        starredSessions.let {
+            it.clear()
+            it.addAll(sessions)
+        }
+    }
+
     //*************************** Firebase **********************************
 
     fun addUser(user: FirebaseUser) {
@@ -80,13 +90,13 @@ class EventDataRepository(private val inputStream: InputStream) {
                 if (it.exists()) {
                     val userInFirebase = it.toObject(User::class.java)
                     userInFirebase?.let { userInFirebase ->
-                        val starredSessionsUpdated = userInFirebase.starredSessions.toMutableList()
+                        addStarredSessions(userInFirebase.starredSessions.toMutableList())
                         if (toStar) {
-                            if (!starredSessionsUpdated.contains(sessionId)) starredSessionsUpdated.add(sessionId)
+                            if (!(sessionId in starredSessions)) starredSessions.add(sessionId)
                         } else {
-                            starredSessionsUpdated.remove(sessionId)
+                            starredSessions.remove(sessionId)
                         }
-                        updateStarredSessions(db, "$FIREBASE_PATH_USERS${user.uid}", starredSessionsUpdated)
+                        updateStarredSessions(db, "$FIREBASE_PATH_USERS${user.uid}", starredSessions)
                     }
                 }
             }

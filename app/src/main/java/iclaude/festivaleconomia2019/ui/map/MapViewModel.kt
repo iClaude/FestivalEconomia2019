@@ -193,6 +193,7 @@ class MapViewModel : ViewModel() {
             OnSuccessListener { documentSnapshot ->
                 val userInFirebase = documentSnapshot.toObject(User::class.java)
                 userInFirebase?.let { userInFirebase ->
+                    repository.addStarredSessions(userInFirebase.starredSessions)
                     if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
 
                     sessions.forEach { session ->

@@ -157,6 +157,7 @@ class SessionInfoViewModel : ViewModel(), LoginFlow, RelatedSessions {
             OnSuccessListener { documentSnapshot ->
                 val userInFirebase = documentSnapshot.toObject(User::class.java)
                 userInFirebase?.let { userInFirebase ->
+                    repository.addStarredSessions(userInFirebase.starredSessions)
                     if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
 
                     _starredSessionsLive.value = userInFirebase.starredSessions

@@ -322,6 +322,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
             OnSuccessListener { documentSnapshot ->
                 val userInFirebase = documentSnapshot.toObject(User::class.java)
                 userInFirebase?.let { userInFirebase ->
+                    repository.addStarredSessions(userInFirebase.starredSessions)
                     if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
 
                     sessions.forEach { it.starred = false }

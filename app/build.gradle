@@ -54,6 +54,12 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:1.1.1"
     implementation "android.arch.lifecycle:viewmodel:1.1.1"
 
+    // Preferences.
+    implementation 'androidx.preference:preference:1.1.0-alpha04'
+
+    // WorkManager.
+    implementation 'androidx.work:work-runtime:2.0.1-rc01'
+
     // Kotlin coroutines.
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.0'
@@ -94,6 +100,4 @@ dependencies {
     // Lottie animations.
     implementation 'com.airbnb.android:lottie:3.0.0-beta4'
 
-    // Preferences.
-    implementation 'androidx.preference:preference:1.1.0-alpha04'
 }
