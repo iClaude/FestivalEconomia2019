@@ -58,7 +58,7 @@ dependencies {
     implementation 'androidx.preference:preference:1.1.0-alpha04'
 
     // WorkManager.
-    implementation 'androidx.work:work-runtime:2.0.1-rc01'
+    implementation 'androidx.work:work-runtime:2.0.1'
 
     // Kotlin coroutines.
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.0'
