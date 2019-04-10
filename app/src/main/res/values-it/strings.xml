@@ -85,4 +85,8 @@
     <string name="info_pref_notifications_summary">Solo per eventi preferiti</string>
     <string name="info_pref_website_title">Sito ufficiale</string>
     <string name="info_pref_website_summary">Vai al sito ufficiale dell\'evento</string>
+    <string name="notification_channel_name">Eventi preferiti</string>
+    <string name="notification_channel_description">Ricevi una notifica 1 ora prima dell\'inizio degli eventi
+        preferiti
+    </string>
 </resources>

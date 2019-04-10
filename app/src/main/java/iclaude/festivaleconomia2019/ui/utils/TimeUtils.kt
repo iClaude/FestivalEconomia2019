@@ -85,6 +85,7 @@ fun endOfDay(day: ZonedDateTime): ZonedDateTime =
 fun timestampToZonedDateTime(timestamp: Long, context: Context?): ZonedDateTime =
     ZonedDateTime.ofInstant(Instant.ofEpochMilli(timestamp), getZoneId(context))
 
+// Format: "Mer, Nov 7, 9:30 - 10:30 AM"
 fun sessionInfoTimeDetails(context: Context?, startTimestamp: Long, endTimestamp: Long): String {
     val startTime = zonedDateTimeFromTimestamp(context, startTimestamp)
     val endTime = zonedDateTimeFromTimestamp(context, endTimestamp)
@@ -93,6 +94,13 @@ fun sessionInfoTimeDetails(context: Context?, startTimestamp: Long, endTimestamp
     val str2 = formatDate("h:mm a", endTime)
 
     return str1 + str2
+}
+
+// Format: "9:30 AM"
+fun sessionInfoTimeStartDetails(context: Context?, startTimestamp: Long): String {
+    val startTime = zonedDateTimeFromTimestamp(context, startTimestamp)
+
+    return formatDate("h:mm a", startTime)
 }
 
 fun formatDate(format: String, time: ZonedDateTime): String {

@@ -123,4 +123,8 @@
     <string name="info_pref_website_title">Official website</string>
     <string name="info_pref_website_summary">Go to event\'s official website</string>
 
+    <!-- Notifications -->
+    <string name="notification_channel_name">Favorite events</string>
+    <string name="notification_channel_description">Receive notifications 1 hour before favorite events begin</string>
+
 </resources>
