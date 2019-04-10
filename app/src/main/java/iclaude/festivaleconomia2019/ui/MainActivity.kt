@@ -58,17 +58,20 @@ class MainActivity : AppCompatActivity() {
         WorkRequestBuilder.deleteAllRequests()
         for (sessionId in repository.starredSessions) {
             val session = sessions[sessionId.toInt()]
-            val locationStr = locations[session.location.toInt()].name
+            val location = locations[session.location.toInt()]
+            val locationStr = location.name
             val organizersStr = organizers.filter {
                 it.id in session.organizers
             }.joinToString(" - ") { it.name }
             if (session != null) WorkRequestBuilder.buildNotificationRequest(
                 NotificationData(
                     session.id, session.title,
-                    session.startTimestamp, session.endTimestamp, session.description, organizersStr, locationStr
+                    session.startTimestamp, session.endTimestamp, session.description, organizersStr, locationStr,
+                    location.lat, location.lng
                 )
             )
         }
+
     }
 
     private fun createNotificationChannel() {

@@ -1,7 +1,6 @@
 package iclaude.festivaleconomia2019.ui.info.preferences
 
 import android.os.Bundle
-import android.util.Log
 import androidx.preference.Preference
 import androidx.preference.SwitchPreferenceCompat
 import iclaude.festivaleconomia2019.R
@@ -18,7 +17,6 @@ class SettingsFragment : BasePreferenceFragment() {
             it.onPreferenceChangeListener = object : Preference.OnPreferenceChangeListener {
                 override fun onPreferenceChange(preference: Preference?, newValue: Any?): Boolean {
                     val notificationsEnabled = newValue as Boolean
-                    Log.d("MYNOTIFICATIONS", "preference change; new value = $notificationsEnabled")
                     if (!notificationsEnabled)
                         WorkRequestBuilder.deleteAllRequests()
                     return true

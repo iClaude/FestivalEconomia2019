@@ -126,5 +126,6 @@
     <!-- Notifications -->
     <string name="notification_channel_name">Favorite events</string>
     <string name="notification_channel_description">Receive notifications 1 hour before favorite events begin</string>
-
+    <string name="notification_speakers">Speakers</string>
+    <string name="notification_directions">Take me there</string>
 </resources>

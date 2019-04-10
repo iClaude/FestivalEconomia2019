@@ -1,6 +1,5 @@
 package iclaude.festivaleconomia2019.ui.notifications
 
-import android.util.Log
 import androidx.work.Data
 import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
@@ -18,12 +17,12 @@ object WorkRequestBuilder {
     const val SESSION_DESCRIPTION = "description"
     const val SESSION_ORGANIZERS = "organizers"
     const val SESSION_LOCATION = "location"
+    const val SESSION_LOCATION_LAT = "locationLat"
+    const val SESSION_LOCATION_LNG = "locationLng"
 
 
     // Create and enqueue a request for a specific Session.
     fun buildNotificationRequest(notificationData: NotificationData) {
-        Log.d("MYNOTIFICATIONS", "build notification request with data: ${notificationData.toString()}")
-
         val inputData = Data.Builder().run {
             putString(SESSION_ID, notificationData.id)
             putString(SESSION_TITLE, notificationData.title)
@@ -32,6 +31,8 @@ object WorkRequestBuilder {
             putString(SESSION_DESCRIPTION, notificationData.description)
             putString(SESSION_ORGANIZERS, notificationData.organizers)
             putString(SESSION_LOCATION, notificationData.location)
+            putDouble(SESSION_LOCATION_LAT, notificationData.locationLat)
+            putDouble(SESSION_LOCATION_LNG, notificationData.locationLng)
             build()
         }
 
@@ -48,8 +49,6 @@ object WorkRequestBuilder {
     }
 
     fun deleteAllRequests() {
-        Log.d("MYNOTIFICATIONS", "delete all requests")
-
         WorkManager.getInstance().cancelAllWorkByTag(NOTIFICATION_TAG)
     }
 }

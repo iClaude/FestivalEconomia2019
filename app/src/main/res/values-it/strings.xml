@@ -89,4 +89,6 @@
     <string name="notification_channel_description">Ricevi una notifica 1 ora prima dell\'inizio degli eventi
         preferiti
     </string>
+    <string name="notification_speakers">Relatori</string>
+    <string name="notification_directions">Indicazioni stradali</string>
 </resources>

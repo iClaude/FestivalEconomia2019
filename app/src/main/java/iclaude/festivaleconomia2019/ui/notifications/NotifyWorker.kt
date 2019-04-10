@@ -1,10 +1,14 @@
 package iclaude.festivaleconomia2019.ui.notifications
 
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationCompat.VISIBILITY_PUBLIC
 import androidx.core.app.NotificationManagerCompat
+import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.navigation.NavDeepLinkBuilder
 import androidx.work.Worker
 import androidx.work.WorkerParameters
@@ -13,9 +17,12 @@ import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_
 import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_END_TIMESTAMP
 import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_ID
 import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_LOCATION
+import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_LOCATION_LAT
+import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_LOCATION_LNG
 import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_ORGANIZERS
 import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_START_TIMESTAMP
 import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_TITLE
+import iclaude.festivaleconomia2019.ui.utils.buildSpannableString
 import iclaude.festivaleconomia2019.ui.utils.sessionInfoTimeStartDetails
 
 const val NOTIFICATION_CHANNEL_ID = "events_notification_channel"
@@ -29,7 +36,9 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params)
             inputData.getLong(SESSION_END_TIMESTAMP, 0),
             inputData.getString(SESSION_DESCRIPTION),
             inputData.getString(SESSION_ORGANIZERS),
-            inputData.getString(SESSION_LOCATION)
+            inputData.getString(SESSION_LOCATION),
+            inputData.getDouble(SESSION_LOCATION_LAT, 0.0),
+            inputData.getDouble(SESSION_LOCATION_LNG, 0.0)
         )
         triggerNotification(notificationData)
 
@@ -49,14 +58,51 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params)
         val args = Bundle().apply {
             putString("sessionId", notificationData.id)
         }
-        val pendingIntent = NavDeepLinkBuilder(applicationContext)
+        val sessionPendingIntent = NavDeepLinkBuilder(applicationContext)
             .setGraph(R.navigation.main_navigation)
-            .setDestination(R.id.detailsGraph)
+            .setDestination(R.id.sessionInfoFragment)
             .setArguments(args)
             .createPendingIntent()
 
+        // PendingIntent to start Google Maps to obtain directions to the selected location.
+        val uri = "google.navigation:q=${notificationData.locationLat},${notificationData.locationLng}".toUri()
+        val gMapsIntent = Intent(Intent.ACTION_VIEW, uri).apply {
+            `package` = "com.google.android.apps.maps"
+        }
+        val directionsPendingIntent = PendingIntent.getActivity(applicationContext, 0, gMapsIntent, 0)
+
         // Notification data.
-        val bitText = "${notificationData.description.take(50)}...<br>${notificationData.organizers}"
+        val speakers = applicationContext.getString(R.string.notification_speakers)
+        val description = notificationData.description.take(200)
+        val bigText = "${sessionInfoTimeStartDetails(
+            applicationContext,
+            notificationData.startTimestamp
+        )} / ${notificationData.location}\n\n${description}...\n" +
+                "$speakers: ${notificationData.organizers}"
+
+        val bigTextSpan = buildSpannableString {
+            string = bigText
+
+            span {
+                start = bigText.indexOf(description)
+                end = start + description.length
+                italic()
+                quote(ContextCompat.getColor(applicationContext, R.color.primaryColor))
+            }
+
+            span {
+                start = bigText.indexOf(speakers)
+                end = start + speakers.length
+                increaseSizeBy(1.3f)
+            }
+
+            span {
+                start = bigText.indexOf(speakers) + speakers.length + 2
+                end = bigText.length
+                bold()
+            }
+        }
+
         val builder = NotificationCompat.Builder(applicationContext, NOTIFICATION_CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_squirrel_round)
             .setContentTitle(notificationData.title)
@@ -71,9 +117,14 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params)
             .setVisibility(VISIBILITY_PUBLIC)
             .setStyle(
                 NotificationCompat.BigTextStyle()
-                    .bigText(notificationData.description)
+                    .bigText(bigTextSpan)
             )
-            .setContentIntent(pendingIntent)
+            .setContentIntent(sessionPendingIntent)
+            .addAction(
+                R.drawable.ic_directions_black_24dp,
+                applicationContext.getString(R.string.notification_directions),
+                directionsPendingIntent
+            )
             .setAutoCancel(true)
 
         // Issue the notification.
@@ -90,5 +141,7 @@ class NotificationData(
     val endTimestamp: Long,
     val description: String?,
     val organizers: String?,
-    val location: String?
+    val location: String?,
+    val locationLat: Double,
+    val locationLng: Double
 )
