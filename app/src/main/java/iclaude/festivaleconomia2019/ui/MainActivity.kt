@@ -43,6 +43,13 @@ class MainActivity : AppCompatActivity() {
         super.onStop()
 
         // Notifications: create requests for WorkManager.
+        scheduleNotifications()
+
+    }
+
+    // Notifications.
+
+    private fun scheduleNotifications() {
         val sessions = repository.eventDataLive.value?.sessions ?: return
         val locations = repository.eventDataLive.value?.locations ?: return
         val organizers = repository.eventDataLive.value?.organizers ?: return
@@ -71,7 +78,6 @@ class MainActivity : AppCompatActivity() {
                 )
             )
         }
-
     }
 
     private fun createNotificationChannel() {
