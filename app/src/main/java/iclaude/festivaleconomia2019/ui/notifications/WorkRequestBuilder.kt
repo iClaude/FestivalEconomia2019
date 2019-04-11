@@ -38,16 +38,16 @@ object WorkRequestBuilder {
             build()
         }
 
-        val notificationWork = OneTimeWorkRequest.Builder(NotifyWorker::class.java)
-            .setInitialDelay(
-                notificationData.startTimestamp - 3600000L - System.currentTimeMillis(),
-                TimeUnit.MILLISECONDS
-            ) // 1 hour before the event starts
-            .setInputData(inputData)
-            .addTag(NOTIFICATION_TAG)
-            .build()
+        val initialDelay =
+            notificationData.startTimestamp - 3600000L - System.currentTimeMillis() // 1 hour before the event starts
+        if (initialDelay < 0) return
 
-        WorkManager.getInstance().enqueue(notificationWork)
+        val notificationWorkBuilder = OneTimeWorkRequest.Builder(NotifyWorker::class.java)
+            .setInputData(inputData)
+            .setInitialDelay(initialDelay, TimeUnit.MILLISECONDS)
+            .addTag(NOTIFICATION_TAG)
+
+        WorkManager.getInstance().enqueue(notificationWorkBuilder.build())
     }
 
     fun deleteAllRequests() {
