@@ -72,7 +72,8 @@
                 app:goneWithPhoto="@{sessionDataDer}"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                tools:src="@drawable/event_logo"/>
 
         <!-- Title on header: only shown if there isn't a photo header or video. -->
         <TextView

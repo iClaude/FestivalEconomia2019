@@ -33,7 +33,7 @@
                 android:layout_marginStart="@dimen/margin_normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="@dimen/margin_normal"
-                tools:text="@tools:sample/lorem"
+                tools:text="@sample/bio"
                 android:text="@{organizerDataDer.bio}"/>
 
         <TextView
@@ -46,7 +46,7 @@
                 android:layout_marginStart="@dimen/margin_normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="@dimen/margin_normal"
-                tools:text="@tools:sample/lorem"
+                tools:text="Twitter - Facebook - LinkedIn"
                 app:websiteUrl="@{organizerDataDer.websiteUrl}"
                 app:twitterUrl="@{organizerDataDer.twitterUrl}"
                 app:linkedInUrl="@{organizerDataDer.linkedInUrl}"
