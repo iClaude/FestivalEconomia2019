@@ -226,7 +226,7 @@
       "relatedSessions": [],
       "location": "10",
       "organizers": [
-        "01"
+        "02"
       ],
       "startTimestamp": 1541619300000,
       "tags": [
@@ -341,8 +341,8 @@
       ],
       "location": "06",
       "organizers": [
-        "00",
-        "02"
+        "02",
+        "00"
       ],
       "startTimestamp": 1541622180000,
       "tags": [

@@ -12,16 +12,18 @@ import androidx.core.net.toUri
 import androidx.navigation.NavDeepLinkBuilder
 import androidx.work.Worker
 import androidx.work.WorkerParameters
+import com.bumptech.glide.Glide
 import iclaude.festivaleconomia2019.R
-import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_DESCRIPTION
-import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_END_TIMESTAMP
-import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_ID
-import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_LOCATION
-import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_LOCATION_LAT
-import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_LOCATION_LNG
-import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_ORGANIZERS
-import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_START_TIMESTAMP
-import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.SESSION_TITLE
+import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.NOTIFICATION_ORGANIZER_AVATAR_URL
+import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.NOTIFICATION_SESSION_DESCRIPTION
+import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.NOTIFICATION_SESSION_END_TIMESTAMP
+import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.NOTIFICATION_SESSION_ID
+import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.NOTIFICATION_SESSION_LOCATION
+import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.NOTIFICATION_SESSION_LOCATION_LAT
+import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.NOTIFICATION_SESSION_LOCATION_LNG
+import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.NOTIFICATION_SESSION_ORGANIZERS
+import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.NOTIFICATION_SESSION_START_TIMESTAMP
+import iclaude.festivaleconomia2019.ui.notifications.WorkRequestBuilder.NOTIFICATION_SESSION_TITLE
 import iclaude.festivaleconomia2019.ui.utils.buildSpannableString
 import iclaude.festivaleconomia2019.ui.utils.sessionInfoTimeStartDetails
 
@@ -30,15 +32,16 @@ const val NOTIFICATION_CHANNEL_ID = "events_notification_channel"
 class NotifyWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params) {
     override fun doWork(): Result {
         val notificationData = NotificationData(
-            inputData.getString(SESSION_ID),
-            inputData.getString(SESSION_TITLE),
-            inputData.getLong(SESSION_START_TIMESTAMP, 0),
-            inputData.getLong(SESSION_END_TIMESTAMP, 0),
-            inputData.getString(SESSION_DESCRIPTION),
-            inputData.getString(SESSION_ORGANIZERS),
-            inputData.getString(SESSION_LOCATION),
-            inputData.getDouble(SESSION_LOCATION_LAT, 0.0),
-            inputData.getDouble(SESSION_LOCATION_LNG, 0.0)
+            inputData.getString(NOTIFICATION_SESSION_ID),
+            inputData.getString(NOTIFICATION_SESSION_TITLE),
+            inputData.getLong(NOTIFICATION_SESSION_START_TIMESTAMP, 0),
+            inputData.getLong(NOTIFICATION_SESSION_END_TIMESTAMP, 0),
+            inputData.getString(NOTIFICATION_SESSION_DESCRIPTION),
+            inputData.getString(NOTIFICATION_SESSION_ORGANIZERS),
+            inputData.getString(NOTIFICATION_SESSION_LOCATION),
+            inputData.getDouble(NOTIFICATION_SESSION_LOCATION_LAT, 0.0),
+            inputData.getDouble(NOTIFICATION_SESSION_LOCATION_LNG, 0.0),
+            inputData.getString(NOTIFICATION_ORGANIZER_AVATAR_URL)
         )
         triggerNotification(notificationData)
 
@@ -87,7 +90,6 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params)
                 start = bigText.indexOf(description)
                 end = start + description.length
                 italic()
-                quote(ContextCompat.getColor(applicationContext, R.color.primaryColor))
             }
 
             span {
@@ -104,7 +106,7 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params)
         }
 
         val builder = NotificationCompat.Builder(applicationContext, NOTIFICATION_CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_squirrel_round)
+            .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle(notificationData.title)
             .setContentText(
                 "${sessionInfoTimeStartDetails(
@@ -112,6 +114,7 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params)
                     notificationData.startTimestamp
                 )} / ${notificationData.location}"
             )
+            .setColor(ContextCompat.getColor(applicationContext, R.color.primaryColor))
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setCategory(NotificationCompat.CATEGORY_REMINDER)
             .setVisibility(VISIBILITY_PUBLIC)
@@ -126,6 +129,18 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params)
                 directionsPendingIntent
             )
             .setAutoCancel(true)
+
+        // Avatar of organizer.
+        if (!notificationData.avatarUrl.isNullOrEmpty()) {
+            val futureTarget = Glide.with(applicationContext)
+                .asBitmap()
+                .load(notificationData.avatarUrl)
+                .circleCrop()
+                .submit()
+
+            val avatar = futureTarget.get()
+            builder.setLargeIcon(avatar)
+        }
 
         // Issue the notification.
         with(NotificationManagerCompat.from(applicationContext)) {
@@ -143,5 +158,6 @@ class NotificationData(
     val organizers: String?,
     val location: String?,
     val locationLat: Double,
-    val locationLng: Double
+    val locationLng: Double,
+    val avatarUrl: String?
 )

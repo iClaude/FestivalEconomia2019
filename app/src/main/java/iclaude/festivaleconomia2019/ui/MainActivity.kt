@@ -63,11 +63,14 @@ class MainActivity : AppCompatActivity() {
             val organizersStr = organizers.filter {
                 it.id in session.organizers
             }.joinToString(" - ") { it.name }
+            val avatarUrl = organizers.filter { it.id in session.organizers }.find { !it.thumbnailUrl.isNullOrEmpty() }
+                ?.thumbnailUrl
             if (session != null) WorkRequestBuilder.buildNotificationRequest(
                 NotificationData(
                     session.id, session.title,
                     session.startTimestamp, session.endTimestamp, session.description, organizersStr, locationStr,
-                    location.lat, location.lng
+                    location.lat, location.lng,
+                    avatarUrl
                 )
             )
         }
