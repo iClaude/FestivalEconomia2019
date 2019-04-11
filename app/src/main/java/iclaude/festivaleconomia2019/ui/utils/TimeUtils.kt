@@ -5,7 +5,6 @@ import android.preference.PreferenceManager
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.model.data_classes.Session
 import iclaude.festivaleconomia2019.utils.getQuantityString
-import org.threeten.bp.Duration
 import org.threeten.bp.Instant
 import org.threeten.bp.ZoneId
 import org.threeten.bp.ZonedDateTime
@@ -32,11 +31,12 @@ fun getZoneId(context: Context?): ZoneId {
 }
 
 fun numberOfDays(context: Context?, sessions: List<Session>): Int {
-    val startDate =
+    /*val startDate =
         zonedDateTimeFromTimestamp(context, sessions.first().startTimestamp)
     val endDate =
         zonedDateTimeFromTimestamp(context, sessions.last().startTimestamp)
-    return Duration.between(startDate, endDate).toDays().toInt().plus(1)
+    return Duration.between(startDate, endDate).toDays().toInt().plus(1)*/
+    return sessions.last().day + 1
 }
 
 fun daysLabels(context: Context?, sessions: List<Session>): MutableList<DayLabel> {
