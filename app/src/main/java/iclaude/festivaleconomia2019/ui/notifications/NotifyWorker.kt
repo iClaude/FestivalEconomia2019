@@ -4,6 +4,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.text.SpannableString
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationCompat.VISIBILITY_PUBLIC
 import androidx.core.app.NotificationManagerCompat
@@ -58,32 +59,75 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params)
         require(notificationData.endTimestamp > 0) { "Error: notificationData.endTimestamp is 0" }
 
         // PendingIntent to app's session info page.
+        val sessionInfoPendingIntent = buildSessionInfoPendingIntent(notificationData)
+
+        // PendingIntent to start Google Maps to obtain directions to the selected location.
+        val directionsPendingIntent = getDirectionsPendingIntent(notificationData)
+
+        // Notification data.
+        val speakers = applicationContext.getString(R.string.notification_speakers)
+        val description = notificationData.description.replace('\n', ' ').take(200)
+        val bigText = "${sessionInfoTimeStartDetails(
+            applicationContext,
+            notificationData.startTimestamp
+        )} / ${notificationData.location}\n\n$description...\n" +
+                "$speakers: ${notificationData.organizers}"
+        val bigTextSpan = buildBigTextSpannableString(bigText, description, speakers)
+
+        // Notification Builder with parameters set.
+        val builder = createAndSetNotificationBuilder(
+            notificationData,
+            bigTextSpan,
+            sessionInfoPendingIntent,
+            directionsPendingIntent
+        )
+
+        // Organizer's avatar.
+        if (!notificationData.avatarUrl.isNullOrEmpty()) {
+            val futureTarget = Glide.with(applicationContext)
+                .asBitmap()
+                .load(notificationData.avatarUrl)
+                .circleCrop()
+                .submit()
+
+            val avatar = futureTarget.get()
+            builder.setLargeIcon(avatar)
+        }
+
+        // Issue the notification.
+        with(NotificationManagerCompat.from(applicationContext)) {
+            notify(notificationData.id.toInt(), builder.build())
+        }
+    }
+
+    // PendingIntent to app's session info page.
+    private fun getDirectionsPendingIntent(notificationData: NotificationData): PendingIntent? {
+        val uri = "google.navigation:q=${notificationData.locationLat},${notificationData.locationLng}".toUri()
+        val directionsIntent = Intent(Intent.ACTION_VIEW, uri).apply {
+            `package` = "com.google.android.apps.maps"
+        }
+        return PendingIntent.getActivity(applicationContext, 0, directionsIntent, 0)
+    }
+
+    // PendingIntent to start Google Maps to obtain directions to the selected location.
+    private fun buildSessionInfoPendingIntent(notificationData: NotificationData): PendingIntent {
         val args = Bundle().apply {
             putString("sessionId", notificationData.id)
         }
-        val sessionPendingIntent = NavDeepLinkBuilder(applicationContext)
+        return NavDeepLinkBuilder(applicationContext)
             .setGraph(R.navigation.main_navigation)
             .setDestination(R.id.sessionInfoFragment)
             .setArguments(args)
             .createPendingIntent()
+    }
 
-        // PendingIntent to start Google Maps to obtain directions to the selected location.
-        val uri = "google.navigation:q=${notificationData.locationLat},${notificationData.locationLng}".toUri()
-        val gMapsIntent = Intent(Intent.ACTION_VIEW, uri).apply {
-            `package` = "com.google.android.apps.maps"
-        }
-        val directionsPendingIntent = PendingIntent.getActivity(applicationContext, 0, gMapsIntent, 0)
-
-        // Notification data.
-        val speakers = applicationContext.getString(R.string.notification_speakers)
-        val description = notificationData.description.take(200)
-        val bigText = "${sessionInfoTimeStartDetails(
-            applicationContext,
-            notificationData.startTimestamp
-        )} / ${notificationData.location}\n\n${description}...\n" +
-                "$speakers: ${notificationData.organizers}"
-
-        val bigTextSpan = buildSpannableString {
+    // Format big text of notification.
+    private fun buildBigTextSpannableString(
+        bigText: String,
+        description: String,
+        speakers: String
+    ): SpannableString {
+        return buildSpannableString {
             string = bigText
 
             span {
@@ -104,8 +148,15 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params)
                 bold()
             }
         }
+    }
 
-        val builder = NotificationCompat.Builder(applicationContext, NOTIFICATION_CHANNEL_ID)
+    private fun createAndSetNotificationBuilder(
+        notificationData: NotificationData,
+        bigTextSpan: SpannableString,
+        sessionInfoPendingIntent: PendingIntent,
+        directionsPendingIntent: PendingIntent?
+    ): NotificationCompat.Builder {
+        return NotificationCompat.Builder(applicationContext, NOTIFICATION_CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle(notificationData.title)
             .setContentText(
@@ -122,30 +173,13 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params)
                 NotificationCompat.BigTextStyle()
                     .bigText(bigTextSpan)
             )
-            .setContentIntent(sessionPendingIntent)
+            .setContentIntent(sessionInfoPendingIntent)
             .addAction(
                 R.drawable.ic_directions_black_24dp,
                 applicationContext.getString(R.string.notification_directions),
                 directionsPendingIntent
             )
             .setAutoCancel(true)
-
-        // Avatar of organizer.
-        if (!notificationData.avatarUrl.isNullOrEmpty()) {
-            val futureTarget = Glide.with(applicationContext)
-                .asBitmap()
-                .load(notificationData.avatarUrl)
-                .circleCrop()
-                .submit()
-
-            val avatar = futureTarget.get()
-            builder.setLargeIcon(avatar)
-        }
-
-        // Issue the notification.
-        with(NotificationManagerCompat.from(applicationContext)) {
-            notify(notificationData.id.toInt(), builder.build())
-        }
     }
 }
 

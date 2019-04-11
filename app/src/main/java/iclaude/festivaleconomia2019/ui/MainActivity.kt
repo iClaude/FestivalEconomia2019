@@ -5,7 +5,6 @@ import android.app.NotificationManager
 import android.os.Build
 import android.os.Bundle
 import android.preference.PreferenceManager
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -52,8 +51,6 @@ class MainActivity : AppCompatActivity() {
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
         val notificationsEnabled = sharedPref.getBoolean(getString(R.string.info_pref_notifications_key), true)
         if (!notificationsEnabled) return
-
-        Log.d("MYNOTIFICATIONS", "Main Activity: create requests for notifications")
 
         WorkRequestBuilder.deleteAllRequests()
         for (sessionId in repository.starredSessions) {
