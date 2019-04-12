@@ -111,13 +111,27 @@
     </string>
 
     <!-- Settings -->
-    <string name="info_pref_timezone_key" translatable="false">rome_timezone</string>
-    <string name="info_pref_timezone_title">Rome time zone</string>
-    <string name="info_pref_timezone_summary">Show times in the event\'s time zone</string>
+    <string name="info_pref_notifications_category_key" translatable="false">notifications</string>
+    <string name="info_pref_notifications_category">Notifications</string>
 
     <string name="info_pref_notifications_key" translatable="false">notifications_enabled</string>
     <string name="info_pref_notifications_title">Enable notifications</string>
     <string name="info_pref_notifications_summary">Only for favorite events</string>
+
+    <string name="info_pref_notifications_hours_key" translatable="false">hours</string>
+    <string name="info_pref_notifications_hours">Advance</string>
+    <string name="info_pref_notifications_hours_default_summary">1 hour before the event</string>
+    <plurals name="info_pref_notifications_hours_summary">
+        <item quantity="one">%d hour before the event</item>
+        <item quantity="other">%d hours before the event</item>
+    </plurals>
+
+    <string name="info_pref_others_category_key" translatable="false">others</string>
+    <string name="info_pref_others_category">Others</string>
+
+    <string name="info_pref_timezone_key" translatable="false">trento_timezone</string>
+    <string name="info_pref_timezone_title">Trento time zone</string>
+    <string name="info_pref_timezone_summary">Show times in the event\'s time zone</string>
 
     <string name="info_pref_website_key" translatable="false">website</string>
     <string name="info_pref_website_title">Official website</string>

@@ -23,7 +23,7 @@ object WorkRequestBuilder {
 
 
     // Create and enqueue a request for a specific Session.
-    fun buildNotificationRequest(notificationData: NotificationData) {
+    fun buildNotificationRequest(notificationData: NotificationData, hoursInAdvance: Int) {
         val inputData = Data.Builder().run {
             putString(NOTIFICATION_SESSION_ID, notificationData.id)
             putString(NOTIFICATION_SESSION_TITLE, notificationData.title)
@@ -39,7 +39,7 @@ object WorkRequestBuilder {
         }
 
         val initialDelay =
-            notificationData.startTimestamp - 3600000L - System.currentTimeMillis() // 1 hour before the event starts
+            notificationData.startTimestamp - 3600000L * hoursInAdvance - System.currentTimeMillis() // 1 hour before the event starts
         if (initialDelay < 0) return
 
         val notificationWorkBuilder = OneTimeWorkRequest.Builder(NotifyWorker::class.java)

@@ -79,7 +79,7 @@
     </string>
     <string name="info_about_github">Questa app è open source e il codice sorgente si trova nella seguente %s.
     </string>
-    <string name="info_pref_timezone_title">Fuso orario di Roma</string>
+    <string name="info_pref_timezone_title">Fuso orario di Trento</string>
     <string name="info_pref_timezone_summary">Mostra gli orari nel fuso orario dell\'evento</string>
     <string name="info_pref_notifications_title">Abilita notifiche</string>
     <string name="info_pref_notifications_summary">Solo per eventi preferiti</string>
@@ -91,4 +91,12 @@
     </string>
     <string name="notification_speakers">Relatori</string>
     <string name="notification_directions">Indicazioni stradali</string>
+    <string name="info_pref_notifications_category">Notifiche</string>
+    <string name="info_pref_others_category">Altre</string>
+    <string name="info_pref_notifications_hours">Anticipo</string>
+    <string name="info_pref_notifications_hours_default_summary">1 ora prima dell\'evento</string>
+    <plurals name="info_pref_notifications_hours_summary">
+        <item quantity="one">%d ora prima dell\'evento</item>
+        <item quantity="other">%d ore prima dell\'evento</item>
+    </plurals>
 </resources>

@@ -59,6 +59,7 @@ class MainActivity : AppCompatActivity() {
         val notificationsEnabled = sharedPref.getBoolean(getString(R.string.info_pref_notifications_key), true)
         if (!notificationsEnabled) return
 
+        val hoursInAdvance = sharedPref.getInt(getString(R.string.info_pref_notifications_hours_key), 1)
         WorkRequestBuilder.deleteAllRequests()
         for (sessionId in repository.starredSessions) {
             val session = sessions[sessionId.toInt()]
@@ -75,7 +76,7 @@ class MainActivity : AppCompatActivity() {
                     session.startTimestamp, session.endTimestamp, session.description, organizersStr, locationStr,
                     location.lat, location.lng,
                     avatarUrl
-                )
+                ), hoursInAdvance
             )
         }
     }

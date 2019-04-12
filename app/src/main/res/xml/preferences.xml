@@ -3,26 +3,46 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <SwitchPreferenceCompat
-            app:key="@string/info_pref_timezone_key"
-            app:title="@string/info_pref_timezone_title"
-            app:summary="@string/info_pref_timezone_summary"
-            app:defaultValue="true"/>
+    <PreferenceCategory
+            app:key="@string/info_pref_notifications_category_key"
+            app:title="@string/info_pref_notifications_category">
 
-    <SwitchPreferenceCompat
-            app:key="@string/info_pref_notifications_key"
-            app:title="@string/info_pref_notifications_title"
-            app:summary="@string/info_pref_notifications_summary"
-            app:defaultValue="true"/>
+        <SwitchPreferenceCompat
+                app:key="@string/info_pref_notifications_key"
+                app:title="@string/info_pref_notifications_title"
+                app:summary="@string/info_pref_notifications_summary"
+                app:defaultValue="true"/>
 
-    <Preference
-            app:key="@string/info_pref_website_key"
-            app:title="@string/info_pref_website_title"
-            app:summary="@string/info_pref_website_summary"
-            app:icon="@drawable/ic_web_black_24dp">
-        <intent
-                android:action="android.intent.action.VIEW"
-                android:data="@string/official_site_url"/>
-    </Preference>
+        <SeekBarPreference
+                app:key="@string/info_pref_notifications_hours_key"
+                app:title="@string/info_pref_notifications_hours"
+                app:dependency="@string/info_pref_notifications_key"
+                android:min="0"
+                android:max="24"
+                app:defaultValue="1"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            app:key="@string/info_pref_others_category_key"
+            app:title="@string/info_pref_others_category">
+
+        <SwitchPreferenceCompat
+                app:key="@string/info_pref_timezone_key"
+                app:title="@string/info_pref_timezone_title"
+                app:summary="@string/info_pref_timezone_summary"
+                app:defaultValue="true"/>
+
+        <Preference
+                app:key="@string/info_pref_website_key"
+                app:title="@string/info_pref_website_title"
+                app:summary="@string/info_pref_website_summary"
+                app:icon="@drawable/ic_web_black_24dp">
+            <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="@string/official_site_url"/>
+        </Preference>
+
+    </PreferenceCategory>
 
 </androidx.preference.PreferenceScreen>
