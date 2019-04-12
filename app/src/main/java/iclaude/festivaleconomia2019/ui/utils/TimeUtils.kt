@@ -49,7 +49,7 @@ fun daysLabels(context: Context?, sessions: List<Session>): MutableList<DayLabel
 
     var day: ZonedDateTime = startDate
     @Suppress("SpellCheckingInspection") val formatter = DateTimeFormatter.ofPattern("d MMMM")
-    while (day <= endDate) {
+    while (startOfDay(day) <= startOfDay(endDate)) {
         labels.add(DayLabel(day, day.format(formatter)))
         day = day.plusDays(1)
     }
