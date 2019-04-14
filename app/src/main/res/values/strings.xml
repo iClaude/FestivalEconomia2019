@@ -142,4 +142,17 @@
     <string name="notification_channel_description">Receive notifications 1 hour before favorite events begin</string>
     <string name="notification_speakers">Speakers</string>
     <string name="notification_directions">Take me there</string>
+
+    <!-- FAQ -->
+    <string name="expanded">Expanded</string>
+    <string name="collapsed">Collapsed</string>
+    <string name="faq_train_title">Arriving: by train</string>
+    <string name="faq_train_description">Trento is on the Verona-Brennero-Monaco axis. All trains to and from Verona and Bolzano stop in Trento. There is a direct link with Venice-Mestre; Valsugana-Bassano; Grappa-Castelfranco Veneto.</string>
+    <string name="faq_car_title">Arriving: by car</string>
+    <string name="faq_car_description">A22 Brennero motorway. Take the exit at Trento Sud (approx. 90 km from North Verona) or Trento Nord (58 km from Bolzano); taking SS no. 12 at Abetone-Brennero, along the Valle dell\'Adige. Coming from Padua, Bassano, Belluno, take the SS no. 47 at Valsugana (super-highway), while for those arriving from the Lombard zone of Lago di Garda, take the SS no. 45bis at Gardesana occidentale. For more information call the toll-free number 800 994411 run by the Autonomous Province of Trento or visit www.viaggiareintrentino.it.</string>
+    <string name="faq_air_title">Arriving: by air</string>
+    <string name="faq_air_description">The nearest airports are in Bolzano (60 km), Verona (97 km), Treviso (140 km), Brescia-Montichiari (160 km), Venice (173 km), Milan Linate (223 km), Milan Malpensa (250 km), Bergamo Orio al Serio (180 km), Bologna (220 km), and Innsbruck (177 km).</string>
+    <string name="faq_gettingaround_title">Getting around</string>
+    <string name="faq_gettingaround_description">All the Festival venues can be reached easily on foot. The Festival provides bicycles free of charge at the Bicigrill in Piazza Fiera. The historic centre is a traffic-restricted area (ZTL) where circulation of vehicles is prohibited at certain times. In the town paid parking spaces are indicated in blue (between 8.00-19.30 on weekdays, Saturdays included). </string>
+
 </resources>

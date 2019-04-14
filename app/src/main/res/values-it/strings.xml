@@ -99,4 +99,14 @@
         <item quantity="one">%d ora prima dell\'evento</item>
         <item quantity="other">%d ore prima dell\'evento</item>
     </plurals>
+    <string name="expanded">Aperto</string>
+    <string name="collapsed">Chiuso</string>
+    <string name="faq_train_title">Arrivare: in treno</string>
+    <string name="faq_train_description">Trento si trova lungo la linea Verona-Brennero-Monaco. Fermano tutti i treni in passaggio da/per Verona e Bolzano. Collegamento diretto con Venezia-Mestre via Valsugana-Bassano del Grappa-Castelfranco Veneto.</string>
+    <string name="faq_car_title">Arrivare: in auto</string>
+    <string name="faq_car_description">Autostrada A22 del Brennero uscendo al casello Trento Sud (90 km circa da Verona Nord) o al casello Trento Nord (58 km da Bolzano); percorrendo la SS n. 12 dell\'Abetone-Brennero che risale lungo la Valle dell\'Adige. Se si proviene da Padova, Bassano, Belluno si prende la SS n. 47 della Valsugana (superstrada), mentre arrivando dalla zona lombarda del Lago di Garda si può percorrere la SS n. 45bis della Gardesana occidentale. Per avere informazioni sulla viabilità: www.viaggiareintrentino.it, numero verde 800 994411 a cura della Provincia autonoma di Trento.</string>
+    <string name="faq_air_title">Arrivare: in aereo</string>
+    <string name="faq_air_description">Gli aeroporti più vicini sono a Bolzano (60 km), Verona (97 km), Treviso (140 km), Brescia-Montichiari (160 km), Venezia (173 km), Milano Linate (223 km), Milano Malpensa (250 km), Bergamo Orio al Serio (180 km), Bologna (220 km), Innsbruck (177 km).</string>
+    <string name="faq_gettingaround_title">Spostarsi in città</string>
+    <string name="faq_gettingaround_description">Tutti i luoghi del Festival sono facilmente raggiungibili a piedi. Il Festival mette a disposizione gratuita l\'uso di biciclette presso il Bicigrill in piazza Fiera. Il centro cittadino è zona a traffico limitato (ZTL) dove la circolazione è vietata ai veicoli. In città gli spazi per la sosta a pagamento sono delimitati da strisce blu, nell\'orario 8.00-19.30 dei soli giorni feriali (sabato compreso).</string>
 </resources>

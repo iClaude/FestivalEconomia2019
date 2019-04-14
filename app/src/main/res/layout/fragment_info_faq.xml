@@ -1,13 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".ui.info.FAQFragment">
 
-    <TextView
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical">
+
+    <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="FAQ"/>
+            android:layout_height="wrap_content"
+            android:divider="@drawable/list_divider"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/margin_normal"
+            android:showDividers="middle">
 
-</FrameLayout>
+        <iclaude.festivaleconomia2019.ui.widget.CollapsibleCard
+                android:id="@+id/ccTrain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardTitle="@string/faq_train_title"
+                app:cardDescription="@string/faq_train_description"/>
+
+        <iclaude.festivaleconomia2019.ui.widget.CollapsibleCard
+                android:id="@+id/ccCar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardTitle="@string/faq_car_title"
+                app:cardDescription="@string/faq_car_description"/>
+
+        <iclaude.festivaleconomia2019.ui.widget.CollapsibleCard
+                android:id="@+id/ccAir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardTitle="@string/faq_air_title"
+                app:cardDescription="@string/faq_air_description"/>
+
+        <iclaude.festivaleconomia2019.ui.widget.CollapsibleCard
+                android:id="@+id/ccGettingAround"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardTitle="@string/faq_gettingaround_title"
+                app:cardDescription="@string/faq_gettingaround_description"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:lottie_fileName="lottie/city_skyline.json"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:scaleType="fitStart"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
