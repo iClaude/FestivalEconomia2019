@@ -48,7 +48,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Notifications.
-
     private fun scheduleNotifications() {
         val sessions = repository.eventDataLive.value?.sessions ?: return
         val locations = repository.eventDataLive.value?.locations ?: return
@@ -59,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         val notificationsEnabled = sharedPref.getBoolean(getString(R.string.info_pref_notifications_key), true)
         if (!notificationsEnabled) return
 
+        // Notifications for starred events.
         val hoursInAdvance = sharedPref.getInt(getString(R.string.info_pref_notifications_hours_key), 1)
         WorkRequestBuilder.deleteAllRequests()
         for (sessionId in repository.starredSessions) {
