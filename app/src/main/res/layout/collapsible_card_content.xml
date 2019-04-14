@@ -62,7 +62,7 @@
 
         </RelativeLayout>
 
-        <iclaude.festivaleconomia2019.ui.widget.HtmlTextView
+        <TextView
                 android:id="@+id/card_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -72,7 +72,10 @@
                 android:paddingTop="@dimen/spacing_normal"
                 android:textColor="?android:textColorPrimary"
                 android:visibility="gone"
-                tools:text="This is a card description"/>
+                tools:text="This is a card description"
+                android:focusable="auto"
+                android:clickable="true"
+                android:focusableInTouchMode="true"/>
 
     </LinearLayout>
 

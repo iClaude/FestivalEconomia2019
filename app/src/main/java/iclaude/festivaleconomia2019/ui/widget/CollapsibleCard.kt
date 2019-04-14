@@ -27,7 +27,7 @@ class CollapsibleCard @JvmOverloads constructor(
 
     private var expanded = false
     private val cardTitleView: TextView
-    private val cardDescriptionView: HtmlTextView
+    private val cardDescriptionView: TextView
     private val expandIcon: ImageView
     private val titleContainer: View
     private val toggle: Transition
@@ -47,7 +47,7 @@ class CollapsibleCard @JvmOverloads constructor(
             text = cardTitle
         }
         setTitleContentDescription(cardTitle)
-        cardDescriptionView = root.findViewById<HtmlTextView>(R.id.card_description).apply {
+        cardDescriptionView = root.findViewById<TextView>(R.id.card_description).apply {
             text = cardDescription
         }
         expandIcon = root.findViewById(R.id.expand_icon)

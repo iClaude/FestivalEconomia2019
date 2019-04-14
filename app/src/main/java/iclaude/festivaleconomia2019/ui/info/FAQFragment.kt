@@ -38,7 +38,7 @@ class FAQFragment : Fragment() {
                 end = start + 26
                 clickableSpan {
                     context = getContext()
-                    url = "www.viaggiareintrentino.it"
+                    url = "http://www.viaggiareintrentino.it"
                 }
             }
         }
