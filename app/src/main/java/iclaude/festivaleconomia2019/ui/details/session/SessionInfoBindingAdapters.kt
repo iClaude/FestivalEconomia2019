@@ -38,7 +38,9 @@ import kotlin.math.absoluteValue
 
 // Show session's title or generic info in the Toolbar.
 @BindingAdapter("app:titleOrInfo")
-fun displayTitleOrInfo(textView: TextView, sessionInfo: SessionInfo) {
+fun displayTitleOrInfo(textView: TextView, sessionInfo: SessionInfo?) {
+    sessionInfo ?: return
+
     textView.text = if (sessionInfo.photoUrl.isNullOrEmpty() && sessionInfo.youtubeUrl.isNullOrEmpty())
         sessionInfo.title
     else
@@ -46,7 +48,9 @@ fun displayTitleOrInfo(textView: TextView, sessionInfo: SessionInfo) {
 }
 
 @BindingAdapter("app:onOffsetChangedListener")
-fun addOnOffsetChangedListener(appBarLayout: AppBarLayout, viewModel: SessionInfoViewModel) {
+fun addOnOffsetChangedListener(appBarLayout: AppBarLayout, viewModel: SessionInfoViewModel?) {
+    viewModel ?: return
+
     appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
         val percCollapsed = verticalOffset.absoluteValue.toFloat() / appBarLayout.totalScrollRange
         viewModel.setAppBarCollapsedPercentage(percCollapsed)
@@ -55,7 +59,9 @@ fun addOnOffsetChangedListener(appBarLayout: AppBarLayout, viewModel: SessionInf
 
 // Title in the Toolbar: displayed when app bar is collapsed.
 @BindingAdapter("app:showOrHide")
-fun showOrHide(view: View, appBarCollapsedPercentage: Float) {
+fun showOrHide(view: View, appBarCollapsedPercentage: Float?) {
+    appBarCollapsedPercentage ?: return
+
     val curAlpha = view.alpha
     val newAlpha = if (appBarCollapsedPercentage > 0.9) 1f else 0f
     if (curAlpha == newAlpha) return
@@ -95,26 +101,35 @@ fun eventHeaderAnim(lottieView: LottieAnimationView, sessionInfo: SessionInfo) {
 }
 
 @BindingAdapter("app:visibleWithPhotoOrVideo")
-fun visibleWithPhotoOrVideo(view: View, sessionInfo: SessionInfo) {
+fun visibleWithPhotoOrVideo(view: View, sessionInfo: SessionInfo?) {
+    sessionInfo ?: return
+
     view.visibility =
         if (sessionInfo.photoUrl.isNullOrEmpty() && sessionInfo.youtubeUrl.isNullOrEmpty()) View.GONE else View.VISIBLE
 }
 
 @BindingAdapter("app:goneWithPhotoOrVideo")
-fun goneWithPhotoOrVideo(view: View, sessionInfo: SessionInfo) {
+fun goneWithPhotoOrVideo(view: View, sessionInfo: SessionInfo?) {
+    sessionInfo ?: return
+
     view.visibility =
         if (sessionInfo.photoUrl.isNullOrEmpty() && sessionInfo.youtubeUrl.isNullOrEmpty()) View.VISIBLE else View.GONE
 }
 
 @BindingAdapter("app:goneWithPhoto")
-fun goneWithPhoto(view: View, sessionInfo: SessionInfo) {
+fun goneWithPhoto(view: View, sessionInfo: SessionInfo?) {
+    sessionInfo ?: return
+
     view.visibility = if (sessionInfo.photoUrl.isNullOrEmpty()) View.VISIBLE else View.GONE
 }
 
 
 // Time info.
 @BindingAdapter("app:startTimestamp", "app:endTimestamp", requireAll = true)
-fun timeDetails(textView: TextView, startTimestamp: Long, endTimestamp: Long) {
+fun timeDetails(textView: TextView, startTimestamp: Long?, endTimestamp: Long?) {
+    startTimestamp ?: return
+    endTimestamp ?: return
+
     textView.text =
         sessionInfoTimeDetails(textView.context, startTimestamp, endTimestamp)
 }
@@ -125,7 +140,10 @@ fun timeDetails(textView: TextView, startTimestamp: Long, endTimestamp: Long) {
 
 // Add organizers as child Views of LinearLayout.
 @BindingAdapter("app:organizers", "app:viewModel", requireAll = true)
-fun addOrganizers(layout: LinearLayout, organizers: List<Organizer>, viewModel: SessionInfoViewModel) {
+fun addOrganizers(layout: LinearLayout, organizers: List<Organizer>?, viewModel: SessionInfoViewModel?) {
+    organizers ?: return
+    viewModel ?: return
+
     val context = layout.context
 
     for (organizer in organizers) {
@@ -206,12 +224,17 @@ fun speakerImage(imageView: ImageView, organizer: Organizer?, listener: ImageLoa
  */
 
 @BindingAdapter("app:relatedSessionsVisibility")
-fun relatedSessionsVisibility(view: View, sessionInfo: SessionInfo) {
+fun relatedSessionsVisibility(view: View, sessionInfo: SessionInfo?) {
+    sessionInfo ?: return
+
     view.visibility = if (sessionInfo.hasRelatedSessions()) View.VISIBLE else View.GONE
 }
 
 @BindingAdapter("app:relatedSessions", "app:viewModel", requireAll = true)
-fun addRelatedSessions(layout: LinearLayout, relatedSessions: List<Session>, viewModel: SessionInfoViewModel) {
+fun addRelatedSessions(layout: LinearLayout, relatedSessions: List<Session>?, viewModel: SessionInfoViewModel?) {
+    relatedSessions ?: return
+    viewModel ?: return
+
     val eventData = viewModel.repository.eventDataLive.value ?: return
 
     val context = layout.context
@@ -233,14 +256,19 @@ fun addRelatedSessions(layout: LinearLayout, relatedSessions: List<Session>, vie
 
 // Icon for livestreamed sessions.
 @BindingAdapter("app:liveStreamedVisibility")
-fun liveStreamedVisibility(view: View, session: Session) {
+fun liveStreamedVisibility(view: View, session: Session?) {
+    session ?: return
+
     view.visibility = if (session.hasYoutubeUrl()) View.VISIBLE else View.GONE
 
 }
 
 // Time and location of each related session.
 @BindingAdapter("app:lenLocText", "app:location", requireAll = true)
-fun lenLocText(textView: TextView, session: Session, location: Location) {
+fun lenLocText(textView: TextView, session: Session?, location: Location?) {
+    session ?: return
+    location ?: return
+
     val context = textView.context
     val str = "${getDateShortStr(
         context,
@@ -257,10 +285,14 @@ fun lenLocText(textView: TextView, session: Session, location: Location) {
 @BindingAdapter("app:onStarClickListenerRelated", "app:loginFlow", "app:relatedSessions", requireAll = true)
 fun onStarClickListener(
     button: CheckableImageButton,
-    session: Session,
-    loginFlow: LoginFlow,
-    relatedSessions: RelatedSessions
+    session: Session?,
+    loginFlow: LoginFlow?,
+    relatedSessions: RelatedSessions?
 ) {
+    session ?: return
+    loginFlow ?: return
+    relatedSessions ?: return
+
     button.setOnClickListener {
         if (FirebaseAuth.getInstance().currentUser != null) {
             val b = it as CheckableImageButton
@@ -278,7 +310,9 @@ fun onStarClickListener(
 
 // Checked or unchecked state.
 @BindingAdapter("app:starred")
-fun starredSession(button: CheckableImageButton, isStarred: Boolean) {
+fun starredSession(button: CheckableImageButton, isStarred: Boolean?) {
+    isStarred ?: return
+
     button.isChecked = isStarred
 }
 
@@ -286,9 +320,12 @@ fun starredSession(button: CheckableImageButton, isStarred: Boolean) {
 @BindingAdapter("app:onStarClickListener", "app:viewModel", requireAll = true)
 fun onStarFabClicked(
     button: CheckableImageButton,
-    sessionId: String,
-    viewModel: SessionInfoViewModel
+    sessionId: String?,
+    viewModel: SessionInfoViewModel?
 ) {
+    sessionId ?: return
+    viewModel ?: return
+
     button.setOnClickListener { button ->
         if (FirebaseAuth.getInstance().currentUser != null) {
             val starButton = (button as CheckableImageButton).also { it.toggle() }
