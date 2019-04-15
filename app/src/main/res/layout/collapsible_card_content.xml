@@ -36,7 +36,7 @@
                 android:minHeight="?android:listPreferredItemHeightSmall">
 
             <TextView
-                    android:id="@+id/card_title"
+                    android:id="@+id/tvCardTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -63,7 +63,7 @@
         </RelativeLayout>
 
         <TextView
-                android:id="@+id/card_description"
+                android:id="@+id/tvCardDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="@dimen/margin_normal"

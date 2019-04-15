@@ -43,11 +43,11 @@ class CollapsibleCard @JvmOverloads constructor(
             .inflate(R.layout.collapsible_card_content, this, true)
 
         titleContainer = root.findViewById(R.id.title_container)
-        cardTitleView = root.findViewById<TextView>(R.id.card_title).apply {
+        cardTitleView = root.findViewById<TextView>(R.id.tvCardTitle).apply {
             text = cardTitle
         }
         setTitleContentDescription(cardTitle)
-        cardDescriptionView = root.findViewById<TextView>(R.id.card_description).apply {
+        cardDescriptionView = root.findViewById<TextView>(R.id.tvCardDescription).apply {
             text = cardDescription
         }
         expandIcon = root.findViewById(R.id.expand_icon)
