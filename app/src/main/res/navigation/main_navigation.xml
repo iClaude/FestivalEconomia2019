@@ -38,7 +38,7 @@
     </fragment>
 
     <!--Info about the event-->
-    <fragment android:id="@+id/FAQFragment" android:name="iclaude.festivaleconomia2019.ui.info.FAQFragment"
+    <fragment android:id="@+id/FAQFragment" android:name="iclaude.festivaleconomia2019.ui.info.faq.FAQFragment"
               android:label="fragment_faq" tools:layout="@layout/fragment_info_faq"/>
     <fragment android:id="@+id/aboutFragment" android:name="iclaude.festivaleconomia2019.ui.info.about.AboutFragment"
               android:label="fragment_about" tools:layout="@layout/fragment_info_about"/>
