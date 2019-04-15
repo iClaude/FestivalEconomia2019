@@ -2,6 +2,7 @@ package iclaude.festivaleconomia2019.ui.info.faq
 
 import android.os.Bundle
 import android.text.SpannableString
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -43,6 +44,38 @@ class FAQFragment : Fragment(), FAQView {
      */
 
     override fun showCarInfo(spannableString: SpannableString) {
-        ccCar.tvCardDescription.text = spannableString
+        ccCar.tvCardDescription.apply {
+            text = spannableString
+            movementMethod = LinkMovementMethod.getInstance()
+
+        }
+    }
+
+    override fun showParkingCoachesInfo(spannableString: SpannableString) {
+        ccParkingCoaches.tvCardDescription.apply {
+            text = spannableString
+            movementMethod = LinkMovementMethod.getInstance()
+        }
+    }
+
+    override fun showParkingVansInfo(spannableString: SpannableString) {
+        ccParkingVans.tvCardDescription.apply {
+            text = spannableString
+            movementMethod = LinkMovementMethod.getInstance()
+        }
+    }
+
+    override fun showUsefulNumbersInfo(spannableString: SpannableString) {
+        ccUsefulNumbers.tvCardDescription.apply {
+            text = spannableString
+            movementMethod = LinkMovementMethod.getInstance()
+        }
+    }
+
+    override fun showHandicapInfo(spannableString: SpannableString) {
+        ccHandicap.tvCardDescription.apply {
+            text = spannableString
+            movementMethod = LinkMovementMethod.getInstance()
+        }
     }
 }

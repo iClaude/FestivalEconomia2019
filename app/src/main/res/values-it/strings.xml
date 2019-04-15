@@ -104,10 +104,68 @@
     <string name="faq_train_title">Arrivare: in treno</string>
     <string name="faq_train_description">Trento si trova lungo la linea Verona-Brennero-Monaco. Fermano tutti i treni in passaggio da/per Verona e Bolzano. Collegamento diretto con Venezia-Mestre via Valsugana-Bassano del Grappa-Castelfranco Veneto.</string>
     <string name="faq_car_title">Arrivare: in auto</string>
-    <string name="faq_car_description">Autostrada A22 del Brennero uscendo al casello Trento Sud (90 km circa da Verona Nord) o al casello Trento Nord (58 km da Bolzano); percorrendo la SS n. 12 dell\'Abetone-Brennero che risale lungo la Valle dell\'Adige. Se si proviene da Padova, Bassano, Belluno si prende la SS n. 47 della Valsugana (superstrada), mentre arrivando dalla zona lombarda del Lago di Garda si può percorrere la SS n. 45bis della Gardesana occidentale. Per avere informazioni sulla viabilità: www.viaggiareintrentino.it, numero verde 800 994411 a cura della Provincia autonoma di Trento.</string>
+    <string name="faq_car_description">Autostrada A22 del Brennero uscendo al casello Trento Sud (90 km circa da Verona
+        Nord) o al casello Trento Nord (58 km da Bolzano); percorrendo la SS n. 12 dell\'Abetone-Brennero che risale
+        lungo la Valle dell\'Adige. Se si proviene da Padova, Bassano, Belluno si prende la SS n. 47 della Valsugana
+        (superstrada), mentre arrivando dalla zona lombarda del Lago di Garda si può percorrere la SS n. 45bis della
+        Gardesana occidentale. \nPer avere informazioni sulla viabilità: www.viaggiareintrentino.it, numero verde 800
+        994411 a cura della Provincia autonoma di Trento.
+    </string>
     <string name="faq_air_title">Arrivare: in aereo</string>
     <string name="faq_air_description">Gli aeroporti più vicini sono a Bolzano (60 km), Verona (97 km), Treviso (140 km), Brescia-Montichiari (160 km), Venezia (173 km), Milano Linate (223 km), Milano Malpensa (250 km), Bergamo Orio al Serio (180 km), Bologna (220 km), Innsbruck (177 km).</string>
     <string name="faq_gettingaround_title">Spostarsi in città</string>
     <string name="faq_gettingaround_description">Tutti i luoghi del Festival sono facilmente raggiungibili a piedi. Il Festival mette a disposizione gratuita l\'uso di biciclette presso il Bicigrill in piazza Fiera. Il centro cittadino è zona a traffico limitato (ZTL) dove la circolazione è vietata ai veicoli. In città gli spazi per la sosta a pagamento sono delimitati da strisce blu, nell\'orario 8.00-19.30 dei soli giorni feriali (sabato compreso).</string>
+    <string name="faq_parkingcoaches_title">Parcheggio: pullman</string>
+    <string name="faq_parkingcoaches_description">Possibilità di sosta: via Petrarca, Lungadige San Nicolò, via R. da
+        Sanseverino. \nPossibilità di discesa/salita passeggeri: in Lungadige Monte Grappa, Via Alfieri, via Bernardo
+        Clesio e Corso degli Alpini, al piazzale area ex Zuffo, nei pressi della fermata navetta, per il centro a
+        pagamento. \nPer maggiori informazioni: Corpo di Polizia Locale Trento-Monte Bondone, tel. +39 0461 889111.
+    </string>
+    <string name="faq_parkingvans_title">Parcheggio: camper</string>
+    <string name="faq_parkingvans_description">Area sosta Camper via Fersina nord - 33 piazzole massimo 48 ore, presenza
+        di servizi igienici adatti anche disabili con acqua calda, camper service per scarico liquami -
+        http://www.trentinomobilita.it \nPiazzale area ex Zuffo – nei pressi del casello di Trento Centro (chiuso in
+        uscita): 19 posti, parcheggio e servizio camper service a pagamento. \nPiazzale Sanseverino: sosta con disco
+        orario.\nParcheggio Campo Coni - via E. Maccani: parcheggio a pagamento o disco orario, n. 10
+        posti.\nVillazzano - via Asiago: nel parcheggio presso la stazione FS, n. 6 posti.
+    </string>
+    <string name="faq_parkingcars_title">Parcheggio: auto - gratuito</string>
+    <string name="faq_parkingcars_description">Piazzale area ex Zuffo nei pressi del casello di Trento Centro (chiuso in
+        uscita); parcheggio Monte Baldo all\'intersezione tra via Monte Baldo e via Sanseverino; parcheggio Ghiaie c/o
+        il PalaTrento in via Fersina; piazzale Sanseverino; area ex Sit in via Canestrini; parcheggio nei pressi di
+        Piedicastello (Gallerie).\nEx Zuffo – Monte Baldo – Ghiaie (c/o PalaTrento) sono collegati alla città dalle
+        seguenti linee del servizio di trasporto pubblico: il parcheggio ex Zuffo dalla Navetta parcheggi e dalla linea
+        2 con frequenza di 10 minuti nelle ore di punta e di 15 minuti nelle ore di morbida; il parcheggio Monte Baldo
+        dalla Navetta parcheggi con frequenze che nelle ore di punta arrivano ai 10 minuti; il parcheggio del PalaTrento
+        dalla linea A e dalla Navetta parcheggi con una frequenza di 15 minuti.
+    </string>
+    <string name="faq_parkingcars_paid_title">Parcheggio: auto - a pagamento</string>
+    <string name="faq_parkingcars_paid_description">- Autosilo Buonconsiglio, via F. Petrarca, 1/5: 400 posti\n
+        - Centro Europa, via Segantini, 7: 500 posti\n
+        - Autorimessa Europa (custodita), via Roggia Grande, 16: 100 posti\n
+        - Parcheggio Piazza Fiera, piazza Fiera: 460 posti\n
+        - Garage Torre Verde (custodito), via Torre Verde, 40: 60 posti\n
+        - Parcheggio Duomo, piazza Mosna, 1/A: 197 posti\n
+        - Parcheggio Palazzo Onda, via Zambra : 170 posti\n
+        - Parcheggio Trento Fiere - via Briamasco, 2, per auto e camper: n. 250 posti.
+    </string>
+
+    <string name="faq_usefulenumbers_chemists_list">Farmacie di turno</string>
+    <string name="faq_usefulenumbers_chemists_map">Mappa delle farmacie di Trento</string>
+    <string name="faq_usefulenumbers_hospital">Ospedale S.Chiara</string>
+    <string name="faq_usefulenumbers_emergency_medical">Guardia medica</string>
+    <string name="faq_usefulnumbers_title">Numeri utili</string>
+    <string name="faq_usefulnumbers_description">%1$s\n%2$s\n%3$s - tel. +39 0461 903111\n%4$s - tel. +39 0461
+        904298\nEmergenza sanitaria - 118\nCarabinieri - 112 - +39 0461 202000\nCorpo di Polizia Locale Trento - Monte
+        Bondone - tel. +39 0461 889111\nQuestura - tel. +39 0461 899511
+    </string>
+    <string name="faq_handicap_title">Trento senza barriere</string>
+    <string name="faq_handicap_description">The buses A, 1, 2, 3, 4, 6, 7, 8, 10, 11, 12, 13, 15, 17, NP (Parking
+        shuttle bus) can accommodate disabled persons. The Disabled Helpdesk managed by the HandiCREA Cooperative on Via
+        S. Martino, 46 (Tel. +39 0461 239396 - info@handicrea.it- www.handicrea.it), open from 8.30 – 12.30 and from
+        13.30 – 17.00 Monday to Friday, provides information on the services available to disabled persons and on the
+        accessibility of tourist and other amenities. For more information: www.ttesercizio.it.
+    </string>
+
 
 </resources>
