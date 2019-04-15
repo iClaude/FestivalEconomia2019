@@ -35,6 +35,7 @@ import android.text.style.*
  *      ...
  * }
  */
+// TODO: create a spannable string builder from strings with html tags.
 fun buildSpannableString(block: MySpannableStringBuilder.() -> Unit): SpannableString =
     MySpannableStringBuilder().apply(block).build()
 
@@ -93,7 +94,7 @@ class MySpanDataBuilder {
         spans.add(SpanData(start, end, flags, QuoteSpan(color)))
     }
 
-    fun bullet(gap: Int?, color: Int?) {
+    fun bullet(gap: Int? = null, color: Int? = null) {
         spans.add(SpanData(start, end, flags, BulletSpan(gap ?: 15, color ?: Color.BLACK)))
     }
 }

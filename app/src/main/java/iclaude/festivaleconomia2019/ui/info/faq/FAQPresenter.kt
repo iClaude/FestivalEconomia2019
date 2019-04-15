@@ -12,8 +12,11 @@ import iclaude.festivaleconomia2019.ui.utils.buildSpannableString
 
 interface FAQView {
     fun showCarInfo(spannableString: SpannableString)
+    fun showGettingAroundInfo(spannableString: SpannableString)
     fun showParkingCoachesInfo(spannableString: SpannableString)
     fun showParkingVansInfo(spannableString: SpannableString)
+    fun showParkingCarsInfo(spannableString: SpannableString)
+    fun showParkingCarsPaidInfo(spannableString: SpannableString)
     fun showUsefulNumbersInfo(spannableString: SpannableString)
     fun showHandicapInfo(spannableString: SpannableString)
 
@@ -24,8 +27,11 @@ class FAQPresenter(private var faqView: FAQView, private var mContext: Context) 
     // Display all the formatted data in the associated View.
     fun displayData() {
         faqView.showCarInfo(createCarInfoText())
+        faqView.showGettingAroundInfo(createGettingAroundInfoText())
         faqView.showParkingCoachesInfo(createParkingCoachesText())
         faqView.showParkingVansInfo(createParkingVansText())
+        faqView.showParkingCarsInfo(createParkingCarsText())
+        faqView.showParkingCarsPaidInfo(createParkingCarsPaidText())
         faqView.showUsefulNumbersInfo(createUsefulNumbersText())
         faqView.showHandicapInfo(createHandicapInfoText())
     }
@@ -48,11 +54,44 @@ class FAQPresenter(private var faqView: FAQView, private var mContext: Context) 
                     url = "http://www.viaggiareintrentino.it"
                 }
             }
+
+            span {
+                start = str.indexOf("Brennero")
+                end = start + 8
+                bold()
+            }
+
+            span {
+                start = str.indexOf("Padova, Bassano, Belluno")
+                end = start + 24
+                bold()
+            }
+
+            span {
+                start = str.indexOf("Lago di Garda")
+                end = start + 13
+                bold()
+            }
+        }
+    }
+
+    private fun createGettingAroundInfoText(): SpannableString {
+        val str = mContext.getString(R.string.faq_gettingaround_description)
+
+        return buildSpannableString {
+            string = str
+            span {
+                start = str.indexOf("Bicigrill in Piazza Fiera")
+                end = start + 25
+                bold()
+            }
         }
     }
 
     private fun createParkingCoachesText(): SpannableString {
-        val str = mContext.getString(R.string.faq_parkingcoaches_description)
+        val item1 = mContext.getString(R.string.faq_parkingcoaches_description_item1)
+        val item2 = mContext.getString(R.string.faq_parkingcoaches_description_item2)
+        val str = mContext.getString(R.string.faq_parkingcoaches_description, item1, item2)
 
         return buildSpannableString {
             string = str
@@ -64,6 +103,18 @@ class FAQPresenter(private var faqView: FAQView, private var mContext: Context) 
                     context = mContext
                     url = "http://www.comune.trento.it/content/view/full/221253"
                 }
+            }
+
+            span {
+                start = str.indexOf(item1)
+                end = start + item1.length
+                bold()
+            }
+
+            span {
+                start = str.indexOf(item2)
+                end = start + item2.length
+                bold()
             }
         }
     }
@@ -80,6 +131,52 @@ class FAQPresenter(private var faqView: FAQView, private var mContext: Context) 
                 clickableSpan {
                     context = mContext
                     url = "http://www.trentinomobilita.it"
+                }
+            }
+        }
+    }
+
+    private fun createParkingCarsText(): SpannableString {
+        val str = mContext.getString(R.string.faq_parkingcars_description)
+
+        return buildSpannableString {
+            string = str
+
+            var pos = 0
+            repeat(6) {
+                span {
+                    start = pos
+                    end = str.indexOf("\n", pos)
+                    pos = end + 1
+
+                    bullet()
+                }
+            }
+
+            span {
+                start = str.indexOf("Ex Zuffo – Monte Baldo – Ghiaie (c/o PalaTrento)")
+                end = start + 48
+                bold()
+                underline()
+            }
+        }
+    }
+
+    private fun createParkingCarsPaidText(): SpannableString {
+        val str = mContext.getString(R.string.faq_parkingcars_paid_description)
+
+        return buildSpannableString {
+            string = str
+
+            var pos = 0
+            while (pos < str.length) {
+                span {
+                    start = pos
+                    end = str.indexOf("\n", pos)
+                    if (end == -1) end = str.length
+                    pos = end + 1
+
+                    bullet()
                 }
             }
         }

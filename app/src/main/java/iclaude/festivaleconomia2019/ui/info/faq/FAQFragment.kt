@@ -51,6 +51,14 @@ class FAQFragment : Fragment(), FAQView {
         }
     }
 
+    override fun showGettingAroundInfo(spannableString: SpannableString) {
+        ccGettingAround.tvCardDescription.apply {
+            text = spannableString
+            movementMethod = LinkMovementMethod.getInstance()
+
+        }
+    }
+
     override fun showParkingCoachesInfo(spannableString: SpannableString) {
         ccParkingCoaches.tvCardDescription.apply {
             text = spannableString
@@ -74,6 +82,20 @@ class FAQFragment : Fragment(), FAQView {
 
     override fun showHandicapInfo(spannableString: SpannableString) {
         ccHandicap.tvCardDescription.apply {
+            text = spannableString
+            movementMethod = LinkMovementMethod.getInstance()
+        }
+    }
+
+    override fun showParkingCarsInfo(spannableString: SpannableString) {
+        ccParkingCars.tvCardDescription.apply {
+            text = spannableString
+            movementMethod = LinkMovementMethod.getInstance()
+        }
+    }
+
+    override fun showParkingCarsPaidInfo(spannableString: SpannableString) {
+        ccParkingCarsPaid.tvCardDescription.apply {
             text = spannableString
             movementMethod = LinkMovementMethod.getInstance()
         }

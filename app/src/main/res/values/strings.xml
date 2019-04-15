@@ -151,7 +151,7 @@
     <string name="faq_car_title">Arriving: by car</string>
     <string name="faq_car_description">A22 Brennero motorway. Take the exit at Trento Sud (approx. 90 km from North
         Verona) or Trento Nord (58 km from Bolzano); taking SS no. 12 at Abetone-Brennero, along the Valle dell\'Adige.
-        \n\nComing from Padua, Bassano, Belluno, take the SS no. 47 at Valsugana (super-highway), while for those
+        \n\nComing from Padova, Bassano, Belluno, take the SS no. 47 at Valsugana (super-highway), while for those
         arriving
         from the Lombard zone of Lago di Garda, take the SS no. 45bis at Gardesana occidentale. \n\nFor more information
         call the toll-free number 800 994411 run by the Autonomous Province of Trento or visit
@@ -166,13 +166,15 @@
         parking spaces are indicated in blue (between 8.00-19.30 on weekdays, Saturdays included).
     </string>
     <string name="faq_parkingcoaches_title">Parking: coaches</string>
-    <string name="faq_parkingcoaches_description">Parking: via Petrarca, Lungadige San Nicolò, via R. da Sanseverino.
-        \n\nPick up/drop off only: in Lungadige Monte Grappa, Via Alfieri, Via Bernardo Clesio and Corso degli Alpini,
+    <string name="faq_parkingcoaches_description">%1$s: via Petrarca, Lungadige San Nicolò, via R. da Sanseverino.
+        \n\n%2$s: in Lungadige Monte Grappa, Via Alfieri, Via Bernardo Clesio and Corso degli Alpini,
         in
         the ex Zuffo piazzale, near the Shuttle Bus stop, paid parking. \n\nFor more information contact the local
         police
         in Trento-Monte Bondone, Tel. +39 0461 889111.
     </string>
+    <string name="faq_parkingcoaches_description_item1">Parking</string>
+    <string name="faq_parkingcoaches_description_item2">Pick up/drop off only</string>
     <string name="faq_parkingvans_title">Parking: vans</string>
     <string name="faq_parkingvans_description">Parking area Camper via Fersina nord - 33 places max 48 hours, toilets
         for the disables, hot water, camper service - http://www.trentinomobilita.it \n\nPiazzale area ex Zuffo – near
@@ -183,26 +185,9 @@
         train station car park: 6 places.
     </string>
     <string name="faq_parkingcars_title">Parking: cars - free</string>
-    <string name="faq_parkingcars_description">The ex Zuffo parking area near the Trento Centro tollgate (exit closed
-        inbound from motorway); Monte Baldo parking area at the junction between Monte Baldo and Via Sanseverino; Ghiaie
-        c/o PalaTrento parking area on Via Fersina; Piazzale Sanseverino; ex Sit area in Via Canestrini; parking near
-        Piedicastello (Galleries).\n\nEx Zuffo – Monte Baldo – Ghiaie (c/o PalaTrento) are linked to the city by the
-        following buses: the ex Zuffo parking area by the Parking Shuttle Bus and by Bus 2 every 10 minutes mornings and
-        evenings and every 15 minutes at all other times; Monte Baldo by the Parking Shuttle Bus, as often as every 10
-        minutes during rush hour. The parking area PalaTrento by Bus A and the Parking Shuttle Bus every 15 minutes.
-    </string>
+    <string name="faq_parkingcars_description">the ex Zuffo parking area near the Trento Centro tollgate (exit closed inbound from motorway) \nMonte Baldo parking area at the junction between Monte Baldo and Via Sanseverino \nGhiaie c/o PalaTrento parking area on Via Fersina \nPiazzale Sanseverino \nex Sit area in Via Canestrini \nparking near Piedicastello (Galleries) \n\nEx Zuffo – Monte Baldo – Ghiaie (c/o PalaTrento) are linked to the city by the following buses: the ex Zuffo parking area by the Parking Shuttle Bus and by Bus 2 every 10 minutes mornings and evenings and every 15 minutes at all other times; Monte Baldo by the Parking Shuttle Bus, as often as every 10 minutes during rush hour. The parking area PalaTrento by Bus A and the Parking Shuttle Bus every 15 minutes.</string>
     <string name="faq_parkingcars_paid_title">Parking: cars - paid</string>
-    <string name="faq_parkingcars_paid_description">- Autosilo Buonconsiglio, via F. Petrarca, 1/5 (00.00-24.00 every
-        day): 400 places\n
-        - Centro Europa, via Segantini, 7 (7.00-20.30 closed on public holidays): 500 places\n
-        - Autorimessa Europa(attended), via Roggia Grande, 16 (Monday-Friday 7.30-20.00, Saturdays 7.45-12.45 and
-        14.45-19.30, closed Sundays and public holidays): 100 places\n
-        - Parcheggio Piazza Fiera, piazza Fiera (0.00-24.00 every day): 460 places\n
-        - Garage Torre Verde (custodito), via Torre Verde, 40 (weekdays 7.00-21.00, holidays 8.00-10.00 and
-        20.00-21.00): 60 places\n
-        - Parcheggio Duomo, piazza Mosna, 1/A (Monday-Saturday 7.00-20.30, closed holidays): 197 places\n
-        - Parcheggio Palazzo Onda, via Zambra (Monday-Saturday 8.00-20.00, closed holidays): 170 places.
-    </string>
+    <string name="faq_parkingcars_paid_description">Autosilo Buonconsiglio, via F. Petrarca, 1/5 (00.00-24.00 every day): 400 places \nCentro Europa, via Segantini, 7 (7.00-20.30 closed on public holidays): 500 places \nAutorimessa Europa(attended), via Roggia Grande, 16 (Monday-Friday 7.30-20.00, Saturdays 7.45-12.45 and 14.45-19.30, closed Sundays and public holidays): 100 places \nParcheggio Piazza Fiera, piazza Fiera (0.00-24.00 every day): 460 places \nGarage Torre Verde (attended), via Torre Verde, 40 (weekdays 7.00-21.00, holidays 8.00-10.00 and 20.00-21.00): 60 places \nParcheggio Duomo, piazza Mosna, 1/A (Monday-Saturday 7.00-20.30, closed holidays): 197 places \nParcheggio Palazzo Onda, via Zambra (Monday-Saturday 8.00-20.00, closed holidays): 170 places \nParcheggio Trento Fiere - via Briamasco, 2, for cars and vans: 250 places</string>
 
     <string name="faq_usefulenumbers_chemists_list">On-duty chemists</string>
     <string name="faq_usefulenumbers_chemists_map">Chemists map</string>
@@ -226,10 +211,10 @@
 
     <string name="faq_handicap_title">Trento without barriers</string>
     <string name="faq_handicap_description">The buses A, 1, 2, 3, 4, 6, 7, 8, 10, 11, 12, 13, 15, 17, NP (Parking
-        shuttle bus) can accommodate disabled persons. The Disabled Helpdesk managed by the HandiCREA Cooperative on Via
+        shuttle bus) can accommodate disabled persons. \n\nThe Disabled Helpdesk managed by the HandiCREA Cooperative on Via
         S. Martino, 46 (Tel. +39 0461 239396 - info@handicrea.it- www.handicrea.it), open from 8.30 – 12.30 and from
         13.30 – 17.00 Monday to Friday, provides information on the services available to disabled persons and on the
-        accessibility of tourist and other amenities. For more information: www.ttesercizio.it.
+        accessibility of tourist and other amenities. \n\nFor more information: www.ttesercizio.it.
     </string>
 
 
