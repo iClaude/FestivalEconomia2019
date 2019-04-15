@@ -20,7 +20,7 @@
         <com.airbnb.lottie.LottieAnimationView
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:layout_marginTop="-100dp"
+                android:layout_marginTop="-120dp"
                 app:lottie_fileName="lottie/city_skyline.json"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"/>
