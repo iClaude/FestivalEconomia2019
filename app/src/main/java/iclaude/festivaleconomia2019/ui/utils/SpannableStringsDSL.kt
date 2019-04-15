@@ -1,13 +1,11 @@
 package iclaude.festivaleconomia2019.ui.utils
 
 import android.content.Context
+import android.graphics.Color
 import android.graphics.Typeface
 import android.text.SpannableString
 import android.text.Spanned
-import android.text.style.QuoteSpan
-import android.text.style.RelativeSizeSpan
-import android.text.style.StyleSpan
-import android.text.style.UnderlineSpan
+import android.text.style.*
 
 /**
  * Simple DSL to create a SpannableString with various formatting.
@@ -93,6 +91,10 @@ class MySpanDataBuilder {
 
     fun quote(color: Int) {
         spans.add(SpanData(start, end, flags, QuoteSpan(color)))
+    }
+
+    fun bullet(gap: Int?, color: Int?) {
+        spans.add(SpanData(start, end, flags, BulletSpan(gap ?: 15, color ?: Color.BLACK)))
     }
 }
 
