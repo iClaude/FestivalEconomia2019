@@ -178,11 +178,12 @@
     <string name="faq_parkingcoaches_title">Parking: coaches</string>
     <string name="faq_parkingcoaches_description">%1$s: via Petrarca, Lungadige San Nicolò, via R. da Sanseverino.
         \n\n%2$s: in Lungadige Monte Grappa, Via Alfieri, Via Bernardo Clesio and Corso degli Alpini, in the ex
-        Zuffo piazzale, near the Shuttle Bus stop, paid parking. \n\nFor more information contact the local
-        police in Trento-Monte Bondone, Tel. +39 0461 889111.
+        Zuffo piazzale, near the Shuttle Bus stop, paid parking. \n\nFor more information contact the %3$s in
+        Trento-Monte Bondone, Tel. +39 0461 889111.
     </string>
     <string name="faq_parkingcoaches_description_item1">Parking</string>
     <string name="faq_parkingcoaches_description_item2">Pick up/drop off only</string>
+    <string name="faq_parkingcoaches_description_item3">local police</string>
 
     <string name="faq_parkingvans_title">Parking: vans</string>
     <string name="faq_parkingvans_description">Parking area Camper via Fersina nord - 33 places max 48 hours, toilets
@@ -230,19 +231,21 @@
         https://www.apss.tn.it/cittadini?p_p_id=3&amp;p_p_lifecycle=0&amp;p_p_state=maximized&amp;p_p_mode=view&amp;_3_struts_action=%2Fsearch%2Fsearch&amp;_3_redirect=%2F&amp;_3_keywords=GUARDIA+MEDICA&amp;_3_groupId=0
     </string>
     <string name="faq_usefulnumbers_title">Useful numbers</string>
-    <string name="faq_usefulnumbers_description">%1$s\n%2$s\n%3$s - tel. +39 0461 903111\n%4$s - tel. +39 0461
-        904298\nEmergency medical service - 118\nCarabinieri - 112 - +39 0461 202000\nLocal police at Trento - Monte
-        Bondone - tel. +39 0461 889111\nPolice headquarters - tel. +39 0461 899511
+    <string name="faq_usefulnumbers_description">%1$s\n%2$s\n%3$s -> tel. +39 0461 903111\n%4$s -> tel. +39 0461
+        904298\n%5$s\nCarabinieri -> 112 or +39 0461 202000\nLocal police at Trento - Monte
+        Bondone -> tel. +39 0461 889111\nPolice headquarters -> tel. +39 0461 899511
     </string>
+    <string name="faq_usefulnumbers_description_emergency">Emergency medical service -> 118</string>
 
     <string name="faq_handicap_title">Trento without barriers</string>
-    <string name="faq_handicap_description">The buses A, 1, 2, 3, 4, 6, 7, 8, 10, 11, 12, 13, 15, 17, NP (Parking
-        shuttle bus) can accommodate disabled persons. \n\nThe Disabled Helpdesk managed by the HandiCREA Cooperative
+    <string name="faq_handicap_description">The %1$s can accommodate disabled persons. \n\nThe %2$s managed by the
+        HandiCREA Cooperative
         on Via S. Martino, 46 (Tel. +39 0461 239396 - info@handicrea.it- www.handicrea.it), open from 8.30 – 12.30 and
         from 13.30 – 17.00 Monday to Friday, provides information on the services available to disabled persons and on
-        the
-        accessibility of tourist and other amenities. \n\nFor more information: www.ttesercizio.it.
+        the accessibility of tourist and other amenities. \n\nFor more information: www.ttesercizio.it
     </string>
-
-
+    <string name="faq_handicap_description_item1">buses A, 1, 2, 3, 4, 6, 7, 8, 10, 11, 12, 13, 15, 17, NP (Parking
+        shuttle bus)
+    </string>
+    <string name="faq_handicap_description_item2">Disabled Helpdesk</string>
 </resources>

@@ -91,19 +91,11 @@ class FAQPresenter(private var faqView: FAQView, private var mContext: Context) 
     private fun createParkingCoachesText(): SpannableString {
         val item1 = mContext.getString(R.string.faq_parkingcoaches_description_item1)
         val item2 = mContext.getString(R.string.faq_parkingcoaches_description_item2)
-        val str = mContext.getString(R.string.faq_parkingcoaches_description, item1, item2)
+        val item3 = mContext.getString(R.string.faq_parkingcoaches_description_item3)
+        val str = mContext.getString(R.string.faq_parkingcoaches_description, item1, item2, item3)
 
         return buildSpannableString {
             string = str
-
-            span {
-                start = str.indexOf("Trento-Monte Bondone")
-                end = start + 20
-                clickableSpan {
-                    context = mContext
-                    url = "http://www.comune.trento.it/content/view/full/221253"
-                }
-            }
 
             span {
                 start = str.indexOf(item1)
@@ -115,6 +107,15 @@ class FAQPresenter(private var faqView: FAQView, private var mContext: Context) 
                 start = str.indexOf(item2)
                 end = start + item2.length
                 bold()
+            }
+
+            span {
+                start = str.indexOf(item3)
+                end = start + item3.length
+                clickableSpan {
+                    context = mContext
+                    url = "http://www.comune.trento.it/content/view/full/221253"
+                }
             }
         }
     }
@@ -187,12 +188,14 @@ class FAQPresenter(private var faqView: FAQView, private var mContext: Context) 
         val chemistsMapStr = mContext.getString(R.string.faq_usefulenumbers_chemists_map)
         val hospitalStr = mContext.getString(R.string.faq_usefulenumbers_hospital)
         val emergencyStr = mContext.getString(R.string.faq_usefulenumbers_emergency_medical)
+        val emergencyServiceStr = mContext.getString(R.string.faq_usefulnumbers_description_emergency)
         val str = mContext.getString(
             R.string.faq_usefulnumbers_description,
             chemistsListStr,
             chemistsMapStr,
             hospitalStr,
-            emergencyStr
+            emergencyStr,
+            emergencyServiceStr
         )
 
         return buildSpannableString {
@@ -233,11 +236,31 @@ class FAQPresenter(private var faqView: FAQView, private var mContext: Context) 
                     url = mContext.getString(R.string.faq_usefulenumbers_emergency_medical_link)
                 }
             }
+
+            span {
+                start = str.indexOf(emergencyServiceStr)
+                end = start + emergencyServiceStr.length
+                bold()
+            }
+
+            var pos = 0
+            while (pos < str.length) {
+                span {
+                    start = pos
+                    end = str.indexOf("\n", pos)
+                    if (end == -1) end = str.length
+                    pos = end + 1
+
+                    bullet()
+                }
+            }
         }
     }
 
     private fun createHandicapInfoText(): SpannableString {
-        val str = mContext.getString(R.string.faq_handicap_description)
+        val item1 = mContext.getString(R.string.faq_handicap_description_item1)
+        val item2 = mContext.getString(R.string.faq_handicap_description_item2)
+        val str = mContext.getString(R.string.faq_handicap_description, item1, item2)
 
         return buildSpannableString {
             string = str
@@ -252,12 +275,24 @@ class FAQPresenter(private var faqView: FAQView, private var mContext: Context) 
             }
 
             span {
-                start = str.indexOf("www.ttesercizio.it.")
+                start = str.indexOf("www.ttesercizio.it")
                 end = start + 18
                 clickableSpan {
                     context = mContext
                     url = "https://www.trentinotrasporti.it/"
                 }
+            }
+
+            span {
+                start = str.indexOf(item1)
+                end = start + item1.length
+                bold()
+            }
+
+            span {
+                start = str.indexOf(item2)
+                end = start + item2.length
+                bold()
             }
         }
     }
