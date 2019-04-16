@@ -16,11 +16,16 @@ class FAQFragment : Fragment(), FAQView {
 
     private lateinit var presenter: FAQPresenter
 
+    companion object {
+        @JvmStatic
+        fun newInstance() = FAQFragment()
+    }
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        presenter = FAQPresenter(this, context!!)
 
         return inflater.inflate(R.layout.fragment_info_faq, container, false)
     }
@@ -28,21 +33,12 @@ class FAQFragment : Fragment(), FAQView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        presenter.displayData()
+        FAQPresenter(this, context!!).displayData()
     }
 
 
-
-    companion object {
-        @JvmStatic
-        fun newInstance() = FAQFragment()
-    }
-
-    /**
-     * Implementation of AboutView interface used to display formatted data
-     * (SpannableStrings) in this Fragment.
-     */
-
+    /*Implementation of AboutView interface used to display formatted data
+    (SpannableStrings) in this Fragment.*/
     override fun showCarInfo(spannableString: SpannableString) {
         ccCar.tvCardDescription.apply {
             text = spannableString

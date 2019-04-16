@@ -29,7 +29,6 @@
     <string name="starred_events">I tuoi eventi preferiti</string>
     <string name="starred_events_short">Preferiti</string>
     <plurals name="filtered_sessions">
-        <item quantity="zero">%d sessioni</item>
         <item quantity="one">%d sessione</item>
         <item quantity="other">%d sessioni</item>
     </plurals>
