@@ -319,70 +319,105 @@
       "id": "00",
       "color": "#aaaaaa",
       "fontColor": "#202124",
-      "name": "Keynote",
+      "name": "Inaugurazione",
       "category": "type"
     },
     {
       "id": "01",
       "color": "#aaaaaa",
       "fontColor": "#202124",
-      "name": "Session",
+      "name": "Sessione",
       "category": "type"
     },
     {
       "id": "02",
       "color": "#FDC93E",
       "fontColor": "#202124",
-      "name": "Jetpack",
+      "name": "Cineconomia",
       "category": "topic"
     },
     {
       "id": "03",
       "color": "#FFEAB3",
       "fontColor": "#202124",
-      "name": "Kotlin",
+      "name": "Confronti",
       "category": "topic"
     },
     {
       "id": "04",
       "color": "#FFEAB3",
       "fontColor": "#202124",
-      "name": "Machine Learning",
+      "name": "Dialoghi",
       "category": "topic"
     },
     {
       "id": "05",
       "color": "#FAA44F",
       "fontColor": "#202124",
-      "name": "Platform",
+      "name": "EconoMia",
       "category": "topic"
     },
     {
       "id": "06",
       "color": "#A7D7FE",
       "fontColor": "#202124",
-      "name": "Android Studio",
+      "name": "Forum",
       "category": "topic"
     },
     {
       "id": "07",
       "color": "#FFCF9F",
       "fontColor": "#202124",
-      "name": "Wear OS",
+      "name": "Incontri con l'autore",
       "category": "topic"
     },
     {
       "id": "08",
-      "color": "#9BDD7C",
+      "color": "#73BBF5",
       "fontColor": "#202124",
-      "name": "Chrome OS",
+      "name": "Intersezioni",
       "category": "topic"
     },
     {
       "id": "09",
-      "color": "#73BBF5",
+      "color": "#F9E79F",
       "fontColor": "#202124",
-      "name": "Android Auto",
+      "name": "Nella storia",
+      "category": "topic"
+    },
+    {
+      "id": "10",
+      "color": "#A3E4D7",
+      "fontColor": "#202124",
+      "name": "Parole chiave",
+      "category": "topic"
+    },
+    {
+      "id": "11",
+      "color": "#D4E6F1",
+      "fontColor": "#202124",
+      "name": "RAI",
+      "category": "topic"
+    },
+    {
+      "id": "12",
+      "color": "#D7BDE2",
+      "fontColor": "#202124",
+      "name": "Spotlight",
+      "category": "topic"
+    },
+    {
+      "id": "13",
+      "color": "#F5CBA7",
+      "fontColor": "#202124",
+      "name": "Testimoni del tempo",
+      "category": "topic"
+    },
+    {
+      "id": "14",
+      "color": "#E6B0AA",
+      "fontColor": "#202124",
+      "name": "Visioni",
       "category": "topic"
     }
   ]
