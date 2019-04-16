@@ -179,316 +179,512 @@
   ],
   "sessions": [
     {
-      "description": "The keynote kicks off on November 7 at 10AM PST, where you'll hear directly from Dave Burke and others on the present and future of Android development.",
-      "endTimestamp": 1541617200000,
       "id": "00",
-      "relatedSessions": [],
-      "location": "00",
+      "title": "Tutta la città ne parla",
+      "startTimestamp": 1559203200000,
+      "endTimestamp": 1559206800000,
+      "day": 0,
+      "location": "01",
+      "description": "Gli ospiti e i temi, i libri e le testimonianze, gli appuntamenti del Festival raccontati ogni giorno in diretta al pubblico della piazza e agli ascoltatori di Radio3.",
+      "tags": [
+        "01",
+        "11"
+      ],
       "organizers": [
         "00",
-        "01"
-      ],
-      "startTimestamp": 1541613600000,
-      "day": 0,
-      "tags": [
-        "00",
+        "01",
         "02"
       ],
-      "title": "Keynote",
-      "photoUrl": "https://tuttosesto.net/wp-content/uploads/2018/06/wwwonline.jpg",
-      "sessionUrl": "",
-      "youtubeUrl": "https://youtu.be/ei_5R0CvLm4"
-    },
-    {
-      "description": "LiveData is a simple observable data holder that is aware of the lifecycle of the observers. It was designed to avoid memory leaks and null pointer exceptions between an activity or fragment and a ViewModel. \n\nHowever, you can also use LiveData beyond the ViewModel. Components like Room or Workmanager also expose LiveData observables, and you can make your own data sources lifecycle-aware.\n\nIn this talk, we'll deep dive into patterns with LiveData such as the different types of transformations (map, switchMap and MediatorLiveData), handling events and building reactive architectures as well as common antipatterns and code-smells to avoid.",
-      "endTimestamp": 1541619300000,
-      "day": 0,
-      "id": "01",
-      "relatedSessions": [],
-      "location": "01",
-      "organizers": [
-        "01"
-      ],
-      "startTimestamp": 1541618100000,
-      "tags": [
-        "01",
-        "05"
-      ],
-      "title": "Fun with LiveData",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Richie_Gray_2016.jpg/1200px-Richie_Gray_2016.jpg",
-      "sessionUrl": "https://goo.gl/Mddeq1"
-    },
-    {
-      "description": "Room is Android's persistence library that provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite.\n\nThis talk covers some of the new features added to Room since its announcement at I/O 2017 and additionally touches on some of the best practices.",
-      "endTimestamp": 1541620500000,
-      "day": 0,
-      "id": "02",
-      "relatedSessions": [],
-      "location": "10",
-      "organizers": [
-        "01"
-      ],
-      "startTimestamp": 1541619300000,
-      "tags": [
-        "01",
-        "03",
-        "06",
-        "08",
-        "09"
-      ],
-      "title": "The Room in the House",
-      "youtubeUrl": "https://www.youtube.com/watch?v=sU-ot_Oz3AE&index=4&list=PLWz5rJ2EKKc8WFYCR9esqGGY0vOZm2l6e&t=0s"
-    },
-    {
-      "description": "Android Lint already scans your app for hundreds of common issues, contributing to the code warnings that you see in Android Studio. But Lint can do even more for advanced users. Come to this demo-heavy talk to learn about the less common uses of Lint, which may include: \n\n - Writing custom Lint checks for domain- or team-specific needs\n - Using annotations to catch threading bugs *before* they cause UI freezes\n - Enabling off-by-default checks to improve Java/Kotlin interoperability\n - Performance best practices when running Lint on a CI server\n",
-      "endTimestamp": 1541619300000,
-      "day": 0,
-      "id": "03",
-      "relatedSessions": [],
-      "location": "15",
-      "organizers": [
-        "01"
-      ],
-      "startTimestamp": 1541618100000,
-      "tags": [
-        "01",
-        "09"
-      ],
-      "title": "Getting the Most Out of Android Lint"
-    },
-    {
-      "description": "The release of androidx.test v1.0 makes testing a first class citizen of Android developer tools. See how a new set of cross platform APIs enable you to write both unit and integration tests that run in any environment and learn of our upcoming plans for future releases.",
-      "endTimestamp": 1541620500000,
-      "day": 0,
-      "id": "04",
-      "relatedSessions": [],
-      "location": "11",
-      "organizers": [
-        "00",
-        "01"
-      ],
-      "startTimestamp": 1541619300000,
-      "tags": [
-        "01",
-        "07",
-        "08"
-      ],
-      "title": "Testing Rebooted (with AndroidX Test)"
-    },
-    {
-      "description": "JNI is hard. Join the NDK engineering team to understand some of the pitfalls when writing JNI and some of best ways to make your life easier. ",
-      "endTimestamp": 1541621400000,
-      "day": 0,
-      "id": "05",
-      "relatedSessions": [],
-      "location": "07",
-      "organizers": [
-        "01"
-      ],
-      "startTimestamp": 1541621100000,
-      "tags": [
-        "01",
+      "relatedSessions": [
         "03"
       ],
-      "title": "Best Practices Using JNI",
-      "youtubeUrl": "https://www.youtube.com/watch?v=tA_WrHnvY2w&list=PLWz5rJ2EKKc8WFYCR9esqGGY0vOZm2l6e"
+      "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555416241994.festival_Economia_2016_generiche_e_personaggi_minori___00000207_439001.png",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/tutta-la-citta-ne-par-1",
+      "youtubeUrl": "https://www.raiplayradio.it/radio3/"
     },
     {
-      "description": "Have you heard about Kotlin multiplatform? With Kotlin/JS, Kotlin/Native and Kotlin/JVM, you can share your business logic between Android and other platforms. In just 5 minutes we will write a multiplatform utility class.",
-      "endTimestamp": 1541621760000,
+      "id": "01",
+      "title": "Inaugurazione",
+      "startTimestamp": 1559221200000,
+      "endTimestamp": 1559226600000,
       "day": 0,
-      "id": "06",
-      "relatedSessions": [],
-      "location": "08",
-      "organizers": [
+      "location": "02",
+      "description": "Negli ultimi anni in molti paesi occidentali si è assistito all’affermazione di culture politiche che contrappongono il popolo all’elite e che invocano il protezionismo e il ripristino della sovranità nazionale. L’ideologia è relativamente semplice: c’è un popolo inteso come un blocco omogeneo cui si contrappone un’elite altrettanto omogenea nell’essere corrotta e lontana dai problemi dei cittadini. In mezzo a queste due entità non c’è spazio per corpi intermedi, come associazioni della società civile, organismi tecnici, autorità indipendenti, sindacati istituzioni proprie del sistema di checks and balances delle democrazie occidentali consolidate. La rappresentanza del popolo risponde a principi di democrazia diretta, in nome della quale si sottopongono molte decisioni a referendum. Prevale a tutti i livelli il principio maggioritario a detrimento delle minoranze. Sul piano internazionale si propugna l’abbandono del multilateralismo in nome del bilateralismo, ritenendo inutili o dannose le istituzioni sovranazionali istituite dopo la Seconda Guerra mondiale. Cosa spiega questi sviluppi che modificano radicalmente le tradizionali divisioni fra destra e sinistra, gli assi del conflitto politico e che hanno già messo in crisi le socialdemocrazie europee? Questo interrogativo, che ha stimolato molta ricerca economica negli ultimi anni, sarà al centro della prossima edizione del Festival di economia di Trento, dal 30 maggio al 2 giugno 2019.",
+      "tags": [
         "00"
       ],
-      "startTimestamp": 1541621460000,
-      "tags": [
-        "01",
-        "02",
-        "03"
+      "organizers": [
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21"
       ],
-      "title": "3 Platforms in 5 Minutes with Kotlin"
-    },
-    {
-      "description": "Did you know that VectorDrawables support theme colors, stateful colors and even gradients? Did you know this works back to API14 with AndroidX? Are you getting the most out of your vectors to support different view states, using the same drawables in differently themed screens, or avoiding bloating your app with large illustrations?\n\nThis lightning talk paints a picture of these advanced features of VectorDrawables and how to use them.",
-      "endTimestamp": 1541622120000,
-      "day": 0,
-      "id": "07",
       "relatedSessions": [],
-      "location": "20",
-      "organizers": [
-        "01"
-      ],
-      "startTimestamp": 1541621820000,
-      "tags": [
-        "01",
-        "03",
-        "07"
-      ],
-      "title": "Draw Me a Rainbow",
-      "youtubeUrl": "https://www.youtube.com/watch?v=Uz99np2Hat4&t=0s&list=PLWz5rJ2EKKc8WFYCR9esqGGY0vOZm2l6e"
-    },
-    {
-      "description": "Data Binding has come a long way, and is now an integrated part of the Architecture Components within Jetpack, thanks to built-in observation of LiveData.   Level up with Data Binding and simplify your Android coding.",
-      "endTimestamp": 1541622480000,
-      "day": 0,
-      "id": "08",
-      "relatedSessions": [
-        "01",
-        "04"
-      ],
-      "location": "06",
-      "organizers": [
-        "02"
-      ],
-      "startTimestamp": 1541622180000,
-      "tags": [
-        "01",
-        "02"
-      ],
-      "title": "Level Up with Data Binding"
-    },
-    {
-      "description": "Watch the Android performance team take systraces of your apps and identify potential performance improvements during app startup and other performance-sensitive areas. ",
-      "endTimestamp": 1541622840000,
-      "day": 0,
-      "id": "09",
-      "relatedSessions": [
-        "05",
-        "08"
-      ],
-      "location": "13",
-      "organizers": [
-        "00",
-        "01"
-      ],
-      "startTimestamp": 1541622540000,
-      "tags": [
-        "01",
-        "04",
-        "06"
-      ],
-      "title": "Performance Analysis Using Systrace",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Richie_Gray_2016.jpg/1200px-Richie_Gray_2016.jpg",
-      "sessionUrl": "https://goo.gl/Mddeq1",
-      "youtubeUrl": "https://www.youtube.com/watch?v=9AeXMVUUk3I&list=PLWz5rJ2EKKc8WFYCR9esqGGY0vOZm2l6e&index=22&t=0s"
-    },
-    {
-      "description": "Text layout has high impact on almost every application's performance. This talk covers common usage patterns of text in Android apps and common pitfalls developers fall into that can be avoided, emphasizing performance issues and how to avoid them. We will also talk about how to improve text layout performance in your app using PrecomputedText and RecyclerView prefetch, and talk about best practices for editable text.      ",
-      "endTimestamp": 1541702400000,
-      "day": 1,
-      "id": "10",
-      "relatedSessions": [],
-      "location": "15",
-      "organizers": [
-        "00",
-        "01"
-      ],
-      "startTimestamp": 1541701200000,
-      "tags": [
-        "01",
-        "03",
-        "04"
-      ],
-      "title": "Use Android Text Like a Pro",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Richie_Gray_2016.jpg/1200px-Richie_Gray_2016.jpg",
-      "sessionUrl": "",
+      "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555410576590.festival_Economia_2016_generiche_e_personaggi_minori___00032705_439000.png",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/inaugurazione",
       "youtubeUrl": ""
     },
     {
-      "description": "Android offers many different locations and ways to store data, and we'll share best-practices for each of them, helping you build robust, secure, and flexible apps along the way.",
-      "endTimestamp": 1541703600000,
-      "day": 1,
-      "id": "11",
+      "id": "02",
+      "title": "Cosa si può fare del populismo?",
+      "startTimestamp": 1559226600000,
+      "endTimestamp": 1559232000000,
+      "day": 0,
+      "location": "03",
+      "description": "",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
+        "03",
+        "04"
+      ],
       "relatedSessions": [
+        "05"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/on-populism-and-autocratic-structures",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "03",
+      "title": "Tutta la città ne parla",
+      "startTimestamp": 1559227800000,
+      "endTimestamp": 1559232000000,
+      "day": 0,
+      "location": "01",
+      "description": "Gli ospiti e i temi, i libri e le testimonianze, gli appuntamenti del Festival raccontati ogni giorno in diretta al pubblico della piazza e agli ascoltatori di Radio3.",
+      "tags": [
+        "01",
+        "11"
+      ],
+      "organizers": [
+        "00",
+        "01",
+        "02"
+      ],
+      "relatedSessions": [
+        "00"
+      ],
+      "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555416241994.festival_Economia_2016_generiche_e_personaggi_minori___00000207_439001.png",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/tutta-la-citta-ne-par-2",
+      "youtubeUrl": "https://www.raiplayradio.it/radio3/"
+    },
+    {
+      "id": "04",
+      "title": "Élite e popolo: un conflitto utile",
+      "startTimestamp": 1559228400000,
+      "endTimestamp": 1559233800000,
+      "day": 0,
+      "location": "05",
+      "description": "Il conflitto tra i pochi e i molti può essere l’ossigeno della libertà politica e civile. Soprattutto se – come sosteneva Machiavelli – all’interno di un “buon ordine”, i molti affamati di sicurezza controllano i pochi affamati di potere.",
+      "tags": [
+        "01",
+        "08"
+      ],
+      "organizers": [
+        "05"
+      ],
+      "relatedSessions": [],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/elite-e-popolo-un-conflitto-utile",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "05",
+      "title": "Chi sono i politici populisti?",
+      "startTimestamp": 1559232000000,
+      "endTimestamp": 1559237400000,
+      "day": 0,
+      "location": "04",
+      "description": "I politici e l’elettorato populisti provengono da gruppi che hanno visto il rischio di perdere il proprio lavoro aumentare durante le crisi finanziarie e il cui reddito è sceso in seguito alle riforme economiche. Ciò che ha alimentato l’estrema destra, dunque, potrebbe essere stata una limitata, piuttosto che eccessiva, politica di inclusione delle vittime della globalizzazione.",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
+        "06"
+      ],
+      "relatedSessions": [
+        "02",
+        "08"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/su-selezione-classe-politica-populis-1",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "06",
+      "title": "Immigrazione in Europa ed il suo stato sociale: miti e realtà",
+      "startTimestamp": 1559233800000,
+      "endTimestamp": 1559239200000,
+      "day": 0,
+      "location": "09",
+      "description": "Il recente ingente flusso migratorio in Europa genera una reazione culturale contro gli immigrati e la sensazione che essi traggano eccessivo vantaggio dallo stato sociale dei paesi più ricchi. La discussione si basa di frequente non su dati reali ma su stereotipi e informazioni incorrette, spesso accentuate dai partiti anti-immigrazione and anti-globalizzazione.",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
         "07"
       ],
-      "location": "05",
-      "organizers": [
-        "01"
+      "relatedSessions": [],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/immigrazione-in-europa-ed-il-suo-stato-sociale-miti-e-realta",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "07",
+      "title": "Le riforme dimezzate",
+      "startTimestamp": 1559233800000,
+      "endTimestamp": 1559239200000,
+      "day": 0,
+      "location": "10",
+      "description": "Le riforme dimezzate: incontri con l'autore",
+      "tags": [
+        "01",
+        "07"
       ],
-      "startTimestamp": 1541702400000,
+      "organizers": [
+        "08"
+      ],
+      "relatedSessions": [],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/tito-7",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "08",
+      "title": "Il voto europeo: le conseguenze economiche e politiche",
+      "startTimestamp": 1559235600000,
+      "endTimestamp": 1559241000000,
+      "day": 0,
+      "location": "02",
+      "description": "Spotlight.",
+      "tags": [
+        "01",
+        "12"
+      ],
+      "organizers": [
+        "09",
+        "10",
+        "11",
+        "05"
+      ],
+      "relatedSessions": [
+        "05"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/il-voto-europeo-le-conseguenze-economiche-e-politiche",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "09",
+      "title": "Zapping",
+      "startTimestamp": 1559237400000,
+      "endTimestamp": 1559242800000,
+      "day": 0,
+      "location": "01",
+      "description": "In diretta dal Festival dell’Economia. Da oltre vent’anni, il programma che rilancia le notizie del giorno, dai telegiornali italiani e internazionali al web. Una piazza multimediale che integra radio, tv e social media.",
+      "tags": [
+        "01",
+        "11"
+      ],
+      "organizers": [
+        "12"
+      ],
+      "relatedSessions": [],
+      "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555416241994.festival_Economia_2016_generiche_e_personaggi_minori___00000207_439001.png",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/zapping",
+      "youtubeUrl": "https://www.raiplayradio.it/radio1/"
+    },
+    {
+      "id": "10",
+      "title": "Gran Torino",
+      "startTimestamp": 1559241000000,
+      "endTimestamp": 1559246400000,
+      "day": 0,
+      "location": "06",
+      "description": "L'effetto della globalizzazione sulle grandi città industriali: degrado urbano immigrazione, scontro di culture, tentazioni nazionalistiche. \nregia di Clint Eastwood con Clint Eastwood, Bee Vang, Ahney Her.",
       "tags": [
         "01",
         "02"
       ],
-      "title": "Files for Miles: Where to Store Them All?",
-      "youtubeUrl": "https://www.youtube.com/watch?v=oIn0MZQJpp0&list=PLWz5rJ2EKKc8WFYCR9esqGGY0vOZm2l6e&index=36"
+      "organizers": [
+        "13",
+        "14"
+      ],
+      "relatedSessions": [],
+      "photoUrl": "https://i0.wp.com/www.cinefilos.it/wp-content/uploads/2010/01/Gran-Torino.jpeg?fit=1024%2C600&ssl=1",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/pane-e-cioccola-1",
+      "youtubeUrl": "https://www.youtube.com/watch?v=KTRQgdhv1RM"
     },
     {
-      "description": "Come ask your questions to some of the Android experts. Maybe we'll even know the answers!",
-      "endTimestamp": 1541706600000,
-      "day": 1,
-      "id": "12",
-      "relatedSessions": [
-        "03",
-        "06"
-      ],
-      "location": "06",
-      "organizers": [
-        "01"
-      ],
-      "startTimestamp": 1541704200000,
+      "id": "11",
+      "title": "Relazioni pericolose. Stato e globalizzazione dal Parlamento al web",
+      "startTimestamp": 1559242800000,
+      "endTimestamp": 1559248200000,
+      "day": 0,
+      "location": "03",
+      "description": "Sono gli Stati che si servono della globalizzazione o è quest’ultima che pone vincoli agli Stati? Negli ultimi trent’anni i rapporti tra istituzioni politiche nazionali, macchina dello Stato e mercato globale sono cambiati profondamente. L’analisi e l’esperienza di un giurista, ministro e giudice costituzionale, impegnato nella modernizzazione del nostro paese.",
       "tags": [
         "01",
-        "04",
-        "09"
+        "13"
       ],
-      "title": "Android Fireside Chat"
+      "organizers": [
+        "15"
+      ],
+      "relatedSessions": [],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/relazioni-pericolose-stato-e-globalizzazione-dal-parlamento-al-web",
+      "youtubeUrl": ""
     }
   ],
   "organizers": [
     {
-      "bio": "Izabela has been a Software Engineer on the Android Studio team for 2 years. She works on the Android Gradle Plugin and her main areas of expertise include resources and AAPT2 support. Beside being an engineer, Iza is also a diversity and inclusion activist.",
-      "company": "Google",
       "id": "00",
-      "name": "Izabela Orlowska",
-      "thumbnailUrl": "https://developer.android.com/dev-summit/images/speakers/izabela_orlowska.jpg",
-      "websiteUrl": "https://gfx.developpez.com/",
-      "twitterUrl": "https://twitter.com/SandeepDinesh",
-      "linkedInUrl": "https://www.linkedin.com/in/dineshsandeep",
-      "facebookUrl": "https://it-it.facebook.com/romainpguy"
+      "name": "Pietro Del Soldà",
+      "bio": "Conduttore del programma “Tutta la città ne parla”, Radio3",
+      "company": "RAI - Radio 3",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/470699868705394689/ETGLiwJ0.jpeg",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
     },
     {
-      "bio": "Chris works as a software engineer at Google, working on the Android Gradle Plugin, first in Mountain View and now in London.\nPrior to joining Google, Chris worked as a Research Assistant in the Security Group of the The Computer Laboratory, University of Cambridge. He previously studied computer science as undergraduate at the University of Cambridge.",
-      "company": "Samsung",
       "id": "01",
-      "name": "Chris Warrington",
-      "thumbnailUrl": "https://developer.android.com/dev-summit/images/speakers/chris_warrington.jpg",
+      "name": "Rosa Polacco",
+      "bio": "Conduttrice del programma “Tutta la città ne parla”, Radio3",
+      "company": "RAI - Radio 3",
+      "thumbnailUrl": "https://www.festivaldelgiornalismo.com/pictures/user/original/2/2553_ak0Fk.jpg",
       "websiteUrl": "",
-      "twitterUrl": "https://twitter.com/richfulcher",
-      "linkedInUrl": "https://www.linkedin.com/in/rich-fulcher-a3648a/",
+      "twitterUrl": "",
+      "linkedInUrl": "",
       "facebookUrl": ""
     },
     {
-      "bio": "Mario works as a software engineer at Google, working on the Android Gradle Plugin, first in Mountain View and now in London.\nPrior to joining Google, Chris worked as a Research Assistant in the Security Group of the The Computer Laboratory, University of Cambridge. He previously studied computer science as undergraduate at the University of Cambridge.",
-      "company": "Samsung",
       "id": "02",
-      "name": "Mario Rossi",
+      "name": "Cristiana Castellotti",
+      "bio": "Curatrice del programma “Tutta la città ne parla”, Radio3",
+      "company": "RAI - Radio 3",
+      "thumbnailUrl": "",
       "websiteUrl": "",
-      "twitterUrl": "https://twitter.com/richfulcher",
-      "linkedInUrl": "https://www.linkedin.com/in/rich-fulcher-a3648a/",
+      "twitterUrl": "",
+      "linkedInUrl": "",
       "facebookUrl": ""
     },
     {
-      "bio": "George Soros works as a software engineer at Google, working on the Android Gradle Plugin, first in Mountain View and now in London.\nPrior to joining Google, Chris worked as a Research Assistant in the Security Group of the The Computer Laboratory, University of Cambridge. He previously studied computer science as undergraduate at the University of Cambridge.",
-      "company": "Samsung",
       "id": "03",
-      "name": "George Soros",
-      "thumbnailUrl": "https://i.pinimg.com/originals/a5/9b/08/a59b0828c1892960828020d5377dcf3d.jpg",
-      "websiteUrl": "",
-      "twitterUrl": "https://twitter.com/richfulcher",
-      "linkedInUrl": "https://www.linkedin.com/in/rich-fulcher-a3648a/",
+      "name": "James Robinson",
+      "bio": "Docente dell’Università di Chicago e direttore del Pearson Institute for the Study and Resolution of Global Conflicts. James Robinson è un eminente politologo ed economista. Ha condotto importanti lavori di ricerca nell’ambito dello sviluppo economico e politico e dei fattori che sono all’origine dei conflitti. Il suo lavoro esplora i rapporti fondamentali fra povertà e le istituzioni di una società e come le istituzioni si rapportano con i conflitti politici. James Robinson ha uno speciale interesse per l’America Latina e l’Africa sub-sahariana. Ha scritto numerosi articoli e libri, anche in collaborazione con altri esperti, fra cui Why Nations Fail: The Origins of Power, Prosperity, and Poverty (con D. Acemoglu); tradotto in 32 lingue dalla sua pubblicazione nel 2012, questo libro offre un’indagine storica eccezionale delle ragioni per cui alcuni paesi sono cresciuti economicamente, mentre altri sono precipitati nella povertà. Il suo ultimo libro Balance of Power sarà pubblicato in settembre.",
+      "company": "Università di Chicago",
+      "thumbnailUrl": "https://harris.uchicago.edu/files/styles/square/public/robinson.jpg?itok=5Rc7SHiG",
+      "websiteUrl": "https://en.wikipedia.org/wiki/James_A._Robinson_(economist)",
+      "twitterUrl": "",
+      "linkedInUrl": "",
       "facebookUrl": ""
     },
     {
-      "bio": "George Lucas works as a software engineer at Google, working on the Android Gradle Plugin, first in Mountain View and now in London.\nPrior to joining Google, Chris worked as a Research Assistant in the Security Group of the The Computer Laboratory, University of Cambridge. He previously studied computer science as undergraduate at the University of Cambridge.",
-      "company": "Samsung",
       "id": "04",
-      "name": "George Lucas",
-      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/George_Lucas_cropped_2009.jpg"
+      "name": "Tito Boeri",
+      "bio": "Tito Boeri è professore di economia presso l'Università Bocconi di Milano (dove era stato anche Prorettore per la ricerca fino all'autunno 2014) e Senior Visiting Professor alla London School of Economics (dove è stato Centennial Professor). E' stato senior economist all’Organizzazione per la Cooperazione e lo Sviluppo Economico (OCSE), consulente del Fondo Monetario Internazionale, della Banca Mondiale, della Commissione Europea, dell’Ufficio Internazionale del Lavoro oltre che del Governo italiano. Dal marzo 2015 al febbraio 2019 ha ricoperto la carica di Presidente dell'Istituto Nazionale di Previdenza Sociale (INPS). E’ Consigliere Scientifico della Fondazione Rodolfo Debenedetti (www.frdb.org) di cui è stato Direttore fin dalla sua costituzione nel 1998. E' fellow della European Economic Association e della European Association of Labour Economists. E’ inoltre research fellow dell'Innocenzo Gasparini Institute for Economic Research (IGIER Bocconi), del CEPR (Centre for Economic Policy Research), del Centre for Economic Performance di Londra, dell’ IZA (Institut zur Zukunft der Arbeit) di Bonn e del Netspar (Network for the Study of Pension and Retirement) di Tillburg. E' stato editorialista del Sole24ore, de La Stampa e de La Repubblica e ha collaborato con quotidiani esteri quali il Financial Times e Le Monde. E’ tra i fondatori del sito di informazione economica www.lavoce.info e del sito federato in lingua inglese www.voxeu.org. E’ direttore scientifico del Festival dell’Economia di Trento.Tra i suoi libri in italiano: Populismo e stato sociale, Laterza (2017); Parlerò solo di calcio, Il Mulino (2012); Le riforme a costo zero (con P. Garibaldi), Chiarelettere (2011); Classe dirigente (di cui è curatore assieme ad A. Merlo e A. Prat), Università Bocconi (2010); La crisi non è uguale per tutti, Rizzoli (2009); Contro i giovani (con V. Galasso), Mondadori (2007).",
+      "company": "Economista",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tito_Boeri_-_Festival_Economia_2013.JPG/220px-Tito_Boeri_-_Festival_Economia_2013.JPG",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/tboeri",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "05",
+      "name": "Nadia Urbinati",
+      "bio": "Professore di Teoria Politica alla Columbia University, è una politologa specializzata in teoria liberale e democratica, rappresentanza e tradizioni anti-democratiche. È stata membro dell’Institute for Advanced Study (Princeton) e condirettore assieme ad Andrew Arato della rivista specializzata “Constellations: An International Journal of Critical and Democratic Theory”. Ha vinto il premio 2008-2009 Lenfest/Columbia Distinguished Faculty Award. Nel 2008 il Presidente della Repubblica Italiana le ha conferito il titolo di Commendatore della Repubblica per il suo contributo allo studio della democrazia e alla diffusione del pensiero liberale e democratico italiano all'estero. È autrice di diversi libri, fra cui il recente Me The People: How Populism Transforms Democracy (Harvard University Press 2019)",
+      "company": "Columbia University",
+      "thumbnailUrl": "https://cdn.theconversation.com/avatars/427255/width238/urbinati-12-1.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/nadiau87",
+      "linkedInUrl": "https://www.linkedin.com/in/nadia-urbinati-4a026b30/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "06",
+      "name": "Torsten Persson",
+      "bio": "È Professore emerito del Swedish Research Council dell’Università di Stoccolma, Centennial Professor alla London School of Economics ed ha avuto diversi incarichi di docenza presso importanti università come Harvard, Princeton e Berkeley. È stato Presidente della Econometric Society nel 2008 e Presidente della European Economic Association nel 2003. Ha ricevuto diversi premi scientifici, fra cui la Yrjö Jahnsson Medal nel 1997, un premio attribuito ogni due anni al “migliore giovane economista in Europa”. Ha poi ricevuto il CES-Ifo Prize nel 2018. La sua ricerca abbraccia diversi ambiti, ma Torsten Persson è conosciuto soprattutto per i suoi articoli e i suoi libri sull’economia politica. Attualmente i suoi studi si concentrano sulla selezione dei politici e sulle interazioni fra cultura e istituzioni. Il suo libro più recente è Pillars of Prosperity. The Political Economics of Development Clusters (con T. Besley), Princeton University Press, 2011.",
+      "company": "Università di Stoccolma",
+      "thumbnailUrl": "https://www.iies.su.se/polopoly_fs/1.406909!/image/image.jpg_gen/derivatives/article_505/image.jpg",
+      "websiteUrl": "http://perseus.iies.su.se/~tpers/",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "07",
+      "name": "Alberto Alesina",
+      "bio": "Professore di Economia Politica alla Harvard University. È stato preside del Dipartimento di Economia dal 2003 al 2006. È membro di NBER e CEPR, dell'Econometric Society e dell'American Academy of Arts and Sciences. È direttore del programma di economia politica di NBER dal 2006. Ha pubblicato numerosi articoli su tutte le principali riviste accademiche di economia, oltre a numerosi editoriali sui principali quotidiani in tutto il mondo. Alberto Alesina ha pubblicato cinque libri, fra cui: Austerity, when it works and when it doesn’t (con F. Giavazzi e C. Favero), Princeton University Press, 2019, The Future of Europe: Reform or Decline (con F. Giavazzi), MIT Press, 2006, e Fighting Poverty in the US and Europe: A World of Difference (con E. Glaeser), Oxford University Press, 2004. È stato condirettore del “Quarterly Journal of Economics” per sei anni e Associate Editor di molte riviste accademiche.",
+      "company": "Harvard University",
+      "thumbnailUrl": "https://argomenti.ilsole24ore.com/Immagini/Editrice/ILSOLE24ORE/ARGOMENTI/Online/Persone/Immagini/Personaggi_AP/ALESINA_ALBERTO_IMAGOECONOMICA-kz7--258x258@Argomenti.jpg",
+      "websiteUrl": "https://scholar.harvard.edu/alesina/home",
+      "twitterUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/alberto-alesina-ba94584a/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "08",
+      "name": "Marco Leonardi",
+      "bio": "Insegna Economia politica all’Università degli Studi di Milano.",
+      "company": "Università degli Studi di Milano",
+      "thumbnailUrl": "https://www.adnkronos.com/rf/image_size_400x300/Pub/AdnKronos/Assets/Immagini/2019/01/09/leonardi_marco_3-4-1553902046.jpg",
+      "websiteUrl": "http://www.unimi.it/chiedove/schedaPersonaXML.jsp?matricola=16125",
+      "twitterUrl": "https://twitter.com/marcoleonardi9",
+      "linkedInUrl": "https://www.linkedin.com/in/marco-leonardi-5806045/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "09",
+      "name": "Elisa Ferreira",
+      "bio": "Politica ed economista.",
+      "company": "",
+      "thumbnailUrl": "http://www.mulheresqinspiram.com/wp-content/uploads/2017/10/Elisa-Ferreira-294x300.png",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Elisa_Ferreira",
+      "twitterUrl": "https://twitter.com/elisaferreiraep",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "10",
+      "name": "Jean Pisani-Ferry",
+      "bio": "Insegna alla Hertie School of Governance di Berlino.",
+      "company": "",
+      "thumbnailUrl": "http://www.prospectmagazine.co.uk/wp-content/uploads/2013/03/Pisani-Ferry-300x250.gif",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Jean_Pisani-Ferry",
+      "twitterUrl": "https://twitter.com/pisaniferry",
+      "linkedInUrl": "https://www.linkedin.com/in/jean-pisani-ferry-29272a6/?originalSubdomain=fr",
+      "facebookUrl": ""
+    },
+    {
+      "id": "11",
+      "name": "Cas Mudde",
+      "bio": "È Stanley Wade Shelton UGAF Professor presso la School of Public and International Affairs dell’Università della Georgia e docente presso il Center for Research on Extremism (C-REX) dell’Università di Oslo. Con la sua attività di ricerca si propone di rispondere alla seguente domanda: come possono le democrazie liberali difendersi dalle sfide politiche senza minare i loro stessi valori fondamentali? È un premiato autore di molti libri, fra cui i recenti: The Far Right Today, Polity, 2019); The Far Right in America, Routledge, 2018; Populism: A Very Short Introduction, Oxford UP, 2017. È anche editorialista di The Guardian.",
+      "company": "",
+      "thumbnailUrl": "https://spia.uga.edu/wp-content/uploads/2016/05/Mudde_Headshot-2018.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Cas_Mudde",
+      "twitterUrl": "https://twitter.com/casmudde",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "12",
+      "name": "Giancarlo Loquenzi",
+      "bio": "Giornalista e conduttore di Zapping - Rai Radio1.",
+      "company": "RAI Radio 1",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "13",
+      "name": "Marco Onado",
+      "bio": "Insegna presso il Dipartimento di Finanza dell’Università Bocconi di Milano.",
+      "company": "Università Bocconi di Milano",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Marco_Onado_-_Festival_Economia_2018.jpg/220px-Marco_Onado_-_Festival_Economia_2018.jpg",
+      "websiteUrl": "http://didattica.unibocconi.it/docenti/cv.php?rif=49120",
+      "twitterUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/marco-onado-94047b1b/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "14",
+      "name": "Andrea Landi",
+      "bio": "Insegna Economia degli intermediari finanziari all’Università di Modena e Reggio Emilia.",
+      "company": "Università di Modena",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "15",
+      "name": "Sabino Cassese",
+      "bio": "È professore alla “School of Government” della Luiss, giudice emerito della Corte Costituzionale e professore emerito della Scuola Normale Superiore di Pisa. È dottore “honoris causa” nelle Università di Aix-en-Provence, di Cordoba (Argentina), di Paris II, di Castilla-la-Mancha, di Atene, di Macerata, di Roma e dell’Istituto Universitario Europeo di Firenze. Ha insegnato nelle Università di Urbino, Napoli, Roma, New York, Parigi e Nantes e all’Institut d’études politiques di Parigi. È stato Ministro per la Funzione Pubblica del 50° Governo della Repubblica italiana, presieduto da Carlo Azeglio Ciampi. Tra le sue pubblicazioni più recenti: Territori e potere, il Mulino, 2016; La democrazia e i suoi limiti, Mondadori, 2017; A World Government?, Global Law Press, 2018; La democrazia e i suoi limiti. Nuova edizione aggiornata, Mondadori, 2018; La Svolta. Dialoghi sulla politica che cambia, Il Mulino, 2019.",
+      "company": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Sabino_Cassese_-_Festival_Economia_2014.JPG/214px-Sabino_Cassese_-_Festival_Economia_2014.JPG",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Sabino_Cassese",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "16",
+      "name": "Alessandro Andreatta",
+      "bio": "Sindaco di Trento.",
+      "company": "",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/623069773346246657/US5b0q9v_400x400.jpg",
+      "websiteUrl": "http://www.comune.trento.it/Comune/Organi-politici/Sindaco",
+      "twitterUrl": "https://twitter.com/aless_andre",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "17",
+      "name": "Innocenzo Cipolletta",
+      "bio": "Innocenzo Cipolletta è Cavaliere di Gran Croce, Presidente dell’Università di Trento, Senior Advisor di UBS Italy Branch, Presidente di UBS Fiduciaria, Presidente di AIFI, Presidente del Fondo Italiano d’Investimento e Vice Presidente vicario di Assonime e di FeBAF, Consigliere di Amministrazione di Lunelli S.p.A. In precedenza è stato Presidente di Ferrovie dello Stato, Presidente de Il Sole 24 Ore, Presidente Corporate Finance Italia, Presidente della Marzotto S.p.A. e Direttore Generale di Confindustria. Ha ricoperto ruoli di funzionario e di dirigente all’OCSE (Organizzazione per la Cooperazione e lo Sviluppo Economico) e all’ISCO (Istituto Nazionale per lo Studio della Congiuntura). Ha avuto incarichi d’insegnamento all’Università la Sapienza di Roma, Facoltà di Scienze Statistiche, alla LUISS – Guido Carli di Roma, alla Cesare Alfieri di Firenze ed all’Università di Reggio Calabria. È inoltre pubblicista e commentatore economico di quotidiani, oltre ad aver firmato diversi articoli scientifici e libri.",
+      "company": "Presidente AIFI",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Innocenzo_Cipolletta_-_Festival_Economia_2013.JPG/220px-Innocenzo_Cipolletta_-_Festival_Economia_2013.JPG",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Innocenzo_Cipolletta",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "18",
+      "name": "Paolo Collini",
+      "bio": "Paolo Collini è un economista e accademico italiano, rettore dell'Università degli Studi di Trento dal 24 febbraio 2015.",
+      "company": "Università di Trento",
+      "thumbnailUrl": "https://www.lavocedeltrentino.it/wp-content/uploads/2015/02/images_2015_ATENIEO-1.jpg",
+      "websiteUrl": "https://webapps.unitn.it/du/it/Persona/PER0003082/Curriculum",
+      "twitterUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/paolo-collini-ba148b73/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "19",
+      "name": "Gregorio De Felice",
+      "bio": "Chief Economist Intesa Sanpaolo.",
+      "company": "Intesa Sanpaolo",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Gregorio_De_Felice_-_Festival_Economia_2016.jpg",
+      "websiteUrl": "http://www.ampit.it/organi-associativi/gregorio-de-felice",
+      "twitterUrl": "https://twitter.com/gregdefelice",
+      "linkedInUrl": "https://www.linkedin.com/in/gregorio-de-felice-734244/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "20",
+      "name": "Maurizio Fugatti",
+      "bio": "Presidente della Provincia autonoma di Trento.",
+      "company": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Maurizio_Fugatti_daticamera_2018.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Maurizio_Fugatti",
+      "twitterUrl": "https://twitter.com/MaurizioFugatti",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "21",
+      "name": "Giuseppe Laterza",
+      "bio": "Giuseppe Laterza (Bari, 25 gennaio 1957) è un editore italiano. Dal 2006 ha ideato e promosso il Festival dell'economia di Trento, il Festival Città e Territorio a Ferrara e il Festival del diritto di Piacenza, le Lezioni di storia a Roma, Firenze e Milano, che hanno ottenuto un significativo successo di pubblico e di critica.",
+      "company": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Giuseppe_Laterza.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Giuseppe_Laterza",
+      "twitterUrl": "https://twitter.com/giuslat",
+      "linkedInUrl": "",
+      "facebookUrl": ""
     }
   ],
   "tags": [
