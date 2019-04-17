@@ -781,7 +781,7 @@
     },
     {
       "id": "13",
-      "color": "#F5CBA7",
+      "color": "#ffccd5",
       "fontColor": "#202124",
       "name": "Contemporary Witnesses",
       "category": "topic"
@@ -791,6 +791,20 @@
       "color": "#E6B0AA",
       "fontColor": "#202124",
       "name": "Visions",
+      "category": "topic"
+    },
+    {
+      "id": "15",
+      "color": "#cc7b4c",
+      "fontColor": "#202124",
+      "name": "Alla frontiera",
+      "category": "topic"
+    },
+    {
+      "id": "16",
+      "color": "#2d1f4d",
+      "fontColor": "#ffffff",
+      "name": "Alan Krueger Lecture",
       "category": "topic"
     }
   ]
