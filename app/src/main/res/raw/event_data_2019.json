@@ -288,7 +288,9 @@
       "organizers": [
         "05"
       ],
-      "relatedSessions": [],
+      "relatedSessions": [
+        "27"
+      ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/elite-e-popolo-un-conflitto-utile",
       "youtubeUrl": ""
@@ -310,7 +312,8 @@
       ],
       "relatedSessions": [
         "02",
-        "08"
+        "08",
+        "21"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/su-selezione-classe-politica-populis-1",
@@ -331,7 +334,13 @@
       "organizers": [
         "07"
       ],
-      "relatedSessions": [],
+      "relatedSessions": [
+        "14",
+        "17",
+        "18",
+        "19",
+        "26"
+      ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/immigrazione-in-europa-ed-il-suo-stato-sociale-miti-e-realta",
       "youtubeUrl": ""
@@ -343,15 +352,17 @@
       "endTimestamp": 1559239200000,
       "day": 0,
       "location": "10",
-      "description": "Le riforme dimezzate: incontri con l'autore",
+      "description": "Le riforme dimezzate - Marco Leonardi. Coordina Tonia Mastrobuoni.",
       "tags": [
         "01",
         "07"
       ],
       "organizers": [
-        "08"
+        "26"
       ],
-      "relatedSessions": [],
+      "relatedSessions": [
+        "15"
+      ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/tito-7",
       "youtubeUrl": ""
@@ -440,6 +451,762 @@
       "relatedSessions": [],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/relazioni-pericolose-stato-e-globalizzazione-dal-parlamento-al-web",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "12",
+      "title": "Radio anch'io",
+      "startTimestamp": 1559280600000,
+      "endTimestamp": 1559287800000,
+      "day": 1,
+      "location": "01",
+      "description": "In diretta dal Festival dell'Economia. Il dialogo con gli ascoltatori, le inchieste, gli speciali dall'Italia e dal Mondo. Uno degli spazi più solidi e longevi della radio italiana.",
+      "tags": [
+        "01",
+        "11"
+      ],
+      "organizers": [
+        "22"
+      ],
+      "relatedSessions": [
+        "00",
+        "03",
+        "09"
+      ],
+      "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555416241994.festival_Economia_2016_generiche_e_personaggi_minori___00000207_439001.png",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/radio-anch-io",
+      "youtubeUrl": "https://www.raiplayradio.it/radio1/"
+    },
+    {
+      "id": "13",
+      "title": "Tutta la città ne parla",
+      "startTimestamp": 1559289600000,
+      "endTimestamp": 1559293200000,
+      "day": 1,
+      "location": "01",
+      "description": "Gli ospiti e i temi, i libri e le testimonianze, gli appuntamenti del Festival raccontati ogni giorno in diretta al pubblico della piazza e agli ascoltatori di Radio3.",
+      "tags": [
+        "01",
+        "11"
+      ],
+      "organizers": [
+        "00",
+        "01",
+        "02"
+      ],
+      "relatedSessions": [
+        "00",
+        "03",
+        "09",
+        "12"
+      ],
+      "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555416241994.festival_Economia_2016_generiche_e_personaggi_minori___00000207_439001.png",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/tutta-la-citta-ne-par-2",
+      "youtubeUrl": "https://www.raiplayradio.it/radio3/"
+    },
+    {
+      "id": "14",
+      "title": "Globalizzazione",
+      "startTimestamp": 1559289600000,
+      "endTimestamp": 1559295000000,
+      "day": 1,
+      "location": "07",
+      "description": "Diverse ondate di globalizzazione, intesa come intensificazione degli scambi commerciali, demografici, e culturali tra aree molto distanti, si sono manifestate nella storia. La penultima, tra la fine del XIX secolo e i primi decenni del XX, si concluse tragicamente con una guerra mondiale e la presa del potere da parte di movimenti autoritari in molti paesi europei. Qual è il futuro della fase di globalizzazione che stiamo attraversando?",
+      "tags": [
+        "01",
+        "10"
+      ],
+      "organizers": [
+        "23",
+        "24"
+      ],
+      "relatedSessions": [
+        "06",
+        "17",
+        "18",
+        "19",
+        "26"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/globalizzazione",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "15",
+      "title": "Scacco all'Europa. La guerra fredda tra Cina e USA per il nuovo ordine",
+      "startTimestamp": 1559289600000,
+      "endTimestamp": 1559295000000,
+      "day": 1,
+      "location": "10",
+      "description": "Scacco all'Europa. La guerra fredda tra Cina e USA per il nuovo ordine (Danilo Taino), a cura di Solferino. Coordina Tonia Mastrobuoni.",
+      "tags": [
+        "01",
+        "07"
+      ],
+      "organizers": [
+        "26"
+      ],
+      "relatedSessions": [
+        "07",
+        "16",
+        "24"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/scacco-all-europa-la-guerra-fredda-tra-cina-e-usa-per-il-nuovo-ordine",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "16",
+      "title": "Europa, e adesso?",
+      "startTimestamp": 1559289600000,
+      "endTimestamp": 1559295000000,
+      "day": 1,
+      "location": "02",
+      "description": "Dal voto al governo. Come cambierà l’Europa dopo i risultati elettorali? Più nazionalismo e ‘Popolocrazia’ oppure più integrazione economica e politica?",
+      "tags": [
+        "01",
+        "04"
+      ],
+      "organizers": [
+        "27",
+        "28"
+      ],
+      "relatedSessions": [
+        "07",
+        "15"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/europa-e-adesso-",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "17",
+      "title": "Le reazioni alla globalizzazione: lezioni dalla storia",
+      "startTimestamp": 1559289600000,
+      "endTimestamp": 1559295000000,
+      "day": 1,
+      "location": "05",
+      "description": "Ci sono tre precedenti storici da cui possiamo imparare molte lezioni. La de-globalizzazione della fine del XIX secolo, la Grande Depressione degli anni ’30 e le guerre commerciali a cavallo dei conflitti mondiali. Sono utili per capire determinanti e conseguenze delle attuali pulsioni contro lo sviluppo del commercio internazionale, l’immigrazione e i movimenti di capitale.",
+      "tags": [
+        "01",
+        "09"
+      ],
+      "organizers": [
+        "29"
+      ],
+      "relatedSessions": [
+        "06",
+        "14",
+        "18",
+        "19",
+        "26"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/the-backlash-against-globalization-lessons-from-history",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "18",
+      "title": "Autostrade: istanze locali, aperture globali",
+      "startTimestamp": 1559291400000,
+      "endTimestamp": 1559296800000,
+      "day": 1,
+      "location": "20",
+      "description": "Le concessioni autostradali sono attratte, dal diritto europeo, alla disciplina dei contratti pubblici. Il loro affidamento è rimesso a gare aperte anche a soggetti privati. Tale assetto quali opportunità e quali rischi comporta per l'efficienza del sistema e la tutela di istanze locali?",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35"
+      ],
+      "relatedSessions": [
+        "06",
+        "14",
+        "17",
+        "19",
+        "26"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/autostrade-istanze-locali-aperture-globali",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "19",
+      "title": "Alieni senza confini",
+      "startTimestamp": 1559293200000,
+      "endTimestamp": 1559298600000,
+      "day": 1,
+      "location": "08",
+      "description": "In un mondo globalizzato le specie invasive si muovono liberamente oltre i confini nazionali, alternando le componenti ecologiche dei sistemi agro-ambientali. Gli insetti alieni creano, infatti, problemi nei settori produttivi, come agricoltura e turismo, ma anche alla salute umana.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "36",
+        "37",
+        "38",
+        "39"
+      ],
+      "relatedSessions": [
+        "06",
+        "14",
+        "17",
+        "18",
+        "26"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/alieni-senza-confini",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "20",
+      "title": "Quale nazionalismo. Alle origini di una idea",
+      "startTimestamp": 1559293200000,
+      "endTimestamp": 1559298600000,
+      "day": 1,
+      "location": "18",
+      "description": "Il nazionalismo di Macron sembra assai diverso da quello di Trump. Per capirne le ragioni è utile risalire all’origine del concetto nel pensiero politico moderno europeo. E alla distinzione tra la patria intesa come comunità di liberi cittadini contrapposti alla tirannide e la nazione intesa come comunità culturalmente omogenea che combatte per affermare la propria identità.",
+      "tags": [
+        "01",
+        "09"
+      ],
+      "organizers": [
+        "40"
+      ],
+      "relatedSessions": [
+        "42"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/quale-nazionalismo-alle-origini-di-una-idea",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "21",
+      "title": "Attentati terroristici e voto per la destra populista",
+      "startTimestamp": 1559293200000,
+      "endTimestamp": 1559298600000,
+      "day": 1,
+      "location": "09",
+      "description": "Quali sono gli effetti degli attentati terroristici sul sostegno ai partiti populisti di estrema destra? E sulla posizione dei partiti tradizionali? Uno studio basato sull’analisi dei tweet prima e dopo ogni attentato terroristico.",
+      "tags": [
+        "01",
+        "15"
+      ],
+      "organizers": [
+        "41"
+      ],
+      "relatedSessions": [
+        "04",
+        "05"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/attentati-terroristici-e-voto-per-la-destra-populista",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "22",
+      "title": "Reddito universale di base?",
+      "startTimestamp": 1559293200000,
+      "endTimestamp": 1559298600000,
+      "day": 1,
+      "location": "04",
+      "description": "Quali sono i problemi che un vero Reddito di Cittadinanza vuole affrontare? Come interagisce con altri programmi assistenziali? Quali sono i suoi effetti distributivi e i suoi costi? Risposte basate sui fatti come nella tradizione delle presentazioni di Alan Krueger al nostro festival.",
+      "tags": [
+        "01",
+        "16"
+      ],
+      "organizers": [
+        "42",
+        "4"
+      ],
+      "relatedSessions": [],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/reddito-universale-di-base-",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "23",
+      "title": "La sfida dell'identità dei luoghi: che ruolo ha la cultura?",
+      "startTimestamp": 1559295000000,
+      "endTimestamp": 1559300400000,
+      "day": 1,
+      "location": "16",
+      "description": "Le città, le regioni e le loro società sono il risultato di complesse stratificazioni identitarie, relazionali e comportamentali. Qual è il contributo della cultura all’identità dei luoghi? E in che modo la cultura e il patrimonio culturale possono contribuire allo sviluppo dei territori sfidati dalla globalizzazione?",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "43",
+        "44",
+        "45"
+      ],
+      "relatedSessions": [],
+      "photoUrl": "",
+      "sessionUrl": "",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "24",
+      "title": "Multinazionali e sviluppo locale",
+      "startTimestamp": 1559296800000,
+      "endTimestamp": 1559302200000,
+      "day": 1,
+      "location": "02",
+      "description": "Come possono città e regioni attrarre più investimenti di imprese multinazionali? E quando riescono, qual è l’impatto sullo sviluppo locale? Più lavoro, capitali e tecnologia? O più incertezza e concorrenza per le imprese locali?",
+      "tags": [
+        "01",
+        "06"
+      ],
+      "organizers": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51"
+      ],
+      "relatedSessions": [
+        "14",
+        "17",
+        "24"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/multinazionali-economia-locale",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "25",
+      "title": "Ho imparato. In viaggio con i giovani sognando un'Italia mondiale",
+      "startTimestamp": 1559296800000,
+      "endTimestamp": 1559302200000,
+      "day": 1,
+      "location": "10",
+      "description": "Ho imparato. In viaggio con i giovani sognando un'Italia mondiale (Enrico Letta - Il Mulino). Ne discute Sofia Ventura. Coordina Tonia Mastrobuoni.",
+      "tags": [
+        "01",
+        "07"
+      ],
+      "organizers": [
+        "52",
+        "26"
+      ],
+      "relatedSessions": [],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/ho-imparato-in-viaggio-con-i-giovani-sognando-un-italia-mondiale",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "26",
+      "title": "Cosa possiamo imparare dalle grandi migrazioni del secolo scorso",
+      "startTimestamp": 1559305800000,
+      "endTimestamp": 1559311200000,
+      "day": 1,
+      "location": "07",
+      "description": "Agli inizi del XX secolo la forza lavoro degli Stati Uniti aumentò del 25%. Gli immigrati portavano prosperità ma venivano accolti con diffidenza se non ostilità dalle comunità locali per via delle diversità culturali. Quali lezioni si possono trarre da quei flussi migratori, nettamente superiori a quelli che si verificano oggi, sulle reazioni culturali all’immigrazione e sulle politiche che favoriscono l’integrazione degli immigrati?",
+      "tags": [
+        "01",
+        "09"
+      ],
+      "organizers": [
+        "53"
+      ],
+      "relatedSessions": [
+        "06",
+        "26"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/immigrazione-e-scenari-demografici",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "27",
+      "title": "I luoghi abbandonati: comportamenti di voto, regioni in ritardo di sviluppo e risposte politiche",
+      "startTimestamp": 1559305800000,
+      "endTimestamp": 1559311200000,
+      "day": 1,
+      "location": "04",
+      "description": "Povertà persistente, decadimento economico e mancanza di opportunità causano malcontento nelle regioni in declino. Molti di questi luoghi si sono ribellati tramite un'ondata di populismo politico con forte radicamento territoriale. Come può la politica invertire questa tendenza e offrire opportunità a coloro che ivono nei luoghi che non contano?",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
+        "54",
+        "55"
+      ],
+      "relatedSessions": [
+        "04"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/comportamenti-di-voto-regioni-in-ritardo-di-sviluppo-e-risposte-politiche-l-ascesa-dei-luoghi-che-contano",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "28",
+      "title": "Populismo autoritario",
+      "startTimestamp": 1559305800000,
+      "endTimestamp": 1559311200000,
+      "day": 1,
+      "location": "02",
+      "description": "Pippa Norris in videoconferenza dialoga con Nadia Urbinati.",
+      "tags": [
+        "01",
+        "08"
+      ],
+      "organizers": [
+        "56",
+        "05"
+      ],
+      "relatedSessions": [
+        "04",
+        "05"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/on-authoritarian-populism",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "29",
+      "title": "Tutta la città ne parla",
+      "startTimestamp": 1559307600000,
+      "endTimestamp": 1559311200000,
+      "day": 1,
+      "location": "01",
+      "description": "Gli ospiti e i temi, i libri e le testimonianze, gli appuntamenti del Festival raccontati ogni giorno in diretta al pubblico della piazza e agli ascoltatori di Radio3.",
+      "tags": [
+        "01",
+        "11"
+      ],
+      "organizers": [
+        "00",
+        "01",
+        "02"
+      ],
+      "relatedSessions": [
+        "00",
+        "03",
+        "09",
+        "12",
+        "13"
+      ],
+      "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555416241994.festival_Economia_2016_generiche_e_personaggi_minori___00000207_439001.png",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/tutta-la-citta-ne-par-4",
+      "youtubeUrl": "https://www.raiplayradio.it/radio3/"
+    },
+    {
+      "id": "30",
+      "title": "In sicurezza e libertà: l'appello dei profughi siriani",
+      "startTimestamp": 1559307600000,
+      "endTimestamp": 1559313000000,
+      "day": 1,
+      "location": "08",
+      "description": "Dal 2011 milioni di rifugiati siriani sono scappati dalla guerra per non dover combattere, essere imprigionati o uccisi: in condizioni estreme sopravvivono in Libano, Giordania, Turchia. Una riflessione sul loro appello alla comunità internazionale per la creazione di condizioni di sicurezza e libertà.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "57",
+        "58",
+        "59",
+        "60"
+      ],
+      "relatedSessions": [
+        "06",
+        "26"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/in-sicurezza-e-liberta-l-appello-dei-profughi-siriani",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "31",
+      "title": "A suon di parole. Il gioco del contraddittorio",
+      "startTimestamp": 1559307600000,
+      "endTimestamp": 1559313000000,
+      "day": 1,
+      "location": "17",
+      "description": "Per sviluppare una comunità territoriale è più importante conoscere i processi della realtà locale o della realtà globale? Questo il tema del dibattito della finale del torneo di sfida verbale tra gli studenti delle scuole superiori del Trentino, con l’obiettivo di educare i giovani al confronto democratico. A cura del Comune di Trento - Servizio cultura, turismo e politiche giovanili con il coordinamento di IPRASE, Facoltà di Giurisprudenza dell’Università di Trento e Comuni di Trento e Rovereto.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "61",
+        "62",
+        "63",
+        "64"
+      ],
+      "relatedSessions": [
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/a-suon-di-parole-il-gioco-del-contraddittorio",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "32",
+      "title": "Austerity. Quando funziona e quando no",
+      "startTimestamp": 1559307600000,
+      "endTimestamp": 1559313000000,
+      "day": 1,
+      "location": "10",
+      "description": "Austerity. Quando funziona e quando no (Rizzoli) - di Alberto Alesina, Carlo Favero, Francesco Giavazzi. Coordina Tonia Mastrobuoni.",
+      "tags": [
+        "01",
+        "07"
+      ],
+      "organizers": [
+        "26"
+      ],
+      "relatedSessions": [
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/austerity-quando-funziona-e-quando-no",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "33",
+      "title": "Gli errori delle élite alle origini del sovranismo",
+      "startTimestamp": 1559307600000,
+      "endTimestamp": 1559313000000,
+      "day": 1,
+      "location": "05",
+      "description": "Le élite liberali che hanno governato l’Occidente negli ultimi trent’anni hanno commesso molti errori: sottovalutazione delle disuguaglianze, utilizzo della competenza tecnica come sostitutiva della rappresentanza politica, fede nelle capacità redistributive del libero mercato, sbagliate politiche migratorie.",
+      "tags": [
+        "01",
+        "08"
+      ],
+      "organizers": [
+        "65"
+      ],
+      "relatedSessions": [
+        "04",
+        "20"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/gli-errori-delle-elite-alle-origini-del-sovranismo",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "34",
+      "title": "La stagnazione secolare è il nostro destino?",
+      "startTimestamp": 1559307600000,
+      "endTimestamp": 1559313000000,
+      "day": 1,
+      "location": "18",
+      "description": "Negli ultimi dieci anni, durante i quali i tassi di crescita sono rallentati, si è sostenuto che le economie avanzate sono destinate a una stagnazione secolare e che una crescita a tassi elevati sia ormai alle spalle per sempre. Quali sono gli insegnamenti della storia?",
+      "tags": [
+        "01",
+        "09"
+      ],
+      "organizers": [
+        "66"
+      ],
+      "relatedSessions": [
+        "22"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/is-secular-stagnation-in-our-future-lessons-from-the-past",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "35",
+      "title": "Un'altra globalizzazione è possibile?",
+      "startTimestamp": 1559309400000,
+      "endTimestamp": 1559314800000,
+      "day": 1,
+      "location": "09",
+      "description": "La globalizzazione è stata percepita da molti come responsabile di crescenti diseguaglianze sociali e insoddisfazione politica, che sono state ulteriormente accentuate nel corso della Grande Recessione. La critica alla globalizzazione assume comunque caratteristiche molto differenti, con risposte che vanno dal populismo xenofobo alla proposta di una “altra globalizzazione”, dal basso e inclusiva.",
+      "tags": [
+        "01",
+        "08"
+      ],
+      "organizers": [
+        "67"
+      ],
+      "relatedSessions": [
+        "11",
+        "14",
+        "17"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/un-altra-globalizzazione-e-ancora-possibile-",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "36",
+      "title": "Le imprese italiane tra protezione e globalizzazione",
+      "startTimestamp": 1559311200000,
+      "endTimestamp": 1559316600000,
+      "day": 1,
+      "location": "12",
+      "description": "A cura di GEI Gruppo Economisti di Impresa. Coordina Massimo Deandreis. Intervengono Innocenzo Cipolletta, Gregorio De Felice, Alessandra Lanza. L’Associazione italiana degli economisti di impresa presenta le recenti ricerche condotte dai soci sul rapporto tra impresa e globalizzazione dell’economia.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "68",
+        "69",
+        "17",
+        "19"
+      ],
+      "relatedSessions": [
+        "11",
+        "14",
+        "17"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/le-imprese-italiane-tra-protezione-e-globalizzazione",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "37",
+      "title": "Chi ha paura della Libia?",
+      "startTimestamp": 1559311200000,
+      "endTimestamp": 1559316600000,
+      "day": 1,
+      "location": "16",
+      "description": "A cura del Centro per la Cooperazione Internazionale di Trento. Coordina Gabriel Echeverrìa. Intervengono Faraj Najem, Benedetta Oddo. A partire dalla caduta del regime del generale Gheddafi, nel 2011, la Libia vive un periodo di tensioni e conflitti interni. Qual è il ruolo delle municipalità libiche nel tortuoso processo di ricostruzione di uno Stato e di una comunità nazionale, in un contesto di divisioni interne e ingerenze esterne?",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "70",
+        "71",
+        "72"
+      ],
+      "relatedSessions": [
+        "21",
+        "30"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/le-imprese-italiane-tra-protezione-e-globalizzazione",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "38",
+      "title": "Immigrazione e scenari demografici",
+      "startTimestamp": 1559313000000,
+      "endTimestamp": 1559318400000,
+      "day": 1,
+      "location": "20",
+      "description": "Un confronto sul tema delle migrazioni, alla luce delle dinamiche demografiche che caratterizzano le aree di provenienza e di destinazione dei flussi. Un’occasione per analizzare gli secenari futuri di mobilità internazionale sotto il profilo economico, socio-demografico e del welfare.\nA cura della Fondazione Iniziative e Studi sulla Multietnicità - ISMU. Coordina Giancarlo Blangiardo. Intervengono Luigi Bonatti, Mario Raffaelli, Laura Zanfrini.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "73",
+        "74",
+        "75",
+        "76"
+      ],
+      "relatedSessions": [
+        "21",
+        "30"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/le-imprese-italiane-tra-protezione-e-globalizzazione",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "39",
+      "title": "Come reagiscono le vittime della globalizzazione",
+      "startTimestamp": 1559313000000,
+      "endTimestamp": 1559318400000,
+      "day": 1,
+      "location": "04",
+      "description": "Uno studio delle reazioni alla perdita del posto di lavoro a seguito di delocalizzazione, cambiamento tecnologico o errori del management. Quando si chiede maggiore protezionismo e quando no tra i sostenitori di Trump e della Clinton e a seconda del livello di istruzione. Come incidono sulla domanda di protezioni doganali le informazioni sulla violazione dei labor standards nei paesi esportatori.",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
+        "77"
+      ],
+      "relatedSessions": [
+        "14",
+        "17"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/populismo-ed-elettori-razionali",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "40",
+      "title": "Contrordine compagni. Manuale di resistenza alla tecnofobia per la riscossa del lavoro e dell'Italia",
+      "startTimestamp": 1559314800000,
+      "endTimestamp": 1559320200000,
+      "day": 1,
+      "location": "10",
+      "description": "Contrordine compagni. Manuale di resistenza alla tecnofobia per la riscossa del lavoro e dell'Italia - Marco Bentivogli - Rcs. Ne discutono Giorgio Barba Navaretti, Luigi Zanda. Coordina Tonia Mastrobuoni.",
+      "tags": [
+        "01",
+        "07"
+      ],
+      "organizers": [
+        "50",
+        "78",
+        "26"
+      ],
+      "relatedSessions": [
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/contrordine-compagni-manuale-di-resistenza-alla-tecnofobia-per-la-riscossa-del-lavoro-e-dell-italia",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "41",
+      "title": "INET",
+      "startTimestamp": 1559314800000,
+      "endTimestamp": 1559320200000,
+      "day": 1,
+      "location": "02",
+      "description": "INET.",
+      "tags": [
+        "01",
+        "04"
+      ],
+      "organizers": [
+        "79",
+        "80"
+      ],
+      "relatedSessions": [
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/inet-titolo",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "42",
+      "title": "Come nascono le Nazioni (e perchè ritornano i nazionalismi)",
+      "startTimestamp": 1559314800000,
+      "endTimestamp": 1559320200000,
+      "day": 1,
+      "location": "09",
+      "description": "Dalla continuità di sangue alla contiguità di suolo, c’è un filo rosso che unisce tutti i nazionalismi, di ieri e di oggi. E che inizia con la costruzione reale e simbolica delle nazioni moderne, come l’Italia.",
+      "tags": [
+        "01",
+        "09"
+      ],
+      "organizers": [
+        "81"
+      ],
+      "relatedSessions": [
+        "20"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/come-nascono-le-nazioni-e-perche-ritornano-i-nazionalismi-",
       "youtubeUrl": ""
     }
   ],
@@ -683,6 +1450,666 @@
       "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Giuseppe_Laterza.jpg",
       "websiteUrl": "https://it.wikipedia.org/wiki/Giuseppe_Laterza",
       "twitterUrl": "https://twitter.com/giuslat",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "22",
+      "name": "Giorgio Zanchini",
+      "bio": "Giornalista, conduttore del programma radiofonico “Radio anch’io” di Rai Radio1.",
+      "company": "RAI Radio 1",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "23",
+      "name": "Piero Stanig",
+      "bio": "È Assistant Professor di Scienza Politica presso l'Università Bocconi di Milano. Il suo programma di ricerca copre la politica comparata, la economia politica comparata, e metodologia quantitativa. Il suo lavoro appare nel Journal of Public Economics, Electoral Studies, American Political Science Review, e American Journal of Political Science. Ha ottenuto il suo Ph.D. in Scienza Politica alla Columbia University. Prima di venire alla Bocconi, ha insegnato metodologia, scienza politica, e economia politica alla LSE per tre anni e alla Hertie School of Governance per altri tre. È anche stato borsista allo Alexander Hamilton Center for Political Economy a NYU, dove ha insegnato corsi sulla corruzione politica e burocratica. È anche un membro del comitato consultivo dello Ibrahim Index of African Governance.",
+      "company": "Università Bocconi di Milano",
+      "thumbnailUrl": "https://www.forodeforos.org/wp-content/uploads/2019/02/FOTO_STANIG-PIERO-e1551176270387.jpg",
+      "websiteUrl": "http://didattica.unibocconi.it/docenti/cv.php?rif=176128",
+      "twitterUrl": "https://twitter.com/pstanig",
+      "linkedInUrl": "https://www.linkedin.com/in/piero-stanig-2721bb6/?originalSubdomain=de",
+      "facebookUrl": ""
+    },
+    {
+      "id": "24",
+      "name": "Mauro Caselli",
+      "bio": "Insegna presso la Scuola di Studi Internazionali dell’Università di Trento",
+      "company": "Università di Trento",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "25",
+      "name": "Danilo Taino",
+      "bio": "Giornalista e inviato del Corriere della Sera.",
+      "company": "Giornalista",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/2438607762/u5lbpwxowv2f934oj8uc.jpeg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/danilotaino",
+      "linkedInUrl": "https://www.linkedin.com/in/danilo-taino-91568877/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "26",
+      "name": "Tonia Mastrobuoni",
+      "bio": "Giornalista e corrispondente a Berlino de La Repubblica.",
+      "company": "Giornalista",
+      "thumbnailUrl": "https://www.primaonline.it/wp-content/uploads/2016/01/Mastrobuoni.png",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "27",
+      "name": "Ilvo Diamanti",
+      "bio": "Sociologo, politologo e saggista.",
+      "company": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Ilvo_Diamanti_-_Festival_Economia_2012_%28cropped%29.JPG/220px-Ilvo_Diamanti_-_Festival_Economia_2012_%28cropped%29.JPG",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Ilvo_Diamanti",
+      "twitterUrl": "https://twitter.com/mastrobradipo",
+      "linkedInUrl": "https://www.linkedin.com/in/tonia-mastrobuoni-037628b/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "28",
+      "name": "Enrico Letta",
+      "bio": "Dirige la Scuola di Affari internazionali dell’Istituto di Studi Politici di Parigi.",
+      "company": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Enrico_Letta_2013.jpg/211px-Enrico_Letta_2013.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Enrico_Letta",
+      "twitterUrl": "https://twitter.com/EnricoLetta",
+      "linkedInUrl": "https://www.linkedin.com/in/enrico-letta-ba060333/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "29",
+      "name": "Kevin O'Rourke",
+      "bio": "È Chichele Professor di Storia dell’Economia presso l’All Souls College, Oxford. È membro della Royal Irish Academy, Fellow della British Academy ed ex direttore della ricerca di CEPR. O’Rourke ha insegnato presso le Università di Columbia, Harvard, University College di Dublino, Sciences Po a Parigi e presso il Trinity College di Dublino. La sua ricerca sta a cavallo fra storia dell’economia ed economia internazionale. Ha pubblicato molti articoli e studi sulla storia della globalizzazione e della deglobabalizzazione, fra cui il premiato volume Globalization and History, and Power and Plenty (pubblicato in Italia con il titolo: Potere e ricchezza: Una storia economica del mondo, UTET, 2017). È stato premiato come ERC Advanced Investigator nel 2009 per i suoi studi sul commercio Internazionale e le politiche commerciali fra le due guerre. Il suo ultimo libro Une Histoire Brève du Brexit, Odile Jacob, 2018 è stato pubblicato in inglese con il titolo “A Short History of Brexit: From Brentry to Backstop”, Penguin, 2019.",
+      "company": "",
+      "thumbnailUrl": "https://www.history.ox.ac.uk/sites/default/files/styles/person_profile_photo/public/history/images/person/cd_people_kevin_orourke.jpg?itok=WppxirNx",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Kevin_O'Rourke",
+      "twitterUrl": "https://twitter.com/kevinhorourke?lang=it",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "30",
+      "name": "Luigi Olivieri",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "31",
+      "name": "Carlo Cambini",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "32",
+      "name": "Ennio Cascetta",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "33",
+      "name": "Claudio Cataldi",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "34",
+      "name": "Barbara Marchetti",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "35",
+      "name": "Lorenzo Saltari",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "36",
+      "name": "Andrea Segrè",
+      "bio": "Presidente Fondazione Edmund Mach.",
+      "company": "Fondazione Edmund Mach",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/378800000725396969/e203effd395cc85c78c7ca861ba859ba_400x400.jpeg",
+      "websiteUrl": "http://www.andreasegre.it/",
+      "twitterUrl": "https://twitter.com/andrea_segre?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "37",
+      "name": "Piero Genovesi",
+      "bio": "Responsabile Fauna Selvatica ISPRA.",
+      "company": "Fondazione Edmund Mach",
+      "thumbnailUrl": "https://i1.rgstatic.net/ii/profile.image/272564580777991-1441995868556_Q512/Piero_Genovesi.jpg",
+      "websiteUrl": "http://www.isprambiente.gov.it/it/amministrazione-trasparente/personale/dirigenti/dirigenti-1/genovesi-piero/at_download/curriculum",
+      "twitterUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/piero-genovesi-95623445/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "38",
+      "name": "Annapaola Rizzoli",
+      "bio": "Dirigente Centro Ricerca e Innovazione Fondazione Edmund Mach.",
+      "company": "Fondazione Edmund Mach",
+      "thumbnailUrl": "https://www.ildolomiti.it/sites/default/files/articoli/Annapaola_Rizzoli_imagefullwide.jpg",
+      "websiteUrl": "https://www.fmach.it/CRI/info-generali/organizzazione/Direzione-Centro-Ricerca-e-Innovazione/ANNAPAOLA-RIZZOLI",
+      "twitterUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/rizzoli-annapaola-78010413/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "39",
+      "name": "Nikolaos Stilianakis",
+      "bio": "European Commission Joint Research Centre - JRC.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "40",
+      "name": "Maurizio Viroli",
+      "bio": "È Professore Emerito dell’Università di Princeton, Professor of Government all’Università del Texas (Austin) e Professore di Comunicazione politica all’Università della Svizzera Italiana (Lugano). I suoi ambiti di ricerca sono la teoria politica e la storia delle dottrine politiche, il repubblicanesimo classico ed il neo-repubblicanesimo, con riferimento particolare all’opera di Niccolò Machiavelli e Jean Jacques Rousseau, l’iconografia repubblicana, le relazioni tra religione e politica, il patriottismo, il costituzionalismo, la retorica classica, la comunicazione politica, la cittadinanza e l’educazione civica. È autore di numerosi volumi, tutti tradotti in molte lingue, tra cui: L’Italia dei doveri, Rizzoli, 2008; Come se Dio ci fosse. Religione e libertà nella storia d’Italia, Einaudi 2009; La redenzione dell’Italia. Saggio sul Principe di Machiavelli, Laterza, 2013; Etica del servizio ed etica del commando, ESI, 2018.",
+      "company": "",
+      "thumbnailUrl": "https://st.ilfattoquotidiano.it/wp-content/uploads/2017/07/wpid414357-ED-img10825410.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Maurizio_Viroli",
+      "twitterUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/maurizio-viroli-b4a05a40/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "41",
+      "name": "Francesco Giavazzi",
+      "bio": "È professore ordinario di economia politica all’Università Bocconi di Milano e vice-presidente dell'International Advisory Council dell'università. In precedenza ha insegnato presso il MIT e nelle Università di Essex (GB), Padova, Venezia e Bologna. È research fellow del CEPR a Londra, e research associate del NBER a Cambridge (Mass). Presiede il comitato scientifico del CEPII, l’istituto di studi di economia internazionale del governo francese, ed è un membro del “Bellagio Group”. Dal 1992 al 1994 è stato dirigente generale del ministero dell'Economia, responsabile per la ricerca economica, la gestione del debito pubblico e le privatizzazioni. Collabora con il Corriere della Sera e con lavoce.info un archivio on-line di articoli scritti da economisti italiani.",
+      "company": "",
+      "thumbnailUrl": "https://www.sdabocconi.it/upl/entities/professor/francesco_giavazzi_cv.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Francesco_Giavazzi",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "42",
+      "name": "Hilary Hoynes",
+      "bio": "È Professoressa di Politiche pubbliche ed Economia e titolare della Haas Distinguished Chair in Disparità economiche all’Università di California Berkeley, dove è anche co-direttore del Berkeley Opportunity Lab. Hilary Hoynes è anche membro dell’American Academy of Art and Sciences e Fellow della Society of Labor Economists. È stata condirettore di “American Economic Review” e di “American Economic Journal: Economic Policy” e fa parte del comitato di redazione di “American Economic Review: Insights”. La sua attività di ricerca si incentra su povertà, diseguaglianze, alimentazione e programmi alimentari e l’impatto dei sistemi fiscali e dei programmi di trasferimenti pubblici sulle famiglie a basso reddito. Nel 2014 ha ricevuto il Carolyn Shaw Bell Award dal Committee on the Status of the Economics Profession of the American Economic Association.",
+      "company": "",
+      "thumbnailUrl": "https://www.capolicylab.org/wp-content/uploads/2017/04/Hoynes-headshot.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Hilary_Hoynes",
+      "twitterUrl": "https://twitter.com/hilaryhoynes?lang=it",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "43",
+      "name": "Ekaterina Travkina",
+      "bio": "Coordinatrice Cultura, Industrie creative e Sviluppo locale dell'OCSE.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/ekaterina-travkina-a8021723/?originalSubdomain=fr",
+      "facebookUrl": ""
+    },
+    {
+      "id": "44",
+      "name": "Joana Sousa Monteiro",
+      "bio": "Dirige il Museo civico di Lisbona.",
+      "company": "Museo civico di Lisbona",
+      "thumbnailUrl": "https://nomundodosmuseus.hypotheses.org/files/2017/07/JSM1.jpg",
+      "websiteUrl": "https://nomundodosmuseus.hypotheses.org/tag/joana-sousa-monteiro",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "45",
+      "name": "Michele Trimarchi",
+      "bio": "Insegna Economia della cultura all'Università di Bologna.",
+      "company": "Università di Bologna",
+      "thumbnailUrl": "https://www.artribune.com/wp-content/uploads/2014/04/trimarchi.jpg",
+      "websiteUrl": "https://www.unibo.it/sitoweb/michele.trimarchi/cv",
+      "twitterUrl": "https://twitter.com/michtrim",
+      "linkedInUrl": "https://www.linkedin.com/in/michele-trimarchi-5767776/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "46",
+      "name": "Elsa Artadi",
+      "bio": "Parlamentare della Catalogna.",
+      "company": "",
+      "thumbnailUrl": "https://i1.informazione.it/pimg/6228ccd9-ab8b-4cb0-aa79-9f90550052f1.jpg",
+      "websiteUrl": "https://es.wikipedia.org/wiki/Elsa_Artadi",
+      "twitterUrl": "https://twitter.com/elsa_artadi",
+      "linkedInUrl": "https://www.linkedin.com/in/elsa-artadi-b675596/?originalSubdomain=es",
+      "facebookUrl": ""
+    },
+    {
+      "id": "47",
+      "name": "Mauro Casotto",
+      "bio": "Direttore operativo di Trentino Sviluppo.",
+      "company": "Trentino Sviluppo",
+      "thumbnailUrl": "https://i.ytimg.com/vi/Ay_HDVZfMOc/maxresdefault.jpg",
+      "websiteUrl": "https://www.trentinosviluppo.it/it/ELE0002491/mauro-casotto",
+      "twitterUrl": "https://twitter.com/maurocasotto",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "48",
+      "name": "Annamaria Furlan",
+      "bio": "Segretaria generale della CISL.",
+      "company": "CISL",
+      "thumbnailUrl": "https://www.cisl.it/images/foto_annamaria/furlan.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Annamaria_Furlan",
+      "twitterUrl": "https://twitter.com/FurlanAnnamaria",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "49",
+      "name": "Licia Mattioli",
+      "bio": "Amministratore delegato della Mattioli Spa.",
+      "company": "Mattioli Spa",
+      "thumbnailUrl": "https://www.repstatic.it/content/nazionale/img/2017/09/15/184049642-f7ba238f-dec7-4bcd-aea4-ff7e1b988b09.jpg",
+      "websiteUrl": "https://www.confindustria.it/home/chi-siamo/governance/squadra-di-presidenza/scheda-persona/Licia+Mattioli",
+      "twitterUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/licia-mattioli-815186a/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "50",
+      "name": "Giorgio Barba Navaretti",
+      "bio": "Insegna Economia politica all’Università degli Studi di Milano.",
+      "company": "Università degli Studi di Milano",
+      "thumbnailUrl": "https://argomenti.ilsole24ore.com/Immagini/Editrice/ILSOLE24ORE/ARGOMENTI/Online/Autori/Immagini/giorgio-barba-navaretti-258.jpg",
+      "websiteUrl": "http://dagliano.unimi.it/staff/nome-cognome-2/",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "51",
+      "name": "Massimo Gaggi",
+      "bio": "Giornalista del Corriere della Sera",
+      "company": "Giornalista",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "52",
+      "name": "Sofia Ventura",
+      "bio": "Politologa ed editorialista.",
+      "company": "Politologa ed editorialista",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Sofia_Ventura_IJF_2010.jpg/220px-Sofia_Ventura_IJF_2010.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Sofia_Ventura",
+      "twitterUrl": "https://twitter.com/Sofiajeanne",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "53",
+      "name": "Marco Tabellini",
+      "bio": "Ha ottenuto il PhD in Economia al MIT nel 2018 ed è attualmente Post-Doctoral Fellow presso la Harvard Business School, dove diventerà Assistant Professor nel luglio 2019. Si occupa degli effetti economici e politici della migrazione e delle dinamiche di assimilazione culturale degli immigrati. La sua ricerca riguarda soprattutto gli Stati Uniti all’inizio del XX secolo, ma si incentra anche sui fenomeni di migrazione più recenti.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "https://www.hbs.edu/faculty/Pages/profile.aspx?facId=1060330",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "54",
+      "name": "Andrés Rodríguez-Pose",
+      "bio": "È Professore di Geografia economica presso la London School of Economicsdove è stato responsabile del Dipartimento di geografia e ambiente. È anche professore part-time di innovazione presso l'Università di Stavanger (Norvegia). Oltre a ricoprire le cariche di presidente dellaRegional Science Association International e vicepresidente della European Regional Science Associationè stato anche vincitore di un finanziamento di ricerca del Consiglio europeo della ricerca (CER) e del prestigioso Royal Society-Wolfson Research Merit Award. Nel 2019 ha ricevuto una laurea ad honorem dall’Università di Utrecht. Svolge regolarmente attività di consulenza per diverse istituzioni e organizzazioni internazionali ed è redattore della pubblicazione scientifica Economic Geography. Ha una lunga esperienza di ricerca su tematiche quali crescita e disparità regionale, decentralizzazione fiscale e politica, innovazione regionale e politiche e strategie di sviluppo. I suoi studi sono ampiamente citati nella comunità accademica e sono spesso utilizzati da decisori politici.",
+      "company": "",
+      "thumbnailUrl": "https://www.ub.edu/web/ub/galeries/imatges/noticies/2011/12/andres1.jpg_711678321.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Andr%C3%A9s_Rodr%C3%ADguez-Pose",
+      "twitterUrl": "https://twitter.com/rodriguez_pose",
+      "linkedInUrl": "https://www.linkedin.com/in/andr%C3%A9s-rodr%C3%ADguez-pose-814a45a/?originalSubdomain=uk",
+      "facebookUrl": ""
+    },
+    {
+      "id": "55",
+      "name": "Alexander Lembcke",
+      "bio": "Economista, Centro per l'Imprenditorialità, PMI, Regione e Città, OCSE.",
+      "company": "",
+      "thumbnailUrl": "https://i1.rgstatic.net/ii/profile.image/475140925464576-1490293832255_Q512/Alexander_Lembcke2.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/alexander-lembcke-4b88b868/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "56",
+      "name": "Pippa Norris",
+      "bio": "Esperta di scienze politiche comparate, ha insegnato all’Università di Harvard per più di un quarto di secolo. È Laureate Fellow e Professore di Relazioni Internazionali e statali all’Università di Sydney; è Paul McGuire Lecturer di Politica comparata alla Harvard’s Kennedy School of Government; ideatrice e direttore del progetto Electoral Integrity. Con i suoi studi ha messo a confronto l’opinione pubblica e le elezioni, le istituzioni democratiche e le diverse culture, la politica di genere e la comunicazione politica in molti paesi in tutto il mondo. Ha ricevuto numerosi premi e riconoscimenti e ha pubblicato circa cinquanta libri, tradotti in più di dieci lingue. Ha scritto diversi articoli per le più importanti riviste accademiche ed è stata tra i fondatori di “The Harvard International Journal of Press/Politics”.",
+      "company": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Pippa_Norris.jpg",
+      "websiteUrl": "https://www.pippanorris.com/",
+      "twitterUrl": "https://twitter.com/pippan15",
+      "linkedInUrl": "https://www.linkedin.com/in/pippa-norris-51942b11/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "57",
+      "name": "Alberto Capannini",
+      "bio": "Associazione Papa Giovanni XXIII - Operazione Colomba.",
+      "company": "Associazione Papa Giovanni XXIII",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "58",
+      "name": "Abdel Rahim Hsyan",
+      "bio": "Portavoce dei profughi siriani in Libano.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "59",
+      "name": "Francesca Mannocchi",
+      "bio": "Giornalista.",
+      "company": "Giornalista",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "60",
+      "name": "Eli Schlein",
+      "bio": "Europarlamentare.",
+      "company": "Europarlamentare",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "61",
+      "name": "Cristina Azzolini",
+      "bio": "Assessore all'Istruzione del Comune di Rovereto.",
+      "company": "Comune di Rovereto",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "62",
+      "name": "Maria Chiara Franzoia",
+      "bio": "Assessore alle politiche per i giovani del Comune di Trento.",
+      "company": "Comune di Trento",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "63",
+      "name": "Paolo Sommaggio",
+      "bio": "Insegna Filosofia del Diritto all'Università di Trento.",
+      "company": "Università di Trento",
+      "thumbnailUrl": "https://i1.rgstatic.net/ii/profile.image/278805970210821-1443483931695_Q512/Paolo_Sommaggio.jpg",
+      "websiteUrl": "https://webapps.unitn.it/du/it/Persona/PER0004940/Curriculum",
+      "twitterUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/sommaggio-paolo-63b22335/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "64",
+      "name": "Chiara Tamanini",
+      "bio": "Esperta IPRASE.",
+      "company": "IPRASE",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "65",
+      "name": "Jan Zielonka",
+      "bio": "È Professore di Politica europea all’Università di Oxford e Ralf Dahrendorf Professorial Fellow al St. Antony’s College. In precedenza ha ricoperto vari incarichi accademici, fra cui anche dei periodi all’Università di Varsavia, Università di Leida e European University Institute a Firenze. La sua ricerca si incentra sui seguenti ambiti: integrazione e disintegrazione europea, geografia politica, politica comparata e democrazia, ideologie politiche (soprattutto il liberalismo), i media e la comunicazione. È autore di numerosi libri fra cui Counter-revolution. Liberal Europe in Retreat, Oxford University Press, 2018, Politics and the Media in New Democracies. Europe in a Comparative Perspective, Oxford University Press, 2015, e Is the EU doomed? Polity Press, 2014. Scrive anche articoli per diversi giornali europei e riviste online.",
+      "company": "",
+      "thumbnailUrl": "https://www.politics.ox.ac.uk/materials/profile/9728/janzielonka200px.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "66",
+      "name": "Joel Mokyr",
+      "bio": "È Robert H. Strotz Professor di Arts and Sciences e Professore di Economia e Storia alla Northwestern University dal 1994. Attualmente si occupa dello studio delle radici economiche e intellettuali del progresso tecnologico e della crescita di un’utile conoscenza nelle società europee, così come dell’impatto dell’industrializzazione e del progresso economico sul benessere delle nazioni. Joel Mokyr è autore o curatore di 15 libri e di più di cento articoli sui temi dell’economia e della storia. È membro dell’American Academy of Arts and Sciences, dell’Econometric Society, della Cliometric Society, dell’Accademia dei Lincei (Italia) della British Academy e della Dutch Royal Academy. È stato presidente di Economic History Association, caporedattore della Oxford Encyclopedia of Economic History e condirettore del Journal of Economic History. È attualmente caporedattore della collana di Economic History della Princeton's University Press. Il suo ultimo libro, A Culture of Growth: Origins of the Modern Economy, Princeton University Press, 2016, ha vinto a pari merito il premio Alan Sharlin per la storia delle scienze sociali nel 2018. Ha vinto nel 2006 l’Heineken Prize for History e nel 2015 il Balzan Prize per la storia dell’economia. È stato eletto membro onorario dell’American Economic Association nel 2018.",
+      "company": "",
+      "thumbnailUrl": "https://www.balzan.org/upload/Mokyr-Joel-PremioBalzan2015.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Joel_Mokyr",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "67",
+      "name": "Donatella Della Porta",
+      "bio": "È Professoressa di Scienze Politiche, preside della Facoltà di Scienze Sociali e Politiche e Direttore del programma PhD in Scienze Politiche e Sociologia alla Scuola Normale Superiore di Firenze, dove è anche a capo del Center on Social Movement Studies (Cosmos). Fra i principali interessi di ricerca di Donatella Della Porta si contano i movimenti sociali, la violenza politica, il terrorismo, la corruzione, le forze di polizia e il loro ruolo nel controllare le dimostrazioni di piazza. Nel 2011 ha ricevuto il Mattei Dogan Prize per i suoi importanti risultati nel campo della sociologia politica. Della Porta è dottore honoris causa delle Università di Losanna, Bucarest e Goteborg. Ha scritto 90 libri, 135 articoli e 135 contributi pubblicati in diversi volumi. Fra le sue più recenti pubblicazioni: Legacies and Memories in Movements, Oxford University Press, 2018; Sessantotto. Passato e presente dell’anno ribelle, Feltrinelli, 2018.",
+      "company": "",
+      "thumbnailUrl": "https://cdn.theconversation.com/avatars/366380/width238/Screen_Shot_2017-04-23_at_21.38.36.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Donatella_Della_Porta",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "68",
+      "name": "Massimo Deandreis",
+      "bio": "Direttore SRM.",
+      "company": "Direttore SRM",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "69",
+      "name": "Alessandra Lanza",
+      "bio": "Partner Prometeia.",
+      "company": "Partner Prometeia",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "70",
+      "name": "Gabriel Echeverría",
+      "bio": "Centro per la Cooperazione Internazionale.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "71",
+      "name": "Faraj Najem",
+      "bio": "Insegna all'Università di Bengasi.",
+      "company": "Università di Bengasi",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "72",
+      "name": "Benedetta Oddo",
+      "bio": "Consigliere strategico Comuni Libici, Iniziativa Nicosia.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "73",
+      "name": "Giancarlo Blangiardo",
+      "bio": "Presidente ISTAT.",
+      "company": "Presidente ISTAT",
+      "thumbnailUrl": "https://i2.res.24o.it/images2010/Editrice/ILSOLE24ORE/ILSOLE24ORE/2018/11/09/Prima%20Pagina/ImmaginiWeb/Ritagli/gian-carlo-blangiardo-Imagoeconomica_1051966-kPwC--835x437@IlSole24Ore-Web.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "74",
+      "name": "Luigi Bonatti",
+      "bio": "Insegna Politica economica all'Università di Trento.",
+      "company": "Università di Trento",
+      "thumbnailUrl": "https://i.ytimg.com/vi/pNEel1rHK5c/maxresdefault.jpg",
+      "websiteUrl": "https://webapps.unitn.it/du/it/Persona/PER0000758/Curriculum",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "75",
+      "name": "Mario Raffaelli",
+      "bio": "Presidente del Centro per la Cooperazione Internazionale e di Amref Italia.",
+      "company": "Amref Italia",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "76",
+      "name": "Laura Zanfrini",
+      "bio": "Responsabile Settore Economia e Lavoro di Fondazione ISMU.",
+      "company": "Fondazione ISMU",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "77",
+      "name": "Rafael Di Tella",
+      "bio": "Ha cominciato a collaborare con la Harvard Business School nel luglio 1997, dove attualmente è William Ziegler Professor di Business Administration. Si occupa di economia politica, con particolare attenzione allo sviluppo istituzionale. Un filone dei suoi studi si incentra sulla misurazione della felicità e come questo dato possa guidare le politiche dei governi in ambiti che spaziano dall’incidenza delle diseguaglianze fino alla relazione fra disoccupazione e inflazione. Un altro filone della sua ricerca si è incentrato sulle cause dei comportamenti illeciti, in particolare la corruzione e il crimine. Infine, una parte significativa della sua ricerca è stata dedicata al ruolo delle ideologie nell’organizzazione dell’economia, compresi i capovolgimenti della riforma pro-mercato e più in generale le ragioni per cui il capitalismo non arriva anche nei paesi più poveri. I suoi lavori sono stati pubblicati su diverse riviste accademiche.",
+      "company": "",
+      "thumbnailUrl": "https://growthpolicy.org/wp-content/uploads/2018/04/Di-Tella-v.2.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Rafael_di_Tella",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "78",
+      "name": "Luigi Zanda",
+      "bio": "Politico e avvocato.",
+      "company": "Politico e avvocato",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Luigi_Zanda_datisenato_2018.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Luigi_Zanda",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "79",
+      "name": "Robert Johnson",
+      "bio": "Direttore esecutivo di INET - Institut for New Economic Thinking",
+      "company": "INET",
+      "thumbnailUrl": "https://img.etimg.com/thumb/height-480,width-640,imgsize-12207,msid-18232040/.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Robert_Johnson_(economist)",
+      "twitterUrl": "https://twitter.com/rjocean",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "80",
+      "name": "Michael Spence",
+      "bio": "Economista, Premio Nobel per l’Economia nel 2001.",
+      "company": "",
+      "thumbnailUrl": "https://www.cortinaski2021.com/wp-content/uploads/2017/01/Mike_1.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Michael_Spence",
+      "twitterUrl": "https://twitter.com/amspence98",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "81",
+      "name": "Alberto Mario Banti",
+      "bio": "È professore ordinario di Storia contemporanea all’Università di Pisa, dove insegna anche Storia culturale. Tra le principali pubblicazioni: La nazione del Risorgimento. Parentela, santità e onore alle origini dell’Italia unita, Einaudi (2000); Il Risorgimento italiano, Laterza (2004); L’onore della nazione. Identità sessuali e violenza nel nazionalismo europeo dal XVIII secolo alla Grande Guerra, Einaudi (2005); L’età contemporanea. Dalle rivoluzioni settecentesche all’imperialismo, Laterza (2009); L’età contemporanea. Dalla Grande Guerra a oggi, Laterza (2009); Sublime madre nostra. La nazione italiana dal Risorgimento al fascismo, Laterza (2011); Eros e virtù. Aristocratiche e borghesi da Watteau a Manet, Laterza (2016); Wonderland. La cultura di massa da Walt Disney ai Pink Floyd, Laterza (2017); Éros et vertu. Le corps des femmes de Watteau à Manet, Alma, (2018).",
+      "company": "",
+      "thumbnailUrl": "https://evenice.it/sites/default/files/events/images/banners/alberto_mario_banti.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Alberto_Mario_Banti",
+      "twitterUrl": "",
       "linkedInUrl": "",
       "facebookUrl": ""
     }

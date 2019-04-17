@@ -548,7 +548,8 @@
       ],
       "relatedSessions": [
         "07",
-        "16"
+        "16",
+        "24"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/scacco-all-europa-la-guerra-fredda-tra-cina-e-usa-per-il-nuovo-ordine",
@@ -679,7 +680,9 @@
       "organizers": [
         "40"
       ],
-      "relatedSessions": [],
+      "relatedSessions": [
+        "42"
+      ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/quale-nazionalismo-alle-origini-di-una-idea",
       "youtubeUrl": ""
@@ -770,7 +773,11 @@
         "50",
         "51"
       ],
-      "relatedSessions": [],
+      "relatedSessions": [
+        "14",
+        "17",
+        "24"
+      ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/multinazionali-economia-locale",
       "youtubeUrl": ""
@@ -813,13 +820,10 @@
       ],
       "relatedSessions": [
         "06",
-        "14",
-        "17",
-        "18",
-        "19"
+        "26"
       ],
       "photoUrl": "",
-      "sessionUrl": "https://2019.festivaleconomia.eu/-/immigration-natives-backlash-and-cultural-assimilation-lessons-from-us-history",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/immigrazione-e-scenari-demografici",
       "youtubeUrl": ""
     },
     {
@@ -1035,6 +1039,174 @@
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/un-altra-globalizzazione-e-ancora-possibile-",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "36",
+      "title": "Le imprese italiane tra protezione e globalizzazione",
+      "startTimestamp": 1559311200000,
+      "endTimestamp": 1559316600000,
+      "day": 1,
+      "location": "12",
+      "description": "A cura di GEI Gruppo Economisti di Impresa. Coordina Massimo Deandreis. Intervengono Innocenzo Cipolletta, Gregorio De Felice, Alessandra Lanza. L’Associazione italiana degli economisti di impresa presenta le recenti ricerche condotte dai soci sul rapporto tra impresa e globalizzazione dell’economia.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "68",
+        "69",
+        "17",
+        "19"
+      ],
+      "relatedSessions": [
+        "11",
+        "14",
+        "17"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/le-imprese-italiane-tra-protezione-e-globalizzazione",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "37",
+      "title": "Chi ha paura della Libia?",
+      "startTimestamp": 1559311200000,
+      "endTimestamp": 1559316600000,
+      "day": 1,
+      "location": "16",
+      "description": "A cura del Centro per la Cooperazione Internazionale di Trento. Coordina Gabriel Echeverrìa. Intervengono Faraj Najem, Benedetta Oddo. A partire dalla caduta del regime del generale Gheddafi, nel 2011, la Libia vive un periodo di tensioni e conflitti interni. Qual è il ruolo delle municipalità libiche nel tortuoso processo di ricostruzione di uno Stato e di una comunità nazionale, in un contesto di divisioni interne e ingerenze esterne?",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "70",
+        "71",
+        "72"
+      ],
+      "relatedSessions": [
+        "21",
+        "30"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/le-imprese-italiane-tra-protezione-e-globalizzazione",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "38",
+      "title": "Immigrazione e scenari demografici",
+      "startTimestamp": 1559313000000,
+      "endTimestamp": 1559318400000,
+      "day": 1,
+      "location": "20",
+      "description": "Un confronto sul tema delle migrazioni, alla luce delle dinamiche demografiche che caratterizzano le aree di provenienza e di destinazione dei flussi. Un’occasione per analizzare gli secenari futuri di mobilità internazionale sotto il profilo economico, socio-demografico e del welfare.\nA cura della Fondazione Iniziative e Studi sulla Multietnicità - ISMU. Coordina Giancarlo Blangiardo. Intervengono Luigi Bonatti, Mario Raffaelli, Laura Zanfrini.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "73",
+        "74",
+        "75",
+        "76"
+      ],
+      "relatedSessions": [
+        "21",
+        "30"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/le-imprese-italiane-tra-protezione-e-globalizzazione",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "39",
+      "title": "Come reagiscono le vittime della globalizzazione",
+      "startTimestamp": 1559313000000,
+      "endTimestamp": 1559318400000,
+      "day": 1,
+      "location": "04",
+      "description": "Uno studio delle reazioni alla perdita del posto di lavoro a seguito di delocalizzazione, cambiamento tecnologico o errori del management. Quando si chiede maggiore protezionismo e quando no tra i sostenitori di Trump e della Clinton e a seconda del livello di istruzione. Come incidono sulla domanda di protezioni doganali le informazioni sulla violazione dei labor standards nei paesi esportatori.",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
+        "77"
+      ],
+      "relatedSessions": [
+        "14",
+        "17"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/populismo-ed-elettori-razionali",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "40",
+      "title": "Contrordine compagni. Manuale di resistenza alla tecnofobia per la riscossa del lavoro e dell'Italia",
+      "startTimestamp": 1559314800000,
+      "endTimestamp": 1559320200000,
+      "day": 1,
+      "location": "10",
+      "description": "Contrordine compagni. Manuale di resistenza alla tecnofobia per la riscossa del lavoro e dell'Italia - Marco Bentivogli - Rcs. Ne discutono Giorgio Barba Navaretti, Luigi Zanda. Coordina Tonia Mastrobuoni.",
+      "tags": [
+        "01",
+        "07"
+      ],
+      "organizers": [
+        "50",
+        "78",
+        "26"
+      ],
+      "relatedSessions": [
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/contrordine-compagni-manuale-di-resistenza-alla-tecnofobia-per-la-riscossa-del-lavoro-e-dell-italia",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "41",
+      "title": "INET",
+      "startTimestamp": 1559314800000,
+      "endTimestamp": 1559320200000,
+      "day": 1,
+      "location": "02",
+      "description": "INET.",
+      "tags": [
+        "01",
+        "04"
+      ],
+      "organizers": [
+        "79",
+        "80"
+      ],
+      "relatedSessions": [
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/inet-titolo",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "42",
+      "title": "Come nascono le Nazioni (e perchè ritornano i nazionalismi)",
+      "startTimestamp": 1559314800000,
+      "endTimestamp": 1559320200000,
+      "day": 1,
+      "location": "09",
+      "description": "Dalla continuità di sangue alla contiguità di suolo, c’è un filo rosso che unisce tutti i nazionalismi, di ieri e di oggi. E che inizia con la costruzione reale e simbolica delle nazioni moderne, come l’Italia.",
+      "tags": [
+        "01",
+        "09"
+      ],
+      "organizers": [
+        "81"
+      ],
+      "relatedSessions": [
+        "20"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/come-nascono-le-nazioni-e-perche-ritornano-i-nazionalismi-",
       "youtubeUrl": ""
     }
   ],
@@ -1783,6 +1955,160 @@
       "company": "",
       "thumbnailUrl": "https://cdn.theconversation.com/avatars/366380/width238/Screen_Shot_2017-04-23_at_21.38.36.jpg",
       "websiteUrl": "https://it.wikipedia.org/wiki/Donatella_Della_Porta",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "68",
+      "name": "Massimo Deandreis",
+      "bio": "Direttore SRM.",
+      "company": "Direttore SRM",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "69",
+      "name": "Alessandra Lanza",
+      "bio": "Partner Prometeia.",
+      "company": "Partner Prometeia",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "70",
+      "name": "Gabriel Echeverría",
+      "bio": "Centro per la Cooperazione Internazionale.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "71",
+      "name": "Faraj Najem",
+      "bio": "Insegna all'Università di Bengasi.",
+      "company": "Università di Bengasi",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "72",
+      "name": "Benedetta Oddo",
+      "bio": "Consigliere strategico Comuni Libici, Iniziativa Nicosia.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "73",
+      "name": "Giancarlo Blangiardo",
+      "bio": "Presidente ISTAT.",
+      "company": "Presidente ISTAT",
+      "thumbnailUrl": "https://i2.res.24o.it/images2010/Editrice/ILSOLE24ORE/ILSOLE24ORE/2018/11/09/Prima%20Pagina/ImmaginiWeb/Ritagli/gian-carlo-blangiardo-Imagoeconomica_1051966-kPwC--835x437@IlSole24Ore-Web.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "74",
+      "name": "Luigi Bonatti",
+      "bio": "Insegna Politica economica all'Università di Trento.",
+      "company": "Università di Trento",
+      "thumbnailUrl": "https://i.ytimg.com/vi/pNEel1rHK5c/maxresdefault.jpg",
+      "websiteUrl": "https://webapps.unitn.it/du/it/Persona/PER0000758/Curriculum",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "75",
+      "name": "Mario Raffaelli",
+      "bio": "Presidente del Centro per la Cooperazione Internazionale e di Amref Italia.",
+      "company": "Amref Italia",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "76",
+      "name": "Laura Zanfrini",
+      "bio": "Responsabile Settore Economia e Lavoro di Fondazione ISMU.",
+      "company": "Fondazione ISMU",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "77",
+      "name": "Rafael Di Tella",
+      "bio": "Ha cominciato a collaborare con la Harvard Business School nel luglio 1997, dove attualmente è William Ziegler Professor di Business Administration. Si occupa di economia politica, con particolare attenzione allo sviluppo istituzionale. Un filone dei suoi studi si incentra sulla misurazione della felicità e come questo dato possa guidare le politiche dei governi in ambiti che spaziano dall’incidenza delle diseguaglianze fino alla relazione fra disoccupazione e inflazione. Un altro filone della sua ricerca si è incentrato sulle cause dei comportamenti illeciti, in particolare la corruzione e il crimine. Infine, una parte significativa della sua ricerca è stata dedicata al ruolo delle ideologie nell’organizzazione dell’economia, compresi i capovolgimenti della riforma pro-mercato e più in generale le ragioni per cui il capitalismo non arriva anche nei paesi più poveri. I suoi lavori sono stati pubblicati su diverse riviste accademiche.",
+      "company": "",
+      "thumbnailUrl": "https://growthpolicy.org/wp-content/uploads/2018/04/Di-Tella-v.2.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Rafael_di_Tella",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "78",
+      "name": "Luigi Zanda",
+      "bio": "Politico e avvocato.",
+      "company": "Politico e avvocato",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Luigi_Zanda_datisenato_2018.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Luigi_Zanda",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "79",
+      "name": "Robert Johnson",
+      "bio": "Direttore esecutivo di INET - Institut for New Economic Thinking",
+      "company": "INET",
+      "thumbnailUrl": "https://img.etimg.com/thumb/height-480,width-640,imgsize-12207,msid-18232040/.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Robert_Johnson_(economist)",
+      "twitterUrl": "https://twitter.com/rjocean",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "80",
+      "name": "Michael Spence",
+      "bio": "Economista, Premio Nobel per l’Economia nel 2001.",
+      "company": "",
+      "thumbnailUrl": "https://www.cortinaski2021.com/wp-content/uploads/2017/01/Mike_1.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Michael_Spence",
+      "twitterUrl": "https://twitter.com/amspence98",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "81",
+      "name": "Alberto Mario Banti",
+      "bio": "È professore ordinario di Storia contemporanea all’Università di Pisa, dove insegna anche Storia culturale. Tra le principali pubblicazioni: La nazione del Risorgimento. Parentela, santità e onore alle origini dell’Italia unita, Einaudi (2000); Il Risorgimento italiano, Laterza (2004); L’onore della nazione. Identità sessuali e violenza nel nazionalismo europeo dal XVIII secolo alla Grande Guerra, Einaudi (2005); L’età contemporanea. Dalle rivoluzioni settecentesche all’imperialismo, Laterza (2009); L’età contemporanea. Dalla Grande Guerra a oggi, Laterza (2009); Sublime madre nostra. La nazione italiana dal Risorgimento al fascismo, Laterza (2011); Eros e virtù. Aristocratiche e borghesi da Watteau a Manet, Laterza (2016); Wonderland. La cultura di massa da Walt Disney ai Pink Floyd, Laterza (2017); Éros et vertu. Le corps des femmes de Watteau à Manet, Alma, (2018).",
+      "company": "",
+      "thumbnailUrl": "https://evenice.it/sites/default/files/events/images/banners/alberto_mario_banti.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Alberto_Mario_Banti",
       "twitterUrl": "",
       "linkedInUrl": "",
       "facebookUrl": ""
