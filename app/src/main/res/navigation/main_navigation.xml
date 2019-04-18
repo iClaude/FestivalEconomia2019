@@ -45,8 +45,10 @@
     <fragment android:id="@+id/settingsFragment"
               android:name="iclaude.festivaleconomia2019.ui.info.preferences.SettingsFragment"
               android:label="fragment_settings" tools:layout="@layout/fragment_info_settings"/>
-    <fragment android:id="@+id/infoFragment" android:name="iclaude.festivaleconomia2019.ui.info.InfoFragment"
-              android:label="fragment_info" tools:layout="@layout/fragment_info_info"/>
+    <fragment
+            android:id="@+id/infoFragment"
+            android:name="iclaude.festivaleconomia2019.ui.info.info.InfoFragment"
+            android:label="fragment_info" tools:layout="@layout/fragment_info_info"/>
     <fragment android:id="@+id/containerInfoFragment"
               android:name="iclaude.festivaleconomia2019.ui.info.ContainerInfoFragment"
               android:label="fragment_container_info" tools:layout="@layout/fragment_info_container"/>

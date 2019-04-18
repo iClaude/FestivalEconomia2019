@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.ui.info.about.AboutFragment
 import iclaude.festivaleconomia2019.ui.info.faq.FAQFragment
+import iclaude.festivaleconomia2019.ui.info.info.InfoFragment
 import iclaude.festivaleconomia2019.ui.info.preferences.SettingsFragment
 import kotlinx.android.synthetic.main.fragment_info_container.*
 import kotlinx.android.synthetic.main.fragment_info_container_appbar.*

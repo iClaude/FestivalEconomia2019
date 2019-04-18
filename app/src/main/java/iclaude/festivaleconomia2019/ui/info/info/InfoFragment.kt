@@ -1,4 +1,4 @@
-package iclaude.festivaleconomia2019.ui.info
+package iclaude.festivaleconomia2019.ui.info.info
 
 import android.os.Bundle
 import android.view.LayoutInflater
