@@ -243,7 +243,13 @@
         "04"
       ],
       "relatedSessions": [
-        "05"
+        "05",
+        "28",
+        "32",
+        "43",
+        "45",
+        "47",
+        "50"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/on-populism-and-autocratic-structures",
@@ -339,7 +345,9 @@
         "17",
         "18",
         "19",
-        "26"
+        "26",
+        "38",
+        "46"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/immigrazione-in-europa-ed-il-suo-stato-sociale-miti-e-realta",
@@ -407,7 +415,9 @@
       "organizers": [
         "12"
       ],
-      "relatedSessions": [],
+      "relatedSessions": [
+        "53"
+      ],
       "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555416241994.festival_Economia_2016_generiche_e_personaggi_minori___00000207_439001.png",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/zapping",
       "youtubeUrl": "https://www.raiplayradio.it/radio1/"
@@ -428,7 +438,9 @@
         "13",
         "14"
       ],
-      "relatedSessions": [],
+      "relatedSessions": [
+        "54"
+      ],
       "photoUrl": "https://i0.wp.com/www.cinefilos.it/wp-content/uploads/2010/01/Gran-Torino.jpeg?fit=1024%2C600&ssl=1",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/pane-e-cioccola-1",
       "youtubeUrl": "https://www.youtube.com/watch?v=KTRQgdhv1RM"
@@ -469,9 +481,12 @@
         "22"
       ],
       "relatedSessions": [
-        "00",
-        "03",
-        "09"
+        "14",
+        "17",
+        "35",
+        "36",
+        "39",
+        "51"
       ],
       "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555416241994.festival_Economia_2016_generiche_e_personaggi_minori___00000207_439001.png",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/radio-anch-io",
@@ -521,11 +536,12 @@
         "24"
       ],
       "relatedSessions": [
-        "06",
+        "11",
         "17",
-        "18",
-        "19",
-        "26"
+        "35",
+        "36",
+        "39",
+        "51"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/globalizzazione",
@@ -595,11 +611,12 @@
         "29"
       ],
       "relatedSessions": [
-        "06",
+        "11",
         "14",
-        "18",
-        "19",
-        "26"
+        "35",
+        "36",
+        "39",
+        "51"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/the-backlash-against-globalization-lessons-from-history",
@@ -655,11 +672,7 @@
         "39"
       ],
       "relatedSessions": [
-        "06",
-        "14",
-        "17",
-        "18",
-        "26"
+        "48"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/alieni-senza-confini",
@@ -748,7 +761,10 @@
         "44",
         "45"
       ],
-      "relatedSessions": [],
+      "relatedSessions": [
+        "27",
+        "52"
+      ],
       "photoUrl": "",
       "sessionUrl": "",
       "youtubeUrl": ""
@@ -843,7 +859,8 @@
         "55"
       ],
       "relatedSessions": [
-        "04"
+        "23",
+        "52"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/comportamenti-di-voto-regioni-in-ritardo-di-sviluppo-e-risposte-politiche-l-ascesa-dei-luoghi-che-contano",
@@ -866,8 +883,12 @@
         "05"
       ],
       "relatedSessions": [
-        "04",
-        "05"
+        "02",
+        "28",
+        "43",
+        "45",
+        "47",
+        "50"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/on-authoritarian-populism",
@@ -946,6 +967,8 @@
         "64"
       ],
       "relatedSessions": [
+        "44",
+        "49"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/a-suon-di-parole-il-gioco-del-contraddittorio",
@@ -967,6 +990,7 @@
         "26"
       ],
       "relatedSessions": [
+        "43"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/austerity-quando-funziona-e-quando-no",
@@ -1035,7 +1059,10 @@
       "relatedSessions": [
         "11",
         "14",
-        "17"
+        "17",
+        "36",
+        "39",
+        "51"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/un-altra-globalizzazione-e-ancora-possibile-",
@@ -1062,7 +1089,10 @@
       "relatedSessions": [
         "11",
         "14",
-        "17"
+        "17",
+        "35",
+        "39",
+        "51"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/le-imprese-italiane-tra-protezione-e-globalizzazione",
@@ -1112,8 +1142,10 @@
         "76"
       ],
       "relatedSessions": [
+        "06",
         "21",
-        "30"
+        "30",
+        "46"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/le-imprese-italiane-tra-protezione-e-globalizzazione",
@@ -1135,8 +1167,12 @@
         "77"
       ],
       "relatedSessions": [
+        "11",
         "14",
-        "17"
+        "17",
+        "35",
+        "36",
+        "51"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/populismo-ed-elettori-razionali",
@@ -1207,6 +1243,327 @@
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/come-nascono-le-nazioni-e-perche-ritornano-i-nazionalismi-",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "43",
+      "title": "Austerity e populismo",
+      "startTimestamp": 1559314800000,
+      "endTimestamp": 1559320200000,
+      "day": 1,
+      "location": "05",
+      "description": "Fino a che punto le politiche economiche portate avanti da Syriza in Grecia sono diverse da quelle dei governi precedenti? Il programma di austerity di Tsipras è stato davvero più attento e sensibile ai più vulnerabili della società? Si può affermare, più in generale, che i populisti perseguono politiche differenti? Un dibattito fra uno dei più influenti protagonisti dei negoziati con la Troika e un attento osservatore della gestione europea della tragedia greca.",
+      "tags": [
+        "01",
+        "04"
+      ],
+      "organizers": [
+        "82",
+        "83"
+      ],
+      "relatedSessions": [
+        "02",
+        "28",
+        "32",
+        "45",
+        "47",
+        "50"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/austerity-e-populismo",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "44",
+      "title": "Bilanciamento dei poteri: Stati e società nelle democrazie liberali",
+      "startTimestamp": 1559314800000,
+      "endTimestamp": 1559320200000,
+      "day": 1,
+      "location": "18",
+      "description": "Il fondamento delle istituzioni che tutelano la libertà individuale e sostengono la crescita è legato al coinvolgimento della società civile nella politica. Questo permette un bilanciamento dei poteri fra istituzioni e politica. È un equilibrio molto precario, ma possibile e virtuoso. \nDaron Acemoglu in videocollegamento dialoga con Antonio Spilimbergo.",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
+        "84",
+        "85"
+      ],
+      "relatedSessions": [
+        "31"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/bilanciamento-dei-poteri-stati-societa-e-il-corridoio-angusto-verso-la-liberta",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "45",
+      "title": "Populismo in Turchia",
+      "startTimestamp": 1559318400000,
+      "endTimestamp": 1559323800000,
+      "day": 1,
+      "location": "16",
+      "description": "Negli ultimi diciassette anni la Turchia ha registrato grandi cambiamenti. L’iniziale fase riformista è stata soppiantata da un assetto autoritario e la crescita da una profonda crisi economica. Solo il potere di Erdogan è rimasto inalterato. Ma grazie a quali strategie economiche e politiche? \nA cura del Centro per la Cooperazione Internazionale - Osservatorio Balcani e Caucaso Transeuropa",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "86",
+        "87",
+        "88",
+        "75"
+      ],
+      "relatedSessions": [
+        "02",
+        "28",
+        "43",
+        "47",
+        "50"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/populismo-in-turchia",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "46",
+      "title": "Brexit, immigrazione e mercato del lavoro",
+      "startTimestamp": 1559318400000,
+      "endTimestamp": 1559323800000,
+      "day": 1,
+      "location": "07",
+      "description": "L’immigrazione è stata un fattore chiave alla base dell’esito del referendum su Brexit nel 2016. Eppure la maggior parte degli studi sul mercato del lavoro non trova effetti negativi dell’immigrazione su salari e livelli occupazionali dei “locali”, né sulle finanze pubbliche. Qual è quindi la motivazione delle attitudini verso gli immigrati, e il loro impatto sulle scelte politiche nel Regno Unito e nel resto dell’Europa?",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
+        "89"
+      ],
+      "relatedSessions": [
+        "06",
+        "38"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/brexit-immigrazione-e-mercato-del-lavoro",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "47",
+      "title": "Istituzioni europee e populismo",
+      "startTimestamp": 1559318400000,
+      "endTimestamp": 1559323800000,
+      "day": 1,
+      "location": "04",
+      "description": "In anni recenti i partiti populisti hanno registrato notevoli successi. Come reagiscono le maggiori istituzioni della UE e le organizzazioni della società civile a livello europeo? Quali idee e strategie propongono per fronteggiare il loro impatto?",
+      "tags": [
+        "01",
+        "04"
+      ],
+      "organizers": [
+        "90",
+        "91"
+      ],
+      "relatedSessions": [
+        "02",
+        "28",
+        "43",
+        "45",
+        "50"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/istituzioni-europee-e-populismo",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "48",
+      "title": "Il grande carrello. Chi decide cosa mangiamo",
+      "startTimestamp": 1559320200000,
+      "endTimestamp": 1559325600000,
+      "day": 1,
+      "location": "10",
+      "description": "Il grande carrello. Chi decide cosa mangiamo (Fabio Ciconte - Stefano Liberti) - a cura di Editori Laterza. \nCoordina Tonia Mastrobuoni.",
+      "tags": [
+        "01",
+        "07"
+      ],
+      "organizers": [
+        "26"
+      ],
+      "relatedSessions": [
+        "19"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/tito-1",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "49",
+      "title": "Da individuo isolato a cittadino di una comunità",
+      "startTimestamp": 1559320200000,
+      "endTimestamp": 1559325600000,
+      "day": 1,
+      "location": "20",
+      "description": "La quotidianità è caratterizzata da fenomeni migratori che mettono in crisi acquisizioni storiche sedimentate. La formazione, per favorire l’inclusione sociale, deve creare contesti di apprendimento per ricostruire l’appartenenza a una comunità capace di far compenetrare le diversità. \nA cura di AIF - Associazione Italiana Formatori.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "92",
+        "93",
+        "94"
+      ],
+      "relatedSessions": [
+        "31"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/da-individuo-isolato-a-cittadino-di-una-comunita",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "50",
+      "title": "L’ascesa del populismo: cause e conseguenze",
+      "startTimestamp": 1559320200000,
+      "endTimestamp": 1559325600000,
+      "day": 1,
+      "location": "05",
+      "description": "L’inizio di questo secolo è stato caratterizzato dall’ascesa del populismo, un movimento in cui il “popolo” viene contrapposto all’“élite”. Cosa spiega questo fenomeno e quali sono ne le conseguenze per la politica? Il pensiero di uno dei maggiori studiosi del populismo.",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
+        "11"
+      ],
+      "relatedSessions": [
+        "02",
+        "28",
+        "43",
+        "45",
+        "47"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/l-ascesa-del-populismo-cause-e-conseguenze",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "51",
+      "title": "Globalizzazione e universalismo: i nuovi confini tra destra e sinistra",
+      "startTimestamp": 1559320200000,
+      "endTimestamp": 1559325600000,
+      "day": 1,
+      "location": "18",
+      "description": "Negli ultimi decenni la globalizzazione del mercato non si è accompagnata all’universalismo dei diritti umani e sociali. Una divaricazione che ha favorito l’affermazione di populismo e nazionalismo e che ha rimesso in questione distinzioni consolidate, a partire da quella tra destra e sinistra.",
+      "tags": [
+        "01",
+        "08"
+      ],
+      "organizers": [
+        "95"
+      ],
+      "relatedSessions": [
+        "11",
+        "14",
+        "17",
+        "35",
+        "36",
+        "39"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/globalizzazione-e-universalismo-i-nuovi-confini-tra-destra-e-sinistra",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "52",
+      "title": "Autonomie regionali",
+      "startTimestamp": 1559322000000,
+      "endTimestamp": 1559327400000,
+      "day": 1,
+      "location": "02",
+      "description": "Partecipano: Mario Bertolissi - Floriana Cerniglia - Fulvio Cortese - Gianfranco Viesti.",
+      "tags": [
+        "01",
+        "12"
+      ],
+      "organizers": [
+        "96",
+        "97",
+        "98",
+        "99"
+      ],
+      "relatedSessions": [
+        "23",
+        "27"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/autonomie-regionali",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "53",
+      "title": "Zapping",
+      "startTimestamp": 1559323800000,
+      "endTimestamp": 1559329200000,
+      "day": 1,
+      "location": "01",
+      "description": "In diretta dal Festival dell’Economia. Da oltre vent’anni, il programma che rilancia le notizie del giorno, dai telegiornali italiani e internazionali al web. Una piazza multimediale che integra radio, tv e social media.",
+      "tags": [
+        "01",
+        "11"
+      ],
+      "organizers": [
+        "12"
+      ],
+      "relatedSessions": [
+        "12"
+      ],
+      "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555416241994.festival_Economia_2016_generiche_e_personaggi_minori___00000207_439001.png",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/zappi-1",
+      "youtubeUrl": "https://www.raiplayradio.it/radio1/"
+    },
+    {
+      "id": "54",
+      "title": "Pane e cioccolata",
+      "startTimestamp": 1559327400000,
+      "endTimestamp": 1559332800000,
+      "day": 1,
+      "location": "06",
+      "description": "Uno dei grandi interpreti della commedia italiana ci riporta ai tempi non lontani in cui eravamo noi le vittime del nazionalismo xenofobo. \nRegia di Franco Brusati con Nino Manfredi, Paolo Turco, Gianfranco Barra. Italia, 1973.",
+      "tags": [
+        "01",
+        "02"
+      ],
+      "organizers": [
+        "13",
+        "14"
+      ],
+      "relatedSessions": [
+        "10"
+      ],
+      "photoUrl": "https://www.filmtv.it/imgbank/SPLASH/R201810/pac03.jpg",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/pane-e-cioccolata",
+      "youtubeUrl": "https://www.youtube.com/watch?v=ixHxPFrk48Q"
+    },
+    {
+      "id": "55",
+      "title": "Un'opinione pubblica europea",
+      "startTimestamp": 1559329200000,
+      "endTimestamp": 1559334600000,
+      "day": 1,
+      "location": "03",
+      "description": "Ricordo di Antonio Megalizzi.",
+      "tags": [
+        "01",
+        "13"
+      ],
+      "organizers": [
+        "100"
+      ],
+      "relatedSessions": [
+      ],
+      "photoUrl": "https://www.gelestatic.it/thimg/bq131axIVY_OUOnkm285-g3nOy0=/390x0/smart/https://www.repstatic.it/content/nazionale/img/2018/12/14/175325263-32eaf574-c98c-4f86-97f6-1cc8f8f69b82.jpg",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/un-opinione-pubblica-europea",
       "youtubeUrl": ""
     }
   ],
@@ -2112,8 +2469,216 @@
       "twitterUrl": "",
       "linkedInUrl": "",
       "facebookUrl": ""
+    },
+    {
+      "id": "82",
+      "name": "Wolfgang Munchau",
+      "bio": "Giornalista di economia del Financial Times",
+      "company": "Giornalista",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/702049403327094785/VaSoPiEq.jpg",
+      "websiteUrl": "https://www.ft.com/wolfgang-munchau",
+      "twitterUrl": "https://twitter.com/eurobriefing",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "83",
+      "name": "George Papacostantinou",
+      "bio": "Insegna part time all’European University Institute - School of Transnational Governance.",
+      "company": "",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/719602936733700097/uabLBSsH.jpg",
+      "websiteUrl": "https://stg.eui.eu/People/George-Papaconstantinou-biography",
+      "twitterUrl": "https://twitter.com/gpapak",
+      "linkedInUrl": "https://www.linkedin.com/in/george-papaconstantinou-52039b72/?originalSubdomain=gr",
+      "facebookUrl": ""
+    },
+    {
+      "id": "84",
+      "name": "Daron Acemoglu",
+      "bio": "È Elizabeth and James Killian Professor di Economia al Dipartimento di Economia del MIT. È membro del programma Institutions, Organizations and Growth del Canadian Institute for Advanced Research. È inoltre affiliato a NBER e CEPR. È membro della National Academy of Sciences, Turkish Academy of Sciences, American Academy of Arts and Sciences, dell’Econometric Society, European Economic Association e della Society of Labor Economists. Daron Acemoglu ha ricevuto numerosi premi e riconoscimenti, compresa la John Bates Clark Medal nel 2005. Ha scritto cinque libri: Economic Origins of Dictatorship and Democracy (assieme a J. A. Robinson); Introduction to Modern Economic Growth; Why Nations Fail: The Origins of Power, Prosperity and Poverty (con J. A. Robinson); Principles of Economics (con D. Laibson e J. List); Balance of Power: States, Societies and the Narrow Corridor to Liberty (assieme a J. A. Robinson), di prossima pubblicazione nel 2019.",
+      "company": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Acemoglu_2016.png",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Daron_Acemo%C4%9Flu",
+      "twitterUrl": "https://twitter.com/drdaronacemoglu",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "85",
+      "name": "Antonio Spilimbergo",
+      "bio": "Ha studiato economia all’Università Bocconi di Milano. Ha conseguito il suo PhD in economia presso il MIT. Lavora del 1997 all’FMI, dove è stato capo-missione per il Brasile, l’Italia, la Russia, la Slovenia e la Turchia. È research fellow presso CEPR e CreAm. I suoi ambiti di interesse sono i seguenti: commercio internazionale, economia del lavoro e macroeconomia. I suoi lavori sono stati pubblicati sulle seguenti riviste specializzate: “American Economic Review”, “Review of Economics and Statistics”, “Review of Economic Studies”, “Journal of International Economics” e “American Economic Journal: Macroeconomics”. È stato il co-autore del libro “Getting Back on Track: Growth, Employment, and Rebalancing in Europe” nel 2014 e del libro “Brazil: Boom, Bust, and the Road to Recovery” nel 2019.",
+      "company": "",
+      "thumbnailUrl": "https://si.wsj.net/public/resources/images/BN-CP130_imfrus_P_20140430060915.jpg",
+      "websiteUrl": "https://blogs.imf.org/bloggers/antonio-spilimbergo/",
+      "twitterUrl": "https://twitter.com/spilimb1",
+      "linkedInUrl": "https://www.linkedin.com/in/antonio-spilimbergo-25846229/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "86",
+      "name": "Cengiz Aktar",
+      "bio": "Politologo e scrittore.",
+      "company": "Politologo e scrittore.",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "87",
+      "name": "Fazila Mat",
+      "bio": "Ricercatrice OBC Transeuropea/CCI.",
+      "company": "Ricercatrice",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "88",
+      "name": "Esra Çeviker Çeviker Gürakar",
+      "bio": "Economista politica.",
+      "company": "Economista",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "89",
+      "name": "Barbara Petrongolo",
+      "bio": "È Professoressa di Economia alla Queen Mary University, Direttore del CEPR Labour Economics Programme e Research Associate presso il Centre for Economic Performance della London School of Economics. È condirettore dell’Economic Journal. In passato ha svolto incarichi presso la London School of Economics, la Paris School of Economics e University of Carlos III (Madrid). La sua principale area di interesse è l’economia applicata del lavoro. Si è anche occupata della performance dei mercati del lavoro con problematiche relative alla ricerca di posti di lavoro; dinamiche della disoccupazione; politiche di welfare e interdipendenze fra diversi mercati del lavoro a livello locale. Barbara Petrongolo ha studiato anche le cause e le caratteristiche delle diseguaglianze di genere relativamente al mercato del lavoro in una prospettiva storica e in diversi paesi, con particolare attenzione al ruolo dei meccanismi di selezione dei posti di lavoro, le trasformazioni strutturali e le norme di genere.",
+      "company": "Economista",
+      "thumbnailUrl": "https://sites.google.com/site/barbarapetrongolo/_/rsrc/1497544377724/home/B_Petrongolo_photo.jpg?height=277&width=400",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "90",
+      "name": "Carlo Ruzza",
+      "bio": "Insegna Sociologia politica alla Scuola di Studi Internazionali dell’Università di Trento.",
+      "company": "",
+      "thumbnailUrl": "https://0.academia-photos.com/254550/54352/50066/s200_carlo.ruzza.jpeg",
+      "websiteUrl": "https://webapps.unitn.it/du/it/Persona/PER0003145/Curriculum",
+      "twitterUrl": "https://twitter.com/carloruzza",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "91",
+      "name": "Markus Warasin",
+      "bio": "Europarlamentare.",
+      "company": "",
+      "thumbnailUrl": "https://i1.rgstatic.net/ii/profile.image/723730498076682-1549562205783_Q512/Markus_Warasin.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/mwarasin/media",
+      "linkedInUrl": "https://www.linkedin.com/in/markus-warasin-6467a694/?originalSubdomain=be",
+      "facebookUrl": ""
+    },
+    {
+      "id": "92",
+      "name": "Antonello Calvaruso",
+      "bio": "Direttore AIF Academy.",
+      "company": "AIF Academy",
+      "thumbnailUrl": "",
+      "websiteUrl": "https://www.aifacademy.com/",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "93",
+      "name": "Domenico De Masi",
+      "bio": "Professore Emerito di Sociologia organizzativa.",
+      "company": "Sociologo",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Domenico_De_Masi_-_Festival_Economia_2018.jpg/220px-Domenico_De_Masi_-_Festival_Economia_2018.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Domenico_De_Masi",
+      "twitterUrl": "https://twitter.com/DeMasiD_",
+      "linkedInUrl": "https://www.linkedin.com/in/domenicodemasi/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "94",
+      "name": "Maurizio Milan",
+      "bio": "Presidente nazionale AIF.",
+      "company": "AIF",
+      "thumbnailUrl": "https://i.ytimg.com/vi/vSApnf3nJCI/maxresdefault.jpg",
+      "websiteUrl": "https://associazioneitalianaformatori.it/maurizio-milan/",
+      "twitterUrl": "https://twitter.com/mauriziomilan26",
+      "linkedInUrl": "https://www.linkedin.com/in/maurizio-milan-37001333/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "95",
+      "name": "Colin Crouch",
+      "bio": "Professore Emerito alla Warwick Business School, Università di Warwick, UK. È membro scientifico esterno del Max-Planck-Institute for Social Research a Colonia. In passato ha insegnato sociologia alla LSE ed è stato fellow e tutor di politica presso il Trinity College di Oxford e professore di sociologia all’Università di Oxford. Dal 1995 al 2004 Colin Crouch è stato professore di sociologia presso European University Institute, Firenze. È autore di diverse pubblicazioni sulla sociologia comparata europea e le relazioni industriali; sulla sociologia economica e su questioni contemporanee riguardanti la politica britannica ed europea. È autore di numerosi libri, alcuni tradotti anche in italiano: Postdemocrazia, Laterza, 2003; Il potere dei giganti, Laterza, 2012; Quanto capitalismo può supportare la società, Laterza, 2014; Salviamo il capitalismo da se stesso, Il Mulino, 2018; Identità perdute: Globalizzazione e nazionalismo, Laterza 2019.",
+      "company": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Colin_Crouch_-_Festival_Economia_2013.JPG/220px-Colin_Crouch_-_Festival_Economia_2013.JPG",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Colin_Crouch",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "96",
+      "name": "Mario Bertolissi",
+      "bio": "Costituzionalista, membro della delegazione per l’autonomia del Veneto.",
+      "company": "",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/3163120447/fa7a30eae3ab5ac0f2d6ab88ce25a59b.jpeg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Mario_Bertolissi",
+      "twitterUrl": "https://twitter.com/mariobertolissi",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "97",
+      "name": "Floriana Cerniglia",
+      "bio": "Insegna Economia politica all’Università degli Studi di Milano-Bicocca.",
+      "company": "",
+      "thumbnailUrl": "https://www.unicatt.it/amministrazione-cerniglia-ucsc.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/florianacernig1",
+      "linkedInUrl": "https://www.linkedin.com/in/floriana-cerniglia-44894730/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "98",
+      "name": "Fulvio Cortese",
+      "bio": "Insegna Diritto amministrativo all’Università di Trento.",
+      "company": "",
+      "thumbnailUrl": "https://0.academia-photos.com/37320686/13708880/14834871/s200_fulvio.cortese.jpg",
+      "websiteUrl": "https://webapps.unitn.it/du/it/Persona/PER0000312",
+      "twitterUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/cortese-fulvio-49808a35/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "99",
+      "name": "Gianfranco Viesti",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "100",
+      "name": "Festival dell'Economia",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/it/7/73/Festival_dell%27economia_di_Trento_2017.png",
+      "websiteUrl": "https://2019.festivaleconomia.eu/home",
+      "twitterUrl": "https://twitter.com/economicsfest",
+      "linkedInUrl": "",
+      "facebookUrl": "https://it-it.facebook.com/festivaleconomiatrento/"
     }
-
   ],
   "tags": [
     {
