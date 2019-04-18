@@ -249,7 +249,9 @@
         "43",
         "45",
         "47",
-        "50"
+        "50",
+        "56",
+        "57"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/on-populism-and-autocratic-structures",
@@ -460,7 +462,15 @@
       "organizers": [
         "15"
       ],
-      "relatedSessions": [],
+      "relatedSessions": [
+        "14",
+        "17",
+        "35",
+        "36",
+        "39",
+        "51",
+        "58"
+      ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/relazioni-pericolose-stato-e-globalizzazione-dal-parlamento-al-web",
       "youtubeUrl": ""
@@ -541,7 +551,8 @@
         "35",
         "36",
         "39",
-        "51"
+        "51",
+        "58"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/globalizzazione",
@@ -616,7 +627,8 @@
         "35",
         "36",
         "39",
-        "51"
+        "51",
+        "58"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/the-backlash-against-globalization-lessons-from-history",
@@ -860,7 +872,8 @@
       ],
       "relatedSessions": [
         "23",
-        "52"
+        "52",
+        "65"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/comportamenti-di-voto-regioni-in-ritardo-di-sviluppo-e-risposte-politiche-l-ascesa-dei-luoghi-che-contano",
@@ -888,7 +901,9 @@
         "43",
         "45",
         "47",
-        "50"
+        "50",
+        "56",
+        "57"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/on-authoritarian-populism",
@@ -1062,7 +1077,8 @@
         "17",
         "36",
         "39",
-        "51"
+        "51",
+        "58"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/un-altra-globalizzazione-e-ancora-possibile-",
@@ -1092,7 +1108,8 @@
         "17",
         "35",
         "39",
-        "51"
+        "51",
+        "58"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/le-imprese-italiane-tra-protezione-e-globalizzazione",
@@ -1172,7 +1189,8 @@
         "17",
         "35",
         "36",
-        "51"
+        "51",
+        "58"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/populismo-ed-elettori-razionali",
@@ -1267,7 +1285,9 @@
         "32",
         "45",
         "47",
-        "50"
+        "50",
+        "56",
+        "57"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/austerity-e-populismo",
@@ -1319,7 +1339,9 @@
         "28",
         "43",
         "47",
-        "50"
+        "50",
+        "56",
+        "57"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/populismo-in-turchia",
@@ -1369,7 +1391,9 @@
         "28",
         "43",
         "45",
-        "50"
+        "50",
+        "56",
+        "57"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/istituzioni-europee-e-populismo",
@@ -1415,7 +1439,8 @@
         "94"
       ],
       "relatedSessions": [
-        "31"
+        "31",
+        "62"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/da-individuo-isolato-a-cittadino-di-una-comunita",
@@ -1441,7 +1466,9 @@
         "28",
         "43",
         "45",
-        "47"
+        "47",
+        "56",
+        "57"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/l-ascesa-del-populismo-cause-e-conseguenze",
@@ -1468,7 +1495,8 @@
         "17",
         "35",
         "36",
-        "39"
+        "39",
+        "58"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/globalizzazione-e-universalismo-i-nuovi-confini-tra-destra-e-sinistra",
@@ -1494,7 +1522,8 @@
       ],
       "relatedSessions": [
         "23",
-        "27"
+        "27",
+        "65"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/autonomie-regionali",
@@ -1564,6 +1593,272 @@
       ],
       "photoUrl": "https://www.gelestatic.it/thimg/bq131axIVY_OUOnkm285-g3nOy0=/390x0/smart/https://www.repstatic.it/content/nazionale/img/2018/12/14/175325263-32eaf574-c98c-4f86-97f6-1cc8f8f69b82.jpg",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/un-opinione-pubblica-europea",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "56",
+      "title": "Popolo / Populismo",
+      "startTimestamp": 1559376000000,
+      "endTimestamp": 1559381400000,
+      "day": 2,
+      "location": "07",
+      "description": "Lo spettro del populismo attraversa il mondo occidentale generando paure e preoccupazioni proporzionali ai vasti consensi che raccoglie. Perché questo accade ora e in questa parte del mondo? È una sfortunata coincidenza della storia o l’inevitabile passaggio per risolvere le crisi delle società occidentali? Quali le cause profonde e quali le eventuali conseguenze?",
+      "tags": [
+        "01",
+        "10"
+      ],
+      "organizers": [
+        "101",
+        "102"
+      ],
+      "relatedSessions": [
+        "2",
+        "28",
+        "43",
+        "45",
+        "47",
+        "50",
+        "57"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/popolo-populismo",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "57",
+      "title": "Come il populismo cambia da paese a paese",
+      "startTimestamp": 1559376000000,
+      "endTimestamp": 1559381400000,
+      "day": 2,
+      "location": "04",
+      "description": "Qual è la natura del populismo nei diversi paesi avanzati? Cosa possiamo imparare comparando i fattori economici, culturali e politici che contribuiscono a spiegare il successo dei populisti nei vari paesi? Una riflessione a vasto raggio con attenzione particolare ai casi della Germania, del Regno Unito e degli Stati Uniti, ma senza trascurare l’Italia.",
+      "tags": [
+        "01"
+      ],
+      "organizers": [
+        "103",
+        "104",
+        "105",
+        "106"
+      ],
+      "relatedSessions": [
+        "2",
+        "28",
+        "43",
+        "45",
+        "47",
+        "50",
+        "56"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/comparing-populist-movements",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "58",
+      "title": "Globalizzazione e disuguaglianze",
+      "startTimestamp": 1559376000000,
+      "endTimestamp": 1559381400000,
+      "day": 2,
+      "location": "05",
+      "description": "Ci sono molti capi di imputazione che gravano sulla globalizzazione. Tra questi l’accusa più pesante è quella di aver fatto aumentare le disuguaglianze. È così vero? Una rassegna delle ricerche applicate sul tema a cura dell'economista che ha maggiormente contribuito all’analisi del commercio internazionale in mercati non competitivi. Sfatati molti luoghi comuni.",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
+        "107"
+      ],
+      "relatedSessions": [
+        "11",
+        "14",
+        "17",
+        "35",
+        "36",
+        "39",
+        "51"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/on-trade-policy-and-social-identity",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "59",
+      "title": "La scienza inutile. Tutto quello che non abbiamo voluto imparare",
+      "startTimestamp": 1559376000000,
+      "endTimestamp": 1559381400000,
+      "day": 2,
+      "location": "10",
+      "description": "Incontro con l'autore. La scienza inutile. Tutto quello che non abbiamo voluto imparare (Francesco Saraceno - a cura di Luiss). Ne discute Fausto Panunzi. Coordina Tonia Mastrobuoni.",
+      "tags": [
+        "01",
+        "07"
+      ],
+      "organizers": [
+        "108",
+        "26"
+      ],
+      "relatedSessions": [
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/la-scienza-inutile-tutto-quello-che-non-abbiamo-voluto-imparare",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "60",
+      "title": "Populismo e società civile",
+      "startTimestamp": 1559379600000,
+      "endTimestamp": 1559385000000,
+      "day": 2,
+      "location": "09",
+      "description": "I populisti sostengono di essere i soli rappresentanti legittimi del Popolo. In questa visione che ruolo hanno i corpi intermedi (inclusi i sindacati, le associazioni, ecc.) fondamentali nella democrazia liberale? Lezioni dall’Europa, dove i corpi intermedi hanno a lungo giocato un ruolo fondamentale, e dall’America Latina, dove il populismo è stato di casa per molto tempo.",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
+        "85"
+      ],
+      "relatedSessions": [
+        "28",
+        "43",
+        "45",
+        "50",
+        "56"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/populismo-e-societa-civile",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "61",
+      "title": "La politica estera dei partiti populisti è destinata a fallire?",
+      "startTimestamp": 1559379600000,
+      "endTimestamp": 1559385000000,
+      "day": 2,
+      "location": "04",
+      "description": "C’è poca discontinuità col passato nelle politiche estere di tipo populista portate avanti, di recente, dal presidente Trump, dai Brexiteers britannici e dai leader di alcune democrazie europee. Dato che la retorica populista si dimostra spesso incompatibile con il perseguimento dell’interesse nazionale in un mondo globalizzato, i governi populisti preferiscono infatti infrangere molte promesse di politica estera al fine di rimanere in carica.",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
+        "109"
+      ],
+      "relatedSessions": [
+        "2",
+        "43",
+        "45",
+        "47",
+        "56",
+        "57"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/are-populist-foreign-policies-to-fail-",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "62",
+      "title": "La formazione economica nel terzo millennio",
+      "startTimestamp": 1559379600000,
+      "endTimestamp": 1559385000000,
+      "day": 2,
+      "location": "20",
+      "description": "I dati sulla mobilità sociale, insieme alle valutazioni nazionali e internazionali sulla literacy economica e finanziaria degli italiani, indicano la necessità di rafforzare la formazione scolastica sui problemi dell’economia globale. A cura dell’Associazione Europea per l’Educazione Economica AEEE Italia. Coordina Roberto Fini.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "110",
+        "111",
+        "112",
+        "113"
+      ],
+      "relatedSessions": [
+        "49",
+        "63"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/la-formazione-economica-nel-terzo-millennio",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "63",
+      "title": "Cervelli in fuga? Andamenti, politica e politiche",
+      "startTimestamp": 1559379600000,
+      "endTimestamp": 1559385000000,
+      "day": 2,
+      "location": "08",
+      "description": "La recente “fuga di cervelli”, durante e dopo la crisi, sembra aver avuto effetti negativi non solo in ambito economico, ma anche sui risultati politici locali. Quali sono le conseguenze future per il panorama politico nazionale? Quali politiche per trasformare il fenomeno e invertire la tendenza? \nA cura di Tortuga. Coordina Jacopo Bassetto.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "114",
+        "115",
+        "116",
+        "117"
+      ],
+      "relatedSessions": [
+        "62"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/cervelli-in-fuga-andamenti-politica-e-politiche",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "64",
+      "title": "Uno sguardo globale per un’economia solidale a km. zero",
+      "startTimestamp": 1559381400000,
+      "endTimestamp": 1559386800000,
+      "day": 2,
+      "location": "11",
+      "description": "In un mondo dove la dicotomia tra globalizzazione e localismo sono ancora elementi dibattuti, una riflessione per mettere in luce le nuove prospettive di un’economia emergente, che sia solidale e sostenibile, riportando al centro il valore dei territori. \nA cura della Fondazione Franco Demarchi. \nCoordina Daniel Tarozzi.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "118",
+        "119",
+        "120"
+      ],
+      "relatedSessions": [
+        "11",
+        "14",
+        "17",
+        "35"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/uno-sguardo-globale-per-un-economia-solidare-a-km-zero",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "65",
+      "title": "L’imperativo della crescita: cosa si può fare per le regioni e le città?",
+      "startTimestamp": 1559381400000,
+      "endTimestamp": 1559386800000,
+      "day": 2,
+      "location": "16",
+      "description": "La scarsa diffusione di tecnologia e conoscenza pesa sulla crescita di produttività e innovazione dei paesi OCSE. Come si può favorire l’accesso alla conoscenza globale e trarre vantaggio da un mondo sempre più globalizzato e digitalizzato? Quali politiche si possono mettere in campo per ridurre i crescenti divari territoriali? \nA cura del Centro OCSE di Trento. \nCoordina Alessandra Proto.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "121",
+        "122",
+        "123"
+      ],
+      "relatedSessions": [
+        "23",
+        "27",
+        "52"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/l-imperativo-della-crescita-cosa-si-puo-fare-per-le-regioni-e-le-citta-",
       "youtubeUrl": ""
     }
   ],
@@ -2678,6 +2973,259 @@
       "twitterUrl": "https://twitter.com/economicsfest",
       "linkedInUrl": "",
       "facebookUrl": "https://it-it.facebook.com/festivaleconomiatrento/"
+    },
+    {
+      "id": "101",
+      "name": "Luigi Guiso",
+      "bio": "Axa Professor of Household Finance presso l’Einaudi Institute for Economics and Finance (EIEF). In precedenza ha insegnato presso l’Università di Roma “Tor Vergata”, l’Istituto Universitario Europeo e la Università di Chicago, Graduate School of Business. Ha diretto il programma di finanza del CEPR, al quale è affiliato. Prima di dedicarsi all’attività accademica ha lavorato per 15 anni al Servizio Studi della Banca d’Italia. Ha svolto attività di consulenza per diversi organismi internazionali, tra cui la Banca Centrale Europea e la Commissione Europea, e importanti intermediari finanziari. Tra i suoi interessi di ricerca più recenti vi sono le scelte finanziarie delle famiglie, i legami tra norme culturali ed economia, gli equilibri politici e le loto determinanti.",
+      "company": "Economista",
+      "thumbnailUrl": "https://fundspeople-repository.s3.amazonaws.com/system/person/logo/3422/medium_luigi-guiso.JPG",
+      "websiteUrl": "http://www.eief.it/eief/index.php/people/faculty-az?id=172",
+      "twitterUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/luigi-guiso-991592b4/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "102",
+      "name": "Emanuele Massetti",
+      "bio": "Ricercatore Scuola di Studi Internazionali dell'Università di Trento.",
+      "company": "Ricercatore",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "103",
+      "name": "Thomas Ferguson",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "104",
+      "name": "Thiemo Fetzer",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "105",
+      "name": "Robert Gold",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "106",
+      "name": "Antonella Stirati",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "107",
+      "name": "Elhanan Helpman",
+      "bio": "È Galen L. Stone Professor di Commercio Internazionale alla Harvard University e fellow del Canadian Institute for Advanced Research. La sua ricerca si è occupata di bilancia dei pagamenti, regimi di cambio valutario, programmi di stabilizzazione, debito estero, commercio internazionale, crescita economica ed economia politica. È co-fondatore della ''nuova teoria sul commercio internazionale'' e della ''nuova teoria sulla crescita,'' che sottolinea il ruolo delle economie di scala e della concorrenza imperfetta. La gran parte del suo lavoro dedicato al commercio internazionale, alla crescita e all’economia politica è riassunto in otto volumi, di cui il più recente è intitolato “Globalization and Inequality”, Harvard University Press, 2018. Elhanan Helpman è stato membro del comitato di redazione di diverse riviste scientifiche ed è stato anche condirettore del “Journal of International Economics” e del “Quarterly Journal of Economics” e Direttore di “European Economic Review”.",
+      "company": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/2008_-_Elhanan_Helpman.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Elhanan_Helpman",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "108",
+      "name": "Fausto Panunzi",
+      "bio": "Insegna Economia politica all’Università Bocconi di Milano.",
+      "company": "Economista",
+      "thumbnailUrl": "https://www.sdabocconi.it/upl/entities/professor/fausto_panunzi_cv.jpg",
+      "websiteUrl": "http://faculty.unibocconi.it/faustopanunzi/",
+      "twitterUrl": "https://twitter.com/FPanunzi",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "109",
+      "name": "Andrew Moravcsik",
+      "bio": "È Professore di Scienze politiche e Direttore di European Union Program, Princeton University. È autore di oltre 125 pubblicazioni (fra cui quattro libri) su temi quali l’integrazione europea, la teoria delle relazioni internazionali, i metodi qualitativi/storici, i diritti umani, il diritto e l’organizzazione internazionale. Ha sviluppato ''active citation'' (ATI), un format di trasparenza digitale sempre più diffuso e utilizzato nell’ambito dei dati qualitativi per le scienze sociali. Ha pubblicato più di 150 editoriali e analisi ed è attualmente Book Review Editor (Europa) di Foreign Affairs. Per quanto riguarda il mondo della politica, è stato consulente e negoziatore commerciale del governo americano, assistente speciale del vice primo ministro della Corea e addetto stampa alla Commissione Europea.",
+      "company": "Princeton University",
+      "thumbnailUrl": "https://amp.businessinsider.com/images/55f1efbf9dd7cc23008b9887-750-562.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Andrew_Moravcsik",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "110",
+      "name": "Anna Maria Ajello",
+      "bio": "Presidente INVALSI.",
+      "company": "Presidente INVALSI",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "111",
+      "name": "Roberto Fini",
+      "bio": "Presidente AEEE-Italia.",
+      "company": "Presidente AEEE-Italia",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "112",
+      "name": "Annamaria Lusardi",
+      "bio": "Direttore Comitato per l'Educazione finanziaria.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "113",
+      "name": "Antonio Schizzerotto",
+      "bio": "Fondazione Bruno Kessler - IRVAPP.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "114",
+      "name": "Massimo Anelli",
+      "bio": "Insegna all'Università Bocconi di Milano",
+      "company": "Università Bocconi di Milano",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "115",
+      "name": "Jacopo Bassetto",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "116",
+      "name": "Lorenzo Maternini",
+      "bio": "Vicepresidente senior Talent Garden.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "117",
+      "name": "Silvia Merler",
+      "bio": "Ricercatrice Algebris.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "118",
+      "name": "Paolo Cacciari",
+      "bio": "Giornalista esperto di economia solidale.",
+      "company": "Giornalista",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "119",
+      "name": "Daniel Tarozzi",
+      "bio": "Giornalista, fondatore di ''Italia che Cambia''.",
+      "company": "Giornalista",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "120",
+      "name": "Pietro Valenti",
+      "bio": "Direttore Pangea Fabrics and Consulting.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "121",
+      "name": "Antonio Accetturo",
+      "bio": "Responsabile della ricerca economica presso la Banca d'Italia - Trento.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "122",
+      "name": "Riccardo Crescenzi",
+      "bio": "Insegna Geografia economica alla London School of Economics.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "123",
+      "name": "Alessandra Proto",
+      "bio": "Responsabile del Centro OCSE di Trento per lo sviluppo locale.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
     }
   ],
   "tags": [
