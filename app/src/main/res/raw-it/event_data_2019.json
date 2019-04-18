@@ -360,7 +360,7 @@
       "endTimestamp": 1559239200000,
       "day": 0,
       "location": "10",
-      "description": "Le riforme dimezzate - Marco Leonardi. Coordina Tonia Mastrobuoni.",
+      "description": "Incontri con l'autore. Le riforme dimezzate (Marco Leonardi). Coordina Tonia Mastrobuoni.",
       "tags": [
         "01",
         "07"
@@ -554,7 +554,7 @@
       "endTimestamp": 1559295000000,
       "day": 1,
       "location": "10",
-      "description": "Scacco all'Europa. La guerra fredda tra Cina e USA per il nuovo ordine (Danilo Taino), a cura di Solferino. Coordina Tonia Mastrobuoni.",
+      "description": "Incontro con l'autore. Scacco all'Europa. La guerra fredda tra Cina e USA per il nuovo ordine (Danilo Taino - a cura di Solferino). Coordina Tonia Mastrobuoni.",
       "tags": [
         "01",
         "07"
@@ -805,7 +805,7 @@
       "endTimestamp": 1559302200000,
       "day": 1,
       "location": "10",
-      "description": "Ho imparato. In viaggio con i giovani sognando un'Italia mondiale (Enrico Letta - Il Mulino). Ne discute Sofia Ventura. Coordina Tonia Mastrobuoni.",
+      "description": "Incontro con l'autore. Ho imparato. In viaggio con i giovani sognando un'Italia mondiale (Enrico Letta - Il Mulino). Ne discute Sofia Ventura. Coordina Tonia Mastrobuoni.",
       "tags": [
         "01",
         "07"
@@ -981,7 +981,7 @@
       "endTimestamp": 1559313000000,
       "day": 1,
       "location": "10",
-      "description": "Austerity. Quando funziona e quando no (Rizzoli) - di Alberto Alesina, Carlo Favero, Francesco Giavazzi. Coordina Tonia Mastrobuoni.",
+      "description": "Incontro con l'autore. Austerity. Quando funziona e quando no (Alberto Alesina, Carlo Favero, Francesco Giavazzi - Rizzoli). Coordina Tonia Mastrobuoni.",
       "tags": [
         "01",
         "07"
@@ -1185,7 +1185,7 @@
       "endTimestamp": 1559320200000,
       "day": 1,
       "location": "10",
-      "description": "Contrordine compagni. Manuale di resistenza alla tecnofobia per la riscossa del lavoro e dell'Italia - Marco Bentivogli - Rcs. Ne discutono Giorgio Barba Navaretti, Luigi Zanda. Coordina Tonia Mastrobuoni.",
+      "description": "Incontro con l'autore. Contrordine compagni. Manuale di resistenza alla tecnofobia per la riscossa del lavoro e dell'Italia (Marco Bentivogli - Rcs). Ne discutono Giorgio Barba Navaretti, Luigi Zanda. Coordina Tonia Mastrobuoni.",
       "tags": [
         "01",
         "07"
@@ -1382,7 +1382,7 @@
       "endTimestamp": 1559325600000,
       "day": 1,
       "location": "10",
-      "description": "Il grande carrello. Chi decide cosa mangiamo (Fabio Ciconte - Stefano Liberti) - a cura di Editori Laterza. \nCoordina Tonia Mastrobuoni.",
+      "description": "Incontro con l'autore. Il grande carrello. Chi decide cosa mangiamo (Fabio Ciconte, Stefano Liberti - a cura di Editori Laterza). \nCoordina Tonia Mastrobuoni.",
       "tags": [
         "01",
         "07"
@@ -2704,14 +2704,14 @@
     },
     {
       "id": "03",
-      "color": "#FFEAB3",
+      "color": "#ffff00",
       "fontColor": "#202124",
       "name": "Confronti",
       "category": "topic"
     },
     {
       "id": "04",
-      "color": "#FFEAB3",
+      "color": "#6fd497",
       "fontColor": "#202124",
       "name": "Dialoghi",
       "category": "topic"
@@ -2725,14 +2725,14 @@
     },
     {
       "id": "06",
-      "color": "#A7D7FE",
+      "color": "#b7b7ff",
       "fontColor": "#202124",
       "name": "Forum",
       "category": "topic"
     },
     {
       "id": "07",
-      "color": "#FFCF9F",
+      "color": "#ff0080",
       "fontColor": "#202124",
       "name": "Incontri con l'autore",
       "category": "topic"
@@ -2788,15 +2788,15 @@
     },
     {
       "id": "15",
-      "color": "#cc7b4c",
+      "color": "#00ffff",
       "fontColor": "#202124",
       "name": "Alla frontiera",
       "category": "topic"
     },
     {
       "id": "16",
-      "color": "#2d1f4d",
-      "fontColor": "#ffffff",
+      "color": "#f57133",
+      "fontColor": "#202124",
       "name": "Alan Krueger Lecture",
       "category": "topic"
     }
