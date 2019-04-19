@@ -19,6 +19,7 @@ interface FAQView {
     fun showParkingCarsPaidInfo(spannableString: SpannableString)
     fun showUsefulNumbersInfo(spannableString: SpannableString)
     fun showHandicapInfo(spannableString: SpannableString)
+    fun showAccessInfo(spannableString: SpannableString)
 
 }
 
@@ -34,6 +35,7 @@ class FAQPresenter(private var faqView: FAQView, private var mContext: Context) 
         faqView.showParkingCarsPaidInfo(createParkingCarsPaidText())
         faqView.showUsefulNumbersInfo(createUsefulNumbersText())
         faqView.showHandicapInfo(createHandicapInfoText())
+        faqView.showAccessInfo(createAccessInfoText())
     }
 
     /**
@@ -287,6 +289,29 @@ class FAQPresenter(private var faqView: FAQView, private var mContext: Context) 
                 start = str.indexOf(item1)
                 end = start + item1.length
                 bold()
+            }
+
+            span {
+                start = str.indexOf(item2)
+                end = start + item2.length
+                bold()
+            }
+        }
+    }
+
+    private fun createAccessInfoText(): SpannableString {
+        val item1 = mContext.getString(R.string.faq_access_description_item1)
+        val item2 = mContext.getString(R.string.faq_access_description_item2)
+        val str = mContext.getString(R.string.faq_access_description, item1, item2)
+
+        return buildSpannableString {
+            string = str
+
+            span {
+                start = str.indexOf(item1)
+                end = start + item1.length
+                bold()
+                underline()
             }
 
             span {

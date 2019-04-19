@@ -248,4 +248,30 @@
         shuttle bus)
     </string>
     <string name="faq_handicap_description_item2">Disabled Helpdesk</string>
+
+    <string name="faq_access_title">Access</string>
+    <string name="faq_access_description">As always, entry to all events is %1$s. No reservation is required. Access
+        to the events scheduled at the %2$s takes place with vouchers, distributed at the ticket offices starting
+        two hours before the start of each event.</string>
+    <string name="faq_access_description_item1">free (subject to availability)</string>
+    <string name="faq_access_description_item2">Social Theater</string>
+
+    <!-- InfoFragment -->
+    <string name="info_title">Festival dell\'Economia 2019</string>
+    <string name="info_subtitle">Globalizzazione, nazionalismo e rappresentanza</string>
+    <string name="info_focus">Il tema della 14a edizione del %1$s di Trento è: “%2$s”. Il Festival prevede una sessantina di incontri, tra lecture, dialoghi,
+        proiezioni cinematografiche, dibattiti a partire dai libri pubblicati negli ultimi mesi. \n\nFra gli altri,
+        %3$s di Berkeley parlerà di reddito universale di base; %4$s delle origini di
+        sovranismo e populismo; %5$s si interrogherà sul rapporto fra globalizzazione e disuguaglianze,
+        %6$sr dei rischi di una stagnazione secolare nei paesi avanzati, %7$s discuterà della
+        sostenibilità del debito pubblico italiano.</string>
+    <string name="info_focus_item1">Festival dell’Economia</string>
+    <string name="info_focus_item2">Globalizzazione, nazionalismo e rappresentanza</string>
+    <string name="info_focus_item3">Hilary Hoynes</string>
+    <string name="info_focus_item4">Jan Zielonka e Cas Mudde</string>
+    <string name="info_focus_item5">Elhanan Helpman</string>
+    <string name="info_focus_item6">Joel Mokyr</string>
+    <string name="info_focus_item7">Olivier Blanchard</string>
+
+    <string name="info_editorial_link">continua a leggere l\'editoriale di Tito Boeri…</string>
 </resources>

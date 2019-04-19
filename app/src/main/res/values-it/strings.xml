@@ -165,5 +165,12 @@
     </string>
     <string name="faq_handicap_description_item2">Sportello Handicap</string>
 
+    <string name="faq_access_title">Accesso agli eventi</string>
+    <string name="faq_access_description">Come sempre, l’ingresso a tutti gli eventi è %1$s. Non è prevista la
+        prenotazione. \n\nL’accesso agli eventi in programma al %2$s avviene con voucher, distribuiti presso le biglietterie
+        a partire da due ore prima dell’inizio di ogni evento..</string>
+    <string name="faq_access_description_item1">libero e gratuito fino ad esaurimento posti</string>
+    <string name="faq_access_description_item2">Teatro Sociale</string>
+
 
 </resources>

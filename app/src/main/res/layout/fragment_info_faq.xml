@@ -95,6 +95,13 @@
                 app:cardTitle="@string/faq_handicap_title"
                 app:cardDescription="@string/faq_handicap_description"/>
 
+        <iclaude.festivaleconomia2019.ui.widget.CollapsibleCard
+                android:id="@+id/ccAccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardTitle="@string/faq_access_title"
+                app:cardDescription="@string/faq_access_description"/>
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

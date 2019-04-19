@@ -96,4 +96,11 @@ class FAQFragment : Fragment(), FAQView {
             movementMethod = LinkMovementMethod.getInstance()
         }
     }
+
+    override fun showAccessInfo(spannableString: SpannableString) {
+        ccAccess.tvCardDescription.apply {
+            text = spannableString
+            movementMethod = LinkMovementMethod.getInstance()
+        }
+    }
 }
