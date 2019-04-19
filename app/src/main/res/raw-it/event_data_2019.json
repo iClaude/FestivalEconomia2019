@@ -1364,7 +1364,8 @@
       ],
       "relatedSessions": [
         "06",
-        "38"
+        "38",
+        "67"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/brexit-immigrazione-e-mercato-del-lavoro",
@@ -1415,7 +1416,8 @@
         "26"
       ],
       "relatedSessions": [
-        "19"
+        "19",
+        "74"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/tito-1",
@@ -1860,6 +1862,264 @@
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/l-imperativo-della-crescita-cosa-si-puo-fare-per-le-regioni-e-le-citta-",
       "youtubeUrl": ""
+    },
+    {
+      "id": "66",
+      "title": "Merci l’Europe! Risposte aux sept mensonges populistes",
+      "startTimestamp": 1559383200000,
+      "endTimestamp": 1559388600000,
+      "day": 2,
+      "location": "04",
+      "description": "Incontro con l'autore. Merci l’Europe! Risposte aux sept mensonges populistes (Bernard Spitz - a cura di Grasset). \nNe discutono Anais Ginori, Lucrezia Reichlin. Coordina Tonia Mastrobuoni.",
+      "tags": [
+        "01",
+        "07"
+      ],
+      "organizers": [
+        "124",
+        "125",
+        "26"
+      ],
+      "relatedSessions": [
+        "2",
+        "28",
+        "45",
+        "47"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/merci-l-europe-risposte-aux-sept-mensonges-populistes",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "67",
+      "title": "Immigrazione e voto per i populisti di estrema destra",
+      "startTimestamp": 1559383200000,
+      "endTimestamp": 1559388600000,
+      "day": 2,
+      "location": "05",
+      "description": "Negli ultimi anni, lo scenario politico in Europa è cambiato in modo drammatico. In molti paesi, i partiti di destra hanno visto crescere i propri voti, spesso a scapito dei socialdemocratici. In che misura questo fenomeno è stato favorito dalla globalizzazione e in particolare, dalle dimensioni e della composizione dei recenti flussi migratori, dall’esposizione al commercio internazionale e dal calo del settore manifatturiero? \nIntroduce Tobias Piller.",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
+        "126",
+        "127"
+      ],
+      "relatedSessions": [
+        "06",
+        "38",
+        "46"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/populismo-ed-effetti-globalizzazione-estrema-destra-in-austria",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "68",
+      "title": "Trade wars. Come cambia il commercio mondiale",
+      "startTimestamp": 1559383200000,
+      "endTimestamp": 1559388600000,
+      "day": 2,
+      "location": "02",
+      "description": "Da qualche tempo le maggiori potenze – in particolare Stati Uniti e Cina – si sfidano con azioni unilaterali di chiusura e rappresaglia, accusandosi reciprocamente di competizione sleale.  Qual è l’impatto di questi fenomeni sulle imprese, i lavoratori e i consumatori? \nIntroduce Andrea Fracasso. \nCoordina Massimo Gaggi.",
+      "tags": [
+        "01",
+        "06"
+      ],
+      "organizers": [
+        "128",
+        "129",
+        "130",
+        "131",
+        "132",
+        "51"
+      ],
+      "relatedSessions": [
+        "15"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/trade-wars-come-cambia-il-commercio-mondiale",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "69",
+      "title": "La guerra del debito",
+      "startTimestamp": 1559392200000,
+      "endTimestamp": 1559397600000,
+      "day": 2,
+      "location": "03",
+      "description": "Tutti sembrano concordare sulla necessità della riduzione del debito pubblico come fattore di fragilità dell’economia italiana… ma come realizzarla? Ne discutono i rappresentanti delle maggiori forze politiche del nostro paese. \nCoordina Lucia Annunziata.",
+      "tags": [
+        "01",
+        "04"
+      ],
+      "organizers": [
+        "133",
+        "134",
+        "135",
+        "136",
+        "137",
+        "138"
+      ],
+      "relatedSessions": [
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/debito-pubblico",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "70",
+      "title": "Populismo digitale. La politica nell'età del web",
+      "startTimestamp": 1559392200000,
+      "endTimestamp": 1559397600000,
+      "day": 2,
+      "location": "09",
+      "description": "Internet ha trasformato radicalmente le regole del gioco politico. In rete sono nati nuovi partiti e movimenti e i social network si identificano ormai largamente con l’opinione pubblica. La costruzione del consenso sul web utilizza strumenti visibili e accessibili ma anche mezzi nascosti e disponibili a pochi... che è bene conoscere. \nCoordina Jacopo Iacoboni.",
+      "tags": [
+        "01",
+        "04"
+      ],
+      "organizers": [
+        "139",
+        "140",
+        "141"
+      ],
+      "relatedSessions": [
+        "11",
+        "43",
+        "50"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/populismo-digitale-la-politica-nell-eta-del-web",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "71",
+      "title": "Quante economie nell'Eurozona?",
+      "startTimestamp": 1559392200000,
+      "endTimestamp": 1559397600000,
+      "day": 2,
+      "location": "18",
+      "description": "In questo panel si analizzeranno fattori economici e politici che, seppure inaspettatamente, giocano un ruolo fondamentale nell’Eurozona. Verranno prese in considerazione differenze interne e fra paesi che normalmente sfuggono all’attenzione. \nA cura di INET. \nCoordina Orsola Costantini.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "142",
+        "143",
+        "144",
+        "145"
+      ],
+      "relatedSessions": [
+        "08",
+        "15",
+        "16"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/how-many-eurozone-economies-",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "72",
+      "title": "Otium - l'urlo dei giovani",
+      "startTimestamp": 1559394000000,
+      "endTimestamp": 1559426340000,
+      "day": 2,
+      "location": "19",
+      "description": "A cura degli studenti degli Istituti Superiori di Trento. In collaborazione con il Comune di Trento e il MUSE. Otium è una giornata di laboratori, azioni, musica e idee, creata dai giovani per i giovani. Un'occasione di partecipazione, per confrontarsi e riflettere insieme sugli Obiettivi dello Sviluppo Sostenibile, in dialogo con Enrico Giovannini e alcuni giovani youtuber.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "100"
+      ],
+      "relatedSessions": [
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/otium-l-urlo-dei-giova-1",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "73",
+      "title": "Co-operare per una crescita inclusiva",
+      "startTimestamp": 1559394000000,
+      "endTimestamp": 1559399400000,
+      "day": 2,
+      "location": "20",
+      "description": "A partire dall’esperienza balcanica, per aprire la visione a più ampio raggio sul mondo, quattro spaccati d’azione che promuovono democrazia locale, cooperazione decentrata di comunità, informazione consapevole e sviluppo sostenibile, per fornire strumenti di contrasto a spinte nazionaliste. \nA cura dell’Associazione Trentino con i Balcani. Coordina Maurizio Camin.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "75",
+        "146",
+        "147",
+        "148"
+      ],
+      "relatedSessions": [
+        "34",
+        "65"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/co-operare-per-una-crescita-inclusiva",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "74",
+      "title": "Identità dell’Euregio in cucina",
+      "startTimestamp": 1559394000000,
+      "endTimestamp": 1559399400000,
+      "day": 2,
+      "location": "07",
+      "description": "Possono alcune ricette di cucina mostrare la cultura glocal del primo Novecento? Sì, quando l’alimentazione suggerisce un’identià territoriale e transnazionale. Sì, perché la comunicazione grafica e le immagini digitali permettono un libero accesso alle informazioni sulla gastronomia dell’Euregio. \nA cura del Dipartimento di Psicologia e Neuroscienze e del Dipartimento di Sociologia e Ricerca Sociale dell’Università di Trento. \nCoordina Giovanna A. Massari.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "149",
+        "150",
+        "151",
+        "152"
+      ],
+      "relatedSessions": [
+        "19",
+        "48"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/identita-dell-euregio-in-cucina",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "75",
+      "title": "Far funzionare il decentramento",
+      "startTimestamp": 1559394000000,
+      "endTimestamp": 1559399400000,
+      "day": 2,
+      "location": "02",
+      "description": "Sfruttare al massimo il decentramento per favorire lo sviluppo regionale è fondamentale laddove prevale la “geografia del malcontento” come risposta agli evidenti squilibri tra territori. Come può il decentramento ridare una prospettiva ai luoghi che si sentono indeboliti dalla globalizzazione e garantire ulteriore sostegno a quelli che, invece, ne hanno beneficiato? \nA cura di OCSE. \nCoordina Dorothée Allain-Dupré.",
+      "tags": [
+        "01",
+        "04"
+      ],
+      "organizers": [
+        "153",
+        "154",
+        "20",
+        "155"
+      ],
+      "relatedSessions": [
+        "23",
+        "27",
+        "52"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/far-funzionare-il-decentramento",
+      "youtubeUrl": ""
     }
   ],
   "organizers": [
@@ -2087,7 +2347,7 @@
       "id": "20",
       "name": "Maurizio Fugatti",
       "bio": "Presidente della Provincia autonoma di Trento.",
-      "company": "",
+      "company": "Presidente PAT",
       "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Maurizio_Fugatti_daticamera_2018.jpg",
       "websiteUrl": "https://it.wikipedia.org/wiki/Maurizio_Fugatti",
       "twitterUrl": "https://twitter.com/MaurizioFugatti",
@@ -3221,6 +3481,358 @@
       "name": "Alessandra Proto",
       "bio": "Responsabile del Centro OCSE di Trento per lo sviluppo locale.",
       "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "124",
+      "name": "Anais Ginori",
+      "bio": "Giornalista, corrispondente a Parigi de “la Repubblica”.",
+      "company": "Giornalista",
+      "thumbnailUrl": "https://www.repstatic.it/storage/eventi/images/big/131818/131818.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/anaisginori",
+      "linkedInUrl": "https://www.linkedin.com/in/anais-ginori-74504b16/?originalSubdomain=fr",
+      "facebookUrl": ""
+    },
+    {
+      "id": "125",
+      "name": "Lucrezia Reichlin",
+      "bio": "Economista e saggista.",
+      "company": "Economista",
+      "thumbnailUrl": "https://www.lagazzettadilucca.it/assets/Uploads/articoli/_resampled/ScaleWidthWyIyMjAiXQ/Lucrezia-Reichlin.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Lucrezia_Reichlin",
+      "twitterUrl": "https://twitter.com/LucreziaReichli?lang=it",
+      "linkedInUrl": "https://www.linkedin.com/in/lucrezia-reichlin-828a6441/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "126",
+      "name": "Josef Zweimüller",
+      "bio": "È Professore di Macroeconomia e Mercati del Lavoro all’Università di Zurigo (dal 1997). Prima di questo incarico aveva insegnato all’Università di Linz (1988-1997) e all’Institute for Advanced Studies di Vienna (1995-1997). È stato anche visiting scholar della Stanford University (1993 – secondo quadrimesre) e all’Università di Berkley (1991-1993). È attualmente research fellow presso CEPR (dove è stato condirettore del CEPR Labour Economic Programme), presso IZA e CESifo. La sua attività di ricerca si incentra attualmente sull’economia del lavoro e sull’economia empirica, teoria della crescita e teoria della distribuzione del reddito. Le sue ricerche sono state pubblicate su “Quarterly Journal of Economics”, “American Economic Review”, “Review of Economic Studies”, “Journal of the European Economic Association”, “Journal of Labor Economics” e su altre riviste specializzate.",
+      "company": "Economista",
+      "thumbnailUrl": "https://www.sciencespo.fr/liepp/sites/sciencespo.fr.liepp/files/Josef%20Zweimu%CC%88ller%20photo%20_1.jpg",
+      "websiteUrl": "https://www.econ.uzh.ch/en/people/faculty/zweimueller.html",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "127",
+      "name": "Tobias Piller",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "128",
+      "name": "Alessia Amighini",
+      "bio": "Co-dirige ISPI Asia Centre e insegna Economia all’Università del Piemonte Orientale.",
+      "company": "Economista",
+      "thumbnailUrl": "https://www.osservatorio-economie-emergenti-torino.it/images/Amighini2.jpg",
+      "websiteUrl": "https://www.ispionline.it/it/bio/alessia-amighini",
+      "twitterUrl": "https://twitter.com/aaamigh",
+      "linkedInUrl": "https://www.linkedin.com/in/alessiaamighini/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "129",
+      "name": "Marta Dassù",
+      "bio": "Saggista e politica",
+      "company": "Saggista e politica",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/534597765985492993/H0dLLK-M_400x400.jpeg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Marta_Dass%C3%B9",
+      "twitterUrl": "https://twitter.com/martadassu",
+      "linkedInUrl": "https://www.linkedin.com/in/marta-dassu-698b2237/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "130",
+      "name": "Daniel Gros",
+      "bio": "Dirige il CEPS - Centre for European Policy Studies.",
+      "company": "Economista",
+      "thumbnailUrl": "https://www.adnkronos.com/rf/image_size_400x300/Pub/AdnKronos/Assets/Immagini/gros.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Daniel_Gros",
+      "twitterUrl": "https://twitter.com/danielgrosceps",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "131",
+      "name": "Alberto Viano",
+      "bio": "Amministratore delegato di LeasePlan Italia.",
+      "company": "LeasePlan Italia",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/1632551990/image_400x400.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/alwhosme",
+      "linkedInUrl": "https://www.linkedin.com/in/alberto-viano-499347/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "132",
+      "name": "Andrea Fracasso",
+      "bio": "Dirige la Scuola di Studi Internazionali dell’Università di Trento.",
+      "company": "Università di Trento",
+      "thumbnailUrl": "https://webapps.unitn.it/public/store/ermete/persona/per0000873/ufficiale.jpg",
+      "websiteUrl": "https://webapps.unitn.it/du/it/Persona/PER0000873/Curriculum",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "133",
+      "name": "Renato Brunetta",
+      "bio": "Politico e accademico.",
+      "company": "Politico e accademico",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/Renato_Brunetta_daticamera_2018.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Renato_Brunetta",
+      "twitterUrl": "https://twitter.com/renatobrunetta",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "134",
+      "name": "Laura Castelli",
+      "bio": "Deputata e sottosegretario all’Economia.",
+      "company": "Sottosegretario all’Economia",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Laura_Castelli_daticamera_2018.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Laura_Castelli",
+      "twitterUrl": "https://twitter.com/lacastellim5s",
+      "linkedInUrl": "https://www.linkedin.com/in/laura-castelli-79998434/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "135",
+      "name": "Carlo Cottarelli",
+      "bio": "Direttore dell'Osservatorio sui Conti Pubblici Italiani dell'Università Cattolica di Milano.",
+      "company": "Economista",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Carlo_Cottarelli_Quirinale_%28cropped%29.jpg/220px-Carlo_Cottarelli_Quirinale_%28cropped%29.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Carlo_Cottarelli",
+      "twitterUrl": "https://twitter.com/CottarelliCPI",
+      "linkedInUrl": "https://www.linkedin.com/in/carlo-cottarelli/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "136",
+      "name": "Massimo Garavaglia",
+      "bio": "Sottosegretario all’Economia e alle Finanze",
+      "company": "Sottosegretario all’Economia e alle Finanze",
+      "thumbnailUrl": "https://www.ticinonotizie.it/wp-content/uploads/2018/03/Massimo-Garavaglia.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Massimo_Garavaglia",
+      "twitterUrl": "https://twitter.com/massimogara",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "137",
+      "name": "Pier Carlo Padoan",
+      "bio": "Economista, politico e accademico.",
+      "company": "Economista, politico e accademico",
+      "thumbnailUrl": "https://biografieonline.it/img/bio/p/Pier_Carlo_Padoan.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Pier_Carlo_Padoan",
+      "twitterUrl": "https://twitter.com/pcpadoan",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "138",
+      "name": "Lucia Annunziata",
+      "bio": "Giornalista di Rai3, dirige l’“Huffington Post”.",
+      "company": "Giornalista",
+      "thumbnailUrl": "https://www.caffeinamagazine.it/wp-content/uploads/2018/11/lucia-annunziata.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Lucia_Annunziata",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "139",
+      "name": "Mauro Calise",
+      "bio": "Insegna Economia politica all’Università “Federico II” di Napoli.",
+      "company": "Economista",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "140",
+      "name": "Stefano Zanero",
+      "bio": "Insegna al Politecnico di Milano.",
+      "company": "Politecnico di Milano",
+      "thumbnailUrl": "https://i1.rgstatic.net/ii/profile.image/273548750135299-1442230512563_Q512/Stefano_Zanero.jpg",
+      "websiteUrl": "http://home.deib.polimi.it/zanero/eng/",
+      "twitterUrl": "https://twitter.com/raistolo",
+      "linkedInUrl": "https://www.linkedin.com/in/zanero/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "141",
+      "name": "Jacopo Iacoboni",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "142",
+      "name": "Matteo Cavallaro",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "143",
+      "name": "Mustafa Erdem Sakinç",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "144",
+      "name": "Anna Maria Simonazzi",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "145",
+      "name": "Orsola Costantini",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "146",
+      "name": "Raffaele Crocco",
+      "bio": "Direttore Atlante delle Guerre e dei Conflitti del Mondo.",
+      "company": "Giornalista",
+      "thumbnailUrl": "https://i.ytimg.com/vi/BOD04yPETD8/hqdefault.jpg",
+      "websiteUrl": "https://www.atlanteguerre.it/tag/raffaele-crocco/",
+      "twitterUrl": "https://twitter.com/atlanteguerre",
+      "linkedInUrl": "https://www.linkedin.com/in/raffaele-crocco-00629144/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "147",
+      "name": "Antonella Valmorbida",
+      "bio": "Segretario Generale ALDA.",
+      "company": "Segretario Generale ALDA",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/435518991755259904/TUlm9NUo.jpeg",
+      "websiteUrl": "http://www.alda-europe.eu/newSite/secretary-general.php",
+      "twitterUrl": "https://twitter.com/antovalmorbida",
+      "linkedInUrl": "https://www.linkedin.com/in/antonella-valmorbida-9a16a524/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "148",
+      "name": "Maurizio Camin",
+      "bio": "Direttore Associazione Trentino con i Balcani.",
+      "company": "Associazione Trentino con i Balcani",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "149",
+      "name": "Giovanna Degli Avancini",
+      "bio": "Presidente regionale FAI Trentino.",
+      "company": "FAI Trentino",
+      "thumbnailUrl": "https://www.vitatrentina.it/var/vitatrentina/storage/images/media/cumulus/cultura_-_persone_-_la_prof._giovanna_degli_avancini._presidente_del_fai/986407-1-ita-IT/cultura_-_persone_-_la_prof._giovanna_degli_avancini._presidente_del_fai_imagefull.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "150",
+      "name": "Alessandro Luigini",
+      "bio": "Insegna Rappresentazione grafica e visuale all'Università di Bolzano.",
+      "company": "Università di Bolzano",
+      "thumbnailUrl": "https://webservices.scientificnet.org/rest/uisdata/api/v1/people/36064/image?w=260&h=260",
+      "websiteUrl": "https://www.unibz.it/it/faculties/education/academic-staff/person/36064-alessandro-luigini",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "151",
+      "name": "Massimo Montanari",
+      "bio": "Insegna Storia dell'Alimentazione all'Università di Bologna.",
+      "company": "Università di Bologna",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Massimo_Montanari.jpg/220px-Massimo_Montanari.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Massimo_Montanari",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "152",
+      "name": "Giovanna A. Massari",
+      "bio": "Insegna Scienze della Rappresentazione e del Rilievo all'Università di Trento.",
+      "company": "Università di Trento",
+      "thumbnailUrl": "",
+      "websiteUrl": "https://webapps.unitn.it/du/it/Persona/PER0000636/Didattica",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "153",
+      "name": "Stefano Bonaccini",
+      "bio": "Presidente della Regione Emilia Romagna.",
+      "company": "Presidente Regione Emilia Romagna",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Stefano_Bonaccini_2016.jpg/217px-Stefano_Bonaccini_2016.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Stefano_Bonaccini",
+      "twitterUrl": "https://twitter.com/sbonaccini",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "154",
+      "name": "Fernando Freire De Sousa",
+      "bio": "Presidente della Commissione Regionale di Coordinamento e Sviluppo del Portogallo del Nord.",
+      "company": "",
+      "thumbnailUrl": "https://congressoempresarialpovoadevarzim.pt/wp-content/uploads/2018/10/Foto2.png",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "155",
+      "name": "Dorothée Allain-Dupré",
+      "bio": "Responsabile dell’Unità per la Decentralizzazione, gli Investimenti pubblici e la Finanza Regionale OCSE.",
+      "company": "OCSE",
       "thumbnailUrl": "",
       "websiteUrl": "",
       "twitterUrl": "",
