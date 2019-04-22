@@ -190,5 +190,30 @@
     <string name="info_focus_item8">Olivier Blanchard</string>
 
     <string name="info_editorial_link">continua a leggere l\'editoriale di Tito Boeri…</string>
+    <string name="info_event_types">TIPI DI EVENTO</string>
+    <string name="info_type_cineconomy">Cineconomia</string>
+    <string name="info_type_cineconomy_desc">Una selezione di film con riferimento tematico esplicito al mondo economico e culturale, occasione per discutere e commentare passaggi cruciali della storia, della politica e della morale del "fare economico".</string>
+    <string name="info_type_dialogues">Dialoghi</string>
+    <string name="info_type_dialogues_desc">Due punti di vista diversi, due modi opposti di guardare a un problema, due possibili alternative per risolverlo.</string>
+    <string name="info_type_forum">Forum</string>
+    <string name="info_type_forum_desc">I protagonisti del mondo dell\'impresa, della ricerca, dei media, della politica discutono le questioni calde dell\'economia.</string>
+    <string name="info_type_intersections">Intersezioni</string>
+    <string name="info_type_intersections_desc">Dalla storia alla sociologia, alla filosofia, quanto e cosa le altre discipline hanno da dire sulla realtà economica</string>
+    <string name="info_type_keywords">Parole chiave</string>
+    <string name="info_type_keywords_desc">Come in un dizionario minimo, i termini fondamentali per orientarsi e farsi un\'opinione.</string>
+    <string name="info_type_history">Nella storia</string>
+    <string name="info_type_history_desc">Nella storia si ritrovano le radici e le ragioni del presente. Lo sguardo rivolto agli eventi del passato, nel nuovo formato del Festival dell\'Economia, offre un\'ulteriore prospettiva dalla quale trarre indicazioni per la migliore comprensione del tempo che viviamo. Con la partecipazione di alcuni tra i migliori e più rappresentativi storici della tradizione di studi del nostro paese.</string>
+
+    <string name="info_type_rai">RAI - Radio1, Radio3</string>
+    <string name="info_type_rai_desc">Gli ospiti e i temi, i libri e le testimonianze, gli appuntamenti del Festival raccontati ogni giorno in diretta.</string>
+
+    <string name="info_type_spotlight">Spotlight</string>
+    <string name="info_type_spotlight_desc">L\'analisi economica applicata alle vicende più significative dell\'attualità.</string>
+
+    <string name="info_type_witnesses">Testimoni del tempo</string>
+    <string name="info_type_witnesses_desc">Esperienze intellettuali, scelte di vita, racconti in prima persona dalla viva voce di chi li ha vissuti</string>
+
+    <string name="info_type_visions">Visioni</string>
+    <string name="info_type_visions_desc">Il nostro presente e il nostro prossimo futuro nelle parole di grandi personalità della cultura internazionale.</string>
 
 </resources>

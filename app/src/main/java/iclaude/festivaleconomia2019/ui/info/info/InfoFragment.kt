@@ -11,6 +11,7 @@ import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import iclaude.festivaleconomia2019.R
+import iclaude.festivaleconomia2019.ui.utils.HeaderGridDrawable
 import kotlinx.android.synthetic.main.fragment_info_info.*
 
 
@@ -36,6 +37,7 @@ class InfoFragment : Fragment(), InfoView {
         super.onViewCreated(view, savedInstanceState)
 
         presenter.displayData()
+        displayImages()
 
         ibVideo.setOnClickListener {
             val intent = Intent().apply {
@@ -65,5 +67,18 @@ class InfoFragment : Fragment(), InfoView {
             text = spannableString
             movementMethod = LinkMovementMethod.getInstance()
         }
+    }
+
+    override fun displayImages() {
+        ivCineconomy.setImageDrawable(HeaderGridDrawable(context!!))
+        ivDialogues.setImageDrawable(HeaderGridDrawable(context!!))
+        ivForum.setImageDrawable(HeaderGridDrawable(context!!))
+        ivIntersections.setImageDrawable(HeaderGridDrawable(context!!))
+        ivKeywords.setImageDrawable(HeaderGridDrawable(context!!))
+        ivHistory.setImageDrawable(HeaderGridDrawable(context!!))
+        ivRai.setImageDrawable(HeaderGridDrawable(context!!))
+        ivSpotlight.setImageDrawable(HeaderGridDrawable(context!!))
+        ivWitnesses.setImageDrawable(HeaderGridDrawable(context!!))
+        ivVisions.setImageDrawable(HeaderGridDrawable(context!!))
     }
 }
