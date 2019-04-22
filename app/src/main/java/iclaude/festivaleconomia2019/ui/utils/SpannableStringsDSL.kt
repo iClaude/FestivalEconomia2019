@@ -6,6 +6,7 @@ import android.graphics.Typeface
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.*
+import androidx.navigation.NavController
 
 /**
  * Simple DSL to create a SpannableString with various formatting.
@@ -74,6 +75,10 @@ class MySpanDataBuilder {
         spans.add(SpanData(start, end, flags, MyClickableSpanBuilder().apply(block).build()))
     }
 
+    fun clickableSpanToSessionDetails(block: MyClickableSpanToSessionDetailsBuilder.() -> Unit) {
+        spans.add(SpanData(start, end, flags, MyClickableSpanToSessionDetailsBuilder().apply(block).build()))
+    }
+
     fun bold() {
         spans.add(SpanData(start, end, flags, StyleSpan(Typeface.BOLD)))
     }
@@ -104,4 +109,12 @@ class MyClickableSpanBuilder {
     var url: String = ""
 
     fun build() = MyClickableSpan(context!!, url)
+}
+
+class MyClickableSpanToSessionDetailsBuilder {
+    var context: Context? = null
+    var navController: NavController? = null
+    var sessionId: String = "-1"
+
+    fun build() = MyClickableSpanToSessionDetails(context!!, navController!!, sessionId)
 }

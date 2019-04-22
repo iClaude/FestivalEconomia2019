@@ -38,6 +38,24 @@
     </fragment>
 
     <!--Info about the event-->
+    <fragment
+            android:id="@+id/containerInfoFragment"
+            android:name="iclaude.festivaleconomia2019.ui.info.ContainerInfoFragment"
+            android:label="fragment_container_info"
+            tools:layout="@layout/fragment_info_container">
+        <action
+                android:id="@+id/action_containerInfoFragment_to_detailsGraph"
+                app:destination="@id/detailsGraph"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right">
+            <argument
+                    android:name="sessionId"
+                    app:argType="string"/>
+        </action>
+    </fragment>
+
     <fragment android:id="@+id/FAQFragment" android:name="iclaude.festivaleconomia2019.ui.info.faq.FAQFragment"
               android:label="fragment_faq" tools:layout="@layout/fragment_info_faq"/>
     <fragment android:id="@+id/aboutFragment" android:name="iclaude.festivaleconomia2019.ui.info.about.AboutFragment"
@@ -49,9 +67,7 @@
             android:id="@+id/infoFragment"
             android:name="iclaude.festivaleconomia2019.ui.info.info.InfoFragment"
             android:label="fragment_info" tools:layout="@layout/fragment_info_info"/>
-    <fragment android:id="@+id/containerInfoFragment"
-              android:name="iclaude.festivaleconomia2019.ui.info.ContainerInfoFragment"
-              android:label="fragment_container_info" tools:layout="@layout/fragment_info_container"/>
+
 
     <!--Global actions (top level destinations: list of sessions, map and info-->
     <action android:id="@+id/action_global_containerSessionsFragment" app:destination="@id/containerSessionsFragment"

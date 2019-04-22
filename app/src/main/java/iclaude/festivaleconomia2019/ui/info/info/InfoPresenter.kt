@@ -2,6 +2,7 @@ package iclaude.festivaleconomia2019.ui.info.info
 
 import android.content.Context
 import android.text.SpannableString
+import androidx.navigation.NavController
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.ui.utils.buildSpannableString
 
@@ -16,7 +17,11 @@ interface InfoView {
 
 }
 
-class InfoPresenter(private var infoView: InfoView, private var mContext: Context) {
+class InfoPresenter(
+    private var infoView: InfoView,
+    private var mContext: Context,
+    private var mNavController: NavController
+) {
 
     // Display all the formatted data in the associated View.
     fun displayData() {
@@ -56,7 +61,8 @@ class InfoPresenter(private var infoView: InfoView, private var mContext: Contex
         val item5 = mContext.getString(R.string.info_focus_item5)
         val item6 = mContext.getString(R.string.info_focus_item6)
         val item7 = mContext.getString(R.string.info_focus_item7)
-        val str = mContext.getString(R.string.info_focus, item1, item2, item3, item4, item5, item6, item7)
+        val item8 = mContext.getString(R.string.info_focus_item8)
+        val str = mContext.getString(R.string.info_focus, item1, item2, item3, item4, item5, item6, item7, item8)
 
         return buildSpannableString {
             string = str
@@ -78,30 +84,66 @@ class InfoPresenter(private var infoView: InfoView, private var mContext: Contex
                 start = str.indexOf(item3)
                 end = start + item3.length
                 bold()
+                clickableSpanToSessionDetails {
+                    context = mContext
+                    navController = mNavController
+                    sessionId = "22"
+                }
             }
 
             span {
                 start = str.indexOf(item4)
                 end = start + item4.length
                 bold()
+                clickableSpanToSessionDetails {
+                    context = mContext
+                    navController = mNavController
+                    sessionId = "33"
+                }
             }
 
             span {
                 start = str.indexOf(item5)
                 end = start + item5.length
                 bold()
+                clickableSpanToSessionDetails {
+                    context = mContext
+                    navController = mNavController
+                    sessionId = "51"
+                }
             }
 
             span {
                 start = str.indexOf(item6)
                 end = start + item6.length
                 bold()
+                clickableSpanToSessionDetails {
+                    context = mContext
+                    navController = mNavController
+                    sessionId = "59"
+                }
             }
 
             span {
                 start = str.indexOf(item7)
                 end = start + item7.length
                 bold()
+                clickableSpanToSessionDetails {
+                    context = mContext
+                    navController = mNavController
+                    sessionId = "34"
+                }
+            }
+
+            span {
+                start = str.indexOf(item8)
+                end = start + item8.length
+                bold()
+                clickableSpanToSessionDetails {
+                    context = mContext
+                    navController = mNavController
+                    sessionId = "44"
+                }
             }
         }
     }

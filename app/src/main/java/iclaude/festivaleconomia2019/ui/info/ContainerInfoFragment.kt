@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.ui.info.about.AboutFragment
 import iclaude.festivaleconomia2019.ui.info.faq.FAQFragment
@@ -17,6 +19,9 @@ import kotlinx.android.synthetic.main.fragment_info_container.*
 import kotlinx.android.synthetic.main.fragment_info_container_appbar.*
 
 class ContainerInfoFragment : Fragment() {
+
+    val navController: NavController
+        get() = findNavController()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

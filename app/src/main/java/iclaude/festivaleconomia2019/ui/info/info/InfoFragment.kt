@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import iclaude.festivaleconomia2019.R
 import kotlinx.android.synthetic.main.fragment_info_info.*
 
@@ -26,7 +27,7 @@ class InfoFragment : Fragment(), InfoView {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        presenter = InfoPresenter(this, context!!)
+        presenter = InfoPresenter(this, context!!, findNavController())
 
         return inflater.inflate(R.layout.fragment_info_info, container, false)
     }
