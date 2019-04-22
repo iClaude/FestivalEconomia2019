@@ -5257,21 +5257,21 @@
     },
     {
       "id": "02",
-      "color": "#FDC93E",
+      "color": "#cce9c2",
       "fontColor": "#202124",
       "name": "Cineconomia",
       "category": "topic"
     },
     {
       "id": "03",
-      "color": "#ffff00",
+      "color": "#FDC93E",
       "fontColor": "#202124",
       "name": "Confronti",
       "category": "topic"
     },
     {
       "id": "04",
-      "color": "#6fd497",
+      "color": "#FFEAB3",
       "fontColor": "#202124",
       "name": "Dialoghi",
       "category": "topic"
@@ -5285,42 +5285,42 @@
     },
     {
       "id": "06",
-      "color": "#b7b7ff",
+      "color": "#A7D7FE",
       "fontColor": "#202124",
       "name": "Forum",
       "category": "topic"
     },
     {
       "id": "07",
-      "color": "#ff0080",
+      "color": "#FFCF9F",
       "fontColor": "#202124",
       "name": "Incontri con l'autore",
       "category": "topic"
     },
     {
       "id": "08",
-      "color": "#73BBF5",
+      "color": "#9BDD7C",
       "fontColor": "#202124",
       "name": "Intersezioni",
       "category": "topic"
     },
     {
       "id": "09",
-      "color": "#F9E79F",
+      "color": "#73BBF5",
       "fontColor": "#202124",
       "name": "Nella storia",
       "category": "topic"
     },
     {
       "id": "10",
-      "color": "#A3E4D7",
+      "color": "#FF7E00",
       "fontColor": "#202124",
       "name": "Parole chiave",
       "category": "topic"
     },
     {
       "id": "11",
-      "color": "#D4E6F1",
+      "color": "#CC99FF",
       "fontColor": "#202124",
       "name": "RAI",
       "category": "topic"
