@@ -54,7 +54,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="16dp"
                 android:clickable="true"
-                android:focusable="auto"
+                android:focusable="true"
                 android:focusableInTouchMode="true"/>
 
         <ImageView
@@ -124,7 +124,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tvEventTypes"
                 android:layout_marginTop="@dimen/margin_small"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent" android:contentDescription="@string/content_description"/>
 
         <ImageView
                 android:id="@+id/ivCineconomySquirrel"
@@ -134,7 +134,7 @@
                 app:layout_constraintTop_toTopOf="@id/ivCineconomy"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:src="@drawable/event_logo"/>
+                android:src="@drawable/event_logo" android:contentDescription="@string/content_description"/>
 
         <TextView
                 android:id="@+id/tvCineconomy"
@@ -169,10 +169,11 @@
                 app:layout_constraintTop_toBottomOf="@id/tvCineconomyDesc"
                 android:layout_marginTop="@dimen/margin_normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent" android:contentDescription="@string/content_description"/>
 
         <ImageView
                 android:id="@+id/ivDialoguesSquirrel"
+                android:contentDescription="@string/content_description"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 app:layout_constraintEnd_toEndOf="@id/ivDialogues"
@@ -209,6 +210,7 @@
 
         <ImageView
                 android:id="@+id/ivForum"
+                android:contentDescription="@string/content_description"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 app:layout_constraintTop_toBottomOf="@id/tvDialoguesDesc"
@@ -218,6 +220,7 @@
 
         <ImageView
                 android:id="@+id/ivForumSquirrel"
+                android:contentDescription="@string/content_description"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 app:layout_constraintEnd_toEndOf="@id/ivForum"
@@ -254,6 +257,7 @@
 
         <ImageView
                 android:id="@+id/ivIntersections"
+                android:contentDescription="@string/content_description"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 app:layout_constraintTop_toBottomOf="@id/tvForumDesc"
@@ -263,6 +267,7 @@
 
         <ImageView
                 android:id="@+id/ivIntersectionsSquirrel"
+                android:contentDescription="@string/content_description"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 app:layout_constraintEnd_toEndOf="@id/ivIntersections"
@@ -299,6 +304,7 @@
 
         <ImageView
                 android:id="@+id/ivKeywords"
+                android:contentDescription="@string/content_description"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 app:layout_constraintTop_toBottomOf="@id/tvIntersectionsDesc"
@@ -308,6 +314,7 @@
 
         <ImageView
                 android:id="@+id/ivKeywordsSquirrel"
+                android:contentDescription="@string/content_description"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 app:layout_constraintEnd_toEndOf="@id/ivKeywords"
@@ -344,6 +351,7 @@
 
         <ImageView
                 android:id="@+id/ivHistory"
+                android:contentDescription="@string/content_description"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 app:layout_constraintTop_toBottomOf="@id/tvKeywordsDesc"
@@ -353,6 +361,7 @@
 
         <ImageView
                 android:id="@+id/ivHistorySquirrel"
+                android:contentDescription="@string/content_description"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 app:layout_constraintEnd_toEndOf="@id/ivHistory"
@@ -389,6 +398,7 @@
 
         <ImageView
                 android:id="@+id/ivRai"
+                android:contentDescription="@string/content_description"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 app:layout_constraintTop_toBottomOf="@id/tvHistoryDesc"
@@ -398,6 +408,7 @@
 
         <ImageView
                 android:id="@+id/ivRaiSquirrel"
+                android:contentDescription="@string/content_description"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 app:layout_constraintEnd_toEndOf="@id/ivRai"
@@ -434,6 +445,7 @@
 
         <ImageView
                 android:id="@+id/ivSpotlight"
+                android:contentDescription="@string/content_description"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 app:layout_constraintTop_toBottomOf="@id/tvRaiDesc"
@@ -443,6 +455,7 @@
 
         <ImageView
                 android:id="@+id/ivSpotlightSquirrel"
+                android:contentDescription="@string/content_description"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 app:layout_constraintEnd_toEndOf="@id/ivSpotlight"
@@ -479,6 +492,7 @@
 
         <ImageView
                 android:id="@+id/ivWitnesses"
+                android:contentDescription="@string/content_description"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 app:layout_constraintTop_toBottomOf="@id/tvSpotlightDesc"
@@ -488,6 +502,7 @@
 
         <ImageView
                 android:id="@+id/ivWitnessesSquirrel"
+                android:contentDescription="@string/content_description"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 app:layout_constraintEnd_toEndOf="@id/ivWitnesses"
@@ -524,6 +539,7 @@
 
         <ImageView
                 android:id="@+id/ivVisions"
+                android:contentDescription="@string/content_description"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 app:layout_constraintTop_toBottomOf="@id/tvWitnessesDesc"
@@ -533,6 +549,7 @@
 
         <ImageView
                 android:id="@+id/ivVisionsSquirrel"
+                android:contentDescription="@string/content_description"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 app:layout_constraintEnd_toEndOf="@id/ivVisions"
@@ -566,6 +583,19 @@
                 android:layout_marginStart="@dimen/margin_normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="@dimen/margin_normal"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/info_type_others"
+                app:layout_constraintTop_toBottomOf="@id/tvVisionsDesc"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:fontFamily="@font/open_sans"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

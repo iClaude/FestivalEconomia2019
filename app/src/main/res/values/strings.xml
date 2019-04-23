@@ -304,4 +304,7 @@
     <string name="info_type_visions">Visions</string>
     <string name="info_type_visions_desc">Il nostro presente e il nostro prossimo futuro nelle parole di grandi personalità della cultura internazionale.</string>
 
+    <string name="info_type_others">…Alan Krueger Lecture, Alla Frontiera, Discussions, EconoMia, Meetings With Authors,
+        Inet Panel
+    </string>
 </resources>
