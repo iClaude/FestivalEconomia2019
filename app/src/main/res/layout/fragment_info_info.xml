@@ -136,16 +136,15 @@
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/event_logo" android:contentDescription="@string/content_description"/>
 
-        <TextView
-                android:id="@+id/tvCineconomy"
-                android:layout_width="0dp"
+        <com.google.android.material.chip.Chip
+                android:id="@+id/chipCineconomy"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="@id/ivCineconomy"
-                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_small"
                 app:layout_constraintStart_toStartOf="@id/ivCineconomy"
                 android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toStartOf="@id/ivCineconomySquirrel"
-                android:layout_marginEnd="@dimen/margin_normal"
                 android:text="@string/info_type_cineconomy"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 android:fontFamily="@font/open_sans"/>
@@ -182,16 +181,15 @@
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/event_logo"/>
 
-        <TextView
-                android:id="@+id/tvDialogues"
-                android:layout_width="0dp"
+        <com.google.android.material.chip.Chip
+                android:id="@+id/chipDialogues"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="@id/ivDialogues"
-                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_small"
                 app:layout_constraintStart_toStartOf="@id/ivDialogues"
                 android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toStartOf="@id/ivDialoguesSquirrel"
-                android:layout_marginEnd="@dimen/margin_normal"
                 android:text="@string/info_type_dialogues"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 android:fontFamily="@font/open_sans"/>
@@ -229,16 +227,15 @@
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/event_logo"/>
 
-        <TextView
-                android:id="@+id/tvForum"
-                android:layout_width="0dp"
+        <com.google.android.material.chip.Chip
+                android:id="@+id/chipForum"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="@id/ivForum"
-                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_small"
                 app:layout_constraintStart_toStartOf="@id/ivForum"
                 android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toStartOf="@id/ivForumSquirrel"
-                android:layout_marginEnd="@dimen/margin_normal"
                 android:text="@string/info_type_forum"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 android:fontFamily="@font/open_sans"/>
@@ -276,16 +273,15 @@
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/event_logo"/>
 
-        <TextView
-                android:id="@+id/tvIntersections"
-                android:layout_width="0dp"
+        <com.google.android.material.chip.Chip
+                android:id="@+id/chipIntersections"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="@id/ivIntersections"
-                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_small"
                 app:layout_constraintStart_toStartOf="@id/ivIntersections"
                 android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toStartOf="@id/ivIntersectionsSquirrel"
-                android:layout_marginEnd="@dimen/margin_normal"
                 android:text="@string/info_type_intersections"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 android:fontFamily="@font/open_sans"/>
@@ -323,16 +319,15 @@
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/event_logo"/>
 
-        <TextView
-                android:id="@+id/tvKeywords"
-                android:layout_width="0dp"
+        <com.google.android.material.chip.Chip
+                android:id="@+id/chipKeywords"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="@id/ivKeywords"
-                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_small"
                 app:layout_constraintStart_toStartOf="@id/ivKeywords"
                 android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toStartOf="@id/ivKeywordsSquirrel"
-                android:layout_marginEnd="@dimen/margin_normal"
                 android:text="@string/info_type_keywords"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 android:fontFamily="@font/open_sans"/>
@@ -370,16 +365,15 @@
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/event_logo"/>
 
-        <TextView
-                android:id="@+id/tvHistory"
-                android:layout_width="0dp"
+        <com.google.android.material.chip.Chip
+                android:id="@+id/chipHistory"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="@id/ivHistory"
-                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_small"
                 app:layout_constraintStart_toStartOf="@id/ivHistory"
                 android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toStartOf="@id/ivHistorySquirrel"
-                android:layout_marginEnd="@dimen/margin_normal"
                 android:text="@string/info_type_history"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 android:fontFamily="@font/open_sans"/>
@@ -417,16 +411,15 @@
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/event_logo"/>
 
-        <TextView
-                android:id="@+id/tvRai"
-                android:layout_width="0dp"
+        <com.google.android.material.chip.Chip
+                android:id="@+id/chipRai"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="@id/ivRai"
-                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_small"
                 app:layout_constraintStart_toStartOf="@id/ivRai"
                 android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toStartOf="@id/ivRaiSquirrel"
-                android:layout_marginEnd="@dimen/margin_normal"
                 android:text="@string/info_type_rai"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 android:fontFamily="@font/open_sans"/>
@@ -464,16 +457,15 @@
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/event_logo"/>
 
-        <TextView
-                android:id="@+id/tvSpotlight"
-                android:layout_width="0dp"
+        <com.google.android.material.chip.Chip
+                android:id="@+id/chipSpotlight"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="@id/ivSpotlight"
-                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_small"
                 app:layout_constraintStart_toStartOf="@id/ivSpotlight"
                 android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toStartOf="@id/ivSpotlightSquirrel"
-                android:layout_marginEnd="@dimen/margin_normal"
                 android:text="@string/info_type_spotlight"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 android:fontFamily="@font/open_sans"/>
@@ -511,16 +503,15 @@
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/event_logo"/>
 
-        <TextView
-                android:id="@+id/tvWitnesses"
-                android:layout_width="0dp"
+        <com.google.android.material.chip.Chip
+                android:id="@+id/chipWitnesses"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="@id/ivWitnesses"
-                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_small"
                 app:layout_constraintStart_toStartOf="@id/ivWitnesses"
                 android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toStartOf="@id/ivWitnessesSquirrel"
-                android:layout_marginEnd="@dimen/margin_normal"
                 android:text="@string/info_type_witnesses"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 android:fontFamily="@font/open_sans"/>
@@ -558,16 +549,15 @@
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/event_logo"/>
 
-        <TextView
-                android:id="@+id/tvVisions"
-                android:layout_width="0dp"
+        <com.google.android.material.chip.Chip
+                android:id="@+id/chipVisions"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="@id/ivVisions"
-                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_small"
                 app:layout_constraintStart_toStartOf="@id/ivVisions"
                 android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toStartOf="@id/ivVisionsSquirrel"
-                android:layout_marginEnd="@dimen/margin_normal"
                 android:text="@string/info_type_visions"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 android:fontFamily="@font/open_sans"/>

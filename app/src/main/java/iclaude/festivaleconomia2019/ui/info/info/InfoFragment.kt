@@ -1,6 +1,8 @@
 package iclaude.festivaleconomia2019.ui.info.info
 
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
@@ -80,5 +82,27 @@ class InfoFragment : Fragment(), InfoView {
         ivSpotlight.setImageDrawable(HeaderGridDrawable(context!!))
         ivWitnesses.setImageDrawable(HeaderGridDrawable(context!!))
         ivVisions.setImageDrawable(HeaderGridDrawable(context!!))
+
+        chipCineconomy.chipBackgroundColor = createChipColorStateList(Color.parseColor("#cce9c2"))
+        chipDialogues.chipBackgroundColor = createChipColorStateList(Color.parseColor("#FFEAB3"))
+        chipForum.chipBackgroundColor = createChipColorStateList(Color.parseColor("#A7D7FE"))
+        chipIntersections.chipBackgroundColor = createChipColorStateList(Color.parseColor("#9BDD7C"))
+        chipKeywords.chipBackgroundColor = createChipColorStateList(Color.parseColor("#FF7E00"))
+        chipHistory.chipBackgroundColor = createChipColorStateList(Color.parseColor("#73BBF5"))
+        chipRai.chipBackgroundColor = createChipColorStateList(Color.parseColor("#CC99FF"))
+        chipSpotlight.chipBackgroundColor = createChipColorStateList(Color.parseColor("#D7BDE2"))
+        chipWitnesses.chipBackgroundColor = createChipColorStateList(Color.parseColor("#ffccd5"))
+        chipVisions.chipBackgroundColor = createChipColorStateList(Color.parseColor("#E6B0AA"))
+    }
+
+    private fun createChipColorStateList(color: Int): ColorStateList {
+        val states = arrayOf(
+            intArrayOf(android.R.attr.state_checked), // checked
+            intArrayOf(-android.R.attr.state_checked) // unchecked
+        )
+
+        val colors = intArrayOf(color, color)
+
+        return ColorStateList(states, colors)
     }
 }
