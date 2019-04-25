@@ -12,7 +12,6 @@ import android.view.ViewGroup
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.ui.utils.HeaderGridDrawable
 import kotlinx.android.synthetic.main.fragment_info_info.*
 
@@ -32,7 +31,7 @@ class InfoFragment : Fragment(), InfoView {
     ): View? {
         presenter = InfoPresenter(this, context!!, findNavController())
 
-        return inflater.inflate(R.layout.fragment_info_info, container, false)
+        return inflater.inflate(iclaude.festivaleconomia2019.R.layout.fragment_info_info, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
