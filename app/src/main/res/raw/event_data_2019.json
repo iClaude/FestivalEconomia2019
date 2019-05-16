@@ -185,7 +185,7 @@
       "endTimestamp": 1559206800000,
       "day": 0,
       "location": "01",
-      "description": "Gli ospiti e i temi, i libri e le testimonianze, gli appuntamenti del Festival raccontati ogni giorno in diretta al pubblico della piazza e agli ascoltatori di Radio3.",
+      "description": "hosted by Pietro Del Soldà \nproduced by Cristiana Castellotti with Rosa Polacco\n\nThis daily public radio show will broadcast live from the city main’s square during the Festival, discussing the day’s main topics with key speakers, authors and other guests.",
       "tags": [
         "01",
         "11"
@@ -204,12 +204,12 @@
     },
     {
       "id": "01",
-      "title": "Inaugurazione",
+      "title": "Inauguration",
       "startTimestamp": 1559221200000,
       "endTimestamp": 1559226600000,
       "day": 0,
       "location": "02",
-      "description": "Negli ultimi anni in molti paesi occidentali si è assistito all’affermazione di culture politiche che contrappongono il popolo all’elite e che invocano il protezionismo e il ripristino della sovranità nazionale. L’ideologia è relativamente semplice: c’è un popolo inteso come un blocco omogeneo cui si contrappone un’elite altrettanto omogenea nell’essere corrotta e lontana dai problemi dei cittadini. In mezzo a queste due entità non c’è spazio per corpi intermedi, come associazioni della società civile, organismi tecnici, autorità indipendenti, sindacati istituzioni proprie del sistema di checks and balances delle democrazie occidentali consolidate. La rappresentanza del popolo risponde a principi di democrazia diretta, in nome della quale si sottopongono molte decisioni a referendum. Prevale a tutti i livelli il principio maggioritario a detrimento delle minoranze. Sul piano internazionale si propugna l’abbandono del multilateralismo in nome del bilateralismo, ritenendo inutili o dannose le istituzioni sovranazionali istituite dopo la Seconda Guerra mondiale. Cosa spiega questi sviluppi che modificano radicalmente le tradizionali divisioni fra destra e sinistra, gli assi del conflitto politico e che hanno già messo in crisi le socialdemocrazie europee? Questo interrogativo, che ha stimolato molta ricerca economica negli ultimi anni, sarà al centro della prossima edizione del Festival di economia di Trento, dal 30 maggio al 2 giugno 2019.",
+      "description": "speakers:\nAlessandro Andreatta, Tito Boeri, Innocenzo Cipolletta, Paolo Collini, Gregorio De Felice, Maurizio Fugatti, Giuseppe Laterza\n\ncoordinated by Eva Giovannini",
       "tags": [
         "00"
       ],
@@ -228,12 +228,12 @@
     },
     {
       "id": "02",
-      "title": "Cosa si può fare del populismo?",
+      "title": "What to do about Populism",
       "startTimestamp": 1559226600000,
       "endTimestamp": 1559232000000,
       "day": 0,
       "location": "03",
-      "description": "",
+      "description": "James Robinson\nintroduced by Tito Boeri\n\nThe specter of populism is haunting the world. But what is it exactly? Where does it come from and what should be done about it? We define populism as an anti-elitist exclusionary political strategy which builds a coalition of discontented citizens to challenge the status-quo. To understand why this coalition is potentially destabilizing to democracy and how it forms we developed a framework to studying the joint evolution of state and society.",
       "tags": [
         "01",
         "14"
@@ -264,7 +264,7 @@
       "endTimestamp": 1559232000000,
       "day": 0,
       "location": "01",
-      "description": "Gli ospiti e i temi, i libri e le testimonianze, gli appuntamenti del Festival raccontati ogni giorno in diretta al pubblico della piazza e agli ascoltatori di Radio3.",
+      "description": "hosted by Pietro Del Soldà \nproduced by Cristiana Castellotti with Rosa Polacco\n\nThis daily public radio show will broadcast live from the city main’s square during the Festival, discussing the day’s main topics with key speakers, authors and other guests.",
       "tags": [
         "01",
         "11"
@@ -283,12 +283,12 @@
     },
     {
       "id": "04",
-      "title": "Élite e popolo: un conflitto utile",
+      "title": "The elite and the people: useful conflict",
       "startTimestamp": 1559228400000,
       "endTimestamp": 1559233800000,
       "day": 0,
       "location": "05",
-      "description": "Il conflitto tra i pochi e i molti può essere l’ossigeno della libertà politica e civile. Soprattutto se – come sosteneva Machiavelli – all’interno di un “buon ordine”, i molti affamati di sicurezza controllano i pochi affamati di potere.",
+      "description": "Nadia Urbinati\nintroduced by Roberto Mania\n\nThe conflict between the few and the many can act as oxygen for political and civil liberties. Especially if, as Machiavelli  said, the many hungry for security supervise the few hungry for power within the framework of a “good order”.",
       "tags": [
         "01",
         "08"
@@ -305,12 +305,12 @@
     },
     {
       "id": "05",
-      "title": "Chi sono i politici populisti?",
+      "title": "Populist politicians and voters in Sweden",
       "startTimestamp": 1559232000000,
       "endTimestamp": 1559237400000,
       "day": 0,
       "location": "04",
-      "description": "I politici e l’elettorato populisti provengono da gruppi che hanno visto il rischio di perdere il proprio lavoro aumentare durante le crisi finanziarie e il cui reddito è sceso in seguito alle riforme economiche. Ciò che ha alimentato l’estrema destra, dunque, potrebbe essere stata una limitata, piuttosto che eccessiva, politica di inclusione delle vittime della globalizzazione.",
+      "description": "Torsten Persson\nintroduced by Marco Panara\n\nMany blame the rise of Sweden’s radical right on the country's open immigration policy. But my recent research points to other drivers. Populist politicians and voters come from groups whose risk of job loss went up in the financial crisis, and whose relative income declined as a result of economic reforms. The fuel for the radical right may thus have been too little, not too much, inclusion.",
       "tags": [
         "01",
         "14"
@@ -329,12 +329,12 @@
     },
     {
       "id": "06",
-      "title": "Immigrazione in Europa ed il suo stato sociale: miti e realtà",
+      "title": "Immigration to Europe and the welfare state: myth and reality",
       "startTimestamp": 1559233800000,
       "endTimestamp": 1559239200000,
       "day": 0,
       "location": "09",
-      "description": "Il recente ingente flusso migratorio in Europa genera una reazione culturale contro gli immigrati e la sensazione che essi traggano eccessivo vantaggio dallo stato sociale dei paesi più ricchi. La discussione si basa di frequente non su dati reali ma su stereotipi e informazioni incorrette, spesso accentuate dai partiti anti-immigrazione and anti-globalizzazione.",
+      "description": "Alberto Alesina\nintroduced by Paola Pica\n\nThe recent heavy flow of migrants to Europe has generated a cultural reaction against immigrants and a feeling that they are taking excessive advantage of the welfare state in richer countries. The discussion is frequently based not on real data, but rather on stereotypes and incorrect information, often accentuated by anti-immigration and anti-globalisation parties.",
       "tags": [
         "01",
         "14"
@@ -362,7 +362,7 @@
       "endTimestamp": 1559239200000,
       "day": 0,
       "location": "10",
-      "description": "Le riforme dimezzate (Marco Leonardi). \n\ncoordina Tonia Mastrobuoni",
+      "description": "Marco Leonardi\nOrganised by Egea\n\ndiscussed with Roberto Mania \n\ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
@@ -379,12 +379,12 @@
     },
     {
       "id": "08",
-      "title": "Il voto europeo: le conseguenze economiche e politiche",
+      "title": "The european vote: economic and political consequences",
       "startTimestamp": 1559235600000,
       "endTimestamp": 1559241000000,
       "day": 0,
       "location": "02",
-      "description": "Spotlight.",
+      "description": "Elisa Ferreira - Cas Mudde - Jean Pisani-Ferry - Nadia Urbinati\nintroduced by Nando Pagnoncelli\ncoordinated by Federico Fubini\n\nWhat new coalitions are possible in the European Parliament after the elections? What are the implications of polarisation between pro-Europeans and sovereignists? Will the former succeed in working together? And will the latter support the status quo or push for reforms, starting from the European Union budget?",
       "tags": [
         "01",
         "12"
@@ -409,7 +409,7 @@
       "endTimestamp": 1559242800000,
       "day": 0,
       "location": "01",
-      "description": "In diretta dal Festival dell’Economia. Da oltre vent’anni, il programma che rilancia le notizie del giorno, dai telegiornali italiani e internazionali al web. Una piazza multimediale che integra radio, tv e social media.",
+      "description": "hosted by Giancarlo Loquenzi\n\nLive from the Festival of Economics. For more than twenty years the programme has presented current events through the eyes of Italian and international broadcasters. The show will feature a multimedia space combining radio, TV and social media.",
       "tags": [
         "01",
         "11"
@@ -431,7 +431,7 @@
       "endTimestamp": 1559246400000,
       "day": 0,
       "location": "06",
-      "description": "(USA, 2008)\n\nregia di Clint Eastwood con Clint Eastwood, Bee Vang, Ahney Her\n\nL'effetto della globalizzazione sulle grandi città industriali: degrado urbano immigrazione, scontro di culture, tentazioni nazionalistiche.",
+      "description": "(USA, 2008)\n\ndirected by Clint Eastwood with Clint Eastwood, Bee Vang, Ahney Her\n\nThe effect of globalisation on large industrial cities: urban decay, immigration, clash of cultures, nationalist temptations.",
       "tags": [
         "01",
         "02"
@@ -449,12 +449,12 @@
     },
     {
       "id": "11",
-      "title": "Relazioni pericolose. Stato e globalizzazione dal Parlamento al web",
+      "title": "Dangerous Liaisons. The State and globalisation from Parliament to the web",
       "startTimestamp": 1559242800000,
       "endTimestamp": 1559248200000,
       "day": 0,
       "location": "03",
-      "description": "Sono gli Stati che si servono della globalizzazione o è quest’ultima che pone vincoli agli Stati? Negli ultimi trent’anni i rapporti tra istituzioni politiche nazionali, macchina dello Stato e mercato globale sono cambiati profondamente. L’analisi e l’esperienza di un giurista, ministro e giudice costituzionale, impegnato nella modernizzazione del nostro paese.",
+      "description": "Sabino Cassese\ninterviewers Annalisa Cuzzocrea and Pietro Del Soldà\n\nDo national states make use of of globalisation, or does the latter constrain them?  In the last thirty years, the relations between national political institutions, the machinery of the state and global markets have changed radically. The analysis and experience of a jurist, minister and constitutional judge involved in modernising our country.",
       "tags": [
         "01",
         "13"
@@ -482,7 +482,7 @@
       "endTimestamp": 1559287800000,
       "day": 1,
       "location": "01",
-      "description": "In diretta dal Festival dell'Economia. Il dialogo con gli ascoltatori, le inchieste, gli speciali dall'Italia e dal Mondo. Uno degli spazi più solidi e longevi della radio italiana.",
+      "description": "hosted by Giorgio Zanchini \n\nLive from the Festival of Economics, one of Italy’s longest-running radio shows interacts  with listeners while featuring  investigative and special reports from Italy and around the world.",
       "tags": [
         "01",
         "11"
@@ -509,7 +509,7 @@
       "endTimestamp": 1559293200000,
       "day": 1,
       "location": "01",
-      "description": "Gli ospiti e i temi, i libri e le testimonianze, gli appuntamenti del Festival raccontati ogni giorno in diretta al pubblico della piazza e agli ascoltatori di Radio3.",
+      "description": "presented by Pietro Del Soldà \norganised by Cristiana Castellotti with Rosa Polacco\n\nGuests, topics, books and testimony: the Festival appointments recounted live every day for the public in the Piazza and Radio 3 listeners.",
       "tags": [
         "01",
         "11"
@@ -531,12 +531,12 @@
     },
     {
       "id": "14",
-      "title": "Globalizzazione",
+      "title": "Globalisation",
       "startTimestamp": 1559289600000,
       "endTimestamp": 1559295000000,
       "day": 1,
       "location": "07",
-      "description": "Diverse ondate di globalizzazione, intesa come intensificazione degli scambi commerciali, demografici, e culturali tra aree molto distanti, si sono manifestate nella storia. La penultima, tra la fine del XIX secolo e i primi decenni del XX, si concluse tragicamente con una guerra mondiale e la presa del potere da parte di movimenti autoritari in molti paesi europei. Qual è il futuro della fase di globalizzazione che stiamo attraversando?",
+      "description": "Piero Stanig\nintroduced by Mauro Caselli \n\nSeveral waves of globalisation, understood as the intensification of commercial, demographic and cultural exchanges between very distant areas, have materialized in history. The penultimate one, at the end of the 19th century and in the first decades of the 20th, concluded tragically with a world war and  authoritarian movements grabbing power in many European countries. What is the future of  the  globalisation phase that we are currently crossing?",
       "tags": [
         "01",
         "10"
@@ -560,18 +560,20 @@
     },
     {
       "id": "15",
-      "title": "Scacco all'Europa. La guerra fredda tra Cina e USA per il nuovo ordine",
+      "title": "Measuring poverty around the world di Anthony B. Atkinson",
       "startTimestamp": 1559289600000,
       "endTimestamp": 1559295000000,
       "day": 1,
       "location": "10",
-      "description": "Scacco all'Europa. La guerra fredda tra Cina e USA per il nuovo ordine (Danilo Taino - a cura di Solferino). \n\ncoordina Tonia Mastrobuoni",
+      "description": "Andrea Brandolini\norganised by Princeton University Press\n\ndiscussed with Elena Granaglia, Giovanni Vecchi\ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
       ],
       "organizers": [
-        "26"
+        "26",
+        "223",
+        "224"
       ],
       "relatedSessions": [
         "07",
@@ -584,12 +586,12 @@
     },
     {
       "id": "16",
-      "title": "Europa, e adesso?",
+      "title": "Europe, what now?",
       "startTimestamp": 1559289600000,
       "endTimestamp": 1559295000000,
       "day": 1,
       "location": "02",
-      "description": "Dal voto al governo. Come cambierà l’Europa dopo i risultati elettorali? Più nazionalismo e ‘Popolocrazia’ oppure più integrazione economica e politica?",
+      "description": "Innocenzo Cipolletta - Ilvo Diamanti - Enrico Letta\ncoordinated by Erick Jozsef\n\nFrom elections to governing.  How will Europe change after the vote? More nationalism and “populocracy” or more economic and political integration?",
       "tags": [
         "01",
         "04"
@@ -608,12 +610,12 @@
     },
     {
       "id": "17",
-      "title": "Le reazioni alla globalizzazione: lezioni dalla storia",
+      "title": "The backlash against globalization: lessons from history",
       "startTimestamp": 1559289600000,
       "endTimestamp": 1559295000000,
       "day": 1,
       "location": "05",
-      "description": "Ci sono tre precedenti storici da cui possiamo imparare molte lezioni. La de-globalizzazione della fine del XIX secolo, la Grande Depressione degli anni ’30 e le guerre commerciali a cavallo dei conflitti mondiali. Sono utili per capire determinanti e conseguenze delle attuali pulsioni contro lo sviluppo del commercio internazionale, l’immigrazione e i movimenti di capitale.",
+      "description": "Kevin O'Rourke\nintroduced by Marco Bracconi\n\nI will survey three economic history literatures that can speak to contemporary challenges to globalization, including Brexit and the election of Donald Trump: the literature on the anti-globalization backlash of the nineteenth century, focused largely on trade and migration; the literature on the Great Depression, focused largely on capital flows, the gold standard, and protectionism; and the literature on trade and warfare.",
       "tags": [
         "01",
         "09"
@@ -636,12 +638,12 @@
     },
     {
       "id": "18",
-      "title": "Autostrade: istanze locali, aperture globali",
+      "title": "Motorways: local requests, global openings",
       "startTimestamp": 1559291400000,
       "endTimestamp": 1559296800000,
       "day": 1,
       "location": "20",
-      "description": "Le concessioni autostradali sono attratte, dal diritto europeo, alla disciplina dei contratti pubblici. Il loro affidamento è rimesso a gare aperte anche a soggetti privati. Tale assetto quali opportunità e quali rischi comporta per l'efficienza del sistema e la tutela di istanze locali?",
+      "description": "organised by A22\n\ncoordinated by Luigi Olivieri\nspeakers: Carlo Cambini, Ennio Cascetta, Claudio Cataldi, Barbara Marchetti, Lorenzo Saltari\n\nAccording to European law, motorway concessions are subject to the same regulations as public contracts. They are awarded through public competition that is also open to the private sector. What opportunities and risks does this system involve for the efficiency of the system and the safeguarding of local requests?",
       "tags": [
         "01",
         "03"
@@ -667,12 +669,12 @@
     },
     {
       "id": "19",
-      "title": "Alieni senza confini",
+      "title": "Aliens without frontiers",
       "startTimestamp": 1559293200000,
       "endTimestamp": 1559298600000,
       "day": 1,
       "location": "08",
-      "description": "In un mondo globalizzato le specie invasive si muovono liberamente oltre i confini nazionali, alternando le componenti ecologiche dei sistemi agro-ambientali. Gli insetti alieni creano, infatti, problemi nei settori produttivi, come agricoltura e turismo, ma anche alla salute umana.",
+      "description": "organised by Fondazione Edmund Mach\n\ncoordinated by Andrea Segrè \nspeakers: Piero Genovesi, Annapaola Rizzoli, Nikolaos Stilianakis \n\nIn a globalised world, invasive species move freely across national frontiers, altering the ecological components of agricultural and environmental systems. Alien insects indeed create problems for production sectors such as agriculture and tourism, but also for human health.",
       "tags": [
         "01",
         "03"
@@ -692,12 +694,12 @@
     },
     {
       "id": "20",
-      "title": "Quale nazionalismo. Alle origini di una idea",
+      "title": "Nationalism: at the origins of an idea",
       "startTimestamp": 1559293200000,
       "endTimestamp": 1559298600000,
       "day": 1,
       "location": "18",
-      "description": "Il nazionalismo di Macron sembra assai diverso da quello di Trump. Per capirne le ragioni è utile risalire all’origine del concetto nel pensiero politico moderno europeo. E alla distinzione tra la patria intesa come comunità di liberi cittadini contrapposti alla tirannide e la nazione intesa come comunità culturalmente omogenea che combatte per affermare la propria identità.",
+      "description": "Maurizio Viroli\nintroduced by Carlo Martinelli\n\nMacron’s nationalism appears very different from Trump’s. To understand the reasons, it is useful to go back to the origin of the concept of modern European political thought, and to the distinction between fatherland, understood as a community of free citizens opposed to tyranny and the nation, understood as a culturally homogeneous community that fights to establish its own identity.",
       "tags": [
         "01",
         "09"
@@ -714,12 +716,12 @@
     },
     {
       "id": "21",
-      "title": "Attentati terroristici e voto per la destra populista",
+      "title": "Terrorist attacks and votes for the populist right-wing",
       "startTimestamp": 1559293200000,
       "endTimestamp": 1559298600000,
       "day": 1,
       "location": "09",
-      "description": "Quali sono gli effetti degli attentati terroristici sul sostegno ai partiti populisti di estrema destra? E sulla posizione dei partiti tradizionali? Uno studio basato sull’analisi dei tweet prima e dopo ogni attentato terroristico.",
+      "description": "Francesco Giavazzi\nIntroduced by  Alessandro Russello\n\nWe study the recent increase in support for a radical right-wing party in Germany (AfD) relating it to the cultural backlash associated with a number of terrorist attacks, which happened in Europe around the same time, and a very salient incident which occurred in the city of Cologne on New Year’s Eve 2015/2016.  Our results are a first step towards understanding cultural backlash as a channel of transmission of radical right support, which has been traditionally difficult to study and which we can address in the appropriate way using new data and techniques.",
       "tags": [
         "01",
         "15"
@@ -737,12 +739,12 @@
     },
     {
       "id": "22",
-      "title": "Reddito universale di base?",
+      "title": "A basic universal income?",
       "startTimestamp": 1559293200000,
       "endTimestamp": 1559298600000,
       "day": 1,
       "location": "04",
-      "description": "Quali sono i problemi che un vero Reddito di Cittadinanza vuole affrontare? Come interagisce con altri programmi assistenziali? Quali sono i suoi effetti distributivi e i suoi costi? Risposte basate sui fatti come nella tradizione delle presentazioni di Alan Krueger al nostro festival.",
+      "description": "Hilary Hoynes\nIntroduced by Tito Boeri\n\nWhat are the problems that a genuine ‘citizen’s income’ wishes to address? How does it interact with other welfare programmes? What are the effects in terms of distribution and costs? Answers based on the facts, as in the tradition of Alan Krueger's lectures  at our Festival.",
       "tags": [
         "01",
         "16"
@@ -761,12 +763,12 @@
     },
     {
       "id": "23",
-      "title": "La sfida dell'identità dei luoghi: che ruolo ha la cultura?",
+      "title": "Nations vs regions identity of places: what is the role of culture?",
       "startTimestamp": 1559295000000,
       "endTimestamp": 1559300400000,
       "day": 1,
       "location": "16",
-      "description": "Le città, le regioni e le loro società sono il risultato di complesse stratificazioni identitarie, relazionali e comportamentali. Qual è il contributo della cultura all’identità dei luoghi? E in che modo la cultura e il patrimonio culturale possono contribuire allo sviluppo dei territori sfidati dalla globalizzazione?",
+      "description": "organised by Trento OECD Centre for Local Development, in collaboration whit tsm - Trentino School of Management\n\ncoordinated by Ekaterina Travkina \nspeakers: Joana Sousa Monteiro, Michele Trimarchi \n\nCities and regions and their societies are the results of complex stratifications of identities, relationships and behaviors. What is the contribution of culture to the identity of places and how can culture and cultural heritage contribute to the development of localities challenged by globalisation?",
       "tags": [
         "01",
         "03"
@@ -774,7 +776,8 @@
       "organizers": [
         "43",
         "44",
-        "45"
+        "45",
+        "225"
       ],
       "relatedSessions": [
         "27",
@@ -786,12 +789,12 @@
     },
     {
       "id": "24",
-      "title": "Multinazionali e sviluppo locale",
+      "title": "Multinational companies and local development",
       "startTimestamp": 1559296800000,
       "endTimestamp": 1559302200000,
       "day": 1,
       "location": "02",
-      "description": "Come possono città e regioni attrarre più investimenti di imprese multinazionali? E quando riescono, qual è l’impatto sullo sviluppo locale? Più lavoro, capitali e tecnologia? O più incertezza e concorrenza per le imprese locali?",
+      "description": "organised by \"Lavoce.info\"\n\nwith Elsa Artadi, Peter Bodin, Mauro Casotto, Licia Mattioli \n\nintroduced by Giorgio Barba Navaretti \ncoordinated by Massimo Gaggi\n\nHow can cities and regions attract more investment from multinational businesses? And when they succeed, what is the impact on local development? More employment, capital and technology? Or more uncertainty and competition for local businesses?",
       "tags": [
         "01",
         "06"
@@ -799,7 +802,6 @@
       "organizers": [
         "46",
         "47",
-        "48",
         "49",
         "50",
         "51"
@@ -820,7 +822,7 @@
       "endTimestamp": 1559302200000,
       "day": 1,
       "location": "10",
-      "description": "Ho imparato. In viaggio con i giovani sognando un'Italia mondiale (Enrico Letta - Il Mulino) \n\nne discute Sofia Ventura\ncoordina Tonia Mastrobuoni",
+      "description": "Enrico Letta\norganised by Il Mulino\n\ndiscussed  with Sofia Ventura \ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
@@ -836,12 +838,12 @@
     },
     {
       "id": "26",
-      "title": "Cosa possiamo imparare dalle grandi migrazioni del secolo scorso",
+      "title": "Immigration, Natives’ Backlash, and Cultural Assimilation: Lessons from US History",
       "startTimestamp": 1559305800000,
       "endTimestamp": 1559311200000,
       "day": 1,
       "location": "07",
-      "description": "Agli inizi del XX secolo la forza lavoro degli Stati Uniti aumentò del 25%. Gli immigrati portavano prosperità ma venivano accolti con diffidenza se non ostilità dalle comunità locali per via delle diversità culturali. Quali lezioni si possono trarre da quei flussi migratori, nettamente superiori a quelli che si verificano oggi, sulle reazioni culturali all’immigrazione e sulle politiche che favoriscono l’integrazione degli immigrati?",
+      "description": "Marco Tabellini\nintroduced by Nunzia Penelope\n\nThe recent rise in immigration has sparked a heated debate on its economic and social consequences. Support for right wing and anti-establishment parties, which tend to rely on a strongly anti-immigrant rhetoric, has grown astonishingly in almost every European country and in the US over the last decade. In this lecture, I focus on the first three decades of the 20th century, when millions of European immigrants moved to the United States, during the Age of Mass Migration. The first part of the lecture studies the political and economy impact of immigration in receiving cities, and explores the causes of natives’ backlash. It shows that political opposition to immigration can arise even when immigrants bring economic prosperity. These findings suggest that diversity might be economically desirable but politically hard to manage. The second part of the lecture investigates the factors that help or hinder the cultural assimilation of immigrants. In particular, it discusses how the inflow of new (ethnic and social) out-groups can influence the social inclusion of previous outsiders, and how the size of immigrant enclaves mediates their ability and their willingness to assimilate.",
       "tags": [
         "01",
         "09"
@@ -859,12 +861,12 @@
     },
     {
       "id": "27",
-      "title": "I luoghi abbandonati: comportamenti di voto, regioni in ritardo di sviluppo e risposte politiche",
+      "title": "Voting patterns, Regions left behind and policy responses: the raise of the places that don't matter",
       "startTimestamp": 1559305800000,
       "endTimestamp": 1559311200000,
       "day": 1,
       "location": "04",
-      "description": "Povertà persistente, decadimento economico e mancanza di opportunità causano malcontento nelle regioni in declino. Molti di questi luoghi si sono ribellati tramite un'ondata di populismo politico con forte radicamento territoriale. Come può la politica invertire questa tendenza e offrire opportunità a coloro che ivono nei luoghi che non contano?",
+      "description": "Andrés Rodriguez-Pose\norganised by OCSE\n\nintroduced by Alexander Lembcke \n\nPersistent poverty, economic decay and lack of opportunities are causing discontent in declining regions. Many of these so-called \"places that don't matter\" revolt in a wave of political populism with strong territorial foundations. How can policymakers reverse this trend and provide opportunities to those people living in the places that don't matter?",
       "tags": [
         "01",
         "14"
@@ -884,12 +886,12 @@
     },
     {
       "id": "28",
-      "title": "Populismo autoritario",
+      "title": "Authoritarian populism",
       "startTimestamp": 1559305800000,
       "endTimestamp": 1559311200000,
       "day": 1,
       "location": "02",
-      "description": "Pippa Norris in videoconferenza dialoga con Nadia Urbinati.",
+      "description": "Pippa Norris - Nadia Urbinati\ncoordinated by Mario Garofalo\n\nPippa Norris via video link discusses with Nadia Urbinati",
       "tags": [
         "01",
         "08"
@@ -919,7 +921,7 @@
       "endTimestamp": 1559311200000,
       "day": 1,
       "location": "01",
-      "description": "Gli ospiti e i temi, i libri e le testimonianze, gli appuntamenti del Festival raccontati ogni giorno in diretta al pubblico della piazza e agli ascoltatori di Radio3.",
+      "description": "hosted by Pietro Del Soldà \nproduced by Cristiana Castellotti with Rosa Polacco\n\nThis daily public radio show will broadcast live from the city main’s square during the Festival, discussing the day’s main topics with key speakers, authors and other guests.",
       "tags": [
         "01",
         "11"
@@ -942,12 +944,12 @@
     },
     {
       "id": "30",
-      "title": "In sicurezza e libertà: l'appello dei profughi siriani",
+      "title": "In safety and freedom: the appeal of syrian refugees",
       "startTimestamp": 1559307600000,
       "endTimestamp": 1559313000000,
       "day": 1,
       "location": "08",
-      "description": "Dal 2011 milioni di rifugiati siriani sono scappati dalla guerra per non dover combattere, essere imprigionati o uccisi: in condizioni estreme sopravvivono in Libano, Giordania, Turchia. Una riflessione sul loro appello alla comunità internazionale per la creazione di condizioni di sicurezza e libertà.",
+      "description": "organised by Associazione Comunità Papa Giovanni XXIII - Operazione Colomba\n\nspeakers: Alberto Capannini, Abdel Rahim Hsyan, Eli Schlein \n\nSince 2011, millions of Syrian refugees have fled war in order to avoid fighting, imprisonment or death: they survive in extreme conditions in Lebanon, Jordan and Turkey. Reflections on their appeal to the international community for the creation of conditions allowing them security and freedom.",
       "tags": [
         "01",
         "03"
@@ -955,7 +957,6 @@
       "organizers": [
         "57",
         "58",
-        "59",
         "60"
       ],
       "relatedSessions": [
@@ -968,12 +969,12 @@
     },
     {
       "id": "31",
-      "title": "A suon di parole. Il gioco del contraddittorio",
+      "title": "A battle of words. The game of cross-examination",
       "startTimestamp": 1559307600000,
       "endTimestamp": 1559313000000,
       "day": 1,
       "location": "17",
-      "description": "Per sviluppare una comunità territoriale è più importante conoscere i processi della realtà locale o della realtà globale? Questo il tema del dibattito della finale del torneo di sfida verbale tra gli studenti delle scuole superiori del Trentino, con l’obiettivo di educare i giovani al confronto democratico. A cura del Comune di Trento - Servizio cultura, turismo e politiche giovanili con il coordinamento di IPRASE, Facoltà di Giurisprudenza dell’Università di Trento e Comuni di Trento e Rovereto.",
+      "description": "organised by Comune di Trento - Servizio cultura, turismo e politiche giovanili con il coordinamento di IPRASE, Facoltà di Giurisprudenza dell’Università di Trento e Comuni di Trento e Rovereto\n\nspeakers: Cristina Azzolini, Maria Chiara Franzoia, Paolo Sommaggio, Chiara Tamanini and high school pupils\n\nIs it more important to understand local processes or global reality in order to develop an area community? Pupils from regional high schools will address this  subject in the final of the debate championship whose goal is to educate young people to participate in democratic dialogue.",
       "tags": [
         "01",
         "03"
@@ -999,7 +1000,7 @@
       "endTimestamp": 1559313000000,
       "day": 1,
       "location": "10",
-      "description": "Quando funziona e quando no (Alberto Alesina, Carlo Favero, Francesco Giavazzi - Rizzoli). \n\ncoordina Tonia Mastrobuoni",
+      "description": "Alberto Alesina - Carlo Favero - Francesco Giavazzi\norganised by Rizzoli\n\ndiscussed with Paolo Guerrieri \n\ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
@@ -1017,12 +1018,12 @@
     },
     {
       "id": "33",
-      "title": "Gli errori delle élite alle origini del sovranismo",
+      "title": "The errors of the elite at the origin of sovereignism",
       "startTimestamp": 1559307600000,
       "endTimestamp": 1559313000000,
       "day": 1,
       "location": "05",
-      "description": "Le élite liberali che hanno governato l’Occidente negli ultimi trent’anni hanno commesso molti errori: sottovalutazione delle disuguaglianze, utilizzo della competenza tecnica come sostitutiva della rappresentanza politica, fede nelle capacità redistributive del libero mercato, sbagliate politiche migratorie.",
+      "description": "Jan Zielonka\nintroduced by Giuseppe Laterza\n\nThe liberal elites that have governed the West in the last thirty years have made many mistakes: underestimating inequality, using technical skill as a substitute for political representation, trusting in the redistribution ability of the free market and misguided migratory policies.",
       "tags": [
         "01",
         "08"
@@ -1040,12 +1041,12 @@
     },
     {
       "id": "34",
-      "title": "La stagnazione secolare è il nostro destino?",
+      "title": "Is secular stagnation in our future? Lessons from the past",
       "startTimestamp": 1559307600000,
       "endTimestamp": 1559313000000,
       "day": 1,
       "location": "18",
-      "description": "Negli ultimi dieci anni, durante i quali i tassi di crescita sono rallentati, si è sostenuto che le economie avanzate sono destinate a una stagnazione secolare e che una crescita a tassi elevati sia ormai alle spalle per sempre. Quali sono gli insegnamenti della storia?",
+      "description": "Joel Mokyr\nintroduced by \n\nThe question of whether industrialized economies can continue to grow has been discussed in the past ten years, as growth rates have slowed down. Some economists have argued that the advanced economies are doomed to secular stagnation and that growth at high rates is over for good. This is examined in view of economic history and the determinants of past economic growth.",
       "tags": [
         "01",
         "09"
@@ -1062,12 +1063,12 @@
     },
     {
       "id": "35",
-      "title": "Un'altra globalizzazione è possibile?",
+      "title": "(on populism and globalisation) Is another form of globalization possible?",
       "startTimestamp": 1559309400000,
       "endTimestamp": 1559314800000,
       "day": 1,
       "location": "09",
-      "description": "La globalizzazione è stata percepita da molti come responsabile di crescenti diseguaglianze sociali e insoddisfazione politica, che sono state ulteriormente accentuate nel corso della Grande Recessione. La critica alla globalizzazione assume comunque caratteristiche molto differenti, con risposte che vanno dal populismo xenofobo alla proposta di una “altra globalizzazione”, dal basso e inclusiva.",
+      "description": "Donatella Della Porta\nintroduced by Simone Pieranni\n\nGlobalisation has been perceived by many as responsible for increasing social inequality and political dissatisfaction, which were further accentuated during the Great Recession. However, criticism of globalisation takes very different forms, with responses going from xenophobic populism to proposal of a “different form of globalisation”, inclusive and coming from below.",
       "tags": [
         "01",
         "08"
@@ -1090,12 +1091,12 @@
     },
     {
       "id": "36",
-      "title": "Le imprese italiane tra protezione e globalizzazione",
+      "title": "Protectionism and globalisation in italian businesses",
       "startTimestamp": 1559311200000,
       "endTimestamp": 1559316600000,
       "day": 1,
       "location": "12",
-      "description": "A cura di GEI Gruppo Economisti di Impresa. Coordina Massimo Deandreis. Intervengono Innocenzo Cipolletta, Gregorio De Felice, Alessandra Lanza. L’Associazione italiana degli economisti di impresa presenta le recenti ricerche condotte dai soci sul rapporto tra impresa e globalizzazione dell’economia.",
+      "description": "organised by GEI Gruppo Economisti di Impresa\n\ncoordinated by Massimo Deandreis \nspeakers: Innocenzo Cipolletta, Gregorio De Felice, Alessandra Lanza\n\nThe Italian association of business economists presents recent research by its members on the relationship between business and economic globalisation.",
       "tags": [
         "01",
         "03"
@@ -1121,20 +1122,19 @@
     },
     {
       "id": "37",
-      "title": "Chi ha paura della Libia?",
+      "title": "Who’s afraid of Libya?",
       "startTimestamp": 1559311200000,
       "endTimestamp": 1559316600000,
       "day": 1,
       "location": "16",
-      "description": "A cura del Centro per la Cooperazione Internazionale di Trento. Coordina Gabriel Echeverrìa. Intervengono Faraj Najem, Benedetta Oddo. A partire dalla caduta del regime del generale Gheddafi, nel 2011, la Libia vive un periodo di tensioni e conflitti interni. Qual è il ruolo delle municipalità libiche nel tortuoso processo di ricostruzione di uno Stato e di una comunità nazionale, in un contesto di divisioni interne e ingerenze esterne?",
+      "description": "organised by Centro per la Cooperazione Internazionale di Trento\n\ncoordinated by Mario Raffaelli\nspeaker: Gian Franco Damiano\n\nSince the fall of General Gaddafi’s regime in 2011, Libya has experienced a period of tension and internal conflict. What is the role of Libyan municipalities in the tortuous process of reconstructing a state and a national community, iamong internal divisions and external interference?",
       "tags": [
         "01",
         "03"
       ],
       "organizers": [
-        "70",
-        "71",
-        "72"
+        "75",
+        "226"
       ],
       "relatedSessions": [
         "21",
@@ -1146,12 +1146,12 @@
     },
     {
       "id": "38",
-      "title": "Immigrazione e scenari demografici",
+      "title": "Immigration and demographic scenarios",
       "startTimestamp": 1559313000000,
       "endTimestamp": 1559318400000,
       "day": 1,
       "location": "20",
-      "description": "Un confronto sul tema delle migrazioni, alla luce delle dinamiche demografiche che caratterizzano le aree di provenienza e di destinazione dei flussi. Un’occasione per analizzare gli secenari futuri di mobilità internazionale sotto il profilo economico, socio-demografico e del welfare.\nA cura della Fondazione Iniziative e Studi sulla Multietnicità - ISMU. Coordina Giancarlo Blangiardo. Intervengono Luigi Bonatti, Mario Raffaelli, Laura Zanfrini.",
+      "description": "organised by Fondazione Iniziative e Studi sulla Multietnicità - ISMU\n\ncoordinated by Giancarlo Blangiardo \nspeakers: Luigi Bonatti, Mario Raffaelli, Laura Zanfrini \n\nA panel discussion on migration, in light of the different demographic dynamics in the areas of origin and destination of migratory flows. An opportunity to analyse future international mobility scenarios in economic and socio-demographic terms and in relation to welfare.",
       "tags": [
         "01",
         "03"
@@ -1207,7 +1207,7 @@
       "endTimestamp": 1559320200000,
       "day": 1,
       "location": "10",
-      "description": "Contrordine compagni. Manuale di resistenza alla tecnofobia per la riscossa del lavoro e dell'Italia (Marco Bentivogli - Rcs). \n\nne discutono Giorgio Barba Navaretti, Luigi Zanda\ncoordina Tonia Mastrobuoni",
+      "description": "Marco Bentivogli\norganised by Rizzoli\n\ndiscussed with Giorgio Barba Navaretti, Luigi Zanda\ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
@@ -1248,12 +1248,12 @@
     },
     {
       "id": "42",
-      "title": "Come nascono le Nazioni (e perchè ritornano i nazionalismi)",
+      "title": "How Nations are born (and why nationalism returns)",
       "startTimestamp": 1559314800000,
       "endTimestamp": 1559320200000,
       "day": 1,
       "location": "09",
-      "description": "Dalla continuità di sangue alla contiguità di suolo, c’è un filo rosso che unisce tutti i nazionalismi, di ieri e di oggi. E che inizia con la costruzione reale e simbolica delle nazioni moderne, come l’Italia.",
+      "description": "Alberto Mario Banti\nintroduced by Simonetta Fiori\n\nFrom racial continuity to the proximity of land, there is a thread running through all forms of nationalism, past and the present. It begins with the real and symbolic construction of modern nations such as Italy.",
       "tags": [
         "01",
         "09"
@@ -1270,12 +1270,12 @@
     },
     {
       "id": "43",
-      "title": "Austerity e populismo",
+      "title": "Do populists handle austerity better?",
       "startTimestamp": 1559314800000,
       "endTimestamp": 1559320200000,
       "day": 1,
       "location": "05",
-      "description": "Fino a che punto le politiche economiche portate avanti da Syriza in Grecia sono diverse da quelle dei governi precedenti? Il programma di austerity di Tsipras è stato davvero più attento e sensibile ai più vulnerabili della società? Si può affermare, più in generale, che i populisti perseguono politiche differenti? Un dibattito fra uno dei più influenti protagonisti dei negoziati con la Troika e un attento osservatore della gestione europea della tragedia greca.",
+      "description": "Wolfgang Munchau - George Papacostantinou\ncoordinated by Ferdinando Giugliano\n\nTo which extent did the economic policies carried out by Syriza in Greece differ from those of previous governments? Was the austerity program under Syriza more socially aware and friendlier towards those most vulnerable? More generally, do populists pursue different policies? A discussion between a key player in the negotiations with the Troika and an acute observer of the European management of the Greek tragedy.",
       "tags": [
         "01",
         "04"
@@ -1321,12 +1321,12 @@
     },
     {
       "id": "45",
-      "title": "Bilanciamento dei poteri: Stati e società nelle democrazie liberali",
+      "title": "Balance of power: states, societies and the narrow corridor to liberty",
       "startTimestamp": 1559314800000,
       "endTimestamp": 1559320200000,
       "day": 1,
       "location": "18",
-      "description": "Il fondamento delle istituzioni che tutelano la libertà individuale e sostengono la crescita è legato al coinvolgimento della società civile nella politica. Questo permette un bilanciamento dei poteri fra istituzioni e politica. È un equilibrio molto precario, ma possibile e virtuoso. \nDaron Acemoglu in videocollegamento dialoga con Antonio Spilimbergo.",
+      "description": "Daron Acemoglu - Antonio Spilimbergo\ncoordinated by Alessandro Barbera\n\nThis talk will argue that the foundations of institutions that protect individual liberty and create an environment conducive to economic growth are not in clever institutional designs or top-down development of state institutions. Rather, they emerge from the involvement of society in politics in a way that balances the power of state institutions and elites. This precarious balance, when it is achieved, unleashes a powerful process of building of state capacity and development of society's capability to institutionalize its involvement in politics. The corridor leading to such institutions is narrow because of the difficulty of creating this balance and staying the course despite myriad conflicts and gridlocks.\n\nDaron Acemoglu via video link discusses with Antonio Spilimbergo",
       "tags": [
         "01",
         "14"
@@ -1344,12 +1344,12 @@
     },
     {
       "id": "46",
-      "title": "Populismo in Turchia",
+      "title": "Populism in Turkey",
       "startTimestamp": 1559318400000,
       "endTimestamp": 1559323800000,
       "day": 1,
       "location": "16",
-      "description": "Negli ultimi diciassette anni la Turchia ha registrato grandi cambiamenti. L’iniziale fase riformista è stata soppiantata da un assetto autoritario e la crescita da una profonda crisi economica. Solo il potere di Erdogan è rimasto inalterato. Ma grazie a quali strategie economiche e politiche? \nA cura del Centro per la Cooperazione Internazionale - Osservatorio Balcani e Caucaso Transeuropa",
+      "description": "organised by Centro per la Cooperazione Internazionale - Osservatorio Balcani e Caucaso Transeuropa\n\nintroduced by Mario Raffaelli \nspeakers: Cengiz Aktar, Esra Çeviker Gürakar, Fazila Mat \n\nThere have been major changes in Turkey in the last seventeen years. An initial reformist phase has been replaced by an authoritarian system, and growth by a profound economic crisis. Only Erdogan’s power has remained unaltered thanks to which economic and political strategies?",
       "tags": [
         "01",
         "03"
@@ -1375,12 +1375,12 @@
     },
     {
       "id": "47",
-      "title": "Brexit, immigrazione e mercato del lavoro",
+      "title": "Brexit and the UK labour market",
       "startTimestamp": 1559318400000,
       "endTimestamp": 1559323800000,
       "day": 1,
       "location": "07",
-      "description": "L’immigrazione è stata un fattore chiave alla base dell’esito del referendum su Brexit nel 2016. Eppure la maggior parte degli studi sul mercato del lavoro non trova effetti negativi dell’immigrazione su salari e livelli occupazionali dei “locali”, né sulle finanze pubbliche. Qual è quindi la motivazione delle attitudini verso gli immigrati, e il loro impatto sulle scelte politiche nel Regno Unito e nel resto dell’Europa?",
+      "description": "Barbara Petrongolo\nintroduced by Roberta Carlini\n\nImmigration was a key factor in the result of the Brexit referendum in 2016. However, most of the studies of the labour market find no negative effects of immigration on the salaries and employment levels of “locals”, nor on public finances. So what is the reason for the attitudes towards immigrants and their impact on political choices in the United Kingdom and the rest of Europe?",
       "tags": [
         "01",
         "14"
@@ -1399,12 +1399,12 @@
     },
     {
       "id": "48",
-      "title": "Istituzioni europee e populismo",
+      "title": "European institutions and populism",
       "startTimestamp": 1559318400000,
       "endTimestamp": 1559323800000,
       "day": 1,
       "location": "04",
-      "description": "In anni recenti i partiti populisti hanno registrato notevoli successi. Come reagiscono le maggiori istituzioni della UE e le organizzazioni della società civile a livello europeo? Quali idee e strategie propongono per fronteggiare il loro impatto?",
+      "description": "Carlo Ruzza - Markus Warasin\ncoordinated by Silvia Sciorilli Borrelli\n\nIn recent years populist parties have had considerable success. How do EU institutions and civil society organizations react at European level? What ideas and strategies do they propose to deal with their impact?",
       "tags": [
         "01",
         "04"
@@ -1433,7 +1433,7 @@
       "endTimestamp": 1559325600000,
       "day": 1,
       "location": "10",
-      "description": "Il grande carrello. Chi decide cosa mangiamo (Fabio Ciconte, Stefano Liberti - a cura di Editori Laterza). \n\ncoordina Tonia Mastrobuoni",
+      "description": "Fabio Ciconte - Stefano Liberti\norganised by Editori Laterza\n\ndiscussed with Giorgio Santambrogio\ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
@@ -1451,12 +1451,12 @@
     },
     {
       "id": "50",
-      "title": "Da individuo isolato a cittadino di una comunità",
+      "title": "From isolated individual to citizen of a community",
       "startTimestamp": 1559320200000,
       "endTimestamp": 1559325600000,
       "day": 1,
       "location": "20",
-      "description": "La quotidianità è caratterizzata da fenomeni migratori che mettono in crisi acquisizioni storiche sedimentate. La formazione, per favorire l’inclusione sociale, deve creare contesti di apprendimento per ricostruire l’appartenenza a una comunità capace di far compenetrare le diversità. \nA cura di AIF - Associazione Italiana Formatori.",
+      "description": "organised by AIF - Associazione Italiana Formatori\n\nspeakers: Antonello Calvaruso, Domenico De Masi, Maurizio Milan\n\nEveryday life is characterised by migratory phenomena disturbing deep-seated historic cultural values. In order to encourage social inclusion, training must create learning environments to reconstruct a sense of belonging to a community, allowing diversity to permeate it.",
       "tags": [
         "01",
         "03"
@@ -1476,12 +1476,12 @@
     },
     {
       "id": "51",
-      "title": "L’ascesa del populismo: cause e conseguenze",
+      "title": "The rise of populism: causes and consequences",
       "startTimestamp": 1559320200000,
       "endTimestamp": 1559325600000,
       "day": 1,
       "location": "05",
-      "description": "L’inizio di questo secolo è stato caratterizzato dall’ascesa del populismo, un movimento in cui il “popolo” viene contrapposto all’“élite”. Cosa spiega questo fenomeno e quali sono ne le conseguenze per la politica? Il pensiero di uno dei maggiori studiosi del populismo.",
+      "description": "Cas Mudde\nintroduced by Simonetta Nardin\n\nPolitics in the early 21st is characterized by the rise of populism, in which “the people” are pitted against “the elite,” but what explains the rise of populist parties and what are the consequences of populist politics.",
       "tags": [
         "01",
         "14"
@@ -1504,12 +1504,12 @@
     },
     {
       "id": "52",
-      "title": "Globalizzazione e universalismo: i nuovi confini tra destra e sinistra",
+      "title": "Globalisation and universalism: the new frontiers between the right and the left",
       "startTimestamp": 1559320200000,
       "endTimestamp": 1559325600000,
       "day": 1,
       "location": "18",
-      "description": "Negli ultimi decenni la globalizzazione del mercato non si è accompagnata all’universalismo dei diritti umani e sociali. Una divaricazione che ha favorito l’affermazione di populismo e nazionalismo e che ha rimesso in questione distinzioni consolidate, a partire da quella tra destra e sinistra.",
+      "description": "Colin Crouch\nintroduced by Giorgio Zanchini\n\nIn the last few decades economic globalisation  has not been accompanied by universalism of human and welfare rights. The gap has encouraged favoured the establishment of populism and nationalism and has called into question consolidated distinctions, starting from the difference between left and right.",
       "tags": [
         "01",
         "08"
@@ -1532,12 +1532,12 @@
     },
     {
       "id": "53",
-      "title": "Autonomie regionali",
+      "title": "Regional autonomy in Italy",
       "startTimestamp": 1559322000000,
       "endTimestamp": 1559327400000,
       "day": 1,
       "location": "02",
-      "description": "Partecipano: Mario Bertolissi - Floriana Cerniglia - Fulvio Cortese - Gianfranco Viesti.",
+      "description": "Mario Bertolissi - Floriana Cerniglia - Fulvio Cortese - Gianfranco Viesti\ncoordinated by Eugenio Occorsio\n\nWhere are we in the process of implementing constitutional norms making it possible to assign “further forms and particular conditions of autonomy” to regions without special status? What role should Parliament have in this phase? What are the criteria on the basis of which to identify further roles attributable to regions? What is the funding mechanism for these roles as regards respect for equalisation principles and budget constraints?",
       "tags": [
         "01",
         "12"
@@ -1564,7 +1564,7 @@
       "endTimestamp": 1559329200000,
       "day": 1,
       "location": "01",
-      "description": "In diretta dal Festival dell’Economia. Da oltre vent’anni, il programma che rilancia le notizie del giorno, dai telegiornali italiani e internazionali al web. Una piazza multimediale che integra radio, tv e social media.",
+      "description": "hosted by GIANCARLO LOQUENZI\n\nLive from the Festival of Economics. For more than twenty years the programme has presented current events through the eyes of Italian and international broadcasters. The show will feature a multimedia space combining radio, TV and social media.",
       "tags": [
         "01",
         "11"
@@ -1581,12 +1581,12 @@
     },
     {
       "id": "55",
-      "title": "Pane e cioccolata",
+      "title": "Bread and chocolate",
       "startTimestamp": 1559327400000,
       "endTimestamp": 1559332800000,
       "day": 1,
       "location": "06",
-      "description": "(Italia, 1973)\n\nregia di Franco Brusati con Nino Manfredi, Paolo Turco, Gianfranco Barra\n\nUno dei grandi interpreti della commedia italiana ci riporta ai tempi non lontani in cui eravamo noi le vittime del nazionalismo xenofobo.",
+      "description": "(Italia, 1973)\n\ndirected by Franco Brusati with Nino Manfredi, Paolo Turco, Gianfranco Barra\n\nA great Italian comedian takes us back to ta not so distant past when we were the victims of xenophobic nationalism..\n\norganised by Marco Onado and Andrea Landi",
       "tags": [
         "01",
         "02"
@@ -1604,12 +1604,12 @@
     },
     {
       "id": "56",
-      "title": "Un'opinione pubblica europea",
+      "title": "European voices. an evening dedicated to Antonio Megalizzi",
       "startTimestamp": 1559329200000,
       "endTimestamp": 1559334600000,
       "day": 1,
       "location": "03",
-      "description": "Ricordo di Antonio Megalizzi.",
+      "description": "Annalisa Camilli - Graham Ellis - Nicola Pifferi - Silvia Sciorilli Borrelli\ncoordinated by Eric Jozsef\nspeaker: Andrea Fracasso\n\nWithout public support at European level it is difficult to imagine political union. To create it, exchanges between national media are necessary, along with the creation of places for the exchange of transnational information, analysis and discussion. There is a new generation that considers itself European and seeks critical and selected information. Antonio Megalizzi a young Italian reporter tragically killed in the December terrorist attacks in Strasburg, belonged to this generation.",
       "tags": [
         "01",
         "13"
@@ -1625,12 +1625,12 @@
     },
     {
       "id": "57",
-      "title": "Popolo / Populismo",
+      "title": "People / populism",
       "startTimestamp": 1559376000000,
       "endTimestamp": 1559381400000,
       "day": 2,
       "location": "07",
-      "description": "Lo spettro del populismo attraversa il mondo occidentale generando paure e preoccupazioni proporzionali ai vasti consensi che raccoglie. Perché questo accade ora e in questa parte del mondo? È una sfortunata coincidenza della storia o l’inevitabile passaggio per risolvere le crisi delle società occidentali? Quali le cause profonde e quali le eventuali conseguenze?",
+      "description": "Luigi Guiso\nintroduced by Emanuele Massetti \n\nThe threat of populism is moving across Western societies, generating fears and concerns proportional to the high degree of consensus it attracts.  Why is this happening now and in this part of the world? Is it an unfortunate historical coincidence or an inevitable step for the resolution of  the crisis these societies are in? What are the underlying causes and what are the possible consequences?",
       "tags": [
         "01",
         "10"
@@ -1654,12 +1654,12 @@
     },
     {
       "id": "58",
-      "title": "Come il populismo cambia da paese a paese",
+      "title": "Comparing populist movements",
       "startTimestamp": 1559376000000,
       "endTimestamp": 1559381400000,
       "day": 2,
       "location": "04",
-      "description": "Qual è la natura del populismo nei diversi paesi avanzati? Cosa possiamo imparare comparando i fattori economici, culturali e politici che contribuiscono a spiegare il successo dei populisti nei vari paesi? Una riflessione a vasto raggio con attenzione particolare ai casi della Germania, del Regno Unito e degli Stati Uniti, ma senza trascurare l’Italia.",
+      "description": "Thomas Ferguson - Thiemo Fetzer - Robert Gold\nchaired by Antonella Stirati\nWhy is populism surging in the world's most advanced economies? This panel compares how economic, cultural, and political factors have affected major country experiences including Germany, the UK and the US, as well ad Italy.",
       "tags": [
         "01"
       ],
@@ -1684,12 +1684,12 @@
     },
     {
       "id": "59",
-      "title": "Globalizzazione e disuguaglianze",
+      "title": "Globalization and Inequality",
       "startTimestamp": 1559376000000,
       "endTimestamp": 1559381400000,
       "day": 2,
       "location": "05",
-      "description": "Ci sono molti capi di imputazione che gravano sulla globalizzazione. Tra questi l’accusa più pesante è quella di aver fatto aumentare le disuguaglianze. È così vero? Una rassegna delle ricerche applicate sul tema a cura dell'economista che ha maggiormente contribuito all’analisi del commercio internazionale in mercati non competitivi. Sfatati molti luoghi comuni.",
+      "description": "Elhanan Helpman\nIntroduced by Lorenzo Tondo\n\nGlobalization has been blamed in the last thirty years for many economic ills, including the rise of inequality. I will discuss the findings of a large body of work on the impact of globalization on inequality. Research does not confirm many popular views.",
       "tags": [
         "01",
         "14"
@@ -1717,13 +1717,14 @@
       "endTimestamp": 1559381400000,
       "day": 2,
       "location": "10",
-      "description": "La scienza inutile. Tutto quello che non abbiamo voluto imparare (Francesco Saraceno - a cura di Luiss)\n\nne discute Fausto Panunzi\ncoordina Tonia Mastrobuoni",
+      "description": "Francesco Saraceno\norganized by Luiss\n\ndiscussed with Floriana Cerniglia, Fausto Panunzi\ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
       ],
       "organizers": [
         "108",
+        "97",
         "26"
       ],
       "relatedSessions": [
@@ -1734,12 +1735,12 @@
     },
     {
       "id": "61",
-      "title": "Populismo e società civile",
+      "title": "Populism and civil society",
       "startTimestamp": 1559379600000,
       "endTimestamp": 1559385000000,
       "day": 2,
       "location": "09",
-      "description": "I populisti sostengono di essere i soli rappresentanti legittimi del Popolo. In questa visione che ruolo hanno i corpi intermedi (inclusi i sindacati, le associazioni, ecc.) fondamentali nella democrazia liberale? Lezioni dall’Europa, dove i corpi intermedi hanno a lungo giocato un ruolo fondamentale, e dall’America Latina, dove il populismo è stato di casa per molto tempo.",
+      "description": "Antonio Spilimbergo\nintroduced by Paolo Morando\n\nPopulists believe that they are the only legitimate representatives of the people. In this vision, what role do fundamental intermediate bodies (including trade unions, associations etc.) play in a liberal democracy? What lessons can we learn from Europe, where intermediate bodies have long played a key role, and Latin America, where populism has been around for a long time?",
       "tags": [
         "01",
         "14"
@@ -1760,12 +1761,12 @@
     },
     {
       "id": "62",
-      "title": "La politica estera dei partiti populisti è destinata a fallire?",
+      "title": "Are populist foreign policies doomed to fail?",
       "startTimestamp": 1559379600000,
       "endTimestamp": 1559385000000,
       "day": 2,
       "location": "04",
-      "description": "C’è poca discontinuità col passato nelle politiche estere di tipo populista portate avanti, di recente, dal presidente Trump, dai Brexiteers britannici e dai leader di alcune democrazie europee. Dato che la retorica populista si dimostra spesso incompatibile con il perseguimento dell’interesse nazionale in un mondo globalizzato, i governi populisti preferiscono infatti infrangere molte promesse di politica estera al fine di rimanere in carica.",
+      "description": "Andrew Moravcsik\nintroduced by Chris Giles\n\nPopulist foreign policies pursued recently by President Trump, British Brexiteers, and leaders of other European democracies have produced surprisingly little real policy change. Populist rhetoric generally proves to be incompatible with pursuit of the national interest in a globalized world. On most issues, populist governments choose to break their foreign policy promises in order to stay in office.",
       "tags": [
         "01",
         "14"
@@ -1787,12 +1788,12 @@
     },
     {
       "id": "63",
-      "title": "La formazione economica nel terzo millennio",
+      "title": "Economic training in the third millennium",
       "startTimestamp": 1559379600000,
       "endTimestamp": 1559385000000,
       "day": 2,
       "location": "20",
-      "description": "I dati sulla mobilità sociale, insieme alle valutazioni nazionali e internazionali sulla literacy economica e finanziaria degli italiani, indicano la necessità di rafforzare la formazione scolastica sui problemi dell’economia globale. A cura dell’Associazione Europea per l’Educazione Economica AEEE Italia.\n\ncoordina Roberto Fini",
+      "description": "organised by Associazione Europea per l’Educazione Economica AEEE Italia\n\ncoordinated by Roberto Fini \nspeakers: Anna Maria Ajello, Annamaria Lusardi, Antonio Schizzerotto\n\nData on social mobility, together with national and international assessment of the economic and financial literacy of Italians, show that there is a need to strengthen school programs  about the global economy.",
       "tags": [
         "01",
         "03"
@@ -1813,12 +1814,12 @@
     },
     {
       "id": "64",
-      "title": "Cervelli in fuga? Andamenti, politica e politiche",
+      "title": "Italy's brain drain? Trends, politics and policy",
       "startTimestamp": 1559379600000,
       "endTimestamp": 1559385000000,
       "day": 2,
       "location": "08",
-      "description": "La recente “fuga di cervelli”, durante e dopo la crisi, sembra aver avuto effetti negativi non solo in ambito economico, ma anche sui risultati politici locali. Quali sono le conseguenze future per il panorama politico nazionale? Quali politiche per trasformare il fenomeno e invertire la tendenza? \n\na cura di Tortuga\ncoordina Jacopo Bassetto",
+      "description": "organised by Tortuga\n\ncoordinated by Jacopo Bassetto\nspeakers: Massimo Anelli, Lorenzo Maternini, Silvia Merler \n\nThe recent “brain drain” during and after the crisis would appear to have had negative effects not only in the economic field, but also on politics at local level. What are the future consequences for the national political panorama? What policy is required to transform the phenomenon and reverse the trend?",
       "tags": [
         "01",
         "03"
@@ -1838,12 +1839,12 @@
     },
     {
       "id": "65",
-      "title": "Uno sguardo globale per un’economia solidale a km. zero",
+      "title": "A global perspective for a fair and locally sourced economy",
       "startTimestamp": 1559381400000,
       "endTimestamp": 1559386800000,
       "day": 2,
       "location": "11",
-      "description": "In un mondo dove la dicotomia tra globalizzazione e localismo sono ancora elementi dibattuti, una riflessione per mettere in luce le nuove prospettive di un’economia emergente, che sia solidale e sostenibile, riportando al centro il valore dei territori. \n\na cura della Fondazione Franco Demarchi\ncoordina Daniel Tarozzi",
+      "description": "organisesd by Fondazione Franco Demarchi\n\ncoordinated by Daniel Tarozzi \nspeakers: Paolo Cacciari, Pietro Valenti \n\nIn a world where the dichotomy between globalisation and localism is still the subject of debate, the discussion will highlight new prospects for an emerging economy that is fair and sustainable, focusing on the value of local areas.",
       "tags": [
         "01",
         "03"
@@ -1865,12 +1866,12 @@
     },
     {
       "id": "66",
-      "title": "L’imperativo della crescita: cosa si può fare per le regioni e le città?",
+      "title": "Broadening innovation policy",
       "startTimestamp": 1559381400000,
       "endTimestamp": 1559386800000,
       "day": 2,
       "location": "16",
-      "description": "La scarsa diffusione di tecnologia e conoscenza pesa sulla crescita di produttività e innovazione dei paesi OCSE. Come si può favorire l’accesso alla conoscenza globale e trarre vantaggio da un mondo sempre più globalizzato e digitalizzato? Quali politiche si possono mettere in campo per ridurre i crescenti divari territoriali? \n\na cura del Centro OCSE di Trento\ncoordina Alessandra Proto",
+      "description": "organised by OECD Trento Centre for Local Development\n\ncoordinated by Alessandra Proto \nspeakers: Antonio Accetturo, Riccardo Crescenzi \n\nThe limited diffusion of technology and knowledge weighs on productivity growth and innovation in OECD countries. What can policies do to facilitate access to global knowledge and exploit the opportunities offered by an increasingly globalized and digitized world? What policies can governments and regions put in place to reduce territorial gaps?",
       "tags": [
         "01",
         "03"
@@ -1896,7 +1897,7 @@
       "endTimestamp": 1559388600000,
       "day": 2,
       "location": "04",
-      "description": "Merci l’Europe! Risposte aux sept mensonges populistes (Bernard Spitz - a cura di Grasset). \n\nne discutono Anais Ginori, Lucrezia Reichlin\ncoordina Tonia Mastrobuoni",
+      "description": "Bernard Spitz\norganised by Grasset\n\ndiscussed with Anais Ginori, Lucrezia Reichlin \ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
@@ -1918,12 +1919,12 @@
     },
     {
       "id": "68",
-      "title": "Immigrazione e voto per i populisti di estrema destra",
+      "title": "Globalization, the rise of right-wing parties, and the fall of social democracy",
       "startTimestamp": 1559383200000,
       "endTimestamp": 1559388600000,
       "day": 2,
       "location": "05",
-      "description": "Negli ultimi anni, lo scenario politico in Europa è cambiato in modo drammatico. In molti paesi, i partiti di destra hanno visto crescere i propri voti, spesso a scapito dei socialdemocratici. In che misura questo fenomeno è stato favorito dalla globalizzazione e in particolare, dalle dimensioni e della composizione dei recenti flussi migratori, dall’esposizione al commercio internazionale e dal calo del settore manifatturiero? \n\nintroduce Tobias Piller",
+      "description": "Joseph Zweimüller\nintroduced by Tobias Piller\n\nThe political landscape in Europe has changed dramatically over the recent years. In many countries, right-wing parties have strongly increased their vote shares, often at the expense of social democrats. To which extent is this driven by globalization – in particular, by the extent and composition of recent immigrant flows, and by exposure to international trade and shrinking manufacturing sectors? I discuss arguments put forth in the recent literature and present results from own research that sheds light on these and related issues.",
       "tags": [
         "01",
         "14"
@@ -1943,12 +1944,12 @@
     },
     {
       "id": "69",
-      "title": "Trade wars. Come cambia il commercio mondiale",
+      "title": "Trade wars. How global trade is changing",
       "startTimestamp": 1559383200000,
       "endTimestamp": 1559388600000,
       "day": 2,
       "location": "02",
-      "description": "Da qualche tempo le maggiori potenze – in particolare Stati Uniti e Cina – si sfidano con azioni unilaterali di chiusura e rappresaglia, accusandosi reciprocamente di competizione sleale.  Qual è l’impatto di questi fenomeni sulle imprese, i lavoratori e i consumatori? \n\nintroduce Andrea Fracasso \ncoordina Massimo Gaggi",
+      "description": "organised by \"lavoce.info\"\n\nwith Alessia Amighini, Marta Dassù, Daniel Gros, Alberto Viano \nintroduced by Andrea Fracasso \ncoordinated by Massimo Gaggi \n\nFor some time, the major powers – particularly the United States and China – have challenged each other with unilateral closure and retaliation measures, accusing each other of unfair competition. What is the impact of these phenomena on businesses, workers and consumers? ",
       "tags": [
         "01",
         "06"
@@ -1959,7 +1960,8 @@
         "130",
         "131",
         "132",
-        "51"
+        "51",
+        "227"
       ],
       "relatedSessions": [
         "15"
@@ -1970,12 +1972,12 @@
     },
     {
       "id": "70",
-      "title": "La guerra del debito",
+      "title": "The war against debt",
       "startTimestamp": 1559392200000,
       "endTimestamp": 1559397600000,
       "day": 2,
       "location": "03",
-      "description": "Tutti sembrano concordare sulla necessità della riduzione del debito pubblico come fattore di fragilità dell’economia italiana… ma come realizzarla? Ne discutono i rappresentanti delle maggiori forze politiche del nostro paese. \n\ncoordina Lucia Annunziata",
+      "description": "Renato Brunetta - Laura Castelli - Carlo Cottarelli - Massimo Garavaglia - Piercarlo Padoan\ncoordinated by Lucia Annunziata\n\nEveryone seems to agree that high public debt is a weakness of the Italian economy and must be reduced … but how should this be achieved? A discussion with representatives from the main political forces in our country.",
       "tags": [
         "01",
         "04"
@@ -1997,12 +1999,12 @@
     },
     {
       "id": "71",
-      "title": "Populismo digitale. La politica nell'età del web",
+      "title": "Digital populism. Politics in the internet era",
       "startTimestamp": 1559392200000,
       "endTimestamp": 1559397600000,
       "day": 2,
       "location": "09",
-      "description": "Internet ha trasformato radicalmente le regole del gioco politico. In rete sono nati nuovi partiti e movimenti e i social network si identificano ormai largamente con l’opinione pubblica. La costruzione del consenso sul web utilizza strumenti visibili e accessibili ma anche mezzi nascosti e disponibili a pochi... che è bene conoscere. \n\ncoordina Jacopo Iacoboni",
+      "description": "Mauro Calise - Stefano Zanero\ncoordinated by Jacopo Iacoboni \n\nInternet has radically transformed the rules of the political game. The web has generated new parties and movements and social media networks are by now widely identified with public opinion. The building of an online consensus uses tools that are visible and accessible, but also hidden means, available only to a few, that we should be aware of.",
       "tags": [
         "01",
         "04"
@@ -2023,12 +2025,12 @@
     },
     {
       "id": "72",
-      "title": "Quante economie nell'Eurozona?",
+      "title": "How Many “Eurozone” Economies?",
       "startTimestamp": 1559392200000,
       "endTimestamp": 1559397600000,
       "day": 2,
       "location": "18",
-      "description": "In questo panel si analizzeranno fattori economici e politici che, seppure inaspettatamente, giocano un ruolo fondamentale nell’Eurozona. Verranno prese in considerazione differenze interne e fra paesi che normalmente sfuggono all’attenzione. \n\na cura di INET\ncoordina Orsola Costantini",
+      "description": "organised by INET\n\nspeakers: Matteo Cavallaro, Mustafa Erdem Sakinç, Anna Maria Simonazzi \n\nThis panel analyzes political and economic factors that play unexpectedly, play a major roles in the Eurozone. Little-noticed differences within and between countries will be discussed.",
       "tags": [
         "01",
         "03"
@@ -2050,12 +2052,12 @@
     },
     {
       "id": "73",
-      "title": "Otium - l'urlo dei giovani",
+      "title": "Otium –young people cry out",
       "startTimestamp": 1559394000000,
       "endTimestamp": 1559426340000,
       "day": 2,
       "location": "19",
-      "description": "A cura degli studenti degli Istituti Superiori di Trento. In collaborazione con il Comune di Trento e il MUSE. Otium è una giornata di laboratori, azioni, musica e idee, creata dai giovani per i giovani. Un'occasione di partecipazione, per confrontarsi e riflettere insieme sugli Obiettivi dello Sviluppo Sostenibile, in dialogo con Enrico Giovannini e alcuni giovani youtuber.",
+      "description": "organised by the students of secondary institutes in Trento, in collaboration with the Municipality of Trento and the MUSE\n\nOtium is a day of workshops, actions, music and ideas, created by young people for young people. It is a chance to participate, exchange ideas and reflect together on the objectives of sustainable development, discussed with Enrico Giovannini and some young youtubers.",
       "tags": [
         "01",
         "03"
@@ -2072,12 +2074,12 @@
     },
     {
       "id": "74",
-      "title": "Co-operare per una crescita inclusiva",
+      "title": "Cooperating to achieve inclusive growth",
       "startTimestamp": 1559394000000,
       "endTimestamp": 1559399400000,
       "day": 2,
       "location": "20",
-      "description": "A partire dall’esperienza balcanica, per aprire la visione a più ampio raggio sul mondo, quattro spaccati d’azione che promuovono democrazia locale, cooperazione decentrata di comunità, informazione consapevole e sviluppo sostenibile, per fornire strumenti di contrasto a spinte nazionaliste. \n\na cura dell’Associazione Trentino con i Balcani\ncoordina Maurizio Camin",
+      "description": "organised by Associazione Trentino con i Balcani\n\ncoordinated by Maurizio Camin\nspeakers: Raffaele Crocco, Mario Raffaelli, Antonella Valmorbida \n\nStarting from an experience in the Balkans,  and in order to offer  a broader vision of the world,  the panel will present four actions that  promote local democracy, decentralised community cooperation, information awareness and sustainable development,  providing  instruments to combat nationalist impulses.",
       "tags": [
         "01",
         "03"
@@ -2098,12 +2100,12 @@
     },
     {
       "id": "75",
-      "title": "Identità dell’Euregio in cucina",
+      "title": "The identity of the Euroregion in the kitchen",
       "startTimestamp": 1559394000000,
       "endTimestamp": 1559399400000,
       "day": 2,
       "location": "07",
-      "description": "Possono alcune ricette di cucina mostrare la cultura glocal del primo Novecento? Sì, quando l’alimentazione suggerisce un’identià territoriale e transnazionale. Sì, perché la comunicazione grafica e le immagini digitali permettono un libero accesso alle informazioni sulla gastronomia dell’Euregio. \nA cura del Dipartimento di Psicologia e Neuroscienze e del Dipartimento di Sociologia e Ricerca Sociale dell’Università di Trento. \n\ncoordina Giovanna A. Massari",
+      "description": "organised by the University of Trento’s Department of Psychology and Neuroscience and Department of Sociology and Social Research\ncoordinated by Giovanna A. Massari\nspeakers: Giovanna Degli Avancini, Alessandro Luigini, Massimo Montanari \n\nCan cooking recipes demonstrate the glocal culture at the beginning of the 20th century? They can when the diet suggests an area and transnational identity. Graphic communication and digital images indeed allow free access to information on the gastronomic culture in the Euroregion.",
       "tags": [
         "01",
         "03"
@@ -2124,12 +2126,12 @@
     },
     {
       "id": "76",
-      "title": "Far funzionare il decentramento",
+      "title": "Making decentralisation work",
       "startTimestamp": 1559394000000,
       "endTimestamp": 1559399400000,
       "day": 2,
       "location": "02",
-      "description": "Sfruttare al massimo il decentramento per favorire lo sviluppo regionale è fondamentale laddove prevale la “geografia del malcontento” come risposta agli evidenti squilibri tra territori. Come può il decentramento ridare una prospettiva ai luoghi che si sentono indeboliti dalla globalizzazione e garantire ulteriore sostegno a quelli che, invece, ne hanno beneficiato? \n\na cura di OCSE\ncoordina Dorothée Allain-Dupré",
+      "description": "Stefano Bonaccini - Fernando Freire De Sousa - Maurizio Fugatti\norganised by OCSE\n\ncoordinated by Dorothée Allain-Dupré \n\nMaking the most of decentralisation for regional development is crucial in the current context of a \"geography of discontent\" and growing divides between places that feel left behind by globalisation and those that may benefit from the opportunities offered by megatrends. What makes decentralisation systems wok in a more effective way?",
       "tags": [
         "01",
         "04"
@@ -2138,7 +2140,7 @@
         "153",
         "154",
         "20",
-        "155"
+        "195"
       ],
       "relatedSessions": [
         "23",
@@ -2156,7 +2158,7 @@
       "endTimestamp": 1559399400000,
       "day": 2,
       "location": "10",
-      "description": "Scusi Prof. Cos'è il populismo? (Andrea Boitani, Rony Hamaui - a cura di Vita e Pensiero). \n\nne discutono Alberto Martinelli, Fabio Martini\ncoordina Tonia Mastrobuoni",
+      "description": "Andrea Boitani - Rony Hamaui\norganised by Vita e Pensiero\n\ndiscussed with Alberto Martinelli, Fabio Martini\ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
@@ -2178,12 +2180,12 @@
     },
     {
       "id": "78",
-      "title": "La caduta delle ambizioni",
+      "title": "The fall of the aspiration wall",
       "startTimestamp": 1559397600000,
       "endTimestamp": 1559403000000,
       "day": 2,
       "location": "08",
-      "description": "Che influenza ha il contesto politico-economico sulle scelte e sulle ambizioni personali? Le decisioni fondamentali sono prese, generalmente, nell’ambito di norme, regole, valori e opinioni sul mondo ben definiti. Nel caso della riunificazione tedesca, la convergenza con la Germania dell’Ovest ha influenzato le aspirazioni e gli investimenti in formazione degli studenti dell’Est del paese. \n\nintroduce Regina Krieger",
+      "description": "Ghazala Azmat\nintroduced by Regina Krieger\n\nHow does ones’ politico-economic environment shape aspirations and choices? Decisions are generally made within a specific set of social norms, rules, values and world views. We study how during the German Reunification, convergence with West Germany influenced the educational aspirations and eventual educational investments of students in the East.",
       "tags": [
         "01",
         "14"
@@ -2202,12 +2204,12 @@
     },
     {
       "id": "79",
-      "title": "Scopri, esplora, analizza. La finanza pubblica accessibile a tutti",
+      "title": "Discover, explore and analyse. Public finance accessible to all",
       "startTimestamp": 1559399400000,
       "endTimestamp": 1559404800000,
       "day": 2,
       "location": "09",
-      "description": "Il Portale OpenBDAP si inserisce in un'ampia iniziativa della Ragioneria Generale dello Stato intesa a sviluppare e aggiornare, attorno ai suoi sistemi informatici, un ecosistema di dati, nonché di forme e metodi di analisi e diffusione. Realizzato per costituire un unico punto di accesso ai dati di contabilità e finanza pubblica, è a disposizione dei cittadini, così come degli specialisti interessati alla disponibilità di dati analitici certificati per le proprie elaborazioni. \n\nintroduce e coordina Pino Donghi",
+      "description": "Presentation of the OpenBDAP portal, organised by the State General Accounting Office\nintroduced and coordinated by Pino Donghi \n\nspeakers: Carlo Cottarelli, Carmine Di Nuzzo, Federico Falcitelli, Daniele Franco, Enrico Giovannini \n\nThe OpenBDAP portal is part of a broad initiative by the State General Accounting Office to develop and update a data ecosystem, along with analysis and dissemination, around its computer systems. Set up as a single point of access to accounting and public finance data, it is available to citizens as well as specialists in need of certified analytical data.",
       "tags": [
         "01",
         "03"
@@ -2229,12 +2231,12 @@
     },
     {
       "id": "80",
-      "title": "Austerità, Euro e populismo",
+      "title": "Austerity, the euro and populism",
       "startTimestamp": 1559399400000,
       "endTimestamp": 1559404800000,
       "day": 2,
       "location": "18",
-      "description": "Quali sono le prospettive dell’Euro e del coordinamento delle politiche fiscali dopo le elezioni europee? Il sostegno alla moneta unica è cresciuto ultimamente nella maggior parte dei paesi. Eppure, non dovrebbe conseguirne anche il coordinamento in materia fiscale? Fino a che punto il dilagante nazionalismo sfida il ruolo di autorità sovranazionali? \n\ncoordina Rossella Bocciarelli",
+      "description": "Lars Feld - Gustavo Piga - Beatrice Weder Di Mauro\ncoordinated by Rossella Bocciarelli\n\nWhat are the prospects for the Euro and European fiscla policy co-ordination after the European elections? The popular support for the common currency has been increasing lately in most countries. But doesn't a common currency also require co-ordination in fiscal policies? How much does the spread of nationalism challenge the supranational authority?",
       "tags": [
         "01",
         "04"
@@ -2254,12 +2256,12 @@
     },
     {
       "id": "81",
-      "title": "Premiazione concorso EconoMia",
+      "title": "Competition award ceremony",
       "startTimestamp": 1559401200000,
       "endTimestamp": 1559406600000,
       "day": 2,
       "location": "20",
-      "description": "Il concorso EconoMia, svolto sul tema di questa edizione del Festival dell'Economia, premia i 20 migliori studenti di scuole secondarie superiori italiane. Gli studenti vincitori seguiranno da vicino il Festival, approfondendo così un grande tema dell'economia contemporanea.",
+      "description": "The EconoMia competition  rewards 20 high school students who offered the best written analysis of this year's theme. The winners will attend all events of the Festival,  thus learning more about a major issue in contemporary economics.",
       "tags": [
         "01",
         "05"
@@ -2276,12 +2278,12 @@
     },
     {
       "id": "82",
-      "title": "Nuove forme di rappresentanza: città a confronto",
+      "title": "New forms of representation: a comparison of Italian cities",
       "startTimestamp": 1559401200000,
       "endTimestamp": 1559406600000,
       "day": 2,
       "location": "07",
-      "description": "Confronto di esperienze, fra tre diverse città, su globalizzazione e nuove forme di rappresentanza degli interessi, attraverso la testimonianza dei direttori generali, per indagare l’incidenza delle trasformazioni in atto sull’organizzazione delle PA locali e la loro portata innovativa. \n\na cura dell’Associazione Nazionale dei Direttori Generali degli Enti Locali - ANDIGEL\ncoordina Carlo Mochi Sismondi",
+      "description": "organised by Associazione Nazionale dei Direttori Generali degli Enti Locali - ANDIGEL\n\ncoordinated by Carlo Mochi Sismondi \nspeakers: Michele Bertola, Giacomo Capuzzimati, Chiara Morandini\n\nHow do local public administrations address globalisation and new forms of representation of interest groups? Director generals from several Italian cities will investigate the impact of the transformation underway in the organisation of local public administrations and its innovative significance.",
       "tags": [
         "01",
         "03"
@@ -2303,12 +2305,12 @@
     },
     {
       "id": "83",
-      "title": "La democrazia a rischio",
+      "title": "Democracy at risk",
       "startTimestamp": 1559401200000,
       "endTimestamp": 1559406600000,
       "day": 2,
       "location": "04",
-      "description": "Sempre più spesso i sistemi liberali e democratici subiscono una involuzione autoritaria anche seguendo procedure elettorali e istituzionali legali. È quanto sta succedendo nell’America di Trump e in molti altri paesi, dalla Turchia all’Ungheria. Evitare la deriva autoritaria è possibile se le classi dirigenti avvertono in tempo il pericolo e si comportano di conseguenza.\nDaniel Ziblatt in videocollegamento dialoga con Sergio Fabbrini.\n\nintroduce Eva Giovannini",
+      "description": "Daniel Ziblatt - Sergio Fabbrini\nintroduced by Eva Giovannini\n\nLiberal and democratic systems are growingly experiencing an authoritarian regression, even when they follow legal electoral and institutional procedures. This is what is happening in Trump’s America and in many other countries, from Turkey to Hungary. The way to avoid an authoritarian drift is for both citizens and political leaders to be alert to the danger in time and to act accordingly.\nDaniel Ziblatt via video link, in a dialogue with Sergio Fabbrini",
       "tags": [
         "01",
         "08"
@@ -2333,7 +2335,7 @@
       "endTimestamp": 1559406600000,
       "day": 2,
       "location": "02",
-      "description": "Il sentiero stretto e oltre. Conversazione con Dino Pesole (Pier Carlo Padoan - a cura de Il Mulino). \n\ncoordina Tonia Mastrobuoni",
+      "description": "Pier Carlo Padoan\norganised by Il Mulino\n\ndiscussed with Massimo Bordignon, Elsa Fornero\ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
@@ -2351,12 +2353,12 @@
     },
     {
       "id": "85",
-      "title": "Reddito di cittadinanza e regole europee",
+      "title": "Citizens’s income and european rules",
       "startTimestamp": 1559404800000,
       "endTimestamp": 1559410200000,
       "day": 2,
       "location": "09",
-      "description": "Può il reddito di cittadinanza concederci maggiore flessibilità di bilancio rispettando le regole europee? Quali i suoi probabili effetti su forza lavoro, disoccupazione e reddito nazionale?",
+      "description": "Tommaso Monacelli - Pasquale Tridico\ncoordinated by Dario Laruffa \n\nCan the citizen’s income scheme lead to greater budgetary flexibility while respecting European rules? What are its probable effects on the workforce, unemployment and national income?",
       "tags": [
         "01",
         "04"
@@ -2375,12 +2377,12 @@
     },
     {
       "id": "86",
-      "title": "La competizione fra religioni",
+      "title": "Understanding religions as competing platforms: what has happened to religion in the world since the second world war?",
       "startTimestamp": 1559406600000,
       "endTimestamp": 1559412000000,
       "day": 2,
       "location": "18",
-      "description": "Negli ultimi 65 anni c’è stato un forte aumento di credenti musulmani nel mondo e, all’opposto, un notevole declino nel numero di cristiani. Eppure non si tratta di una religione che è cresciuta a scapito di un’altra ma di cambiamenti nella struttura demografica dei popoli in cui erano maggiormente radicate a partire dal dopoguerra. La competizione fra religioni ha invece distrutto molte pratiche locali e popolari sostituite da organizzazioni rappresentanti una delle due identità religiose maggiormente diffuse nel mondo.",
+      "description": "Paul Seabright\nintroduced by Pietro Veronese\n\nOver the last 65 years there has been a large rise in the share of Muslims in the world population and a decline in the share of Christians, but the big story is not one about the former growing at the expense of the latter, since the movement in their relative shares reflects almost entirely the different demographics of the populations in which the two religions were more strongly implanted at the beginning of the postwar era. Instead, the story is about local and folk religions all over the world being replaced by organisations representing one of the two major global religious identities. This lecture will look at how religions compete with each other in the global and local marketplaces.",
       "tags": [
         "01",
         "14"
@@ -2396,12 +2398,12 @@
     },
     {
       "id": "87",
-      "title": "Reddito di base, nazionalismo e globalizzazione",
+      "title": "Basic income, nationalism and globalization",
       "startTimestamp": 1559406600000,
       "endTimestamp": 1559412000000,
       "day": 2,
       "location": "05",
-      "description": "Il reddito di base incondizionato si differenzia dall’assistenza sociale – incluso il reddito di cittadinanza italiano – in tre aspetti: è prettamente individuale, non si basa sul reddito di partenza e nemmeno sull’occupazione del beneficiario. La fattibilità politica di tale proposta richiede una qualche forma di nazionalismo? E la globalizzazione ne mina la sostenibilità economica? \n\nintroduce Dino Pesole",
+      "description": "Philippe Van Parijs\nintroduced by Dino Pesole\n\nAn unconditional basic income differs from social assistance, including Italy’s reddito di cittadinanza, in three aspects: it is strictly individual, it is not means-tested and it is not work-tested. Does its political feasibility require some form of nationalism? Does globalization undermine its economic sustainability?",
       "tags": [
         "01",
         "08"
@@ -2421,12 +2423,12 @@
     },
     {
       "id": "88",
-      "title": "La globalizzazione e le economie locali",
+      "title": "Globalisation and local economies",
       "startTimestamp": 1559408400000,
       "endTimestamp": 1559413800000,
       "day": 2,
       "location": "20",
-      "description": "Qual è l’impatto del mercato globale sui mercati locali? Come le catene globali del valore cambiano i modelli di produzione locali? Qual è il ruolo dei flussi migratori sui sistemi di sviluppo locali?\n\na cura della Società Italiana degli Economisti\ncoordina Roberta Rabellotti",
+      "description": "organised by Società Italiana degli Economisti\n\ncoordinated by Roberta Rabellotti \nspeakers: Anna Giunta, Lucia Tajoli, Alessandra Venturini \n\nWhat is the impact of the global market on local markets? How can global value chains change local production models? What is the role of migration flows on local development systems?",
       "tags": [
         "01",
         "03"
@@ -2448,12 +2450,12 @@
     },
     {
       "id": "89",
-      "title": "Il Caudillismo ieri e oggi",
+      "title": "Caudillismo yesterday and today in South America and beyond",
       "startTimestamp": 1559408400000,
       "endTimestamp": 1559413800000,
       "day": 2,
       "location": "04",
-      "description": "Destra e sinistra si ritrovano in Sudamerica nell’esaltazione del Pueblo, nel passato di Perón come nel presente di Chavez e Maduro. Centrale è la figura del caudillo, il leader carismatico che con sapiente manipolazione delle parole fabbrica la sua “verità”, utilizza a sua discrezione le risorse pubbliche, tiene i suoi in perenne mobilitazione contro i nemici “esterni”, disprezza la legalità e mina alla radice le istituzioni liberali.",
+      "description": "Enrique Krauze\nintroduced by Francesco D'Ayala\n\nIn South America, the Right and the Left are similar in their glorification the Pueblo, like Perón did in the past and Chavez and Maduro today. A central role is played by the caudillo, the charismatic leader who with masterly manipulation of words constructs his own “truth”, uses public resources at his discretion, keeps his supporters continuously mobilised against “external” enemies, despises legality and undermines the roots of liberal institutions.",
       "tags": [
         "01",
         "09"
@@ -2478,7 +2480,7 @@
       "endTimestamp": 1559413800000,
       "day": 2,
       "location": "10",
-      "description": "Geografia economica dell’Europa sovranista (Gianmarco Ottaviano - a cura di Editori Laterza). \n\nne discutono Colin Crouch, Marta Dassù\ncoordina Tonia Mastrobuoni",
+      "description": "Gianmarco Ottaviano\norganised by Editori Laterza\n\ndiscussed with Colin Crouch, Marta Dassù\ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
@@ -2499,12 +2501,12 @@
     },
     {
       "id": "91",
-      "title": "Conflitti, migrazioni e populismo",
+      "title": "Conflict, migration and populism",
       "startTimestamp": 1559408400000,
       "endTimestamp": 1559413800000,
       "day": 2,
       "location": "02",
-      "description": "La combinazione di conflitti estesi e prolungati, le conseguentimigrazioni forzate su larga scala, le nove sfide rispetto al diritto d'asilo, il divario tra le risorse economiche e i bisogni umanitari, e la crescente xenofobia ha generato un amiscela esplosiva. Cosa può fare l'UNHCR, cosa possono fare i governi nazionali  e quelli locali, a partire dalle città. Il parere dell'Alto Commissario delle Nazioni Unite per i Rifugiati.\nintervista Francesca Mannocchi",
+      "description": "Filippo Grandi\nInterviewers: Annalisa Camilli e Francesca Mannocchi, \n\nThe combination of extensive and prolonged conflict, consequential forced migration on a large scale, new challenges to asylum rights, the gap between financial resources and humanitarian needs, and growing xenophobia has generated an explosive mixture. What the UNHCR can do, and what national and local governments can do, starting from the cities. The opinion of the United Nations High Commissioner for Refugees.",
       "tags": [
         "01",
         "13"
@@ -2524,12 +2526,12 @@
     },
     {
       "id": "92",
-      "title": "L’insulto",
+      "title": "The insult",
       "startTimestamp": 1559413800000,
       "endTimestamp": 1559421000000,
       "day": 2,
       "location": "06",
-      "description": "(Libano-Francia, 2017)\n\nregia di ZIAD DOUEIRI con ADEL KARAM, RITA HAYEK, KAMEL EL BASHA\n\nCome i nazionalismi esasperati possono trasformare un banale litigio in un regolamento di conti tra nazioni, culture e religioni diverse.",
+      "description": "directed by ZIAD DOUEIRI with ADEL KARAM, RITA HAYEK, KAMEL EL BASHA\n\nHow heightened nationalism can transform a commonplace argument into a settling of scores between different nations, cultures and religions.\n\norganised by Marco Onado and Andrea Landi",
       "tags": [
         "01",
         "02"
@@ -2548,12 +2550,12 @@
     },
     {
       "id": "93",
-      "title": "Democrazia liberale o dittatura della maggioranza?",
+      "title": "Liberal democracy or dictatorship of the majority?",
       "startTimestamp": 1559415600000,
       "endTimestamp": 1559421000000,
       "day": 2,
       "location": "03",
-      "description": "Stretta fra l’ascesa delle autocrazie e l’onda del populismo, oggi la democrazia liberale sembra in crisi. Riuscirà a sopravvivere quello che Churchill definì “il sistema peggiore del mondo, a eccezione di tutti gli altri”?\nintervistano Enrico Franceschini, Tim Hames",
+      "description": "John Bercow\ninterviewers: Enrico Franceschini, Tim Hames \n\nSqueezed between the rise of autocracies and the wave of populism, liberal democracy seems to be in a crisis. Will the \"worst kind of government, except for all the others\", as Churchill called it, be able to survive? We will ask John Bercow, Speaker of the House of Commons, known as \"the mother of all parliaments\". In conversation with Tim Hames, former Assistant Editor of The Times, and Enrico Franceschini, columnist of La Repubblica from London.",
       "tags": [
         "01",
         "13"
@@ -2574,12 +2576,12 @@
     },
     {
       "id": "94",
-      "title": "Sovranità",
+      "title": "Sovereignty",
       "startTimestamp": 1559462400000,
       "endTimestamp": 1559467800000,
       "day": 3,
       "location": "07",
-      "description": "Uno Stato è sovrano se è indipendente e il suo territorio inviolabile. La sua sovranità è però condizionata da accordi e organismi internazionali. Il sovranismo rifiuta questo condizionamento, respingendone la logica multilaterale e sopranazionale: con quali conseguenze economiche e politiche?\n\nintroduce Louisa Parks",
+      "description": "Gianmarco Ottaviano\nintroduced by Louisa Parks\n\nA sovereign state is independent if its territory is inviolable. Its sovereignty is however conditioned by international agreements and organisations. Sovereignism rejects this conditioning, refusing the multilateral and supranational logic: what are the economic and political consequences?",
       "tags": [
         "01",
         "10"
@@ -2598,12 +2600,12 @@
     },
     {
       "id": "95",
-      "title": "La geografia del malcontento",
+      "title": "The geography of discontent",
       "startTimestamp": 1559462400000,
       "endTimestamp": 1559467800000,
       "day": 3,
       "location": "02",
-      "description": "Lo squilibrio economico tra regioni è diventato una minaccia per il progresso economico, la coesione sociale e la stabilità politica in Europa. La geografia del malcontento evidenzia l’incapacità delle politiche di mercato di diffondere equamente prosperità e opportunità. Quali politiche mettono in atto i paesi OCSE per contrastare questa tendenza?\n\nintroduce Joaquim Oliveira Martins",
+      "description": "Riccardo Fraccaro - Fernando Freire De Sousa - Peter Kurz - Jim O'Neill\norganised by OCSE\n\nintroduced by Joaquim Oliveira Martins\n\nRegional economic divergence has become a threat to economic progress, social cohesion and political stability in Europe. The geography of discontent highlights the inability of current market processes and policies in spreading prosperity and opportunity. What are the policies put in place by selected OECD countries to reverse this trend?",
       "tags": [
         "01",
         "04"
@@ -2624,12 +2626,12 @@
     },
     {
       "id": "96",
-      "title": "Il terzo pilastro. La comunità dimenticata tra stato e mercati",
+      "title": "The third pillar. how markets and the state leave the community behind",
       "startTimestamp": 1559462400000,
       "endTimestamp": 1559467800000,
       "day": 3,
       "location": "18",
-      "description": "Il terzo pilastro. La comunità dimenticata tra stato e mercati (Raghuram G. Rajan - a cura di Università Bocconi Editore). \n\nne discutono Luigi Guiso, Pier Carlo Padoan\ncoordina Tonia Mastrobuoni",
+      "description": "Raghuram G. Rajan\norganised by Egea\n\ndiscussed with Luigi Guiso, Pier Carlo Padoan\ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
@@ -2650,12 +2652,12 @@
     },
     {
       "id": "97",
-      "title": "Il populismo e l'incomprensione dell'economia",
+      "title": "Populism and lay misunderstanding of economics",
       "startTimestamp": 1559462400000,
       "endTimestamp": 1559467800000,
       "day": 3,
       "location": "05",
-      "description": "La gente comune fraintende l’economia in modo sistematico per ragioni profonde, radicate nel divario fra l’approccio cognitivo degli esseri umani e l’analisi economica. Questa mancata comprensione dei principi economici ha sempre un impatto sulle politiche pubbliche ma soprattutto quando i populisti sono al potere, dal momento che adottano le stesse visioni semplicistiche dell’elettorato.",
+      "description": "David Leiser\nintroduced by Paolo Mantovan\n\nThere are profound reasons why the public misunderstands economics in predictable ways, rooted in the mismatch between our human cognitive endowment and economic analysis. This impacts public policy everywhere, but especially when populists control the economy, as their self-presentation as one with “the people” compels them to embrace simplistic views that resonate with those of the lay public.",
       "tags": [
         "01",
         "14"
@@ -2674,12 +2676,12 @@
     },
     {
       "id": "98",
-      "title": "Il fallimento della sinistra",
+      "title": "The failure of the left",
       "startTimestamp": 1559464200000,
       "endTimestamp": 1559469600000,
       "day": 3,
       "location": "03",
-      "description": "Perché in tutto l’Occidente le classi lavoratrici si sono spostate a destra? Apertura dei mercati, società multietnica, rivoluzioni tecnologiche, vincoli esteri e di bilancio: le ragioni del divorzio della sinistra dal suo popolo raccontate a partire dalle esperienze di un inviato in Europa, Cina e Usa.\n\nintroduce Massimo Mazzalai",
+      "description": "Federico Rampini\nintroduced by Massimo Mazzalai\n\nWhy has the working class all over the West moved politically to the right? The opening up of markets, a multi-ethnic society, technological revolutions, foreign and budgetary constraints: the reasons behind the divorce of the left from its people, based on the experiences of a correspondent in Europe, China and the USA.",
       "tags": [
         "01",
         "08"
@@ -2700,12 +2702,35 @@
     },
     {
       "id": "99",
-      "title": "Corpi intermedi: una risposta ai venti di crisi?",
+      "title": "Roadmap to 2030",
+      "startTimestamp": 1559464200000,
+      "endTimestamp": 1559469600000,
+      "day": 3,
+      "location": "19",
+      "description": "speakers: Enrico Giovannini, Michele Lanzinger, Mario Tonina\n\nThe Sustainable Development Goals of the UN’s 2030 Agenda represent guidelines for constructing the future of mankind on this planet. A dialogue focusing on the strategies it is planned to put into effect in Italy and Trentino to achieve the ambitious goals for sustainability.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "163",
+        "229",
+        "230"
+      ],
+      "relatedSessions": [
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/roadmap-to-2030",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "100",
+      "title": "Intermediate bodies: a response to the winds of crisis?",
       "startTimestamp": 1559466000000,
       "endTimestamp": 1559471400000,
       "day": 3,
       "location": "20",
-      "description": "In questi anni di crisi economica, i corpi intermedi devono rafforzare la loro valenza di snodo per la gestione delle interazioni sociali: la vera sfida in atto è quella di fungere da supporto concreto e qualificante alle nuove generazioni d’imprenditori, favorendo ripresa, crescita e sviluppo d’insieme.\n\na cura del Gruppo Giovani Imprenditori del Terziario di Confcommercio Trentino\ncoordina Alberto Faustini",
+      "description": "organised by Gruppo Giovani Imprenditori del Terziario di Confcommercio Trentino\n\ncoordinated by Alberto Faustini \nspeakers: Giovanni Bort, Nadio Delai, Fausto Manzana \n\nIn times of economic crisis intermediate bodies must reinforce their value as meeting points for the management of social interaction. The real challenge that is underway is to provide concrete and qualified support to new generations of entrepreneurs, encouraging overall recovery, growth and development.",
       "tags": [
         "01",
         "03"
@@ -2725,13 +2750,13 @@
       "youtubeUrl": ""
     },
     {
-      "id": "100",
-      "title": "Ma dove sono andati a finire i posti di lavoro buoni?",
+      "id": "101",
+      "title": "(On the effects of under-employment on the rise of populism) So where have all the good jobs gone?",
       "startTimestamp": 1559466000000,
       "endTimestamp": 1559471400000,
       "day": 3,
       "location": "04",
-      "description": "Le cifre sulla disoccupazione celano i numeri drammatici della sottoccupazione, lavori a poche ore e sottopagati. I giovani e le persone meno istruite sono sempre più sottoccupate. Mentre gli immigrati vengono erroneamente incolpati di questo peggioramento della qualità del lavoro. Cosa si può fare per cambiare questo stato di cose?\n\nintroduce Luca De Biase",
+      "description": "David G. Blanchflower\nintroduced by Luca De Biase\n\nThe unemployment figures hide dramatic statistics regarding underemployment, underpaid work and jobs of a few hours. Young people and the less educated are increasingly underemployed, while immigrants are erroneously blamed for this worsening in the quality of work. What can be done to change this situation?",
       "tags": [
         "01",
         "14"
@@ -2751,13 +2776,13 @@
       "youtubeUrl": ""
     },
     {
-      "id": "101",
-      "title": "Welfare, populismi e crisi della classe media",
+      "id": "102",
+      "title": "WELFARE, POPULISM and the crisis of the middle class",
       "startTimestamp": 1559467800000,
       "endTimestamp": 1559473200000,
       "day": 3,
       "location": "08",
-      "description": "L’ascesa e il declino della classe media ridisegnano due aspetti cruciali delle società contemporanee: preferenze di voto e di consumo. Come possono gli Stati rispondere alle aspettative, in termini di welfare, di questa parte di popolazione e far fronte all’ascesa dei nuovi populismi?\n\na cura del CEST - Centro per l’Eccellenza e gli Studi Transdisciplinari\ncoordina Daniela Arlia ",
+      "description": "organised by CEST - Centro per l’Eccellenza e gli Studi Transdisciplinari\n\ncoordinated by Daniela Arlia \nspeakers: Lorenza Antonucci, Italo Colantone, Luigi Guiso\n\nThe rise and fall of the middle classes redesigns two crucial aspects of contemporary society: voting and consumer preferences. How can states respond to expectations, in terms of welfare, from this part of the population and deal with the rise of new populism?",
       "tags": [
         "01",
         "03"
@@ -2778,13 +2803,13 @@
       "youtubeUrl": ""
     },
     {
-      "id": "102",
-      "title": "Dove finisce l'Europa",
+      "id": "103",
+      "title": "Where Europe ends",
       "startTimestamp": 1559469600000,
       "endTimestamp": 1559475000000,
       "day": 3,
       "location": "02",
-      "description": "L’Unione Europa è uno strano ircocervo: molto più di un semplice accordo di libero scambio tra paesi sovrani ma assai meno di una federazione. L’ircocervo produce tensioni tra cittadini e Europa e divergenza economica tra i paesi membri. Quali innovazioni istituzionali sono necessarie e possibili per renderlo più funzionale?\n\nintroduce Massimo Bordignon \ncoordina Massimo Gaggi",
+      "description": "organised by \"lavoce.info\"\n\nwith Sergio Fabbrini, Maurizio Landini, Alberto Martinelli, Simona Piattoni, Lucrezia Reichlin \n\nintroduced by Massimo Bordignon \ncoordinated by Massimo Gaggi \n\nThe European Union is a hircocervus: much more than a simple free trade agreement between sovereign states but much less than a federation. This strange creature creates tensions between citizens and Europe, and economic disparities between member states. What institutional innovations are necessary and possible to make this creature more effective?",
       "tags": [
         "01",
         "06"
@@ -2809,13 +2834,13 @@
       "youtubeUrl": ""
     },
     {
-      "id": "103",
-      "title": "L’Europa da costruire: più opportunità che vincoli",
+      "id": "104",
+      "title": "More opportunities than constraints",
       "startTimestamp": 1559469600000,
       "endTimestamp": 1559475000000,
       "day": 3,
       "location": "09",
-      "description": "L’Europa è in stallo: molte lodevoli intenzioni e dichiarazioni ma troppo pochi atti concreti. Le gelosie nazionali, anche nella gestione delle politiche economiche e finanziarie non devono prevalere su una governance comune, l’unica che può affrontare efficacemente i problemi posti dalla globalizzazione.\n\nintroduce Ferruccio De Bortoli",
+      "description": "Ignazio Visco\nwith Ferruccio De Bortoli, Valentina Romei\n\nEurope is in a stalemate: lots of praiseworthy intentions and statements, but few concrete actions. The often narrow-minded defence of national interests, including when managing  economic and financial policies, must not hinder the establishment of a more effective common governance, which is the only way to effectively deal with the problems raised by globalisation, demographic processes and unprecedented technological changes.",
       "tags": [
         "01",
         "14"
@@ -2836,13 +2861,13 @@
       "youtubeUrl": ""
     },
     {
-      "id": "104",
+      "id": "105",
       "title": "Io Khaled vendo uomini e sono innocente. La tirannia dell'intimità",
       "startTimestamp": 1559469600000,
       "endTimestamp": 1559475000000,
       "day": 3,
       "location": "10",
-      "description": "Io Khaled vendo uomini e sono innocente. La tirannia dell'intimità (Francesca Mannocchi - a cura di Einaudi).\n\ncoordina Tonia Mastrobuoni",
+      "description": "Francesca Mannocchi\norganised by Einaudi\n\ndiscussed with Stefano Allievi \ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
@@ -2861,20 +2886,21 @@
       "youtubeUrl": ""
     },
     {
-      "id": "105",
-      "title": "INET",
+      "id": "106",
+      "title": "The destiny of experts in the 21st century",
       "startTimestamp": 1559476800000,
       "endTimestamp": 1559482200000,
       "day": 3,
       "location": "05",
-      "description": "INET.",
+      "description": "Robert Johnson - Annalisa Rosselli - Michael Spence\norganised by INET\n\nHow the perception of skills has changed in the plast few years. The role played by populism growth, and what experts can do to regain citizens’ confidence.",
       "tags": [
         "01",
         "04"
       ],
       "organizers": [
         "79",
-        "80"
+        "80",
+        "228"
       ],
       "relatedSessions": [
         "41"
@@ -2884,13 +2910,13 @@
       "youtubeUrl": ""
     },
     {
-      "id": "106",
-      "title": "I consumatori e il mercato unico europeo",
+      "id": "107",
+      "title": "Consumers and the single european market",
       "startTimestamp": 1559480400000,
       "endTimestamp": 1559485800000,
       "day": 3,
       "location": "04",
-      "description": "Il mercato unico europeo è in continua evoluzione e richiede un costante adeguamento alle nuove esigenze emergenti, garantendo tutele uniformi e maggiore per tutti i consumatori europei, che potranno acquistare prodotti e servizi confrontando le offerte di un numero sempre maggiore di operatori.\n\na cura di Altroconsumo\ncoordina Marino Melissano",
+      "description": "organised by Altroconsumo\n\ncoordinated by Marino Melissano\nspeakers: Stefano Da Empoli, Samantha Rose, Alice Rovati \n\nThe single European market is continuously evolving and requires constant adaptation to new emerging needs, guaranteeing uniform and greater safeguards for all European consumers, who can purchase products and services by comparing what is on offer from an ever greater number of operators.",
       "tags": [
         "01",
         "03"
@@ -2910,13 +2936,13 @@
       "youtubeUrl": ""
     },
     {
-      "id": "107",
-      "title": "Tertium (non) datur: l'alternativa cooperativa",
+      "id": "108",
+      "title": "Tertium (non) datur: the cooperative alternative",
       "startTimestamp": 1559480400000,
       "endTimestamp": 1559485800000,
       "day": 3,
       "location": "07",
-      "description": "Se il keynesismo ha segnato il governo dello stato sul mercato e il neoliberismo l’assoggettamento dello Stato ai principi del mercato, è proprio vero che non c’è nessuna alternativa? Il modello del sistema cooperativo può rispondere alle grandi trasformazioni politiche, sociali ed economiche?\n\na cura di EURICSE\ncoordina Simone Casalini ",
+      "description": "organised by EURICSE\n\ncoordinated by Simone Casalini \nspeakers: Carlo Borzaga, Giancarlo Provasi, Marianella Sclavi \n\nIf Keynesianism established the rule of the state over the market and neoliberalism the subjugation of the state to market principles, is it really true that there is no alternative? Can the cooperative system respond to the major political, social and economic transformations underway?",
       "tags": [
         "01",
         "03"
@@ -2934,13 +2960,13 @@
       "youtubeUrl": ""
     },
     {
-      "id": "108",
-      "title": "Stato, mercato e comunità locali",
+      "id": "109",
+      "title": "State, market and local communities",
       "startTimestamp": 1559482200000,
       "endTimestamp": 1559487600000,
       "day": 3,
       "location": "03",
-      "description": "L’interazione fra Stato, mercato e comunità locali è fondamentale nel funzionamento di una democrazia. Cosa succede quando la globalizzazione porta al prevalere di Stato e mercato sulle comunità locali. Cosa fare per ripristinare un equilibrio in cui il terzo pilastro abbia un ruolo maggiore?\n\nintroduce Tito Boeri",
+      "description": "Raghuram G. Rajan\nintroduced by Tito Boeri\n\nThe interaction between state, market and local communities is fundamental in the functioning of a democracy. What happens when globalisation leads to the prevalence of the state and market over local communities? What can be done to restore an equilibrium in which the third pillar has a greater role?",
       "tags": [
         "01",
         "14"
@@ -5411,6 +5437,94 @@
       "websiteUrl": "https://it.wikipedia.org/wiki/Raghuram_Rajan",
       "twitterUrl": "https://twitter.com/raghuramrrajan",
       "linkedInUrl": "https://www.linkedin.com/in/raghuram-rajan/",
+      "facebookUrl": ""
+    },
+    {
+      "id": "223",
+      "name": "Elena Granaglia",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "224",
+      "name": "Giovanni Vecchi",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "225",
+      "name": "Joan Roca",
+      "bio": "Direttore, MUHBA - Museo di Storia di Barcellona.",
+      "company": "Direttore, MUHBA - Museo di Storia di Barcellona",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "226",
+      "name": "Gian Franco Damiano",
+      "bio": "President of the Italian-Libyan Chamber of commerce.",
+      "company": "President of the Italian-Libyan Chamber of commerce",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "227",
+      "name": "Michele Geraci",
+      "bio": "Sottosegretario allo sviluppo economico.",
+      "company": "Sottosegretario allo sviluppo economico",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "228",
+      "name": "Annalisa Rosselli",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "229",
+      "name": "Michele Lanzinger",
+      "bio": "Director of the MUSE, Trento Science Museum.",
+      "company": "Director of the MUSE, Trento Science Museum",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "230",
+      "name": "Mario Tonina",
+      "bio": "Assessore all'urbanistica, ambiente e cooperazione della Provincia autonoma di Trento, con funzioni di Vicepresidente.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
       "facebookUrl": ""
     }
   ],
