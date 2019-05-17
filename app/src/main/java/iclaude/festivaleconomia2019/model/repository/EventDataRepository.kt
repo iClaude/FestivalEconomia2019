@@ -35,7 +35,9 @@ class EventDataRepository(private val inputStream: InputStream) {
 
     fun loadEventDataFromJSONFile() {
         ioScope.launch {
-            _eventDataLive.postValue(JSONparser.parseEventData(inputStream))
+            val eventData = JSONparser.parseEventData(inputStream)
+            eventData.sessions.sortBy { it.startTimestamp }
+            _eventDataLive.postValue(eventData)
             dataLoaded = true
         }
     }

@@ -359,6 +359,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
         get() = _goToSessionEvent
 
     fun goToSession(sessionId: String) {
+        Log.d("ID_PROBLEM", "id = $sessionId")
         _goToSessionEvent.value = Event(sessionId)
     }
 

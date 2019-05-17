@@ -1224,6 +1224,29 @@
       "youtubeUrl": ""
     },
     {
+      "id": "41",
+      "title": "INET",
+      "startTimestamp": 1559314800000,
+      "endTimestamp": 1559320200000,
+      "day": 1,
+      "location": "02",
+      "description": "Event cancelled.",
+      "tags": [
+        "01",
+        "04"
+      ],
+      "organizers": [
+        "79",
+        "80"
+      ],
+      "relatedSessions": [
+        "105"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/inet-titolo",
+      "youtubeUrl": ""
+    },
+    {
       "id": "42",
       "title": "How Nations are born (and why nationalism returns)",
       "startTimestamp": 1559314800000,

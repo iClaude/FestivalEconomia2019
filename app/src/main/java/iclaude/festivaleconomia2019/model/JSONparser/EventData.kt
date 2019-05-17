@@ -7,7 +7,7 @@ import iclaude.festivaleconomia2019.model.data_classes.Tag
 
 data class EventData(
         val locations: List<Location>,
-        val sessions: List<Session>,
+        val sessions: MutableList<Session>,
         val organizers: List<Organizer>,
         val tags: List<Tag>
 )

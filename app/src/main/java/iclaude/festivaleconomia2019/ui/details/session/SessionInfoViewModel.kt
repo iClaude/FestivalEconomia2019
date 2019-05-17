@@ -50,8 +50,7 @@ class SessionInfoViewModel : ViewModel(), LoginFlow, RelatedSessions {
     fun loadSessionInfo() {
         val eventData: EventData = eventDataFromRepoLive.value ?: return
 
-        val id = sessionId.toInt()
-        val session = eventData.sessions[id]
+        val session = eventData.sessions.find { it.id == sessionId }!!
 
         sessionInfo = SessionInfo(
             session.id,
