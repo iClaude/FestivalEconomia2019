@@ -95,9 +95,12 @@ class SessionInfoViewModel : ViewModel(), LoginFlow, RelatedSessions {
         val sessions = mutableListOf<Session>()
         session.relatedSessions ?: return sessions
 
-        for (sessionId in session.relatedSessions) {
-            sessions.add(sessionList[sessionId.toInt()])
+        for (eachSession in sessionList) {
+            if (eachSession.id in session.relatedSessions) {
+                sessions.add(eachSession)
+            }
         }
+
         return sessions
     }
 

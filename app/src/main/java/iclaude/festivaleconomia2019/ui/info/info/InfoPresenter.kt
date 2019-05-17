@@ -143,7 +143,7 @@ class InfoPresenter(
                 clickableSpanToSessionDetails {
                     context = mContext
                     navController = mNavController
-                    sessionId = "44"
+                    sessionId = "110"
                 }
             }
         }

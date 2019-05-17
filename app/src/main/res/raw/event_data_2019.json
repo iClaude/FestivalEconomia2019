@@ -205,8 +205,8 @@
     {
       "id": "01",
       "title": "Inauguration",
-      "startTimestamp": 1559221200000,
-      "endTimestamp": 1559226600000,
+      "startTimestamp": 1559217600000,
+      "endTimestamp": 1559223000000,
       "day": 0,
       "location": "02",
       "description": "speakers:\nAlessandro Andreatta, Tito Boeri, Innocenzo Cipolletta, Paolo Collini, Gregorio De Felice, Maurizio Fugatti, Giuseppe Laterza\n\ncoordinated by Eva Giovannini",
@@ -229,8 +229,8 @@
     {
       "id": "02",
       "title": "What to do about Populism",
-      "startTimestamp": 1559226600000,
-      "endTimestamp": 1559232000000,
+      "startTimestamp": 1559223000000,
+      "endTimestamp": 1559228400000,
       "day": 0,
       "location": "03",
       "description": "James Robinson\nintroduced by Tito Boeri\n\nThe specter of populism is haunting the world. But what is it exactly? Where does it come from and what should be done about it? We define populism as an anti-elitist exclusionary political strategy which builds a coalition of discontented citizens to challenge the status-quo. To understand why this coalition is potentially destabilizing to democracy and how it forms we developed a framework to studying the joint evolution of state and society.",
@@ -358,8 +358,8 @@
     {
       "id": "07",
       "title": "Le riforme dimezzate",
-      "startTimestamp": 1559233800000,
-      "endTimestamp": 1559239200000,
+      "startTimestamp": 1559235600000,
+      "endTimestamp": 1559241000000,
       "day": 0,
       "location": "10",
       "description": "Marco Leonardi\nOrganised by Egea\n\ndiscussed with Roberto Mania \n\ncoordinated by Tonia Mastrobuoni",
@@ -763,7 +763,7 @@
     },
     {
       "id": "23",
-      "title": "Nations vs regions identity of places: what is the role of culture?",
+      "title": "Identity of places: what is the role of culture?",
       "startTimestamp": 1559295000000,
       "endTimestamp": 1559300400000,
       "day": 1,
@@ -1092,8 +1092,8 @@
     {
       "id": "36",
       "title": "Protectionism and globalisation in italian businesses",
-      "startTimestamp": 1559311200000,
-      "endTimestamp": 1559316600000,
+      "startTimestamp": 1559309400000,
+      "endTimestamp": 1559314800000,
       "day": 1,
       "location": "12",
       "description": "organised by GEI Gruppo Economisti di Impresa\n\ncoordinated by Massimo Deandreis \nspeakers: Innocenzo Cipolletta, Gregorio De Felice, Alessandra Lanza\n\nThe Italian association of business economists presents recent research by its members on the relationship between business and economic globalisation.",
@@ -1174,12 +1174,12 @@
     },
     {
       "id": "39",
-      "title": "Come reagiscono le vittime della globalizzazione",
+      "title": "(on populism and rational voters) How the victims of globalisation react",
       "startTimestamp": 1559313000000,
       "endTimestamp": 1559318400000,
       "day": 1,
       "location": "04",
-      "description": "Uno studio delle reazioni alla perdita del posto di lavoro a seguito di delocalizzazione, cambiamento tecnologico o errori del management. Quando si chiede maggiore protezionismo e quando no tra i sostenitori di Trump e della Clinton e a seconda del livello di istruzione. Come incidono sulla domanda di protezioni doganali le informazioni sulla violazione dei labor standards nei paesi esportatori.",
+      "description": "Rafael Di Tella\nintroduced by Eugenio Occorsio\n\nWe study preferences for protectionism in response to unemployment resulting from different types of labor market shocks. These include technological change, a demand shift, bad management, and three kinds of international outsourcing. Demand for import protection increases significantly in all cases, except for the “bad management” shock. Effects appear to be heterogeneous across subgroups with different political preferences and education. Trump supporters are more protectionist than Clinton supporters, but preferences seem easy to manipulate: Clinton supporters primed with trade shocks are as protectionist as baseline Trump voters. Highlighting labor abuses in the exporting country increases the demand for trade protection by Clinton supporters but not Trump supporters.",
       "tags": [
         "01",
         "14"
@@ -1221,29 +1221,6 @@
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/contrordine-compagni-manuale-di-resistenza-alla-tecnofobia-per-la-riscossa-del-lavoro-e-dell-italia",
-      "youtubeUrl": ""
-    },
-    {
-      "id": "41",
-      "title": "INET",
-      "startTimestamp": 1559314800000,
-      "endTimestamp": 1559320200000,
-      "day": 1,
-      "location": "02",
-      "description": "Event cancelled.",
-      "tags": [
-        "01",
-        "04"
-      ],
-      "organizers": [
-        "79",
-        "80"
-      ],
-      "relatedSessions": [
-        "105"
-      ],
-      "photoUrl": "",
-      "sessionUrl": "https://2019.festivaleconomia.eu/-/inet-titolo",
       "youtubeUrl": ""
     },
     {
@@ -1292,31 +1269,6 @@
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/austerity-e-populismo",
-      "youtubeUrl": ""
-    },
-    {
-      "id": "44",
-      "title": "L'austerità sostenibile",
-      "startTimestamp": 1559314800000,
-      "endTimestamp": 1559320200000,
-      "day": 1,
-      "location": "02",
-      "description": "Un paese ad alto debito come l’Italia quanto deve essere virtuoso nelle politiche fiscali? Quale è un livello pericoloso del debito pubblico? Cosa può fare un Governo per contrastare la stagnazione economica? Ne discute un grande economista.\n\nintroduce Ferdinando Giugliano",
-      "tags": [
-        "01",
-        "14"
-      ],
-      "organizers": [
-        "196",
-        "197"
-      ],
-      "relatedSessions": [
-        "32",
-        "43",
-        "80"
-      ],
-      "photoUrl": "",
-      "sessionUrl": "https://2019.festivaleconomia.eu/-/tito-2",
       "youtubeUrl": ""
     },
     {
@@ -1866,7 +1818,7 @@
     },
     {
       "id": "66",
-      "title": "Broadening innovation policy",
+      "title": "The imperative of growth: what can be done for regions and cities?",
       "startTimestamp": 1559381400000,
       "endTimestamp": 1559386800000,
       "day": 2,
@@ -2982,6 +2934,151 @@
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/tito-6",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "110",
+      "title": "Sustainable austerity",
+      "startTimestamp": 1559228400000,
+      "endTimestamp": 1559233800000,
+      "day": 0,
+      "location": "03",
+      "description": "Olivier Blanchard - Giovanni Tria\ncoodinated by Ferdinando Giugliano\n\nHow virtuous must a country with a high level of debt like Italy be in terms of fiscal policy? What represents a dangerous level of public debt? What can a government do to fight economic stagnation?",
+      "tags": [
+        "01",
+        "04"
+      ],
+      "organizers": [
+        "196",
+        "231",
+        "197"
+      ],
+      "relatedSessions": [
+        "32",
+        "43",
+        "80"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/tito-2",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "111",
+      "title": "Ten Years After: From Financial Crisis to Yellow Vests",
+      "startTimestamp": 1559296800000,
+      "endTimestamp": 1559302200000,
+      "day": 1,
+      "location": "07",
+      "description": "John Ralston Saul\nSince 2008 we have been paying for the refusal of Western elites to deal with their own failures. Now we witness a defensive explosion in the population who have been literally forced by the mainstream elites to turn to irresponsible leaders. All sides have forgotten that the source of legitimacy in any democracy is the citizenry. Maintenance of that legitimacy depends critically on citizen engagement in the public good - not ripping it down, but building it in an inclusive and empathetic way.",
+      "tags": [
+        "01"
+      ],
+      "organizers": [
+        "232"
+      ],
+      "relatedSessions": [
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/nuovo-even-1",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "112",
+      "title": "Democracy and growth: a comparison of Italy and China",
+      "startTimestamp": 1559314800000,
+      "endTimestamp": 1559320200000,
+      "day": 1,
+      "location": "05",
+      "description": "Innocenzo Cipolletta - Paolo Collini - Francesco Grillo\nWe are faced with two paradoxes: innovation that has not produced real growth in industrialised counties, and democracy that appears to suffer precisely after the fall of communism and the triumph of the market economy. Technological innovation has presumably led to a substantial change in the economic and social mechanisms that generate growth and democracy. The behaviour of two very different countries such as China and Italy can act as a starting point for a useful reflection.",
+      "tags": [
+        "01",
+        "04"
+      ],
+      "organizers": [
+        "17",
+        "18",
+        "233"
+      ],
+      "relatedSessions": [
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/democrazia-e-crescita-un-confronto-tra-italia-e-cina",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "113",
+      "title": "The global action of a non-profit-making organisation",
+      "startTimestamp": 1559394000000,
+      "endTimestamp": 1559399400000,
+      "day": 2,
+      "location": "08",
+      "description": "organised by Rotary Club Trento\n\ncoordinated by Luca Pianesi\nspeakers: Paolo Bordon, Massimo Fedrizzi, Maria Grazia Zuccali\n\nThe End Polio Now project directed at the eradication of polio is a humanitarian initiative operating at global level, with local monitoring groups: an example how to intervene to solve global problems, particularly in the field of healthcare.",
+      "tags": [
+        "01",
+        "03"
+      ],
+      "organizers": [
+        "234",
+        "235",
+        "236",
+        "237"
+      ],
+      "relatedSessions": [
+        "74",
+        "108"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/azione-globale-di-un-organizzazione-no-profit",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "114",
+      "title": "The populist challenge to democracy in Germany and Europe: threat or corrective?",
+      "startTimestamp": 1559394000000,
+      "endTimestamp": 1559399400000,
+      "day": 2,
+      "location": "04",
+      "description": "Wolfgag Merkel\nintroduced by Michael Braun\n\nAll over Europe, the populist right has taken hold through some shared ideas, such as the rejection of immigrants and of free circulation of goods and assets, and the opposition to supranational institutions. The consequence of their success though may be very different in each country, depending on the steadiness of their liberal and democratic systems. The question arises whether a threat to democracy can be transformed in a democratic corrective.",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
+        "238",
+        "239"
+      ],
+      "relatedSessions": [
+        "02",
+        "05",
+        "21",
+        "28",
+        "43",
+        "46"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/la-sfida-populista-in-germania-e-in-europa-minaccia-o-correttivo-",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "115",
+      "title": "Green Growth in Dual Economies: Or Why the Road to Hothouse Earth is Paved with Good Intentions",
+      "startTimestamp": 1559469600000,
+      "endTimestamp": 1559475000000,
+      "day": 3,
+      "location": "05",
+      "description": "Servaas Storm\nThis lecture assesses what has so far been accomplished in terms of decarbonisation and energy efficiency improvements and compares this to what will be needed to prevent further warming of the earth about 2 degrees C. The structural transformation required to reduce carbon emissions in line with the IPCC target is profound, and, as will be argued, cannot be left to markets, private initiative and/or pecuniary nudges. A green industrial policy might accomplish this, but it will have to overcome powerful tendencies towards dual economies in the world’s most advanced economies.",
+      "tags": [
+        "01",
+        "14"
+      ],
+      "organizers": [
+        "240"
+      ],
+      "relatedSessions": [
+        "19"
+      ],
+      "photoUrl": "",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/nuovo-evento",
       "youtubeUrl": ""
     }
   ],
@@ -5520,6 +5617,116 @@
       "id": "230",
       "name": "Mario Tonina",
       "bio": "Assessore all'urbanistica, ambiente e cooperazione della Provincia autonoma di Trento, con funzioni di Vicepresidente.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "231",
+      "name": "Giovanni Tria",
+      "bio": "Minister of Economics and Finance",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "232",
+      "name": "John Ralston Saul",
+      "bio": "",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "233",
+      "name": "Francesco Grillo",
+      "bio": "Leader writer for the “Corriere della Sera” and Managing Director of the consultancy company Vision & Value.",
+      "company": "",
+      "thumbnailUrl": "https://www.reset.it/wp-content/authors/Grillo-35.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/francescogrillo",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "234",
+      "name": "Luca Pianesi",
+      "bio": "Editor of the independent newspaper “ildolomiti.it”.",
+      "company": "Editor",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "235",
+      "name": "Paolo Bordon",
+      "bio": "Director General of APSS Trento.",
+      "company": "Director General of APSS Trento",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "236",
+      "name": "Massimo Fedrizzi",
+      "bio": "President of the Rotary Club in Trento.",
+      "company": "President of the Rotary Club in Trento",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "237",
+      "name": "Maria Grazia Zuccali",
+      "bio": "Doctor with the Public Health and Hygiene Department, APSS Trento.",
+      "company": "APSS Trento",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "238",
+      "name": "Wolfgang Merkel",
+      "bio": "He is Director of the “Democracy and Democratisation” research program at the Social Science Research Centre Berlin (WZB) and Professor of Political Science at the Humboldt University Berlin. He is a member of a number of key bodies, including the Berlin-Brandenburg Academy of Sciences and Humanities. He is also a non-party member of the Basic Values Commission of the Executive Committee of the German Social Democratic Party (SPD). He is the author of over 200 articles on subjects such as democracy and democratisation, the dictatorships of the 21st century, political parties, public policy, the future of social democracy, the welfare state and social justice. For Springer, he was the editor of Demokratie und Krise. Zum schwierigen Verhältnis zwischen Theorie und Empire (2015) and of Democracy and Crisis. Challenges in Turbulent Times (with S. Kneip, 2018); recent publications include Handbook of Political, Social and Economic Transformation (with R. Kollmorgen and H.J. Wagener), Oxford University Press (2019).",
+      "company": "Political scientist",
+      "thumbnailUrl": "https://www.socialeurope.eu/wp-content/uploads/2016/02/Wolfgang-Merkel-200x200.jpg",
+      "websiteUrl": "https://de.wikipedia.org/wiki/Wolfgang_Merkel",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "239",
+      "name": "Michael Braun",
+      "bio": "Correspondent for “die Tageszeitung”",
+      "company": "Journalist",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "240",
+      "name": "Servaas Storm",
+      "bio": "",
       "company": "",
       "thumbnailUrl": "",
       "websiteUrl": "",
