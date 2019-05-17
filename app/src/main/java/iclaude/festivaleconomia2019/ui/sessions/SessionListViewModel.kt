@@ -326,8 +326,10 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
                     if (userInFirebase.starredSessions.isEmpty()) return@OnSuccessListener
 
                     sessions.forEach { it.starred = false }
-                    userInFirebase.starredSessions.forEach {
-                        sessions[it.toInt()].starred = true
+                    sessions.forEach { session ->
+                        userInFirebase.starredSessions.forEach { starredSession ->
+                            if (session.id == starredSession) session.starred = true
+                        }
                     }
                     filterList()
                 }
@@ -345,7 +347,7 @@ class SessionListViewModel(val context: Application) : AndroidViewModel(context)
 
     fun starOrUnstarSession(sessionId: String, toStar: Boolean) {
         repository.starOrUnstarSession(sessionId, toStar)
-        sessions[sessionId.toInt()].starred = toStar
+        sessions.find { it.id == sessionId }?.starred = toStar
         _showSnackBarForStarringEvent.value = Event(toStar)
     }
 
