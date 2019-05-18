@@ -705,10 +705,14 @@
         "09"
       ],
       "organizers": [
-        "40"
+        "40",
+        "244"
       ],
       "relatedSessions": [
-        "42"
+        "42",
+        "52",
+        "80",
+        "87"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/quale-nazionalismo-alle-origini-di-una-idea",
@@ -1338,7 +1342,8 @@
         "14"
       ],
       "organizers": [
-        "89"
+        "89",
+        "243"
       ],
       "relatedSessions": [
         "06",
@@ -2563,6 +2568,7 @@
         "04"
       ],
       "organizers": [
+        "241",
         "154",
         "193",
         "194",
@@ -2615,7 +2621,8 @@
         "14"
       ],
       "organizers": [
-        "198"
+        "198",
+        "242"
       ],
       "relatedSessions": [
         "32",
@@ -2799,7 +2806,8 @@
       ],
       "organizers": [
         "212",
-        "213"
+        "213",
+        "245"
       ],
       "relatedSessions": [
         "06",
@@ -2881,7 +2889,7 @@
       ],
       "relatedSessions": [
         "69",
-        "101"
+        "102"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/i-consumatori-e-il-mercato-unico-europeo",
@@ -2977,6 +2985,8 @@
         "232"
       ],
       "relatedSessions": [
+        "04",
+        "33"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/nuovo-even-1",
@@ -3000,6 +3010,8 @@
         "233"
       ],
       "relatedSessions": [
+        "83",
+        "93"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/democrazia-e-crescita-un-confronto-tra-italia-e-cina",
@@ -3418,8 +3430,8 @@
       "name": "Luigi Olivieri",
       "bio": "Chairman of Autostrada del Brennero SpA.",
       "company": "Chairman of Autostrada del Brennero SpA",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Luigi_Olivieri_-_Festival_Economia_2018.jpg/213px-Luigi_Olivieri_-_Festival_Economia_2018.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Luigi_Olivieri",
       "twitterUrl": "",
       "linkedInUrl": "",
       "facebookUrl": ""
@@ -3429,10 +3441,10 @@
       "name": "Carlo Cambini",
       "bio": "Lecturer in Applied Economics at the Politecnico in Turin.",
       "company": "Economist",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
+      "thumbnailUrl": "https://i1.rgstatic.net/ii/profile.image/272605936615430-1442005728212_Q512/Carlo_Cambini.jpg",
+      "websiteUrl": "https://didattica.polito.it/pls/portal30/sviluppo.scheda_pers_swas.show?m=002901",
       "twitterUrl": "",
-      "linkedInUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/carlo-cambini-536ba7a/?originalSubdomain=it",
       "facebookUrl": ""
     },
     {
@@ -3462,8 +3474,8 @@
       "name": "Barbara Marchetti",
       "bio": "Lecturer in Administrative Law at the University of Trento.",
       "company": "Jurist",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
+      "thumbnailUrl": "https://webapps.unitn.it/public/store/ermete/persona/per0000634/ufficiale.jpg",
+      "websiteUrl": "https://webapps.unitn.it/du/it/Persona/PER0000634/Curriculum",
       "twitterUrl": "",
       "linkedInUrl": "",
       "facebookUrl": ""
@@ -3913,7 +3925,7 @@
       "name": "Mario Raffaelli",
       "bio": "President of the Centre for International Cooperation and of AMREF Italia.",
       "company": "Amref Italia",
-      "thumbnailUrl": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Mario_Raffaelli.jpg/200px-Mario_Raffaelli.jpg",
       "websiteUrl": "",
       "twitterUrl": "",
       "linkedInUrl": "",
@@ -4034,8 +4046,8 @@
       "name": "Cengiz Aktar",
       "bio": "Political analyst and writer.",
       "company": "Political analyst and writer",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Cengiz_Aktar_%28portrait%29.jpg/190px-Cengiz_Aktar_%28portrait%29.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Cengiz_Aktar",
       "twitterUrl": "",
       "linkedInUrl": "",
       "facebookUrl": ""
@@ -4045,9 +4057,9 @@
       "name": "Fazila Mat",
       "bio": "Researcher at OBC Transeuropea/CCI.",
       "company": "Researcher",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
-      "twitterUrl": "",
+      "thumbnailUrl": "https://siamoeuropa.provincia.tn.it/var/059/storage/images/media/immagini/fazila-mat/224661-1-ita-IT/Fazila-Mat_imagefullwide.jpg",
+      "websiteUrl": "https://www.balcanicaucaso.org/Autori/(author)/Faz%C4%B1la%20Mat",
+      "twitterUrl": "https://twitter.com/fazilamat",
       "linkedInUrl": "",
       "facebookUrl": ""
     },
@@ -4419,10 +4431,10 @@
       "name": "Antonio Accetturo",
       "bio": "Economist.",
       "company": "Bank of Italy",
-      "thumbnailUrl": "",
+      "thumbnailUrl": "https://voxdev.org/sites/default/files/author_photos/Antonio%20Accetturo.jpg",
       "websiteUrl": "",
       "twitterUrl": "",
-      "linkedInUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/antonio-accetturo-7179214/",
       "facebookUrl": ""
     },
     {
@@ -4430,10 +4442,10 @@
       "name": "Riccardo Crescenzi",
       "bio": "Lecturer in Economic Geography, London School of Economics.",
       "company": "Economist",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
-      "twitterUrl": "",
-      "linkedInUrl": "",
+      "thumbnailUrl": "http://personal.lse.ac.uk/CRESCENZ/Crescenzi.jpg",
+      "websiteUrl": "http://personal.lse.ac.uk/CRESCENZ/",
+      "twitterUrl": "https://twitter.com/crescenzi_r",
+      "linkedInUrl": "https://www.linkedin.com/in/riccardocrescenzi/",
       "facebookUrl": ""
     },
     {
@@ -4441,10 +4453,10 @@
       "name": "Alessandra Proto",
       "bio": "Head, OECD Trento Centre for Local Development.",
       "company": "OECD",
-      "thumbnailUrl": "",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/986988722297204736/ph58pe1-_400x400.jpg",
       "websiteUrl": "",
-      "twitterUrl": "",
-      "linkedInUrl": "",
+      "twitterUrl": "https://twitter.com/alessandraproto",
+      "linkedInUrl": "https://www.linkedin.com/in/alessandra-proto-a8613b5/",
       "facebookUrl": ""
     },
     {
@@ -5200,10 +5212,10 @@
       "name": "Louisa Parks",
       "bio": "Lecturer at the School of International Studies at the University of Trento.",
       "company": "University of Trento",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
-      "twitterUrl": "",
-      "linkedInUrl": "",
+      "thumbnailUrl": "https://webapps.unitn.it/public/store/ermete/persona/per0037293/ufficiale.jpg",
+      "websiteUrl": "https://webapps.unitn.it/du/it/Persona/PER0037293/Curriculum",
+      "twitterUrl": "https://twitter.com/lr_parks",
+      "linkedInUrl": "https://www.linkedin.com/in/louisa-parks-9148885/?originalSubdomain=it",
       "facebookUrl": ""
     },
     {
@@ -5211,10 +5223,10 @@
       "name": "Peter Kurz",
       "bio": "Mayor of the city of Mannheim, Germany.",
       "company": "Mayor of the city of Mannheim, Germany",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
-      "twitterUrl": "",
-      "linkedInUrl": "",
+      "thumbnailUrl": "https://i.vimeocdn.com/video/720229439_1280x720.jpg",
+      "websiteUrl": "https://de.wikipedia.org/wiki/Peter_Kurz_(Politiker,_1962)",
+      "twitterUrl": "https://twitter.com/obkurz",
+      "linkedInUrl": "https://www.linkedin.com/in/peter-kurz-661762174/",
       "facebookUrl": ""
     },
     {
@@ -5233,10 +5245,10 @@
       "name": "Joaquim Oliveira Martins",
       "bio": "Deputy Director, Centre for Entrepreneurship, SMEs and Regions and Cities, OECD.",
       "company": "OECD",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
-      "twitterUrl": "",
-      "linkedInUrl": "",
+      "thumbnailUrl": "https://www.oecd.org/media/oecdorg/directorates/centreforentrepreneurshipsmesandlocaldevelopment/2018/JOM-312x234.jpg",
+      "websiteUrl": "https://www.oecd.org/cfe/joaquim-oliveira-martins.htm",
+      "twitterUrl": "https://twitter.com/joaquimom",
+      "linkedInUrl": "https://www.linkedin.com/in/joaquim-oliveira-martins-49273a5/?originalSubdomain=fr",
       "facebookUrl": ""
     },
     {
@@ -5628,9 +5640,9 @@
       "id": "231",
       "name": "Giovanni Tria",
       "bio": "Minister of Economics and Finance",
-      "company": "",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
+      "company": "Minister of Economics and Finance",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Giovanni_Tria_Minister.jpg/218px-Giovanni_Tria_Minister.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Giovanni_Tria",
       "twitterUrl": "",
       "linkedInUrl": "",
       "facebookUrl": ""
@@ -5638,11 +5650,11 @@
     {
       "id": "232",
       "name": "John Ralston Saul",
-      "bio": "",
-      "company": "",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
-      "twitterUrl": "",
+      "bio": "John Ralston Saul, CC OOnt (born June 19, 1947) is a Canadian writer, political philosopher, and public intellectual. Saul is most widely known for his writings on the nature of individualism, citizenship and the public good; the failures of manager-led societies;[1] the confusion between leadership and managerialism; military strategy, in particular irregular warfare; the role of freedom of speech and culture; and critiques of the prevailing economic paradigm. He is a champion of freedom of expression and was the International President of PEN International, an association of writers. Saul is the co-founder and co-chair of the Institute for Canadian Citizenship, a national charity promoting the inclusion of new citizens.",
+      "company": "Writer, political philosopher, and public intellectual",
+      "thumbnailUrl": "https://images.gr-assets.com/authors/1313954281p5/4392.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/John_Ralston_Saul",
+      "twitterUrl": "https://twitter.com/johnralstonsaul",
       "linkedInUrl": "",
       "facebookUrl": ""
     },
@@ -5726,8 +5738,63 @@
     {
       "id": "240",
       "name": "Servaas Storm",
-      "bio": "",
+      "bio": "Servaas Storm is a Dutch economist and author who works on macroeconomics, technological progress, income distribution & economic growth, finance, development and structural change, and climate change.",
+      "company": "Economist",
+      "thumbnailUrl": "https://www.ineteconomics.org/uploads/press-photos/Servaas_Storm_foto.jpg",
+      "websiteUrl": "https://www.ineteconomics.org/research/experts/sstorm",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "241",
+      "name": "Riccardo Fraccaro",
+      "bio": "Minister of the Republic",
+      "company": "Minister of the Republic",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Riccardo_Fraccaro_2013.JPG/207px-Riccardo_Fraccaro_2013.JPG",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Riccardo_Fraccaro",
+      "twitterUrl": "https://twitter.com/riccardo_fra",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "242",
+      "name": "Paolo Mantovan",
+      "bio": "Editor of “Il Trentino”.",
+      "company": "Editor of “Il Trentino”",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "243",
+      "name": "Roberta Carlini",
+      "bio": "Works for the Centre for Media Pluralism and Media Freedom at the European University Institute.",
       "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "244",
+      "name": "Carlo Martinelli",
+      "bio": "Journalist with the “Trentino”.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "245",
+      "name": "Valentina Romei",
+      "bio": "Journalist with the “Financial Times”.",
+      "company": "Journalist",
       "thumbnailUrl": "",
       "websiteUrl": "",
       "twitterUrl": "",

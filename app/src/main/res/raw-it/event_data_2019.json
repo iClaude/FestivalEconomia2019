@@ -705,10 +705,14 @@
         "09"
       ],
       "organizers": [
-        "40"
+        "40",
+        "244"
       ],
       "relatedSessions": [
-        "42"
+        "42",
+        "52",
+        "80",
+        "87"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/quale-nazionalismo-alle-origini-di-una-idea",
@@ -1363,7 +1367,8 @@
         "14"
       ],
       "organizers": [
-        "89"
+        "89",
+        "243"
       ],
       "relatedSessions": [
         "06",
@@ -2588,6 +2593,7 @@
         "04"
       ],
       "organizers": [
+        "241",
         "154",
         "193",
         "194",
@@ -2640,7 +2646,8 @@
         "14"
       ],
       "organizers": [
-        "198"
+        "198",
+        "242"
       ],
       "relatedSessions": [
         "32",
@@ -2824,14 +2831,15 @@
       ],
       "organizers": [
         "212",
-        "213"
+        "213",
+        "245"
       ],
       "relatedSessions": [
         "06",
         "15",
         "16",
         "90",
-        "102"
+        "103"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/l-europa-da-costruire-piu-opportunita-che-vincoli",
@@ -3002,6 +3010,8 @@
         "232"
       ],
       "relatedSessions": [
+        "04",
+        "33"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/nuovo-even-1",
@@ -3025,6 +3035,8 @@
         "233"
       ],
       "relatedSessions": [
+        "83",
+        "93"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/democrazia-e-crescita-un-confronto-tra-italia-e-cina",
@@ -3441,10 +3453,10 @@
     {
       "id": "30",
       "name": "Luigi Olivieri",
-      "bio": "Presidente di Autostrada del Brennero SpA",
+      "bio": "Presidente di Autostrada del Brennero SpA.",
       "company": "Autostrada del Brennero SpA",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Luigi_Olivieri_-_Festival_Economia_2018.jpg/213px-Luigi_Olivieri_-_Festival_Economia_2018.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Luigi_Olivieri",
       "twitterUrl": "",
       "linkedInUrl": "",
       "facebookUrl": ""
@@ -3452,12 +3464,12 @@
     {
       "id": "31",
       "name": "Carlo Cambini",
-      "bio": "Insegna Economia applicata al Politecnico di Torino",
+      "bio": "Insegna Economia applicata al Politecnico di Torino.",
       "company": "Economista",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
+      "thumbnailUrl": "https://i1.rgstatic.net/ii/profile.image/272605936615430-1442005728212_Q512/Carlo_Cambini.jpg",
+      "websiteUrl": "https://didattica.polito.it/pls/portal30/sviluppo.scheda_pers_swas.show?m=002901",
       "twitterUrl": "",
-      "linkedInUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/carlo-cambini-536ba7a/?originalSubdomain=it",
       "facebookUrl": ""
     },
     {
@@ -3487,8 +3499,8 @@
       "name": "Barbara Marchetti",
       "bio": "Insegna Diritto amministrativo all’Università di Trento.",
       "company": "Giurista",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
+      "thumbnailUrl": "https://webapps.unitn.it/public/store/ermete/persona/per0000634/ufficiale.jpg",
+      "websiteUrl": "https://webapps.unitn.it/du/it/Persona/PER0000634/Curriculum",
       "twitterUrl": "",
       "linkedInUrl": "",
       "facebookUrl": ""
@@ -3938,7 +3950,7 @@
       "name": "Mario Raffaelli",
       "bio": "Presidente del Centro per la Cooperazione Internazionale e di Amref Italia.",
       "company": "Amref Italia",
-      "thumbnailUrl": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Mario_Raffaelli.jpg/200px-Mario_Raffaelli.jpg",
       "websiteUrl": "",
       "twitterUrl": "",
       "linkedInUrl": "",
@@ -4059,8 +4071,8 @@
       "name": "Cengiz Aktar",
       "bio": "Politologo e scrittore.",
       "company": "Politologo e scrittore.",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Cengiz_Aktar_%28portrait%29.jpg/190px-Cengiz_Aktar_%28portrait%29.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/Cengiz_Aktar",
       "twitterUrl": "",
       "linkedInUrl": "",
       "facebookUrl": ""
@@ -4070,9 +4082,9 @@
       "name": "Fazila Mat",
       "bio": "Ricercatrice OBC Transeuropea/CCI.",
       "company": "Ricercatrice",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
-      "twitterUrl": "",
+      "thumbnailUrl": "https://siamoeuropa.provincia.tn.it/var/059/storage/images/media/immagini/fazila-mat/224661-1-ita-IT/Fazila-Mat_imagefullwide.jpg",
+      "websiteUrl": "https://www.balcanicaucaso.org/Autori/(author)/Faz%C4%B1la%20Mat",
+      "twitterUrl": "https://twitter.com/fazilamat",
       "linkedInUrl": "",
       "facebookUrl": ""
     },
@@ -4179,7 +4191,7 @@
       "id": "97",
       "name": "Floriana Cerniglia",
       "bio": "Insegna Economia politica all’Università degli Studi di Milano-Bicocca.",
-      "company": "",
+      "company": "Economista",
       "thumbnailUrl": "https://www.unicatt.it/amministrazione-cerniglia-ucsc.jpg",
       "websiteUrl": "",
       "twitterUrl": "https://twitter.com/florianacernig1",
@@ -4444,10 +4456,10 @@
       "name": "Antonio Accetturo",
       "bio": "Responsabile della ricerca economica presso la Banca d'Italia - Trento.",
       "company": "Banca d'Italia",
-      "thumbnailUrl": "",
+      "thumbnailUrl": "https://voxdev.org/sites/default/files/author_photos/Antonio%20Accetturo.jpg",
       "websiteUrl": "",
       "twitterUrl": "",
-      "linkedInUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/antonio-accetturo-7179214/",
       "facebookUrl": ""
     },
     {
@@ -4455,10 +4467,10 @@
       "name": "Riccardo Crescenzi",
       "bio": "Insegna Geografia economica alla London School of Economics.",
       "company": "Economista",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
-      "twitterUrl": "",
-      "linkedInUrl": "",
+      "thumbnailUrl": "http://personal.lse.ac.uk/CRESCENZ/Crescenzi.jpg",
+      "websiteUrl": "http://personal.lse.ac.uk/CRESCENZ/",
+      "twitterUrl": "https://twitter.com/crescenzi_r",
+      "linkedInUrl": "https://www.linkedin.com/in/riccardocrescenzi/",
       "facebookUrl": ""
     },
     {
@@ -4466,10 +4478,10 @@
       "name": "Alessandra Proto",
       "bio": "Responsabile del Centro OCSE di Trento per lo sviluppo locale.",
       "company": "OCSE",
-      "thumbnailUrl": "",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/986988722297204736/ph58pe1-_400x400.jpg",
       "websiteUrl": "",
-      "twitterUrl": "",
-      "linkedInUrl": "",
+      "twitterUrl": "https://twitter.com/alessandraproto",
+      "linkedInUrl": "https://www.linkedin.com/in/alessandra-proto-a8613b5/",
       "facebookUrl": ""
     },
     {
@@ -5224,11 +5236,11 @@
       "id": "192",
       "name": "Louisa Parks",
       "bio": "Insegna alla Scuola di Studi Internazionali dell’Università di Trento.",
-      "company": "",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
-      "twitterUrl": "",
-      "linkedInUrl": "",
+      "company": "Università di Trento",
+      "thumbnailUrl": "https://webapps.unitn.it/public/store/ermete/persona/per0037293/ufficiale.jpg",
+      "websiteUrl": "https://webapps.unitn.it/du/it/Persona/PER0037293/Curriculum",
+      "twitterUrl": "https://twitter.com/lr_parks",
+      "linkedInUrl": "https://www.linkedin.com/in/louisa-parks-9148885/?originalSubdomain=it",
       "facebookUrl": ""
     },
     {
@@ -5236,10 +5248,10 @@
       "name": "Peter Kurz",
       "bio": "Sindaco di Mannheim, Germania.",
       "company": "Sindaco di Mannheim",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
-      "twitterUrl": "",
-      "linkedInUrl": "",
+      "thumbnailUrl": "https://i.vimeocdn.com/video/720229439_1280x720.jpg",
+      "websiteUrl": "https://de.wikipedia.org/wiki/Peter_Kurz_(Politiker,_1962)",
+      "twitterUrl": "https://twitter.com/obkurz",
+      "linkedInUrl": "https://www.linkedin.com/in/peter-kurz-661762174/",
       "facebookUrl": ""
     },
     {
@@ -5258,10 +5270,10 @@
       "name": "Joaquim Oliveira Martins",
       "bio": "Vicedirettore del Centro per l'Imprenditorialità, PMI, Regioni e Città dell'OCSE.",
       "company": "OCSE",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
-      "twitterUrl": "",
-      "linkedInUrl": "",
+      "thumbnailUrl": "https://www.oecd.org/media/oecdorg/directorates/centreforentrepreneurshipsmesandlocaldevelopment/2018/JOM-312x234.jpg",
+      "websiteUrl": "https://www.oecd.org/cfe/joaquim-oliveira-martins.htm",
+      "twitterUrl": "https://twitter.com/joaquimom",
+      "linkedInUrl": "https://www.linkedin.com/in/joaquim-oliveira-martins-49273a5/?originalSubdomain=fr",
       "facebookUrl": ""
     },
     {
@@ -5653,9 +5665,9 @@
       "id": "231",
       "name": "Giovanni Tria",
       "bio": "Da giugno 2018 è Ministro dell’economia e delle finanze. Professore ordinario di Economia politica all’Università degli Studi di Roma \"Tor Vergata\" con oltre 40 anni di esperienza professionale ed accademica come esperto di sviluppo economico, contributo del capitale pubblico alla crescita, ruolo della governance e delle istituzioni nei processi di crescita. Dal 2017 Preside della Facoltà di Economia dell'Università degli Studi di Roma “Tor Vergata”.\nGià Presidente della SNA – Scuola Nazionale dell’Amministrazione, è stato Co-direttore del Master in Economia dello Sviluppo e Cooperazione Internazionale e Direttore del CEIS - Center for Economics and International Studies dell’Università degli Studi di Roma \"Tor Vergata\", Membro dell'OECD Innovation Strategy Expert Advisory Group, Vice Chair dell’ICCP - Committee for Information, Computer and Communication Policy e Membro del Consiglio di Amministrazione dell’ILO – International Labour Organization.",
-      "company": "",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
+      "company": "Ministro dell'Economia e delle Finanze",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Giovanni_Tria_Minister.jpg/218px-Giovanni_Tria_Minister.jpg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Giovanni_Tria",
       "twitterUrl": "",
       "linkedInUrl": "",
       "facebookUrl": ""
@@ -5663,11 +5675,11 @@
     {
       "id": "232",
       "name": "John Ralston Saul",
-      "bio": "",
-      "company": "",
-      "thumbnailUrl": "",
-      "websiteUrl": "",
-      "twitterUrl": "",
+      "bio": "John Ralston Saul, CC OOnt è uno scrittore canadese, filosofo politico e intellettuale pubblico. Saul è più conosciuto per i suoi scritti sulla natura dell'individualismo, della cittadinanza e del bene pubblico.",
+      "company": "Scrittore, filosofo politico, intellettuale",
+      "thumbnailUrl": "https://images.gr-assets.com/authors/1313954281p5/4392.jpg",
+      "websiteUrl": "https://en.wikipedia.org/wiki/John_Ralston_Saul",
+      "twitterUrl": "https://twitter.com/johnralstonsaul",
       "linkedInUrl": "",
       "facebookUrl": ""
     },
@@ -5751,8 +5763,63 @@
     {
       "id": "240",
       "name": "Servaas Storm",
-      "bio": "",
+      "bio": "Servaas Storm è un economista olandese (Delft University of Technology) e autore che si occupa di macroeconomia, progresso tecnologico, distribuzione del reddito e crescita economica, finanza, sviluppo e cambiamenti strutturali e climatici.",
+      "company": "Economista",
+      "thumbnailUrl": "https://www.ineteconomics.org/uploads/press-photos/Servaas_Storm_foto.jpg",
+      "websiteUrl": "https://www.ineteconomics.org/research/experts/sstorm",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "241",
+      "name": "Riccardo Fraccaro",
+      "bio": "Ministro della Repubblica",
+      "company": "Ministro della Repubblica",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Riccardo_Fraccaro_2013.JPG/207px-Riccardo_Fraccaro_2013.JPG",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Riccardo_Fraccaro",
+      "twitterUrl": "https://twitter.com/riccardo_fra",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "242",
+      "name": "Paolo Mantovan",
+      "bio": "Direttore de “Il Trentino”.",
+      "company": "Direttore de “Il Trentino”",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "243",
+      "name": "Roberta Carlini",
+      "bio": "Lavora per il Centre for Media Pluralism and Media Freedom dell'European University Institute.",
       "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "244",
+      "name": "Carlo Martinelli",
+      "bio": "Giornalista presso il quotidiano “Trentino”.",
+      "company": "",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "245",
+      "name": "Valentina Romei",
+      "bio": "Giornalista per il “Financial Times”.",
+      "company": "Giornalista",
       "thumbnailUrl": "",
       "websiteUrl": "",
       "twitterUrl": "",
