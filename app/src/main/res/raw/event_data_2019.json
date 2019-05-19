@@ -294,7 +294,8 @@
         "08"
       ],
       "organizers": [
-        "05"
+        "05",
+        "246"
       ],
       "relatedSessions": [
         "27"
@@ -362,12 +363,13 @@
       "endTimestamp": 1559241000000,
       "day": 0,
       "location": "10",
-      "description": "Marco Leonardi\nOrganised by Egea\n\ndiscussed with Roberto Mania \n\ncoordinated by Tonia Mastrobuoni",
+      "description": "Marco Leonardi\nOrganised by Egea\n\ndiscussed with Roberto Mania \ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
       ],
       "organizers": [
+        "246",
         "26"
       ],
       "relatedSessions": [
@@ -396,7 +398,12 @@
         "05"
       ],
       "relatedSessions": [
-        "05"
+        "05",
+        "21",
+        "27",
+        "68",
+        "252",
+        "253"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/il-voto-europeo-le-conseguenze-economiche-e-politiche",
@@ -460,7 +467,9 @@
         "13"
       ],
       "organizers": [
-        "15"
+        "15",
+        "00",
+        "256"
       ],
       "relatedSessions": [
         "14",
@@ -621,7 +630,8 @@
         "09"
       ],
       "organizers": [
-        "29"
+        "29",
+        "250"
       ],
       "relatedSessions": [
         "11",
@@ -731,11 +741,15 @@
         "15"
       ],
       "organizers": [
-        "41"
+        "41",
+        "251"
       ],
       "relatedSessions": [
         "04",
-        "05"
+        "05",
+        "08",
+        "27",
+        "68"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/attentati-terroristici-e-voto-per-la-destra-populista",
@@ -805,6 +819,7 @@
       ],
       "organizers": [
         "46",
+        "254",
         "47",
         "49",
         "50",
@@ -813,7 +828,10 @@
       "relatedSessions": [
         "14",
         "17",
-        "24"
+        "24",
+        "36",
+        "59",
+        "88"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/multinazionali-economia-locale",
@@ -857,7 +875,10 @@
       ],
       "relatedSessions": [
         "06",
-        "26"
+        "38",
+        "47",
+        "68",
+        "91"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/immigrazione-e-scenari-demografici",
@@ -1004,12 +1025,13 @@
       "endTimestamp": 1559313000000,
       "day": 1,
       "location": "10",
-      "description": "Alberto Alesina - Carlo Favero - Francesco Giavazzi\norganised by Rizzoli\n\ndiscussed with Paolo Guerrieri \n\ncoordinated by Tonia Mastrobuoni",
+      "description": "Alberto Alesina - Carlo Favero - Francesco Giavazzi\norganised by Rizzoli\n\ndiscussed with Paolo Guerrieri \ncoordinated by Tonia Mastrobuoni",
       "tags": [
         "01",
         "07"
       ],
       "organizers": [
+        "247",
         "26"
       ],
       "relatedSessions": [
@@ -1037,7 +1059,10 @@
       ],
       "relatedSessions": [
         "04",
-        "20"
+        "20",
+        "33",
+        "90",
+        "94"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/gli-errori-delle-elite-alle-origini-del-sovranismo",
@@ -1168,9 +1193,9 @@
       ],
       "relatedSessions": [
         "06",
-        "21",
-        "30",
-        "47"
+        "47",
+        "68",
+        "91"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/le-imprese-italiane-tra-protezione-e-globalizzazione",
@@ -1222,6 +1247,9 @@
         "26"
       ],
       "relatedSessions": [
+        "39",
+        "66",
+        "112"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/contrordine-compagni-manuale-di-resistenza-alla-tecnofobia-per-la-riscossa-del-lavoro-e-dell-italia",
@@ -1348,7 +1376,8 @@
       "relatedSessions": [
         "06",
         "38",
-        "68"
+        "68",
+        "91"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/brexit-immigrazione-e-mercato-del-lavoro",
@@ -1396,6 +1425,7 @@
         "07"
       ],
       "organizers": [
+        "248",
         "26"
       ],
       "relatedSessions": [
@@ -1893,7 +1923,8 @@
       "relatedSessions": [
         "06",
         "38",
-        "47"
+        "47",
+        "91"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/populismo-ed-effetti-globalizzazione-estrema-destra-in-austria",
@@ -1921,7 +1952,10 @@
         "227"
       ],
       "relatedSessions": [
-        "15"
+        "14",
+        "35",
+        "36",
+        "88"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/trade-wars-come-cambia-il-commercio-mondiale",
@@ -2303,6 +2337,8 @@
         "26"
       ],
       "relatedSessions": [
+        "34",
+        "110"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/il-sentiero-stretto-e-oltre-conversazine-con-dino-pesole",
@@ -2450,7 +2486,8 @@
       "relatedSessions": [
         "33",
         "02",
-        "28"
+        "28",
+        "94"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/geografia-economica-dell-europa-sovranista",
@@ -2463,19 +2500,21 @@
       "endTimestamp": 1559413800000,
       "day": 2,
       "location": "02",
-      "description": "Filippo Grandi\nInterviewers: Annalisa Camilli e Francesca Mannocchi, \n\nThe combination of extensive and prolonged conflict, consequential forced migration on a large scale, new challenges to asylum rights, the gap between financial resources and humanitarian needs, and growing xenophobia has generated an explosive mixture. What the UNHCR can do, and what national and local governments can do, starting from the cities. The opinion of the United Nations High Commissioner for Refugees.",
+      "description": "Filippo Grandi\nInterviewers: Annalisa Camilli e Francesca Mannocchi \n\nThe combination of extensive and prolonged conflict, consequential forced migration on a large scale, new challenges to asylum rights, the gap between financial resources and humanitarian needs, and growing xenophobia has generated an explosive mixture. What the UNHCR can do, and what national and local governments can do, starting from the cities. The opinion of the United Nations High Commissioner for Refugees.",
       "tags": [
         "01",
         "13"
       ],
       "organizers": [
         "187",
-        "59"
+        "59",
+        "255"
       ],
       "relatedSessions": [
         "06",
         "38",
-        "47"
+        "47",
+        "68"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/tito-3",
@@ -2600,9 +2639,9 @@
         "26"
       ],
       "relatedSessions": [
-        "60",
-        "67",
-        "77"
+        "61",
+        "100",
+        "108"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/il-terzo-pilastro-la-comunita-dimenticata-tra-stato-e-mercati",
@@ -2833,13 +2872,16 @@
         "07"
       ],
       "organizers": [
+        "249",
         "26"
       ],
       "relatedSessions": [
-        "77",
-        "84",
-        "90",
-        "96"
+        "06",
+        "26",
+        "38",
+        "47",
+        "68",
+        "91"
       ],
       "photoUrl": "",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/io-khaled-vendo-uomini-e-sono-innocente-la-tirannia-dell-intimita",
@@ -3199,7 +3241,7 @@
       "name": "Elisa Ferreira",
       "bio": "Politician and economist, Deputy Governor of the Bank of Portugal.",
       "company": "Politician and economist",
-      "thumbnailUrl": "http://www.mulheresqinspiram.com/wp-content/uploads/2017/10/Elisa-Ferreira-294x300.png",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Elisa_Ferreira.jpg/200px-Elisa_Ferreira.jpg",
       "websiteUrl": "https://en.wikipedia.org/wiki/Elisa_Ferreira",
       "twitterUrl": "https://twitter.com/elisaferreiraep",
       "linkedInUrl": "",
@@ -3210,7 +3252,7 @@
       "name": "Jean Pisani-Ferry",
       "bio": "Lecturer at the Hertie School of Governance in Berlin.",
       "company": "Economist",
-      "thumbnailUrl": "http://www.prospectmagazine.co.uk/wp-content/uploads/2013/03/Pisani-Ferry-300x250.gif",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Jean_Pisani-Ferry_par_Claude_Truong-Ngoc_janvier_2016.jpg/220px-Jean_Pisani-Ferry_par_Claude_Truong-Ngoc_janvier_2016.jpg",
       "websiteUrl": "https://en.wikipedia.org/wiki/Jean_Pisani-Ferry",
       "twitterUrl": "https://twitter.com/pisaniferry",
       "linkedInUrl": "https://www.linkedin.com/in/jean-pisani-ferry-29272a6/?originalSubdomain=fr",
@@ -4222,7 +4264,7 @@
       "name": "Emanuele Massetti",
       "bio": "Researcher at the School of International Studies at the University of Trento.",
       "company": "Researcher",
-      "thumbnailUrl": "",
+      "thumbnailUrl": "https://0.academia-photos.com/7942670/2987536/3506765/s200_emanuele.massetti.jpg",
       "websiteUrl": "",
       "twitterUrl": "",
       "linkedInUrl": "",
@@ -4442,7 +4484,7 @@
       "name": "Riccardo Crescenzi",
       "bio": "Lecturer in Economic Geography, London School of Economics.",
       "company": "Economist",
-      "thumbnailUrl": "http://personal.lse.ac.uk/CRESCENZ/Crescenzi.jpg",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/891651144015110144/cyUUDjEx_400x400.jpg",
       "websiteUrl": "http://personal.lse.ac.uk/CRESCENZ/",
       "twitterUrl": "https://twitter.com/crescenzi_r",
       "linkedInUrl": "https://www.linkedin.com/in/riccardocrescenzi/",
@@ -5783,7 +5825,7 @@
       "id": "244",
       "name": "Carlo Martinelli",
       "bio": "Journalist with the “Trentino”.",
-      "company": "",
+      "company": "Journalist",
       "thumbnailUrl": "",
       "websiteUrl": "",
       "twitterUrl": "",
@@ -5798,6 +5840,127 @@
       "thumbnailUrl": "",
       "websiteUrl": "",
       "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "246",
+      "name": "Roberto Mania",
+      "bio": "Journalist for “la Repubblica”.",
+      "company": "Journalist",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/690469927225004032/yfafcoKR.jpg",
+      "websiteUrl": "https://g.co/kgs/eFCPu3",
+      "twitterUrl": "https://twitter.com/mania_roberto",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "247",
+      "name": "Paolo Guerrieri",
+      "bio": "Economist and politician.",
+      "company": "Economist, politician",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Paolo_Guerrieri_-_Festival_Economia_2015.JPG/1200px-Paolo_Guerrieri_-_Festival_Economia_2015.JPG",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Paolo_Guerrieri_Paleotti",
+      "twitterUrl": "https://twitter.com/paologuerrierip",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "248",
+      "name": "Giorgio Santambrogio",
+      "bio": "CEO VéGé Group and ADM President.",
+      "company": "VéGé Group, ADM",
+      "thumbnailUrl": "https://www.foodweb.it/wp-content/uploads/2016/05/santambrogio.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/gsantambrogio1",
+      "linkedInUrl": "https://www.linkedin.com/in/giorgio-santambrogio/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "249",
+      "name": "Stefano Allievi",
+      "bio": "Professor of Sociology and Director of the master’s degree on Islam in Europe at the University of Padua.",
+      "company": "Sociologist",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Stefano_Allievi_-_Festival_Economia_2016.jpg/220px-Stefano_Allievi_-_Festival_Economia_2016.jpg",
+      "websiteUrl": "http://www.stefanoallievi.it/",
+      "twitterUrl": "https://twitter.com/stefanoallievi",
+      "linkedInUrl": "https://www.linkedin.com/in/stefano-allievi-0621917/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "250",
+      "name": "Marco Bracconi",
+      "bio": "Journalist with “la Repubblica”.",
+      "company": "Journalist",
+      "thumbnailUrl": "https://www.repstatic.it/video/photo/2014/02/20/176354/176354-thumb-full-bracconi200214.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "251",
+      "name": "Alessandro Russello",
+      "bio": "Editor of the “Corriere del Veneto”, “Corriere del Trentino”, “Corriere dell’Alto Adige” and “Corriere di Bologna”.",
+      "company": "Journalist",
+      "thumbnailUrl": "https://www.padova24ore.it/wp-content/uploads/2010/04/001ugosavoia.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/alerussello",
+      "linkedInUrl": "https://www.linkedin.com/in/alessandro-russello-898b5268/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "252",
+      "name": "Nando Pagnoncelli",
+      "bio": "Managing Director of IPSOS Italia.",
+      "company": "IPSOS Italia",
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/2675900119/4fe1b224388a7f7744496d97d79f5dcf_400x400.jpeg",
+      "websiteUrl": "https://it.wikipedia.org/wiki/Nando_Pagnoncelli",
+      "twitterUrl": "https://twitter.com/npagnoncelli",
+      "linkedInUrl": "https://www.linkedin.com/in/nando-pagnoncelli-5197486/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "253",
+      "name": "Federico Fubini",
+      "bio": "Journalist with “Corriere della Sera”.",
+      "company": "Journalist",
+      "thumbnailUrl": "https://media.internazionale.it/images/2017/09/08/139296-ld.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/federicofubini",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "254",
+      "name": "Peter Bodin",
+      "bio": "CEO of Grant Thornton International Ltd.",
+      "company": "Grant Thornton International Ltd",
+      "thumbnailUrl": "https://www.grantthornton.global/globalassets/1.-member-firms/global/press-release-images/2017/peter-bodin-gtil-ceo-elect.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/peterbodin_pb",
+      "linkedInUrl": "https://www.linkedin.com/in/peter-bodin-4378879/?originalSubdomain=se",
+      "facebookUrl": ""
+    },
+    {
+      "id": "255",
+      "name": "Annalisa Camilli",
+      "bio": "Journalist with “Internazionale”.",
+      "company": "Journalist",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "256",
+      "name": "Annalisa Cuzzocrea",
+      "bio": "Journalist with “la Repubblica”.",
+      "company": "Journalist",
+      "thumbnailUrl": "https://s3-eu-west-1.amazonaws.com/ilblogdellestelle/wp-content/uploads/2018/08/28095722/aabfbef99ee53614dd6659cbd6413f3989fe74cd.jpg",
+      "websiteUrl": "",
+      "twitterUrl": "https://twitter.com/Kuzzo74",
       "linkedInUrl": "",
       "facebookUrl": ""
     }
