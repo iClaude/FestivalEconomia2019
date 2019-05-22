@@ -1075,13 +1075,14 @@
       "endTimestamp": 1559313000000,
       "day": 1,
       "location": "18",
-      "description": "Joel Mokyr\nintroduced by \n\nThe question of whether industrialized economies can continue to grow has been discussed in the past ten years, as growth rates have slowed down. Some economists have argued that the advanced economies are doomed to secular stagnation and that growth at high rates is over for good. This is examined in view of economic history and the determinants of past economic growth.",
+      "description": "Joel Mokyr\nintroduced by Andrea Fracasso \n\nThe question of whether industrialized economies can continue to grow has been discussed in the past ten years, as growth rates have slowed down. Some economists have argued that the advanced economies are doomed to secular stagnation and that growth at high rates is over for good. This is examined in view of economic history and the determinants of past economic growth.",
       "tags": [
         "01",
         "09"
       ],
       "organizers": [
-        "66"
+        "66",
+        "132"
       ],
       "relatedSessions": [
         "22"
@@ -1780,7 +1781,7 @@
       "endTimestamp": 1559385000000,
       "day": 2,
       "location": "20",
-      "description": "organised by Associazione Europea per l’Educazione Economica AEEE Italia\n\ncoordinated by Roberto Fini \nspeakers: Anna Maria Ajello, Annamaria Lusardi, Antonio Schizzerotto\n\nData on social mobility, together with national and international assessment of the economic and financial literacy of Italians, show that there is a need to strengthen school programs  about the global economy.",
+      "description": "organised by Associazione Europea per l’Educazione Economica AEEE Italia\n\ncoordinated by Roberto Fini \nspeakers: Anna Maria Ajello, Nadia Linciano, Antonio Schizzerotto\n\nData on social mobility, together with national and international assessment of the economic and financial literacy of Italians, show that there is a need to strengthen school programs  about the global economy.",
       "tags": [
         "01",
         "03"
@@ -1788,7 +1789,7 @@
       "organizers": [
         "110",
         "111",
-        "112",
+        "257",
         "113"
       ],
       "relatedSessions": [
@@ -2347,10 +2348,10 @@
     {
       "id": "85",
       "title": "Citizens’s income and european rules",
-      "startTimestamp": 1559404800000,
-      "endTimestamp": 1559410200000,
+      "startTimestamp": 1559476800000,
+      "endTimestamp": 1559482200000,
       "day": 2,
-      "location": "09",
+      "location": "02",
       "description": "Tommaso Monacelli - Pasquale Tridico\ncoordinated by Dario Laruffa \n\nCan the citizen’s income scheme lead to greater budgetary flexibility while respecting European rules? What are its probable effects on the workforce, unemployment and national income?",
       "tags": [
         "01",
@@ -2358,7 +2359,8 @@
       ],
       "organizers": [
         "176",
-        "177"
+        "177",
+        "258"
       ],
       "relatedSessions": [
         "22",
@@ -5692,7 +5694,7 @@
     {
       "id": "232",
       "name": "John Ralston Saul",
-      "bio": "John Ralston Saul, CC OOnt (born June 19, 1947) is a Canadian writer, political philosopher, and public intellectual. Saul is most widely known for his writings on the nature of individualism, citizenship and the public good; the failures of manager-led societies;[1] the confusion between leadership and managerialism; military strategy, in particular irregular warfare; the role of freedom of speech and culture; and critiques of the prevailing economic paradigm. He is a champion of freedom of expression and was the International President of PEN International, an association of writers. Saul is the co-founder and co-chair of the Institute for Canadian Citizenship, a national charity promoting the inclusion of new citizens.",
+      "bio": "John Ralston Saul is an award winning essayist and novelist, considered Canada’s leading public intellectual. In The Collapse of Globalism Saul predicted the 2007-2008 economic crisis years before it happened, as well as the current rise of populism and xenophobia. Saul has been declared a “prophet” by TIME magazine and is included in the Utne Reader’s list of the world’s 100 leading thinkers and visionaries. He is co-Chair of the Institute for Canadian Citizenship and 6 Degrees, a global movement on citizenship and immigration. He is President Emeritus of PEN International, the only Canadian writer elected to this position in 97 years. His fourteen works have been translated into twenty-eight languages in thirty-seven countries. Saul is perhaps best known for his philosophical trilogy – Voltaire’s Bastards: The Dictatorship of Reason in the West, The Doubter’s Companion: A Dictionary of Aggressive Common Sense and The Unconscious Civilization.",
       "company": "Writer, political philosopher, and public intellectual",
       "thumbnailUrl": "https://images.gr-assets.com/authors/1313954281p5/4392.jpg",
       "websiteUrl": "https://en.wikipedia.org/wiki/John_Ralston_Saul",
@@ -5961,6 +5963,28 @@
       "thumbnailUrl": "https://s3-eu-west-1.amazonaws.com/ilblogdellestelle/wp-content/uploads/2018/08/28095722/aabfbef99ee53614dd6659cbd6413f3989fe74cd.jpg",
       "websiteUrl": "",
       "twitterUrl": "https://twitter.com/Kuzzo74",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "257",
+      "name": "Nadia Linciano",
+      "bio": "Consob.",
+      "company": "Consob",
+      "thumbnailUrl": "https://i1.rgstatic.net/ii/profile.image/277648010956816-1443207852585_Q512/Nadia_Linciano.jpg",
+      "websiteUrl": "http://www.consob.it/web/area-pubblica/linciano-nadia",
+      "twitterUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/nadia-linciano-753b6b6/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "258",
+      "name": "Dario Laruffa",
+      "bio": "Corrispondent for Rai in New York.",
+      "company": "Journalist",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
       "linkedInUrl": "",
       "facebookUrl": ""
     }

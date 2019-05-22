@@ -1075,13 +1075,14 @@
       "endTimestamp": 1559313000000,
       "day": 1,
       "location": "18",
-      "description": "Joel Mokyr\nintroduce \n\nNegli ultimi dieci anni, durante i quali i tassi di crescita sono rallentati, si è sostenuto che le economie avanzate sono destinate a una stagnazione secolare e che una crescita a tassi elevati sia ormai alle spalle per sempre. Quali sono gli insegnamenti della storia?",
+      "description": "Joel Mokyr\nintroduce Andrea Fracasso \n\nNegli ultimi dieci anni, durante i quali i tassi di crescita sono rallentati, si è sostenuto che le economie avanzate sono destinate a una stagnazione secolare e che una crescita a tassi elevati sia ormai alle spalle per sempre. Quali sono gli insegnamenti della storia?",
       "tags": [
         "01",
         "09"
       ],
       "organizers": [
-        "66"
+        "66",
+        "132"
       ],
       "relatedSessions": [
         "22",
@@ -1783,7 +1784,7 @@
       "endTimestamp": 1559385000000,
       "day": 2,
       "location": "20",
-      "description": "a cura dell’Associazione Europea per l’Educazione Economica AEEE Italia\n\ncoordina Roberto Fini \nintervengono Anna Maria Ajello, Annamaria Lusardi, Antonio Schizzerotto\n\nI dati sulla mobilità sociale, insieme alle valutazioni nazionali e internazionali sulla literacy economica e finanziaria degli italiani, indicano la necessità di rafforzare la formazione scolastica sui problemi dell’economia globale.",
+      "description": "a cura dell’Associazione Europea per l’Educazione Economica AEEE Italia\n\ncoordina Roberto Fini \nintervengono Anna Maria Ajello, Nadia Linciano, Antonio Schizzerotto\n\nI dati sulla mobilità sociale, insieme alle valutazioni nazionali e internazionali sulla literacy economica e finanziaria degli italiani, indicano la necessità di rafforzare la formazione scolastica sui problemi dell’economia globale.",
       "tags": [
         "01",
         "03"
@@ -1791,7 +1792,7 @@
       "organizers": [
         "110",
         "111",
-        "112",
+        "257",
         "113"
       ],
       "relatedSessions": [
@@ -2350,10 +2351,10 @@
     {
       "id": "85",
       "title": "Reddito di cittadinanza e regole europee",
-      "startTimestamp": 1559404800000,
-      "endTimestamp": 1559410200000,
+      "startTimestamp": 1559476800000,
+      "endTimestamp": 1559482200000,
       "day": 2,
-      "location": "09",
+      "location": "02",
       "description": "Tommaso Monacelli - Pasquale Tridico\ncoordina Dario Laruffa \n\nPuò il reddito di cittadinanza concederci maggiore flessibilità di bilancio rispettando le regole europee? Quali i suoi probabili effetti su forza lavoro, disoccupazione e reddito nazionale?",
       "tags": [
         "01",
@@ -2361,7 +2362,8 @@
       ],
       "organizers": [
         "176",
-        "177"
+        "177",
+        "258"
       ],
       "relatedSessions": [
         "22",
@@ -3016,12 +3018,12 @@
     },
     {
       "id": "111",
-      "title": "Ten Years After: From Financial Crisis to Yellow Vests",
+      "title": "INET Lecture - Dieci anni dopo: dalla crisi finanziaria ai giubbotti gialli",
       "startTimestamp": 1559296800000,
       "endTimestamp": 1559302200000,
       "day": 1,
       "location": "07",
-      "description": "John Ralston Saul\nSince 2008 we have been paying for the refusal of Western elites to deal with their own failures. Now we witness a defensive explosion in the population who have been literally forced by the mainstream elites to turn to irresponsible leaders. All sides have forgotten that the source of legitimacy in any democracy is the citizenry. Maintenance of that legitimacy depends critically on citizen engagement in the public good - not ripping it down, but building it in an inclusive and empathetic way.",
+      "description": "John Ralston Saul\nDal 2008 paghiamo il rifiuto delle élite occidentali di far fronte ai propri fallimenti. Ora assistiamo a una reazione difensiva nella popolazione che è stata letteralmente costretta dalle élite tradizionali a rivolgersi a leader irresponsabili. Si è dimenticato che la fonte della legittimità in ogni democrazia è la cittadinanza. Il mantenimento di tale legittimità dipende in modo critico dall'impegno dei cittadini nel bene pubblico, non dalla sua demolizione, ma dalla sua costruzione in un modo inclusivo ed empatico.",
       "tags": [
         "01"
       ],
@@ -3117,12 +3119,12 @@
     },
     {
       "id": "115",
-      "title": "Green Growth in Dual Economies: Or Why the Road to Hothouse Earth is Paved with Good Intentions",
+      "title": "INET Lecture - Crescita verde nelle economie duali: perché la strada per il Pianeta Serra è lastricata di buone intenzioni",
       "startTimestamp": 1559469600000,
       "endTimestamp": 1559475000000,
       "day": 3,
       "location": "05",
-      "description": "Servaas Storm\nThis lecture assesses what has so far been accomplished in terms of decarbonisation and energy efficiency improvements and compares this to what will be needed to prevent further warming of the earth about 2 degrees C. The structural transformation required to reduce carbon emissions in line with the IPCC target is profound, and, as will be argued, cannot be left to markets, private initiative and/or pecuniary nudges. A green industrial policy might accomplish this, but it will have to overcome powerful tendencies towards dual economies in the world’s most advanced economies.",
+      "description": "Servaas Storm\nCosa è stato finora realizzato in termini di decarbonizzazione e miglioramenti dell'efficienza energetica? Cosa sarebbe necessario fare per prevenire un ulteriore riscaldamento della terra di circa 2 gradi C? La trasformazione strutturale necessaria per ridurre le emissioni di carbonio in linea con l'obiettivo IPCC non può essere lasciata al mercato.",
       "tags": [
         "01",
         "14"
@@ -4386,7 +4388,7 @@
       "id": "113",
       "name": "Antonio Schizzerotto",
       "bio": "Fondazione Bruno Kessler - IRVAPP.",
-      "company": "",
+      "company": "Fondazione Bruno Kessler - IRVAPP",
       "thumbnailUrl": "",
       "websiteUrl": "",
       "twitterUrl": "",
@@ -5694,7 +5696,7 @@
     {
       "id": "232",
       "name": "John Ralston Saul",
-      "bio": "John Ralston Saul, CC OOnt è uno scrittore canadese, filosofo politico e intellettuale pubblico. Saul è più conosciuto per i suoi scritti sulla natura dell'individualismo, della cittadinanza e del bene pubblico.",
+      "bio": "John Ralston Saul è saggista e romanziere. Ha vinto numerosi premi ed è considerato il più importante intellettuale del Canada. Nel libro “The Collapse of Globalism“, Saul ha previsto la crisi economica del 2007-2008 prima che accadesse davvero, così come l’attuale ascesa del populismo e della xenofobia. Saul è stato dichiarato un “profeta” dal TIME magazine e fa parte della Utne Reader’s list dei 100 principali pensatori e visionari al mondo. È co-presidente dell’Institute for Canadian Citizenship and 6 Degrees, un movimento globale sulla cittadinanza e l’immigrazione. È Presidente Emerito di PEN International, ed è l’unico scrittore canadese eletto a questa posizione in 97 anni. Le sue quattordici pubblicazioni sono state tradotte in ventotto lingue in trentasette paesi. Saul è soprattutto conosciuto per la sua trilogia filosofica – Voltaire’s Bastards: The Dictatorship of Reason in the West, The Doubter’s Companion: A Dictionary of Aggressive Common Sense and The Unconscious Civilization.",
       "company": "Scrittore, filosofo politico, intellettuale",
       "thumbnailUrl": "https://images.gr-assets.com/authors/1313954281p5/4392.jpg",
       "websiteUrl": "https://en.wikipedia.org/wiki/John_Ralston_Saul",
@@ -5963,6 +5965,28 @@
       "thumbnailUrl": "https://s3-eu-west-1.amazonaws.com/ilblogdellestelle/wp-content/uploads/2018/08/28095722/aabfbef99ee53614dd6659cbd6413f3989fe74cd.jpg",
       "websiteUrl": "",
       "twitterUrl": "https://twitter.com/Kuzzo74",
+      "linkedInUrl": "",
+      "facebookUrl": ""
+    },
+    {
+      "id": "257",
+      "name": "Nadia Linciano",
+      "bio": "Consob.",
+      "company": "Consob",
+      "thumbnailUrl": "https://i1.rgstatic.net/ii/profile.image/277648010956816-1443207852585_Q512/Nadia_Linciano.jpg",
+      "websiteUrl": "http://www.consob.it/web/area-pubblica/linciano-nadia",
+      "twitterUrl": "",
+      "linkedInUrl": "https://www.linkedin.com/in/nadia-linciano-753b6b6/?originalSubdomain=it",
+      "facebookUrl": ""
+    },
+    {
+      "id": "258",
+      "name": "Dario Laruffa",
+      "bio": "Corrispondente Rai da New York .",
+      "company": "Giornalista",
+      "thumbnailUrl": "",
+      "websiteUrl": "",
+      "twitterUrl": "",
       "linkedInUrl": "",
       "facebookUrl": ""
     }
