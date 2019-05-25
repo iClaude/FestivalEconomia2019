@@ -59,7 +59,7 @@ dependencies {
     implementation 'androidx.preference:preference:1.1.0-alpha05'
 
     // WorkManager.
-    implementation 'androidx.work:work-runtime:2.1.0-alpha01'
+    implementation 'androidx.work:work-runtime:2.1.0-alpha02'
 
     // Kotlin coroutines.
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.0'
@@ -93,7 +93,7 @@ dependencies {
 
     // Glide.
     implementation 'com.github.bumptech.glide:glide:4.9.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
 
     // Firebase UI authentication.
     implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
@@ -101,6 +101,6 @@ dependencies {
     implementation 'com.twitter.sdk.android:twitter-core:3.3.0'
 
     // Lottie animations.
-    implementation 'com.airbnb.android:lottie:3.0.2'
+    implementation 'com.airbnb.android:lottie:3.0.3'
 
 }
