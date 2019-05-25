@@ -232,7 +232,7 @@
       "startTimestamp": 1559223000000,
       "endTimestamp": 1559228400000,
       "day": 0,
-      "location": "03",
+      "location": "02",
       "description": "James Robinson\nintroduce Tito Boeri\n\nIl populismo si afferma quando la società diventa più polarizzata, i conflitti superano il livello oltre il quale le istituzioni non sono più in grado di offrire mediazioni e ci sono grandi shock al tessuto sociale. Cosa si può fare per ridurre la polarizzazione e migliorare il funzionamento delle istituzioni.",
       "tags": [
         "01",
@@ -425,7 +425,11 @@
         "12"
       ],
       "relatedSessions": [
-        "54"
+        "54",
+        "00",
+        "03",
+        "13",
+        "29"
       ],
       "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555416241994.festival_Economia_2016_generiche_e_personaggi_minori___00000207_439001.png",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/zapping",
@@ -500,12 +504,12 @@
         "22"
       ],
       "relatedSessions": [
-        "14",
-        "17",
-        "35",
-        "36",
-        "39",
-        "52"
+        "00",
+        "03",
+        "09",
+        "13",
+        "29",
+        "54"
       ],
       "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555416241994.festival_Economia_2016_generiche_e_personaggi_minori___00000207_439001.png",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/radio-anch-io",
@@ -1202,7 +1206,7 @@
         "91"
       ],
       "photoUrl": "",
-      "sessionUrl": "https://2019.festivaleconomia.eu/-/le-imprese-italiane-tra-protezione-e-globalizzazione",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/immigrazione-e-scenari-demografici",
       "youtubeUrl": ""
     },
     {
@@ -1287,7 +1291,7 @@
       "startTimestamp": 1559314800000,
       "endTimestamp": 1559320200000,
       "day": 1,
-      "location": "05",
+      "location": "02",
       "description": "Wolfgang Munchau - George Papacostantinou\ncoordina Ferdinando Giugliano\n\nFino a che punto le politiche economiche portate avanti da Syriza in Grecia sono diverse da quelle dei governi precedenti? Il programma di austerity di Tsipras è stato davvero più attento e sensibile ai più vulnerabili della società? Si può affermare, più in generale, che i populisti perseguono politiche differenti? Un dibattito fra uno dei più influenti protagonisti dei negoziati con la Troika e un attento osservatore della gestione europea della tragedia greca.",
       "tags": [
         "01",
@@ -1564,7 +1568,11 @@
         "12"
       ],
       "relatedSessions": [
-        "12"
+        "09",
+        "00",
+        "03",
+        "13",
+        "29"
       ],
       "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555416241994.festival_Economia_2016_generiche_e_personaggi_minori___00000207_439001.png",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/zappi-1",
@@ -2175,11 +2183,11 @@
     },
     {
       "id": "78",
-      "title": "La caduta delle ambizioni",
+      "title": "La caduta del muro delle ambizioni",
       "startTimestamp": 1559397600000,
       "endTimestamp": 1559403000000,
       "day": 2,
-      "location": "08",
+      "location": "05",
       "description": "Ghazala Azmat\nintroduce Regina Krieger\n\nChe influenza ha il contesto politico-economico sulle scelte e sulle ambizioni personali? Le decisioni fondamentali sono prese, generalmente, nell’ambito di norme, regole, valori e opinioni sul mondo ben definiti. Nel caso della riunificazione tedesca, la convergenza con la Germania dell’Ovest ha influenzato le aspirazioni e gli investimenti in formazione degli studenti dell’Est del paese.",
       "tags": [
         "01",
@@ -3166,7 +3174,7 @@
     {
       "id": "02",
       "name": "Cristiana Castellotti",
-      "bio": "Curatrice del programma “Tutta la città ne parla”, Radio3",
+      "bio": "Curatrice del programma “Tutta la città ne parla”, Radio3.",
       "company": "RAI - Radio 3",
       "thumbnailUrl": "",
       "websiteUrl": "",
@@ -3278,7 +3286,7 @@
       "name": "Giancarlo Loquenzi",
       "bio": "Giornalista e conduttore di Zapping - Rai Radio1.",
       "company": "RAI Radio 1",
-      "thumbnailUrl": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Giancarlo_Loquenzi_-_Festival_Economia_2018.jpg/220px-Giancarlo_Loquenzi_-_Festival_Economia_2018.jpg",
       "websiteUrl": "",
       "twitterUrl": "",
       "linkedInUrl": "",
@@ -4466,7 +4474,7 @@
       "name": "Pietro Valenti",
       "bio": "Direttore Pangea Fabrics and Consulting.",
       "company": "Pangea Fabrics and Consulting",
-      "thumbnailUrl": "",
+      "thumbnailUrl": "https://media.licdn.com/dms/image/C5103AQHs10vtOErUzg/profile-displayphoto-shrink_200_200/0?e=1560988800&v=beta&t=rjA2Kaw7hSnKSSAU0_b2jZzpDKMhSw7dDC1Bo9zaAXU",
       "websiteUrl": "http://www.pangeafabrics.com/team/",
       "twitterUrl": "",
       "linkedInUrl": "https://www.linkedin.com/in/pietro-valenti-23b48a20/?originalSubdomain=it",

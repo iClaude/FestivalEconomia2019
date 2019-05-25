@@ -232,7 +232,7 @@
       "startTimestamp": 1559223000000,
       "endTimestamp": 1559228400000,
       "day": 0,
-      "location": "03",
+      "location": "02",
       "description": "James Robinson\nintroduced by Tito Boeri\n\nThe specter of populism is haunting the world. But what is it exactly? Where does it come from and what should be done about it? We define populism as an anti-elitist exclusionary political strategy which builds a coalition of discontented citizens to challenge the status-quo. To understand why this coalition is potentially destabilizing to democracy and how it forms we developed a framework to studying the joint evolution of state and society.",
       "tags": [
         "01",
@@ -425,7 +425,11 @@
         "12"
       ],
       "relatedSessions": [
-        "54"
+        "54",
+        "00",
+        "03",
+        "13",
+        "29"
       ],
       "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555416241994.festival_Economia_2016_generiche_e_personaggi_minori___00000207_439001.png",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/zapping",
@@ -1199,7 +1203,7 @@
         "91"
       ],
       "photoUrl": "",
-      "sessionUrl": "https://2019.festivaleconomia.eu/-/le-imprese-italiane-tra-protezione-e-globalizzazione",
+      "sessionUrl": "https://2019.festivaleconomia.eu/-/immigrazione-e-scenari-demografici",
       "youtubeUrl": ""
     },
     {
@@ -1284,7 +1288,7 @@
       "startTimestamp": 1559314800000,
       "endTimestamp": 1559320200000,
       "day": 1,
-      "location": "05",
+      "location": "02",
       "description": "Wolfgang Munchau - George Papacostantinou\ncoordinated by Ferdinando Giugliano\n\nTo which extent did the economic policies carried out by Syriza in Greece differ from those of previous governments? Was the austerity program under Syriza more socially aware and friendlier towards those most vulnerable? More generally, do populists pursue different policies? A discussion between a key player in the negotiations with the Troika and an acute observer of the European management of the Greek tragedy.",
       "tags": [
         "01",
@@ -1561,7 +1565,11 @@
         "12"
       ],
       "relatedSessions": [
-        "12"
+        "09",
+        "00",
+        "03",
+        "13",
+        "29"
       ],
       "photoUrl": "https://www.rainews.it/resizegd/768x-/dl/img/2019/04/1555416241994.festival_Economia_2016_generiche_e_personaggi_minori___00000207_439001.png",
       "sessionUrl": "https://2019.festivaleconomia.eu/-/zappi-1",
@@ -2176,7 +2184,7 @@
       "startTimestamp": 1559397600000,
       "endTimestamp": 1559403000000,
       "day": 2,
-      "location": "08",
+      "location": "05",
       "description": "Ghazala Azmat\nintroduced by Regina Krieger\n\nHow does ones’ politico-economic environment shape aspirations and choices? Decisions are generally made within a specific set of social norms, rules, values and world views. We study how during the German Reunification, convergence with West Germany influenced the educational aspirations and eventual educational investments of students in the East.",
       "tags": [
         "01",
@@ -3164,7 +3172,7 @@
     {
       "id": "02",
       "name": "Cristiana Castellotti",
-      "bio": "Organizer of the programme “Tutta la città ne parla”, Rai Radio3",
+      "bio": "Organizer of the programme “Tutta la città ne parla”, Rai Radio3.",
       "company": "RAI - Radio 3",
       "thumbnailUrl": "",
       "websiteUrl": "",
@@ -3276,7 +3284,7 @@
       "name": "Giancarlo Loquenzi",
       "bio": "Journalist and presenter of Zapping - Rai Radio1.",
       "company": "Journalist",
-      "thumbnailUrl": "",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Giancarlo_Loquenzi_-_Festival_Economia_2018.jpg/220px-Giancarlo_Loquenzi_-_Festival_Economia_2018.jpg",
       "websiteUrl": "",
       "twitterUrl": "",
       "linkedInUrl": "",
@@ -4464,7 +4472,7 @@
       "name": "Pietro Valenti",
       "bio": "Director of Pangea Fabrics and Consulting.",
       "company": "Pangea Fabrics and Consulting",
-      "thumbnailUrl": "",
+      "thumbnailUrl": "https://media.licdn.com/dms/image/C5103AQHs10vtOErUzg/profile-displayphoto-shrink_200_200/0?e=1560988800&v=beta&t=rjA2Kaw7hSnKSSAU0_b2jZzpDKMhSw7dDC1Bo9zaAXU",
       "websiteUrl": "http://www.pangeafabrics.com/team/",
       "twitterUrl": "",
       "linkedInUrl": "https://www.linkedin.com/in/pietro-valenti-23b48a20/?originalSubdomain=it",
