@@ -12,4 +12,4 @@ The **main app's features** will be the following:
 * users' discussion about the topics
 * create a personal agenda with the events you are interested in
 
-![post of the event](https://pbs.twimg.com/media/DjW1zqBXsAAJHhx.jpg)
+<img src="https://user-images.githubusercontent.com/8618582/58439619-3e1d2e80-80d5-11e9-9162-ad832fc1d48a.png" width="400">
