@@ -13,3 +13,17 @@ The **main app's features** will be the following:
 * create a personal agenda with the events you are interested in
 
 <img src="https://user-images.githubusercontent.com/8618582/58439619-3e1d2e80-80d5-11e9-9162-ad832fc1d48a.png" width="400">
+
+<img src="https://user-images.githubusercontent.com/8618582/58439613-3bbad480-80d5-11e9-9458-2ece52da012c.png" width="400">
+
+<img src="https://user-images.githubusercontent.com/8618582/58439611-3b223e00-80d5-11e9-807b-ec5938e4d256.png" width="400">
+
+<img src="https://user-images.githubusercontent.com/8618582/58439612-3bbad480-80d5-11e9-8c1b-c17b8034913d.png" width="400">
+
+<img src="https://user-images.githubusercontent.com/8618582/58439614-3bbad480-80d5-11e9-8dce-728ebf93a6a3.png" width="400">
+
+<img src="https://user-images.githubusercontent.com/8618582/58439616-3c536b00-80d5-11e9-81e3-13fb757d4aa0.png" width="400">
+
+<img src="https://user-images.githubusercontent.com/8618582/58439617-3cec0180-80d5-11e9-9478-24b76244deee.png" width="400">
+
+<img src="https://user-images.githubusercontent.com/8618582/58439618-3d849800-80d5-11e9-8c31-07cd9324d67a.png" width="400">
