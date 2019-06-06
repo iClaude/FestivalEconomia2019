@@ -1,9 +1,6 @@
 package iclaude.festivaleconomia2019.ui.sessions
 
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.Canvas
-import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.LayoutInflater
@@ -39,11 +36,6 @@ class SessionContainerFragment : Fragment() {
     private lateinit var viewModel: SessionListViewModel
     private lateinit var binding: FragmentSessionContainerBinding
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<View>
-
-    /* This is a super-hacky solution to have a proper exit animation when a Fragment contains other Fragments.
-     * Basically, we get a picture of the screen to simulate that children Fragments are still present, even if
-     * their view is no longer there. See methods onPause and onDestroyView. */
-    var b: Bitmap? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -159,33 +151,4 @@ class SessionContainerFragment : Fragment() {
         }
     }
 
-    /* This is a super-hacky solution to have a proper exit animation when a Fragment contains other Fragments.
-     * Basically, we get a picture of the screen to simulate that children Fragments are still present, even if
-     * their view is no longer there. See methods onPause and onDestroyView. */
-    override fun onPause() {
-        super.onPause()
-        b = loadBitmapFromView(view!!)
-    }
-
-    override fun onDestroyView() {
-        val bd = BitmapDrawable(resources, b)
-        view!!.background = bd
-        b = null
-
-        super.onDestroyView()
-    }
-
-    private fun loadBitmapFromView(v: View): Bitmap {
-        val b = Bitmap.createBitmap(
-            v.width,
-            v.height, Bitmap.Config.ARGB_8888
-        )
-        val c = Canvas(b)
-        v.layout(
-            0, 0, v.width,
-            v.height
-        )
-        v.draw(c)
-        return b
-    }
 }
