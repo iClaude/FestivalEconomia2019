@@ -62,6 +62,8 @@ class MainActivity : AppCompatActivity() {
         val hoursInAdvance = sharedPref.getInt(getString(R.string.info_pref_notifications_hours_key), 1)
         WorkRequestBuilder.deleteAllRequests()
         for (sessionId in repository.starredSessions) {
+            if (!(sessionId.toInt() in 0..sessions.size - 1)) continue
+
             val session = sessions[sessionId.toInt()]
             val location = locations[session.location.toInt()]
             val locationStr = location.name
