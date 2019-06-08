@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#FFCC80</color>
+    <color name="primaryDarkColor">#F57C00</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryColor">#80DEEA</color>
+    <color name="secondaryDarkColor">#81D4FA</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="errorColor">#CF6679</color>
+    <color name="onErrorColor">#000000</color>
+    <color name="surfaceColor">#121212</color>
+    <color name="onSurfaceColor">#FFFFFF</color>
+    <color name="backgroundColor">#121212</color>
+    <color name="onBackgroundColor">#FFFFFF</color>
+
+    <color name="statusBarColor">#000000</color>
+</resources>

@@ -63,7 +63,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
                 val intent = Intent(Intent.ACTION_VIEW, uri).apply {
                     `package` = "com.google.android.apps.maps"
                 }
-                if (intent.resolveActivity(context?.packageManager) != null) {
+                if (intent.resolveActivity(context?.packageManager!!) != null) {
                     startActivity(intent)
                 }
             })

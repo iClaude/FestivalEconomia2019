@@ -45,7 +45,7 @@ class InfoFragment : Fragment(), InfoView {
                 action = Intent.ACTION_VIEW
                 data = "https://www.youtube.com/watch?v=7twSBUAX2cM".toUri()
             }
-            if (intent.resolveActivity(context?.packageManager) != null) {
+            if (intent.resolveActivity(context?.packageManager!!) != null) {
                 startActivity(intent)
             }
         }

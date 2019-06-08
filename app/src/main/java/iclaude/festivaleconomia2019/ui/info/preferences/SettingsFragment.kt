@@ -2,6 +2,8 @@ package iclaude.festivaleconomia2019.ui.info.preferences
 
 import android.os.Bundle
 import android.preference.PreferenceManager
+import androidx.appcompat.app.AppCompatDelegate.*
+import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.SeekBarPreference
 import androidx.preference.SwitchPreferenceCompat
@@ -50,5 +52,29 @@ class SettingsFragment : BasePreferenceFragment() {
             }
         }
 
+        findPreference<ListPreference>(getString(R.string.info_pref_theme_key))?.let {
+            it.onPreferenceChangeListener = object : Preference.OnPreferenceChangeListener {
+                override fun onPreferenceChange(preference: Preference?, newValue: Any?): Boolean {
+                    val valueChosen = (newValue as String).toInt()
+                    setNightMode(valueChosen)
+
+                    return true
+                }
+            }
+        }
+
     }
+}
+
+fun setNightMode(valueChosen: Int) {
+    require(valueChosen in 0..2) { "Theme value $valueChosen invalid: should be in 0..2 interval" }
+
+    val themeSetting = when (valueChosen) {
+        0 -> MODE_NIGHT_NO
+        1 -> MODE_NIGHT_YES
+        2 -> if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) MODE_NIGHT_FOLLOW_SYSTEM
+        else MODE_NIGHT_AUTO_BATTERY
+        else -> MODE_NIGHT_NO
+    }
+    setDefaultNightMode(themeSetting)
 }

@@ -73,7 +73,7 @@ class SessionInfoFragment : Fragment() {
                     action = Intent.ACTION_VIEW
                     data = it.toUri()
                 }
-                if (intent.resolveActivity(context?.packageManager) != null) {
+                if (intent.resolveActivity(context?.packageManager!!) != null) {
                     startActivity(intent)
                 }
             })

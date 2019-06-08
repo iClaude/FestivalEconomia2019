@@ -133,6 +133,19 @@
     <string name="info_pref_timezone_title">Trento time zone</string>
     <string name="info_pref_timezone_summary">Show times in the event\'s time zone</string>
 
+    <string name="info_pref_theme_key" translatable="false">theme</string>
+    <string name="info_pref_theme_title">Theme</string>
+    <string-array name="info_pref_theme_entries">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>Set by Battery Saver</item>
+    </string-array>
+    <string-array name="info_pref_theme_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
     <string name="info_pref_website_key" translatable="false">website</string>
     <string name="info_pref_website_title">Official website</string>
     <string name="info_pref_website_summary">Go to event\'s official website</string>
