@@ -27,6 +27,6 @@
 
     <!-- Session info. -->
     <color name="scrim">#33000000</color>
-    <color name="link">#303F9F</color>
+    <color name="link">#3F51B5</color>
 
 </resources>
