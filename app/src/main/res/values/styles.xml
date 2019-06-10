@@ -15,12 +15,12 @@
         <item name="colorError">@color/errorColor</item>
         <item name="colorOnError">@color/onErrorColor</item>
         <item name="colorSurface">@color/surfaceColor</item>
-        <item name="colorOnSurface">#212121</item>
+        <item name="colorOnSurface">@color/onSurfaceColor</item>
         <item name="android:colorBackground">@color/backgroundColor</item>
         <item name="colorOnBackground">@color/onBackgroundColor</item>
 
         <item name="android:statusBarColor">@color/statusBarColor</item>
-        <item name="android:navigationBarColor">@color/primaryColor</item>
+        <item name="android:navigationBarColor">@color/navigationBarColor</item>
 
         <!-- Widget global styles. -->
         <item name="bottomNavigationStyle">@style/BottomNavigationView</item>
