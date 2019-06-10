@@ -84,7 +84,7 @@
     <string name="info_settings">Settings</string>
 
     <!-- About -->
-    <string name="info_about_version" translatable="false">v. 1.5</string>
+    <string name="info_about_version" translatable="false">v. 1.6</string>
     <string name="info_about_author" translatable="false">by Claudio \"iClaude\" Agostini</string>
     <string name="info_about_desc_title">Description</string>
     <string name="info_about_desc">Economics Festival is the %1$s dedicated to the %2$s,
