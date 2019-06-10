@@ -26,6 +26,6 @@ class MyClickableSpanToSessionDetails(
 
     override fun updateDrawState(ds: TextPaint) {
         ds.color = ContextCompat.getColor(context, R.color.link)
-        ds.isUnderlineText = true
+        //ds.isUnderlineText = true
     }
 }
