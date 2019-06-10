@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primaryColor">#FFCC80</color>
-    <color name="primaryDarkColor">#F57C00</color>
+    <color name="primaryColor">#ff8a50</color>
+    <color name="primaryDarkColor">#c41c00</color>
     <color name="primaryTextColor">#000000</color>
-    <color name="secondaryColor">#80DEEA</color>
-    <color name="secondaryDarkColor">#81D4FA</color>
+    <color name="secondaryColor">#6effe8</color>
+    <color name="secondaryDarkColor">#00b686</color>
     <color name="secondaryTextColor">#000000</color>
     <color name="errorColor">#CF6679</color>
     <color name="onErrorColor">#000000</color>
@@ -14,4 +14,7 @@
     <color name="onBackgroundColor">#FFFFFF</color>
 
     <color name="statusBarColor">#000000</color>
+    <color name="navigationBarColor">#000000</color>
+
+    <color name="link">#90CAF9</color>
 </resources>

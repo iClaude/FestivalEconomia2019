@@ -16,6 +16,7 @@
     <color name="onBackgroundColor">#212121</color>
 
     <color name="statusBarColor">#ffffff</color>
+    <color name="navigationBarColor">#FF5722</color>
     <color name="mapFragmentAppbarColor">#e6ffffff</color>
     <color name="white">#fff</color>
     <color name="whiteWithAlpha">#b3f2f2f2</color>
