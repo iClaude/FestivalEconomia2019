@@ -28,7 +28,7 @@
 
     <!-- BottomNavigationView style. -->
     <style name="BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
-        <item name="itemIconTint">@color/bottom_nav_item</item>
+        <item name="itemIconTint">@color/bottom_nav_item_icon</item>
         <item name="itemTextAppearanceActive">@style/BottomNavigationViewText</item>
         <item name="itemTextAppearanceInactive">@style/BottomNavigationViewText</item>
         <item name="labelVisibilityMode">selected</item>
@@ -37,7 +37,6 @@
     <style name="BottomNavigationViewText"
            parent="@style/TextAppearance.MaterialComponents.Caption">
         <item name="android:fontFamily">@font/open_sans</item>
-        <item name="android:textColor">@color/bottom_nav_item</item>
         <item name="android:textSize">14sp</item>
     </style>
 

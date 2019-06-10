@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- BottomNavigationView style. -->
+    <style name="BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@color/bottom_nav_item_icon</item>
+        <item name="itemTextAppearanceActive">@style/BottomNavigationViewText</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationViewText</item>
+        <item name="itemTextColor">@color/bottom_nav_item_text_night</item>
+        <item name="labelVisibilityMode">selected</item>
+    </style>
+</resources>
