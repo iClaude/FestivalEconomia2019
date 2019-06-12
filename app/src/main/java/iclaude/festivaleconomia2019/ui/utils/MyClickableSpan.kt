@@ -30,6 +30,6 @@ class MyClickableSpan(val context: Context, private val url: String) : Clickable
 
     override fun updateDrawState(ds: TextPaint) {
         ds.color = ContextCompat.getColor(context, R.color.link)
-        //ds.isUnderlineText = true
+        ds.isUnderlineText = true
     }
 }

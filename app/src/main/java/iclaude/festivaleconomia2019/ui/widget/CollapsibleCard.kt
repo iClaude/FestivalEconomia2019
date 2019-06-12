@@ -53,7 +53,7 @@ class CollapsibleCard @JvmOverloads constructor(
         expandIcon = root.findViewById(R.id.expand_icon)
         if (SDK_INT < M) {
             expandIcon.imageTintList =
-                AppCompatResources.getColorStateList(context, R.color.collapsing_section)
+                AppCompatResources.getColorStateList(context, R.color.collapsing_section_title)
         }
         toggle = TransitionInflater.from(context)
             .inflateTransition(R.transition.info_card_toggle)

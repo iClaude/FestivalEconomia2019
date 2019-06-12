@@ -57,7 +57,7 @@
                     android:layout_marginEnd="@dimen/margin_normal"
                     android:importantForAccessibility="no"
                     android:src="@drawable/ic_arrow_down"
-                    android:tint="@color/collapsing_section"
+                    android:tint="@color/collapsing_section_arrow"
                     android:tintMode="src_in"/>
 
         </RelativeLayout>
