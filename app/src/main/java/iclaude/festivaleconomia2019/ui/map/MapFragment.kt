@@ -18,9 +18,11 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_COLLAPSED
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
+import iclaude.festivaleconomia2019.R
 import iclaude.festivaleconomia2019.databinding.FragmentMapBinding
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
 
@@ -118,6 +120,9 @@ class MapFragment : Fragment(), OnMapReadyCallback {
 
     override fun onMapReady(gMap: GoogleMap?) {
         googleMap = gMap
+
+        // Style for light/dark theme.
+        googleMap?.setMapStyle(MapStyleOptions.loadRawResourceStyle(activity!!, R.raw.google_maps_style))
 
         viewModel.eventDataFromRepoLive.observe(this, Observer {
             viewModel.loadMap(it.locations)
