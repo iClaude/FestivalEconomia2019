@@ -71,7 +71,6 @@ class InfoFragment : Fragment(), InfoView {
     }
 
     override fun displayImages() {
-        ivCineconomy.setImageDrawable(HeaderGridDrawable(context!!))
         ivDialogues.setImageDrawable(HeaderGridDrawable(context!!))
         ivForum.setImageDrawable(HeaderGridDrawable(context!!))
         ivIntersections.setImageDrawable(HeaderGridDrawable(context!!))
@@ -82,7 +81,6 @@ class InfoFragment : Fragment(), InfoView {
         ivWitnesses.setImageDrawable(HeaderGridDrawable(context!!))
         ivVisions.setImageDrawable(HeaderGridDrawable(context!!))
 
-        chipCineconomy.chipBackgroundColor = createChipColorStateList(Color.parseColor("#cce9c2"))
         chipDialogues.chipBackgroundColor = createChipColorStateList(Color.parseColor("#FFEAB3"))
         chipForum.chipBackgroundColor = createChipColorStateList(Color.parseColor("#A7D7FE"))
         chipIntersections.chipBackgroundColor = createChipColorStateList(Color.parseColor("#9BDD7C"))

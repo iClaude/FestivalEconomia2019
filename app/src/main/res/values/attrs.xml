@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Card used to display info about each type of event -->
+    <declare-styleable name="EventTypeCard">
+        <attr name="eventImageSrc" format="reference"/>
+        <attr name="eventTitle" format="reference"/>
+        <attr name="eventDescription" format="reference"/>
+    </declare-styleable>
+
     <declare-styleable name="TimeHeader">
         <attr name="android:width"/>
         <attr name="android:paddingTop"/>

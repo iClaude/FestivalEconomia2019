@@ -117,55 +117,26 @@
                 android:text="@string/info_event_types"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
 
-        <ImageView
-                android:id="@+id/ivCineconomy"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
+        <iclaude.festivaleconomia2019.ui.widget.EventTypeCard
+                android:id="@+id/etcCineconomy"
                 app:layout_constraintTop_toBottomOf="@id/tvEventTypes"
                 android:layout_marginTop="@dimen/margin_small"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" android:contentDescription="@string/content_description"/>
-
-        <ImageView
-                android:id="@+id/ivCineconomySquirrel"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                app:layout_constraintEnd_toEndOf="@id/ivCineconomy"
-                app:layout_constraintTop_toTopOf="@id/ivCineconomy"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/event_logo" android:contentDescription="@string/content_description"/>
-
-        <com.google.android.material.chip.Chip
-                android:id="@+id/chipCineconomy"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/ivCineconomy"
-                android:layout_marginBottom="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="@id/ivCineconomy"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:text="@string/info_type_cineconomy"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                android:fontFamily="@font/open_sans"/>
-
-        <TextView
-                android:id="@+id/tvCineconomyDesc"
-                android:text="@string/info_type_cineconomy_desc"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/ivCineconomy"
-                android:layout_marginTop="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="@dimen/margin_normal"/>
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:eventImageSrc="@drawable/event_header1"
+                app:eventTitle="@string/info_type_cineconomy"
+                app:eventDescription="@string/info_type_cineconomy_desc"
+        />
 
         <ImageView
                 android:id="@+id/ivDialogues"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                app:layout_constraintTop_toBottomOf="@id/tvCineconomyDesc"
+                app:layout_constraintTop_toBottomOf="@id/etcCineconomy"
                 android:layout_marginTop="@dimen/margin_normal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" android:contentDescription="@string/content_description"/>
