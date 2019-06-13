@@ -14,7 +14,6 @@ import iclaude.festivaleconomia2019.ui.utils.buildSpannableString
 interface InfoView {
     fun showEditorialLink(spannableString: SpannableString)
     fun showFocus(spannableString: SpannableString)
-    fun displayImages()
 
 }
 
@@ -28,7 +27,6 @@ class InfoPresenter(
     fun displayData() {
         infoView.showEditorialLink(createEditorialLinkText())
         infoView.showFocus(createFocusText())
-        infoView.displayImages()
     }
 
     /**

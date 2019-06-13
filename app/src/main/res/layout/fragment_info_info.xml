@@ -125,431 +125,143 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
                 app:eventImageSrc="@drawable/event_header1"
                 app:eventTitle="@string/info_type_cineconomy"
-                app:eventDescription="@string/info_type_cineconomy_desc"
-        />
+                app:eventDescription="@string/info_type_cineconomy_desc"/>
 
-        <ImageView
-                android:id="@+id/ivDialogues"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
+        <iclaude.festivaleconomia2019.ui.widget.EventTypeCard
+                android:id="@+id/etcDialogues"
                 app:layout_constraintTop_toBottomOf="@id/etcCineconomy"
                 android:layout_marginTop="@dimen/margin_normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" android:contentDescription="@string/content_description"/>
-
-        <ImageView
-                android:id="@+id/ivDialoguesSquirrel"
-                android:contentDescription="@string/content_description"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                app:layout_constraintEnd_toEndOf="@id/ivDialogues"
-                app:layout_constraintTop_toTopOf="@id/ivDialogues"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/event_logo"/>
-
-        <com.google.android.material.chip.Chip
-                android:id="@+id/chipDialogues"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/ivDialogues"
-                android:layout_marginBottom="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="@id/ivDialogues"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:text="@string/info_type_dialogues"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                android:fontFamily="@font/open_sans"/>
-
-        <TextView
-                android:id="@+id/tvDialoguesDesc"
-                android:text="@string/info_type_dialogues_desc"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/ivDialogues"
-                android:layout_marginTop="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="@dimen/margin_normal"/>
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:eventImageSrc="@drawable/event_header2"
+                app:eventTitle="@string/info_type_dialogues"
+                app:eventDescription="@string/info_type_dialogues_desc"/>
 
-        <ImageView
-                android:id="@+id/ivForum"
-                android:contentDescription="@string/content_description"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                app:layout_constraintTop_toBottomOf="@id/tvDialoguesDesc"
+        <iclaude.festivaleconomia2019.ui.widget.EventTypeCard
+                android:id="@+id/etcForum"
+                app:layout_constraintTop_toBottomOf="@id/etcDialogues"
                 android:layout_marginTop="@dimen/margin_normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-        <ImageView
-                android:id="@+id/ivForumSquirrel"
-                android:contentDescription="@string/content_description"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                app:layout_constraintEnd_toEndOf="@id/ivForum"
-                app:layout_constraintTop_toTopOf="@id/ivForum"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/event_logo"/>
-
-        <com.google.android.material.chip.Chip
-                android:id="@+id/chipForum"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/ivForum"
-                android:layout_marginBottom="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="@id/ivForum"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:text="@string/info_type_forum"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                android:fontFamily="@font/open_sans"/>
-
-        <TextView
-                android:id="@+id/tvForumDesc"
-                android:text="@string/info_type_forum_desc"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/ivForum"
-                android:layout_marginTop="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="@dimen/margin_normal"/>
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:eventImageSrc="@drawable/event_header3"
+                app:eventTitle="@string/info_type_forum"
+                app:eventDescription="@string/info_type_forum_desc"/>
 
-        <ImageView
-                android:id="@+id/ivIntersections"
-                android:contentDescription="@string/content_description"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                app:layout_constraintTop_toBottomOf="@id/tvForumDesc"
+        <iclaude.festivaleconomia2019.ui.widget.EventTypeCard
+                android:id="@+id/etcIntersections"
+                app:layout_constraintTop_toBottomOf="@id/etcForum"
                 android:layout_marginTop="@dimen/margin_normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-        <ImageView
-                android:id="@+id/ivIntersectionsSquirrel"
-                android:contentDescription="@string/content_description"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                app:layout_constraintEnd_toEndOf="@id/ivIntersections"
-                app:layout_constraintTop_toTopOf="@id/ivIntersections"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/event_logo"/>
-
-        <com.google.android.material.chip.Chip
-                android:id="@+id/chipIntersections"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/ivIntersections"
-                android:layout_marginBottom="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="@id/ivIntersections"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:text="@string/info_type_intersections"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                android:fontFamily="@font/open_sans"/>
-
-        <TextView
-                android:id="@+id/tvIntersectionsDesc"
-                android:text="@string/info_type_intersections_desc"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/ivIntersections"
-                android:layout_marginTop="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="@dimen/margin_normal"/>
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:eventImageSrc="@drawable/event_header4"
+                app:eventTitle="@string/info_type_intersections"
+                app:eventDescription="@string/info_type_intersections_desc"/>
 
-        <ImageView
-                android:id="@+id/ivKeywords"
-                android:contentDescription="@string/content_description"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                app:layout_constraintTop_toBottomOf="@id/tvIntersectionsDesc"
+        <iclaude.festivaleconomia2019.ui.widget.EventTypeCard
+                android:id="@+id/etcKeywords"
+                app:layout_constraintTop_toBottomOf="@id/etcIntersections"
                 android:layout_marginTop="@dimen/margin_normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-        <ImageView
-                android:id="@+id/ivKeywordsSquirrel"
-                android:contentDescription="@string/content_description"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                app:layout_constraintEnd_toEndOf="@id/ivKeywords"
-                app:layout_constraintTop_toTopOf="@id/ivKeywords"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/event_logo"/>
-
-        <com.google.android.material.chip.Chip
-                android:id="@+id/chipKeywords"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/ivKeywords"
-                android:layout_marginBottom="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="@id/ivKeywords"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:text="@string/info_type_keywords"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                android:fontFamily="@font/open_sans"/>
-
-        <TextView
-                android:id="@+id/tvKeywordsDesc"
-                android:text="@string/info_type_keywords_desc"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/ivKeywords"
-                android:layout_marginTop="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="@dimen/margin_normal"/>
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:eventImageSrc="@drawable/event_header5"
+                app:eventTitle="@string/info_type_keywords"
+                app:eventDescription="@string/info_type_keywords_desc"/>
 
-        <ImageView
-                android:id="@+id/ivHistory"
-                android:contentDescription="@string/content_description"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                app:layout_constraintTop_toBottomOf="@id/tvKeywordsDesc"
+        <iclaude.festivaleconomia2019.ui.widget.EventTypeCard
+                android:id="@+id/etcHistory"
+                app:layout_constraintTop_toBottomOf="@id/etcKeywords"
                 android:layout_marginTop="@dimen/margin_normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-        <ImageView
-                android:id="@+id/ivHistorySquirrel"
-                android:contentDescription="@string/content_description"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                app:layout_constraintEnd_toEndOf="@id/ivHistory"
-                app:layout_constraintTop_toTopOf="@id/ivHistory"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/event_logo"/>
-
-        <com.google.android.material.chip.Chip
-                android:id="@+id/chipHistory"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/ivHistory"
-                android:layout_marginBottom="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="@id/ivHistory"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:text="@string/info_type_history"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                android:fontFamily="@font/open_sans"/>
-
-        <TextView
-                android:id="@+id/tvHistoryDesc"
-                android:text="@string/info_type_history_desc"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/ivHistory"
-                android:layout_marginTop="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="@dimen/margin_normal"/>
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:eventImageSrc="@drawable/event_header1"
+                app:eventTitle="@string/info_type_history"
+                app:eventDescription="@string/info_type_history_desc"/>
 
-        <ImageView
-                android:id="@+id/ivRai"
-                android:contentDescription="@string/content_description"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                app:layout_constraintTop_toBottomOf="@id/tvHistoryDesc"
+        <iclaude.festivaleconomia2019.ui.widget.EventTypeCard
+                android:id="@+id/etcRai"
+                app:layout_constraintTop_toBottomOf="@id/etcHistory"
                 android:layout_marginTop="@dimen/margin_normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-        <ImageView
-                android:id="@+id/ivRaiSquirrel"
-                android:contentDescription="@string/content_description"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                app:layout_constraintEnd_toEndOf="@id/ivRai"
-                app:layout_constraintTop_toTopOf="@id/ivRai"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/event_logo"/>
-
-        <com.google.android.material.chip.Chip
-                android:id="@+id/chipRai"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/ivRai"
-                android:layout_marginBottom="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="@id/ivRai"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:text="@string/info_type_rai"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                android:fontFamily="@font/open_sans"/>
-
-        <TextView
-                android:id="@+id/tvRaiDesc"
-                android:text="@string/info_type_rai_desc"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/ivRai"
-                android:layout_marginTop="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="@dimen/margin_normal"/>
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:eventImageSrc="@drawable/event_header2"
+                app:eventTitle="@string/info_type_rai"
+                app:eventDescription="@string/info_type_rai_desc"/>
 
-        <ImageView
-                android:id="@+id/ivSpotlight"
-                android:contentDescription="@string/content_description"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                app:layout_constraintTop_toBottomOf="@id/tvRaiDesc"
+        <iclaude.festivaleconomia2019.ui.widget.EventTypeCard
+                android:id="@+id/etcSpotlight"
+                app:layout_constraintTop_toBottomOf="@id/etcRai"
                 android:layout_marginTop="@dimen/margin_normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-        <ImageView
-                android:id="@+id/ivSpotlightSquirrel"
-                android:contentDescription="@string/content_description"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                app:layout_constraintEnd_toEndOf="@id/ivSpotlight"
-                app:layout_constraintTop_toTopOf="@id/ivSpotlight"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/event_logo"/>
-
-        <com.google.android.material.chip.Chip
-                android:id="@+id/chipSpotlight"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/ivSpotlight"
-                android:layout_marginBottom="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="@id/ivSpotlight"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:text="@string/info_type_spotlight"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                android:fontFamily="@font/open_sans"/>
-
-        <TextView
-                android:id="@+id/tvSpotlightDesc"
-                android:text="@string/info_type_spotlight_desc"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/ivSpotlight"
-                android:layout_marginTop="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="@dimen/margin_normal"/>
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:eventImageSrc="@drawable/event_header3"
+                app:eventTitle="@string/info_type_spotlight"
+                app:eventDescription="@string/info_type_spotlight_desc"/>
 
-        <ImageView
-                android:id="@+id/ivWitnesses"
-                android:contentDescription="@string/content_description"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                app:layout_constraintTop_toBottomOf="@id/tvSpotlightDesc"
+        <iclaude.festivaleconomia2019.ui.widget.EventTypeCard
+                android:id="@+id/etcWitnesses"
+                app:layout_constraintTop_toBottomOf="@id/etcSpotlight"
                 android:layout_marginTop="@dimen/margin_normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-        <ImageView
-                android:id="@+id/ivWitnessesSquirrel"
-                android:contentDescription="@string/content_description"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                app:layout_constraintEnd_toEndOf="@id/ivWitnesses"
-                app:layout_constraintTop_toTopOf="@id/ivWitnesses"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/event_logo"/>
-
-        <com.google.android.material.chip.Chip
-                android:id="@+id/chipWitnesses"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/ivWitnesses"
-                android:layout_marginBottom="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="@id/ivWitnesses"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:text="@string/info_type_witnesses"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                android:fontFamily="@font/open_sans"/>
-
-        <TextView
-                android:id="@+id/tvWitnessesDesc"
-                android:text="@string/info_type_witnesses_desc"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/ivWitnesses"
-                android:layout_marginTop="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="@dimen/margin_normal"/>
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:eventImageSrc="@drawable/event_header4"
+                app:eventTitle="@string/info_type_witnesses"
+                app:eventDescription="@string/info_type_witnesses_desc"/>
 
-        <ImageView
-                android:id="@+id/ivVisions"
-                android:contentDescription="@string/content_description"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                app:layout_constraintTop_toBottomOf="@id/tvWitnessesDesc"
+        <iclaude.festivaleconomia2019.ui.widget.EventTypeCard
+                android:id="@+id/etcVisions"
+                app:layout_constraintTop_toBottomOf="@id/etcWitnesses"
                 android:layout_marginTop="@dimen/margin_normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-        <ImageView
-                android:id="@+id/ivVisionsSquirrel"
-                android:contentDescription="@string/content_description"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                app:layout_constraintEnd_toEndOf="@id/ivVisions"
-                app:layout_constraintTop_toTopOf="@id/ivVisions"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/event_logo"/>
-
-        <com.google.android.material.chip.Chip
-                android:id="@+id/chipVisions"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/ivVisions"
-                android:layout_marginBottom="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="@id/ivVisions"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:text="@string/info_type_visions"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                android:fontFamily="@font/open_sans"/>
-
-        <TextView
-                android:id="@+id/tvVisionsDesc"
-                android:text="@string/info_type_visions_desc"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/ivVisions"
-                android:layout_marginTop="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/margin_normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="@dimen/margin_normal"/>
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:eventImageSrc="@drawable/event_header5"
+                app:eventTitle="@string/info_type_visions"
+                app:eventDescription="@string/info_type_visions_desc"/>
 
         <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/info_type_others"
-                app:layout_constraintTop_toBottomOf="@id/tvVisionsDesc"
+                app:layout_constraintTop_toBottomOf="@id/etcVisions"
                 android:layout_marginTop="@dimen/margin_normal"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="@dimen/margin_normal"

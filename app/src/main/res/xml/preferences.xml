@@ -27,19 +27,19 @@
             app:key="@string/info_pref_others_category_key"
             app:title="@string/info_pref_others_category">
 
-        <SwitchPreferenceCompat
-                app:key="@string/info_pref_timezone_key"
-                app:title="@string/info_pref_timezone_title"
-                app:summary="@string/info_pref_timezone_summary"
-                app:defaultValue="true"/>
-
         <ListPreference
                 app:key="@string/info_pref_theme_key"
                 app:title="@string/info_pref_theme_title"
                 app:entries="@array/info_pref_theme_entries"
                 app:entryValues="@array/info_pref_theme_values"
                 android:summary="%s"
-                app:defaultValue="0"/>
+                app:defaultValue="2"/>
+
+        <SwitchPreferenceCompat
+                app:key="@string/info_pref_timezone_key"
+                app:title="@string/info_pref_timezone_title"
+                app:summary="@string/info_pref_timezone_summary"
+                app:defaultValue="true"/>
 
         <Preference
                 app:key="@string/info_pref_website_key"

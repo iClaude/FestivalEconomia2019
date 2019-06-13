@@ -34,6 +34,5 @@
             android:id="@+id/tvDescription" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-            tools:text="@tools:sample/lorem/random"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"/>
+            tools:text="@tools:sample/lorem/random"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

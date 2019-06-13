@@ -1,8 +1,6 @@
 package iclaude.festivaleconomia2019.ui.info.info
 
 import android.content.Intent
-import android.content.res.ColorStateList
-import android.graphics.Color
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
@@ -12,7 +10,6 @@ import android.view.ViewGroup
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import iclaude.festivaleconomia2019.ui.utils.HeaderGridDrawable
 import kotlinx.android.synthetic.main.fragment_info_info.*
 
 
@@ -38,7 +35,6 @@ class InfoFragment : Fragment(), InfoView {
         super.onViewCreated(view, savedInstanceState)
 
         presenter.displayData()
-        displayImages()
 
         ibVideo.setOnClickListener {
             val intent = Intent().apply {
@@ -68,38 +64,5 @@ class InfoFragment : Fragment(), InfoView {
             text = spannableString
             movementMethod = LinkMovementMethod.getInstance()
         }
-    }
-
-    override fun displayImages() {
-        ivDialogues.setImageDrawable(HeaderGridDrawable(context!!))
-        ivForum.setImageDrawable(HeaderGridDrawable(context!!))
-        ivIntersections.setImageDrawable(HeaderGridDrawable(context!!))
-        ivKeywords.setImageDrawable(HeaderGridDrawable(context!!))
-        ivHistory.setImageDrawable(HeaderGridDrawable(context!!))
-        ivRai.setImageDrawable(HeaderGridDrawable(context!!))
-        ivSpotlight.setImageDrawable(HeaderGridDrawable(context!!))
-        ivWitnesses.setImageDrawable(HeaderGridDrawable(context!!))
-        ivVisions.setImageDrawable(HeaderGridDrawable(context!!))
-
-        chipDialogues.chipBackgroundColor = createChipColorStateList(Color.parseColor("#FFEAB3"))
-        chipForum.chipBackgroundColor = createChipColorStateList(Color.parseColor("#A7D7FE"))
-        chipIntersections.chipBackgroundColor = createChipColorStateList(Color.parseColor("#9BDD7C"))
-        chipKeywords.chipBackgroundColor = createChipColorStateList(Color.parseColor("#FF7E00"))
-        chipHistory.chipBackgroundColor = createChipColorStateList(Color.parseColor("#73BBF5"))
-        chipRai.chipBackgroundColor = createChipColorStateList(Color.parseColor("#CC99FF"))
-        chipSpotlight.chipBackgroundColor = createChipColorStateList(Color.parseColor("#D7BDE2"))
-        chipWitnesses.chipBackgroundColor = createChipColorStateList(Color.parseColor("#ffccd5"))
-        chipVisions.chipBackgroundColor = createChipColorStateList(Color.parseColor("#E6B0AA"))
-    }
-
-    private fun createChipColorStateList(color: Int): ColorStateList {
-        val states = arrayOf(
-            intArrayOf(android.R.attr.state_checked), // checked
-            intArrayOf(-android.R.attr.state_checked) // unchecked
-        )
-
-        val colors = intArrayOf(color, color)
-
-        return ColorStateList(states, colors)
     }
 }
