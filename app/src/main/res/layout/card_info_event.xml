@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_normal"
         android:background="@drawable/info_event_card_background"
-        android:id="@+id/llCard">
+        android:id="@+id/clCard">
 
     <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/event_header5"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            tools:srcCompat="@drawable/event_header5"
             android:id="@+id/imageView4"
-            android:scaleType="centerCrop"/>
-</LinearLayout>
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:contentDescription="@string/content_description"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTitle" app:layout_constraintStart_toStartOf="parent"
+            tools:text="@tools:sample/lorem"
+            android:layout_marginTop="@dimen/margin_large"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
+            android:ellipsize="end"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:id="@+id/textView8" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            tools:text="@tools:sample/lorem/random"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
