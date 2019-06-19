@@ -15,7 +15,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/mapMarkerInfoWindowBackgroundColor">
+            android:background="@drawable/shape_mapmarker"
+            android:padding="4dp">
 
         <TextView
                 android:id="@+id/tvTitle"
@@ -33,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="3 events here"
-                android:textColor="@android:color/holo_red_light"
+                android:textColor="@color/mapMarkerInfoWindowYesEventsColor"
                 app:viewModel="@{viewModel}"
                 app:location="@{location}"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView3"

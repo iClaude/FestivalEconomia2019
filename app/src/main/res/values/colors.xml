@@ -38,6 +38,7 @@
     <color name="mapFragmentAppbarColor">#e6ffffff</color>
     <color name="directionsChipIconTint">@color/onSurfaceColor</color>
     <color name="mapMarkerInfoWindowBackgroundColor">#ffffff</color>
-
+    <color name="mapMarkerInfoWindowYesEventsColor">@color/link</color>
+    <color name="mapMarkerInfoWindowNoEventsColor">@color/errorColor</color>
 
 </resources>

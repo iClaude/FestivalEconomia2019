@@ -1,6 +1,7 @@
 package iclaude.festivaleconomia2019.ui.utils
 
 import android.app.Activity
+import android.content.res.Configuration
 import androidx.core.view.postDelayed
 import androidx.databinding.ViewDataBinding
 
@@ -19,6 +20,9 @@ fun Activity.postponeEnterTransition(timeout: Long) {
         startPostponedEnterTransition()
     }
 }
+
+val Activity.isDarkThemeActive: Boolean
+    get() = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
 
 
 
