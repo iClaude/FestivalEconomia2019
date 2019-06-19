@@ -15,7 +15,8 @@
 
     <color name="statusBarColor">#000000</color>
     <color name="navigationBarColor">#000000</color>
-    <color name="info_card_border">#e6e6e6</color>
+    <color name="info_card_border">#cfcfcf</color>
+    <color name="icon_tint">#cfcfcf</color>
 
     <color name="link">#90CAF9</color>
 </resources>

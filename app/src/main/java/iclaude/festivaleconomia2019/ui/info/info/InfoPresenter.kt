@@ -43,7 +43,6 @@ class InfoPresenter(
                 start = 0
                 end = str.length
 
-                bold()
                 clickableSpan {
                     context = mContext
                     url = "https://2019.festivaleconomia.eu/"
@@ -82,7 +81,6 @@ class InfoPresenter(
             span {
                 start = str.indexOf(item3)
                 end = start + item3.length
-                bold()
                 clickableSpanToSessionDetails {
                     context = mContext
                     navController = mNavController
@@ -93,7 +91,6 @@ class InfoPresenter(
             span {
                 start = str.indexOf(item4)
                 end = start + item4.length
-                bold()
                 clickableSpanToSessionDetails {
                     context = mContext
                     navController = mNavController
@@ -104,7 +101,6 @@ class InfoPresenter(
             span {
                 start = str.indexOf(item5)
                 end = start + item5.length
-                bold()
                 clickableSpanToSessionDetails {
                     context = mContext
                     navController = mNavController
@@ -115,7 +111,6 @@ class InfoPresenter(
             span {
                 start = str.indexOf(item6)
                 end = start + item6.length
-                bold()
                 clickableSpanToSessionDetails {
                     context = mContext
                     navController = mNavController
@@ -126,7 +121,6 @@ class InfoPresenter(
             span {
                 start = str.indexOf(item7)
                 end = start + item7.length
-                bold()
                 clickableSpanToSessionDetails {
                     context = mContext
                     navController = mNavController
@@ -137,7 +131,6 @@ class InfoPresenter(
             span {
                 start = str.indexOf(item8)
                 end = start + item8.length
-                bold()
                 clickableSpanToSessionDetails {
                     context = mContext
                     navController = mNavController

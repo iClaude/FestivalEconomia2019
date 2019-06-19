@@ -19,6 +19,7 @@
     <color name="navigationBarColor">#FF5722</color>
     <color name="info_card_border">#A9A9A9</color>
     <color name="mapFragmentAppbarColor">#e6ffffff</color>
+    <color name="icon_tint">#e6e6e6</color>
 
     <color name="white">#fff</color>
     <color name="whiteWithAlpha">#b3f2f2f2</color>
