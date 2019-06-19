@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--General-->
     <color name="primaryColor">#ff8a50</color>
     <color name="primaryDarkColor">#c41c00</color>
     <color name="primaryTextColor">#000000</color>
@@ -13,10 +14,20 @@
     <color name="backgroundColor">#121212</color>
     <color name="onBackgroundColor">#FFFFFF</color>
 
+    <color name="link">#90CAF9</color>
+
+    <!--Activity-->
     <color name="statusBarColor">#000000</color>
     <color name="navigationBarColor">#000000</color>
+
+    <!--InfoFragment-->
     <color name="info_card_border">#cfcfcf</color>
     <color name="icon_tint">#cfcfcf</color>
 
-    <color name="link">#90CAF9</color>
+    <!--MapFragment-->
+    <color name="mapFragmentAppbarColor">@color/surfaceColor</color>
+    <color name="directionsChipIconTint">@color/onSurfaceColor</color>
+    <color name="mapMarkerInfoWindowBackgroundColor">#666666</color>
+
+
 </resources>

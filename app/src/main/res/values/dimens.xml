@@ -26,4 +26,5 @@
     <dimen name="speaker_headshot_size">40dp</dimen>
     <dimen name="fab_size">56dp</dimen>
     <dimen name="speaker_large_headshot_size">112dp</dimen>
+    <dimen name="map_marker_corner_radius">8dp</dimen>
 </resources>

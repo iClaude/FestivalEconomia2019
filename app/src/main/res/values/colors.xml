@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--General-->
     <color name="primaryColor">#FF5722</color>
     <color name="primaryLightColor">#ff8a50</color>
     <color name="primaryDarkColor">#c41c00</color>
@@ -15,11 +16,8 @@
     <color name="backgroundColor">#FAFAFA</color>
     <color name="onBackgroundColor">#212121</color>
 
-    <color name="statusBarColor">#ffffff</color>
-    <color name="navigationBarColor">#FF5722</color>
-    <color name="info_card_border">#A9A9A9</color>
-    <color name="mapFragmentAppbarColor">#e6ffffff</color>
-    <color name="icon_tint">#e6e6e6</color>
+    <color name="link">#3F51B5</color>
+    <color name="icon_tint">#7F7F7F</color>
 
     <color name="white">#fff</color>
     <color name="whiteWithAlpha">#b3f2f2f2</color>
@@ -27,9 +25,19 @@
     <color name="default_tag_color">#999</color>
     <color name="dark_gray">#ff808080</color>
     <color name="very_light_grey">#D3D3D3</color>
-
-    <!-- Session info. -->
     <color name="scrim">#33000000</color>
-    <color name="link">#3F51B5</color>
+
+    <!--Activity-->
+    <color name="statusBarColor">#ffffff</color>
+    <color name="navigationBarColor">#FF5722</color>
+
+    <!--InfoFragment-->
+    <color name="info_card_border">#A9A9A9</color>
+
+    <!--MapFragment-->
+    <color name="mapFragmentAppbarColor">#e6ffffff</color>
+    <color name="directionsChipIconTint">@color/onSurfaceColor</color>
+    <color name="mapMarkerInfoWindowBackgroundColor">#ffffff</color>
+
 
 </resources>
