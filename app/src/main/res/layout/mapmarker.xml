@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/shape_mapmarker"
-            android:padding="4dp">
+            android:padding="@dimen/map_marker_infowindow_padding">
 
         <TextView
                 android:id="@+id/tvTitle"

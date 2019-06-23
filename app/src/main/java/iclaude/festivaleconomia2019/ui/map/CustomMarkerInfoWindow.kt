@@ -14,7 +14,6 @@ class CustomMarkerInfoWindow(val activity: Activity, val mapViewModel: MapViewMo
     override fun getInfoContents(marker: Marker?): View? {
         if (activity.isDarkThemeActive) return null
 
-
         val binding =
             DataBindingUtil.inflate<MapmarkerBinding>(activity.layoutInflater, R.layout.mapmarker, null, true)
                 .apply {
