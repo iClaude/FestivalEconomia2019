@@ -6014,106 +6014,106 @@
     },
     {
       "id": "02",
-      "color": "#cce9c2",
-      "fontColor": "#202124",
+      "color": "#EF9A9A",
+      "fontColor": "#212121",
       "name": "Cineconomy",
       "category": "topic"
     },
     {
       "id": "03",
-      "color": "#FDC93E",
-      "fontColor": "#202124",
+      "color": "#F48FB1",
+      "fontColor": "#212121",
       "name": "Discussions",
       "category": "topic"
     },
     {
       "id": "04",
-      "color": "#FFEAB3",
-      "fontColor": "#202124",
+      "color": "#CE93D8",
+      "fontColor": "#212121",
       "name": "Dialogues",
       "category": "topic"
     },
     {
       "id": "05",
-      "color": "#FAA44F",
-      "fontColor": "#202124",
+      "color": "#B39DDB",
+      "fontColor": "#212121",
       "name": "EconoMia",
       "category": "topic"
     },
     {
       "id": "06",
-      "color": "#A7D7FE",
-      "fontColor": "#202124",
+      "color": "#9FA8DA",
+      "fontColor": "#212121",
       "name": "Forum",
       "category": "topic"
     },
     {
       "id": "07",
-      "color": "#FFCF9F",
-      "fontColor": "#202124",
+      "color": "#90CAF9",
+      "fontColor": "#212121",
       "name": "Meetings with Authors",
       "category": "topic"
     },
     {
       "id": "08",
-      "color": "#9BDD7C",
-      "fontColor": "#202124",
+      "color": "#81D4FA",
+      "fontColor": "#212121",
       "name": "Intersections",
       "category": "topic"
     },
     {
       "id": "09",
-      "color": "#73BBF5",
-      "fontColor": "#202124",
+      "color": "#80DEEA",
+      "fontColor": "#212121",
       "name": "In History",
       "category": "topic"
     },
     {
       "id": "10",
       "color": "#FF7E00",
-      "fontColor": "#202124",
+      "fontColor": "#212121",
       "name": "Keywords",
       "category": "topic"
     },
     {
       "id": "11",
-      "color": "#CC99FF",
-      "fontColor": "#202124",
+      "color": "#80CBC4",
+      "fontColor": "#212121",
       "name": "RAI",
       "category": "topic"
     },
     {
       "id": "12",
-      "color": "#D7BDE2",
-      "fontColor": "#202124",
+      "color": "#A5D6A7",
+      "fontColor": "#212121",
       "name": "Spotlight",
       "category": "topic"
     },
     {
       "id": "13",
-      "color": "#ffccd5",
-      "fontColor": "#202124",
+      "color": "#C5E1A5",
+      "fontColor": "#212121",
       "name": "Contemporary Witnesses",
       "category": "topic"
     },
     {
       "id": "14",
-      "color": "#E6B0AA",
-      "fontColor": "#202124",
+      "color": "#E6EE9C",
+      "fontColor": "#212121",
       "name": "Visions",
       "category": "topic"
     },
     {
       "id": "15",
-      "color": "#00ffff",
-      "fontColor": "#202124",
+      "color": "#FFF59D",
+      "fontColor": "#000000",
       "name": "Alla frontiera",
       "category": "topic"
     },
     {
       "id": "16",
-      "color": "#f57133",
-      "fontColor": "#202124",
+      "color": "#FFCC80",
+      "fontColor": "#000000",
       "name": "Alan Krueger Lecture",
       "category": "topic"
     }
