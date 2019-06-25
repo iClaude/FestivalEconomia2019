@@ -24,41 +24,17 @@
             app:layout_collapseMode="parallax"
             app:layout_collapseParallaxMultiplier="0.5">
 
-        <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline_start"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_begin="@dimen/margin_normal"/>
-
-        <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline_title_end"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.65"/>
-
-        <ImageView
-                android:id="@+id/ivAppBarImage"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                app:layout_collapseMode="parallax"
-                android:contentDescription="@string/content_description"
-                app:sessionImage="@{null}"/>
-
         <ImageView
                 android:id="@+id/ivAvatar"
                 android:layout_width="@dimen/speaker_large_headshot_size"
                 android:layout_height="@dimen/speaker_large_headshot_size"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="32dp"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintStart_toEndOf="@id/guideline_title_end"
-                app:layout_constraintTop_toTopOf="@id/ivAppBarImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 android:transitionName="@string/speaker_headshot_transition"
                 app:speakerImage="@{organizerDataDer}"
                 app:listener="@{avatarListenerDer}"
-                android:layout_marginEnd="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:contentDescription="@string/content_description"
                 tools:src="@tools:sample/avatars"/>
@@ -66,17 +42,26 @@
 
         <TextView
                 android:id="@+id/tvName"
-                style="@style/SessionDetailTitle"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:paddingTop="72dp"
-                android:layout_marginBottom="8dp"
                 android:text="@{organizerDataDer.name}"
-                app:layout_constraintBottom_toBottomOf="@id/ivAppBarImage"
-                app:layout_constraintEnd_toEndOf="@id/guideline_title_end"
-                app:layout_constraintStart_toStartOf="@id/guideline_start"
-                app:layout_constraintTop_toTopOf="@id/ivAppBarImage"
-                tools:text="George Soros"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivAvatar"
+                tools:text="@tools:sample/full_names"
+                android:layout_marginTop="@dimen/margin_small"
+                app:layout_constraintWidth_percent="0.8"
+                app:autoSizeTextType="uniform" style="@style/DetailsTitle"/>
+
+        <TextView
+                tools:text="Economist"
+                android:text="@{organizerDataDer.company}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvProfession"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" app:layout_constraintStart_toStartOf="@+id/tvName"
+                app:layout_constraintEnd_toEndOf="@+id/tvName"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large" android:ellipsize="end"
+                android:textColor="@color/onSurfaceColor"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

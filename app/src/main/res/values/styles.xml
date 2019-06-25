@@ -120,5 +120,14 @@
         <item name="android:fontFamily">@font/open_sans</item>
         <item name="android:textColor">@color/collapsing_section_title</item>
     </style>
+    <style name="DetailsTitle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/onSurfaceColor</item>
+    </style>
 
 </resources>

@@ -40,6 +40,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation libs.appcompat
+    implementation libs.appcompat_v7
+    implementation libs.support_v4
     implementation libs.legacy_support_v4
     implementation libs.kotlin_stdlib_jdk7
     implementation libs.android_core_ktx
