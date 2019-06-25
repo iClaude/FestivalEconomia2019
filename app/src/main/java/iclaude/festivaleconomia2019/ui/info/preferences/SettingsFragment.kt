@@ -72,7 +72,7 @@ fun setNightMode(valueChosen: Int) {
     val themeSetting = when (valueChosen) {
         0 -> MODE_NIGHT_NO
         1 -> MODE_NIGHT_YES
-        2 -> if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) MODE_NIGHT_FOLLOW_SYSTEM
+        2 -> if (android.os.Build.VERSION.SDK_INT > android.os.Build.VERSION_CODES.P) MODE_NIGHT_FOLLOW_SYSTEM
         else MODE_NIGHT_AUTO_BATTERY
         else -> MODE_NIGHT_NO
     }
