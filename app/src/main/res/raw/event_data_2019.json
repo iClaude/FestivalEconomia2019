@@ -6042,7 +6042,7 @@
     },
     {
       "id": "06",
-      "color": "#9FA8DA",
+      "color": "#E6EE9C",
       "fontColor": "#212121",
       "name": "Forum",
       "category": "topic"
@@ -6056,8 +6056,8 @@
     },
     {
       "id": "08",
-      "color": "#81D4FA",
-      "fontColor": "#212121",
+      "color": "#80CBC4",
+      "fontColor": "#FFAB91",
       "name": "Intersections",
       "category": "topic"
     },
@@ -6091,7 +6091,7 @@
     },
     {
       "id": "13",
-      "color": "#C5E1A5",
+      "color": "#BCAAA4",
       "fontColor": "#212121",
       "name": "Contemporary Witnesses",
       "category": "topic"
@@ -6105,7 +6105,7 @@
     },
     {
       "id": "15",
-      "color": "#FFF59D",
+      "color": "#B0BEC5",
       "fontColor": "#000000",
       "name": "Alla frontiera",
       "category": "topic"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--General-->
+    <!-- General -->
     <color name="primaryColor">#FF5722</color>
     <color name="primaryLightColor">#ff8a50</color>
     <color name="primaryDarkColor">#c41c00</color>
@@ -27,14 +27,17 @@
     <color name="very_light_grey">#D3D3D3</color>
     <color name="scrim">#33000000</color>
 
-    <!--Activity-->
+    <!-- Activity -->
     <color name="statusBarColor">#ffffff</color>
     <color name="navigationBarColor">#FF5722</color>
 
-    <!--InfoFragment-->
+    <!-- Filter sheet -->
+    <color name="chipTextColor">#212121</color>
+
+    <!-- InfoFragment -->
     <color name="info_card_border">#A9A9A9</color>
 
-    <!--MapFragment-->
+    <!-- MapFragment -->
     <color name="mapFragmentAppbarColor">#e6ffffff</color>
     <color name="directionsChipIconTint">@color/onSurfaceColor</color>
     <color name="mapMarkerInfoWindowBackgroundColor">#ffffff</color>
