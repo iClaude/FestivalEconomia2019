@@ -32,7 +32,7 @@ class StarButtonBehavior : CoordinatorLayout.Behavior<CheckableImageButton> {
         val appBarMinHeight = appBarLayout.minimumHeightForVisibleOverlappingContent.toFloat() * 2 / 3
 
         child.apply {
-            alpha = ((tmpRect.bottom - appBarMinHeight) / (appBarLayout.totalScrollRange)).coerceAtLeast(0f)
+            alpha = 0 + (tmpRect.bottom - appBarMinHeight) / (appBarLayout.height - appBarMinHeight)
             isEnabled = this.alpha > 0.5
         }
 

@@ -37,6 +37,9 @@
     <!-- InfoFragment -->
     <color name="info_card_border">#A9A9A9</color>
 
+    <!-- SessionInfoFragment -->
+    <color name="cib_favorites_color">#ffffff</color>
+
     <!-- MapFragment -->
     <color name="mapFragmentAppbarColor">#e6ffffff</color>
     <color name="directionsChipIconTint">@color/onSurfaceColor</color>

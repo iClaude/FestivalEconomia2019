@@ -72,7 +72,6 @@ fun showOrHide(view: View, appBarCollapsedPercentage: Float?) {
 @BindingAdapter("app:sessionImage")
 fun sessionImage(imageView: ImageView, imageUrl: String?) {
     if (imageUrl.isNullOrEmpty()) {
-        imageView.setImageDrawable(HeaderGridDrawable(imageView.context))
         return
     }
 
@@ -84,20 +83,12 @@ fun sessionImage(imageView: ImageView, imageUrl: String?) {
         .into(imageView)
 }
 
-// Lottie animation: random choice with 5 different animations (unused for now).
+// Lottie animation: there are specific files for light and dark theme.
 @BindingAdapter("app:eventHeaderAnim")
-fun eventHeaderAnim(lottieView: LottieAnimationView, sessionInfo: SessionInfo) {
-    val rnd = (1..6).shuffled().first()
+fun eventHeaderAnim(lottieView: LottieAnimationView, sessionInfo: SessionInfo?) {
+    val fileName = "lottie/${lottieView.context.getString(R.string.lottie_magnifier_filename)}"
 
-    lottieView.setAnimation(
-        when (rnd) {
-            1 -> "lottie/lottie_eco_1.json"
-            2 -> "lottie/lottie_eco_2.json"
-            3 -> "lottie/lottie_eco_3.json"
-            4 -> "lottie/lottie_eco_4.json"
-            else -> "lottie/lottie_eco_5.json"
-        }
-    )
+    lottieView.setAnimation(fileName)
 }
 
 @BindingAdapter("app:visibleWithPhotoOrVideo")

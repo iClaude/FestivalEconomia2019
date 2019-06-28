@@ -139,7 +139,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="@dimen/margin_small"
-                app:lottie_fileName="lottie/app_info.json"
+                app:lottie_fileName="lottie/eye_blink.json"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"
                 app:lottie_scale="1.2"/>
