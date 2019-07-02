@@ -28,7 +28,10 @@ import iclaude.festivaleconomia2019.model.data_classes.*
 import iclaude.festivaleconomia2019.ui.details.RelatedSessions
 import iclaude.festivaleconomia2019.ui.details.organizer.ImageLoadListener
 import iclaude.festivaleconomia2019.ui.login.LoginFlow
-import iclaude.festivaleconomia2019.ui.utils.*
+import iclaude.festivaleconomia2019.ui.utils.MyClickableSpan
+import iclaude.festivaleconomia2019.ui.utils.getDateShortStr
+import iclaude.festivaleconomia2019.ui.utils.sessionInfoTimeDetails
+import iclaude.festivaleconomia2019.ui.utils.sessionLength
 import kotlinx.android.synthetic.main.item_organizer.view.*
 import kotlin.math.absoluteValue
 
@@ -77,7 +80,7 @@ fun sessionImage(imageView: ImageView, imageUrl: String?) {
 
     Glide
         .with(imageView)
-        .setDefaultRequestOptions(RequestOptions().placeholder(HeaderGridDrawable(imageView.context)))
+        .setDefaultRequestOptions(RequestOptions().placeholder(imageView.context.getDrawable(R.drawable.event_header1)))
         .load(imageUrl)
         .transition(DrawableTransitionOptions.withCrossFade())
         .into(imageView)
