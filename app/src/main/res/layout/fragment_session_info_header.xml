@@ -41,7 +41,13 @@
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax"
                 android:contentDescription="@string/content_description"
-                app:sessionImage="@{sessionDataDer.photoUrl}"/>
+                app:sessionImage="@{sessionDataDer}"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/scrim"
+                app:goneWithPhoto="@{sessionDataDer}"/>
 
         <!-- Play button, shown if there is a recording available -->
         <ImageButton

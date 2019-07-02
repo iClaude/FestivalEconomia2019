@@ -28,6 +28,7 @@ import iclaude.festivaleconomia2019.databinding.ItemSessionRelatedBinding
 import iclaude.festivaleconomia2019.model.data_classes.*
 import iclaude.festivaleconomia2019.ui.details.RelatedSessions
 import iclaude.festivaleconomia2019.ui.details.organizer.ImageLoadListener
+import iclaude.festivaleconomia2019.ui.details.session.SessionImages.imagesMap
 import iclaude.festivaleconomia2019.ui.login.LoginFlow
 import iclaude.festivaleconomia2019.ui.utils.MyClickableSpan
 import iclaude.festivaleconomia2019.ui.utils.getDateShortStr
@@ -75,12 +76,16 @@ fun showOrHide(view: View, appBarCollapsedPercentage: Float?) {
 }
 
 @BindingAdapter("app:sessionImage")
-fun sessionImage(imageView: ImageView, imageUrl: String?) {
-    if (imageUrl.isNullOrEmpty()) {
+fun sessionImage(imageView: ImageView, sessionInfo: SessionInfo?) {
+    sessionInfo ?: return
+
+    val tagStr: String = if (sessionInfo.tags.size > 1) sessionInfo.tags[1].id else sessionInfo.tags[0].id
+
+    if (sessionInfo.photoUrl.isNullOrEmpty()) {
         Glide
             .with(imageView)
-            .load(R.drawable.event_header1)
-            .apply(bitmapTransform(BlurTransformation(25)))
+            .load(imagesMap[tagStr])
+            .apply(bitmapTransform(BlurTransformation(50)))
             .into(imageView)
 
         return
@@ -89,7 +94,7 @@ fun sessionImage(imageView: ImageView, imageUrl: String?) {
     Glide
         .with(imageView)
         .setDefaultRequestOptions(RequestOptions().placeholder(imageView.context.getDrawable(R.drawable.event_header1)))
-        .load(imageUrl)
+        .load(sessionInfo.photoUrl)
         .transition(DrawableTransitionOptions.withCrossFade())
         .into(imageView)
 }
