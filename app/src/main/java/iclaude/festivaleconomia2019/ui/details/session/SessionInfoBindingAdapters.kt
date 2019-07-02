@@ -17,6 +17,7 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.request.RequestOptions.bitmapTransform
 import com.bumptech.glide.request.target.Target
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.internal.CheckableImageButton
@@ -32,6 +33,7 @@ import iclaude.festivaleconomia2019.ui.utils.MyClickableSpan
 import iclaude.festivaleconomia2019.ui.utils.getDateShortStr
 import iclaude.festivaleconomia2019.ui.utils.sessionInfoTimeDetails
 import iclaude.festivaleconomia2019.ui.utils.sessionLength
+import jp.wasabeef.glide.transformations.BlurTransformation
 import kotlinx.android.synthetic.main.item_organizer.view.*
 import kotlin.math.absoluteValue
 
@@ -75,6 +77,12 @@ fun showOrHide(view: View, appBarCollapsedPercentage: Float?) {
 @BindingAdapter("app:sessionImage")
 fun sessionImage(imageView: ImageView, imageUrl: String?) {
     if (imageUrl.isNullOrEmpty()) {
+        Glide
+            .with(imageView)
+            .load(R.drawable.event_header1)
+            .apply(bitmapTransform(BlurTransformation(25)))
+            .into(imageView)
+
         return
     }
 

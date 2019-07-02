@@ -94,6 +94,7 @@ dependencies {
 
     // Glide.
     implementation libs.glide
+    implementation libs.glide_transformations
     kapt libs.glide_compiler
 
     // Firebase UI authentication.

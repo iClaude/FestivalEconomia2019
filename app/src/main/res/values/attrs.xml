@@ -33,6 +33,12 @@
         <attr name="showIcons" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="HeaderGridDrawable">
+        <attr name="android:color"/>
+        <attr name="gridSize" format="dimension"/>
+        <attr name="gridStrokeWidth" format="dimension"/>
+    </declare-styleable>
+
     <declare-styleable name="TransitionArcMotion">
         <attr name="arcRadius" format="integer"/>
     </declare-styleable>
