@@ -39,6 +39,7 @@
 
     <!-- SessionInfoFragment -->
     <color name="cib_favorites_color">#ffffff</color>
+    <color name="session_info_scrim">#00000000</color>
 
     <!-- MapFragment -->
     <color name="mapFragmentAppbarColor">#e6ffffff</color>

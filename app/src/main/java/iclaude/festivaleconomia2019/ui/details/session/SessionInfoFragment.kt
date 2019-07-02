@@ -27,6 +27,7 @@ import iclaude.festivaleconomia2019.ui.login.LoginManager
 import iclaude.festivaleconomia2019.ui.map.MapFragmentDirections
 import iclaude.festivaleconomia2019.ui.sessions.SessionListViewModel
 import iclaude.festivaleconomia2019.ui.utils.EventObserver
+import iclaude.festivaleconomia2019.ui.utils.isDarkThemeActive
 import iclaude.festivaleconomia2019.ui.utils.sessionInfoTimeDetails
 import kotlinx.android.synthetic.main.fragment_session_info.*
 import kotlinx.android.synthetic.main.fragment_session_info_content.*
@@ -55,6 +56,7 @@ class SessionInfoFragment : Fragment() {
     ): View? {
         val idSession = SessionInfoFragmentArgs.fromBundle(arguments!!).sessionId
         viewModel.apply {
+            isDarkTheme = activity!!.isDarkThemeActive
             sessionId = idSession
 
             eventDataFromRepoLive.observe(this@SessionInfoFragment, Observer {

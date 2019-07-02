@@ -38,6 +38,7 @@ class SessionInfoViewModel : ViewModel(), LoginFlow, RelatedSessions {
     lateinit var sessionId: String
     lateinit var sessionInfo: SessionInfo
 
+    var isDarkTheme = false
 
     /**
      * Load session info when repository is ready.

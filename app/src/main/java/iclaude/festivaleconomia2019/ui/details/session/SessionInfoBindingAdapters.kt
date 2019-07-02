@@ -30,10 +30,7 @@ import iclaude.festivaleconomia2019.ui.details.RelatedSessions
 import iclaude.festivaleconomia2019.ui.details.organizer.ImageLoadListener
 import iclaude.festivaleconomia2019.ui.details.session.SessionImages.imagesMap
 import iclaude.festivaleconomia2019.ui.login.LoginFlow
-import iclaude.festivaleconomia2019.ui.utils.MyClickableSpan
-import iclaude.festivaleconomia2019.ui.utils.getDateShortStr
-import iclaude.festivaleconomia2019.ui.utils.sessionInfoTimeDetails
-import iclaude.festivaleconomia2019.ui.utils.sessionLength
+import iclaude.festivaleconomia2019.ui.utils.*
 import jp.wasabeef.glide.transformations.BlurTransformation
 import kotlinx.android.synthetic.main.item_organizer.view.*
 import kotlin.math.absoluteValue
@@ -75,13 +72,19 @@ fun showOrHide(view: View, appBarCollapsedPercentage: Float?) {
     view.animate().alpha(newAlpha).duration = 300
 }
 
-@BindingAdapter("app:sessionImage")
-fun sessionImage(imageView: ImageView, sessionInfo: SessionInfo?) {
+@BindingAdapter("app:sessionImage", "app:viewModel", requireAll = true)
+fun sessionImage(imageView: ImageView, sessionInfo: SessionInfo?, viewModel: SessionInfoViewModel?) {
     sessionInfo ?: return
+    viewModel ?: return
 
-    val tagStr: String = if (sessionInfo.tags.size > 1) sessionInfo.tags[1].id else sessionInfo.tags[0].id
+    if (!viewModel.isDarkTheme) {
+        imageView.setImageDrawable(HeaderGridDrawable(imageView.context))
+        return
+    }
 
     if (sessionInfo.photoUrl.isNullOrEmpty()) {
+        val tagStr: String = if (sessionInfo.tags.size > 1) sessionInfo.tags[1].id else sessionInfo.tags[0].id
+
         Glide
             .with(imageView)
             .load(imagesMap[tagStr])
