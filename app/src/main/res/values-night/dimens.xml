@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="map_marker_infowindow_padding">6dp</dimen>
+    <dimen name="map_marker_infowindow_padding_bottom">8dp</dimen>
+
 </resources>

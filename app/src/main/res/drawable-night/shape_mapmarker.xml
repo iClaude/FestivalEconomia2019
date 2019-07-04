@@ -1,42 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-    <!-- main rectangle -->
-    <item android:bottom="10dp">
-
-        <shape android:shape="rectangle">
-            <size android:width="200dp"
-                  android:height="100dp"/>
-            <corners android:radius="4dp"/>
-            <solid android:color="@color/mapMarkerInfoWindowBackgroundColor"/>
-
-        </shape>
-    </item>
-
-    <!-- arrow at the bottom -->
-    <item android:top="100dp"
-          android:bottom="0dp"
-          android:left="100dp"
-          android:right="100dp">
-
+    <!-- red shape -->
+    <item
+            android:bottom="0dp"
+            android:gravity="center_horizontal|bottom"
+            android:top="0dp">
         <rotate
-                android:fromDegrees="-45"
-                android:pivotX="50%"
-                android:pivotY="50%"
-                android:toDegrees="0">
-
+                android:fromDegrees="45"
+                android:pivotX="110%"
+                android:pivotY="17%"
+                android:toDegrees="45">
             <shape android:shape="rectangle">
-                <size android:width="20dp"
-                      android:height="20dp"/>
-                <solid android:color="@color/mapMarkerInfoWindowBackgroundColor"/>
-
+                <solid android:color="#ffffff"/>
+                <size
+                        android:width="10dp"
+                        android:height="10dp"/>
             </shape>
-
         </rotate>
     </item>
 
+    <item
+            android:bottom="10dp"
+            android:top="0dp">
+        <shape>
+            <corners android:radius="3dp"/>
+            <solid android:color="#ffffff"/>
+            <size
+                    android:width="50dp"
+                    android:height="20dp"/>
+        </shape>
+    </item>
+
+    <!-- black shape -->
+    <item
+            android:bottom="0dp"
+            android:gravity="center_horizontal|bottom"
+            android:top="0dp">
+
+        <rotate
+                android:fromDegrees="45"
+                android:pivotX="120%"
+                android:pivotY="15%"
+                android:toDegrees="45">
+            <shape android:shape="rectangle">
+                <solid android:color="@color/mapMarkerInfoWindowBackgroundColor"/>
+                <size
+                        android:width="10dp"
+                        android:height="10dp"/>
+            </shape>
+        </rotate>
+    </item>
+
+    <item
+            android:bottom="10.5dp"
+            android:left="0.5dp"
+            android:right="0.5dp"
+            android:top="0.5dp">
+        <shape>
+            <corners android:radius="3dp"/>
+            <solid android:color="@color/mapMarkerInfoWindowBackgroundColor"/>
+            <size
+                    android:width="50dp"
+                    android:height="20dp"/>
+        </shape>
+    </item>
 
 </layer-list>

@@ -28,4 +28,5 @@
     <dimen name="speaker_large_headshot_size">112dp</dimen>
     <dimen name="map_marker_corner_radius">8dp</dimen>
     <dimen name="map_marker_infowindow_padding">2dp</dimen>
+    <dimen name="map_marker_infowindow_padding_bottom">0dp</dimen>
 </resources>
