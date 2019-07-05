@@ -64,7 +64,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_normal"
                         app:chipIcon="@drawable/ic_directions_black_24dp"
-                        app:chipIconTint="@color/mapDirectionsChipIconTint"
+                        app:chipIconTint="?mapDirectionsChipIconTint"
                         android:text="@string/map_show_route"
                         android:onClick="@{viewModel::showRoute}"/>
 

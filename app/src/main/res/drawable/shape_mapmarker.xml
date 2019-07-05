@@ -6,6 +6,6 @@
     <corners
             android:radius="4dp"/>
 
-    <solid android:color="@color/mapMarkerInfoWindowBackgroundColor"/>
+    <solid android:color="?mapMarkerInfoWindowBackgroundColor"/>
 
 </shape>

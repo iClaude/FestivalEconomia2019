@@ -47,7 +47,7 @@
         <View
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/session_info_scrim"
+                android:background="?sessionInfoScrim"
                 app:goneWithPhoto="@{sessionDataDer}"/>
 
         <!-- Play button, shown if there is a recording available -->

@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="3 events here"
-                android:textColor="@color/mapMarkerInfoWindowYesEventsColor"
+                android:textColor="?mapMarkerInfoWindowYesEventsColor"
                 app:viewModel="@{viewModel}"
                 app:location="@{location}"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView3"

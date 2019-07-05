@@ -34,6 +34,9 @@
         <item name="mapMarkerInfoWindowBackgroundColor">@color/mapMarkerInfoWindowBackgroundColor</item>
         <item name="mapMarkerInfoWindowYesEventsColor">@color/mapMarkerInfoWindowYesEventsColor</item>
         <item name="mapMarkerInfoWindowNoEventsColor">@color/mapMarkerInfoWindowNoEventsColor</item>
+        <!-- Session info screen -->
+        <item name="cibFavoritesColor">@color/cib_favorites_color</item>
+        <item name="sessionInfoScrim">@color/session_info_scrim</item>
 
 
         <!-- Widget global styles. -->
