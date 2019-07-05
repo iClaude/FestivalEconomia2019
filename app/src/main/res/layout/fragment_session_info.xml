@@ -41,7 +41,7 @@
                     app:layout_scrollFlags="scroll|exitUntilCollapsed"
                     app:titleEnabled="false"
                     app:contentScrim="?colorSurface"
-                    app:statusBarScrim="@color/statusBarColor">
+                    app:statusBarScrim="?android:statusBarColor">
 
                 <include
                         android:id="@+id/header"
