@@ -34,18 +34,15 @@
     <!-- Filter sheet -->
     <color name="chipTextColor">#212121</color>
 
-    <!-- InfoFragment -->
-    <color name="info_card_border">#A9A9A9</color>
-
     <!-- SessionInfoFragment -->
     <color name="cib_favorites_color">#ffffff</color>
     <color name="session_info_scrim">#00000000</color>
 
     <!-- MapFragment -->
     <color name="mapFragmentAppbarColor">#e6ffffff</color>
-    <color name="directionsChipIconTint">@color/onSurfaceColor</color>
+    <color name="mapDirectionsChipIconTint">#212121</color>
     <color name="mapMarkerInfoWindowBackgroundColor">#ffffff</color>
-    <color name="mapMarkerInfoWindowYesEventsColor">@color/link</color>
-    <color name="mapMarkerInfoWindowNoEventsColor">@color/errorColor</color>
+    <color name="mapMarkerInfoWindowYesEventsColor">#3F51B5</color>
+    <color name="mapMarkerInfoWindowNoEventsColor">#F44336</color>
 
 </resources>

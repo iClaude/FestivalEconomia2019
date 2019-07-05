@@ -24,7 +24,6 @@
     <color name="chipTextColor">#212121</color>
 
     <!-- InfoFragment -->
-    <color name="info_card_border">#cfcfcf</color>
     <color name="icon_tint">#cfcfcf</color>
 
     <!-- SessionInfoFragment -->
@@ -32,10 +31,10 @@
     <color name="session_info_scrim">#33000000</color>
 
     <!-- MapFragment -->
-    <color name="mapFragmentAppbarColor">@color/surfaceColor</color>
-    <color name="directionsChipIconTint">@color/onSurfaceColor</color>
+    <color name="mapFragmentAppbarColor">#121212</color>
+    <color name="mapDirectionsChipIconTint">#FFFFFF</color>
     <color name="mapMarkerInfoWindowBackgroundColor">#5b5b5b</color>
-    <color name="mapMarkerInfoWindowYesEventsColor">@color/link</color>
+    <color name="mapMarkerInfoWindowYesEventsColor">#90CAF9</color>
     <color name="mapMarkerInfoWindowNoEventsColor">#F44336</color>
 
 </resources>

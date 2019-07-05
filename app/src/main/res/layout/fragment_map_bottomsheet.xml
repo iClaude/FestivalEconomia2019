@@ -64,7 +64,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_normal"
                         app:chipIcon="@drawable/ic_directions_black_24dp"
-                        app:chipIconTint="@color/directionsChipIconTint"
+                        app:chipIconTint="@color/mapDirectionsChipIconTint"
                         android:text="@string/map_show_route"
                         android:onClick="@{viewModel::showRoute}"/>
 
@@ -124,7 +124,7 @@
                 android:importantForAccessibility="no"
                 android:src="@drawable/avd_arrow_up"
                 android:tintMode="src_in"
-                android:tint="@color/icon_tint"
+                android:tint="?myIconTint"
                 app:layout_constraintBottom_toBottomOf="@id/guide_peek_height"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

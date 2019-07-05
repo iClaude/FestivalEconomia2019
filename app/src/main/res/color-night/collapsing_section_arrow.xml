@@ -3,5 +3,5 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- use activated as a proxy for expanded state -->
     <item android:color="?myLinkColor" android:state_activated="true"/>
-    <item android:color="@color/icon_tint"/>
+    <item android:color="?myIconTint"/>
 </selector>

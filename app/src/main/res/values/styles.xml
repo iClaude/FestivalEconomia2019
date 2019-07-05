@@ -4,7 +4,7 @@
 
     <!-- Base application theme. -->
     <style name="BaseAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Theme colors. -->
+        <!-- Standard material theme colors -->
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
         <item name="colorOnPrimary">@color/primaryTextColor</item>
@@ -19,10 +19,22 @@
         <item name="android:colorBackground">@color/backgroundColor</item>
         <item name="colorOnBackground">@color/onBackgroundColor</item>
 
+        <!-- General app appearance -->
         <item name="android:statusBarColor">@color/statusBarColor</item>
         <item name="android:navigationBarColor">@color/navigationBarColor</item>
 
+        <!-- Custom theme attributes for different themes -->
+        <!-- General attributes -->
         <item name="myLinkColor">@color/link</item>
+        <item name="chipTextColor">@color/chipTextColor</item>
+        <item name="myIconTint">@color/icon_tint</item>
+        <!-- Map screen-->
+        <item name="mapFragmentAppbarColor">@color/mapFragmentAppbarColor</item>
+        <item name="mapDirectionsChipIconTint">@color/mapDirectionsChipIconTint</item>
+        <item name="mapMarkerInfoWindowBackgroundColor">@color/mapMarkerInfoWindowBackgroundColor</item>
+        <item name="mapMarkerInfoWindowYesEventsColor">@color/mapMarkerInfoWindowYesEventsColor</item>
+        <item name="mapMarkerInfoWindowNoEventsColor">@color/mapMarkerInfoWindowNoEventsColor</item>
+
 
         <!-- Widget global styles. -->
         <item name="bottomNavigationStyle">@style/BottomNavigationView</item>

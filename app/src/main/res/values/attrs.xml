@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Different colors for different themes -->
     <attr name="myLinkColor" format="reference"/>
+    <attr name="chipTextColor" format="reference"/>
+    <attr name="myIconTint" format="reference"/>
+    <attr name="mapFragmentAppbarColor" format="reference"/>
+    <attr name="mapDirectionsChipIconTint" format="reference"/>
+    <attr name="mapMarkerInfoWindowBackgroundColor" format="reference"/>
+    <attr name="mapMarkerInfoWindowYesEventsColor" format="reference"/>
+    <attr name="mapMarkerInfoWindowNoEventsColor" format="reference"/>
 
     <!-- Card used to display info about each type of event -->
     <declare-styleable name="EventTypeCard">
