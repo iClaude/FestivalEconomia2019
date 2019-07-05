@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- General -->
+    <!-- Material theme colors -->
     <color name="primaryColor">#ff8a50</color>
     <color name="primaryDarkColor">#c41c00</color>
     <color name="primaryTextColor">#000000</color>
@@ -14,6 +14,7 @@
     <color name="backgroundColor">#121212</color>
     <color name="onBackgroundColor">#FFFFFF</color>
 
+    <!-- Generic -->
     <color name="link">#90CAF9</color>
     <color name="icon_tint">#cfcfcf</color>
 
@@ -24,11 +25,11 @@
     <!-- Filter sheet -->
     <color name="chipTextColor">#212121</color>
 
-    <!-- SessionInfoFragment -->
+    <!-- Session info screen -->
     <color name="cib_favorites_color">#484848</color>
     <color name="session_info_scrim">#33000000</color>
 
-    <!-- MapFragment -->
+    <!-- Map screen -->
     <color name="mapFragmentAppbarColor">#121212</color>
     <color name="mapDirectionsChipIconTint">#FFFFFF</color>
     <color name="mapMarkerInfoWindowBackgroundColor">#5b5b5b</color>

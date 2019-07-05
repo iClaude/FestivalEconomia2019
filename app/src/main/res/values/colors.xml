@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- General -->
+    <!-- Material theme colors -->
     <color name="primaryColor">#FF5722</color>
     <color name="primaryLightColor">#ff8a50</color>
     <color name="primaryDarkColor">#c41c00</color>
@@ -16,16 +16,9 @@
     <color name="backgroundColor">#FAFAFA</color>
     <color name="onBackgroundColor">#212121</color>
 
+    <!-- Generic -->
     <color name="link">#3F51B5</color>
     <color name="icon_tint">#7F7F7F</color>
-
-    <color name="white">#fff</color>
-    <color name="whiteWithAlpha">#b3f2f2f2</color>
-    <color name="light_grey">#e6e6e6</color>
-    <color name="default_tag_color">#999</color>
-    <color name="dark_gray">#ff808080</color>
-    <color name="very_light_grey">#D3D3D3</color>
-    <color name="scrim">#33000000</color>
 
     <!-- Activity -->
     <color name="statusBarColor">#ffffff</color>
@@ -34,15 +27,24 @@
     <!-- Filter sheet -->
     <color name="chipTextColor">#212121</color>
 
-    <!-- SessionInfoFragment -->
+    <!-- Session info screen -->
     <color name="cib_favorites_color">#ffffff</color>
     <color name="session_info_scrim">#00000000</color>
 
-    <!-- MapFragment -->
+    <!-- Map screen -->
     <color name="mapFragmentAppbarColor">#e6ffffff</color>
     <color name="mapDirectionsChipIconTint">#212121</color>
     <color name="mapMarkerInfoWindowBackgroundColor">#ffffff</color>
     <color name="mapMarkerInfoWindowYesEventsColor">#3F51B5</color>
     <color name="mapMarkerInfoWindowNoEventsColor">#F44336</color>
+
+    <!-- Legacy colors from original Google IO 2018 app -->
+    <color name="white">#fff</color>
+    <color name="whiteWithAlpha">#b3f2f2f2</color>
+    <color name="light_grey">#e6e6e6</color>
+    <color name="default_tag_color">#999</color>
+    <color name="dark_gray">#ff808080</color>
+    <color name="very_light_grey">#D3D3D3</color>
+    <color name="scrim">#33000000</color>
 
 </resources>
