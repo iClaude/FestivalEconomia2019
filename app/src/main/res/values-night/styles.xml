@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- BottomNavigationView style. -->
+    <!-- BottomNavigationView style -->
     <style name="BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
         <item name="itemIconTint">@color/bottom_nav_item_icon</item>
         <item name="itemTextAppearanceActive">@style/BottomNavigationViewText</item>

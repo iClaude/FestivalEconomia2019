@@ -15,6 +15,7 @@
     <color name="onBackgroundColor">#FFFFFF</color>
 
     <color name="link">#90CAF9</color>
+    <color name="icon_tint">#cfcfcf</color>
 
     <!-- Activity -->
     <color name="statusBarColor">#000000</color>
@@ -22,9 +23,6 @@
 
     <!-- Filter sheet -->
     <color name="chipTextColor">#212121</color>
-
-    <!-- InfoFragment -->
-    <color name="icon_tint">#cfcfcf</color>
 
     <!-- SessionInfoFragment -->
     <color name="cib_favorites_color">#484848</color>

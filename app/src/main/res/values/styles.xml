@@ -2,7 +2,7 @@
 
     <style name="AppTheme" parent="BaseAppTheme"/>
 
-    <!-- Base application theme. -->
+    <!-- Base application theme -->
     <style name="BaseAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Standard material theme colors -->
         <item name="colorPrimary">@color/primaryColor</item>
@@ -38,12 +38,13 @@
         <item name="cibFavoritesColor">@color/cib_favorites_color</item>
         <item name="sessionInfoScrim">@color/session_info_scrim</item>
 
-
         <!-- Widget global styles. -->
         <item name="bottomNavigationStyle">@style/BottomNavigationView</item>
     </style>
 
-    <!-- BottomNavigationView style. -->
+    <!-- Other styles -->
+
+    <!-- BottomNavigationView style -->
     <style name="BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
         <item name="itemIconTint">@color/bottom_nav_item_icon</item>
         <item name="itemTextAppearanceActive">@style/BottomNavigationViewText</item>
@@ -57,7 +58,7 @@
         <item name="android:textSize">14sp</item>
     </style>
 
-    <!-- TabLayout style. -->
+    <!-- TabLayout style -->
     <style name="TabLayout" parent="Widget.MaterialComponents.TabLayout">
         <item name="tabTextAppearance">@style/TabLayoutText</item>
     </style>
@@ -66,7 +67,7 @@
         <item name="android:textAllCaps">false</item>
     </style>
 
-    <!-- Appbar style. -->
+    <!-- Appbar style -->
     <style name="AppBar" parent="@style/Widget.Design.AppBarLayout">
         <item name="android:background">?colorSurface</item>
         <item name="android:elevation">8dp</item>
@@ -77,14 +78,14 @@
         <item name="android:fontFamily">@font/open_sans</item>
     </style>
 
-    <!-- BottomSheet style. -->
+    <!-- BottomSheet style -->
     <style name="BottomSheetTitle" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:textSize">18sp</item>
         <item name="android:fontFamily">@font/open_sans</item>
         <item name="android:textColor">?colorOnSurface</item>
     </style>
 
-    <!-- Other styles. -->
+    <!-- Others -->
     <style name="SessionsItemTitle" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:fontFamily">@font/open_sans</item>
         <item name="android:textStyle">bold</item>
@@ -109,7 +110,7 @@
         <item name="meridiemTextSize">@dimen/time_header_meridiem_text_size</item>
     </style>
 
-    <!-- Session details. -->
+    <!-- Session details -->
     <style name="SessionDetailTitle">
         <item name="android:gravity">start|bottom</item>
         <item name="android:textAppearance">@style/Title</item>
@@ -119,7 +120,7 @@
         <item name="autoSizeMaxTextSize">34sp</item>
     </style>
 
-    <!-- Organizer title. -->
+    <!-- Organizer title -->
     <style name="DetailsTitle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">48dp</item>
@@ -142,7 +143,7 @@
         <item name="gridStrokeWidth">1dp</item>
     </style>
 
-    <!-- Collapsible cards in FAQ Fragment. -->
+    <!-- Collapsible cards in FAQ Fragment -->
     <style name="CollapsibleCardTitle" parent="@style/TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:textSize">16sp</item>
         <item name="android:fontFamily">@font/open_sans</item>
