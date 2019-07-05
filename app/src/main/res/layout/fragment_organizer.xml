@@ -32,7 +32,7 @@
                 android:id="@+id/appbar"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/session_info_appbar_height"
-                android:background="@color/surfaceColor"
+                android:background="?colorSurface"
                 android:elevation="4dp"
                 app:onOffsetChangedListener="@{viewModel}">
 
@@ -42,7 +42,7 @@
                     android:layout_height="match_parent"
                     app:layout_scrollFlags="scroll|exitUntilCollapsed"
                     app:titleEnabled="false"
-                    app:contentScrim="@color/surfaceColor"
+                    app:contentScrim="?colorSurface"
                     app:statusBarScrim="@color/statusBarColor">
 
                 <include

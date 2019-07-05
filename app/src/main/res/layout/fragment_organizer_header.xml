@@ -61,7 +61,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginStart="@dimen/margin_large"
                 android:layout_marginEnd="@dimen/margin_large" android:ellipsize="end"
-                android:textColor="@color/onSurfaceColor" android:textAlignment="center"
+                android:textColor="?colorOnSurface" android:textAlignment="center"
                 app:layout_constraintWidth_percent="0.8" android:maxLines="1"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

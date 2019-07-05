@@ -27,7 +27,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:textColor="@color/onSurfaceColor"/>
+                android:textColor="?colorOnSurface"/>
 
         <TextView
                 android:id="@+id/tvNumEvents"

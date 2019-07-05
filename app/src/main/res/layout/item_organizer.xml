@@ -47,7 +47,7 @@
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintBottom_toTopOf="@+id/textView6"
-                app:layout_constraintVertical_chainStyle="spread_inside" android:textColor="@color/primaryColor"
+                app:layout_constraintVertical_chainStyle="spread_inside" android:textColor="?colorPrimary"
                 android:textStyle="bold"/>
         <TextView
                 android:text="@{organizer.company}"
