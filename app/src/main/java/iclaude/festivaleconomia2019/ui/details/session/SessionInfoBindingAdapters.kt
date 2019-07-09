@@ -77,19 +77,18 @@ fun sessionImage(imageView: ImageView, sessionInfo: SessionInfo?, viewModel: Ses
     sessionInfo ?: return
     viewModel ?: return
 
-    if (!viewModel.isDarkTheme) {
-        imageView.setImageDrawable(HeaderGridDrawable(imageView.context))
-        return
-    }
-
     if (sessionInfo.photoUrl.isNullOrEmpty()) {
-        val tagStr: String = if (sessionInfo.tags.size > 1) sessionInfo.tags[1].id else sessionInfo.tags[0].id
+        if (!viewModel.isDarkTheme) {
+            imageView.setImageDrawable(HeaderGridDrawable(imageView.context))
+        } else {
+            val tagStr: String = if (sessionInfo.tags.size > 1) sessionInfo.tags[1].id else sessionInfo.tags[0].id
 
-        Glide
-            .with(imageView)
-            .load(imagesMap[tagStr])
-            .apply(bitmapTransform(BlurTransformation(50)))
-            .into(imageView)
+            Glide
+                .with(imageView)
+                .load(imagesMap[tagStr])
+                .apply(bitmapTransform(BlurTransformation(50)))
+                .into(imageView)
+        }
 
         return
     }
