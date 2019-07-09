@@ -75,7 +75,7 @@
                 app:layout_constraintEnd_toEndOf="@id/ivAppBarImage"
                 app:layout_constraintStart_toEndOf="@id/guideline_title_end"
                 app:layout_constraintTop_toTopOf="@id/ivAppBarImage"
-                app:lottie_fileName="lottie/magnifier_light.json"
+                app:lottie_fileName="lottie/sessioninfo_magnifier_light.json"
                 app:goneWithPhoto="@{sessionDataDer}"
                 app:eventHeaderAnim="@{sessionDataDer}"
                 app:lottie_autoPlay="true"
