@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
             val mChannel = NotificationChannel(NOTIFICATION_CHANNEL_ID, name, importance).apply {
                 description = descriptionText
                 enableLights(true)
-                lightColor = getColor(R.color.primaryColor)
+                lightColor = getColor(R.color.theme_primary)
             }
 
             /*Register the channel with the system; you can't change the importance

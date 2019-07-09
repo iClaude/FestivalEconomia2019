@@ -106,7 +106,7 @@ fun showNumOfEventsOnInfoWindow(textView: TextView, viewModel: MapViewModel, loc
     textView.apply {
         text = context.getQuantityString(R.plurals.map_events_here, numOfEvents, numOfEvents)
         if (numOfEvents == 0)
-            setTextColor(ContextCompat.getColor(context, R.color.mapMarkerInfoWindowNoEventsColor))
+            setTextColor(ContextCompat.getColor(context, R.color.map_markerinfowindow_noevents))
     }
 }
 

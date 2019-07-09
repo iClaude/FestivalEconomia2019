@@ -165,7 +165,7 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params)
                     notificationData.startTimestamp
                 )} / ${notificationData.location}"
             )
-            .setColor(ContextCompat.getColor(applicationContext, R.color.primaryColor))
+            .setColor(ContextCompat.getColor(applicationContext, R.color.theme_primary))
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setCategory(NotificationCompat.CATEGORY_REMINDER)
             .setVisibility(VISIBILITY_PUBLIC)

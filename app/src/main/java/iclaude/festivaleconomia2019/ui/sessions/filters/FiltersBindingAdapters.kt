@@ -76,8 +76,8 @@ fun setupStarredChip(chip: Chip, viewModel: SessionListViewModel) {
         "99",
         CATEGORY_STAR,
         context.getString(R.string.filter_favorites),
-        "#${Integer.toHexString(ContextCompat.getColor(context, R.color.chipTextColor))}",
-        "#${Integer.toHexString(ContextCompat.getColor(context, R.color.secondaryColor))}"
+        "#${Integer.toHexString(ContextCompat.getColor(context, R.color.filtersheet_chiptext))}",
+        "#${Integer.toHexString(ContextCompat.getColor(context, R.color.theme_secondary))}"
     )
     viewModel.starredTag = tag
 

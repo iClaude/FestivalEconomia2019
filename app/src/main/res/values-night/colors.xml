@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Material theme colors -->
-    <color name="primaryColor">#ff8a50</color>
-    <color name="primaryDarkColor">#c41c00</color>
-    <color name="primaryTextColor">#000000</color>
-    <color name="secondaryColor">#6effe8</color>
-    <color name="secondaryDarkColor">#00b686</color>
-    <color name="secondaryTextColor">#000000</color>
-    <color name="errorColor">#CF6679</color>
-    <color name="onErrorColor">#000000</color>
-    <color name="surfaceColor">#121212</color>
-    <color name="onSurfaceColor">#FFFFFF</color>
-    <color name="backgroundColor">#121212</color>
-    <color name="onBackgroundColor">#FFFFFF</color>
+    <color name="theme_primary">#ff8a50</color>
+    <color name="theme_primarydark">#c41c00</color>
+    <color name="theme_primarytext">#000000</color>
+    <color name="theme_secondary">#6effe8</color>
+    <color name="theme_secondarydark">#00b686</color>
+    <color name="theme_secondarytext">#000000</color>
+    <color name="theme_error">#CF6679</color>
+    <color name="theme_onerror">#000000</color>
+    <color name="theme_surface">#121212</color>
+    <color name="theme_onsurface">#FFFFFF</color>
+    <color name="theme_background">#121212</color>
+    <color name="theme_onbackground">#FFFFFF</color>
 
     <!-- Generic -->
-    <color name="link">#90CAF9</color>
-    <color name="iconTint">#cfcfcf</color>
+    <color name="all_link">#90CAF9</color>
+    <color name="all_icontint">#cfcfcf</color>
 
     <!-- Activity -->
-    <color name="statusBarColor">#000000</color>
-    <color name="navigationBarColor">#000000</color>
+    <color name="activity_statusbar">#000000</color>
+    <color name="activity_navigationbar">#000000</color>
 
     <!-- Filter sheet -->
-    <color name="chipTextColor">#212121</color>
-    <color name="filterSheetHeaderIconColor">#ffffff</color>
+    <color name="filtersheet_chiptext">#212121</color>
+    <color name="filtersheet_headericon">#ffffff</color>
 
     <!-- Session info screen -->
-    <color name="cib_favorites_color">#484848</color>
-    <color name="session_info_scrim">#33000000</color>
+    <color name="sessioninfo_cibfavorites">#484848</color>
+    <color name="sessioninfo_scrim">#33000000</color>
 
     <!-- Map screen -->
-    <color name="mapFragmentAppbarColor">#121212</color>
-    <color name="mapDirectionsChipIconTint">#FFFFFF</color>
-    <color name="mapMarkerInfoWindowBackgroundColor">#5b5b5b</color>
-    <color name="mapMarkerInfoWindowYesEventsColor">#90CAF9</color>
-    <color name="mapMarkerInfoWindowNoEventsColor">#F44336</color>
+    <color name="map_appbar">#121212</color>
+    <color name="map_chipdirections">#FFFFFF</color>
+    <color name="map_markerinfowindow_background">#5b5b5b</color>
+    <color name="map_markerinfowindow_yesevents">#90CAF9</color>
+    <color name="map_markerinfowindow_noevents">#F44336</color>
 
 </resources>

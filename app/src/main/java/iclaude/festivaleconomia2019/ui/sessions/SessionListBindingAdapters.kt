@@ -53,6 +53,6 @@ fun tagTintOrDefault(color: Int, context: Context): Int {
     return if (color != TRANSPARENT) {
         color
     } else {
-        ContextCompat.getColor(context, R.color.defaultTagColor)
+        ContextCompat.getColor(context, R.color.all_tagdefault)
     }
 }

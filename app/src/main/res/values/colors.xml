@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Material theme colors -->
-    <color name="primaryColor">#FF5722</color>
-    <color name="primaryLightColor">#ff8a50</color>
-    <color name="primaryDarkColor">#c41c00</color>
-    <color name="secondaryColor">#1de9b6</color>
-    <color name="secondaryLightColor">#6effe8</color>
-    <color name="secondaryDarkColor">#00b686</color>
-    <color name="primaryTextColor">#ffffff</color>
-    <color name="secondaryTextColor">#ffffff</color>
-    <color name="errorColor">#F44336</color>
-    <color name="onErrorColor">#FFFFFF</color>
-    <color name="surfaceColor">#FFFFFF</color>
-    <color name="onSurfaceColor">#212121</color>
-    <color name="backgroundColor">#FAFAFA</color>
-    <color name="onBackgroundColor">#212121</color>
+    <color name="theme_primary">#FF5722</color>
+    <color name="theme_primarylight">#ff8a50</color>
+    <color name="theme_primarydark">#c41c00</color>
+    <color name="theme_secondary">#1de9b6</color>
+    <color name="theme_secondarylight">#6effe8</color>
+    <color name="theme_secondarydark">#00b686</color>
+    <color name="theme_primarytext">#ffffff</color>
+    <color name="theme_secondarytext">#ffffff</color>
+    <color name="theme_error">#F44336</color>
+    <color name="theme_onerror">#FFFFFF</color>
+    <color name="theme_surface">#FFFFFF</color>
+    <color name="theme_onsurface">#212121</color>
+    <color name="theme_background">#FAFAFA</color>
+    <color name="theme_onbackground">#212121</color>
 
     <!-- Generic -->
-    <color name="link">#3F51B5</color>
-    <color name="iconTint">#7F7F7F</color>
-    <color name="scrim">#33000000</color>
-    <color name="defaultTagColor">#999</color>
+    <color name="all_link">#3F51B5</color>
+    <color name="all_icontint">#7F7F7F</color>
+    <color name="all_scrim">#33000000</color>
+    <color name="all_tagdefault">#999</color>
 
     <!-- Activity -->
-    <color name="statusBarColor">#ffffff</color>
-    <color name="navigationBarColor">#FF5722</color>
-    <color name="appbarAvatarPlaceholderColor">#D3D3D3</color>
+    <color name="activity_statusbar">#ffffff</color>
+    <color name="activity_navigationbar">#FF5722</color>
+    <color name="activity_appbar_avatarplaceholder">#D3D3D3</color>
 
     <!-- Filter sheet -->
-    <color name="chipTextColor">#212121</color>
-    <color name="filterSheetHeaderIconColor">#ff808080</color>
+    <color name="filtersheet_chiptext">#212121</color>
+    <color name="filtersheet_headericon">#ff808080</color>
 
     <!-- Session info screen -->
-    <color name="cib_favorites_color">#ffffff</color>
-    <color name="session_info_scrim">#00000000</color>
+    <color name="sessioninfo_cibfavorites">#ffffff</color>
+    <color name="sessioninfo_scrim">#00000000</color>
 
     <!-- Map screen -->
-    <color name="mapFragmentAppbarColor">#e6ffffff</color>
-    <color name="mapDirectionsChipIconTint">#212121</color>
-    <color name="mapMarkerInfoWindowBackgroundColor">#ffffff</color>
-    <color name="mapMarkerInfoWindowYesEventsColor">#3F51B5</color>
-    <color name="mapMarkerInfoWindowNoEventsColor">#F44336</color>
+    <color name="map_appbar">#e6ffffff</color>
+    <color name="map_chipdirections">#212121</color>
+    <color name="map_markerinfowindow_background">#ffffff</color>
+    <color name="map_markerinfowindow_yesevents">#3F51B5</color>
+    <color name="map_markerinfowindow_noevents">#F44336</color>
 
     <!-- Legacy colors from original Google IO 2018 app -->
     <color name="white">#fff</color>
-    <color name="whiteWithAlpha">#b3f2f2f2</color>
+    <color name="white_with_alpha">#b3f2f2f2</color>
     <color name="light_grey">#e6e6e6</color>
 
 </resources>

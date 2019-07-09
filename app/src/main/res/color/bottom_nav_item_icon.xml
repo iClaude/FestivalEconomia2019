@@ -20,6 +20,6 @@
     <item
             android:color="@color/white"
             android:state_checked="true"/>
-    <item android:color="@color/whiteWithAlpha"/>
+    <item android:color="@color/white_with_alpha"/>
 
 </selector>

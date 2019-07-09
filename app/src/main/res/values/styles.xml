@@ -5,40 +5,40 @@
     <!-- Base application theme -->
     <style name="BaseAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Standard material theme colors -->
-        <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
-        <item name="colorOnPrimary">@color/primaryTextColor</item>
-        <item name="colorSecondary">@color/secondaryColor</item>
-        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
-        <item name="colorOnSecondary">@color/secondaryTextColor</item>
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorPrimaryVariant">@color/theme_primarydark</item>
+        <item name="colorOnPrimary">@color/theme_primarytext</item>
+        <item name="colorSecondary">@color/theme_secondary</item>
+        <item name="colorSecondaryVariant">@color/theme_secondarydark</item>
+        <item name="colorOnSecondary">@color/theme_secondarytext</item>
 
-        <item name="colorError">@color/errorColor</item>
-        <item name="colorOnError">@color/onErrorColor</item>
-        <item name="colorSurface">@color/surfaceColor</item>
-        <item name="colorOnSurface">@color/onSurfaceColor</item>
-        <item name="android:colorBackground">@color/backgroundColor</item>
-        <item name="colorOnBackground">@color/onBackgroundColor</item>
+        <item name="colorError">@color/theme_error</item>
+        <item name="colorOnError">@color/theme_onerror</item>
+        <item name="colorSurface">@color/theme_surface</item>
+        <item name="colorOnSurface">@color/theme_onsurface</item>
+        <item name="android:colorBackground">@color/theme_background</item>
+        <item name="colorOnBackground">@color/theme_onbackground</item>
 
         <!-- General app appearance -->
-        <item name="android:statusBarColor">@color/statusBarColor</item>
-        <item name="android:navigationBarColor">@color/navigationBarColor</item>
+        <item name="android:statusBarColor">@color/activity_statusbar</item>
+        <item name="android:navigationBarColor">@color/activity_navigationbar</item>
 
         <!-- Custom theme attributes for different themes -->
         <!-- General attributes -->
-        <item name="myLinkColor">@color/link</item>
-        <item name="chipTextColor">@color/chipTextColor</item>
-        <item name="myIconTint">@color/iconTint</item>
+        <item name="myLinkColor">@color/all_link</item>
+        <item name="chipTextColor">@color/filtersheet_chiptext</item>
+        <item name="myIconTint">@color/all_icontint</item>
         <!-- Filter sheet -->
-        <item name="filterSheetHeaderIconColor">@color/filterSheetHeaderIconColor</item>
+        <item name="filterSheetHeaderIconColor">@color/filtersheet_headericon</item>
         <!-- Session info screen -->
-        <item name="cibFavoritesColor">@color/cib_favorites_color</item>
-        <item name="sessionInfoScrim">@color/session_info_scrim</item>
+        <item name="cibFavoritesColor">@color/sessioninfo_cibfavorites</item>
+        <item name="sessionInfoScrim">@color/sessioninfo_scrim</item>
         <!-- Map screen-->
-        <item name="mapFragmentAppbarColor">@color/mapFragmentAppbarColor</item>
-        <item name="mapDirectionsChipIconTint">@color/mapDirectionsChipIconTint</item>
-        <item name="mapMarkerInfoWindowBackgroundColor">@color/mapMarkerInfoWindowBackgroundColor</item>
-        <item name="mapMarkerInfoWindowYesEventsColor">@color/mapMarkerInfoWindowYesEventsColor</item>
-        <item name="mapMarkerInfoWindowNoEventsColor">@color/mapMarkerInfoWindowNoEventsColor</item>
+        <item name="mapFragmentAppbarColor">@color/map_appbar</item>
+        <item name="mapDirectionsChipIconTint">@color/map_chipdirections</item>
+        <item name="mapMarkerInfoWindowBackgroundColor">@color/map_markerinfowindow_background</item>
+        <item name="mapMarkerInfoWindowYesEventsColor">@color/map_markerinfowindow_yesevents</item>
+        <item name="mapMarkerInfoWindowNoEventsColor">@color/map_markerinfowindow_noevents</item>
 
         <!-- Widget global styles. -->
         <item name="bottomNavigationStyle">@style/BottomNavigationView</item>
@@ -130,7 +130,7 @@
         <item name="android:textAlignment">center</item>
         <item name="android:ellipsize">end</item>
         <item name="android:maxLines">1</item>
-        <item name="android:textColor">@color/onSurfaceColor</item>
+        <item name="android:textColor">@color/theme_onsurface</item>
     </style>
 
     <style name="Title" parent="@style/TextAppearance.AppCompat.Display1">
