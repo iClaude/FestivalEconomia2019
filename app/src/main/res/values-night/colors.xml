@@ -16,7 +16,7 @@
 
     <!-- Generic -->
     <color name="link">#90CAF9</color>
-    <color name="icon_tint">#cfcfcf</color>
+    <color name="iconTint">#cfcfcf</color>
 
     <!-- Activity -->
     <color name="statusBarColor">#000000</color>

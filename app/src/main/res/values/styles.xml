@@ -27,7 +27,7 @@
         <!-- General attributes -->
         <item name="myLinkColor">@color/link</item>
         <item name="chipTextColor">@color/chipTextColor</item>
-        <item name="myIconTint">@color/icon_tint</item>
+        <item name="myIconTint">@color/iconTint</item>
         <!-- Filter sheet -->
         <item name="filterSheetHeaderIconColor">@color/filterSheetHeaderIconColor</item>
         <!-- Session info screen -->
