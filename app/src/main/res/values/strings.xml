@@ -320,4 +320,8 @@
     <string name="info_type_others">…Alan Krueger Lecture, Alla Frontiera, Discussions, EconoMia, Meetings With Authors,
         Inet Panel
     </string>
+
+    <string name="sessioninfo_lottiefilename" translatable="false">sessioninfo_magnifier_light.json</string>
+    <string name="faq_lottiefilename" translatable="false">lottie/faq_skyline.json</string>
+
 </resources>

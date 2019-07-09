@@ -104,7 +104,7 @@ fun sessionImage(imageView: ImageView, sessionInfo: SessionInfo?, viewModel: Ses
 // Lottie animation: there are specific files for light and dark theme.
 @BindingAdapter("app:eventHeaderAnim")
 fun eventHeaderAnim(lottieView: LottieAnimationView, sessionInfo: SessionInfo?) {
-    val fileName = "lottie/${lottieView.context.getString(R.string.lottie_magnifier_filename)}"
+    val fileName = "lottie/${lottieView.context.getString(R.string.sessioninfo_lottiefilename)}"
 
     lottieView.setAnimation(fileName)
 }
