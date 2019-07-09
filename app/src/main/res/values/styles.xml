@@ -28,15 +28,17 @@
         <item name="myLinkColor">@color/link</item>
         <item name="chipTextColor">@color/chipTextColor</item>
         <item name="myIconTint">@color/icon_tint</item>
+        <!-- Filter sheet -->
+        <item name="filterSheetHeaderIconColor">@color/filterSheetHeaderIconColor</item>
+        <!-- Session info screen -->
+        <item name="cibFavoritesColor">@color/cib_favorites_color</item>
+        <item name="sessionInfoScrim">@color/session_info_scrim</item>
         <!-- Map screen-->
         <item name="mapFragmentAppbarColor">@color/mapFragmentAppbarColor</item>
         <item name="mapDirectionsChipIconTint">@color/mapDirectionsChipIconTint</item>
         <item name="mapMarkerInfoWindowBackgroundColor">@color/mapMarkerInfoWindowBackgroundColor</item>
         <item name="mapMarkerInfoWindowYesEventsColor">@color/mapMarkerInfoWindowYesEventsColor</item>
         <item name="mapMarkerInfoWindowNoEventsColor">@color/mapMarkerInfoWindowNoEventsColor</item>
-        <!-- Session info screen -->
-        <item name="cibFavoritesColor">@color/cib_favorites_color</item>
-        <item name="sessionInfoScrim">@color/session_info_scrim</item>
 
         <!-- Widget global styles. -->
         <item name="bottomNavigationStyle">@style/BottomNavigationView</item>

@@ -24,6 +24,7 @@
 
     <!-- Filter sheet -->
     <color name="chipTextColor">#212121</color>
+    <color name="filterSheetHeaderIconColor">#ffffff</color>
 
     <!-- Session info screen -->
     <color name="cib_favorites_color">#484848</color>
