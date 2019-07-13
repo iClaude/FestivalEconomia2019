@@ -28,7 +28,7 @@
         <meta-data
                 android:name="preloaded_fonts"
                 android:resource="@array/preloaded_fonts"/>
-        <!-- TODO: when I have a signed version of the app, restrict the API key in the console to Android app -->
+
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_api_key"/>
